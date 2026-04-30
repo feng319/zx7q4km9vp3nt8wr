@@ -49,16 +49,10 @@ class OntologyAssembler:
         self.skus_dir = Path(skus_dir).resolve()
         self.ontology_dir = Path(ontology_dir).resolve()
 
-        # Prevent destructive copy: source must not be inside destination
         if self.skus_dir == self.ontology_dir / "skus":
             raise ValueError(
                 f"skus_dir cannot be the same as ontology_dir/skus (would delete source): "
                 f"skus_dir={self.skus_dir}"
-            )
-        if self.skus_dir.is_relative_to(self.ontology_dir):
-            raise ValueError(
-                f"skus_dir must not be inside ontology_dir (would destroy source during copy): "
-                f"skus_dir={self.skus_dir}, ontology_dir={self.ontology_dir}"
             )
 
     def assemble(self) -> OntologyManifest:
