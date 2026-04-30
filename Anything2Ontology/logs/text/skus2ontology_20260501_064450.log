@@ -1,2 +1,16 @@
 2026-04-30T22:44:50.967805Z [info     ] Starting ontology pipeline     [skus2ontology.pipeline] ontology_dir='G:\\Program Files\\AI coding\\知识萃取\\新能源\\输出\\ontology' skip_chatbot=False skus_dir='G:\\Program Files\\AI coding\\知识萃取\\新能源\\输出\\skus'
 2026-04-30T22:44:50.968806Z [info     ] Starting ontology assembly     [skus2ontology.assembler] ontology_dir='G:\\Program Files\\AI coding\\知识萃取\\新能源\\输出\\ontology' skus_dir='G:\\Program Files\\AI coding\\知识萃取\\新能源\\输出\\skus'
+2026-04-30T22:44:52.441224Z [info     ] Copied directory               [skus2ontology.assembler] files=542 subdir=factual
+2026-04-30T22:44:52.851795Z [info     ] Copied directory               [skus2ontology.assembler] files=186 subdir=procedural
+2026-04-30T22:44:52.857830Z [info     ] Copied directory               [skus2ontology.assembler] files=4 subdir=relational
+2026-04-30T22:44:52.865451Z [info     ] Copied and rewrote skus_index.json [skus2ontology.assembler] paths_rewritten=364
+2026-04-30T22:44:52.877096Z [info     ] Generated chunk_to_sku.json    [skus2ontology.assembler] chunk_count=27
+2026-04-30T22:44:52.887897Z [info     ] Copied eureka.md to ontology root [skus2ontology.assembler]
+2026-04-30T22:44:52.888913Z [error    ] Chunk coverage validation FAILED: eureka.md has chunks not in chunk_to_sku.json [skus2ontology.assembler] missing=['report-则鸣新能源调研报告：怎么样做好微电网？_chunk_001', 'report-固德威江西德安县调研报告：光储充一体化项目怎么做？_chunk_001'] missing_count=2
+2026-04-30T22:44:52.891757Z [info     ] Rewrote mapping.md             [skus2ontology.assembler] paths_rewritten=0
+2026-04-30T22:44:52.891757Z [info     ] Assembly complete              [skus2ontology.assembler] factual=271 paths_rewritten=364 procedural=93 total_files=736
+2026-04-30T22:44:52.892897Z [info     ] Starting spec chatbot          [skus2ontology.chatbot] max_rounds=5 phase2_only=False
+2026-04-30T22:44:52.893555Z [info     ] Built name_to_path lookup      [skus2ontology.chatbot] entries=366
+2026-04-30T22:44:52.895579Z [info     ] slug→path inline resolution    [skus2ontology.chatbot] matched=364 total_lines=384
+2026-04-30T22:44:52.895579Z [info     ] Loaded mapping.md (compressed) [skus2ontology.chatbot] compressed_chars=25797 original_chars=24026
+2026-04-30T22:44:52.895579Z [info     ] Loaded eureka.md               [skus2ontology.chatbot] chars=9528
