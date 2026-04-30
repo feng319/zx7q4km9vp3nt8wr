@@ -32,6 +32,28 @@
                 {
                   "name": "发电类型虚拟电厂",
                   "children": []
+                },
+                {
+                  "name": "按聚合类型",
+                  "children": [
+                    {
+                      "name": "电源型虚拟电厂",
+                      "children": []
+                    },
+                    {
+                      "name": "负荷型虚拟电厂",
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "name": "按规模",
+                  "children": [
+                    {
+                      "name": "城市级虚拟电厂",
+                      "children": []
+                    }
+                  ]
                 }
               ]
             }
@@ -114,6 +136,10 @@
         },
         {
           "name": "EPC总承包",
+          "children": []
+        },
+        {
+          "name": "地方平台公司",
           "children": []
         }
       ]

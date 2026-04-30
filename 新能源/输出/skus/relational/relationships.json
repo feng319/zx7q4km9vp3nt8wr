@@ -323,6 +323,69 @@
         "报告-三一硅能非洲调研报告：在非洲如何做矿山微电网？_chunk_001"
       ],
       "confidence": 0.8
+    },
+    {
+      "subject": "虚拟电厂",
+      "predicate": "superset-of",
+      "object": "电源型虚拟电厂",
+      "source_chunks": [
+        "报告-固德威一线调研报告：城市级虚拟电厂怎么做？_chunk_001"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "subject": "虚拟电厂",
+      "predicate": "superset-of",
+      "object": "负荷型虚拟电厂",
+      "source_chunks": [
+        "报告-固德威一线调研报告：城市级虚拟电厂怎么做？_chunk_001"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "subject": "虚拟电厂",
+      "predicate": "superset-of",
+      "object": "城市级虚拟电厂",
+      "source_chunks": [
+        "报告-固德威一线调研报告：城市级虚拟电厂怎么做？_chunk_001"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "subject": "虚拟电厂",
+      "predicate": "requires",
+      "object": "虚拟电厂运营商",
+      "source_chunks": [
+        "报告-固德威一线调研报告：城市级虚拟电厂怎么做？_chunk_001"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "subject": "虚拟电厂",
+      "predicate": "related-to",
+      "object": "源网荷储",
+      "source_chunks": [
+        "报告-固德威一线调研报告：城市级虚拟电厂怎么做？_chunk_001"
+      ],
+      "confidence": 0.8
+    },
+    {
+      "subject": "虚拟电厂运营商",
+      "predicate": "related-to",
+      "object": "售电公司",
+      "source_chunks": [
+        "报告-固德威一线调研报告：城市级虚拟电厂怎么做？_chunk_001"
+      ],
+      "confidence": 0.8
+    },
+    {
+      "subject": "地方平台公司",
+      "predicate": "related-to",
+      "object": "虚拟电厂运营商",
+      "source_chunks": [
+        "报告-固德威一线调研报告：城市级虚拟电厂怎么做？_chunk_001"
+      ],
+      "confidence": 1.0
     }
   ]
 }

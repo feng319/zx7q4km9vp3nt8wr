@@ -1,13 +1,14 @@
 {
   "created_at": "2026-04-30T23:58:12.790314",
-  "updated_at": "2026-05-01T00:20:27.027187",
-  "total_skus": 56,
-  "total_characters": 58174,
+  "updated_at": "2026-05-01T00:23:12.053248",
+  "total_skus": 67,
+  "total_characters": 68745,
   "chunks_processed": [
     "报告-《关于优化集中式新能源发电企业市场报价的通知（试行）》深度解读与战略分析_chunk_001",
     "报告-乌克兰新能源市场机会调研报告_chunk_001",
     "报告-兆瓦云调研报告：虚拟电厂的下一城在哪里？_chunk_001",
-    "报告-三一硅能非洲调研报告：在非洲如何做矿山微电网？_chunk_001"
+    "报告-三一硅能非洲调研报告：在非洲如何做矿山微电网？_chunk_001",
+    "报告-固德威一线调研报告：城市级虚拟电厂怎么做？_chunk_001"
   ],
   "skus": [
     {
@@ -561,18 +562,128 @@
       "confidence": null
     },
     {
+      "sku_id": "sku_044",
+      "name": "固德威公司概况与广德生产基地规模",
+      "classification": "factual",
+      "path": "factual/sku_044",
+      "source_chunk": "报告-固德威一线调研报告：城市级虚拟电厂怎么做？_chunk_001",
+      "character_count": 215,
+      "description": "固德威技术股份有限公司的背景及其广德生产基地的产能与产值规模，为城市级虚拟电厂探索提供产业基础。",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_045",
+      "name": "广德市用电负荷增长与绿电供需缺口",
+      "classification": "factual",
+      "path": "factual/sku_045",
+      "source_chunk": "报告-固德威一线调研报告：城市级虚拟电厂怎么做？_chunk_001",
+      "character_count": 204,
+      "description": "广德市电力需求快速增长与绿电供给严重不足的现状，凸显发展本地分布式新能源和城市级虚拟电厂的紧迫性。",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_046",
+      "name": "城市级虚拟电厂的定义与核心价值",
+      "classification": "factual",
+      "path": "factual/sku_046",
+      "source_chunk": "报告-固德威一线调研报告：城市级虚拟电厂怎么做？_chunk_001",
+      "character_count": 236,
+      "description": "虚拟电厂及城市级虚拟电厂的基本概念，以及城市级虚拟电厂在保障电网平衡和支撑经济高质量发展中的双重作用。",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_047",
+      "name": "固德威电源型虚拟电厂运作模型",
+      "classification": "factual",
+      "path": "factual/sku_047",
+      "source_chunk": "报告-固德威一线调研报告：城市级虚拟电厂怎么做？_chunk_001",
+      "character_count": 487,
+      "description": "固德威在广德初步打通的电源型虚拟电厂商业模型，包括参与主体、交易流程、售电公司角色及一体化演进方向。",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_048",
+      "name": "广德城市级虚拟电厂建设四步骤",
+      "classification": "factual",
+      "path": "factual/sku_048",
+      "source_chunk": "报告-固德威一线调研报告：城市级虚拟电厂怎么做？_chunk_001",
+      "character_count": 253,
+      "description": "固德威与地方平台公司为广德规划的城市级虚拟电厂分阶段实施路径。",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_049",
+      "name": "地方平台公司布局虚拟电厂的挑战与合作模式",
+      "classification": "factual",
+      "path": "factual/sku_049",
+      "source_chunk": "报告-固德威一线调研报告：城市级虚拟电厂怎么做？_chunk_001",
+      "character_count": 301,
+      "description": "地方平台公司在建设城市级虚拟电厂时面临的专业能力短板，以及其与固德威形成的优势互补分工方式。",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_050",
+      "name": "已布局城市级虚拟电厂的国内城市",
+      "classification": "factual",
+      "path": "factual/sku_050",
+      "source_chunk": "报告-固德威一线调研报告：城市级虚拟电厂怎么做？_chunk_001",
+      "character_count": 90,
+      "description": "目前全国已开展城市级虚拟电厂探索的部分城市，表明该趋势正处于发展初期且确定性高。",
+      "confidence": null
+    },
+    {
+      "sku_id": "skill_013",
+      "name": "city-level-vpp-four-step-plan",
+      "classification": "procedural",
+      "path": "procedural/skill_013",
+      "source_chunk": "报告-固德威一线调研报告：城市级虚拟电厂怎么做？_chunk_001",
+      "character_count": 599,
+      "description": "规划城市级虚拟电厂建设的四步流程，源自广德固德威实践，适用于地方政府或平台公司从零开始构建虚拟电厂。",
+      "confidence": null
+    },
+    {
+      "sku_id": "skill_014",
+      "name": "build-power-source-vpp-model",
+      "classification": "procedural",
+      "path": "procedural/skill_014",
+      "source_chunk": "报告-固德威一线调研报告：城市级虚拟电厂怎么做？_chunk_001",
+      "character_count": 975,
+      "description": "构建以分布式发电聚合为主的电源型虚拟电厂，实现发电-聚合-售电一体化闭环，平衡发电方、聚合商、售电公司与用户的利益。",
+      "confidence": null
+    },
+    {
+      "sku_id": "skill_015",
+      "name": "local-platform-vpp-implementation-guide",
+      "classification": "procedural",
+      "path": "procedural/skill_015",
+      "source_chunk": "报告-固德威一线调研报告：城市级虚拟电厂怎么做？_chunk_001",
+      "character_count": 954,
+      "description": "地方平台公司布局城市级虚拟电厂的实施指南，涵盖能力评估、合作伙伴选择、分工协作与早期行动，帮助弥补专业化短板。",
+      "confidence": null
+    },
+    {
+      "sku_id": "skill_016",
+      "name": "partner-requirements-local-energy-platforms",
+      "classification": "procedural",
+      "path": "procedural/skill_016",
+      "source_chunk": "报告-固德威一线调研报告：城市级虚拟电厂怎么做？_chunk_001",
+      "character_count": 708,
+      "description": "企业若想成为地方能源平台公司的虚拟电厂合作伙伴，需具备三个核心条件：集团实力、产业整合能力与利益平衡方案。",
+      "confidence": null
+    },
+    {
       "sku_id": "relational-knowledge-base",
       "name": "relational-knowledge-base",
       "classification": "relational",
       "path": "relational",
       "source_chunk": "aggregated",
-      "character_count": 38052,
+      "character_count": 43601,
       "description": "Domain label hierarchy and terminology glossary",
       "confidence": null
     }
   ],
-  "factual_count": 43,
+  "factual_count": 50,
   "relational_count": 1,
-  "procedural_count": 12,
+  "procedural_count": 16,
   "meta_count": 0
 }
