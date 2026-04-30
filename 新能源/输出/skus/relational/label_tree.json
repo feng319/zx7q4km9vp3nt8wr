@@ -1,0 +1,96 @@
+{
+  "roots": [
+    {
+      "name": "电力市场",
+      "children": [
+        {
+          "name": "报价模式",
+          "children": []
+        },
+        {
+          "name": "结算机制",
+          "children": []
+        },
+        {
+          "name": "调度机制",
+          "children": []
+        },
+        {
+          "name": "聚合模式",
+          "children": []
+        },
+        {
+          "name": "新能源基地",
+          "children": []
+        },
+        {
+          "name": "发电类型",
+          "children": []
+        },
+        {
+          "name": "电力传输",
+          "children": []
+        }
+      ]
+    },
+    {
+      "name": "电力市场政策",
+      "children": [
+        {
+          "name": "改革文件",
+          "children": []
+        },
+        {
+          "name": "政策原则",
+          "children": []
+        }
+      ]
+    },
+    {
+      "name": "经济学概念",
+      "children": [
+        {
+          "name": "市场失灵",
+          "children": []
+        },
+        {
+          "name": "反垄断",
+          "children": []
+        },
+        {
+          "name": "市场力约束",
+          "children": []
+        }
+      ]
+    },
+    {
+      "name": "企业运营",
+      "children": [
+        {
+          "name": "资产组合管理",
+          "children": []
+        },
+        {
+          "name": "交易策略",
+          "children": []
+        },
+        {
+          "name": "内部结算",
+          "children": []
+        },
+        {
+          "name": "风险控制",
+          "children": []
+        }
+      ]
+    },
+    {
+      "name": "技术架构",
+      "children": []
+    },
+    {
+      "name": "职业",
+      "children": []
+    }
+  ]
+}

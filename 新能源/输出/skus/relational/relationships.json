@@ -1,0 +1,112 @@
+{
+  "entries": [
+    {
+      "subject": "集中报价",
+      "predicate": "enables",
+      "object": "资产组合效应",
+      "source_chunks": [
+        "报告-《关于优化集中式新能源发电企业市场报价的通知（试行）》深度解读与战略分析_chunk_001"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "subject": "规模约束",
+      "predicate": "regulates",
+      "object": "市场力",
+      "source_chunks": [
+        "报告-《关于优化集中式新能源发电企业市场报价的通知（试行）》深度解读与战略分析_chunk_001"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "subject": "四不改变原则",
+      "predicate": "causes",
+      "object": "计划分解算法",
+      "source_chunks": [
+        "报告-《关于优化集中式新能源发电企业市场报价的通知（试行）》深度解读与战略分析_chunk_001"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "subject": "边际成本为零的诅咒",
+      "predicate": "causes",
+      "object": "价格蚕食效应",
+      "source_chunks": [
+        "报告-《关于优化集中式新能源发电企业市场报价的通知（试行）》深度解读与战略分析_chunk_001"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "subject": "身份约束",
+      "predicate": "contradicts",
+      "object": "卡特尔",
+      "source_chunks": [
+        "报告-《关于优化集中式新能源发电企业市场报价的通知（试行）》深度解读与战略分析_chunk_001"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "subject": "风光互补",
+      "predicate": "enables",
+      "object": "资产组合效应",
+      "source_chunks": [
+        "报告-《关于优化集中式新能源发电企业市场报价的通知（试行）》深度解读与战略分析_chunk_001"
+      ],
+      "confidence": 0.8
+    },
+    {
+      "subject": "沙戈荒大基地",
+      "predicate": "has-a",
+      "object": "特高压外送",
+      "source_chunks": [
+        "报告-《关于优化集中式新能源发电企业市场报价的通知（试行）》深度解读与战略分析_chunk_001"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "subject": "集中报价",
+      "predicate": "depends-on",
+      "object": "数据湖",
+      "source_chunks": [
+        "报告-《关于优化集中式新能源发电企业市场报价的通知（试行）》深度解读与战略分析_chunk_001"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "subject": "独立结算",
+      "predicate": "requires",
+      "object": "内部转移定价",
+      "source_chunks": [
+        "报告-《关于优化集中式新能源发电企业市场报价的通知（试行）》深度解读与战略分析_chunk_001"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "subject": "四不改变原则",
+      "predicate": "superset-of",
+      "object": "独立结算",
+      "source_chunks": [
+        "报告-《关于优化集中式新能源发电企业市场报价的通知（试行）》深度解读与战略分析_chunk_001"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "subject": "四不改变原则",
+      "predicate": "superset-of",
+      "object": "调度独立",
+      "source_chunks": [
+        "报告-《关于优化集中式新能源发电企业市场报价的通知（试行）》深度解读与战略分析_chunk_001"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "subject": "《关于优化集中式新能源发电企业市场报价的通知（试行）》",
+      "predicate": "regulates",
+      "object": "集中报价",
+      "source_chunks": [
+        "报告-《关于优化集中式新能源发电企业市场报价的通知（试行）》深度解读与战略分析_chunk_001"
+      ],
+      "confidence": 1.0
+    }
+  ]
+}

@@ -1,0 +1,155 @@
+{
+  "created_at": "2026-04-30T23:58:12.790314",
+  "updated_at": "2026-05-01T00:09:08.823193",
+  "total_skus": 14,
+  "total_characters": 23523,
+  "chunks_processed": [
+    "报告-《关于优化集中式新能源发电企业市场报价的通知（试行）》深度解读与战略分析_chunk_001"
+  ],
+  "skus": [
+    {
+      "sku_id": "sku_001",
+      "name": "政策基本信息",
+      "classification": "factual",
+      "path": "factual/sku_001",
+      "source_chunk": "报告-《关于优化集中式新能源发电企业市场报价的通知（试行）》深度解读与战略分析_chunk_001",
+      "character_count": 172,
+      "description": "《关于优化集中式新能源发电企业市场报价的通知（试行）》的发布机构、文号及核心目标",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_002",
+      "name": "市场准入的双重约束",
+      "classification": "factual",
+      "path": "factual/sku_002",
+      "source_chunk": "报告-《关于优化集中式新能源发电企业市场报价的通知（试行）》深度解读与战略分析_chunk_001",
+      "character_count": 499,
+      "description": "集中报价的适用范围、身份约束和规模约束及其反垄断意义",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_003",
+      "name": "“四不改变”原则下的金融与物理解耦",
+      "classification": "factual",
+      "path": "factual/sku_003",
+      "source_chunk": "报告-《关于优化集中式新能源发电企业市场报价的通知（试行）》深度解读与战略分析_chunk_001",
+      "character_count": 334,
+      "description": "集中报价模式下，报价、市场地位、调度关系、结算关系四个维度的聚合与独立状态",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_004",
+      "name": "集中报价的退出机制",
+      "classification": "factual",
+      "path": "factual/sku_004",
+      "source_chunk": "报告-《关于优化集中式新能源发电企业市场报价的通知（试行）》深度解读与战略分析_chunk_001",
+      "character_count": 90,
+      "description": "为防范投机性套利设置的申请退出限制和公示要求",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_005",
+      "name": "中标电量分解到物理场站的算法原则",
+      "classification": "factual",
+      "path": "factual/sku_005",
+      "source_chunk": "报告-《关于优化集中式新能源发电企业市场报价的通知（试行）》深度解读与战略分析_chunk_001",
+      "character_count": 176,
+      "description": "将整体中标电量反向分解给各物理电站的三种可能方法及其优劣",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_006",
+      "name": "集中报价改革前后市场结构对比",
+      "classification": "factual",
+      "path": "factual/sku_006",
+      "source_chunk": "报告-《关于优化集中式新能源发电企业市场报价的通知（试行）》深度解读与战略分析_chunk_001",
+      "character_count": 486,
+      "description": "以假设模型展示改革前后电力市场主体数量、份额、报价策略及合谋风险的变化",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_007",
+      "name": "国际电力市场聚合模式对比",
+      "classification": "factual",
+      "path": "factual/sku_007",
+      "source_chunk": "报告-《关于优化集中式新能源发电企业市场报价的通知（试行）》深度解读与战略分析_chunk_001",
+      "character_count": 400,
+      "description": "中国集中报价政策与美国PJM、欧洲Nord Pool在聚合商范围、所有权要求和安全态度上的差异",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_008",
+      "name": "集中报价应对负电价的资产组合效应",
+      "classification": "factual",
+      "path": "factual/sku_008",
+      "source_chunk": "报告-《关于优化集中式新能源发电企业市场报价的通知（试行）》深度解读与战略分析_chunk_001",
+      "character_count": 152,
+      "description": "通过风光互补和策略性物理持留来避免恶性竞争、稳定收益的机制",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_009",
+      "name": "集中报价政策下的新能源投资逻辑转变",
+      "classification": "factual",
+      "path": "factual/sku_009",
+      "source_chunk": "报告-《关于优化集中式新能源发电企业市场报价的通知（试行）》深度解读与战略分析_chunk_001",
+      "character_count": 112,
+      "description": "从抢占风光资源转向注重资产协同性以获取规模效应和交易能力",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_010",
+      "name": "独立结算原则下的内部转移定价与代发补偿机制",
+      "classification": "factual",
+      "path": "factual/sku_010",
+      "source_chunk": "报告-《关于优化集中式新能源发电企业市场报价的通知（试行）》深度解读与战略分析_chunk_001",
+      "character_count": 104,
+      "description": "因物理场站实际出力与中标分解计划偏差而产生的集团内部财务结算规则",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_011",
+      "name": "集中报价实体的物理隔离与信息防火墙要求",
+      "classification": "factual",
+      "path": "factual/sku_011",
+      "source_chunk": "报告-《关于优化集中式新能源发电企业市场报价的通知（试行）》深度解读与战略分析_chunk_001",
+      "character_count": 119,
+      "description": "为防止发电侧与售电侧内幕交易而设立的人员、资产和IT隔离措施",
+      "confidence": null
+    },
+    {
+      "sku_id": "skill_001",
+      "name": "assess-unified-bidding-eligibility",
+      "classification": "procedural",
+      "path": "procedural/skill_001",
+      "source_chunk": "报告-《关于优化集中式新能源发电企业市场报价的通知（试行）》深度解读与战略分析_chunk_001",
+      "character_count": 682,
+      "description": "评估同一集团在同一省份的新能源场站是否满足集中报价的身份与规模准入条件。",
+      "confidence": null
+    },
+    {
+      "sku_id": "skill_002",
+      "name": "prepare-for-unified-bidding",
+      "classification": "procedural",
+      "path": "procedural/skill_002",
+      "source_chunk": "报告-《关于优化集中式新能源发电企业市场报价的通知（试行）》深度解读与战略分析_chunk_001",
+      "character_count": 780,
+      "description": "在申请集中报价前，完成数据打通、内部协议制定和风控模型建设等准备工作。",
+      "confidence": null
+    },
+    {
+      "sku_id": "relational-knowledge-base",
+      "name": "relational-knowledge-base",
+      "classification": "relational",
+      "path": "relational",
+      "source_chunk": "aggregated",
+      "character_count": 19417,
+      "description": "Domain label hierarchy and terminology glossary",
+      "confidence": null
+    }
+  ],
+  "factual_count": 11,
+  "relational_count": 1,
+  "procedural_count": 2,
+  "meta_count": 0
+}
