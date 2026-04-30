@@ -1265,7 +1265,8 @@
       "predicate": "related-to",
       "object": "需量电费",
       "source_chunks": [
-        "报告-特来电零碳大楼调研报告：怎样做车网互动？_chunk_001"
+        "报告-特来电零碳大楼调研报告：怎样做车网互动？_chunk_001",
+        "报告-良信电器调研报告：怎样建设零碳工厂？_chunk_001"
       ],
       "confidence": 1.0
     },
@@ -1941,6 +1942,78 @@
       "object": "液流电池",
       "source_chunks": [
         "报告-纬景储能调研报告：液流电池为储能带来的机会_chunk_001"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "subject": "零碳工厂",
+      "predicate": "has-a",
+      "object": "源网荷储",
+      "source_chunks": [
+        "报告-良信电器调研报告：怎样建设零碳工厂？_chunk_001"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "subject": "零碳工厂",
+      "predicate": "has-a",
+      "object": "液冷储能",
+      "source_chunks": [
+        "报告-良信电器调研报告：怎样建设零碳工厂？_chunk_001"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "subject": "零碳工厂",
+      "predicate": "has-a",
+      "object": "光储直柔微电网",
+      "source_chunks": [
+        "报告-良信电器调研报告：怎样建设零碳工厂？_chunk_001"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "subject": "零碳工厂",
+      "predicate": "requires",
+      "object": "智能配电系统",
+      "source_chunks": [
+        "报告-良信电器调研报告：怎样建设零碳工厂？_chunk_001"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "subject": "智能配电系统",
+      "predicate": "enables",
+      "object": "微电网能量管理系统",
+      "source_chunks": [
+        "报告-良信电器调研报告：怎样建设零碳工厂？_chunk_001"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "subject": "MX微网专家",
+      "predicate": "example-of",
+      "object": "微电网能量管理系统",
+      "source_chunks": [
+        "报告-良信电器调研报告：怎样建设零碳工厂？_chunk_001"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "subject": "智能低压电器",
+      "predicate": "part-of",
+      "object": "智能配电系统",
+      "source_chunks": [
+        "报告-良信电器调研报告：怎样建设零碳工厂？_chunk_001"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "subject": "《零碳工厂评价规范》",
+      "predicate": "certifies",
+      "object": "零碳工厂",
+      "source_chunks": [
+        "报告-良信电器调研报告：怎样建设零碳工厂？_chunk_001"
       ],
       "confidence": 1.0
     }

@@ -229,6 +229,15 @@
             {
               "name": "液流电池",
               "children": []
+            },
+            {
+              "name": "按冷却方式",
+              "children": [
+                {
+                  "name": "液冷储能",
+                  "children": []
+                }
+              ]
             }
           ]
         },
@@ -362,6 +371,10 @@
       "children": [
         {
           "name": "钢铁行业降碳",
+          "children": []
+        },
+        {
+          "name": "零碳工厂",
           "children": []
         }
       ]

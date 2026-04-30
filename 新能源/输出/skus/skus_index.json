@@ -1,8 +1,8 @@
 {
   "created_at": "2026-04-30T23:58:12.790314",
-  "updated_at": "2026-05-01T01:28:37.110426",
-  "total_skus": 291,
-  "total_characters": 301367,
+  "updated_at": "2026-05-01T01:33:26.377167",
+  "total_skus": 305,
+  "total_characters": 312627,
   "chunks_processed": [
     "报告-《关于优化集中式新能源发电企业市场报价的通知（试行）》深度解读与战略分析_chunk_001",
     "报告-乌克兰新能源市场机会调研报告_chunk_001",
@@ -24,7 +24,8 @@
     "报告-河钢集团一线调研报告：钢铁行业存在哪些双碳机会？_chunk_001",
     "报告-苏州工业园区的虚拟电厂调研报告：怎样做区域级虚拟电厂_chunk_001",
     "报告-紫电捷控调研报告：交直流微电网怎么做？_chunk_001",
-    "报告-纬景储能调研报告：液流电池为储能带来的机会_chunk_001"
+    "报告-纬景储能调研报告：液流电池为储能带来的机会_chunk_001",
+    "报告-良信电器调研报告：怎样建设零碳工厂？_chunk_001"
   ],
   "skus": [
     {
@@ -2928,18 +2929,158 @@
       "confidence": null
     },
     {
+      "sku_id": "sku_187",
+      "name": "良信海盐零碳工厂基本概况",
+      "classification": "factual",
+      "path": "factual/sku_187",
+      "source_chunk": "报告-良信电器调研报告：怎样建设零碳工厂？_chunk_001",
+      "character_count": 165,
+      "description": "工厂占地206亩，建筑面积27万平，规划年产值100亿元，新能源用能占比55%，绿电消纳率92%，已通过零碳工厂五星级认证，未来计划通过外购碳汇实现100%碳中和。",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_188",
+      "name": "海盐零碳工厂源网荷储系统构成",
+      "classification": "factual",
+      "path": "factual/sku_188",
+      "source_chunk": "报告-良信电器调研报告：怎样建设零碳工厂？_chunk_001",
+      "character_count": 415,
+      "description": "源端5MW光伏、7.15MW风电（投产后年发电预计2000万度），网端6个智能主配房与400多个智能分配电箱，荷端可调负荷约7MW，储端4.75MW/10MWh液冷储能。",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_189",
+      "name": "光储直柔微电网参数与运行数据",
+      "classification": "factual",
+      "path": "factual/sku_189",
+      "source_chunk": "报告-良信电器调研报告：怎样建设零碳工厂？_chunk_001",
+      "character_count": 134,
+      "description": "办公楼宇采用并网型光储直柔微电网，光伏峰值功率146.4千瓦，储能容量286.72千瓦时，年用电约65%来自光伏，光伏发电自用32%、返送大网68%。",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_190",
+      "name": "MX微网专家智能调度系统",
+      "classification": "factual",
+      "path": "factual/sku_190",
+      "source_chunk": "报告-良信电器调研报告：怎样建设零碳工厂？_chunk_001",
+      "character_count": 311,
+      "description": "MX微网专家是零碳工厂的统一能源管理大脑，基于AI算法实现源网荷储协同调控，支持五种策略模式，与生产系统联动进行负荷预测，可降低用电成本约10%。",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_191",
+      "name": "零碳工厂投入产出经济性",
+      "classification": "factual",
+      "path": "factual/sku_191",
+      "source_chunk": "报告-良信电器调研报告：怎样建设零碳工厂？_chunk_001",
+      "character_count": 173,
+      "description": "海盐工厂零碳建设总投资9000万元，通过绿电供应、储能套利、能效管理等途径产生收益，预计4-6年收回成本，全生命周期净收益1.8亿元。",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_192",
+      "name": "基于智能低压电器的零碳工厂能源神经系统",
+      "classification": "factual",
+      "path": "factual/sku_192",
+      "source_chunk": "报告-良信电器调研报告：怎样建设零碳工厂？_chunk_001",
+      "character_count": 388,
+      "description": "良信将低压电器升级为智能采集与控制终端，构建三层架构的智能配电系统，形成覆盖源网荷储的数据底座，相比外加传感器方案具有覆盖全、省成本、易控制的优势，支撑其向零碳园区服务商转型。",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_193",
+      "name": "零碳园区建设面临的五大挑战",
+      "classification": "factual",
+      "path": "factual/sku_193",
+      "source_chunk": "报告-良信电器调研报告：怎样建设零碳工厂？_chunk_001",
+      "character_count": 351,
+      "description": "良信总结出安全、成本、方案、落地、回报率五大挑战，建议零碳园区建设需由有集成能力的总包方统筹，覆盖咨询设计、施工总包到运维的一体化服务。",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_194",
+      "name": "零碳园区生态合作体系",
+      "classification": "factual",
+      "path": "factual/sku_194",
+      "source_chunk": "报告-良信电器调研报告：怎样建设零碳工厂？_chunk_001",
+      "character_count": 307,
+      "description": "零碳园区建设需多领域企业组成生态联盟，覆盖投资、施工、设计、运维等角色，通过项目共享和产品互融协同工作，总包方需具备顶层设计与系统集成能力，并深度理解客户业务。",
+      "confidence": null
+    },
+    {
+      "sku_id": "skill_071",
+      "name": "zero-carbon-factory-source-grid-load-storage-design",
+      "classification": "procedural",
+      "path": "procedural/skill_071",
+      "source_chunk": "报告-良信电器调研报告：怎样建设零碳工厂？_chunk_001",
+      "character_count": 763,
+      "description": "设计包含源网荷储架构及光储直柔微电网的零碳工厂方案时使用",
+      "confidence": null
+    },
+    {
+      "sku_id": "skill_072",
+      "name": "mx-microgrid-expert-energy-scheduling",
+      "classification": "procedural",
+      "path": "procedural/skill_072",
+      "source_chunk": "报告-良信电器调研报告：怎样建设零碳工厂？_chunk_001",
+      "character_count": 641,
+      "description": "当需要对零碳工厂的源网荷储系统进行AI优化调度时使用，根据不同的运营目标选择策略",
+      "confidence": null
+    },
+    {
+      "sku_id": "skill_073",
+      "name": "smart-low-voltage-power-distribution-integration",
+      "classification": "procedural",
+      "path": "procedural/skill_073",
+      "source_chunk": "报告-良信电器调研报告：怎样建设零碳工厂？_chunk_001",
+      "character_count": 655,
+      "description": "当需要将传统低压电器升级为智能数据采集与控制节点，搭建零碳工厂能源数据底座时使用",
+      "confidence": null
+    },
+    {
+      "sku_id": "skill_074",
+      "name": "zero-carbon-factory-risk-planning",
+      "classification": "procedural",
+      "path": "procedural/skill_074",
+      "source_chunk": "报告-良信电器调研报告：怎样建设零碳工厂？_chunk_001",
+      "character_count": 788,
+      "description": "在规划零碳工厂或园区建设前，评估和规避五大关键风险时使用",
+      "confidence": null
+    },
+    {
+      "sku_id": "skill_075",
+      "name": "zero-carbon-park-general-contractor-capability-assessment",
+      "classification": "procedural",
+      "path": "procedural/skill_075",
+      "source_chunk": "报告-良信电器调研报告：怎样建设零碳工厂？_chunk_001",
+      "character_count": 602,
+      "description": "评估或选择零碳园区总包服务商时使用，明确总包方应具备的核心能力",
+      "confidence": null
+    },
+    {
+      "sku_id": "skill_076",
+      "name": "zero-carbon-ecosystem-partnership-building",
+      "classification": "procedural",
+      "path": "procedural/skill_076",
+      "source_chunk": "报告-良信电器调研报告：怎样建设零碳工厂？_chunk_001",
+      "character_count": 676,
+      "description": "组建零碳园区建设生态合作伙伴联盟时使用，整合跨领域技术与企业",
+      "confidence": null
+    },
+    {
       "sku_id": "relational-knowledge-base",
       "name": "relational-knowledge-base",
       "classification": "relational",
       "path": "relational",
       "source_chunk": "aggregated",
-      "character_count": 149448,
+      "character_count": 154339,
       "description": "Domain label hierarchy and terminology glossary",
       "confidence": null
     }
   ],
-  "factual_count": 219,
+  "factual_count": 227,
   "relational_count": 1,
-  "procedural_count": 70,
+  "procedural_count": 76,
   "meta_count": 1
 }

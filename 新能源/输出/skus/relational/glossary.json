@@ -4185,6 +4185,127 @@
       "source_chunk": "报告-纬景储能调研报告：液流电池为储能带来的机会_chunk_001",
       "aliases": [],
       "related_terms": []
+    },
+    {
+      "term": "零碳工厂",
+      "definition": "通过采用可再生能源、提升能效、碳抵消等措施实现净零碳排放的工厂。",
+      "labels": [
+        "工业降碳 > 零碳工厂"
+      ],
+      "source_chunks": [
+        "报告-良信电器调研报告：怎样建设零碳工厂？_chunk_001"
+      ],
+      "source_chunk": "报告-良信电器调研报告：怎样建设零碳工厂？_chunk_001",
+      "aliases": [],
+      "related_terms": []
+    },
+    {
+      "term": "液冷储能",
+      "definition": "采用液体作为冷却介质来散热的储能系统。",
+      "labels": [
+        "技术架构 > 储能系统 > 按冷却方式 > 液冷储能"
+      ],
+      "source_chunks": [
+        "报告-良信电器调研报告：怎样建设零碳工厂？_chunk_001"
+      ],
+      "source_chunk": "报告-良信电器调研报告：怎样建设零碳工厂？_chunk_001",
+      "aliases": [],
+      "related_terms": []
+    },
+    {
+      "term": "智能配电系统",
+      "definition": "由智能低压电器、分布式监控单元和中心管理软件构成的软硬件一体化系统，实现配电网的数据采集、状态监测和智能控制。",
+      "labels": [
+        "技术架构 > 能源管理系统"
+      ],
+      "source_chunks": [
+        "报告-良信电器调研报告：怎样建设零碳工厂？_chunk_001"
+      ],
+      "source_chunk": "报告-良信电器调研报告：怎样建设零碳工厂？_chunk_001",
+      "aliases": [
+        "智能化配电软硬件一体化解决方案"
+      ],
+      "related_terms": []
+    },
+    {
+      "term": "智能低压电器",
+      "definition": "集成数据采集、通信和控制功能的低压电器，能够监测电气参数和状态并实现远程控制。",
+      "labels": [
+        "技术架构 > 智能硬件"
+      ],
+      "source_chunks": [
+        "报告-良信电器调研报告：怎样建设零碳工厂？_chunk_001"
+      ],
+      "source_chunk": "报告-良信电器调研报告：怎样建设零碳工厂？_chunk_001",
+      "aliases": [],
+      "related_terms": []
+    },
+    {
+      "term": "PTX站控单元",
+      "definition": "部署在配电房内，用于对多回路低压电器进行数据采集和分布式监控的站端控制单元。",
+      "labels": [
+        "技术架构 > 智能硬件"
+      ],
+      "source_chunks": [
+        "报告-良信电器调研报告：怎样建设零碳工厂？_chunk_001"
+      ],
+      "source_chunk": "报告-良信电器调研报告：怎样建设零碳工厂？_chunk_001",
+      "aliases": [],
+      "related_terms": []
+    },
+    {
+      "term": "MX微网专家",
+      "definition": "基于AI算法实现源网荷储协同优化调度的微电网能量管理软件。",
+      "labels": [
+        "技术架构 > 能源管理系统"
+      ],
+      "source_chunks": [
+        "报告-良信电器调研报告：怎样建设零碳工厂？_chunk_001"
+      ],
+      "source_chunk": "报告-良信电器调研报告：怎样建设零碳工厂？_chunk_001",
+      "aliases": [],
+      "related_terms": []
+    },
+    {
+      "term": "平抑波动优先",
+      "definition": "一种微电网调度策略，优先控制供电端出力以平抑功率波动，保障电压和频率的稳定。",
+      "labels": [
+        "技术架构 > 微电网"
+      ],
+      "source_chunks": [
+        "报告-良信电器调研报告：怎样建设零碳工厂？_chunk_001"
+      ],
+      "source_chunk": "报告-良信电器调研报告：怎样建设零碳工厂？_chunk_001",
+      "aliases": [],
+      "related_terms": []
+    },
+    {
+      "term": "《零碳工厂评价规范》",
+      "definition": "用于评价零碳工厂的标准，明确了零碳工厂的评价指标和等级划分。",
+      "labels": [
+        "电力市场政策"
+      ],
+      "source_chunks": [
+        "报告-良信电器调研报告：怎样建设零碳工厂？_chunk_001"
+      ],
+      "source_chunk": "报告-良信电器调研报告：怎样建设零碳工厂？_chunk_001",
+      "aliases": [],
+      "related_terms": []
+    },
+    {
+      "term": "零碳园区一体化建设服务",
+      "definition": "为客户提供从咨询设计、施工总承包到运维的零碳园区全链条建设服务商业模式。",
+      "labels": [
+        "企业运营 > 商业模式"
+      ],
+      "source_chunks": [
+        "报告-良信电器调研报告：怎样建设零碳工厂？_chunk_001"
+      ],
+      "source_chunk": "报告-良信电器调研报告：怎样建设零碳工厂？_chunk_001",
+      "aliases": [
+        "零碳园区总包服务"
+      ],
+      "related_terms": []
     }
   ]
 }
