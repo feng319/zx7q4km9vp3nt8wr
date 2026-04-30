@@ -25,7 +25,7 @@ EUREKA_SOFT_LIMIT = 50000
 # First chunk size when eureka exceeds soft limit
 EUREKA_CHUNK_SIZE = 30000
 # Max characters for SKU index summary in phase 2
-SKU_INDEX_MAX_CHARS = 50000
+SKU_INDEX_MAX_CHARS = 70000
 # Anchor marker regex
 ANCHOR_PATTERN = re.compile(r"【锚点：[^】]+】")
 
