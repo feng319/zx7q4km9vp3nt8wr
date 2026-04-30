@@ -1,8 +1,8 @@
 {
   "created_at": "2026-04-30T23:58:12.790314",
-  "updated_at": "2026-05-01T00:57:07.401131",
-  "total_skus": 184,
-  "total_characters": 193210,
+  "updated_at": "2026-05-01T00:59:46.675570",
+  "total_skus": 201,
+  "total_characters": 202852,
   "chunks_processed": [
     "报告-《关于优化集中式新能源发电企业市场报价的通知（试行）》深度解读与战略分析_chunk_001",
     "报告-乌克兰新能源市场机会调研报告_chunk_001",
@@ -16,7 +16,8 @@
     "报告-国海绿能一线调研报告：重卡换电站怎么做？_chunk_001",
     "报告-安悦节能调研报告：怎样做冷热电综合能源服务？_chunk_001",
     "报告-广林汇智调研报告：在西北地区怎么做虚拟电厂？_chunk_001",
-    "报告-恒实盛景调研报告：怎样做空调虚拟电厂？_chunk_001"
+    "报告-恒实盛景调研报告：怎样做空调虚拟电厂？_chunk_001",
+    "报告-正泰安能光伏星调研报告：在非洲如何做户用光伏？_chunk_001"
   ],
   "skus": [
     {
@@ -1850,18 +1851,188 @@
       "confidence": null
     },
     {
+      "sku_id": "sku_126",
+      "name": "非洲无电人口规模与市场潜力",
+      "classification": "factual",
+      "path": "factual/sku_126",
+      "source_chunk": "报告-正泰安能光伏星调研报告：在非洲如何做户用光伏？_chunk_001",
+      "character_count": 143,
+      "description": "全球近7亿无电人口中85%在非洲，占非洲总人口40%，且人口增速超电力发展，预计2030年仍超6亿，形成庞大的离网光伏刚需市场。",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_127",
+      "name": "户用离网光伏的国际标准IEC 62257",
+      "classification": "factual",
+      "path": "factual/sku_127",
+      "source_chunk": "报告-正泰安能光伏星调研报告：在非洲如何做户用光伏？_chunk_001",
+      "character_count": 162,
+      "description": "世界银行和非洲开发银行推动的“Lighting Global”项目为离网光伏建立了IEC 62257标准，界定了系统组成与质量规范，成为非洲市场准入的技术基础。",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_128",
+      "name": "非洲户用光伏分期付费商业模式",
+      "classification": "factual",
+      "path": "factual/sku_128",
+      "source_chunk": "报告-正泰安能光伏星调研报告：在非洲如何做户用光伏？_chunk_001",
+      "character_count": 204,
+      "description": "农户通过少量初装费+移动支付按天付费（约2-3元/天），1-3年买断设备，成本低于煤油灯，解决了低收入家庭的一次性支付难题。",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_129",
+      "name": "肯尼亚移动支付M-PESA普及与应用",
+      "classification": "factual",
+      "path": "factual/sku_129",
+      "source_chunk": "报告-正泰安能光伏星调研报告：在非洲如何做户用光伏？_chunk_001",
+      "character_count": 136,
+      "description": "M-PESA普及率达75%，支持功能手机短信操作，是PAYGo分期支付的基础设施，使农村无银行账户人群也能完成日常电费支付。",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_130",
+      "name": "正泰安能PVSTAR户用光储产品规格",
+      "classification": "factual",
+      "path": "factual/sku_130",
+      "source_chunk": "报告-正泰安能光伏星调研报告：在非洲如何做户用光伏？_chunk_001",
+      "character_count": 277,
+      "description": "正泰在非洲推出大、小两种PAYGo户用系统，均符合IEC 62257标准，覆盖不同支付能力的家庭。",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_131",
+      "name": "正泰PAYGo支付技术闭环流程",
+      "classification": "factual",
+      "path": "factual/sku_131",
+      "source_chunk": "报告-正泰安能光伏星调研报告：在非洲如何做户用光伏？_chunk_001",
+      "character_count": 193,
+      "description": "正泰通过移动支付+激活码+控制器锁定实现按天付费与风险控制，将售电逻辑植入硬件。",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_132",
+      "name": "正泰在肯尼亚的经销商网络与代理激励",
+      "classification": "factual",
+      "path": "factual/sku_132",
+      "source_chunk": "报告-正泰安能光伏星调研报告：在非洲如何做户用光伏？_chunk_001",
+      "character_count": 165,
+      "description": "正泰通过82家经销商、1200名无底薪纯佣金本地代理实现“乡镇-代理-用户”密集覆盖，深耕县域市场。",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_133",
+      "name": "BBOXX的运营规模与用户活跃度",
+      "classification": "factual",
+      "path": "factual/sku_133",
+      "source_chunk": "报告-正泰安能光伏星调研报告：在非洲如何做户用光伏？_chunk_001",
+      "character_count": 98,
+      "description": "BBOXX在肯尼亚拥有超20万户用户，用户日活跃率80%，允许短期暂停付费，体现其用户粘性与灵活性。",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_134",
+      "name": "BBOXX基于M-PESA数据的小额征信系统",
+      "classification": "factual",
+      "path": "factual/sku_134",
+      "source_chunk": "报告-正泰安能光伏星调研报告：在非洲如何做户用光伏？_chunk_001",
+      "character_count": 144,
+      "description": "BBOXX抓取M-PESA使用频率、金额、行为规律等数据建立类银行级风控，使无金融记录的农村家庭获得信用评估。",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_135",
+      "name": "BBOXX的售后服务网络与质保政策",
+      "classification": "factual",
+      "path": "factual/sku_135",
+      "source_chunk": "报告-正泰安能光伏星调研报告：在非洲如何做户用光伏？_chunk_001",
+      "character_count": 143,
+      "description": "BBOXX在肯尼亚设立28个县域服务站，服务半径50公里，提供1-3年质保，密集服务网络是维持用户口碑的核心。",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_136",
+      "name": "正泰安能对国内经销合作伙伴的要求与支持",
+      "classification": "factual",
+      "path": "factual/sku_136",
+      "source_chunk": "报告-正泰安能光伏星调研报告：在非洲如何做户用光伏？_chunk_001",
+      "character_count": 160,
+      "description": "正泰计划在肯尼亚14个无电县招募中国经销商，要求具备团队管理、垫资能力和服务思维，并提供品牌、系统、营销等支持。",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_137",
+      "name": "BBOXX对中国企业的合作需求",
+      "classification": "factual",
+      "path": "factual/sku_137",
+      "source_chunk": "报告-正泰安能光伏星调研报告：在非洲如何做户用光伏？_chunk_001",
+      "character_count": 185,
+      "description": "BBOXX急需资金扩大用户规模，同时需要高端产品供应，已与中国供应链深度绑定（90%核心产品从中国进口），并开放融资、联营等合作。",
+      "confidence": null
+    },
+    {
+      "sku_id": "skill_049",
+      "name": "off-grid-solar-market-entry-four-steps",
+      "classification": "procedural",
+      "path": "procedural/skill_049",
+      "source_chunk": "报告-正泰安能光伏星调研报告：在非洲如何做户用光伏？_chunk_001",
+      "character_count": 736,
+      "description": "当企业计划进入非洲离网户用光伏市场时，遵循此四步法快速建立本地分销网络。",
+      "confidence": null
+    },
+    {
+      "sku_id": "skill_050",
+      "name": "paygo-mobile-payment-unlock-workflow",
+      "classification": "procedural",
+      "path": "procedural/skill_050",
+      "source_chunk": "报告-正泰安能光伏星调研报告：在非洲如何做户用光伏？_chunk_001",
+      "character_count": 847,
+      "description": "在离网光伏系统中实现按天付费的PAYGo技术闭环，通过移动支付、激活码和远程控制完成付费解锁。",
+      "confidence": null
+    },
+    {
+      "sku_id": "skill_051",
+      "name": "mpesa-data-credit-risk-assessment",
+      "classification": "procedural",
+      "path": "procedural/skill_051",
+      "source_chunk": "报告-正泰安能光伏星调研报告：在非洲如何做户用光伏？_chunk_001",
+      "character_count": 811,
+      "description": "利用移动支付平台数据为无金融记录的非洲农村家庭建立小额征信系统，用于户用光伏分期付款的风险评估。",
+      "confidence": null
+    },
+    {
+      "sku_id": "skill_052",
+      "name": "become-chint-pvstar-county-distributor",
+      "classification": "procedural",
+      "path": "procedural/skill_052",
+      "source_chunk": "报告-正泰安能光伏星调研报告：在非洲如何做户用光伏？_chunk_001",
+      "character_count": 773,
+      "description": "评估自身条件并启动成为正泰光伏星在肯尼亚无电县的独家经销商，专注于深耕县域市场。",
+      "confidence": null
+    },
+    {
+      "sku_id": "skill_053",
+      "name": "collaborate-with-bboxx-africa",
+      "classification": "procedural",
+      "path": "procedural/skill_053",
+      "source_chunk": "报告-正泰安能光伏星调研报告：在非洲如何做户用光伏？_chunk_001",
+      "character_count": 919,
+      "description": "根据自身优势选择与BBOXX在非洲离网光伏领域的合作方式，包括产品供应、本地组装和融资合作。",
+      "confidence": null
+    },
+    {
       "sku_id": "relational-knowledge-base",
       "name": "relational-knowledge-base",
       "classification": "relational",
       "path": "relational",
       "source_chunk": "aggregated",
-      "character_count": 99725,
+      "character_count": 103271,
       "description": "Domain label hierarchy and terminology glossary",
       "confidence": null
     }
   ],
-  "factual_count": 134,
+  "factual_count": 146,
   "relational_count": 1,
-  "procedural_count": 48,
+  "procedural_count": 53,
   "meta_count": 1
 }

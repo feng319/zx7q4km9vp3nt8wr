@@ -1178,6 +1178,60 @@
         "报告-恒实盛景调研报告：怎样做空调虚拟电厂？_chunk_001"
       ],
       "confidence": 1.0
+    },
+    {
+      "subject": "IEC 62257",
+      "predicate": "certifies",
+      "object": "户用离网光伏系统",
+      "source_chunks": [
+        "报告-正泰安能光伏星调研报告：在非洲如何做户用光伏？_chunk_001"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "subject": "户用离网光伏系统",
+      "predicate": "has-a",
+      "object": "PAYGo控制器",
+      "source_chunks": [
+        "报告-正泰安能光伏星调研报告：在非洲如何做户用光伏？_chunk_001"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "subject": "PAYGo控制器",
+      "predicate": "implements",
+      "object": "分期付费",
+      "source_chunks": [
+        "报告-正泰安能光伏星调研报告：在非洲如何做户用光伏？_chunk_001"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "subject": "离网型微电网",
+      "predicate": "superset-of",
+      "object": "户用离网光伏系统",
+      "source_chunks": [
+        "报告-正泰安能光伏星调研报告：在非洲如何做户用光伏？_chunk_001"
+      ],
+      "confidence": 0.8
+    },
+    {
+      "subject": "分期付费",
+      "predicate": "enables",
+      "object": "户用离网光伏系统",
+      "source_chunks": [
+        "报告-正泰安能光伏星调研报告：在非洲如何做户用光伏？_chunk_001"
+      ],
+      "confidence": 0.8
+    },
+    {
+      "subject": "能源即服务",
+      "predicate": "related-to",
+      "object": "商业模式",
+      "source_chunks": [
+        "报告-正泰安能光伏星调研报告：在非洲如何做户用光伏？_chunk_001"
+      ],
+      "confidence": 0.6
     }
   ]
 }
