@@ -1,0 +1,287 @@
+"""Front desk routing logic - determines which parser handles each file/URL."""
+
+import re
+from pathlib import Path
+
+import structlog
+
+from .config import settings
+from .parsers import MarkItDownParser, MinerUParser, PaddleOCRVLParser, TabularParser
+from .parsers.base import BaseParser
+from .url_parsers import BilibiliParser, FireCrawlParser, RepomixParser, YouTubeParser
+from .url_parsers.base import BaseURLParser
+from .utils.file_utils import get_file_size_mb
+
+logger = structlog.get_logger(__name__)
+
+
+class Router:
+    """
+    Front desk script that routes files/URLs to appropriate parsers.
+    Routing logic based on file extension, size, and URL patterns.
+    """
+
+    # File extension to parser mapping
+    EXTENSION_MAP = {
+        # MarkItDown handles these
+        ".pdf": "markitdown",  # May fallback to MinerU
+        ".ppt": "markitdown",
+        ".pptx": "markitdown",
+        ".doc": "markitdown",
+        ".docx": "markitdown",
+        ".html": "markitdown",
+        ".htm": "markitdown",
+        ".epub": "markitdown",
+        ".md": "markitdown",
+        ".txt": "markitdown",
+        # Tabular data
+        ".xlsx": "tabular",
+        ".xls": "tabular",
+        ".csv": "tabular",
+    }
+
+    # Extensions to silently skip (no useful text content)
+    SKIP_EXTENSIONS = {
+        ".png", ".jpg", ".jpeg", ".gif", ".bmp", ".svg", ".ico", ".webp", ".tiff",
+        ".mp3", ".mp4", ".wav", ".avi", ".mov", ".flv", ".wmv",
+        ".css", ".js", ".hhc", ".hhk",
+    }
+
+    # URL patterns for auto-detection
+    YOUTUBE_PATTERNS = [
+        r"youtube\.com/watch",
+        r"youtu\.be/",
+        r"youtube\.com/embed/",
+    ]
+
+    BILIBILI_PATTERNS = [
+        r"bilibili\.com/video/",
+        r"b23\.tv/",
+        r"bilibili\.com/bangumi/",
+    ]
+
+    GITHUB_REPO_PATTERNS = [
+        r"github\.com/[\w-]+/[\w-]+/?$",
+        r"github\.com/[\w-]+/[\w-]+\.git$",
+    ]
+
+    def __init__(self):
+        """Initialize all parsers."""
+        # File parsers
+        self.parsers: dict[str, BaseParser] = {
+            "markitdown": MarkItDownParser(),
+            "mineru": MinerUParser(),
+            "paddleocr_vl": PaddleOCRVLParser(),
+            "tabular": TabularParser(),
+        }
+
+        # URL parsers
+        self.url_parsers: dict[str, BaseURLParser] = {
+            "firecrawl": FireCrawlParser(),
+            "youtube": YouTubeParser(),
+            "bilibili": BilibiliParser(),
+            "repomix": RepomixParser(),
+        }
+
+    def route_file(self, file_path: Path) -> BaseParser:
+        """
+        Determine which parser to use for a file.
+
+        Routing rules:
+        1. Route by extension (MinerU disabled due to network issues)
+
+        Args:
+            file_path: Path to the file
+
+        Returns:
+            Appropriate parser instance
+
+        Raises:
+            ValueError: If file type is not supported
+        """
+        extension = file_path.suffix.lower()
+
+        # Skip known non-text extensions silently
+        if extension in self.SKIP_EXTENSIONS:
+            logger.debug("Skipping non-text file", extension=extension, file=file_path.name)
+            raise ValueError(f"Skipped non-text file: {extension}")
+
+        # Get initial parser based on extension
+        parser_key = self.EXTENSION_MAP.get(extension)
+
+        if parser_key is None:
+            logger.warning("No parser for extension", extension=extension, file=file_path.name)
+            raise ValueError(f"Unsupported file type: {extension}")
+
+        # NOTE: MinerU routing disabled due to network connectivity issues
+        # to Alibaba Cloud Shanghai. Using MarkItDown for all PDFs.
+        # To re-enable, uncomment the following:
+        # if extension == ".pdf" and self._should_use_mineru_for_size(file_path):
+        #     logger.info("Routing to MinerU (size threshold)", file=file_path.name)
+        #     return self.parsers["mineru"]
+
+        logger.debug("Routing file", file=file_path.name, parser=parser_key)
+        return self.parsers[parser_key]
+
+    def route_url(self, url: str) -> BaseURLParser:
+        """
+        Determine which URL parser to use based on URL pattern.
+
+        Routing rules:
+        1. YouTube URLs -> YouTubeParser
+        2. GitHub repo URLs -> RepomixParser
+        3. Other URLs -> FireCrawlParser
+
+        Args:
+            url: URL to parse
+
+        Returns:
+            Appropriate URL parser instance
+        """
+        url_lower = url.lower()
+
+        # Check YouTube patterns
+        for pattern in self.YOUTUBE_PATTERNS:
+            if re.search(pattern, url_lower):
+                logger.info("Routing URL to YouTube parser", url=url)
+                return self.url_parsers["youtube"]
+
+        # Check Bilibili patterns
+        for pattern in self.BILIBILI_PATTERNS:
+            if re.search(pattern, url_lower):
+                logger.info("Routing URL to Bilibili parser", url=url)
+                return self.url_parsers["bilibili"]
+
+        # Check GitHub repo patterns
+        for pattern in self.GITHUB_REPO_PATTERNS:
+            if re.search(pattern, url_lower):
+                # Make sure it's not a specific page (issues, PRs, etc.)
+                excluded = ["/issues", "/pull", "/blob/", "/tree/", "/releases", "/actions"]
+                if not any(ex in url_lower for ex in excluded):
+                    logger.info("Routing URL to Repomix parser", url=url)
+                    return self.url_parsers["repomix"]
+
+        # Default to FireCrawl for general websites
+        logger.info("Routing URL to FireCrawl parser", url=url)
+        return self.url_parsers["firecrawl"]
+
+    def _should_use_mineru_for_size(self, file_path: Path) -> bool:
+        """
+        Check if PDF should be routed to MinerU based on file size.
+
+        Args:
+            file_path: Path to the PDF file
+
+        Returns:
+            True if file exceeds size threshold
+        """
+        size_mb = get_file_size_mb(file_path)
+        if size_mb > settings.max_pdf_size_mb:
+            logger.info(
+                "PDF exceeds size threshold",
+                file=file_path.name,
+                size_mb=f"{size_mb:.2f}",
+                threshold_mb=settings.max_pdf_size_mb,
+            )
+            return True
+        return False
+
+    def should_fallback_to_ocr(self, text_content: str, file_path: Path | None = None) -> bool:
+        """
+        Check if MarkItDown result should fallback to OCR.
+        Called after MarkItDown parsing to check content quality.
+
+        Uses a multi-signal approach:
+        1. Per-page median character count (robust to cover pages)
+        2. Consecutive low-content pages (catches mixed scan/text PDFs)
+        3. Legacy absolute threshold as safety net
+
+        Args:
+            text_content: Extracted text content from MarkItDown
+            file_path: Original file path (to get page count via PyMuPDF)
+
+        Returns:
+            True if content quality is too low
+        """
+        # Quick check: empty content → immediate fallback
+        if not text_content.strip():
+            return True
+
+        # Try to get page count for per-page analysis
+        page_count = 1
+        if file_path and file_path.suffix.lower() == ".pdf":
+            try:
+                import fitz
+                doc = fitz.open(file_path)
+                page_count = len(doc)
+                doc.close()
+            except Exception:
+                page_count = 1
+
+        # Split content by page markers (--- separators from MarkItDown)
+        # MarkItDown doesn't always add page separators, so also estimate
+        # from content length as a rough approximation
+        pages_text = text_content.split("\n\n---\n\n")
+        if len(pages_text) < 2:
+            # No explicit page breaks; split roughly by page
+            # Assume ~2000 chars per page as heuristic
+            chars_per_page_est = max(len(text_content) / max(page_count, 1), 1)
+            if chars_per_page_est < settings.min_chars_per_page:
+                logger.info(
+                    "Low chars/page estimate, fallback to OCR",
+                    chars_per_page=f"{chars_per_page_est:.0f}",
+                    threshold=settings.min_chars_per_page,
+                    pages=page_count,
+                )
+                return True
+
+            # Legacy absolute threshold as safety net
+            valid_chars = len(re.findall(r"[\w\s.,!?;:'\"-]", text_content))
+            if valid_chars < settings.min_valid_chars and page_count <= 3:
+                logger.info(
+                    "Low valid chars for short PDF, fallback to OCR",
+                    valid_chars=valid_chars,
+                    threshold=settings.min_valid_chars,
+                )
+                return True
+
+            return False
+
+        # We have explicit page breaks → use per-page analysis
+        # Signal 1: Median chars per page (robust to cover pages with low content)
+        page_char_counts = [len(p.strip()) for p in pages_text]
+        sorted_counts = sorted(page_char_counts)
+        mid = len(sorted_counts) // 2
+        median_chars = sorted_counts[mid] if len(sorted_counts) % 2 else (
+            (sorted_counts[mid - 1] + sorted_counts[mid]) / 2
+        )
+
+        if median_chars < settings.min_chars_per_page:
+            logger.info(
+                "Low median chars/page, fallback to OCR",
+                median_chars=f"{median_chars:.0f}",
+                threshold=settings.min_chars_per_page,
+                pages=page_count,
+            )
+            return True
+
+        # Signal 2: Consecutive low-content pages (catches mixed scan/text PDFs
+        # where a few text pages like TOC inflate the median)
+        consecutive_low = 0
+        for count in page_char_counts:
+            if count < settings.consecutive_low_threshold:
+                consecutive_low += 1
+                if consecutive_low >= settings.consecutive_low_pages:
+                    logger.info(
+                        f"Consecutive {consecutive_low} low-content pages, fallback to OCR",
+                        threshold=settings.consecutive_low_threshold,
+                    )
+                    return True
+            else:
+                consecutive_low = 0
+
+        return False
+
+    def get_ocr_fallback_parser(self) -> BaseParser:
+        """Get the PaddleOCR-VL parser for OCR fallback scenarios."""
+        return self.parsers["paddleocr_vl"]

@@ -1,0 +1,61 @@
+{
+  "acceptance_bill_definition": "承诺在特定期限内兑付的汇款文书，持有人可凭票面约定时间向付款人主张债权，中国当前存量规模约十余万亿元",
+  "bill_classification": [
+    {
+      "type": "银行承兑汇票（银承）",
+      "payment_subject": "银行",
+      "risk_level": "低"
+    },
+    {
+      "type": "商业承兑汇票（商承）",
+      "payment_subject": "企业",
+      "risk_level": "高"
+    }
+  ],
+  "operation_logic": {
+    "scenario": "强势买方向供应商采购时签发承兑汇票约定延期付款，供应商可拆分票据支付下游款项，传统纸质票据已逐步被电子票据替代",
+    "pain_point": "下游供应商常因现金流压力拒绝接受票据支付，票据持有人被迫折价变现"
+  },
+  "ticket_broker_transaction_mode": [
+    {
+      "party": "票据持有企业",
+      "motivation": "急需现金周转",
+      "income_mode": "折价变现（如1亿票据兑9000万现金）",
+      "risk": "牺牲部分利润"
+    },
+    {
+      "party": "票据中介（票贩子）",
+      "motivation": "资金套利需求",
+      "income_mode": "持有到期获取价差收益（年化可达22%）",
+      "risk": "商承违约风险较高"
+    }
+  ],
+  "asset_securitization_background": "2013年中国金融创新时期兴起，通过收益权资产证券化帮助企业融资，将应收账款等收益权打包成理财产品出售，同期全国各地涌现金交所、票交所、股交所等交易平台，相关理财产品收益率普遍在8%-15%，多作为内部福利未面向普通民众",
+  "policy_turn": "P2P被叫停后地方隐性债务问题暴露，商业承兑汇票成为最不透明债务形式，国家全面整顿，叫停各类交易所发债业务，原有永续债（借新还旧）模式难以为继",
+  "solution_case": "中企云链模式：央企+地方政府+银行合作，将隐性债务显性化，通过银行发债融资，资源门槛极高仅能解决部分问题",
+  "operation_key_points": {
+    "organizational_form": "组建有限责任公司或合伙企业",
+    "share_design": "单份额度越小准入门槛越低，管理价值越高",
+    "compliance_path": "采用借款模式（资金出借+票据抵押背书），避免直接票据买卖的违规贴现风险",
+    "scale_effect": "金融本质是杠杆运作，参考银行存贷差模式",
+    "market_choice": "下沉市场更具优势，信任基础强、竞争弱、监管政策滞后"
+  },
+  "market_comparison": [
+    {
+      "dimension": "信任基础",
+      "first_tier_cities": "弱（外来人口为主）",
+      "sinking_market": "强（熟人社会）"
+    },
+    {
+      "dimension": "竞争程度",
+      "first_tier_cities": "高",
+      "sinking_market": "低"
+    },
+    {
+      "dimension": "操作难度",
+      "first_tier_cities": "监管严格",
+      "sinking_market": "政策滞后"
+    }
+  ],
+  "ordinary_people_opportunity": "国企/大型民企通过票据抵押融资收益率可达8%-36%，风险可控区间为<24%，可将高收益票据拆分为小额投资份额满足普通投资者低门槛投资需求"
+}

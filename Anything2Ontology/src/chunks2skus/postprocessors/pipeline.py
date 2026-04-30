@@ -1,0 +1,98 @@
+"""PostprocessingPipeline — orchestrates bucketing, dedup, proofreading, and cross-doc relations."""
+
+from datetime import datetime
+from pathlib import Path
+from typing import Any
+
+import structlog
+
+from chunks2skus.config import settings
+from chunks2skus.postprocessors.bucketing import BucketingPostprocessor
+from chunks2skus.postprocessors.cross_doc_relations import CrossDocRelationsPostprocessor
+from chunks2skus.postprocessors.dedup import DedupPostprocessor
+from chunks2skus.postprocessors.proofreading import ProofreadingPostprocessor
+
+logger = structlog.get_logger(__name__)
+
+
+class PostprocessingPipeline:
+    """Orchestrates the 3-step postprocessing pipeline."""
+
+    def __init__(self, skus_dir: Path | None = None, chunks_dir: Path | None = None):
+        """
+        Initialize the pipeline.
+
+        Args:
+            skus_dir: SKUs directory (default: settings.skus_output_dir)
+            chunks_dir: Chunks directory for source chunk lookup (default: settings.chunks_dir)
+        """
+        self.skus_dir = skus_dir or settings.skus_output_dir
+        self.chunks_dir = chunks_dir or settings.chunks_dir
+
+    def run_all(self, skip_confidence: bool = False) -> dict[str, Any]:
+        """Run all 4 postprocessing steps sequentially.
+
+        Args:
+            skip_confidence: If True, skip the proofreading/confidence step (requires Jina search).
+        """
+        start_time = datetime.now()
+        logger.info("Starting postprocessing pipeline", skus_dir=str(self.skus_dir))
+
+        results = {}
+
+        # Step 1: Bucketing
+        logger.info("Step 1/4: Bucketing")
+        bucketing = BucketingPostprocessor(skus_dir=self.skus_dir)
+        results["bucketing"] = bucketing.run()
+
+        # Step 2: Dedup
+        logger.info("Step 2/4: Dedup")
+        dedup = DedupPostprocessor(skus_dir=self.skus_dir)
+        results["dedup"] = dedup.run()
+
+        # Step 3: Proofreading (optional)
+        if not skip_confidence:
+            logger.info("Step 3/4: Proofreading")
+            proofreading = ProofreadingPostprocessor(skus_dir=self.skus_dir, chunks_dir=self.chunks_dir)
+            results["proofreading"] = proofreading.run()
+        else:
+            logger.info("Step 3/4: Proofreading — skipped (--skip-confidence)")
+            results["proofreading"] = None
+
+        # Step 4: Cross-document relation discovery
+        logger.info("Step 4/4: Cross-document relation discovery")
+        cross_doc = CrossDocRelationsPostprocessor(skus_dir=self.skus_dir)
+        results["cross_doc_relations"] = cross_doc.run()
+
+        duration = (datetime.now() - start_time).total_seconds()
+        log_kwargs: dict[str, Any] = {
+            "duration_seconds": f"{duration:.1f}",
+            "buckets": results["bucketing"].total_buckets,
+            "dedup_deleted": results["dedup"].total_deleted,
+            "cross_doc_accepted": results["cross_doc_relations"].total_accepted,
+        }
+        if results["proofreading"] is not None:
+            log_kwargs["confidence_avg"] = f"{results['proofreading'].average_confidence:.3f}"
+        logger.info("Postprocessing pipeline complete", **log_kwargs)
+
+        return results
+
+    def run_bucket(self) -> Any:
+        """Run bucketing step only."""
+        bucketing = BucketingPostprocessor(skus_dir=self.skus_dir)
+        return bucketing.run()
+
+    def run_dedup(self) -> Any:
+        """Run dedup step only (requires bucketing_result.json)."""
+        dedup = DedupPostprocessor(skus_dir=self.skus_dir)
+        return dedup.run()
+
+    def run_proof(self) -> Any:
+        """Run proofreading step only."""
+        proofreading = ProofreadingPostprocessor(skus_dir=self.skus_dir, chunks_dir=self.chunks_dir)
+        return proofreading.run()
+
+    def run_cross_relations(self) -> Any:
+        """Run cross-document relation discovery step only."""
+        cross_doc = CrossDocRelationsPostprocessor(skus_dir=self.skus_dir)
+        return cross_doc.run()

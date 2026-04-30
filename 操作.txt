@@ -1,0 +1,15 @@
+cd C:\Users\56839\.claude\skills\Anything2Ontology
+.\.venv\Scripts\activate
+
+
+# 阶段1：文件 → Markdown（纯本地解析，不需要 API）
+anything2md run
+
+# 阶段2：Markdown → 智能切分为 chunks（需要 LLM）
+md2chunks run
+
+# 阶段3：chunks → 知识单元 SKU（需要 LLM + Embedding）
+chunks2skus run
+
+# 阶段4：SKU → 知识图谱 ontology（交互式，需要 LLM）
+skus2ontology run

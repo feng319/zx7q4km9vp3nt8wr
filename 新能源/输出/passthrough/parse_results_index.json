@@ -1,0 +1,452 @@
+﻿{
+  "created_at": "2026-04-26T06:35:50.210264",
+  "duration_seconds": 0.33,
+  "total": 26,
+  "success": 26,
+  "failed": 0,
+  "skipped": 0,
+  "results": [
+    {
+      "source_path": "..\输入\报告-《关于优化集中式新能源发电企业市场报价的通知（试行）》深度解读与战略分析.docx",
+      "source_type": "file",
+      "output_path": "报告-《关于优化集中式新能源发电企业市场报价的通知（试行）》深度解读与战略分析.md",
+      "output_format": "markdown",
+      "parser_used": "markitdown",
+      "status": "success",
+      "started_at": "2026-04-26T06:35:49.903521",
+      "completed_at": "2026-04-26T06:35:49.903521",
+      "duration_seconds": 0.0,
+      "character_count": 9034,
+      "error_message": null,
+      "retry_count": 0,
+      "metadata": {
+        "resumed": true
+      }
+    },
+    {
+      "source_path": "..\输入\报告-三一硅能非洲调研报告：在非洲如何做矿山微电网？.docx",
+      "source_type": "file",
+      "output_path": "报告-三一硅能非洲调研报告：在非洲如何做矿山微电网？.md",
+      "output_format": "markdown",
+      "parser_used": "markitdown",
+      "status": "success",
+      "started_at": "2026-04-26T06:35:49.919197",
+      "completed_at": "2026-04-26T06:35:49.919197",
+      "duration_seconds": 0.0,
+      "character_count": 9814,
+      "error_message": null,
+      "retry_count": 0,
+      "metadata": {
+        "resumed": true
+      }
+    },
+    {
+      "source_path": "..\输入\报告-乌克兰新能源市场机会调研报告.docx",
+      "source_type": "file",
+      "output_path": "报告-乌克兰新能源市场机会调研报告.md",
+      "output_format": "markdown",
+      "parser_used": "markitdown",
+      "status": "success",
+      "started_at": "2026-04-26T06:35:49.936741",
+      "completed_at": "2026-04-26T06:35:49.936741",
+      "duration_seconds": 0.0,
+      "character_count": 7068,
+      "error_message": null,
+      "retry_count": 0,
+      "metadata": {
+        "resumed": true
+      }
+    },
+    {
+      "source_path": "..\输入\报告-兆瓦云调研报告：虚拟电厂的下一城在哪里？.docx",
+      "source_type": "file",
+      "output_path": "报告-兆瓦云调研报告：虚拟电厂的下一城在哪里？.md",
+      "output_format": "markdown",
+      "parser_used": "markitdown",
+      "status": "success",
+      "started_at": "2026-04-26T06:35:49.946204",
+      "completed_at": "2026-04-26T06:35:49.946204",
+      "duration_seconds": 0.0,
+      "character_count": 7986,
+      "error_message": null,
+      "retry_count": 0,
+      "metadata": {
+        "resumed": true
+      }
+    },
+    {
+      "source_path": "..\输入\报告-则鸣新能源调研报告：怎么样做好微电网？.docx",
+      "source_type": "file",
+      "output_path": "报告-则鸣新能源调研报告：怎么样做好微电网？.md",
+      "output_format": "markdown",
+      "parser_used": "markitdown",
+      "status": "success",
+      "started_at": "2026-04-26T06:35:49.955733",
+      "completed_at": "2026-04-26T06:35:49.955733",
+      "duration_seconds": 0.0,
+      "character_count": 9150,
+      "error_message": null,
+      "retry_count": 0,
+      "metadata": {
+        "resumed": true
+      }
+    },
+    {
+      "source_path": "..\输入\报告-协鑫能科调研报告：江苏最大虚拟电厂是怎么做成的？.docx",
+      "source_type": "file",
+      "output_path": "报告-协鑫能科调研报告：江苏最大虚拟电厂是怎么做成的？.md",
+      "output_format": "markdown",
+      "parser_used": "markitdown",
+      "status": "success",
+      "started_at": "2026-04-26T06:35:49.962406",
+      "completed_at": "2026-04-26T06:35:49.962406",
+      "duration_seconds": 0.0,
+      "character_count": 8329,
+      "error_message": null,
+      "retry_count": 0,
+      "metadata": {
+        "resumed": true
+      }
+    },
+    {
+      "source_path": "..\输入\报告-固德威一线调研报告：城市级虚拟电厂怎么做？.docx",
+      "source_type": "file",
+      "output_path": "报告-固德威一线调研报告：城市级虚拟电厂怎么做？.md",
+      "output_format": "markdown",
+      "parser_used": "markitdown",
+      "status": "success",
+      "started_at": "2026-04-26T06:35:49.973913",
+      "completed_at": "2026-04-26T06:35:49.973913",
+      "duration_seconds": 0.0,
+      "character_count": 8616,
+      "error_message": null,
+      "retry_count": 0,
+      "metadata": {
+        "resumed": true
+      }
+    },
+    {
+      "source_path": "..\输入\报告-固德威江西德安县调研报告：光储充一体化项目怎么做？.docx",
+      "source_type": "file",
+      "output_path": "报告-固德威江西德安县调研报告：光储充一体化项目怎么做？.md",
+      "output_format": "markdown",
+      "parser_used": "markitdown",
+      "status": "success",
+      "started_at": "2026-04-26T06:35:49.991336",
+      "completed_at": "2026-04-26T06:35:49.991336",
+      "duration_seconds": 0.0,
+      "character_count": 7432,
+      "error_message": null,
+      "retry_count": 0,
+      "metadata": {
+        "resumed": true
+      }
+    },
+    {
+      "source_path": "..\输入\报告-国海绿能一线调研报告：重卡换电站怎么做？.docx",
+      "source_type": "file",
+      "output_path": "报告-国海绿能一线调研报告：重卡换电站怎么做？.md",
+      "output_format": "markdown",
+      "parser_used": "markitdown",
+      "status": "success",
+      "started_at": "2026-04-26T06:35:50.017615",
+      "completed_at": "2026-04-26T06:35:50.017615",
+      "duration_seconds": 0.0,
+      "character_count": 8885,
+      "error_message": null,
+      "retry_count": 0,
+      "metadata": {
+        "resumed": true
+      }
+    },
+    {
+      "source_path": "..\输入\报告-奇峰聚能调研报告：飞轮储能怎么做？.docx",
+      "source_type": "file",
+      "output_path": "报告-奇峰聚能调研报告：飞轮储能怎么做？.md",
+      "output_format": "markdown",
+      "parser_used": "markitdown",
+      "status": "success",
+      "started_at": "2026-04-26T06:35:50.030299",
+      "completed_at": "2026-04-26T06:35:50.030299",
+      "duration_seconds": 0.0,
+      "character_count": 9629,
+      "error_message": null,
+      "retry_count": 0,
+      "metadata": {
+        "resumed": true
+      }
+    },
+    {
+      "source_path": "..\输入\报告-安悦节能调研报告：怎样做冷热电综合能源服务？.docx",
+      "source_type": "file",
+      "output_path": "报告-安悦节能调研报告：怎样做冷热电综合能源服务？.md",
+      "output_format": "markdown",
+      "parser_used": "markitdown",
+      "status": "success",
+      "started_at": "2026-04-26T06:35:50.039046",
+      "completed_at": "2026-04-26T06:35:50.039046",
+      "duration_seconds": 0.0,
+      "character_count": 9438,
+      "error_message": null,
+      "retry_count": 0,
+      "metadata": {
+        "resumed": true
+      }
+    },
+    {
+      "source_path": "..\输入\报告-广林汇智调研报告：在西北地区怎么做虚拟电厂？.docx",
+      "source_type": "file",
+      "output_path": "报告-广林汇智调研报告：在西北地区怎么做虚拟电厂？.md",
+      "output_format": "markdown",
+      "parser_used": "markitdown",
+      "status": "success",
+      "started_at": "2026-04-26T06:35:50.049274",
+      "completed_at": "2026-04-26T06:35:50.049274",
+      "duration_seconds": 0.0,
+      "character_count": 8227,
+      "error_message": null,
+      "retry_count": 0,
+      "metadata": {
+        "resumed": true
+      }
+    },
+    {
+      "source_path": "..\输入\报告-恒实盛景调研报告：怎样做空调虚拟电厂？.docx",
+      "source_type": "file",
+      "output_path": "报告-恒实盛景调研报告：怎样做空调虚拟电厂？.md",
+      "output_format": "markdown",
+      "parser_used": "markitdown",
+      "status": "success",
+      "started_at": "2026-04-26T06:35:50.063443",
+      "completed_at": "2026-04-26T06:35:50.063443",
+      "duration_seconds": 0.0,
+      "character_count": 8020,
+      "error_message": null,
+      "retry_count": 0,
+      "metadata": {
+        "resumed": true
+      }
+    },
+    {
+      "source_path": "..\输入\报告-正泰安能光伏星调研报告：在非洲如何做户用光伏？.docx",
+      "source_type": "file",
+      "output_path": "报告-正泰安能光伏星调研报告：在非洲如何做户用光伏？.md",
+      "output_format": "markdown",
+      "parser_used": "markitdown",
+      "status": "success",
+      "started_at": "2026-04-26T06:35:50.087311",
+      "completed_at": "2026-04-26T06:35:50.087311",
+      "duration_seconds": 0.0,
+      "character_count": 9971,
+      "error_message": null,
+      "retry_count": 0,
+      "metadata": {
+        "resumed": true
+      }
+    },
+    {
+      "source_path": "..\输入\报告-河钢集团一线调研报告：钢铁行业存在哪些双碳机会？.docx",
+      "source_type": "file",
+      "output_path": "报告-河钢集团一线调研报告：钢铁行业存在哪些双碳机会？.md",
+      "output_format": "markdown",
+      "parser_used": "markitdown",
+      "status": "success",
+      "started_at": "2026-04-26T06:35:50.094555",
+      "completed_at": "2026-04-26T06:35:50.094555",
+      "duration_seconds": 0.0,
+      "character_count": 10948,
+      "error_message": null,
+      "retry_count": 0,
+      "metadata": {
+        "resumed": true
+      }
+    },
+    {
+      "source_path": "..\输入\报告-深石集团调研报告：房地产企业怎样做新能源？.docx",
+      "source_type": "file",
+      "output_path": "报告-深石集团调研报告：房地产企业怎样做新能源？.md",
+      "output_format": "markdown",
+      "parser_used": "markitdown",
+      "status": "success",
+      "started_at": "2026-04-26T06:35:50.100202",
+      "completed_at": "2026-04-26T06:35:50.100202",
+      "duration_seconds": 0.0,
+      "character_count": 8031,
+      "error_message": null,
+      "retry_count": 0,
+      "metadata": {
+        "resumed": true
+      }
+    },
+    {
+      "source_path": "..\输入\报告-特来电零碳大楼调研报告：怎样做车网互动？.docx",
+      "source_type": "file",
+      "output_path": "报告-特来电零碳大楼调研报告：怎样做车网互动？.md",
+      "output_format": "markdown",
+      "parser_used": "markitdown",
+      "status": "success",
+      "started_at": "2026-04-26T06:35:50.112166",
+      "completed_at": "2026-04-26T06:35:50.112166",
+      "duration_seconds": 0.0,
+      "character_count": 8656,
+      "error_message": null,
+      "retry_count": 0,
+      "metadata": {
+        "resumed": true
+      }
+    },
+    {
+      "source_path": "..\输入\报告-电管家一线调研报告：微电网怎么赚钱？.docx",
+      "source_type": "file",
+      "output_path": "报告-电管家一线调研报告：微电网怎么赚钱？.md",
+      "output_format": "markdown",
+      "parser_used": "markitdown",
+      "status": "success",
+      "started_at": "2026-04-26T06:35:50.127519",
+      "completed_at": "2026-04-26T06:35:50.127519",
+      "duration_seconds": 0.0,
+      "character_count": 9110,
+      "error_message": null,
+      "retry_count": 0,
+      "metadata": {
+        "resumed": true
+      }
+    },
+    {
+      "source_path": "..\输入\报告-紫电捷控调研报告：交直流微电网怎么做？.docx",
+      "source_type": "file",
+      "output_path": "报告-紫电捷控调研报告：交直流微电网怎么做？.md",
+      "output_format": "markdown",
+      "parser_used": "markitdown",
+      "status": "success",
+      "started_at": "2026-04-26T06:35:50.143128",
+      "completed_at": "2026-04-26T06:35:50.143128",
+      "duration_seconds": 0.0,
+      "character_count": 7752,
+      "error_message": null,
+      "retry_count": 0,
+      "metadata": {
+        "resumed": true
+      }
+    },
+    {
+      "source_path": "..\输入\报告-纬景储能调研报告：液流电池为储能带来的机会.docx",
+      "source_type": "file",
+      "output_path": "报告-纬景储能调研报告：液流电池为储能带来的机会.md",
+      "output_format": "markdown",
+      "parser_used": "markitdown",
+      "status": "success",
+      "started_at": "2026-04-26T06:35:50.156607",
+      "completed_at": "2026-04-26T06:35:50.156607",
+      "duration_seconds": 0.0,
+      "character_count": 10490,
+      "error_message": null,
+      "retry_count": 0,
+      "metadata": {
+        "resumed": true
+      }
+    },
+    {
+      "source_path": "..\输入\报告-良信电器调研报告：怎样建设零碳工厂？.docx",
+      "source_type": "file",
+      "output_path": "报告-良信电器调研报告：怎样建设零碳工厂？.md",
+      "output_format": "markdown",
+      "parser_used": "markitdown",
+      "status": "success",
+      "started_at": "2026-04-26T06:35:50.170285",
+      "completed_at": "2026-04-26T06:35:50.170285",
+      "duration_seconds": 0.0,
+      "character_count": 8267,
+      "error_message": null,
+      "retry_count": 0,
+      "metadata": {
+        "resumed": true
+      }
+    },
+    {
+      "source_path": "..\输入\报告-苏州工业园区的虚拟电厂调研报告：怎样做区域级虚拟电厂.docx",
+      "source_type": "file",
+      "output_path": "报告-苏州工业园区的虚拟电厂调研报告：怎样做区域级虚拟电厂.md",
+      "output_format": "markdown",
+      "parser_used": "markitdown",
+      "status": "success",
+      "started_at": "2026-04-26T06:35:50.179302",
+      "completed_at": "2026-04-26T06:35:50.179302",
+      "duration_seconds": 0.0,
+      "character_count": 8260,
+      "error_message": null,
+      "retry_count": 0,
+      "metadata": {
+        "resumed": true
+      }
+    },
+    {
+      "source_path": "..\输入\报告-远景科技调研报告：如何把握储能 AIDC领域未来机会.docx",
+      "source_type": "file",
+      "output_path": "报告-远景科技调研报告：如何把握储能 AIDC领域未来机会.md",
+      "output_format": "markdown",
+      "parser_used": "markitdown",
+      "status": "success",
+      "started_at": "2026-04-26T06:35:50.182338",
+      "completed_at": "2026-04-26T06:35:50.182338",
+      "duration_seconds": 0.0,
+      "character_count": 11181,
+      "error_message": null,
+      "retry_count": 0,
+      "metadata": {
+        "resumed": true
+      }
+    },
+    {
+      "source_path": "..\输入\报告-金风科技调研报告：我国首个碳中和园区是怎样建成的？.docx",
+      "source_type": "file",
+      "output_path": "报告-金风科技调研报告：我国首个碳中和园区是怎样建成的？.md",
+      "output_format": "markdown",
+      "parser_used": "markitdown",
+      "status": "success",
+      "started_at": "2026-04-26T06:35:50.191907",
+      "completed_at": "2026-04-26T06:35:50.191907",
+      "duration_seconds": 0.0,
+      "character_count": 7760,
+      "error_message": null,
+      "retry_count": 0,
+      "metadata": {
+        "resumed": true
+      }
+    },
+    {
+      "source_path": "..\输入\报告-非洲调研报告（一）：中国新能源企业在肯尼亚有什么机会？.docx",
+      "source_type": "file",
+      "output_path": "报告-非洲调研报告（一）：中国新能源企业在肯尼亚有什么机会？.md",
+      "output_format": "markdown",
+      "parser_used": "markitdown",
+      "status": "success",
+      "started_at": "2026-04-26T06:35:50.197962",
+      "completed_at": "2026-04-26T06:35:50.197962",
+      "duration_seconds": 0.0,
+      "character_count": 9702,
+      "error_message": null,
+      "retry_count": 0,
+      "metadata": {
+        "resumed": true
+      }
+    },
+    {
+      "source_path": "..\输入\报告-非洲调研报告（二）：中国新能源企业在赞比亚有什么机会？.docx",
+      "source_type": "file",
+      "output_path": "报告-非洲调研报告（二）：中国新能源企业在赞比亚有什么机会？.md",
+      "output_format": "markdown",
+      "parser_used": "markitdown",
+      "status": "success",
+      "started_at": "2026-04-26T06:35:50.205727",
+      "completed_at": "2026-04-26T06:35:50.205727",
+      "duration_seconds": 0.0,
+      "character_count": 9847,
+      "error_message": null,
+      "retry_count": 0,
+      "metadata": {
+        "resumed": true
+      }
+    }
+  ]
+}

@@ -1,0 +1,53 @@
+{
+  "roots": [
+    {
+      "name": "战略管理工具",
+      "children": [
+        {
+          "name": "商业模式",
+          "children": []
+        },
+        {
+          "name": "创业方法论",
+          "children": []
+        }
+      ]
+    },
+    {
+      "name": "绩效管理工具",
+      "children": []
+    },
+    {
+      "name": "企业评价体系",
+      "children": []
+    },
+    {
+      "name": "人力资源管理工具",
+      "children": []
+    },
+    {
+      "name": "战略管理流程",
+      "children": []
+    },
+    {
+      "name": "宏观经济分析工具",
+      "children": []
+    },
+    {
+      "name": "金融市场制度",
+      "children": []
+    },
+    {
+      "name": "新兴产业",
+      "children": []
+    },
+    {
+      "name": "经济现象",
+      "children": []
+    },
+    {
+      "name": "行业监管规则",
+      "children": []
+    }
+  ]
+}

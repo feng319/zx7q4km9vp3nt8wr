@@ -1,0 +1,796 @@
+{
+  "entries": [
+    {
+      "subject": "绩效考核方式",
+      "predicate": "superset-of",
+      "object": "平衡计分卡",
+      "source_chunks": [
+        "BSC七步法：设计企业的战略地图_chunk_001"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "subject": "平衡计分卡",
+      "predicate": "has-a",
+      "object": "财务维度",
+      "source_chunks": [
+        "BSC七步法：设计企业的战略地图_chunk_001"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "subject": "平衡计分卡",
+      "predicate": "has-a",
+      "object": "客户维度",
+      "source_chunks": [
+        "BSC七步法：设计企业的战略地图_chunk_001"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "subject": "平衡计分卡",
+      "predicate": "has-a",
+      "object": "内部流程维度",
+      "source_chunks": [
+        "BSC七步法：设计企业的战略地图_chunk_001"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "subject": "平衡计分卡",
+      "predicate": "has-a",
+      "object": "学习成长维度",
+      "source_chunks": [
+        "BSC七步法：设计企业的战略地图_chunk_001"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "subject": "平衡计分卡内部流程维度",
+      "predicate": "superset-of",
+      "object": "ESG合规要求",
+      "source_chunks": [
+        "BSC七步法：设计企业的战略地图_chunk_001"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "subject": "平衡计分卡",
+      "predicate": "enables",
+      "object": "战略地图设计",
+      "source_chunks": [
+        "BSC七步法：设计企业的战略地图_chunk_001"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "subject": "战略地图",
+      "predicate": "enables",
+      "object": "学习地图设计",
+      "source_chunks": [
+        "BSC七步法：设计企业的战略地图_chunk_001"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "subject": "平衡计分卡实施",
+      "predicate": "requires",
+      "object": "BSC七步法",
+      "source_chunks": [
+        "BSC七步法：设计企业的战略地图_chunk_001"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "subject": "平衡计分卡实施",
+      "predicate": "requires",
+      "object": "CEO作为核心驱动者",
+      "source_chunks": [
+        "BSC七步法：设计企业的战略地图_chunk_001"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "subject": "财务指标",
+      "predicate": "example-of",
+      "object": "滞后指标",
+      "source_chunks": [
+        "BSC七步法：设计企业的战略地图_chunk_001"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "subject": "客户维度指标",
+      "predicate": "example-of",
+      "object": "领先指标",
+      "source_chunks": [
+        "BSC七步法：设计企业的战略地图_chunk_001"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "subject": "内部流程维度指标",
+      "predicate": "example-of",
+      "object": "领先指标",
+      "source_chunks": [
+        "BSC七步法：设计企业的战略地图_chunk_001"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "subject": "学习成长维度指标",
+      "predicate": "example-of",
+      "object": "领先指标",
+      "source_chunks": [
+        "BSC七步法：设计企业的战略地图_chunk_001"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "subject": "平衡计分卡",
+      "predicate": "enables",
+      "object": "管理者能力评估",
+      "source_chunks": [
+        "BSC七步法：设计企业的战略地图_chunk_001"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "subject": "创战略",
+      "predicate": "enables",
+      "object": "第二曲线设计",
+      "source_chunks": [
+        "企业战略与财富增长创新蓝宝书_chunk_001"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "subject": "注册制",
+      "predicate": "causes",
+      "object": "K型分化",
+      "source_chunks": [
+        "企业战略与财富增长创新蓝宝书_chunk_001"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "subject": "企业评价体系",
+      "predicate": "superset-of",
+      "object": "护城河原理",
+      "source_chunks": [
+        "企业战略与财富增长创新蓝宝书_chunk_001"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "subject": "企业生命周期",
+      "predicate": "superset-of",
+      "object": "官僚早期",
+      "source_chunks": [
+        "企业战略与财富增长创新蓝宝书_chunk_001"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "subject": "康波周期",
+      "predicate": "causes",
+      "object": "财富周期波动",
+      "source_chunks": [
+        "企业战略与财富增长创新蓝宝书_chunk_001"
+      ],
+      "confidence": 0.8
+    },
+    {
+      "subject": "低空经济",
+      "predicate": "superset-of",
+      "object": "eVTOL",
+      "source_chunks": [
+        "2026六大新兴产业发展形势展望_chunk_001"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "subject": "低空经济",
+      "predicate": "superset-of",
+      "object": "低空智联网",
+      "source_chunks": [
+        "2026六大新兴产业发展形势展望_chunk_001"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "subject": "低空智联网",
+      "predicate": "superset-of",
+      "object": "SILAS",
+      "source_chunks": [
+        "2026六大新兴产业发展形势展望_chunk_001"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "subject": "商业航天",
+      "predicate": "superset-of",
+      "object": "低轨星座",
+      "source_chunks": [
+        "2026六大新兴产业发展形势展望_chunk_001"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "subject": "新型电池",
+      "predicate": "superset-of",
+      "object": "半固态电池",
+      "source_chunks": [
+        "2026六大新兴产业发展形势展望_chunk_001"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "subject": "新型电池",
+      "predicate": "superset-of",
+      "object": "全固态电池",
+      "source_chunks": [
+        "2026六大新兴产业发展形势展望_chunk_001"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "subject": "新型电池",
+      "predicate": "superset-of",
+      "object": "钠离子电池",
+      "source_chunks": [
+        "2026六大新兴产业发展形势展望_chunk_001"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "subject": "新型电池",
+      "predicate": "superset-of",
+      "object": "液流电池",
+      "source_chunks": [
+        "2026六大新兴产业发展形势展望_chunk_001"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "subject": "eVTOL",
+      "predicate": "requires",
+      "object": "适航认证",
+      "source_chunks": [
+        "2026六大新兴产业发展形势展望_chunk_001"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "subject": "eVTOL",
+      "predicate": "requires",
+      "object": "新型电池",
+      "source_chunks": [
+        "2026六大新兴产业发展形势展望_chunk_001"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "subject": "碳关税",
+      "predicate": "requires",
+      "object": "ESG评价体系",
+      "source_chunks": [
+        "2026六大新兴产业发展形势展望_chunk_001"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "subject": "新型电池",
+      "predicate": "requires",
+      "object": "电池护照",
+      "source_chunks": [
+        "2026六大新兴产业发展形势展望_chunk_001"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "subject": "耐心资本",
+      "predicate": "enables",
+      "object": "未来产业",
+      "source_chunks": [
+        "2026六大新兴产业发展形势展望_chunk_001"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "subject": "内嵌治理",
+      "predicate": "requires",
+      "object": "可解释AI",
+      "source_chunks": [
+        "2026六大新兴产业发展形势展望_chunk_001"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "subject": "内嵌治理",
+      "predicate": "requires",
+      "object": "AI对齐",
+      "source_chunks": [
+        "2026六大新兴产业发展形势展望_chunk_001"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "subject": "监管科技",
+      "predicate": "enables",
+      "object": "内嵌治理",
+      "source_chunks": [
+        "2026六大新兴产业发展形势展望_chunk_001"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "subject": "K型分化",
+      "predicate": "related-to",
+      "object": "消费升级",
+      "source_chunks": [
+        "2026六大新兴产业发展形势展望_chunk_001"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "subject": "企业发展",
+      "predicate": "depends-on",
+      "object": "企业生命周期",
+      "source_chunks": [
+        "企业战略与财富增长创新蓝宝书_chunk_002"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "subject": "企业发展",
+      "predicate": "depends-on",
+      "object": "产业生命周期",
+      "source_chunks": [
+        "企业战略与财富增长创新蓝宝书_chunk_002"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "subject": "企业发展",
+      "predicate": "depends-on",
+      "object": "资本周期",
+      "source_chunks": [
+        "企业战略与财富增长创新蓝宝书_chunk_002"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "subject": "康波周期",
+      "predicate": "causes",
+      "object": "产业周期波动",
+      "source_chunks": [
+        "企业战略与财富增长创新蓝宝书_chunk_002"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "subject": "资本周期",
+      "predicate": "causes",
+      "object": "产业周期波动",
+      "source_chunks": [
+        "企业战略与财富增长创新蓝宝书_chunk_002"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "subject": "技术迭代",
+      "predicate": "causes",
+      "object": "产业周期加速",
+      "source_chunks": [
+        "企业战略与财富增长创新蓝宝书_chunk_002"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "subject": "企业生命周期",
+      "predicate": "superset-of",
+      "object": "创业阶段",
+      "source_chunks": [
+        "企业战略与财富增长创新蓝宝书_chunk_002"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "subject": "企业生命周期",
+      "predicate": "superset-of",
+      "object": "成长阶段",
+      "source_chunks": [
+        "企业战略与财富增长创新蓝宝书_chunk_002"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "subject": "企业生命周期",
+      "predicate": "superset-of",
+      "object": "盛年阶段",
+      "source_chunks": [
+        "企业战略与财富增长创新蓝宝书_chunk_002"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "subject": "企业生命周期",
+      "predicate": "superset-of",
+      "object": "衰退阶段",
+      "source_chunks": [
+        "企业战略与财富增长创新蓝宝书_chunk_002"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "subject": "产业生命周期",
+      "predicate": "superset-of",
+      "object": "天使市场",
+      "source_chunks": [
+        "企业战略与财富增长创新蓝宝书_chunk_002"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "subject": "产业生命周期",
+      "predicate": "superset-of",
+      "object": "高增长市场",
+      "source_chunks": [
+        "企业战略与财富增长创新蓝宝书_chunk_002"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "subject": "产业生命周期",
+      "predicate": "superset-of",
+      "object": "规模稳定市场",
+      "source_chunks": [
+        "企业战略与财富增长创新蓝宝书_chunk_002"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "subject": "护城河原理",
+      "predicate": "has-a",
+      "object": "无形资产",
+      "source_chunks": [
+        "企业战略与财富增长创新蓝宝书_chunk_002"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "subject": "护城河原理",
+      "predicate": "has-a",
+      "object": "客户转换成本",
+      "source_chunks": [
+        "企业战略与财富增长创新蓝宝书_chunk_002"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "subject": "护城河原理",
+      "predicate": "has-a",
+      "object": "网络效应",
+      "source_chunks": [
+        "企业战略与财富增长创新蓝宝书_chunk_002"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "subject": "护城河原理",
+      "predicate": "has-a",
+      "object": "成本优势",
+      "source_chunks": [
+        "企业战略与财富增长创新蓝宝书_chunk_002"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "subject": "生态位战略",
+      "predicate": "has-a",
+      "object": "终局思维",
+      "source_chunks": [
+        "企业战略与财富增长创新蓝宝书_chunk_002"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "subject": "生态位战略",
+      "predicate": "has-a",
+      "object": "破局思维",
+      "source_chunks": [
+        "企业战略与财富增长创新蓝宝书_chunk_002"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "subject": "生态位战略",
+      "predicate": "has-a",
+      "object": "分形思维",
+      "source_chunks": [
+        "企业战略与财富增长创新蓝宝书_chunk_002"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "subject": "生态位战略",
+      "predicate": "has-a",
+      "object": "支点思维",
+      "source_chunks": [
+        "企业战略与财富增长创新蓝宝书_chunk_002"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "subject": "创战略",
+      "predicate": "has-a",
+      "object": "3B策略",
+      "source_chunks": [
+        "企业战略与财富增长创新蓝宝书_chunk_002"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "subject": "创新飞地",
+      "predicate": "enables",
+      "object": "第二曲线落地",
+      "source_chunks": [
+        "企业战略与财富增长创新蓝宝书_chunk_002"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "subject": "康波周期切换",
+      "predicate": "causes",
+      "object": "财富中心转移",
+      "source_chunks": [
+        "企业战略与财富增长创新蓝宝书_chunk_002"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "subject": "康波周期切换",
+      "predicate": "causes",
+      "object": "伟大企业诞生",
+      "source_chunks": [
+        "企业战略与财富增长创新蓝宝书_chunk_002"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "subject": "康波周期切换",
+      "predicate": "causes",
+      "object": "大国博弈加剧",
+      "source_chunks": [
+        "企业战略与财富增长创新蓝宝书_chunk_002"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "subject": "产业周期加速",
+      "predicate": "causes",
+      "object": "企业生命周期缩短",
+      "source_chunks": [
+        "企业战略与财富增长创新蓝宝书_chunk_002"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "subject": "资本周期",
+      "predicate": "has-a",
+      "object": "钟摆效应",
+      "source_chunks": [
+        "企业战略与财富增长创新蓝宝书_chunk_002"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "subject": "海鸥综合征",
+      "predicate": "caused-by",
+      "object": "企业创始人授权分权能力不足",
+      "source_chunks": [
+        "企业战略与财富增长创新蓝宝书_chunk_002"
+      ],
+      "confidence": 0.8
+    },
+    {
+      "subject": "企业生命周期",
+      "predicate": "depends-on",
+      "object": "企业家精神",
+      "source_chunks": [
+        "企业战略与财富增长创新蓝宝书_chunk_002"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "subject": "第二曲线",
+      "predicate": "requires",
+      "object": "二元组织",
+      "source_chunks": [
+        "企业战略与财富增长创新蓝宝书_chunk_002"
+      ],
+      "confidence": 0.8
+    },
+    {
+      "subject": "第二曲线",
+      "predicate": "requires",
+      "object": "创新飞地",
+      "source_chunks": [
+        "企业战略与财富增长创新蓝宝书_chunk_002"
+      ],
+      "confidence": 0.8
+    },
+    {
+      "subject": "颠覆式创新",
+      "predicate": "example-of",
+      "object": "第二曲线实现方式",
+      "source_chunks": [
+        "企业战略与财富增长创新蓝宝书_chunk_002"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "subject": "技术产业化",
+      "predicate": "has-a",
+      "object": "魔幻时刻",
+      "source_chunks": [
+        "科技战略与投资策略10个建议与5大误区_chunk_001"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "subject": "技术产业化",
+      "predicate": "has-a",
+      "object": "黄金时刻",
+      "source_chunks": [
+        "科技战略与投资策略10个建议与5大误区_chunk_001"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "subject": "技术S曲线",
+      "predicate": "superset-of",
+      "object": "起步阶段",
+      "source_chunks": [
+        "科技战略与投资策略10个建议与5大误区_chunk_001"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "subject": "技术S曲线",
+      "predicate": "superset-of",
+      "object": "加速阶段",
+      "source_chunks": [
+        "科技战略与投资策略10个建议与5大误区_chunk_001"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "subject": "技术S曲线",
+      "predicate": "superset-of",
+      "object": "成熟阶段",
+      "source_chunks": [
+        "科技战略与投资策略10个建议与5大误区_chunk_001"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "subject": "技术S曲线",
+      "predicate": "superset-of",
+      "object": "衰退阶段",
+      "source_chunks": [
+        "科技战略与投资策略10个建议与5大误区_chunk_001"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "subject": "Gartner技术曲线",
+      "predicate": "superset-of",
+      "object": "技术萌芽期",
+      "source_chunks": [
+        "科技战略与投资策略10个建议与5大误区_chunk_001"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "subject": "Gartner技术曲线",
+      "predicate": "superset-of",
+      "object": "期望膨胀期",
+      "source_chunks": [
+        "科技战略与投资策略10个建议与5大误区_chunk_001"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "subject": "Gartner技术曲线",
+      "predicate": "superset-of",
+      "object": "泡沫幻灭期",
+      "source_chunks": [
+        "科技战略与投资策略10个建议与5大误区_chunk_001"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "subject": "Gartner技术曲线",
+      "predicate": "superset-of",
+      "object": "爬升恢复期",
+      "source_chunks": [
+        "科技战略与投资策略10个建议与5大误区_chunk_001"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "subject": "Gartner技术曲线",
+      "predicate": "superset-of",
+      "object": "稳步增长期",
+      "source_chunks": [
+        "科技战略与投资策略10个建议与5大误区_chunk_001"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "subject": "黄金时刻",
+      "predicate": "depends-on",
+      "object": "天使市场",
+      "source_chunks": [
+        "科技战略与投资策略10个建议与5大误区_chunk_001"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "subject": "第二曲线",
+      "predicate": "requires",
+      "object": "企业风险投资",
+      "source_chunks": [
+        "科技战略与投资策略10个建议与5大误区_chunk_001"
+      ],
+      "confidence": 0.8
+    },
+    {
+      "subject": "隐形冠军",
+      "predicate": "superset-of",
+      "object": "专精特新",
+      "source_chunks": [
+        "科技战略与投资策略10个建议与5大误区_chunk_001"
+      ],
+      "confidence": 0.8
+    },
+    {
+      "subject": "新质生产力",
+      "predicate": "requires",
+      "object": "技术产业化",
+      "source_chunks": [
+        "科技战略与投资策略10个建议与5大误区_chunk_001"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "subject": "技术产业化",
+      "predicate": "depends-on",
+      "object": "资本周期",
+      "source_chunks": [
+        "科技战略与投资策略10个建议与5大误区_chunk_001"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "subject": "新兴产业",
+      "predicate": "superset-of",
+      "object": "合成生物",
+      "source_chunks": [
+        "科技战略与投资策略10个建议与5大误区_chunk_001"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "subject": "新兴产业",
+      "predicate": "superset-of",
+      "object": "硬科技",
+      "source_chunks": [
+        "科技战略与投资策略10个建议与5大误区_chunk_001"
+      ],
+      "confidence": 1.0
+    }
+  ]
+}

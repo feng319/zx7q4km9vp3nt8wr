@@ -1,0 +1,522 @@
+"""Step 2: Dedup/Contradiction — Two-tier duplicate detection and resolution."""
+
+import json
+import shutil
+from concurrent.futures import ThreadPoolExecutor, as_completed
+from pathlib import Path
+from typing import Any, Optional
+
+import structlog
+
+from chunks2skus.config import settings
+from chunks2skus.postprocessors.base import BasePostprocessor
+from chunks2skus.schemas.postprocessing import (
+    BucketingResult,
+    DedupAction,
+    DedupReport,
+    FlaggedPair,
+)
+from chunks2skus.utils.llm_client import call_llm_json
+
+logger = structlog.get_logger(__name__)
+
+
+TIER1_SYSTEM_PROMPT = {
+    "en": "You are a knowledge base quality assistant. Output ONLY valid JSON.",
+    "zh": "你是知识库质量助手。仅输出合法JSON。",
+}
+
+TIER1_SCAN_PROMPT = {
+    "en": """Compare these SKU headers within the same topic bucket. Flag any pairs that look like potential duplicates or contradictions.
+
+IMPORTANT:
+- Only flag pairs that are CLEARLY similar or contradictory based on name and description
+- It's OK to over-flag slightly — a second pass will verify
+- Do NOT flag pairs that are merely related but distinct
+
+SKU Headers:
+{headers}
+
+Return JSON:
+{{"flagged_pairs": [{{"sku_a": "sku_id_1", "sku_b": "sku_id_2", "reason": "brief reason"}}]}}
+
+If no duplicates or contradictions found, return: {{"flagged_pairs": []}}""",
+
+    "zh": """比较同一主题桶内的这些SKU头信息。标记任何看起来可能是重复或矛盾的配对。
+
+重要提示：
+- 仅标记基于名称和描述明显相似或矛盾的配对
+- 可以适度多标——第二轮会验证
+- 不要标记仅仅相关但各自独立的配对
+
+SKU头信息：
+{headers}
+
+返回JSON：
+{{"flagged_pairs": [{{"sku_a": "sku_id_1", "sku_b": "sku_id_2", "reason": "简要原因"}}]}}
+
+如未发现重复或矛盾，返回：{{"flagged_pairs": []}}""",
+}
+
+
+TIER2_SYSTEM_PROMPT = {
+    "en": "You are a knowledge base quality assistant. Output ONLY valid JSON.",
+    "zh": "你是知识库质量助手。仅输出合法JSON。",
+}
+
+TIER2_JUDGMENT_PROMPT = {
+    "en": """Read these two SKUs carefully. Determine if they are truly duplicates or contradictory.
+
+SKU A ({sku_a_id}):
+Name: {sku_a_name}
+Description: {sku_a_desc}
+Content:
+{sku_a_content}
+
+---
+
+SKU B ({sku_b_id}):
+Name: {sku_b_name}
+Description: {sku_b_desc}
+Content:
+{sku_b_content}
+
+---
+
+IMPORTANT: When in doubt, KEEP both. Only recommend deletion if they are near-identical.
+
+Actions:
+- "keep": Both are distinct enough to keep
+- "delete": One is a clear duplicate (specify which to delete in "delete_sku")
+- "rewrite": One needs revision to remove overlap (specify which in "rewrite_sku", provide "new_content")
+- "merge": Combine into one (provide "merged_content", specify "delete_sku" for the one to remove)
+- "contradiction": Both should be kept but they state contradictory things about the same topic
+
+Return JSON:
+{{
+    "action": "keep" | "delete" | "rewrite" | "merge" | "contradiction",
+    "reasoning": "brief explanation",
+    "delete_sku": "sku_id or null",
+    "rewrite_sku": "sku_id or null",
+    "new_content": "rewritten content or null",
+    "merged_content": "merged content or null"
+}}""",
+
+    "zh": """仔细阅读这两个SKU。判断它们是否真的重复或矛盾。
+
+SKU A ({sku_a_id})：
+名称：{sku_a_name}
+描述：{sku_a_desc}
+内容：
+{sku_a_content}
+
+---
+
+SKU B ({sku_b_id})：
+名称：{sku_b_name}
+描述：{sku_b_desc}
+内容：
+{sku_b_content}
+
+---
+
+重要提示：有疑问时，保留两者。仅在几乎完全相同时才建议删除。
+
+操作选项：
+- "keep"：两者足够不同，都保留
+- "delete"：其中一个是明显的重复（在 "delete_sku" 中指定删除哪个）
+- "rewrite"：其中一个需要修改以消除重叠（在 "rewrite_sku" 中指定，并提供 "new_content"）
+- "merge"：合并为一个（提供 "merged_content"，在 "delete_sku" 中指定移除哪个）
+- "contradiction"：两者都应保留，但它们对同一主题陈述了矛盾的内容
+
+返回JSON：
+{{
+    "action": "keep" | "delete" | "rewrite" | "merge" | "contradiction",
+    "reasoning": "简要说明",
+    "delete_sku": "sku_id 或 null",
+    "rewrite_sku": "sku_id 或 null",
+    "new_content": "重写后的内容或 null",
+    "merged_content": "合并后的内容或 null"
+}}""",
+}
+
+
+class DedupPostprocessor(BasePostprocessor):
+    """Two-tier dedup: quick scan headers, then deep read flagged pairs."""
+
+    step_name = "dedup"
+
+    def run(self, **kwargs: Any) -> DedupReport:
+        """
+        Run dedup on all buckets from bucketing_result.json.
+
+        Returns:
+            DedupReport with actions taken.
+        """
+        bucketing_path = self.postprocessing_dir / "bucketing_result.json"
+        if not bucketing_path.exists():
+            raise FileNotFoundError(
+                f"Bucketing result not found: {bucketing_path}. Run bucketing first."
+            )
+
+        data = json.loads(bucketing_path.read_text(encoding="utf-8"))
+        bucketing = BucketingResult.model_validate(data)
+
+        all_buckets = bucketing.factual_buckets + bucketing.procedural_buckets
+        logger.info("Starting dedup", total_buckets=len(all_buckets))
+
+        # Filter to multi-SKU buckets (single-SKU buckets have no pairs to check)
+        multi_sku_buckets = [b for b in all_buckets if b.sku_count > 1]
+        report = DedupReport()
+        index = self.load_index()
+
+        # ── Tier 1: Parallel scan across all buckets (pure read, thread-safe) ──
+        def _tier1_for_bucket(bucket) -> tuple[Any, list[FlaggedPair]]:
+            """Run Tier 1 scan for a single bucket. Returns (bucket, flagged_pairs)."""
+            flagged = self._tier1_scan(bucket)
+            return bucket, flagged
+
+        report.buckets_scanned = len(multi_sku_buckets)
+
+        if multi_sku_buckets:
+            with ThreadPoolExecutor(max_workers=settings.dedup_concurrency) as pool:
+                futures = {
+                    pool.submit(_tier1_for_bucket, b): b
+                    for b in multi_sku_buckets
+                }
+                for future in as_completed(futures):
+                    bucket, flagged = future.result()
+                    if not flagged:
+                        logger.debug("No flags in bucket", bucket_id=bucket.bucket_id)
+                        continue
+
+                    report.pairs_flagged += len(flagged)
+                    logger.info(
+                        "Flagged pairs",
+                        bucket_id=bucket.bucket_id,
+                        count=len(flagged),
+                    )
+
+                    # Validate flagged SKU IDs against actual bucket entries
+                    valid_ids = {e.sku_id for e in bucket.entries}
+                    flagged = [
+                        fp for fp in flagged
+                        if fp.sku_a in valid_ids and fp.sku_b in valid_ids
+                    ]
+
+                    # ── Tier 2: Serial judgment (mutates index via _apply_action) ──
+                    for pair in flagged:
+                        action = self._tier2_judge(pair)
+                        if action is None:
+                            continue
+
+                        report.pairs_resolved += 1
+                        report.actions.append(action)
+
+                        # Apply action and update counters
+                        self._apply_action(action, index)
+                        if action.action == "keep":
+                            report.total_kept += 1
+                        elif action.action == "delete":
+                            report.total_deleted += len(action.deleted_skus)
+                        elif action.action == "rewrite":
+                            report.total_rewritten += len(action.rewritten_skus)
+                        elif action.action == "merge":
+                            report.total_merged += 1
+                            report.total_deleted += len(action.deleted_skus)
+                        elif action.action == "contradiction":
+                            report.total_contradictions += 1
+                            report.contradictions.append(action)
+
+        # Save updated index
+        self.save_index(index)
+
+        # Update mapping.md to remove references to deleted SKUs
+        if report.total_deleted > 0:
+            self._clean_mapping(report)
+
+        # Save report
+        report_path = self.postprocessing_dir / "dedup_report.json"
+        report_path.write_text(report.model_dump_json(indent=2), encoding="utf-8")
+
+        logger.info(
+            "Dedup complete",
+            buckets_scanned=report.buckets_scanned,
+            pairs_flagged=report.pairs_flagged,
+            deleted=report.total_deleted,
+            rewritten=report.total_rewritten,
+            merged=report.total_merged,
+            kept=report.total_kept,
+            contradictions=report.total_contradictions,
+        )
+
+        return report
+
+    # Max headers per Tier 1 scan call to avoid token overflow
+    _TIER1_BATCH_SIZE = 80
+
+    def _tier1_scan(self, bucket) -> list[FlaggedPair]:
+        """Tier 1: Quick scan of headers to flag potential duplicates."""
+        entries = bucket.entries
+
+        # For large buckets, scan in overlapping sub-batches
+        if len(entries) <= self._TIER1_BATCH_SIZE:
+            return self._tier1_scan_batch(entries, bucket.bucket_id)
+
+        all_flagged = []
+        for i in range(0, len(entries), self._TIER1_BATCH_SIZE):
+            batch = entries[i : i + self._TIER1_BATCH_SIZE]
+            logger.debug(
+                "Tier 1 sub-batch",
+                bucket_id=bucket.bucket_id,
+                batch=f"{i // self._TIER1_BATCH_SIZE + 1}",
+                size=len(batch),
+            )
+            flagged = self._tier1_scan_batch(batch, bucket.bucket_id)
+            all_flagged.extend(flagged)
+
+        return all_flagged
+
+    def _tier1_scan_batch(self, entries: list, bucket_id: str) -> list[FlaggedPair]:
+        """Scan a batch of SKU headers for duplicates."""
+        headers_text = "\n".join(
+            f"- {e.sku_id}: name=\"{e.name}\", desc=\"{e.description}\""
+            for e in entries
+        )
+
+        lang = settings.language
+        prompt = TIER1_SCAN_PROMPT[lang].format(headers=headers_text)
+        parsed = call_llm_json(
+            prompt=prompt,
+            system_prompt=TIER1_SYSTEM_PROMPT[lang],
+            model=settings.dedup_scan_model,
+            temperature=0.2,
+            max_tokens=4000,
+        )
+
+        if not parsed or "flagged_pairs" not in parsed:
+            return []
+
+        flagged = []
+        for pair_data in parsed["flagged_pairs"]:
+            try:
+                flagged.append(FlaggedPair(
+                    sku_a=pair_data["sku_a"],
+                    sku_b=pair_data["sku_b"],
+                    reason=pair_data.get("reason", ""),
+                ))
+            except (KeyError, TypeError):
+                continue
+
+        return flagged
+
+    def _tier2_judge(self, pair: FlaggedPair) -> Optional[DedupAction]:
+        """Tier 2: Deep read of flagged pair, full content comparison."""
+        # Load full content
+        content_a = self._load_sku_content(pair.sku_a)
+        content_b = self._load_sku_content(pair.sku_b)
+        meta_a = self._load_sku_meta(pair.sku_a)
+        meta_b = self._load_sku_meta(pair.sku_b)
+
+        if content_a is None or content_b is None:
+            logger.warning("Could not load content for pair", a=pair.sku_a, b=pair.sku_b)
+            return None
+
+        lang = settings.language
+        prompt = TIER2_JUDGMENT_PROMPT[lang].format(
+            sku_a_id=pair.sku_a,
+            sku_a_name=meta_a.get("name", pair.sku_a),
+            sku_a_desc=meta_a.get("description", ""),
+            sku_a_content=content_a[:8000],
+            sku_b_id=pair.sku_b,
+            sku_b_name=meta_b.get("name", pair.sku_b),
+            sku_b_desc=meta_b.get("description", ""),
+            sku_b_content=content_b[:8000],
+        )
+
+        parsed = call_llm_json(
+            prompt=prompt,
+            system_prompt=TIER2_SYSTEM_PROMPT[lang],
+            model=settings.extraction_model,
+            temperature=0.3,
+            max_tokens=4000,
+        )
+
+        if not parsed:
+            return None
+
+        action_str = parsed.get("action", "keep")
+        if action_str not in ("keep", "delete", "rewrite", "merge", "contradiction"):
+            action_str = "keep"
+
+        return DedupAction(
+            sku_a=pair.sku_a,
+            sku_b=pair.sku_b,
+            action=action_str,
+            detail=parsed.get("reasoning", ""),
+            deleted_skus=[parsed["delete_sku"]] if parsed.get("delete_sku") else [],
+            rewritten_skus=[parsed["rewrite_sku"]] if parsed.get("rewrite_sku") else [],
+            new_content=json.dumps(parsed["new_content"], ensure_ascii=False) if isinstance(parsed.get("new_content"), (list, dict)) else parsed.get("new_content"),
+            merged_content=json.dumps(parsed["merged_content"], ensure_ascii=False) if isinstance(parsed.get("merged_content"), (list, dict)) else parsed.get("merged_content"),
+        )
+
+    def _apply_action(self, action: DedupAction, index) -> None:
+        """Apply a dedup action: delete, rewrite, merge, contradiction, or keep."""
+        if action.action == "keep":
+            logger.debug("Keeping both", a=action.sku_a, b=action.sku_b)
+            return
+
+        if action.action == "contradiction":
+            logger.info(
+                "Contradiction detected",
+                a=action.sku_a,
+                b=action.sku_b,
+                detail=action.detail,
+            )
+            return
+
+        if action.action == "delete":
+            for sku_id in action.deleted_skus:
+                if self._validate_sku_id(sku_id, action):
+                    self._delete_sku(sku_id, index)
+
+        elif action.action == "rewrite":
+            for sku_id in action.rewritten_skus:
+                if not self._validate_sku_id(sku_id, action):
+                    continue
+                if action.new_content:
+                    self._write_sku_content(sku_id, action.new_content)
+                    logger.info("Rewrote SKU content", sku_id=sku_id)
+                else:
+                    logger.warning(
+                        "Rewrite action missing new_content",
+                        sku_id=sku_id,
+                        detail=action.detail,
+                    )
+
+        elif action.action == "merge":
+            # Determine the surviving SKU (the one NOT deleted)
+            surviving_sku = (
+                action.sku_b if action.sku_a in action.deleted_skus else action.sku_a
+            )
+            # Write merged content to the surviving SKU
+            if action.merged_content:
+                self._write_sku_content(surviving_sku, action.merged_content)
+                logger.info("Wrote merged content to surviving SKU", sku_id=surviving_sku)
+            else:
+                logger.warning(
+                    "Merge action missing merged_content",
+                    surviving=surviving_sku,
+                    detail=action.detail,
+                )
+            # Delete the secondary SKU
+            for sku_id in action.deleted_skus:
+                if self._validate_sku_id(sku_id, action):
+                    self._delete_sku(sku_id, index)
+
+    def _validate_sku_id(self, sku_id: str, action: DedupAction) -> bool:
+        """Validate that an SKU ID from LLM response is one of the pair's IDs."""
+        if sku_id not in (action.sku_a, action.sku_b):
+            logger.warning(
+                "LLM returned invalid SKU ID for action",
+                returned=sku_id,
+                expected=[action.sku_a, action.sku_b],
+            )
+            return False
+        return True
+
+    def _delete_sku(self, sku_id: str, index) -> None:
+        """Delete an SKU folder from disk and remove from index."""
+        # Find the entry in index to get path
+        entry = None
+        for s in index.skus:
+            if s.sku_id == sku_id:
+                entry = s
+                break
+
+        if entry is None:
+            logger.warning("SKU not found in index for deletion", sku_id=sku_id)
+            return
+
+        # Delete folder from disk
+        sku_path = Path(entry.path)
+        if sku_path.exists() and sku_path.is_dir():
+            shutil.rmtree(sku_path)
+            logger.info("Deleted SKU folder", sku_id=sku_id, path=str(sku_path))
+        elif sku_path.exists():
+            sku_path.unlink()
+            logger.info("Deleted SKU file", sku_id=sku_id, path=str(sku_path))
+
+        # Remove from index
+        index.remove_sku(sku_id)
+
+    def _write_sku_content(self, sku_id: str, content: str) -> None:
+        """Write new content to an SKU's content file."""
+        index = self.load_index()
+        for entry in index.skus:
+            if entry.sku_id == sku_id:
+                sku_path = Path(entry.path)
+                if sku_path.is_dir():
+                    # Find existing content file to overwrite
+                    for candidate in ["content.md", "content.json", "SKILL.md"]:
+                        p = sku_path / candidate
+                        if p.exists():
+                            p.write_text(content, encoding="utf-8")
+                            logger.debug("Updated SKU content", sku_id=sku_id, file=candidate)
+                            return
+                    # No existing content file — write as content.md
+                    (sku_path / "content.md").write_text(content, encoding="utf-8")
+                    logger.debug("Created SKU content", sku_id=sku_id, file="content.md")
+                return
+        logger.warning("SKU not found in index for content write", sku_id=sku_id)
+
+    def _load_sku_content(self, sku_id: str) -> Optional[str]:
+        """Load full content of an SKU."""
+        index = self.load_index()
+        for entry in index.skus:
+            if entry.sku_id == sku_id:
+                sku_path = Path(entry.path)
+                if sku_path.is_dir():
+                    for candidate in ["content.md", "content.json", "SKILL.md"]:
+                        p = sku_path / candidate
+                        if p.exists():
+                            return p.read_text(encoding="utf-8")
+                elif sku_path.exists():
+                    return sku_path.read_text(encoding="utf-8")
+        return None
+
+    def _load_sku_meta(self, sku_id: str) -> dict:
+        """Load SKU header metadata."""
+        index = self.load_index()
+        for entry in index.skus:
+            if entry.sku_id == sku_id:
+                return {
+                    "name": entry.name,
+                    "description": entry.description,
+                    "classification": entry.classification.value,
+                }
+        return {}
+
+    def _clean_mapping(self, report: DedupReport) -> None:
+        """Remove references to deleted SKUs from mapping.md."""
+        mapping_path = self.skus_dir / "meta" / "mapping.md"
+        if not mapping_path.exists():
+            return
+
+        deleted_ids = set()
+        for action in report.actions:
+            deleted_ids.update(action.deleted_skus)
+
+        if not deleted_ids:
+            return
+
+        content = mapping_path.read_text(encoding="utf-8")
+        lines = content.split("\n")
+        cleaned = []
+        for line in lines:
+            if any(sku_id in line for sku_id in deleted_ids):
+                continue
+            cleaned.append(line)
+
+        mapping_path.write_text("\n".join(cleaned), encoding="utf-8")
+        logger.info("Cleaned mapping.md", removed_references=len(lines) - len(cleaned))

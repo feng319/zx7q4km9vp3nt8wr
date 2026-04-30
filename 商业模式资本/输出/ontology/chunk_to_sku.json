@@ -1,0 +1,5890 @@
+{
+  "商业模式与资本运营_chunk_002": [
+    {
+      "sku_id": "sku_001",
+      "classification": "factual",
+      "path": "skus/factual/sku_001",
+      "name": "个人成长与通用能力培养核心要点"
+    },
+    {
+      "sku_id": "sku_002",
+      "classification": "factual",
+      "path": "skus/factual/sku_002",
+      "name": "风险投资与融资核心规则"
+    },
+    {
+      "sku_id": "sku_003",
+      "classification": "factual",
+      "path": "skus/factual/sku_003",
+      "name": "干细胞与活细胞核心属性对比"
+    },
+    {
+      "sku_id": "sku_004",
+      "classification": "factual",
+      "path": "skus/factual/sku_004",
+      "name": "消费细分行业发展现状与资本化机会"
+    },
+    {
+      "sku_id": "sku_005",
+      "classification": "factual",
+      "path": "skus/factual/sku_005",
+      "name": "快消品创新商业模式"
+    },
+    {
+      "sku_id": "sku_006",
+      "classification": "factual",
+      "path": "skus/factual/sku_006",
+      "name": "大数据与人工智能商业应用场景"
+    },
+    {
+      "sku_id": "sku_007",
+      "classification": "factual",
+      "path": "skus/factual/sku_007",
+      "name": "托管商业模式核心规则"
+    },
+    {
+      "sku_id": "sku_008",
+      "classification": "factual",
+      "path": "skus/factual/sku_008",
+      "name": "企业资本价值核心逻辑"
+    },
+    {
+      "sku_id": "skill_001",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_001",
+      "name": "financing-stage-investment-decision-workflow"
+    },
+    {
+      "sku_id": "skill_002",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_002",
+      "name": "c-end-food-business-success-workflow"
+    },
+    {
+      "sku_id": "skill_003",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_003",
+      "name": "restaurant-enterprise-compliance-listing-workflow"
+    },
+    {
+      "sku_id": "skill_004",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_004",
+      "name": "tea-shop-crowdfunding-operation-workflow"
+    },
+    {
+      "sku_id": "skill_005",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_005",
+      "name": "art-training-branch-crowdfunding-expansion-workflow"
+    },
+    {
+      "sku_id": "skill_006",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_006",
+      "name": "sense-of-humor-cultivation-workflow"
+    },
+    {
+      "sku_id": "skill_007",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_007",
+      "name": "agricultural-enterprise-scaling-up-workflow"
+    },
+    {
+      "sku_id": "skill_008",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_008",
+      "name": "trusteeship-chain-business-model-operation-workflow"
+    },
+    {
+      "sku_id": "skill_009",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_009",
+      "name": "new-baijiu-brand-building-workflow"
+    },
+    {
+      "sku_id": "skill_010",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_010",
+      "name": "stem-cell-industry-land-acquisition-workflow"
+    }
+  ],
+  "商业模式与资本运营_chunk_001": [
+    {
+      "sku_id": "sku_045",
+      "classification": "factual",
+      "path": "skus/factual/sku_045",
+      "name": "连锁企业主流运营模式对比"
+    },
+    {
+      "sku_id": "sku_046",
+      "classification": "factual",
+      "path": "skus/factual/sku_046",
+      "name": "中国暂无上市公司的细分行业清单"
+    },
+    {
+      "sku_id": "sku_047",
+      "classification": "factual",
+      "path": "skus/factual/sku_047",
+      "name": "农业养殖品类商业价值对比"
+    },
+    {
+      "sku_id": "sku_048",
+      "classification": "factual",
+      "path": "skus/factual/sku_048",
+      "name": "中美科技互联网企业发展路径差异"
+    },
+    {
+      "sku_id": "sku_049",
+      "classification": "factual",
+      "path": "skus/factual/sku_049",
+      "name": "中国七大主流电商平台核心特征对比"
+    },
+    {
+      "sku_id": "sku_050",
+      "classification": "factual",
+      "path": "skus/factual/sku_050",
+      "name": "农业企业规模化发展核心要求及典型模式"
+    },
+    {
+      "sku_id": "sku_051",
+      "classification": "factual",
+      "path": "skus/factual/sku_051",
+      "name": "主流投资机构筛选标的核心标准体系"
+    },
+    {
+      "sku_id": "sku_052",
+      "classification": "factual",
+      "path": "skus/factual/sku_052",
+      "name": "产业资本并购核心模式对比（复星医药案例）"
+    },
+    {
+      "sku_id": "sku_053",
+      "classification": "factual",
+      "path": "skus/factual/sku_053",
+      "name": "商业地产核心模式对比（万达/红星美凯龙案例）"
+    },
+    {
+      "sku_id": "sku_054",
+      "classification": "factual",
+      "path": "skus/factual/sku_054",
+      "name": "连锁企业五层通用盈利模型"
+    },
+    {
+      "sku_id": "sku_055",
+      "classification": "factual",
+      "path": "skus/factual/sku_055",
+      "name": "企业各融资轮次投资方核心评估要素"
+    },
+    {
+      "sku_id": "sku_056",
+      "classification": "factual",
+      "path": "skus/factual/sku_056",
+      "name": "农业创新商业模式案例（云放茶园/五常大米）"
+    },
+    {
+      "sku_id": "sku_057",
+      "classification": "factual",
+      "path": "skus/factual/sku_057",
+      "name": "食品饮料行业资本化核心规律总结"
+    },
+    {
+      "sku_id": "sku_058",
+      "classification": "factual",
+      "path": "skus/factual/sku_058",
+      "name": "中国房地产行业规律及万科核心竞争力特征"
+    },
+    {
+      "sku_id": "sku_059",
+      "classification": "factual",
+      "path": "skus/factual/sku_059",
+      "name": "宋城演艺商业模式核心特征"
+    },
+    {
+      "sku_id": "sku_060",
+      "classification": "factual",
+      "path": "skus/factual/sku_060",
+      "name": "人力资源行业上市核心路径及模式"
+    },
+    {
+      "sku_id": "sku_061",
+      "classification": "factual",
+      "path": "skus/factual/sku_061",
+      "name": "奢侈品租赁行业核心特征"
+    },
+    {
+      "sku_id": "sku_062",
+      "classification": "factual",
+      "path": "skus/factual/sku_062",
+      "name": "无人零售行业核心特征（国小美案例）"
+    },
+    {
+      "sku_id": "sku_063",
+      "classification": "factual",
+      "path": "skus/factual/sku_063",
+      "name": "张江高科科技投行模式核心特征"
+    },
+    {
+      "sku_id": "sku_064",
+      "classification": "factual",
+      "path": "skus/factual/sku_064",
+      "name": "智慧医疗微脉模式核心特征"
+    },
+    {
+      "sku_id": "sku_065",
+      "classification": "factual",
+      "path": "skus/factual/sku_065",
+      "name": "教育行业客户变股东创新模式（贵族幼儿园案例）"
+    },
+    {
+      "sku_id": "skill_011",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_011",
+      "name": "hardware-to-subscription-service-transformation"
+    },
+    {
+      "sku_id": "skill_012",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_012",
+      "name": "agricultural-product-pre-sale-rights-model-building"
+    },
+    {
+      "sku_id": "skill_013",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_013",
+      "name": "niche-category-first-positioning-strategy"
+    },
+    {
+      "sku_id": "skill_014",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_014",
+      "name": "chain-enterprise-five-layer-profit-model-building"
+    },
+    {
+      "sku_id": "skill_015",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_015",
+      "name": "commercial-real-estate-bot-cooperation-process"
+    },
+    {
+      "sku_id": "skill_016",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_016",
+      "name": "venture-capital-enterprise-screening-process"
+    },
+    {
+      "sku_id": "skill_017",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_017",
+      "name": "education-institution-parent-shareholder-transformation"
+    },
+    {
+      "sku_id": "skill_018",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_018",
+      "name": "chain-trusteeship-operation-model-building"
+    },
+    {
+      "sku_id": "skill_019",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_019",
+      "name": "pharmaceutical-enterprise-merger-integration-process"
+    },
+    {
+      "sku_id": "skill_020",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_020",
+      "name": "commercial-real-estate-commissioned-management-expansion"
+    },
+    {
+      "sku_id": "skill_021",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_021",
+      "name": "custom-furniture-c2b-flexible-production-model"
+    },
+    {
+      "sku_id": "skill_022",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_022",
+      "name": "real-estate-enterprise-customer-segmented-product-design"
+    },
+    {
+      "sku_id": "skill_023",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_023",
+      "name": "industrial-park-tech-investment-bank-transformation"
+    },
+    {
+      "sku_id": "skill_024",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_024",
+      "name": "cultural-tourism-performance-replication-expansion"
+    },
+    {
+      "sku_id": "skill_025",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_025",
+      "name": "real-estate-agency-client-shareholder-binding"
+    },
+    {
+      "sku_id": "skill_026",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_026",
+      "name": "pig-breeding-model-selection-and-implementation"
+    },
+    {
+      "sku_id": "skill_027",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_027",
+      "name": "e-commerce-agricultural-product-direct-supply-model"
+    },
+    {
+      "sku_id": "skill_028",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_028",
+      "name": "local-life-service-high-frequency-low-frequency-ecosystem"
+    },
+    {
+      "sku_id": "skill_029",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_029",
+      "name": "single-country-cross-border-e-commerce-model-building"
+    },
+    {
+      "sku_id": "skill_030",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_030",
+      "name": "smart-medical-public-hospital-cooperation-process"
+    }
+  ],
+  "商业创新案例_chunk_001": [
+    {
+      "sku_id": "sku_009",
+      "classification": "factual",
+      "path": "skus/factual/sku_009",
+      "name": "代工行业BS商业模式"
+    },
+    {
+      "sku_id": "sku_010",
+      "classification": "factual",
+      "path": "skus/factual/sku_010",
+      "name": "申洲国际全产业链整合模式"
+    },
+    {
+      "sku_id": "sku_011",
+      "classification": "factual",
+      "path": "skus/factual/sku_011",
+      "name": "小米集团商业模式"
+    },
+    {
+      "sku_id": "sku_012",
+      "classification": "factual",
+      "path": "skus/factual/sku_012",
+      "name": "格力电器经销商绑定模式"
+    },
+    {
+      "sku_id": "sku_013",
+      "classification": "factual",
+      "path": "skus/factual/sku_013",
+      "name": "小狗电器轻资产商业模式"
+    },
+    {
+      "sku_id": "sku_014",
+      "classification": "factual",
+      "path": "skus/factual/sku_014",
+      "name": "公牛集团渠道与品牌模式"
+    },
+    {
+      "sku_id": "sku_015",
+      "classification": "factual",
+      "path": "skus/factual/sku_015",
+      "name": "普绿德商业模式"
+    },
+    {
+      "sku_id": "sku_016",
+      "classification": "factual",
+      "path": "skus/factual/sku_016",
+      "name": "中国白酒行业四大渠道模式"
+    },
+    {
+      "sku_id": "sku_017",
+      "classification": "factual",
+      "path": "skus/factual/sku_017",
+      "name": "东阿阿胶提价模式对比"
+    },
+    {
+      "sku_id": "sku_018",
+      "classification": "factual",
+      "path": "skus/factual/sku_018",
+      "name": "三只松鼠商业模式"
+    },
+    {
+      "sku_id": "sku_019",
+      "classification": "factual",
+      "path": "skus/factual/sku_019",
+      "name": "六个核桃爆款商业模式"
+    },
+    {
+      "sku_id": "sku_020",
+      "classification": "factual",
+      "path": "skus/factual/sku_020",
+      "name": "达利食品多品牌商业模式"
+    },
+    {
+      "sku_id": "sku_021",
+      "classification": "factual",
+      "path": "skus/factual/sku_021",
+      "name": "休闲食品渠道模式对比（周黑鸭vs绝味）"
+    },
+    {
+      "sku_id": "sku_022",
+      "classification": "factual",
+      "path": "skus/factual/sku_022",
+      "name": "安井食品产销地销商业模式"
+    },
+    {
+      "sku_id": "sku_023",
+      "classification": "factual",
+      "path": "skus/factual/sku_023",
+      "name": "海澜之家托管商业模式"
+    },
+    {
+      "sku_id": "sku_024",
+      "classification": "factual",
+      "path": "skus/factual/sku_024",
+      "name": "永辉超市OP合伙人制度"
+    },
+    {
+      "sku_id": "sku_025",
+      "classification": "factual",
+      "path": "skus/factual/sku_025",
+      "name": "春秋航空低成本运营模式"
+    },
+    {
+      "sku_id": "sku_026",
+      "classification": "factual",
+      "path": "skus/factual/sku_026",
+      "name": "美年大健康先参后控商业模式"
+    },
+    {
+      "sku_id": "sku_027",
+      "classification": "factual",
+      "path": "skus/factual/sku_027",
+      "name": "爱尔眼科分级连锁模式"
+    },
+    {
+      "sku_id": "sku_028",
+      "classification": "factual",
+      "path": "skus/factual/sku_028",
+      "name": "复星医药并购策略"
+    },
+    {
+      "sku_id": "sku_029",
+      "classification": "factual",
+      "path": "skus/factual/sku_029",
+      "name": "药明康德商业模式"
+    },
+    {
+      "sku_id": "sku_030",
+      "classification": "factual",
+      "path": "skus/factual/sku_030",
+      "name": "红星美凯龙商业模式"
+    },
+    {
+      "sku_id": "sku_031",
+      "classification": "factual",
+      "path": "skus/factual/sku_031",
+      "name": "尚品宅配柔性生产模式"
+    },
+    {
+      "sku_id": "sku_032",
+      "classification": "factual",
+      "path": "skus/factual/sku_032",
+      "name": "碧桂园高周转模式"
+    },
+    {
+      "sku_id": "sku_033",
+      "classification": "factual",
+      "path": "skus/factual/sku_033",
+      "name": "万科客户细分策略"
+    },
+    {
+      "sku_id": "sku_034",
+      "classification": "factual",
+      "path": "skus/factual/sku_034",
+      "name": "张江高科科技投行模式"
+    },
+    {
+      "sku_id": "sku_035",
+      "classification": "factual",
+      "path": "skus/factual/sku_035",
+      "name": "宋城演艺商业模式"
+    },
+    {
+      "sku_id": "sku_036",
+      "classification": "factual",
+      "path": "skus/factual/sku_036",
+      "name": "易居中国客户变股东模式"
+    },
+    {
+      "sku_id": "sku_037",
+      "classification": "factual",
+      "path": "skus/factual/sku_037",
+      "name": "中国养猪企业四大模式对比"
+    },
+    {
+      "sku_id": "sku_038",
+      "classification": "factual",
+      "path": "skus/factual/sku_038",
+      "name": "跟谁学商业模式演变"
+    },
+    {
+      "sku_id": "sku_039",
+      "classification": "factual",
+      "path": "skus/factual/sku_039",
+      "name": "拼多多C2B商业模式"
+    },
+    {
+      "sku_id": "sku_040",
+      "classification": "factual",
+      "path": "skus/factual/sku_040",
+      "name": "美团点评商业模式"
+    },
+    {
+      "sku_id": "sku_041",
+      "classification": "factual",
+      "path": "skus/factual/sku_041",
+      "name": "金山办公商业模式"
+    },
+    {
+      "sku_id": "sku_042",
+      "classification": "factual",
+      "path": "skus/factual/sku_042",
+      "name": "加码商业模式"
+    },
+    {
+      "sku_id": "sku_043",
+      "classification": "factual",
+      "path": "skus/factual/sku_043",
+      "name": "消费者+股东商业模式"
+    },
+    {
+      "sku_id": "sku_044",
+      "classification": "factual",
+      "path": "skus/factual/sku_044",
+      "name": "连锁商业模式对比"
+    },
+    {
+      "sku_id": "skill_031",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_031",
+      "name": "bs-business-model-implementation"
+    },
+    {
+      "sku_id": "skill_032",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_032",
+      "name": "textile-full-industry-chain-integration"
+    },
+    {
+      "sku_id": "skill_033",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_033",
+      "name": "iot-ecosystem-construction"
+    },
+    {
+      "sku_id": "skill_034",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_034",
+      "name": "home-appliance-dealer-incentive"
+    },
+    {
+      "sku_id": "skill_035",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_035",
+      "name": "consumer-goods-light-asset-transformation"
+    },
+    {
+      "sku_id": "skill_036",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_036",
+      "name": "fmcg-brand-channel-construction"
+    },
+    {
+      "sku_id": "skill_037",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_037",
+      "name": "liquor-dealer-option-incentive"
+    },
+    {
+      "sku_id": "skill_038",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_038",
+      "name": "taobao-brand-light-asset-operation"
+    },
+    {
+      "sku_id": "skill_039",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_039",
+      "name": "food-enterprise-benchmarking-expansion"
+    },
+    {
+      "sku_id": "skill_040",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_040",
+      "name": "garment-trusteeship-franchise-operation"
+    },
+    {
+      "sku_id": "skill_041",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_041",
+      "name": "catering-store-manager-training-mechanism"
+    },
+    {
+      "sku_id": "skill_042",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_042",
+      "name": "retail-op-partner-incentive-system"
+    },
+    {
+      "sku_id": "skill_043",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_043",
+      "name": "low-cost-airline-operation-model"
+    },
+    {
+      "sku_id": "skill_044",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_044",
+      "name": "medical-institution-ma-expansion"
+    },
+    {
+      "sku_id": "skill_045",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_045",
+      "name": "real-estate-high-turnover-development"
+    },
+    {
+      "sku_id": "skill_046",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_046",
+      "name": "cultural-tourism-light-asset-expansion"
+    },
+    {
+      "sku_id": "skill_047",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_047",
+      "name": "b2b-enterprise-customer-to-shareholder"
+    },
+    {
+      "sku_id": "skill_048",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_048",
+      "name": "pig-breeding-company-plus-farmer"
+    },
+    {
+      "sku_id": "skill_049",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_049",
+      "name": "e-commerce-c2b-group-buying-operation"
+    },
+    {
+      "sku_id": "skill_050",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_050",
+      "name": "local-life-service-ecosystem-construction"
+    },
+    {
+      "sku_id": "skill_051",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_051",
+      "name": "software-enterprise-mobile-overtaking"
+    },
+    {
+      "sku_id": "skill_052",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_052",
+      "name": "enterprise-profit-increasing-model-design"
+    },
+    {
+      "sku_id": "skill_053",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_053",
+      "name": "consumer-to-shareholder-crowdfunding"
+    },
+    {
+      "sku_id": "skill_054",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_054",
+      "name": "agricultural-enterprise-full-industry-chain-transformation"
+    },
+    {
+      "sku_id": "skill_055",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_055",
+      "name": "chain-store-trusteeship-operation"
+    },
+    {
+      "sku_id": "skill_056",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_056",
+      "name": "government-performance-engineering-cooperation"
+    },
+    {
+      "sku_id": "skill_057",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_057",
+      "name": "supermarket-member-financial-model"
+    }
+  ],
+  "商业模式创新案例大全_chunk_002": [
+    {
+      "sku_id": "sku_101",
+      "classification": "factual",
+      "path": "skus/factual/sku_101",
+      "name": "微盟提升市盈率策略对比"
+    },
+    {
+      "sku_id": "sku_102",
+      "classification": "factual",
+      "path": "skus/factual/sku_102",
+      "name": "餐饮品牌SKU数量对比"
+    },
+    {
+      "sku_id": "sku_103",
+      "classification": "factual",
+      "path": "skus/factual/sku_103",
+      "name": "钱大妈与百果园商业模式对比"
+    },
+    {
+      "sku_id": "sku_104",
+      "classification": "factual",
+      "path": "skus/factual/sku_104",
+      "name": "连锁门店三种运营模式估值与风险对比"
+    },
+    {
+      "sku_id": "sku_105",
+      "classification": "factual",
+      "path": "skus/factual/sku_105",
+      "name": "餐饮连锁三种运营模式估值影响对比"
+    },
+    {
+      "sku_id": "sku_106",
+      "classification": "factual",
+      "path": "skus/factual/sku_106",
+      "name": "瑞幸与星巴克商业模式对比"
+    },
+    {
+      "sku_id": "sku_107",
+      "classification": "factual",
+      "path": "skus/factual/sku_107",
+      "name": "汽车玻璃头部企业市盈率对比"
+    },
+    {
+      "sku_id": "sku_108",
+      "classification": "factual",
+      "path": "skus/factual/sku_108",
+      "name": "福耀玻璃2000-2019年固定资产变化"
+    },
+    {
+      "sku_id": "sku_109",
+      "classification": "factual",
+      "path": "skus/factual/sku_109",
+      "name": "云集微店用户身份等级及晋升规则"
+    },
+    {
+      "sku_id": "sku_110",
+      "classification": "factual",
+      "path": "skus/factual/sku_110",
+      "name": "云集微店各角色收益构成明细"
+    },
+    {
+      "sku_id": "sku_111",
+      "classification": "factual",
+      "path": "skus/factual/sku_111",
+      "name": "云集微店与Costco订阅会员制模式对比"
+    },
+    {
+      "sku_id": "sku_112",
+      "classification": "factual",
+      "path": "skus/factual/sku_112",
+      "name": "两种会员服务模式特征对比"
+    },
+    {
+      "sku_id": "sku_113",
+      "classification": "factual",
+      "path": "skus/factual/sku_113",
+      "name": "曹操与汉武帝核心能力对比"
+    },
+    {
+      "sku_id": "sku_114",
+      "classification": "factual",
+      "path": "skus/factual/sku_114",
+      "name": "微盟企业经营及资本运作核心事实"
+    },
+    {
+      "sku_id": "sku_115",
+      "classification": "factual",
+      "path": "skus/factual/sku_115",
+      "name": "餐饮行业合规及九毛九运营核心事实"
+    },
+    {
+      "sku_id": "sku_116",
+      "classification": "factual",
+      "path": "skus/factual/sku_116",
+      "name": "钱大妈猪肉零售连锁经营模式核心事实"
+    },
+    {
+      "sku_id": "sku_117",
+      "classification": "factual",
+      "path": "skus/factual/sku_117",
+      "name": "明星餐饮及贤合庄运营模式核心事实"
+    },
+    {
+      "sku_id": "sku_118",
+      "classification": "factual",
+      "path": "skus/factual/sku_118",
+      "name": "百果园水果零售连锁经营模式核心事实"
+    },
+    {
+      "sku_id": "sku_119",
+      "classification": "factual",
+      "path": "skus/factual/sku_119",
+      "name": "贝壳找房平台经营模式核心事实"
+    },
+    {
+      "sku_id": "sku_120",
+      "classification": "factual",
+      "path": "skus/factual/sku_120",
+      "name": "福耀玻璃经营及资本运作核心事实"
+    },
+    {
+      "sku_id": "sku_121",
+      "classification": "factual",
+      "path": "skus/factual/sku_121",
+      "name": "中国七大电商平台及云集微店运营模式核心事实"
+    },
+    {
+      "sku_id": "sku_122",
+      "classification": "factual",
+      "path": "skus/factual/sku_122",
+      "name": "Costco零售商业模式核心事实"
+    },
+    {
+      "sku_id": "sku_123",
+      "classification": "factual",
+      "path": "skus/factual/sku_123",
+      "name": "中国古代机制创新核心人物及改革相关事实"
+    },
+    {
+      "sku_id": "sku_124",
+      "classification": "factual",
+      "path": "skus/factual/sku_124",
+      "name": "金融改革及全产业链金融模式核心事实"
+    },
+    {
+      "sku_id": "skill_058",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_058",
+      "name": "social-e-commerce-compliance-operation"
+    },
+    {
+      "sku_id": "skill_059",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_059",
+      "name": "catering-enterprise-listing-path-selection"
+    },
+    {
+      "sku_id": "skill_060",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_060",
+      "name": "chain-store-expansion-valuation-optimization"
+    },
+    {
+      "sku_id": "skill_061",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_061",
+      "name": "enterprise-pe-ratio-improvement-strategy"
+    },
+    {
+      "sku_id": "skill_062",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_062",
+      "name": "catering-multi-brand-matrix-operation"
+    },
+    {
+      "sku_id": "skill_063",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_063",
+      "name": "fresh-food-chain-cost-optimization"
+    },
+    {
+      "sku_id": "skill_064",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_064",
+      "name": "celebrity-catering-brand-capitalization"
+    },
+    {
+      "sku_id": "skill_065",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_065",
+      "name": "retail-member-system-design-method"
+    }
+  ],
+  "2025财富破局从商业模式开始_chunk_001": [
+    {
+      "sku_id": "sku_066",
+      "classification": "factual",
+      "path": "skus/factual/sku_066",
+      "name": "不同零售及制造业态PS估值基准"
+    },
+    {
+      "sku_id": "sku_067",
+      "classification": "factual",
+      "path": "skus/factual/sku_067",
+      "name": "传统OEM代工企业行业认知与突破案例"
+    },
+    {
+      "sku_id": "sku_068",
+      "classification": "factual",
+      "path": "skus/factual/sku_068",
+      "name": "BS代工模式（第三代买卖模式）"
+    },
+    {
+      "sku_id": "sku_069",
+      "classification": "factual",
+      "path": "skus/factual/sku_069",
+      "name": "匹克全产业链布局投资及估值对比"
+    },
+    {
+      "sku_id": "sku_070",
+      "classification": "factual",
+      "path": "skus/factual/sku_070",
+      "name": "深州国际代工企业运营及财务数据"
+    },
+    {
+      "sku_id": "sku_071",
+      "classification": "factual",
+      "path": "skus/factual/sku_071",
+      "name": "小米集团商业模式及核心数据"
+    },
+    {
+      "sku_id": "sku_072",
+      "classification": "factual",
+      "path": "skus/factual/sku_072",
+      "name": "格力电器经销商绑定及运营模式"
+    },
+    {
+      "sku_id": "sku_073",
+      "classification": "factual",
+      "path": "skus/factual/sku_073",
+      "name": "小狗电器轻资产转型模式及对比数据"
+    },
+    {
+      "sku_id": "sku_074",
+      "classification": "factual",
+      "path": "skus/factual/sku_074",
+      "name": "品牌与渠道的定义及价值排序"
+    },
+    {
+      "sku_id": "sku_075",
+      "classification": "factual",
+      "path": "skus/factual/sku_075",
+      "name": "公牛插座商业模式及核心数据"
+    },
+    {
+      "sku_id": "sku_076",
+      "classification": "factual",
+      "path": "skus/factual/sku_076",
+      "name": "东阿阿胶提价模式及与茅台策略对比"
+    },
+    {
+      "sku_id": "sku_077",
+      "classification": "factual",
+      "path": "skus/factual/sku_077",
+      "name": "三只松鼠商业模式及核心数据"
+    },
+    {
+      "sku_id": "sku_078",
+      "classification": "factual",
+      "path": "skus/factual/sku_078",
+      "name": "企业主营业务发展阶段四象限判断标准"
+    },
+    {
+      "sku_id": "sku_079",
+      "classification": "factual",
+      "path": "skus/factual/sku_079",
+      "name": "六个核桃（养元饮品）爆款商业模式"
+    },
+    {
+      "sku_id": "sku_080",
+      "classification": "factual",
+      "path": "skus/factual/sku_080",
+      "name": "达利食品企业概况及行业地位"
+    },
+    {
+      "sku_id": "sku_081",
+      "classification": "factual",
+      "path": "skus/factual/sku_081",
+      "name": "福布斯富豪榜市值计算规则及A股控股现状"
+    },
+    {
+      "sku_id": "sku_082",
+      "classification": "factual",
+      "path": "skus/factual/sku_082",
+      "name": "连锁门店三类基础模式定义"
+    },
+    {
+      "sku_id": "sku_083",
+      "classification": "factual",
+      "path": "skus/factual/sku_083",
+      "name": "鸭制品连锁企业模式对比（周黑鸭VS绝味）"
+    },
+    {
+      "sku_id": "sku_084",
+      "classification": "factual",
+      "path": "skus/factual/sku_084",
+      "name": "巴比馒头加盟管控模式"
+    },
+    {
+      "sku_id": "sku_085",
+      "classification": "factual",
+      "path": "skus/factual/sku_085",
+      "name": "安井食品商业模式及核心数据"
+    },
+    {
+      "sku_id": "sku_086",
+      "classification": "factual",
+      "path": "skus/factual/sku_086",
+      "name": "海澜之家托管连锁模式"
+    },
+    {
+      "sku_id": "sku_087",
+      "classification": "factual",
+      "path": "skus/factual/sku_087",
+      "name": "海底捞管理与扩张模式"
+    },
+    {
+      "sku_id": "sku_088",
+      "classification": "factual",
+      "path": "skus/factual/sku_088",
+      "name": "永辉超市合伙人（OP）制度"
+    },
+    {
+      "sku_id": "sku_089",
+      "classification": "factual",
+      "path": "skus/factual/sku_089",
+      "name": "春秋航空低成本商业模式"
+    },
+    {
+      "sku_id": "sku_090",
+      "classification": "factual",
+      "path": "skus/factual/sku_090",
+      "name": "美年大健康「先参后控」并购模式"
+    },
+    {
+      "sku_id": "sku_091",
+      "classification": "factual",
+      "path": "skus/factual/sku_091",
+      "name": "爱尔眼科分级连锁与并购模式"
+    },
+    {
+      "sku_id": "sku_092",
+      "classification": "factual",
+      "path": "skus/factual/sku_092",
+      "name": "药明康德医药研发代工（CRO/CDMO）模式"
+    },
+    {
+      "sku_id": "sku_093",
+      "classification": "factual",
+      "path": "skus/factual/sku_093",
+      "name": "红星美凯龙商业模式"
+    },
+    {
+      "sku_id": "sku_094",
+      "classification": "factual",
+      "path": "skus/factual/sku_094",
+      "name": "尚品宅配C2B定制家居模式"
+    },
+    {
+      "sku_id": "sku_095",
+      "classification": "factual",
+      "path": "skus/factual/sku_095",
+      "name": "张江高科「房东+股东」双轮驱动模式"
+    },
+    {
+      "sku_id": "sku_096",
+      "classification": "factual",
+      "path": "skus/factual/sku_096",
+      "name": "宋城演艺「千古情」商业模式"
+    },
+    {
+      "sku_id": "sku_097",
+      "classification": "factual",
+      "path": "skus/factual/sku_097",
+      "name": "易居中国「客户变股东」模式"
+    },
+    {
+      "sku_id": "sku_098",
+      "classification": "factual",
+      "path": "skus/factual/sku_098",
+      "name": "小蜜坊润唇膏切入彩妆市场模式"
+    },
+    {
+      "sku_id": "sku_099",
+      "classification": "factual",
+      "path": "skus/factual/sku_099",
+      "name": "钱大妈社区生鲜商业模式"
+    },
+    {
+      "sku_id": "sku_100",
+      "classification": "factual",
+      "path": "skus/factual/sku_100",
+      "name": "垂衣男装订阅服务模式"
+    },
+    {
+      "sku_id": "skill_066",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_066",
+      "name": "bs-oem-model-implementation"
+    },
+    {
+      "sku_id": "skill_067",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_067",
+      "name": "gri-dealer-shareholding-transformation"
+    },
+    {
+      "sku_id": "skill_068",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_068",
+      "name": "off-season-rebate-policy-design"
+    },
+    {
+      "sku_id": "skill_069",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_069",
+      "name": "light-asset-business-model-transformation"
+    },
+    {
+      "sku_id": "skill_070",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_070",
+      "name": "retail-channel-financial-ecosystem-construction"
+    },
+    {
+      "sku_id": "skill_071",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_071",
+      "name": "scarcity-product-pricing-inventory-control"
+    },
+    {
+      "sku_id": "skill_072",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_072",
+      "name": "online-fmcg-brand-first-market-then-factory"
+    },
+    {
+      "sku_id": "skill_073",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_073",
+      "name": "single-hit-product-market-expansion-workflow"
+    },
+    {
+      "sku_id": "skill_074",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_074",
+      "name": "business-revenue-stage-judgment-and-response"
+    },
+    {
+      "sku_id": "skill_075",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_075",
+      "name": "chain-store-operation-model-selection"
+    },
+    {
+      "sku_id": "skill_076",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_076",
+      "name": "catering-chain-mentorship-expansion-system"
+    },
+    {
+      "sku_id": "skill_077",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_077",
+      "name": "retail-frontline-partner-bonus-system-design"
+    },
+    {
+      "sku_id": "skill_078",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_078",
+      "name": "low-cost-airline-operation-optimization"
+    },
+    {
+      "sku_id": "skill_079",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_079",
+      "name": "medical-institution-first-participate-then-control-merger"
+    },
+    {
+      "sku_id": "skill_080",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_080",
+      "name": "specialist-medical-chain-ma-fund-expansion"
+    },
+    {
+      "sku_id": "skill_081",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_081",
+      "name": "pharmaceutical-cro-service-delivery-model-selection"
+    },
+    {
+      "sku_id": "skill_082",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_082",
+      "name": "commercial-real-estate-light-heavy-asset-expansion"
+    },
+    {
+      "sku_id": "skill_083",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_083",
+      "name": "custom-home-furniture-c2b-flexible-operation"
+    },
+    {
+      "sku_id": "skill_084",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_084",
+      "name": "industrial-park-landlord-plus-shareholder-operation"
+    },
+    {
+      "sku_id": "skill_085",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_085",
+      "name": "cultural-tourism-performance-project-replication"
+    },
+    {
+      "sku_id": "skill_086",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_086",
+      "name": "b2b-enterprise-customer-to-shareholder-binding"
+    },
+    {
+      "sku_id": "skill_087",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_087",
+      "name": "cosmetics-niche-segment-market-entry"
+    },
+    {
+      "sku_id": "skill_088",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_088",
+      "name": "community-fresh-food-franchise-operation-system"
+    },
+    {
+      "sku_id": "skill_089",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_089",
+      "name": "menswear-subscription-box-service-operation"
+    }
+  ],
+  "新资本商业模式与盈利模式_chunk_002": [
+    {
+      "sku_id": "sku_228",
+      "classification": "factual",
+      "path": "skus/factual/sku_228",
+      "name": "固生堂中医连锁模式2020年运营数据"
+    },
+    {
+      "sku_id": "sku_229",
+      "classification": "factual",
+      "path": "skus/factual/sku_229",
+      "name": "固生堂医生合伙人机制规则"
+    },
+    {
+      "sku_id": "sku_230",
+      "classification": "factual",
+      "path": "skus/factual/sku_230",
+      "name": "固生堂门店合伙人资质要求及扩张策略"
+    },
+    {
+      "sku_id": "skill_090",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_090",
+      "name": "gushengtang-doctor-partner-cooperation-process"
+    },
+    {
+      "sku_id": "skill_091",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_091",
+      "name": "gushengtang-store-partner-qualification-audit-process"
+    },
+    {
+      "sku_id": "skill_092",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_092",
+      "name": "gushengtang-tcm-chain-store-expansion-process"
+    }
+  ],
+  "新资本商业模式与盈利模式_chunk_003": [
+    {
+      "sku_id": "sku_231",
+      "classification": "factual",
+      "path": "skus/factual/sku_231",
+      "name": "固生堂门店合伙人模式核心规则"
+    },
+    {
+      "sku_id": "skill_093",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_093",
+      "name": "store-partner-equity-exit-operation"
+    },
+    {
+      "sku_id": "skill_094",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_094",
+      "name": "store-partner-equity-repurchase-execution"
+    },
+    {
+      "sku_id": "skill_095",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_095",
+      "name": "clinic-doctor-medical-liability-insurance-purchase"
+    }
+  ],
+  "新资本商业模式与盈利模式_chunk_004": [
+    {
+      "sku_id": "sku_263",
+      "classification": "factual",
+      "path": "skus/factual/sku_263",
+      "name": "合伙人裂变与招募管理机制"
+    },
+    {
+      "sku_id": "skill_096",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_096",
+      "name": "partner-fission-and-recruitment-workflow"
+    }
+  ],
+  "商业模式创新案例大全_chunk_001": [
+    {
+      "sku_id": "sku_125",
+      "classification": "factual",
+      "path": "skus/factual/sku_125",
+      "name": "加码模式定义及运营要点"
+    },
+    {
+      "sku_id": "sku_126",
+      "classification": "factual",
+      "path": "skus/factual/sku_126",
+      "name": "2008年中国奥运代表队金牌增长核心原因"
+    },
+    {
+      "sku_id": "sku_127",
+      "classification": "factual",
+      "path": "skus/factual/sku_127",
+      "name": "中国历史六位机制创新代表人物及贡献"
+    },
+    {
+      "sku_id": "sku_128",
+      "classification": "factual",
+      "path": "skus/factual/sku_128",
+      "name": "索马里海盗经济模式特征"
+    },
+    {
+      "sku_id": "sku_129",
+      "classification": "factual",
+      "path": "skus/factual/sku_129",
+      "name": "国外根治二型糖尿病药进入中国受阻原因"
+    },
+    {
+      "sku_id": "sku_130",
+      "classification": "factual",
+      "path": "skus/factual/sku_130",
+      "name": "中国足球现状及发展出路"
+    },
+    {
+      "sku_id": "sku_131",
+      "classification": "factual",
+      "path": "skus/factual/sku_131",
+      "name": "德国日本企业发展经验借鉴"
+    },
+    {
+      "sku_id": "sku_132",
+      "classification": "factual",
+      "path": "skus/factual/sku_132",
+      "name": "消费者+股东模式定义及案例"
+    },
+    {
+      "sku_id": "sku_133",
+      "classification": "factual",
+      "path": "skus/factual/sku_133",
+      "name": "亿万富豪俱乐部模式核心要素"
+    },
+    {
+      "sku_id": "sku_134",
+      "classification": "factual",
+      "path": "skus/factual/sku_134",
+      "name": "全产业链模式定义及典型案例"
+    },
+    {
+      "sku_id": "sku_135",
+      "classification": "factual",
+      "path": "skus/factual/sku_135",
+      "name": "阿里金融运作机制及风控参数"
+    },
+    {
+      "sku_id": "sku_136",
+      "classification": "factual",
+      "path": "skus/factual/sku_136",
+      "name": "送政绩加工程模式核心逻辑及案例"
+    },
+    {
+      "sku_id": "sku_137",
+      "classification": "factual",
+      "path": "skus/factual/sku_137",
+      "name": "主流房企产业勾地策略对比"
+    },
+    {
+      "sku_id": "sku_138",
+      "classification": "factual",
+      "path": "skus/factual/sku_138",
+      "name": "地方政府发债运作模式"
+    },
+    {
+      "sku_id": "sku_139",
+      "classification": "factual",
+      "path": "skus/factual/sku_139",
+      "name": "企业转型三维度及目标"
+    },
+    {
+      "sku_id": "sku_140",
+      "classification": "factual",
+      "path": "skus/factual/sku_140",
+      "name": "聚焦模式实施要点"
+    },
+    {
+      "sku_id": "sku_141",
+      "classification": "factual",
+      "path": "skus/factual/sku_141",
+      "name": "产品加股权模式架构及案例"
+    },
+    {
+      "sku_id": "sku_142",
+      "classification": "factual",
+      "path": "skus/factual/sku_142",
+      "name": "主业+投资模式核心要点"
+    },
+    {
+      "sku_id": "sku_143",
+      "classification": "factual",
+      "path": "skus/factual/sku_143",
+      "name": "小米复星联想产融结合模式对比"
+    },
+    {
+      "sku_id": "sku_144",
+      "classification": "factual",
+      "path": "skus/factual/sku_144",
+      "name": "全民养牛商业模式参数"
+    },
+    {
+      "sku_id": "sku_145",
+      "classification": "factual",
+      "path": "skus/factual/sku_145",
+      "name": "社区厨师共享模式对比"
+    },
+    {
+      "sku_id": "sku_146",
+      "classification": "factual",
+      "path": "skus/factual/sku_146",
+      "name": "以房养老类金融模式参数"
+    },
+    {
+      "sku_id": "sku_147",
+      "classification": "factual",
+      "path": "skus/factual/sku_147",
+      "name": "内金融模式运作逻辑"
+    },
+    {
+      "sku_id": "sku_148",
+      "classification": "factual",
+      "path": "skus/factual/sku_148",
+      "name": "保险佣金长期收益机制"
+    },
+    {
+      "sku_id": "sku_149",
+      "classification": "factual",
+      "path": "skus/factual/sku_149",
+      "name": "互联网+大数据行业应用案例"
+    },
+    {
+      "sku_id": "sku_150",
+      "classification": "factual",
+      "path": "skus/factual/sku_150",
+      "name": "纸牌屋与来自星星的你成功因素对比"
+    },
+    {
+      "sku_id": "sku_151",
+      "classification": "factual",
+      "path": "skus/factual/sku_151",
+      "name": "影视行业大数据应用维度"
+    },
+    {
+      "sku_id": "sku_152",
+      "classification": "factual",
+      "path": "skus/factual/sku_152",
+      "name": "大数据在美国总统选举中的应用"
+    },
+    {
+      "sku_id": "sku_153",
+      "classification": "factual",
+      "path": "skus/factual/sku_153",
+      "name": "托管模式核心参数"
+    },
+    {
+      "sku_id": "sku_154",
+      "classification": "factual",
+      "path": "skus/factual/sku_154",
+      "name": "BS代工商业模式核心要点"
+    },
+    {
+      "sku_id": "sku_155",
+      "classification": "factual",
+      "path": "skus/factual/sku_155",
+      "name": "工业富联成本结构及估值对比"
+    },
+    {
+      "sku_id": "sku_156",
+      "classification": "factual",
+      "path": "skus/factual/sku_156",
+      "name": "申洲国际核心竞争力参数"
+    },
+    {
+      "sku_id": "sku_157",
+      "classification": "factual",
+      "path": "skus/factual/sku_157",
+      "name": "申洲国际与传统服装代工模式对比"
+    },
+    {
+      "sku_id": "sku_158",
+      "classification": "factual",
+      "path": "skus/factual/sku_158",
+      "name": "小米集团商业模式核心要素"
+    },
+    {
+      "sku_id": "sku_159",
+      "classification": "factual",
+      "path": "skus/factual/sku_159",
+      "name": "华米科技与Fitbit对比"
+    },
+    {
+      "sku_id": "sku_160",
+      "classification": "factual",
+      "path": "skus/factual/sku_160",
+      "name": "公牛集团核心经营参数"
+    },
+    {
+      "sku_id": "sku_161",
+      "classification": "factual",
+      "path": "skus/factual/sku_161",
+      "name": "公牛与同行渠道及盈利数据对比"
+    },
+    {
+      "sku_id": "sku_162",
+      "classification": "factual",
+      "path": "skus/factual/sku_162",
+      "name": "普绿德商业模式失败原因分析"
+    },
+    {
+      "sku_id": "sku_163",
+      "classification": "factual",
+      "path": "skus/factual/sku_163",
+      "name": "中国白酒行业渠道体系"
+    },
+    {
+      "sku_id": "sku_164",
+      "classification": "factual",
+      "path": "skus/factual/sku_164",
+      "name": "四大白酒企业渠道模式对比"
+    },
+    {
+      "sku_id": "sku_165",
+      "classification": "factual",
+      "path": "skus/factual/sku_165",
+      "name": "东阿阿胶经营问题分析"
+    },
+    {
+      "sku_id": "sku_166",
+      "classification": "factual",
+      "path": "skus/factual/sku_166",
+      "name": "三只松鼠核心成功要素"
+    },
+    {
+      "sku_id": "sku_167",
+      "classification": "factual",
+      "path": "skus/factual/sku_167",
+      "name": "养元饮品六个核桃商业模式"
+    },
+    {
+      "sku_id": "sku_168",
+      "classification": "factual",
+      "path": "skus/factual/sku_168",
+      "name": "达利食品商业模式"
+    },
+    {
+      "sku_id": "sku_169",
+      "classification": "factual",
+      "path": "skus/factual/sku_169",
+      "name": "周黑鸭与绝味食品渠道模式对比"
+    },
+    {
+      "sku_id": "sku_170",
+      "classification": "factual",
+      "path": "skus/factual/sku_170",
+      "name": "安井食品核心经营参数"
+    },
+    {
+      "sku_id": "sku_171",
+      "classification": "factual",
+      "path": "skus/factual/sku_171",
+      "name": "海底捞成功机制要点"
+    },
+    {
+      "sku_id": "sku_172",
+      "classification": "factual",
+      "path": "skus/factual/sku_172",
+      "name": "永辉超市OP合伙人制度"
+    },
+    {
+      "sku_id": "sku_173",
+      "classification": "factual",
+      "path": "skus/factual/sku_173",
+      "name": "美年健康先参后控模式"
+    },
+    {
+      "sku_id": "sku_174",
+      "classification": "factual",
+      "path": "skus/factual/sku_174",
+      "name": "复星医药并购模式"
+    },
+    {
+      "sku_id": "sku_175",
+      "classification": "factual",
+      "path": "skus/factual/sku_175",
+      "name": "药明康德商业模式及话语权指标"
+    },
+    {
+      "sku_id": "sku_176",
+      "classification": "factual",
+      "path": "skus/factual/sku_176",
+      "name": "红星美凯龙商业模式及财务特征"
+    },
+    {
+      "sku_id": "sku_177",
+      "classification": "factual",
+      "path": "skus/factual/sku_177",
+      "name": "尚品宅配柔性生产链模式"
+    },
+    {
+      "sku_id": "sku_178",
+      "classification": "factual",
+      "path": "skus/factual/sku_178",
+      "name": "碧桂园高周转模式参数"
+    },
+    {
+      "sku_id": "sku_179",
+      "classification": "factual",
+      "path": "skus/factual/sku_179",
+      "name": "万科客户细分及战略布局"
+    },
+    {
+      "sku_id": "sku_180",
+      "classification": "factual",
+      "path": "skus/factual/sku_180",
+      "name": "张江高科科技投行模式"
+    },
+    {
+      "sku_id": "sku_181",
+      "classification": "factual",
+      "path": "skus/factual/sku_181",
+      "name": "宋城演艺模式核心参数"
+    },
+    {
+      "sku_id": "sku_182",
+      "classification": "factual",
+      "path": "skus/factual/sku_182",
+      "name": "易居中国商业模式"
+    },
+    {
+      "sku_id": "sku_183",
+      "classification": "factual",
+      "path": "skus/factual/sku_183",
+      "name": "中国养猪企业模式对比"
+    },
+    {
+      "sku_id": "sku_184",
+      "classification": "factual",
+      "path": "skus/factual/sku_184",
+      "name": "斗盟科技商业模式"
+    },
+    {
+      "sku_id": "sku_185",
+      "classification": "factual",
+      "path": "skus/factual/sku_185",
+      "name": "跟谁学商业模式转型路径"
+    },
+    {
+      "sku_id": "sku_186",
+      "classification": "factual",
+      "path": "skus/factual/sku_186",
+      "name": "拼多多商业模式核心要素"
+    },
+    {
+      "sku_id": "sku_187",
+      "classification": "factual",
+      "path": "skus/factual/sku_187",
+      "name": "美团点评商业模式"
+    },
+    {
+      "sku_id": "sku_188",
+      "classification": "factual",
+      "path": "skus/factual/sku_188",
+      "name": "金山办公WPS商业模式"
+    },
+    {
+      "sku_id": "sku_189",
+      "classification": "factual",
+      "path": "skus/factual/sku_189",
+      "name": "新硕体育商业模式及功能性饮料市场数据"
+    },
+    {
+      "sku_id": "sku_190",
+      "classification": "factual",
+      "path": "skus/factual/sku_190",
+      "name": "婴儿纸尿裤行业市场参数"
+    },
+    {
+      "sku_id": "sku_191",
+      "classification": "factual",
+      "path": "skus/factual/sku_191",
+      "name": "格格家进口零食平台模式"
+    },
+    {
+      "sku_id": "sku_192",
+      "classification": "factual",
+      "path": "skus/factual/sku_192",
+      "name": "衣二三租衣商业模式"
+    },
+    {
+      "sku_id": "sku_193",
+      "classification": "factual",
+      "path": "skus/factual/sku_193",
+      "name": "饭爷辣酱商业模式"
+    },
+    {
+      "sku_id": "sku_194",
+      "classification": "factual",
+      "path": "skus/factual/sku_194",
+      "name": "医改一高端改衣项目模式"
+    },
+    {
+      "sku_id": "sku_195",
+      "classification": "factual",
+      "path": "skus/factual/sku_195",
+      "name": "易快报报销SaaS模式"
+    },
+    {
+      "sku_id": "sku_196",
+      "classification": "factual",
+      "path": "skus/factual/sku_196",
+      "name": "日日煮视频电商模式"
+    },
+    {
+      "sku_id": "sku_197",
+      "classification": "factual",
+      "path": "skus/factual/sku_197",
+      "name": "名堂男装设计师孵化器模式"
+    },
+    {
+      "sku_id": "sku_198",
+      "classification": "factual",
+      "path": "skus/factual/sku_198",
+      "name": "超级猩猩健身模式"
+    },
+    {
+      "sku_id": "sku_199",
+      "classification": "factual",
+      "path": "skus/factual/sku_199",
+      "name": "糖豆广场舞模式及养老市场数据"
+    },
+    {
+      "sku_id": "sku_200",
+      "classification": "factual",
+      "path": "skus/factual/sku_200",
+      "name": "数码租赁平台商业模式"
+    },
+    {
+      "sku_id": "sku_201",
+      "classification": "factual",
+      "path": "skus/factual/sku_201",
+      "name": "豌豆公主日淘跨境电商模式"
+    },
+    {
+      "sku_id": "sku_202",
+      "classification": "factual",
+      "path": "skus/factual/sku_202",
+      "name": "熊猫签证模式及市场数据"
+    },
+    {
+      "sku_id": "sku_203",
+      "classification": "factual",
+      "path": "skus/factual/sku_203",
+      "name": "话本小说网络文学模式"
+    },
+    {
+      "sku_id": "sku_204",
+      "classification": "factual",
+      "path": "skus/factual/sku_204",
+      "name": "企鹅团红酒订阅模式"
+    },
+    {
+      "sku_id": "sku_205",
+      "classification": "factual",
+      "path": "skus/factual/sku_205",
+      "name": "伍德吃托克创意集市模式"
+    },
+    {
+      "sku_id": "sku_206",
+      "classification": "factual",
+      "path": "skus/factual/sku_206",
+      "name": "心上二手奢侈品平台模式"
+    },
+    {
+      "sku_id": "sku_207",
+      "classification": "factual",
+      "path": "skus/factual/sku_207",
+      "name": "深睿医疗智慧医疗模式"
+    },
+    {
+      "sku_id": "sku_208",
+      "classification": "factual",
+      "path": "skus/factual/sku_208",
+      "name": "21世纪核心投资赛道分布"
+    },
+    {
+      "sku_id": "sku_209",
+      "classification": "factual",
+      "path": "skus/factual/sku_209",
+      "name": "坤远基因商业模式"
+    },
+    {
+      "sku_id": "sku_210",
+      "classification": "factual",
+      "path": "skus/factual/sku_210",
+      "name": "微脉智慧医疗模式"
+    },
+    {
+      "sku_id": "sku_211",
+      "classification": "factual",
+      "path": "skus/factual/sku_211",
+      "name": "宠幸宠物食品模式"
+    },
+    {
+      "sku_id": "sku_212",
+      "classification": "factual",
+      "path": "skus/factual/sku_212",
+      "name": "布鲁可儿童积木模式"
+    },
+    {
+      "sku_id": "sku_213",
+      "classification": "factual",
+      "path": "skus/factual/sku_213",
+      "name": "威泰医疗糖尿病管理模式"
+    },
+    {
+      "sku_id": "sku_214",
+      "classification": "factual",
+      "path": "skus/factual/sku_214",
+      "name": "盖亚工场劳动力管理云模式"
+    },
+    {
+      "sku_id": "sku_215",
+      "classification": "factual",
+      "path": "skus/factual/sku_215",
+      "name": "玛雅女性健身服饰模式"
+    },
+    {
+      "sku_id": "sku_216",
+      "classification": "factual",
+      "path": "skus/factual/sku_216",
+      "name": "休闲食品行业数据及商业模式"
+    },
+    {
+      "sku_id": "sku_217",
+      "classification": "factual",
+      "path": "skus/factual/sku_217",
+      "name": "小蜜坊唇部彩妆模式"
+    },
+    {
+      "sku_id": "sku_218",
+      "classification": "factual",
+      "path": "skus/factual/sku_218",
+      "name": "垂衣男装搭配模式"
+    },
+    {
+      "sku_id": "sku_219",
+      "classification": "factual",
+      "path": "skus/factual/sku_219",
+      "name": "独辈儿K12英语分级阅读模式"
+    },
+    {
+      "sku_id": "sku_220",
+      "classification": "factual",
+      "path": "skus/factual/sku_220",
+      "name": "时空梭名人时间售卖模式"
+    },
+    {
+      "sku_id": "sku_221",
+      "classification": "factual",
+      "path": "skus/factual/sku_221",
+      "name": "巴乐兔租房模式"
+    },
+    {
+      "sku_id": "sku_222",
+      "classification": "factual",
+      "path": "skus/factual/sku_222",
+      "name": "奢侈品包租赁平台模式"
+    },
+    {
+      "sku_id": "sku_223",
+      "classification": "factual",
+      "path": "skus/factual/sku_223",
+      "name": "宠物猫用品企业模式"
+    },
+    {
+      "sku_id": "sku_224",
+      "classification": "factual",
+      "path": "skus/factual/sku_224",
+      "name": "美泽卫生巾模式"
+    },
+    {
+      "sku_id": "sku_225",
+      "classification": "factual",
+      "path": "skus/factual/sku_225",
+      "name": "翻小家小儿推拿连锁模式"
+    },
+    {
+      "sku_id": "sku_226",
+      "classification": "factual",
+      "path": "skus/factual/sku_226",
+      "name": "国小美无人售货机模式"
+    },
+    {
+      "sku_id": "sku_227",
+      "classification": "factual",
+      "path": "skus/factual/sku_227",
+      "name": "石云集餐饮共享平台模式"
+    },
+    {
+      "sku_id": "skill_097",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_097",
+      "name": "niche-market-development-path-selection"
+    },
+    {
+      "sku_id": "skill_098",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_098",
+      "name": "political-performance-plus-project-implementation"
+    },
+    {
+      "sku_id": "skill_099",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_099",
+      "name": "product-plus-equity-incentive-implementation"
+    },
+    {
+      "sku_id": "skill_100",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_100",
+      "name": "minority-to-majority-acquisition-workflow"
+    },
+    {
+      "sku_id": "skill_101",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_101",
+      "name": "pharmaceutical-merger-strategy-selection"
+    },
+    {
+      "sku_id": "skill_102",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_102",
+      "name": "real-estate-high-turnover-mode-implementation"
+    },
+    {
+      "sku_id": "skill_103",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_103",
+      "name": "residential-product-customer-segmentation-matching"
+    },
+    {
+      "sku_id": "skill_104",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_104",
+      "name": "client-to-shareholder-business-model-implementation"
+    },
+    {
+      "sku_id": "skill_105",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_105",
+      "name": "catering-chain-apprentice-system-expansion"
+    },
+    {
+      "sku_id": "skill_106",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_106",
+      "name": "retail-store-op-partner-incentive-implementation"
+    },
+    {
+      "sku_id": "skill_107",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_107",
+      "name": "liquor-enterprise-channel-mode-selection"
+    },
+    {
+      "sku_id": "skill_108",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_108",
+      "name": "custom-furniture-flexible-production-implementation"
+    },
+    {
+      "sku_id": "skill_109",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_109",
+      "name": "fmcg-multi-category-expansion-workflow"
+    },
+    {
+      "sku_id": "skill_110",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_110",
+      "name": "livestock-breeding-company-plus-farmer-mode"
+    },
+    {
+      "sku_id": "skill_111",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_111",
+      "name": "pediatric-massage-chain-expansion-workflow"
+    },
+    {
+      "sku_id": "skill_112",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_112",
+      "name": "high-end-clothing-alteration-chain-expansion"
+    }
+  ],
+  "定位战略塑造产品卖点_chunk_001": [
+    {
+      "sku_id": "sku_232",
+      "classification": "factual",
+      "path": "skus/factual/sku_232",
+      "name": "资本定位战略作者身份及投资业绩"
+    },
+    {
+      "sku_id": "sku_233",
+      "classification": "factual",
+      "path": "skus/factual/sku_233",
+      "name": "消费品牌定位差异化及资本价值案例"
+    },
+    {
+      "sku_id": "sku_234",
+      "classification": "factual",
+      "path": "skus/factual/sku_234",
+      "name": "企业模式定位转型及估值提升案例"
+    },
+    {
+      "sku_id": "sku_235",
+      "classification": "factual",
+      "path": "skus/factual/sku_235",
+      "name": "粤港澳大湾区定位核心要素及优势"
+    },
+    {
+      "sku_id": "sku_236",
+      "classification": "factual",
+      "path": "skus/factual/sku_236",
+      "name": "数字经济入口模式分类"
+    },
+    {
+      "sku_id": "sku_237",
+      "classification": "factual",
+      "path": "skus/factual/sku_237",
+      "name": "服务业数字化技术驱动因素"
+    },
+    {
+      "sku_id": "sku_238",
+      "classification": "factual",
+      "path": "skus/factual/sku_238",
+      "name": "服务业数字化催生四大爆发产业"
+    },
+    {
+      "sku_id": "sku_239",
+      "classification": "factual",
+      "path": "skus/factual/sku_239",
+      "name": "资本定位战略核心观点对照表"
+    },
+    {
+      "sku_id": "sku_240",
+      "classification": "factual",
+      "path": "skus/factual/sku_240",
+      "name": "服务业数字化转型知识点对照表"
+    },
+    {
+      "sku_id": "sku_241",
+      "classification": "factual",
+      "path": "skus/factual/sku_241",
+      "name": "定位理论核心知识点对照表"
+    },
+    {
+      "sku_id": "sku_242",
+      "classification": "factual",
+      "path": "skus/factual/sku_242",
+      "name": "企业卖点塑造知识点对照表"
+    },
+    {
+      "sku_id": "sku_243",
+      "classification": "factual",
+      "path": "skus/factual/sku_243",
+      "name": "品牌价值提升知识点对照表"
+    },
+    {
+      "sku_id": "sku_244",
+      "classification": "factual",
+      "path": "skus/factual/sku_244",
+      "name": "品牌定位实操知识点对照表"
+    },
+    {
+      "sku_id": "sku_245",
+      "classification": "factual",
+      "path": "skus/factual/sku_245",
+      "name": "定位法则知识点对照表"
+    },
+    {
+      "sku_id": "sku_246",
+      "classification": "factual",
+      "path": "skus/factual/sku_246",
+      "name": "企业与品牌战略核心观点对照表"
+    },
+    {
+      "sku_id": "sku_247",
+      "classification": "factual",
+      "path": "skus/factual/sku_247",
+      "name": "品牌命名与差异化知识点对照表"
+    },
+    {
+      "sku_id": "sku_248",
+      "classification": "factual",
+      "path": "skus/factual/sku_248",
+      "name": "品类创造定位案例知识点对照表"
+    },
+    {
+      "sku_id": "sku_249",
+      "classification": "factual",
+      "path": "skus/factual/sku_249",
+      "name": "分化模式与资本运营知识点对照表"
+    },
+    {
+      "sku_id": "sku_250",
+      "classification": "factual",
+      "path": "skus/factual/sku_250",
+      "name": "连锁商业模式知识点对照表"
+    },
+    {
+      "sku_id": "sku_251",
+      "classification": "factual",
+      "path": "skus/factual/sku_251",
+      "name": "市场定位与加盟模式核心观点对照表"
+    },
+    {
+      "sku_id": "sku_252",
+      "classification": "factual",
+      "path": "skus/factual/sku_252",
+      "name": "营销获客与促销知识点对照表"
+    },
+    {
+      "sku_id": "sku_253",
+      "classification": "factual",
+      "path": "skus/factual/sku_253",
+      "name": "聚焦法则与零售业知识点对照表"
+    },
+    {
+      "sku_id": "sku_254",
+      "classification": "factual",
+      "path": "skus/factual/sku_254",
+      "name": "并购逻辑与资本化战略知识点对照表"
+    },
+    {
+      "sku_id": "sku_255",
+      "classification": "factual",
+      "path": "skus/factual/sku_255",
+      "name": "七大定位法则及心智占领方法"
+    },
+    {
+      "sku_id": "sku_256",
+      "classification": "factual",
+      "path": "skus/factual/sku_256",
+      "name": "品牌塑造六大操作步骤"
+    },
+    {
+      "sku_id": "sku_257",
+      "classification": "factual",
+      "path": "skus/factual/sku_257",
+      "name": "并购逻辑与协同效应规则"
+    },
+    {
+      "sku_id": "sku_258",
+      "classification": "factual",
+      "path": "skus/factual/sku_258",
+      "name": "零售业成功商业模式框架"
+    },
+    {
+      "sku_id": "sku_259",
+      "classification": "factual",
+      "path": "skus/factual/sku_259",
+      "name": "品类分化核心规律"
+    },
+    {
+      "sku_id": "sku_260",
+      "classification": "factual",
+      "path": "skus/factual/sku_260",
+      "name": "避免中间地带定位理论"
+    },
+    {
+      "sku_id": "sku_261",
+      "classification": "factual",
+      "path": "skus/factual/sku_261",
+      "name": "金融化加盟模式规则"
+    },
+    {
+      "sku_id": "sku_262",
+      "classification": "factual",
+      "path": "skus/factual/sku_262",
+      "name": "逆转风险营销模式"
+    },
+    {
+      "sku_id": "skill_113",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_113",
+      "name": "brand-positioning-strategy-formulation"
+    },
+    {
+      "sku_id": "skill_114",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_114",
+      "name": "category-innovation-differentiation-method"
+    },
+    {
+      "sku_id": "skill_115",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_115",
+      "name": "chain-brand-capital-mode-design"
+    },
+    {
+      "sku_id": "skill_116",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_116",
+      "name": "direct-marketing-customer-acquisition-process"
+    },
+    {
+      "sku_id": "skill_117",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_117",
+      "name": "retail-enterprise-success-five-step-method"
+    },
+    {
+      "sku_id": "skill_118",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_118",
+      "name": "same-attribute-merger-valuation-improvement"
+    },
+    {
+      "sku_id": "skill_119",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_119",
+      "name": "brand-building-six-step-implementation-process"
+    },
+    {
+      "sku_id": "skill_120",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_120",
+      "name": "risk-reversal-marketing-implementation-method"
+    },
+    {
+      "sku_id": "skill_121",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_121",
+      "name": "avoid-middle-ground-positioning-method"
+    },
+    {
+      "sku_id": "skill_122",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_122",
+      "name": "brand-naming-strategy-formulation"
+    }
+  ],
+  "新资本商业模式与盈利模式_chunk_005": [
+    {
+      "sku_id": "sku_264",
+      "classification": "factual",
+      "path": "skus/factual/sku_264",
+      "name": "医药零售行业核心市场数据与发展特征"
+    },
+    {
+      "sku_id": "sku_265",
+      "classification": "factual",
+      "path": "skus/factual/sku_265",
+      "name": "房地产创新信用杠杆融资方案及配置规则"
+    },
+    {
+      "sku_id": "sku_266",
+      "classification": "factual",
+      "path": "skus/factual/sku_266",
+      "name": "房地产商铺创新销售模式及操作规则"
+    },
+    {
+      "sku_id": "sku_267",
+      "classification": "factual",
+      "path": "skus/factual/sku_267",
+      "name": "房地产中介创新转型模式及盈利数据"
+    },
+    {
+      "sku_id": "sku_268",
+      "classification": "factual",
+      "path": "skus/factual/sku_268",
+      "name": "房地产产业勾地操作策略与收益规则"
+    },
+    {
+      "sku_id": "sku_269",
+      "classification": "factual",
+      "path": "skus/factual/sku_269",
+      "name": "南城养老地产政企合作模式及收益数据"
+    },
+    {
+      "sku_id": "sku_270",
+      "classification": "factual",
+      "path": "skus/factual/sku_270",
+      "name": "房地产科技服务行业发展现状与趋势"
+    },
+    {
+      "sku_id": "skill_123",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_123",
+      "name": "real-estate-credit-leverage-finance"
+    },
+    {
+      "sku_id": "skill_124",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_124",
+      "name": "commercial-shop-equity-gift-sales"
+    },
+    {
+      "sku_id": "skill_125",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_125",
+      "name": "real-estate-insurance-bundled-sales"
+    },
+    {
+      "sku_id": "skill_126",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_126",
+      "name": "real-estate-agent-platform-operation"
+    },
+    {
+      "sku_id": "skill_127",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_127",
+      "name": "high-end-residence-transformation-profit"
+    },
+    {
+      "sku_id": "skill_128",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_128",
+      "name": "real-estate-anchor-incubation-profit"
+    },
+    {
+      "sku_id": "skill_129",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_129",
+      "name": "industrial-land-preferential-acquisition"
+    },
+    {
+      "sku_id": "skill_130",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_130",
+      "name": "elderly-real-estate-government-enterprise-development"
+    },
+    {
+      "sku_id": "skill_131",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_131",
+      "name": "commercial-real-estate-digital-upgrade"
+    }
+  ],
+  "新资本商业模式与盈利模式_chunk_006": [
+    {
+      "sku_id": "sku_271",
+      "classification": "factual",
+      "path": "skus/factual/sku_271",
+      "name": "2020年企业服务主要细分赛道市场规模"
+    },
+    {
+      "sku_id": "sku_272",
+      "classification": "factual",
+      "path": "skus/factual/sku_272",
+      "name": "财税服务领域核心特征"
+    },
+    {
+      "sku_id": "sku_273",
+      "classification": "factual",
+      "path": "skus/factual/sku_273",
+      "name": "SaaS行业发展关键信息"
+    },
+    {
+      "sku_id": "sku_274",
+      "classification": "factual",
+      "path": "skus/factual/sku_274",
+      "name": "细分领域SaaS运营关键要点"
+    },
+    {
+      "sku_id": "sku_275",
+      "classification": "factual",
+      "path": "skus/factual/sku_275",
+      "name": "产业互联网企业支付三类模式对比"
+    },
+    {
+      "sku_id": "sku_276",
+      "classification": "factual",
+      "path": "skus/factual/sku_276",
+      "name": "人力资源SaaS及新能源领域发展机会"
+    },
+    {
+      "sku_id": "sku_277",
+      "classification": "factual",
+      "path": "skus/factual/sku_277",
+      "name": "企业统一行业发展核心策略"
+    },
+    {
+      "sku_id": "sku_278",
+      "classification": "factual",
+      "path": "skus/factual/sku_278",
+      "name": "跨境电商行业核心数据及发展趋势"
+    },
+    {
+      "sku_id": "sku_279",
+      "classification": "factual",
+      "path": "skus/factual/sku_279",
+      "name": "跨境电商海外市场机遇"
+    },
+    {
+      "sku_id": "sku_280",
+      "classification": "factual",
+      "path": "skus/factual/sku_280",
+      "name": "商业经营及人生哲学要点"
+    },
+    {
+      "sku_id": "sku_281",
+      "classification": "factual",
+      "path": "skus/factual/sku_281",
+      "name": "商业领域核心知识汇总表"
+    },
+    {
+      "sku_id": "sku_282",
+      "classification": "factual",
+      "path": "skus/factual/sku_282",
+      "name": "家居行业发展趋势及规模数据"
+    },
+    {
+      "sku_id": "sku_283",
+      "classification": "factual",
+      "path": "skus/factual/sku_283",
+      "name": "家居行业头部企业资本表现及运营策略"
+    },
+    {
+      "sku_id": "sku_284",
+      "classification": "factual",
+      "path": "skus/factual/sku_284",
+      "name": "匠心家居企业及家具行业相关数据"
+    },
+    {
+      "sku_id": "sku_285",
+      "classification": "factual",
+      "path": "skus/factual/sku_285",
+      "name": "2021年汽车行业核心投融资信息"
+    },
+    {
+      "sku_id": "skill_132",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_132",
+      "name": "tax-service-government-enterprise-resource-building"
+    },
+    {
+      "sku_id": "skill_133",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_133",
+      "name": "saas-transition-path-selection"
+    },
+    {
+      "sku_id": "skill_134",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_134",
+      "name": "segment-saas-implementation-method"
+    },
+    {
+      "sku_id": "skill_135",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_135",
+      "name": "enterprise-payment-model-selection"
+    },
+    {
+      "sku_id": "skill_136",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_136",
+      "name": "cross-border-e-commerce-transformation"
+    },
+    {
+      "sku_id": "skill_137",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_137",
+      "name": "enterprise-financing-five-step-implementation"
+    },
+    {
+      "sku_id": "skill_138",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_138",
+      "name": "home-furnishing-brand-building-method"
+    },
+    {
+      "sku_id": "skill_139",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_139",
+      "name": "enterprise-douyin-matrix-operation"
+    }
+  ],
+  "新资本商业模式与盈利模式_chunk_001": [
+    {
+      "sku_id": "skill_140",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_140",
+      "name": "catering-trusteeship-franchise-expansion-process"
+    },
+    {
+      "sku_id": "skill_141",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_141",
+      "name": "medical-institution-merger-fund-operation-process"
+    },
+    {
+      "sku_id": "skill_142",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_142",
+      "name": "traditional-manufacturing-smart-transformation-process"
+    },
+    {
+      "sku_id": "skill_143",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_143",
+      "name": "spac-fast-listing-operation-process"
+    },
+    {
+      "sku_id": "skill_144",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_144",
+      "name": "catering-city-partner-implementation-process"
+    },
+    {
+      "sku_id": "skill_145",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_145",
+      "name": "medical-beauty-marketing-matrix-construction-process"
+    },
+    {
+      "sku_id": "skill_146",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_146",
+      "name": "agri-food-group-meal-supply-chain-expansion-process"
+    },
+    {
+      "sku_id": "skill_147",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_147",
+      "name": "enterprise-industry-finance-integration-team-construction-proces"
+    },
+    {
+      "sku_id": "sku_603",
+      "classification": "factual",
+      "path": "skus/factual/sku_603",
+      "name": "盈利模式创新典型案例"
+    },
+    {
+      "sku_id": "sku_604",
+      "classification": "factual",
+      "path": "skus/factual/sku_604",
+      "name": "好企业判定标准体系"
+    },
+    {
+      "sku_id": "sku_605",
+      "classification": "factual",
+      "path": "skus/factual/sku_605",
+      "name": "企业资本运作核心方法"
+    },
+    {
+      "sku_id": "sku_606",
+      "classification": "factual",
+      "path": "skus/factual/sku_606",
+      "name": "优质企业投资策略及标的方向"
+    },
+    {
+      "sku_id": "sku_607",
+      "classification": "factual",
+      "path": "skus/factual/sku_607",
+      "name": "粤港澳大湾区发展核心要素及融资模式"
+    },
+    {
+      "sku_id": "sku_608",
+      "classification": "factual",
+      "path": "skus/factual/sku_608",
+      "name": "SPAC上市模式核心特征"
+    },
+    {
+      "sku_id": "sku_609",
+      "classification": "factual",
+      "path": "skus/factual/sku_609",
+      "name": "传统企业智能制造转型规则及价值"
+    },
+    {
+      "sku_id": "sku_610",
+      "classification": "factual",
+      "path": "skus/factual/sku_610",
+      "name": "工业互联网产业核心数据及发展现状"
+    },
+    {
+      "sku_id": "sku_611",
+      "classification": "factual",
+      "path": "skus/factual/sku_611",
+      "name": "企业平台化战略实施路径及价值"
+    },
+    {
+      "sku_id": "sku_612",
+      "classification": "factual",
+      "path": "skus/factual/sku_612",
+      "name": "餐饮行业市场现状及连锁模式"
+    },
+    {
+      "sku_id": "sku_613",
+      "classification": "factual",
+      "path": "skus/factual/sku_613",
+      "name": "食品加工行业发展现状及投融资数据"
+    },
+    {
+      "sku_id": "sku_614",
+      "classification": "factual",
+      "path": "skus/factual/sku_614",
+      "name": "医美行业市场规模及运营模式"
+    },
+    {
+      "sku_id": "sku_615",
+      "classification": "factual",
+      "path": "skus/factual/sku_615",
+      "name": "逸仙电商资本运作及运营策略"
+    },
+    {
+      "sku_id": "sku_616",
+      "classification": "factual",
+      "path": "skus/factual/sku_616",
+      "name": "健康产业发展方向及市场规模"
+    }
+  ],
+  "新资本商业模式与盈利模式_chunk_009": [
+    {
+      "sku_id": "sku_286",
+      "classification": "factual",
+      "path": "skus/factual/sku_286",
+      "name": "GP与LP核心运作规则"
+    },
+    {
+      "sku_id": "sku_287",
+      "classification": "factual",
+      "path": "skus/factual/sku_287",
+      "name": "不同类型投资人持股结构适配规则"
+    },
+    {
+      "sku_id": "sku_288",
+      "classification": "factual",
+      "path": "skus/factual/sku_288",
+      "name": "私募股权基金利润构成规则"
+    },
+    {
+      "sku_id": "sku_289",
+      "classification": "factual",
+      "path": "skus/factual/sku_289",
+      "name": "联想GP-LP架构及股东权益情况"
+    },
+    {
+      "sku_id": "sku_290",
+      "classification": "factual",
+      "path": "skus/factual/sku_290",
+      "name": "优势资本业务运营规则及布局"
+    },
+    {
+      "sku_id": "skill_148",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_148",
+      "name": "investor-equity-layer-placement-process"
+    },
+    {
+      "sku_id": "skill_149",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_149",
+      "name": "pe-fund-gp-lp-profit-allocation-process"
+    },
+    {
+      "sku_id": "skill_150",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_150",
+      "name": "pe-fund-gp-fundraising-operation-process"
+    },
+    {
+      "sku_id": "skill_151",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_151",
+      "name": "regional-gp-joint-venture-building-process"
+    }
+  ],
+  "新资本商业模式与盈利模式_chunk_008": [
+    {
+      "sku_id": "sku_291",
+      "classification": "factual",
+      "path": "skus/factual/sku_291",
+      "name": "商业模式与资本领域学习核心内容及达标标准"
+    },
+    {
+      "sku_id": "sku_292",
+      "classification": "factual",
+      "path": "skus/factual/sku_292",
+      "name": "并购类型与公司估值提升的关联及案例"
+    },
+    {
+      "sku_id": "sku_293",
+      "classification": "factual",
+      "path": "skus/factual/sku_293",
+      "name": "联想集团治理结构及核心人员情况"
+    },
+    {
+      "sku_id": "sku_294",
+      "classification": "factual",
+      "path": "skus/factual/sku_294",
+      "name": "科技行业不同发展阶段的头部格局"
+    },
+    {
+      "sku_id": "sku_295",
+      "classification": "factual",
+      "path": "skus/factual/sku_295",
+      "name": "联想高管薪酬与股价关联及对比案例"
+    },
+    {
+      "sku_id": "sku_296",
+      "classification": "factual",
+      "path": "skus/factual/sku_296",
+      "name": "A股企业市值与创始人学历关联规律"
+    },
+    {
+      "sku_id": "sku_297",
+      "classification": "factual",
+      "path": "skus/factual/sku_297",
+      "name": "商业培训课程特点对比"
+    },
+    {
+      "sku_id": "sku_298",
+      "classification": "factual",
+      "path": "skus/factual/sku_298",
+      "name": "中科院投资联想的收益情况"
+    },
+    {
+      "sku_id": "sku_299",
+      "classification": "factual",
+      "path": "skus/factual/sku_299",
+      "name": "国内不同市场主体的股东人数限制规定"
+    },
+    {
+      "sku_id": "sku_300",
+      "classification": "factual",
+      "path": "skus/factual/sku_300",
+      "name": "工会持股的特点及对企业上市的影响"
+    },
+    {
+      "sku_id": "sku_301",
+      "classification": "factual",
+      "path": "skus/factual/sku_301",
+      "name": "国内房地产企业上市政策要求"
+    },
+    {
+      "sku_id": "sku_302",
+      "classification": "factual",
+      "path": "skus/factual/sku_302",
+      "name": "联想股权架构演变关键节点"
+    },
+    {
+      "sku_id": "sku_303",
+      "classification": "factual",
+      "path": "skus/factual/sku_303",
+      "name": "企业长期经营的产融结合要求"
+    },
+    {
+      "sku_id": "skill_152",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_152",
+      "name": "four-round-learning-rule"
+    },
+    {
+      "sku_id": "skill_153",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_153",
+      "name": "company-valuation-improvement-via-ma"
+    },
+    {
+      "sku_id": "skill_154",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_154",
+      "name": "listing-equity-structure-compliance-check"
+    },
+    {
+      "sku_id": "skill_155",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_155",
+      "name": "post-capital-course-implementation-workflow"
+    },
+    {
+      "sku_id": "skill_156",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_156",
+      "name": "entrepreneur-education-upgrade-selection-guide"
+    },
+    {
+      "sku_id": "skill_157",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_157",
+      "name": "listed-company-executive-compensation-optimization"
+    }
+  ],
+  "新资本商业模式与盈利模式_chunk_007": [
+    {
+      "sku_id": "sku_304",
+      "classification": "factual",
+      "path": "skus/factual/sku_304",
+      "name": "企业估值方法及行业适用标准"
+    },
+    {
+      "sku_id": "sku_305",
+      "classification": "factual",
+      "path": "skus/factual/sku_305",
+      "name": "三类企业家商业模式及价值逻辑对比"
+    },
+    {
+      "sku_id": "sku_306",
+      "classification": "factual",
+      "path": "skus/factual/sku_306",
+      "name": "六大未来创富赛道及核心机会"
+    },
+    {
+      "sku_id": "sku_307",
+      "classification": "factual",
+      "path": "skus/factual/sku_307",
+      "name": "影响企业市值的七大核心因素"
+    },
+    {
+      "sku_id": "sku_308",
+      "classification": "factual",
+      "path": "skus/factual/sku_308",
+      "name": "新消费头部品牌核心运营数据"
+    },
+    {
+      "sku_id": "sku_309",
+      "classification": "factual",
+      "path": "skus/factual/sku_309",
+      "name": "北交所/新三板上市分层准入条件"
+    },
+    {
+      "sku_id": "sku_310",
+      "classification": "factual",
+      "path": "skus/factual/sku_310",
+      "name": "创业板上市行业负面清单"
+    },
+    {
+      "sku_id": "sku_311",
+      "classification": "factual",
+      "path": "skus/factual/sku_311",
+      "name": "H股与红筹上市架构核心对比"
+    },
+    {
+      "sku_id": "sku_312",
+      "classification": "factual",
+      "path": "skus/factual/sku_312",
+      "name": "SPAC上市模式核心规则"
+    },
+    {
+      "sku_id": "sku_313",
+      "classification": "factual",
+      "path": "skus/factual/sku_313",
+      "name": "云放茶园商业模式四方利益节点设计"
+    },
+    {
+      "sku_id": "sku_314",
+      "classification": "factual",
+      "path": "skus/factual/sku_314",
+      "name": "商业计划书及路演核心要求"
+    },
+    {
+      "sku_id": "sku_315",
+      "classification": "factual",
+      "path": "skus/factual/sku_315",
+      "name": "股权投资项目筛选核心标准"
+    },
+    {
+      "sku_id": "sku_316",
+      "classification": "factual",
+      "path": "skus/factual/sku_316",
+      "name": "连锁品牌股权激励及加盟模式标杆案例"
+    },
+    {
+      "sku_id": "sku_317",
+      "classification": "factual",
+      "path": "skus/factual/sku_317",
+      "name": "Z世代新消费核心特征"
+    },
+    {
+      "sku_id": "sku_318",
+      "classification": "factual",
+      "path": "skus/factual/sku_318",
+      "name": "熊猫不走生日蛋糕创新商业模式"
+    },
+    {
+      "sku_id": "sku_319",
+      "classification": "factual",
+      "path": "skus/factual/sku_319",
+      "name": "产业园区运营盈利模式及成功要素"
+    },
+    {
+      "sku_id": "sku_320",
+      "classification": "factual",
+      "path": "skus/factual/sku_320",
+      "name": "各行业创业项目评估及优化建议"
+    },
+    {
+      "sku_id": "skill_158",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_158",
+      "name": "chain-business-consolidated-financial-statement-process"
+    },
+    {
+      "sku_id": "skill_159",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_159",
+      "name": "risk-reversal-marketing-implementation-process"
+    },
+    {
+      "sku_id": "skill_160",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_160",
+      "name": "short-video-matrix-marketing-process"
+    },
+    {
+      "sku_id": "skill_161",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_161",
+      "name": "chain-franchise-trusteeship-mode-process"
+    },
+    {
+      "sku_id": "skill_162",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_162",
+      "name": "new-consumption-brand-building-process"
+    },
+    {
+      "sku_id": "skill_163",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_163",
+      "name": "industrial-park-standardized-operation-process"
+    },
+    {
+      "sku_id": "skill_164",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_164",
+      "name": "business-plan-production-process"
+    },
+    {
+      "sku_id": "skill_165",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_165",
+      "name": "spac-listing-operation-process"
+    },
+    {
+      "sku_id": "skill_166",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_166",
+      "name": "enterprise-investment-evaluation-process"
+    },
+    {
+      "sku_id": "skill_167",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_167",
+      "name": "dealer-equity-incentive-design-process"
+    },
+    {
+      "sku_id": "skill_168",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_168",
+      "name": "sales-follow-up-conversion-process"
+    },
+    {
+      "sku_id": "skill_169",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_169",
+      "name": "marketing-title-design-process"
+    },
+    {
+      "sku_id": "skill_170",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_170",
+      "name": "business-model-interest-node-design-process"
+    }
+  ],
+  "新资本商业模式与盈利模式_chunk_011": [
+    {
+      "sku_id": "sku_321",
+      "classification": "factual",
+      "path": "skus/factual/sku_321",
+      "name": "教育公司师徒裂变模式扩张成果"
+    },
+    {
+      "sku_id": "sku_322",
+      "classification": "factual",
+      "path": "skus/factual/sku_322",
+      "name": "海底捞师徒裂变运营核心规则"
+    },
+    {
+      "sku_id": "sku_323",
+      "classification": "factual",
+      "path": "skus/factual/sku_323",
+      "name": "教育公司师徒裂变三级收益分配规则"
+    },
+    {
+      "sku_id": "sku_324",
+      "classification": "factual",
+      "path": "skus/factual/sku_324",
+      "name": "师徒裂变模式激励设计逻辑"
+    },
+    {
+      "sku_id": "sku_325",
+      "classification": "factual",
+      "path": "skus/factual/sku_325",
+      "name": "师徒裂变模式落地配套要求"
+    },
+    {
+      "sku_id": "skill_171",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_171",
+      "name": "mentorship-campus-fission-profit-allocation"
+    },
+    {
+      "sku_id": "skill_172",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_172",
+      "name": "fission-mode-equity-design"
+    },
+    {
+      "sku_id": "skill_173",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_173",
+      "name": "mentorship-fission-landing-implementation"
+    }
+  ],
+  "新资本商业模式与盈利模式_chunk_010": [
+    {
+      "sku_id": "sku_326",
+      "classification": "factual",
+      "path": "skus/factual/sku_326",
+      "name": "优势资本服务及运营情况"
+    },
+    {
+      "sku_id": "sku_327",
+      "classification": "factual",
+      "path": "skus/factual/sku_327",
+      "name": "茶颜悦色股权及融资情况"
+    },
+    {
+      "sku_id": "sku_328",
+      "classification": "factual",
+      "path": "skus/factual/sku_328",
+      "name": "风险投资通用规则及特点"
+    },
+    {
+      "sku_id": "skill_174",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_174",
+      "name": "new-shareholder-introduction-method-selection"
+    },
+    {
+      "sku_id": "skill_175",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_175",
+      "name": "enterprise-tax-compliance-non-listed-implementation"
+    },
+    {
+      "sku_id": "skill_176",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_176",
+      "name": "equity-and-financing-service-acquisition-from-advantage-capital"
+    }
+  ],
+  "新资本商业模式与盈利模式_chunk_012": [
+    {
+      "sku_id": "sku_329",
+      "classification": "factual",
+      "path": "skus/factual/sku_329",
+      "name": "马化腾投资相关数据及与马云投资策略对比"
+    },
+    {
+      "sku_id": "sku_330",
+      "classification": "factual",
+      "path": "skus/factual/sku_330",
+      "name": "商界年度商业模式峰会评选规则及价值"
+    },
+    {
+      "sku_id": "sku_331",
+      "classification": "factual",
+      "path": "skus/factual/sku_331",
+      "name": "企业多层控股结构设计规则及风险规避方法"
+    },
+    {
+      "sku_id": "sku_332",
+      "classification": "factual",
+      "path": "skus/factual/sku_332",
+      "name": "企业服务及新资本班孵化模式规则"
+    },
+    {
+      "sku_id": "skill_177",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_177",
+      "name": "limited-liability-gp-setup"
+    },
+    {
+      "sku_id": "skill_178",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_178",
+      "name": "family-holding-company-setup"
+    },
+    {
+      "sku_id": "skill_179",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_179",
+      "name": "equity-gift-acceptance-operation"
+    },
+    {
+      "sku_id": "skill_180",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_180",
+      "name": "enterprise-service-profit-model-operation"
+    },
+    {
+      "sku_id": "skill_181",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_181",
+      "name": "top-level-structure-design-timing-judgment"
+    },
+    {
+      "sku_id": "skill_182",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_182",
+      "name": "enterprise-influence-improvement-via-summit"
+    },
+    {
+      "sku_id": "skill_183",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_183",
+      "name": "food-enterprise-industry-chain-layout"
+    }
+  ],
+  "新资本商业模式与盈利模式_chunk_014": [
+    {
+      "sku_id": "sku_333",
+      "classification": "factual",
+      "path": "skus/factual/sku_333",
+      "name": "矩阵股份业务范围及软装行业赛道发展特点"
+    },
+    {
+      "sku_id": "sku_334",
+      "classification": "factual",
+      "path": "skus/factual/sku_334",
+      "name": "企业股权结构设计核心难点与原则"
+    },
+    {
+      "sku_id": "sku_335",
+      "classification": "factual",
+      "path": "skus/factual/sku_335",
+      "name": "积分制激励机制特征"
+    },
+    {
+      "sku_id": "sku_336",
+      "classification": "factual",
+      "path": "skus/factual/sku_336",
+      "name": "股权激励供需矛盾及解决方案"
+    },
+    {
+      "sku_id": "skill_184",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_184",
+      "name": "founder-company-control-retention-method"
+    },
+    {
+      "sku_id": "skill_185",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_185",
+      "name": "equity-grant-conflict-resolution-method"
+    },
+    {
+      "sku_id": "skill_186",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_186",
+      "name": "point-based-employee-incentive-implementation"
+    },
+    {
+      "sku_id": "skill_187",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_187",
+      "name": "post-equity-structure-industry-expansion-method"
+    }
+  ],
+  "新资本商业模式与盈利模式_chunk_013": [
+    {
+      "sku_id": "sku_337",
+      "classification": "factual",
+      "path": "skus/factual/sku_337",
+      "name": "影视从业者大额收益税务筹划主体选择"
+    },
+    {
+      "sku_id": "sku_338",
+      "classification": "factual",
+      "path": "skus/factual/sku_338",
+      "name": "代持股的风险及防范措施"
+    },
+    {
+      "sku_id": "sku_339",
+      "classification": "factual",
+      "path": "skus/factual/sku_339",
+      "name": "李子柒（李佳佳）股权架构问题及优化方案"
+    },
+    {
+      "sku_id": "sku_340",
+      "classification": "factual",
+      "path": "skus/factual/sku_340",
+      "name": "企业融资可选主体范围"
+    },
+    {
+      "sku_id": "sku_341",
+      "classification": "factual",
+      "path": "skus/factual/sku_341",
+      "name": "企业吸引龙头人才及行业调研方法"
+    },
+    {
+      "sku_id": "skill_188",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_188",
+      "name": "equity-holding-risk-prevention"
+    },
+    {
+      "sku_id": "skill_189",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_189",
+      "name": "film-practitioner-income-tax-optimization"
+    },
+    {
+      "sku_id": "skill_190",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_190",
+      "name": "joint-venture-shareholder-dispute-resolution"
+    },
+    {
+      "sku_id": "skill_191",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_191",
+      "name": "enterprise-hierarchical-financing-operation"
+    },
+    {
+      "sku_id": "skill_192",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_192",
+      "name": "online-celebrity-ip-equity-structure-build"
+    }
+  ],
+  "新资本商业模式与盈利模式_chunk_017": [
+    {
+      "sku_id": "sku_347",
+      "classification": "factual",
+      "path": "skus/factual/sku_347",
+      "name": "股权激励公平性相关规则"
+    },
+    {
+      "sku_id": "sku_348",
+      "classification": "factual",
+      "path": "skus/factual/sku_348",
+      "name": "股权激励实施的绩效及范围要求"
+    },
+    {
+      "sku_id": "sku_349",
+      "classification": "factual",
+      "path": "skus/factual/sku_349",
+      "name": "不同职级管理人员股权激励买赠标准"
+    },
+    {
+      "sku_id": "skill_193",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_193",
+      "name": "pharma-equity-incentive-agreement-formulation"
+    },
+    {
+      "sku_id": "skill_194",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_194",
+      "name": "pharma-equity-incentive-allocation-setting"
+    }
+  ],
+  "新资本商业模式与盈利模式_chunk_015": [
+    {
+      "sku_id": "sku_342",
+      "classification": "factual",
+      "path": "skus/factual/sku_342",
+      "name": "万顺叫车核心模式与行业对比"
+    },
+    {
+      "sku_id": "sku_343",
+      "classification": "factual",
+      "path": "skus/factual/sku_343",
+      "name": "万顺叫车资本投入与发展目标"
+    },
+    {
+      "sku_id": "sku_344",
+      "classification": "factual",
+      "path": "skus/factual/sku_344",
+      "name": "万顺叫车合伙人制度体系"
+    },
+    {
+      "sku_id": "sku_345",
+      "classification": "factual",
+      "path": "skus/factual/sku_345",
+      "name": "万顺叫车平台服务费收取规则"
+    },
+    {
+      "sku_id": "sku_346",
+      "classification": "factual",
+      "path": "skus/factual/sku_346",
+      "name": "万顺叫车各参与主体盈利来源"
+    },
+    {
+      "sku_id": "skill_195",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_195",
+      "name": "driver-partner-service-fee-mode-selection"
+    },
+    {
+      "sku_id": "skill_196",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_196",
+      "name": "driver-partner-hierarchy-setup-process"
+    },
+    {
+      "sku_id": "skill_197",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_197",
+      "name": "partner-equity-holding-compliance-management"
+    },
+    {
+      "sku_id": "skill_198",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_198",
+      "name": "offline-entity-store-profit-model-construction"
+    }
+  ],
+  "新资本商业模式与盈利模式_chunk_016": [
+    {
+      "sku_id": "sku_350",
+      "classification": "factual",
+      "path": "skus/factual/sku_350",
+      "name": "汽车行业规模扩张并购规律"
+    },
+    {
+      "sku_id": "sku_351",
+      "classification": "factual",
+      "path": "skus/factual/sku_351",
+      "name": "新能源汽车行业成本与产能风险"
+    },
+    {
+      "sku_id": "sku_352",
+      "classification": "factual",
+      "path": "skus/factual/sku_352",
+      "name": "新能源汽车品牌打造路径"
+    },
+    {
+      "sku_id": "sku_353",
+      "classification": "factual",
+      "path": "skus/factual/sku_353",
+      "name": "法拉利股权激励计划参数"
+    },
+    {
+      "sku_id": "sku_354",
+      "classification": "factual",
+      "path": "skus/factual/sku_354",
+      "name": "企业经营核心逻辑"
+    },
+    {
+      "sku_id": "sku_355",
+      "classification": "factual",
+      "path": "skus/factual/sku_355",
+      "name": "吉利极氪开曼持股架构"
+    },
+    {
+      "sku_id": "sku_356",
+      "classification": "factual",
+      "path": "skus/factual/sku_356",
+      "name": "科创板境外企业上市规则趋势"
+    },
+    {
+      "sku_id": "sku_357",
+      "classification": "factual",
+      "path": "skus/factual/sku_357",
+      "name": "A股限制性股票规则差异"
+    },
+    {
+      "sku_id": "sku_358",
+      "classification": "factual",
+      "path": "skus/factual/sku_358",
+      "name": "股票期权定义及收益逻辑"
+    },
+    {
+      "sku_id": "sku_359",
+      "classification": "factual",
+      "path": "skus/factual/sku_359",
+      "name": "股权激励员工出资规则"
+    },
+    {
+      "sku_id": "sku_360",
+      "classification": "factual",
+      "path": "skus/factual/sku_360",
+      "name": "华谊兄弟股权激励案例"
+    },
+    {
+      "sku_id": "skill_199",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_199",
+      "name": "automobile-industry-merger-decision-method"
+    },
+    {
+      "sku_id": "skill_200",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_200",
+      "name": "equity-incentive-employee-contribution-collection-process"
+    },
+    {
+      "sku_id": "skill_201",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_201",
+      "name": "a-share-equity-incentive-exercise-identification-procedure"
+    },
+    {
+      "sku_id": "skill_202",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_202",
+      "name": "cayman-red-chip-structure-setup-procedure"
+    }
+  ],
+  "新资本商业模式与盈利模式_chunk_020": [
+    {
+      "sku_id": "sku_361",
+      "classification": "factual",
+      "path": "skus/factual/sku_361",
+      "name": "海康威视员工持股平台架构及涉税规则"
+    },
+    {
+      "sku_id": "sku_362",
+      "classification": "factual",
+      "path": "skus/factual/sku_362",
+      "name": "乌鲁木齐招商引资税收优惠政策"
+    },
+    {
+      "sku_id": "sku_363",
+      "classification": "factual",
+      "path": "skus/factual/sku_363",
+      "name": "有限合伙企业持股上市公司涉税及政策风险"
+    },
+    {
+      "sku_id": "sku_364",
+      "classification": "factual",
+      "path": "skus/factual/sku_364",
+      "name": "地方优惠政策延续保障措施"
+    },
+    {
+      "sku_id": "skill_203",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_203",
+      "name": "listed-company-employee-holding-platform-construction"
+    },
+    {
+      "sku_id": "skill_204",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_204",
+      "name": "employee-holding-platform-tax-planning"
+    },
+    {
+      "sku_id": "skill_205",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_205",
+      "name": "local-preferential-policy-continuity-guarantee"
+    }
+  ],
+  "新资本商业模式与盈利模式_chunk_018": [
+    {
+      "sku_id": "sku_365",
+      "classification": "factual",
+      "path": "skus/factual/sku_365",
+      "name": "股权激励九定法核心规则"
+    },
+    {
+      "sku_id": "sku_366",
+      "classification": "factual",
+      "path": "skus/factual/sku_366",
+      "name": "劳动股份制改造核心规则"
+    },
+    {
+      "sku_id": "sku_367",
+      "classification": "factual",
+      "path": "skus/factual/sku_367",
+      "name": "地板商分层股权分配规则"
+    },
+    {
+      "sku_id": "sku_368",
+      "classification": "factual",
+      "path": "skus/factual/sku_368",
+      "name": "天津文光集团股权激励实施方案"
+    },
+    {
+      "sku_id": "sku_369",
+      "classification": "factual",
+      "path": "skus/factual/sku_369",
+      "name": "股权激励相关法律规则及架构设计要点"
+    },
+    {
+      "sku_id": "skill_206",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_206",
+      "name": "equity-incentive-nine-dimensions-design"
+    },
+    {
+      "sku_id": "skill_207",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_207",
+      "name": "labor-shareholding-system-reform-workflow"
+    },
+    {
+      "sku_id": "skill_208",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_208",
+      "name": "heavy-asset-company-equity-incentive-separation"
+    },
+    {
+      "sku_id": "skill_209",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_209",
+      "name": "branch-profit-excess-incentive-implementation"
+    },
+    {
+      "sku_id": "skill_210",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_210",
+      "name": "employee-stock-repurchase-rule-design"
+    },
+    {
+      "sku_id": "skill_211",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_211",
+      "name": "dealer-option-incentive-design-workflow"
+    }
+  ],
+  "新资本商业模式与盈利模式_chunk_019": [
+    {
+      "sku_id": "sku_370",
+      "classification": "factual",
+      "path": "skus/factual/sku_370",
+      "name": "49坊过往融资事件详情"
+    },
+    {
+      "sku_id": "sku_371",
+      "classification": "factual",
+      "path": "skus/factual/sku_371",
+      "name": "49坊品牌定位结论"
+    },
+    {
+      "sku_id": "sku_372",
+      "classification": "factual",
+      "path": "skus/factual/sku_372",
+      "name": "49坊三级众筹模式规则"
+    },
+    {
+      "sku_id": "sku_373",
+      "classification": "factual",
+      "path": "skus/factual/sku_373",
+      "name": "酒类与饮料行业创业资金门槛对比"
+    },
+    {
+      "sku_id": "sku_374",
+      "classification": "factual",
+      "path": "skus/factual/sku_374",
+      "name": "企业三级销售分配机制设计规范"
+    },
+    {
+      "sku_id": "sku_375",
+      "classification": "factual",
+      "path": "skus/factual/sku_375",
+      "name": "代理即消费者的商业模式设计逻辑"
+    },
+    {
+      "sku_id": "skill_212",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_212",
+      "name": "three-level-alcohol-crowdfunding-model-building"
+    },
+    {
+      "sku_id": "skill_213",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_213",
+      "name": "multi-level-channel-commission-allocation-design"
+    },
+    {
+      "sku_id": "skill_214",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_214",
+      "name": "multi-level-distribution-compliance-risk-avoidance"
+    },
+    {
+      "sku_id": "skill_215",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_215",
+      "name": "fmcg-startup-fund-threshold-assessment"
+    }
+  ],
+  "新资本商业模式与盈利模式_chunk_022": [
+    {
+      "sku_id": "sku_381",
+      "classification": "factual",
+      "path": "skus/factual/sku_381",
+      "name": "并购的定义及适用范围"
+    },
+    {
+      "sku_id": "sku_382",
+      "classification": "factual",
+      "path": "skus/factual/sku_382",
+      "name": "优刻得AB股及上市基础信息"
+    },
+    {
+      "sku_id": "sku_383",
+      "classification": "factual",
+      "path": "skus/factual/sku_383",
+      "name": "VIE协议控制模式核心逻辑"
+    },
+    {
+      "sku_id": "sku_384",
+      "classification": "factual",
+      "path": "skus/factual/sku_384",
+      "name": "红筹架构香港中间层税收规则"
+    },
+    {
+      "sku_id": "sku_385",
+      "classification": "factual",
+      "path": "skus/factual/sku_385",
+      "name": "优刻得VIE架构搭建及拆除调整情况"
+    },
+    {
+      "sku_id": "sku_386",
+      "classification": "factual",
+      "path": "skus/factual/sku_386",
+      "name": "VIE协议控制模式的优势及监管要求"
+    },
+    {
+      "sku_id": "sku_387",
+      "classification": "factual",
+      "path": "skus/factual/sku_387",
+      "name": "企业跨境上市相关商业价值规则"
+    },
+    {
+      "sku_id": "skill_216",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_216",
+      "name": "red-chips-vie-structure-establishment"
+    },
+    {
+      "sku_id": "skill_217",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_217",
+      "name": "vie-structure-dismantle-for-domestic-listing"
+    }
+  ],
+  "新资本商业模式与盈利模式_chunk_021": [
+    {
+      "sku_id": "sku_376",
+      "classification": "factual",
+      "path": "skus/factual/sku_376",
+      "name": "森马休闲服运营模式及子公司孵化机制"
+    },
+    {
+      "sku_id": "sku_377",
+      "classification": "factual",
+      "path": "skus/factual/sku_377",
+      "name": "高市盈率上市公司定增盈利逻辑"
+    },
+    {
+      "sku_id": "sku_378",
+      "classification": "factual",
+      "path": "skus/factual/sku_378",
+      "name": "企业利润来源分类"
+    },
+    {
+      "sku_id": "sku_379",
+      "classification": "factual",
+      "path": "skus/factual/sku_379",
+      "name": "企业内部裂变孵化模式"
+    },
+    {
+      "sku_id": "sku_380",
+      "classification": "factual",
+      "path": "skus/factual/sku_380",
+      "name": "不同行业市盈率差异与赛道选择逻辑"
+    },
+    {
+      "sku_id": "skill_218",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_218",
+      "name": "high-pe-listed-company-profit-enhancement"
+    },
+    {
+      "sku_id": "skill_219",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_219",
+      "name": "subsidiary-new-brand-incubation-operation"
+    },
+    {
+      "sku_id": "skill_220",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_220",
+      "name": "high-valuation-loss-company-profit-filling"
+    },
+    {
+      "sku_id": "skill_221",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_221",
+      "name": "internal-fission-multi-brand-incubation"
+    }
+  ],
+  "新资本商业模式与盈利模式_chunk_023": [
+    {
+      "sku_id": "sku_388",
+      "classification": "factual",
+      "path": "skus/factual/sku_388",
+      "name": "AB股（同股不同权）结构规则"
+    },
+    {
+      "sku_id": "sku_389",
+      "classification": "factual",
+      "path": "skus/factual/sku_389",
+      "name": "企业融资轮次对应指标"
+    },
+    {
+      "sku_id": "sku_390",
+      "classification": "factual",
+      "path": "skus/factual/sku_390",
+      "name": "开曼离岸公司运营优势"
+    },
+    {
+      "sku_id": "sku_391",
+      "classification": "factual",
+      "path": "skus/factual/sku_391",
+      "name": "京东集团生态与股权架构"
+    },
+    {
+      "sku_id": "sku_392",
+      "classification": "factual",
+      "path": "skus/factual/sku_392",
+      "name": "企业经营与上市通用规则"
+    },
+    {
+      "sku_id": "skill_222",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_222",
+      "name": "reverse-enterprise-top-level-structure-design"
+    },
+    {
+      "sku_id": "skill_223",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_223",
+      "name": "10-billion-valuation-achievement-workflow"
+    },
+    {
+      "sku_id": "skill_224",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_224",
+      "name": "angel-investment-exit-mechanism-design"
+    },
+    {
+      "sku_id": "skill_225",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_225",
+      "name": "cross-border-listing-vie-structure-construction"
+    },
+    {
+      "sku_id": "skill_226",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_226",
+      "name": "company-branch-establishment-decision"
+    },
+    {
+      "sku_id": "skill_227",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_227",
+      "name": "financing-fund-compliant-use-workflow"
+    }
+  ],
+  "新资本商业模式与盈利模式_chunk_024": [
+    {
+      "sku_id": "sku_393",
+      "classification": "factual",
+      "path": "skus/factual/sku_393",
+      "name": "不同资本市场板块股权质押贷款比例"
+    },
+    {
+      "sku_id": "sku_394",
+      "classification": "factual",
+      "path": "skus/factual/sku_394",
+      "name": "格力混改合资GP运作及收益分配规则"
+    },
+    {
+      "sku_id": "sku_395",
+      "classification": "factual",
+      "path": "skus/factual/sku_395",
+      "name": "格力混改后属性变化及估值提升路径"
+    },
+    {
+      "sku_id": "sku_396",
+      "classification": "factual",
+      "path": "skus/factual/sku_396",
+      "name": "董明珠参与格力股权激励的相关成果"
+    },
+    {
+      "sku_id": "sku_397",
+      "classification": "factual",
+      "path": "skus/factual/sku_397",
+      "name": "一二级资本市场投人逻辑"
+    },
+    {
+      "sku_id": "sku_398",
+      "classification": "factual",
+      "path": "skus/factual/sku_398",
+      "name": "成熟企业创始人发展策略"
+    },
+    {
+      "sku_id": "skill_228",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_228",
+      "name": "joint-venture-gp-equity-incentive-implementation"
+    },
+    {
+      "sku_id": "skill_229",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_229",
+      "name": "equity-pledge-loan-amount-calculation"
+    },
+    {
+      "sku_id": "skill_230",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_230",
+      "name": "enterprise-leader-succession-transition"
+    }
+  ],
+  "新资本商业模式与盈利模式_chunk_026": [
+    {
+      "sku_id": "sku_399",
+      "classification": "factual",
+      "path": "skus/factual/sku_399",
+      "name": "永辉超市合伙人与激励制度"
+    },
+    {
+      "sku_id": "sku_400",
+      "classification": "factual",
+      "path": "skus/factual/sku_400",
+      "name": "优势资本管理制度与组织架构"
+    },
+    {
+      "sku_id": "skill_231",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_231",
+      "name": "business-incentive-model-selection"
+    },
+    {
+      "sku_id": "skill_232",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_232",
+      "name": "yonghui-store-partner-incentive-implementation"
+    }
+  ],
+  "新资本商业模式与盈利模式_chunk_025": [
+    {
+      "sku_id": "sku_401",
+      "classification": "factual",
+      "path": "skus/factual/sku_401",
+      "name": "华为与OPPO股权激励实施目的对比"
+    },
+    {
+      "sku_id": "sku_402",
+      "classification": "factual",
+      "path": "skus/factual/sku_402",
+      "name": "工会持股企业上市相关规则"
+    },
+    {
+      "sku_id": "sku_403",
+      "classification": "factual",
+      "path": "skus/factual/sku_403",
+      "name": "产业投资与财务投资的差异"
+    },
+    {
+      "sku_id": "sku_404",
+      "classification": "factual",
+      "path": "skus/factual/sku_404",
+      "name": "OPPO股权基本属性"
+    },
+    {
+      "sku_id": "sku_405",
+      "classification": "factual",
+      "path": "skus/factual/sku_405",
+      "name": "OPPO代理商体系及激励规则"
+    },
+    {
+      "sku_id": "sku_406",
+      "classification": "factual",
+      "path": "skus/factual/sku_406",
+      "name": "企业股权激励模式选择参考"
+    },
+    {
+      "sku_id": "skill_233",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_233",
+      "name": "non-listed-company-equity-incentive-design"
+    },
+    {
+      "sku_id": "skill_234",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_234",
+      "name": "union-legal-person-qualification-obtainment"
+    },
+    {
+      "sku_id": "skill_235",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_235",
+      "name": "low-risk-brand-agent-entrepreneurship"
+    },
+    {
+      "sku_id": "skill_236",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_236",
+      "name": "enterprise-financing-valuation-enhancement"
+    }
+  ],
+  "新资本商业模式与盈利模式_chunk_027": [
+    {
+      "sku_id": "sku_407",
+      "classification": "factual",
+      "path": "skus/factual/sku_407",
+      "name": "企业持股架构与资金操作规范"
+    },
+    {
+      "sku_id": "sku_408",
+      "classification": "factual",
+      "path": "skus/factual/sku_408",
+      "name": "企业命名策略与注意事项"
+    },
+    {
+      "sku_id": "sku_409",
+      "classification": "factual",
+      "path": "skus/factual/sku_409",
+      "name": "企业管理适用处世哲理"
+    },
+    {
+      "sku_id": "skill_237",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_237",
+      "name": "enterprise-naming-strategy-formulation"
+    },
+    {
+      "sku_id": "skill_238",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_238",
+      "name": "family-controlled-equity-structure-building"
+    },
+    {
+      "sku_id": "skill_239",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_239",
+      "name": "equity-incentive-scheme-design"
+    },
+    {
+      "sku_id": "skill_240",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_240",
+      "name": "corporate-income-tax-holding-optimization"
+    }
+  ],
+  "新资本商业模式与盈利模式_chunk_029": [
+    {
+      "sku_id": "sku_410",
+      "classification": "factual",
+      "path": "skus/factual/sku_410",
+      "name": "广州合舜医疗发展历程及资质情况"
+    },
+    {
+      "sku_id": "sku_411",
+      "classification": "factual",
+      "path": "skus/factual/sku_411",
+      "name": "广州合舜医疗核心产品信息及参数"
+    },
+    {
+      "sku_id": "sku_412",
+      "classification": "factual",
+      "path": "skus/factual/sku_412",
+      "name": "广州合舜医疗设备投放模式及收益测算标准"
+    },
+    {
+      "sku_id": "sku_413",
+      "classification": "factual",
+      "path": "skus/factual/sku_413",
+      "name": "广州合舜医疗商业模式及中长期发展规划"
+    },
+    {
+      "sku_id": "skill_241",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_241",
+      "name": "medical-device-offline-scenario-launch-process"
+    },
+    {
+      "sku_id": "skill_242",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_242",
+      "name": "regional-device-agent-recruitment-management-process"
+    },
+    {
+      "sku_id": "skill_243",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_243",
+      "name": "device-launch-fund-risk-control-process"
+    },
+    {
+      "sku_id": "skill_244",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_244",
+      "name": "medical-device-enterprise-listing-preparation-process"
+    }
+  ],
+  "新资本商业模式与盈利模式_chunk_028": [
+    {
+      "sku_id": "sku_414",
+      "classification": "factual",
+      "path": "skus/factual/sku_414",
+      "name": "中通云仓科技基本概况"
+    },
+    {
+      "sku_id": "sku_415",
+      "classification": "factual",
+      "path": "skus/factual/sku_415",
+      "name": "中通云仓科技业务范围"
+    },
+    {
+      "sku_id": "sku_416",
+      "classification": "factual",
+      "path": "skus/factual/sku_416",
+      "name": "中通云仓科技客户分层及定价策略"
+    },
+    {
+      "sku_id": "sku_417",
+      "classification": "factual",
+      "path": "skus/factual/sku_417",
+      "name": "中通云仓科技合作模式"
+    },
+    {
+      "sku_id": "sku_418",
+      "classification": "factual",
+      "path": "skus/factual/sku_418",
+      "name": "中通云仓科技配送覆盖及平台规则"
+    },
+    {
+      "sku_id": "sku_419",
+      "classification": "factual",
+      "path": "skus/factual/sku_419",
+      "name": "中通云仓科技2021年亏损原因说明"
+    },
+    {
+      "sku_id": "sku_420",
+      "classification": "factual",
+      "path": "skus/factual/sku_420",
+      "name": "中通云仓科技营收及融资规划"
+    },
+    {
+      "sku_id": "sku_421",
+      "classification": "factual",
+      "path": "skus/factual/sku_421",
+      "name": "中通云仓科技核心痛点"
+    },
+    {
+      "sku_id": "sku_422",
+      "classification": "factual",
+      "path": "skus/factual/sku_422",
+      "name": "国内云仓行业发展趋势"
+    },
+    {
+      "sku_id": "sku_423",
+      "classification": "factual",
+      "path": "skus/factual/sku_423",
+      "name": "中通云仓科技供应链金融及支付牌照情况"
+    },
+    {
+      "sku_id": "skill_245",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_245",
+      "name": "customer-pricing-strategy-implementation"
+    },
+    {
+      "sku_id": "skill_246",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_246",
+      "name": "direct-franchise-mode-expansion-operation"
+    },
+    {
+      "sku_id": "skill_247",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_247",
+      "name": "rural-logistics-market-expansion-operation"
+    },
+    {
+      "sku_id": "skill_248",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_248",
+      "name": "logistics-enterprise-development-path-selection"
+    },
+    {
+      "sku_id": "skill_249",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_249",
+      "name": "logistics-enterprise-financing-operation-process"
+    },
+    {
+      "sku_id": "skill_250",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_250",
+      "name": "open-warehouse-express-selection-service"
+    },
+    {
+      "sku_id": "skill_251",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_251",
+      "name": "integrated-distribution-scheme-formulation"
+    }
+  ],
+  "新资本商业模式与盈利模式_chunk_031": [
+    {
+      "sku_id": "sku_429",
+      "classification": "factual",
+      "path": "skus/factual/sku_429",
+      "name": "销售从业者债权融资申请的有利业绩条件"
+    },
+    {
+      "sku_id": "skill_252",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_252",
+      "name": "sales-personnel-apply-for-financing-with-outstanding-performance"
+    }
+  ],
+  "新资本商业模式与盈利模式_chunk_030": [
+    {
+      "sku_id": "sku_424",
+      "classification": "factual",
+      "path": "skus/factual/sku_424",
+      "name": "电梯行业核心运营指标"
+    },
+    {
+      "sku_id": "sku_425",
+      "classification": "factual",
+      "path": "skus/factual/sku_425",
+      "name": "不同规模物业公司电梯业务合作意向分类"
+    },
+    {
+      "sku_id": "sku_426",
+      "classification": "factual",
+      "path": "skus/factual/sku_426",
+      "name": "国内电梯后市场服务企业SWOT分析"
+    },
+    {
+      "sku_id": "sku_427",
+      "classification": "factual",
+      "path": "skus/factual/sku_427",
+      "name": "电梯后市场业务拓展合作策略"
+    },
+    {
+      "sku_id": "sku_428",
+      "classification": "factual",
+      "path": "skus/factual/sku_428",
+      "name": "上海云昇众合公司业务发展概况及规划"
+    },
+    {
+      "sku_id": "skill_253",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_253",
+      "name": "pre-roadshow-equipment-check-process"
+    },
+    {
+      "sku_id": "skill_254",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_254",
+      "name": "elevator-renovation-fund-application-process"
+    },
+    {
+      "sku_id": "skill_255",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_255",
+      "name": "elevator-aftermarket-urban-investment-cooperation-process"
+    },
+    {
+      "sku_id": "skill_256",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_256",
+      "name": "elevator-property-joint-venture-cooperation-strategy"
+    }
+  ],
+  "新资本商业模式与盈利模式_chunk_032": [
+    {
+      "sku_id": "sku_430",
+      "classification": "factual",
+      "path": "skus/factual/sku_430",
+      "name": "销售能力价值与投资选择偏好"
+    }
+  ],
+  "新资本商业模式与盈利模式_chunk_033": [
+    {
+      "sku_id": "sku_431",
+      "classification": "factual",
+      "path": "skus/factual/sku_431",
+      "name": "智慧城市物联网软硬件开发业务相关指标"
+    },
+    {
+      "sku_id": "sku_432",
+      "classification": "factual",
+      "path": "skus/factual/sku_432",
+      "name": "公司估值与融资相关规划"
+    },
+    {
+      "sku_id": "skill_257",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_257",
+      "name": "financing-endorsement-implementation-method"
+    }
+  ],
+  "新资本商业模式与盈利模式_chunk_038": [
+    {
+      "sku_id": "sku_437",
+      "classification": "factual",
+      "path": "skus/factual/sku_437",
+      "name": "影视相关企业投资及股权结构信息"
+    }
+  ],
+  "新资本商业模式与盈利模式_chunk_039": [
+    {
+      "sku_id": "sku_436",
+      "classification": "factual",
+      "path": "skus/factual/sku_436",
+      "name": "企业持股方式差异及相关持股规则"
+    },
+    {
+      "sku_id": "skill_258",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_258",
+      "name": "subsidiary-shareholding-arrangement-for-equity-incentive"
+    }
+  ],
+  "新资本商业模式与盈利模式_chunk_034": [
+    {
+      "sku_id": "sku_433",
+      "classification": "factual",
+      "path": "skus/factual/sku_433",
+      "name": "智慧城市电梯业务城投合作规则"
+    },
+    {
+      "sku_id": "sku_434",
+      "classification": "factual",
+      "path": "skus/factual/sku_434",
+      "name": "智慧城市电梯业务拓展策略"
+    },
+    {
+      "sku_id": "sku_435",
+      "classification": "factual",
+      "path": "skus/factual/sku_435",
+      "name": "智慧电梯业务产品打造要求及价值"
+    },
+    {
+      "sku_id": "skill_259",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_259",
+      "name": "chengtou-smart-elevator-cooperation-solution-workflow"
+    },
+    {
+      "sku_id": "skill_260",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_260",
+      "name": "smart-city-business-pilot-to-nationwide-promotion-workflow"
+    },
+    {
+      "sku_id": "skill_261",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_261",
+      "name": "smart-city-joint-venture-operation-expansion-workflow"
+    },
+    {
+      "sku_id": "skill_262",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_262",
+      "name": "capital-oriented-smart-product-model-development-workflow"
+    }
+  ],
+  "新资本商业模式与盈利模式_chunk_040": [
+    {
+      "sku_id": "sku_438",
+      "classification": "factual",
+      "path": "skus/factual/sku_438",
+      "name": "优势资本投资投票权要求规则"
+    },
+    {
+      "sku_id": "sku_439",
+      "classification": "factual",
+      "path": "skus/factual/sku_439",
+      "name": "大碗娱乐控制权及股权结构相关情况"
+    },
+    {
+      "sku_id": "skill_263",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_263",
+      "name": "obtain-absolute-control-without-majority-shareholding"
+    },
+    {
+      "sku_id": "skill_264",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_264",
+      "name": "vc-consistent-action-agreement-signing-decision"
+    },
+    {
+      "sku_id": "skill_265",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_265",
+      "name": "startup-equity-structure-interest-separation-design"
+    }
+  ],
+  "新资本商业模式与盈利模式_chunk_041": [
+    {
+      "sku_id": "sku_440",
+      "classification": "factual",
+      "path": "skus/factual/sku_440",
+      "name": "电影票房联动资本运作模式"
+    },
+    {
+      "sku_id": "sku_441",
+      "classification": "factual",
+      "path": "skus/factual/sku_441",
+      "name": "香港主板利润装入及退市资本运作规则"
+    },
+    {
+      "sku_id": "sku_442",
+      "classification": "factual",
+      "path": "skus/factual/sku_442",
+      "name": "造壳上市运作模式及应用场景"
+    },
+    {
+      "sku_id": "sku_443",
+      "classification": "factual",
+      "path": "skus/factual/sku_443",
+      "name": "泸州老窖经销商期权合作模式"
+    },
+    {
+      "sku_id": "sku_444",
+      "classification": "factual",
+      "path": "skus/factual/sku_444",
+      "name": "优势资本投资云放茶园失败案例"
+    },
+    {
+      "sku_id": "skill_266",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_266",
+      "name": "film-box-office-capital-linkage-operation"
+    },
+    {
+      "sku_id": "skill_267",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_267",
+      "name": "profit-injection-into-hong-kong-mainboard"
+    },
+    {
+      "sku_id": "skill_268",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_268",
+      "name": "reverse-merger-shell-listing-operation"
+    },
+    {
+      "sku_id": "skill_269",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_269",
+      "name": "dealer-option-binding-operation"
+    },
+    {
+      "sku_id": "skill_270",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_270",
+      "name": "listed-company-delisting-decision-process"
+    }
+  ],
+  "新资本商业模式与盈利模式_chunk_042": [
+    {
+      "sku_id": "sku_445",
+      "classification": "factual",
+      "path": "skus/factual/sku_445",
+      "name": "优势资本投资案例及成败界定标准"
+    },
+    {
+      "sku_id": "sku_446",
+      "classification": "factual",
+      "path": "skus/factual/sku_446",
+      "name": "通用投资原则与资产配置策略"
+    },
+    {
+      "sku_id": "sku_447",
+      "classification": "factual",
+      "path": "skus/factual/sku_447",
+      "name": "房产投资实操建议"
+    },
+    {
+      "sku_id": "skill_271",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_271",
+      "name": "equity-investment-exit-success-judgment-method"
+    },
+    {
+      "sku_id": "skill_272",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_272",
+      "name": "three-three-four-asset-allocation-strategy"
+    },
+    {
+      "sku_id": "skill_273",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_273",
+      "name": "real-estate-investment-operation-strategy"
+    },
+    {
+      "sku_id": "skill_274",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_274",
+      "name": "private-placement-merger-fund-joint-management-procedure"
+    },
+    {
+      "sku_id": "skill_275",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_275",
+      "name": "equity-investment-repurchase-revenue-distribution-procedure"
+    },
+    {
+      "sku_id": "skill_276",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_276",
+      "name": "equity-investment-repurchase-claim-procedure"
+    }
+  ],
+  "新资本商业模式与盈利模式_chunk_044": [
+    {
+      "sku_id": "sku_448",
+      "classification": "factual",
+      "path": "skus/factual/sku_448",
+      "name": "流通医药行业价值环节及企业经营估值数据"
+    },
+    {
+      "sku_id": "sku_449",
+      "classification": "factual",
+      "path": "skus/factual/sku_449",
+      "name": "老百姓大药房乡村托管加盟模式"
+    },
+    {
+      "sku_id": "sku_450",
+      "classification": "factual",
+      "path": "skus/factual/sku_450",
+      "name": "药房店长与餐厅店长岗位要求对比"
+    },
+    {
+      "sku_id": "skill_277",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_277",
+      "name": "rural-pharmacy-trusteeship-operation-mode"
+    }
+  ],
+  "新资本商业模式与盈利模式_chunk_045": [
+    {
+      "sku_id": "sku_451",
+      "classification": "factual",
+      "path": "skus/factual/sku_451",
+      "name": "老百姓大药房星火并购模式"
+    },
+    {
+      "sku_id": "sku_452",
+      "classification": "factual",
+      "path": "skus/factual/sku_452",
+      "name": "创新合伙人并购计划核心规则"
+    },
+    {
+      "sku_id": "sku_453",
+      "classification": "factual",
+      "path": "skus/factual/sku_453",
+      "name": "并购项目收益测算对比"
+    },
+    {
+      "sku_id": "sku_454",
+      "classification": "factual",
+      "path": "skus/factual/sku_454",
+      "name": "金色摇篮并购案例详情"
+    },
+    {
+      "sku_id": "skill_278",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_278",
+      "name": "spark-merger-mode-implementation-workflow"
+    },
+    {
+      "sku_id": "skill_279",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_279",
+      "name": "listed-company-backed-merger-investment-workflow"
+    },
+    {
+      "sku_id": "skill_280",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_280",
+      "name": "enterprise-capital-exit-path-selection"
+    }
+  ],
+  "新资本商业模式与盈利模式_chunk_046": [
+    {
+      "sku_id": "sku_455",
+      "classification": "factual",
+      "path": "skus/factual/sku_455",
+      "name": "综艺新能源内部创业裂变机制"
+    },
+    {
+      "sku_id": "skill_281",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_281",
+      "name": "state-owned-new-energy-joint-venture-equity-guideline"
+    },
+    {
+      "sku_id": "skill_282",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_282",
+      "name": "internal-fission-entrepreneurship-operation-process"
+    }
+  ],
+  "新资本商业模式与盈利模式_chunk_048": [
+    {
+      "sku_id": "sku_456",
+      "classification": "factual",
+      "path": "skus/factual/sku_456",
+      "name": "小米经营及估值数据"
+    },
+    {
+      "sku_id": "sku_457",
+      "classification": "factual",
+      "path": "skus/factual/sku_457",
+      "name": "小米境内外持股架构"
+    },
+    {
+      "sku_id": "sku_458",
+      "classification": "factual",
+      "path": "skus/factual/sku_458",
+      "name": "VIE架构特征说明"
+    },
+    {
+      "sku_id": "sku_459",
+      "classification": "factual",
+      "path": "skus/factual/sku_459",
+      "name": "小米股权激励方案及员工参与情况"
+    },
+    {
+      "sku_id": "skill_283",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_283",
+      "name": "overseas-listing-vie-structure-setup"
+    },
+    {
+      "sku_id": "skill_284",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_284",
+      "name": "tech-company-tiered-equity-incentive-design"
+    }
+  ],
+  "新资本商业模式与盈利模式_chunk_049": [
+    {
+      "sku_id": "sku_465",
+      "classification": "factual",
+      "path": "skus/factual/sku_465",
+      "name": "合伙人机制上游股东化存量增量激励策略"
+    },
+    {
+      "sku_id": "sku_466",
+      "classification": "factual",
+      "path": "skus/factual/sku_466",
+      "name": "不同市场类型特征及企业决策原则"
+    },
+    {
+      "sku_id": "sku_467",
+      "classification": "factual",
+      "path": "skus/factual/sku_467",
+      "name": "企业价值评估核心维度"
+    },
+    {
+      "sku_id": "sku_468",
+      "classification": "factual",
+      "path": "skus/factual/sku_468",
+      "name": "企业管理的哲学思维及辩证决策方法"
+    },
+    {
+      "sku_id": "skill_285",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_285",
+      "name": "upstream-supplier-equity-incentive-execution"
+    },
+    {
+      "sku_id": "skill_286",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_286",
+      "name": "enterprise-investment-expansion-decision-assessment"
+    }
+  ],
+  "新资本商业模式与盈利模式_chunk_047": [
+    {
+      "sku_id": "sku_460",
+      "classification": "factual",
+      "path": "skus/factual/sku_460",
+      "name": "滴滴股权结构及投票权规则"
+    },
+    {
+      "sku_id": "sku_461",
+      "classification": "factual",
+      "path": "skus/factual/sku_461",
+      "name": "滴滴不同上市地点估值对比"
+    },
+    {
+      "sku_id": "sku_462",
+      "classification": "factual",
+      "path": "skus/factual/sku_462",
+      "name": "滴滴上市相关规则要求"
+    },
+    {
+      "sku_id": "sku_463",
+      "classification": "factual",
+      "path": "skus/factual/sku_463",
+      "name": "滴滴合伙人制度规则"
+    },
+    {
+      "sku_id": "sku_464",
+      "classification": "factual",
+      "path": "skus/factual/sku_464",
+      "name": "滴滴与阿里合伙人制度异同对比"
+    },
+    {
+      "sku_id": "skill_287",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_287",
+      "name": "listing-location-selection-guide"
+    },
+    {
+      "sku_id": "skill_288",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_288",
+      "name": "new-partner-nomination-procedure"
+    },
+    {
+      "sku_id": "skill_289",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_289",
+      "name": "founding-partner-removal-assessment-process"
+    },
+    {
+      "sku_id": "skill_290",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_290",
+      "name": "listing-lawyer-selection-best-practice"
+    }
+  ],
+  "连锁企业的商业模式和股权模式_chunk_001": [
+    {
+      "sku_id": "sku_493",
+      "classification": "factual",
+      "path": "skus/factual/sku_493",
+      "name": "优势资本核心投资参数"
+    },
+    {
+      "sku_id": "sku_494",
+      "classification": "factual",
+      "path": "skus/factual/sku_494",
+      "name": "连锁企业顶级商业模式8版本"
+    },
+    {
+      "sku_id": "sku_495",
+      "classification": "factual",
+      "path": "skus/factual/sku_495",
+      "name": "企业家能力分级标准"
+    },
+    {
+      "sku_id": "sku_496",
+      "classification": "factual",
+      "path": "skus/factual/sku_496",
+      "name": "创业核心原则体系"
+    },
+    {
+      "sku_id": "sku_497",
+      "classification": "factual",
+      "path": "skus/factual/sku_497",
+      "name": "连锁企业投资价值评估标准"
+    },
+    {
+      "sku_id": "sku_498",
+      "classification": "factual",
+      "path": "skus/factual/sku_498",
+      "name": "连锁企业必备8大组织系统"
+    },
+    {
+      "sku_id": "sku_499",
+      "classification": "factual",
+      "path": "skus/factual/sku_499",
+      "name": "连锁企业成本控制8大策略"
+    },
+    {
+      "sku_id": "sku_500",
+      "classification": "factual",
+      "path": "skus/factual/sku_500",
+      "name": "连锁企业商业计划书必备核心要素"
+    },
+    {
+      "sku_id": "sku_501",
+      "classification": "factual",
+      "path": "skus/factual/sku_501",
+      "name": "企业股权控制权保护核心条款"
+    },
+    {
+      "sku_id": "sku_502",
+      "classification": "factual",
+      "path": "skus/factual/sku_502",
+      "name": "微盟投资增值案例核心数据"
+    },
+    {
+      "sku_id": "sku_503",
+      "classification": "factual",
+      "path": "skus/factual/sku_503",
+      "name": "优势资本投资IPO企业创始人学历分布与成功要素"
+    },
+    {
+      "sku_id": "sku_504",
+      "classification": "factual",
+      "path": "skus/factual/sku_504",
+      "name": "B端连锁企业四步成长逻辑"
+    },
+    {
+      "sku_id": "sku_505",
+      "classification": "factual",
+      "path": "skus/factual/sku_505",
+      "name": "万达连锁双轨制运营核心数据"
+    },
+    {
+      "sku_id": "sku_506",
+      "classification": "factual",
+      "path": "skus/factual/sku_506",
+      "name": "姚姚酸菜鱼（摇摇酸菜鱼）连锁运营核心参数"
+    },
+    {
+      "sku_id": "sku_507",
+      "classification": "factual",
+      "path": "skus/factual/sku_507",
+      "name": "品牌命名核心策略与传播原则"
+    },
+    {
+      "sku_id": "sku_508",
+      "classification": "factual",
+      "path": "skus/factual/sku_508",
+      "name": "品牌传播三大核心要素及典型案例"
+    },
+    {
+      "sku_id": "sku_509",
+      "classification": "factual",
+      "path": "skus/factual/sku_509",
+      "name": "餐饮行业发展趋势与上市选择建议"
+    },
+    {
+      "sku_id": "sku_510",
+      "classification": "factual",
+      "path": "skus/factual/sku_510",
+      "name": "九毛九多品牌战略核心参数"
+    },
+    {
+      "sku_id": "sku_511",
+      "classification": "factual",
+      "path": "skus/factual/sku_511",
+      "name": "贤合庄明星餐饮品牌失败核心原因"
+    },
+    {
+      "sku_id": "sku_512",
+      "classification": "factual",
+      "path": "skus/factual/sku_512",
+      "name": "中国待上市服务行业机会清单"
+    },
+    {
+      "sku_id": "sku_513",
+      "classification": "factual",
+      "path": "skus/factual/sku_513",
+      "name": "赛尔口腔连锁8版本商业模式应用"
+    },
+    {
+      "sku_id": "sku_514",
+      "classification": "factual",
+      "path": "skus/factual/sku_514",
+      "name": "优单婚恋平台创新商业模式"
+    },
+    {
+      "sku_id": "sku_515",
+      "classification": "factual",
+      "path": "skus/factual/sku_515",
+      "name": "产品吸引力三梯队理论"
+    },
+    {
+      "sku_id": "sku_516",
+      "classification": "factual",
+      "path": "skus/factual/sku_516",
+      "name": "钱大妈与百果园连锁商业模式核心参数对比"
+    },
+    {
+      "sku_id": "sku_517",
+      "classification": "factual",
+      "path": "skus/factual/sku_517",
+      "name": "C端与B端品牌建设核心差异对比"
+    },
+    {
+      "sku_id": "sku_518",
+      "classification": "factual",
+      "path": "skus/factual/sku_518",
+      "name": "上下游股权激励模式及落地案例"
+    },
+    {
+      "sku_id": "sku_519",
+      "classification": "factual",
+      "path": "skus/factual/sku_519",
+      "name": "1919酒类零售连锁商业模式核心参数"
+    },
+    {
+      "sku_id": "sku_520",
+      "classification": "factual",
+      "path": "skus/factual/sku_520",
+      "name": "OPPO工会持股及代理商股权结构"
+    },
+    {
+      "sku_id": "sku_521",
+      "classification": "factual",
+      "path": "skus/factual/sku_521",
+      "name": "K12教育连锁师徒制裂变模式"
+    },
+    {
+      "sku_id": "sku_522",
+      "classification": "factual",
+      "path": "skus/factual/sku_522",
+      "name": "连锁企业融资核心策略"
+    },
+    {
+      "sku_id": "sku_523",
+      "classification": "factual",
+      "path": "skus/factual/sku_523",
+      "name": "医美连锁核心模式及新氧、虞美人模式对比"
+    },
+    {
+      "sku_id": "sku_524",
+      "classification": "factual",
+      "path": "skus/factual/sku_524",
+      "name": "酒吧、早教、烘焙行业商业模式对比"
+    },
+    {
+      "sku_id": "sku_525",
+      "classification": "factual",
+      "path": "skus/factual/sku_525",
+      "name": "中国养老产业现状及盈利模式"
+    },
+    {
+      "sku_id": "sku_526",
+      "classification": "factual",
+      "path": "skus/factual/sku_526",
+      "name": "医药行业投资价值梯度"
+    },
+    {
+      "sku_id": "sku_527",
+      "classification": "factual",
+      "path": "skus/factual/sku_527",
+      "name": "连锁企业“先参后控”并购模式"
+    },
+    {
+      "sku_id": "skill_291",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_291",
+      "name": "chain-enterprise-equity-control-protection"
+    },
+    {
+      "sku_id": "skill_292",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_292",
+      "name": "chain-enterprise-franchisee-consolidation"
+    },
+    {
+      "sku_id": "skill_293",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_293",
+      "name": "chain-brand-naming-optimization"
+    },
+    {
+      "sku_id": "skill_294",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_294",
+      "name": "catering-chain-standardization-expansion"
+    },
+    {
+      "sku_id": "skill_295",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_295",
+      "name": "chain-enterprise-franchisee-recruitment"
+    },
+    {
+      "sku_id": "skill_296",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_296",
+      "name": "chain-enterprise-equity-incentive-upstream-downstream"
+    },
+    {
+      "sku_id": "skill_297",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_297",
+      "name": "consumer-electronics-agent-equity-structure-design"
+    },
+    {
+      "sku_id": "skill_298",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_298",
+      "name": "education-chain-master-apprentice-expansion"
+    },
+    {
+      "sku_id": "skill_299",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_299",
+      "name": "listed-chain-participate-then-control-expansion"
+    },
+    {
+      "sku_id": "skill_300",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_300",
+      "name": "chain-enterprise-financing-strategy"
+    },
+    {
+      "sku_id": "skill_301",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_301",
+      "name": "chain-enterprise-cost-reduction-efficiency-improvement"
+    },
+    {
+      "sku_id": "skill_302",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_302",
+      "name": "chain-enterprise-business-plan-writing"
+    },
+    {
+      "sku_id": "skill_303",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_303",
+      "name": "chain-enterprise-8-operation-system-building"
+    }
+  ],
+  "清源创业_chunk_003": [
+    {
+      "sku_id": "sku_469",
+      "classification": "factual",
+      "path": "skus/factual/sku_469",
+      "name": "希音Shein商业模式核心参数"
+    },
+    {
+      "sku_id": "sku_470",
+      "classification": "factual",
+      "path": "skus/factual/sku_470",
+      "name": "海澜之家托管模式核心参数"
+    },
+    {
+      "sku_id": "sku_471",
+      "classification": "factual",
+      "path": "skus/factual/sku_471",
+      "name": "夸父炸串与喜姐炸串商业模式对比"
+    },
+    {
+      "sku_id": "sku_472",
+      "classification": "factual",
+      "path": "skus/factual/sku_472",
+      "name": "云放茶园商业模式与失败原因"
+    },
+    {
+      "sku_id": "sku_473",
+      "classification": "factual",
+      "path": "skus/factual/sku_473",
+      "name": "肆拾玖坊多级分销合规模式"
+    },
+    {
+      "sku_id": "sku_474",
+      "classification": "factual",
+      "path": "skus/factual/sku_474",
+      "name": "小菜园餐饮合伙模式核心参数"
+    },
+    {
+      "sku_id": "sku_475",
+      "classification": "factual",
+      "path": "skus/factual/sku_475",
+      "name": "汉庭酒店商业模式核心参数"
+    },
+    {
+      "sku_id": "sku_476",
+      "classification": "factual",
+      "path": "skus/factual/sku_476",
+      "name": "文峰美业灰产合规模式"
+    },
+    {
+      "sku_id": "sku_477",
+      "classification": "factual",
+      "path": "skus/factual/sku_477",
+      "name": "九毛九孵化器模式与门店合伙制"
+    },
+    {
+      "sku_id": "sku_478",
+      "classification": "factual",
+      "path": "skus/factual/sku_478",
+      "name": "常见企业类型核心特征对比"
+    },
+    {
+      "sku_id": "sku_479",
+      "classification": "factual",
+      "path": "skus/factual/sku_479",
+      "name": "有限责任公司与股份有限公司核心差异"
+    },
+    {
+      "sku_id": "sku_480",
+      "classification": "factual",
+      "path": "skus/factual/sku_480",
+      "name": "小规模纳税人与一般纳税人核心差异"
+    },
+    {
+      "sku_id": "sku_481",
+      "classification": "factual",
+      "path": "skus/factual/sku_481",
+      "name": "公司注册核心流程与要求"
+    },
+    {
+      "sku_id": "sku_482",
+      "classification": "factual",
+      "path": "skus/factual/sku_482",
+      "name": "公司核心治理角色权责差异"
+    },
+    {
+      "sku_id": "sku_483",
+      "classification": "factual",
+      "path": "skus/factual/sku_483",
+      "name": "企业税务申报核心时间节点与要求"
+    },
+    {
+      "sku_id": "sku_484",
+      "classification": "factual",
+      "path": "skus/factual/sku_484",
+      "name": "股东同业竞争纠纷应对方案"
+    },
+    {
+      "sku_id": "sku_485",
+      "classification": "factual",
+      "path": "skus/factual/sku_485",
+      "name": "境内多层股权架构设计方案"
+    },
+    {
+      "sku_id": "sku_486",
+      "classification": "factual",
+      "path": "skus/factual/sku_486",
+      "name": "VIE海外上市架构核心设计与流程"
+    },
+    {
+      "sku_id": "sku_487",
+      "classification": "factual",
+      "path": "skus/factual/sku_487",
+      "name": "影子公司注册与使用规范"
+    },
+    {
+      "sku_id": "sku_488",
+      "classification": "factual",
+      "path": "skus/factual/sku_488",
+      "name": "后疫情时代国内餐饮行业发展趋势"
+    },
+    {
+      "sku_id": "sku_489",
+      "classification": "factual",
+      "path": "skus/factual/sku_489",
+      "name": "AIGC行业创业与投资机会分析"
+    },
+    {
+      "sku_id": "sku_490",
+      "classification": "factual",
+      "path": "skus/factual/sku_490",
+      "name": "ToB生意获客与信任构建逻辑"
+    },
+    {
+      "sku_id": "sku_491",
+      "classification": "factual",
+      "path": "skus/factual/sku_491",
+      "name": "剧本杀行业产业链与创业机会分析"
+    },
+    {
+      "sku_id": "sku_492",
+      "classification": "factual",
+      "path": "skus/factual/sku_492",
+      "name": "个人隐私保护行业创业机会分析"
+    },
+    {
+      "sku_id": "skill_304",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_304",
+      "name": "enterprise-type-selection-process"
+    },
+    {
+      "sku_id": "skill_305",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_305",
+      "name": "limited-liability-company-registration-process"
+    },
+    {
+      "sku_id": "skill_306",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_306",
+      "name": "enterprise-tax-declaration-process"
+    },
+    {
+      "sku_id": "skill_307",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_307",
+      "name": "shareholder-competition-dispute-handling-process"
+    },
+    {
+      "sku_id": "skill_308",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_308",
+      "name": "limited-partnership-control-design-process"
+    },
+    {
+      "sku_id": "skill_309",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_309",
+      "name": "vie-overseas-listing-architecture-setup-process"
+    },
+    {
+      "sku_id": "skill_310",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_310",
+      "name": "tob-business-trust-endorsement-building-process"
+    },
+    {
+      "sku_id": "skill_311",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_311",
+      "name": "fast-fashion-small-batch-agile-production-process"
+    },
+    {
+      "sku_id": "skill_312",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_312",
+      "name": "catering-store-fission-incentive-process"
+    },
+    {
+      "sku_id": "skill_313",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_313",
+      "name": "privacy-protection-kol-operation-monetization-process"
+    },
+    {
+      "sku_id": "skill_314",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_314",
+      "name": "offline-script-kill-store-entrepreneurship-process"
+    }
+  ],
+  "aggregated": [
+    {
+      "sku_id": "relational-knowledge-base",
+      "classification": "relational",
+      "path": "skus/relational",
+      "name": "relational-knowledge-base"
+    },
+    {
+      "sku_id": "meta-knowledge",
+      "classification": "meta",
+      "path": "skus/meta",
+      "name": "meta-knowledge"
+    }
+  ],
+  "闭门私董会_chunk_001": [
+    {
+      "sku_id": "sku_528",
+      "classification": "factual",
+      "path": "skus/factual/sku_528",
+      "name": "加码商业模式核心逻辑及案例"
+    },
+    {
+      "sku_id": "sku_529",
+      "classification": "factual",
+      "path": "skus/factual/sku_529",
+      "name": "管理模式与商业模式核心维度对比"
+    },
+    {
+      "sku_id": "sku_530",
+      "classification": "factual",
+      "path": "skus/factual/sku_530",
+      "name": "贵族幼儿园资本化改造方案"
+    },
+    {
+      "sku_id": "sku_531",
+      "classification": "factual",
+      "path": "skus/factual/sku_531",
+      "name": "股份制与有限责任公司股东人数合规要求"
+    },
+    {
+      "sku_id": "sku_532",
+      "classification": "factual",
+      "path": "skus/factual/sku_532",
+      "name": "境内外主要资本市场上市要求对比"
+    },
+    {
+      "sku_id": "sku_533",
+      "classification": "factual",
+      "path": "skus/factual/sku_533",
+      "name": "企业估值核心模型及提升路径"
+    },
+    {
+      "sku_id": "sku_534",
+      "classification": "factual",
+      "path": "skus/factual/sku_534",
+      "name": "企业利润三大核心来源"
+    },
+    {
+      "sku_id": "sku_535",
+      "classification": "factual",
+      "path": "skus/factual/sku_535",
+      "name": "全产业链模式价值及案例"
+    },
+    {
+      "sku_id": "sku_536",
+      "classification": "factual",
+      "path": "skus/factual/sku_536",
+      "name": "政企合作送政绩加工程模式操作要点"
+    },
+    {
+      "sku_id": "sku_537",
+      "classification": "factual",
+      "path": "skus/factual/sku_537",
+      "name": "OEM向OBM转型核心要求"
+    },
+    {
+      "sku_id": "sku_538",
+      "classification": "factual",
+      "path": "skus/factual/sku_538",
+      "name": "零售企业聚焦模式应用参数对比"
+    },
+    {
+      "sku_id": "sku_539",
+      "classification": "factual",
+      "path": "skus/factual/sku_539",
+      "name": "企业聚焦模式核心价值及应用"
+    },
+    {
+      "sku_id": "sku_540",
+      "classification": "factual",
+      "path": "skus/factual/sku_540",
+      "name": "产品加股权模式应用规则及案例"
+    },
+    {
+      "sku_id": "sku_541",
+      "classification": "factual",
+      "path": "skus/factual/sku_541",
+      "name": "主业加投资模式产业分层策略"
+    },
+    {
+      "sku_id": "sku_542",
+      "classification": "factual",
+      "path": "skus/factual/sku_542",
+      "name": "创造品类第一商业模式核心逻辑"
+    },
+    {
+      "sku_id": "sku_543",
+      "classification": "factual",
+      "path": "skus/factual/sku_543",
+      "name": "上市公司市值管理核心思维"
+    },
+    {
+      "sku_id": "sku_544",
+      "classification": "factual",
+      "path": "skus/factual/sku_544",
+      "name": "长运股份金融供应链共赢模式"
+    },
+    {
+      "sku_id": "sku_545",
+      "classification": "factual",
+      "path": "skus/factual/sku_545",
+      "name": "平台模式核心风险及典型行业案例"
+    },
+    {
+      "sku_id": "sku_546",
+      "classification": "factual",
+      "path": "skus/factual/sku_546",
+      "name": "类金融模式核心操作要点"
+    },
+    {
+      "sku_id": "sku_547",
+      "classification": "factual",
+      "path": "skus/factual/sku_547",
+      "name": "以房养老资产配置模型参数"
+    },
+    {
+      "sku_id": "sku_548",
+      "classification": "factual",
+      "path": "skus/factual/sku_548",
+      "name": "以房养老规模效应及实施路径"
+    },
+    {
+      "sku_id": "sku_549",
+      "classification": "factual",
+      "path": "skus/factual/sku_549",
+      "name": "互联网+商业模式类型对比"
+    },
+    {
+      "sku_id": "sku_550",
+      "classification": "factual",
+      "path": "skus/factual/sku_550",
+      "name": "连锁业态三类运营模式核心参数对比"
+    },
+    {
+      "sku_id": "sku_551",
+      "classification": "factual",
+      "path": "skus/factual/sku_551",
+      "name": "商业计划书六大核心要素"
+    },
+    {
+      "sku_id": "sku_552",
+      "classification": "factual",
+      "path": "skus/factual/sku_552",
+      "name": "PE机构投资孵化期等待机制"
+    },
+    {
+      "sku_id": "sku_553",
+      "classification": "factual",
+      "path": "skus/factual/sku_553",
+      "name": "GP与LP权责划分对比"
+    },
+    {
+      "sku_id": "sku_554",
+      "classification": "factual",
+      "path": "skus/factual/sku_554",
+      "name": "星巴克与瑞幸单店人效对比"
+    },
+    {
+      "sku_id": "sku_555",
+      "classification": "factual",
+      "path": "skus/factual/sku_555",
+      "name": "月子会所托管运营模式规则"
+    },
+    {
+      "sku_id": "sku_556",
+      "classification": "factual",
+      "path": "skus/factual/sku_556",
+      "name": "脚手架出租公司优化策略"
+    },
+    {
+      "sku_id": "sku_557",
+      "classification": "factual",
+      "path": "skus/factual/sku_557",
+      "name": "幼儿园平台化运营盈利模式分层"
+    },
+    {
+      "sku_id": "sku_558",
+      "classification": "factual",
+      "path": "skus/factual/sku_558",
+      "name": "广告公司转型路径对比"
+    },
+    {
+      "sku_id": "sku_559",
+      "classification": "factual",
+      "path": "skus/factual/sku_559",
+      "name": "房地产金融模式对比"
+    },
+    {
+      "sku_id": "sku_560",
+      "classification": "factual",
+      "path": "skus/factual/sku_560",
+      "name": "饮用水招商模式对比"
+    },
+    {
+      "sku_id": "sku_561",
+      "classification": "factual",
+      "path": "skus/factual/sku_561",
+      "name": "智能家居产品推广策略"
+    },
+    {
+      "sku_id": "skill_315",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_315",
+      "name": "enterprise-valuation-improvement-workflow"
+    },
+    {
+      "sku_id": "skill_316",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_316",
+      "name": "dealer-equity-incentive-design-workflow"
+    },
+    {
+      "sku_id": "skill_317",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_317",
+      "name": "nursery-center-expansion-operation-workflow"
+    },
+    {
+      "sku_id": "skill_318",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_318",
+      "name": "postpartum-care-center-trusteeship-workflow"
+    },
+    {
+      "sku_id": "skill_319",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_319",
+      "name": "traditional-industry-merger-listing-workflow"
+    },
+    {
+      "sku_id": "skill_320",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_320",
+      "name": "equity-allocation-same-share-different-rights-workflow"
+    },
+    {
+      "sku_id": "skill_321",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_321",
+      "name": "house-for-pension-financial-operation-workflow"
+    },
+    {
+      "sku_id": "skill_322",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_322",
+      "name": "advertising-to-media-company-transition-workflow"
+    },
+    {
+      "sku_id": "skill_323",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_323",
+      "name": "low-price-drainage-backend-profit-model-workflow"
+    }
+  ],
+  "清源创业_chunk_001": [
+    {
+      "sku_id": "sku_562",
+      "classification": "factual",
+      "path": "skus/factual/sku_562",
+      "name": "三次产业分类标准"
+    },
+    {
+      "sku_id": "sku_563",
+      "classification": "factual",
+      "path": "skus/factual/sku_563",
+      "name": "按客户类型划分的生意类别及特征"
+    },
+    {
+      "sku_id": "sku_564",
+      "classification": "factual",
+      "path": "skus/factual/sku_564",
+      "name": "年轻消费群体核心诉求特征"
+    },
+    {
+      "sku_id": "sku_565",
+      "classification": "factual",
+      "path": "skus/factual/sku_565",
+      "name": "产品复购提升核心策略"
+    },
+    {
+      "sku_id": "sku_566",
+      "classification": "factual",
+      "path": "skus/factual/sku_566",
+      "name": "高低频行业场地选择逻辑"
+    },
+    {
+      "sku_id": "sku_567",
+      "classification": "factual",
+      "path": "skus/factual/sku_567",
+      "name": "小餐饮行业成功模式对比"
+    },
+    {
+      "sku_id": "sku_568",
+      "classification": "factual",
+      "path": "skus/factual/sku_568",
+      "name": "小餐饮核心运营策略"
+    },
+    {
+      "sku_id": "sku_569",
+      "classification": "factual",
+      "path": "skus/factual/sku_569",
+      "name": "快餐行业投融资及选品规律"
+    },
+    {
+      "sku_id": "sku_570",
+      "classification": "factual",
+      "path": "skus/factual/sku_570",
+      "name": "饮料行业产品设计核心逻辑"
+    },
+    {
+      "sku_id": "sku_571",
+      "classification": "factual",
+      "path": "skus/factual/sku_571",
+      "name": "新国潮烘焙行业运营逻辑"
+    },
+    {
+      "sku_id": "sku_572",
+      "classification": "factual",
+      "path": "skus/factual/sku_572",
+      "name": "移民行业核心数据及运营逻辑"
+    },
+    {
+      "sku_id": "sku_573",
+      "classification": "factual",
+      "path": "skus/factual/sku_573",
+      "name": "银发经济运营模式及扩张路径"
+    },
+    {
+      "sku_id": "sku_574",
+      "classification": "factual",
+      "path": "skus/factual/sku_574",
+      "name": "露营行业现状及商业模式"
+    },
+    {
+      "sku_id": "sku_575",
+      "classification": "factual",
+      "path": "skus/factual/sku_575",
+      "name": "商业底层逻辑及融资模式"
+    },
+    {
+      "sku_id": "sku_576",
+      "classification": "factual",
+      "path": "skus/factual/sku_576",
+      "name": "教培行业分类及监管政策"
+    },
+    {
+      "sku_id": "sku_577",
+      "classification": "factual",
+      "path": "skus/factual/sku_577",
+      "name": "素质教育行业运营及扩张模式"
+    },
+    {
+      "sku_id": "sku_578",
+      "classification": "factual",
+      "path": "skus/factual/sku_578",
+      "name": "眼镜行业现状及转型模式"
+    },
+    {
+      "sku_id": "skill_324",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_324",
+      "name": "toc-business-pgs-analysis-workflow"
+    },
+    {
+      "sku_id": "skill_325",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_325",
+      "name": "small-catering-startup-workflow"
+    },
+    {
+      "sku_id": "skill_326",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_326",
+      "name": "beverage-product-triple-hammer-design-workflow"
+    },
+    {
+      "sku_id": "skill_327",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_327",
+      "name": "immigration-industry-operation-workflow"
+    },
+    {
+      "sku_id": "skill_328",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_328",
+      "name": "silver-economy-operation-workflow"
+    },
+    {
+      "sku_id": "skill_329",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_329",
+      "name": "quality-education-startup-workflow"
+    },
+    {
+      "sku_id": "skill_330",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_330",
+      "name": "teen-eyecare-center-operation-workflow"
+    }
+  ],
+  "清源创业_chunk_002": [
+    {
+      "sku_id": "sku_579",
+      "classification": "factual",
+      "path": "skus/factual/sku_579",
+      "name": "抖音创业运营全链路体系"
+    },
+    {
+      "sku_id": "sku_580",
+      "classification": "factual",
+      "path": "skus/factual/sku_580",
+      "name": "深房理房产收益权资产证券化模式"
+    },
+    {
+      "sku_id": "sku_581",
+      "classification": "factual",
+      "path": "skus/factual/sku_581",
+      "name": "承兑汇票与票据收益权资产证券化运作体系"
+    },
+    {
+      "sku_id": "sku_582",
+      "classification": "factual",
+      "path": "skus/factual/sku_582",
+      "name": "创业阶段划分与金融思维应用"
+    },
+    {
+      "sku_id": "sku_583",
+      "classification": "factual",
+      "path": "skus/factual/sku_583",
+      "name": "金融思维本质与商业应用逻辑"
+    },
+    {
+      "sku_id": "sku_584",
+      "classification": "factual",
+      "path": "skus/factual/sku_584",
+      "name": "大健康行业金融思维扩张模式"
+    },
+    {
+      "sku_id": "sku_585",
+      "classification": "factual",
+      "path": "skus/factual/sku_585",
+      "name": "海伦斯小酒馆商业模式与资本运作"
+    },
+    {
+      "sku_id": "sku_586",
+      "classification": "factual",
+      "path": "skus/factual/sku_586",
+      "name": "陆正耀连续创业资本运作路径"
+    },
+    {
+      "sku_id": "sku_587",
+      "classification": "factual",
+      "path": "skus/factual/sku_587",
+      "name": "瑞幸咖啡创业模式与资本运作"
+    },
+    {
+      "sku_id": "sku_588",
+      "classification": "factual",
+      "path": "skus/factual/sku_588",
+      "name": "瀚某系充电站金融杠杆设计模型"
+    },
+    {
+      "sku_id": "sku_589",
+      "classification": "factual",
+      "path": "skus/factual/sku_589",
+      "name": "海航系杠杆收购运作模式"
+    },
+    {
+      "sku_id": "sku_590",
+      "classification": "factual",
+      "path": "skus/factual/sku_590",
+      "name": "赵薇极限杠杆收购操作体系"
+    },
+    {
+      "sku_id": "sku_591",
+      "classification": "factual",
+      "path": "skus/factual/sku_591",
+      "name": "连锁品牌加盟金融化运作模式"
+    },
+    {
+      "sku_id": "sku_592",
+      "classification": "factual",
+      "path": "skus/factual/sku_592",
+      "name": "资本运作底层逻辑与社会结构理论"
+    },
+    {
+      "sku_id": "sku_593",
+      "classification": "factual",
+      "path": "skus/factual/sku_593",
+      "name": "农凯系原始杠杆运作模式"
+    },
+    {
+      "sku_id": "sku_594",
+      "classification": "factual",
+      "path": "skus/factual/sku_594",
+      "name": "中植系资本运作「一鱼两吃」模式"
+    },
+    {
+      "sku_id": "sku_595",
+      "classification": "factual",
+      "path": "skus/factual/sku_595",
+      "name": "涌金系产融结合运作模式"
+    },
+    {
+      "sku_id": "sku_596",
+      "classification": "factual",
+      "path": "skus/factual/sku_596",
+      "name": "京基系资本运作模式"
+    },
+    {
+      "sku_id": "sku_597",
+      "classification": "factual",
+      "path": "skus/factual/sku_597",
+      "name": "明天系金融控股运作模式"
+    },
+    {
+      "sku_id": "sku_598",
+      "classification": "factual",
+      "path": "skus/factual/sku_598",
+      "name": "2015年中美金融博弈与防御措施"
+    },
+    {
+      "sku_id": "sku_599",
+      "classification": "factual",
+      "path": "skus/factual/sku_599",
+      "name": "安邦系借贷盈利运作模式"
+    },
+    {
+      "sku_id": "sku_600",
+      "classification": "factual",
+      "path": "skus/factual/sku_600",
+      "name": "非股非债融资模式发展与应用"
+    },
+    {
+      "sku_id": "sku_601",
+      "classification": "factual",
+      "path": "skus/factual/sku_601",
+      "name": "博纳影业回A股资本运作路径"
+    },
+    {
+      "sku_id": "sku_602",
+      "classification": "factual",
+      "path": "skus/factual/sku_602",
+      "name": "市值管理财务合规操作技巧"
+    },
+    {
+      "sku_id": "skill_331",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_331",
+      "name": "douyin-video-production-workflow"
+    },
+    {
+      "sku_id": "skill_332",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_332",
+      "name": "douyin-account-growth-workflow"
+    },
+    {
+      "sku_id": "skill_333",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_333",
+      "name": "douyin-dou-plus-launch-workflow"
+    },
+    {
+      "sku_id": "skill_334",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_334",
+      "name": "douyin-drama-content-production-workflow"
+    },
+    {
+      "sku_id": "skill_335",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_335",
+      "name": "hna-leverage-acquisition-workflow"
+    },
+    {
+      "sku_id": "skill_336",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_336",
+      "name": "zhao-wei-extreme-leverage-buyout-workflow"
+    },
+    {
+      "sku_id": "skill_337",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_337",
+      "name": "nongkai-series-commercial-paper-leverage-workflow"
+    },
+    {
+      "sku_id": "skill_338",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_338",
+      "name": "jingji-series-celebrity-endorsement-marketing-workflow"
+    },
+    {
+      "sku_id": "skill_339",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_339",
+      "name": "bona-pictures-return-to-a-share-workflow"
+    },
+    {
+      "sku_id": "skill_340",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_340",
+      "name": "market-value-management-financial-decoration-workflow"
+    },
+    {
+      "sku_id": "skill_341",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_341",
+      "name": "helens-pub-chain-expansion-workflow"
+    },
+    {
+      "sku_id": "skill_342",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_342",
+      "name": "franchise-system-financialization-workflow"
+    },
+    {
+      "sku_id": "skill_343",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_343",
+      "name": "zhongzhi-series-one-fish-two-eats-workflow"
+    },
+    {
+      "sku_id": "skill_344",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_344",
+      "name": "baoshang-bank-one-fish-three-eats-workflow"
+    }
+  ]
+}

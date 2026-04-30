@@ -1,0 +1,1078 @@
+{
+  "BSC七步法：设计企业的战略地图_chunk_001": [
+    {
+      "sku_id": "sku_001",
+      "classification": "factual",
+      "path": "skus/factual/sku_001",
+      "name": "BSC平衡计分卡基本定义"
+    },
+    {
+      "sku_id": "sku_002",
+      "classification": "factual",
+      "path": "skus/factual/sku_002",
+      "name": "BSC平衡计分卡四大核心维度"
+    },
+    {
+      "sku_id": "sku_003",
+      "classification": "factual",
+      "path": "skus/factual/sku_003",
+      "name": "BSC平衡计分卡五项平衡特性"
+    },
+    {
+      "sku_id": "sku_004",
+      "classification": "factual",
+      "path": "skus/factual/sku_004",
+      "name": "ESG评价体系定义"
+    },
+    {
+      "sku_id": "sku_005",
+      "classification": "factual",
+      "path": "skus/factual/sku_005",
+      "name": "BSC平衡计分卡落地实施七步法"
+    },
+    {
+      "sku_id": "skill_001",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_001",
+      "name": "bsc-strategy-map-construction-seven-step-method"
+    },
+    {
+      "sku_id": "skill_002",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_002",
+      "name": "bsc-based-manager-potential-assessment-method"
+    }
+  ],
+  "企业战略与财富增长创新蓝宝书_chunk_001": [
+    {
+      "sku_id": "sku_006",
+      "classification": "factual",
+      "path": "skus/factual/sku_006",
+      "name": "巴菲特企业护城河判定标准"
+    },
+    {
+      "sku_id": "sku_007",
+      "classification": "factual",
+      "path": "skus/factual/sku_007",
+      "name": "全球大类资产长期收益对比"
+    },
+    {
+      "sku_id": "sku_008",
+      "classification": "factual",
+      "path": "skus/factual/sku_008",
+      "name": "康波周期核心理论与历史演进"
+    },
+    {
+      "sku_id": "sku_009",
+      "classification": "factual",
+      "path": "skus/factual/sku_009",
+      "name": "中国改革开放以来的8次全民财富机遇"
+    },
+    {
+      "sku_id": "sku_010",
+      "classification": "factual",
+      "path": "skus/factual/sku_010",
+      "name": "未来10年中国A股发展7大趋势"
+    },
+    {
+      "sku_id": "sku_011",
+      "classification": "factual",
+      "path": "skus/factual/sku_011",
+      "name": "企业布局未来资产的7大核心关键词"
+    },
+    {
+      "sku_id": "sku_012",
+      "classification": "factual",
+      "path": "skus/factual/sku_012",
+      "name": "企业需要穿越的三类核心周期"
+    },
+    {
+      "sku_id": "sku_013",
+      "classification": "factual",
+      "path": "skus/factual/sku_013",
+      "name": "企业家应对不确定性的三大对冲策略"
+    },
+    {
+      "sku_id": "sku_014",
+      "classification": "factual",
+      "path": "skus/factual/sku_014",
+      "name": "企业生命周期四大核心基因"
+    },
+    {
+      "sku_id": "sku_015",
+      "classification": "factual",
+      "path": "skus/factual/sku_015",
+      "name": "连界核心业务模式与业绩"
+    },
+    {
+      "sku_id": "sku_016",
+      "classification": "factual",
+      "path": "skus/factual/sku_016",
+      "name": "核心资产定义与特征"
+    },
+    {
+      "sku_id": "sku_017",
+      "classification": "factual",
+      "path": "skus/factual/sku_017",
+      "name": "2020年全球货币放水与资产涨幅数据"
+    },
+    {
+      "sku_id": "sku_018",
+      "classification": "factual",
+      "path": "skus/factual/sku_018",
+      "name": "2022年中美GDP与资本市场规模对比"
+    },
+    {
+      "sku_id": "sku_019",
+      "classification": "factual",
+      "path": "skus/factual/sku_019",
+      "name": "中外企业平均寿命数据"
+    },
+    {
+      "sku_id": "sku_020",
+      "classification": "factual",
+      "path": "skus/factual/sku_020",
+      "name": "王玥（玥堂主）的创业历程"
+    },
+    {
+      "sku_id": "skill_003",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_003",
+      "name": "enterprise-second-curve-layout-method"
+    },
+    {
+      "sku_id": "skill_004",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_004",
+      "name": "uncertainty-risk-hedging-strategy"
+    },
+    {
+      "sku_id": "skill_005",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_005",
+      "name": "core-asset-identification-method"
+    },
+    {
+      "sku_id": "skill_006",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_006",
+      "name": "enterprise-cycle-position-judgment-method"
+    },
+    {
+      "sku_id": "skill_007",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_007",
+      "name": "innovation-strategy-formulation-method"
+    },
+    {
+      "sku_id": "skill_008",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_008",
+      "name": "capital-cycle-utilization-method"
+    }
+  ],
+  "2026六大新兴产业发展形势展望_chunk_001": [
+    {
+      "sku_id": "sku_021",
+      "classification": "factual",
+      "path": "skus/factual/sku_021",
+      "name": "大国博弈圈层驱动产业分析模型"
+    },
+    {
+      "sku_id": "sku_022",
+      "classification": "factual",
+      "path": "skus/factual/sku_022",
+      "name": "2025年中国低空经济核心运营统计数据"
+    },
+    {
+      "sku_id": "sku_023",
+      "classification": "factual",
+      "path": "skus/factual/sku_023",
+      "name": "2026年中国低空经济发展核心判断"
+    },
+    {
+      "sku_id": "sku_024",
+      "classification": "factual",
+      "path": "skus/factual/sku_024",
+      "name": "2026年中国人工智能治理发展核心判断"
+    },
+    {
+      "sku_id": "sku_025",
+      "classification": "factual",
+      "path": "skus/factual/sku_025",
+      "name": "人工智能治理核心资产类型"
+    },
+    {
+      "sku_id": "sku_026",
+      "classification": "factual",
+      "path": "skus/factual/sku_026",
+      "name": "2025年全球商业航天市场格局统计数据"
+    },
+    {
+      "sku_id": "sku_027",
+      "classification": "factual",
+      "path": "skus/factual/sku_027",
+      "name": "2026年中国商业航天发展核心判断"
+    },
+    {
+      "sku_id": "sku_028",
+      "classification": "factual",
+      "path": "skus/factual/sku_028",
+      "name": "中国商业航天区域功能分工布局"
+    },
+    {
+      "sku_id": "sku_029",
+      "classification": "factual",
+      "path": "skus/factual/sku_029",
+      "name": "2026年中国未来产业发展核心判断"
+    },
+    {
+      "sku_id": "sku_030",
+      "classification": "factual",
+      "path": "skus/factual/sku_030",
+      "name": "未来产业核心参与者角色分类"
+    },
+    {
+      "sku_id": "sku_031",
+      "classification": "factual",
+      "path": "skus/factual/sku_031",
+      "name": "2025年中国消费品工业运行统计数据"
+    },
+    {
+      "sku_id": "sku_032",
+      "classification": "factual",
+      "path": "skus/factual/sku_032",
+      "name": "2026年中国消费品工业发展核心判断"
+    },
+    {
+      "sku_id": "sku_033",
+      "classification": "factual",
+      "path": "skus/factual/sku_033",
+      "name": "2025年中国新型电池产业运行统计数据"
+    },
+    {
+      "sku_id": "sku_034",
+      "classification": "factual",
+      "path": "skus/factual/sku_034",
+      "name": "2026年中国新型电池产业发展核心判断"
+    },
+    {
+      "sku_id": "sku_035",
+      "classification": "factual",
+      "path": "skus/factual/sku_035",
+      "name": "新型电池主流技术路线适配场景"
+    },
+    {
+      "sku_id": "skill_009",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_009",
+      "name": "great-power-game-circle-driven-industry-analysis"
+    },
+    {
+      "sku_id": "skill_010",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_010",
+      "name": "future-industry-option-investment-evaluation"
+    },
+    {
+      "sku_id": "skill_011",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_011",
+      "name": "consumer-goods-scenario-co-creation-method"
+    },
+    {
+      "sku_id": "skill_012",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_012",
+      "name": "new-battery-technology-industrialization-workflow"
+    },
+    {
+      "sku_id": "skill_013",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_013",
+      "name": "future-industry-regional-functional-positioning"
+    },
+    {
+      "sku_id": "skill_014",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_014",
+      "name": "ai-governance-regulatory-sandbox-implementation"
+    }
+  ],
+  "企业战略与财富增长创新蓝宝书_chunk_002": [
+    {
+      "sku_id": "sku_036",
+      "classification": "factual",
+      "path": "skus/factual/sku_036",
+      "name": "企业发展的三大叠加周期"
+    },
+    {
+      "sku_id": "sku_037",
+      "classification": "factual",
+      "path": "skus/factual/sku_037",
+      "name": "企业生命周期四大阶段特征"
+    },
+    {
+      "sku_id": "sku_038",
+      "classification": "factual",
+      "path": "skus/factual/sku_038",
+      "name": "企业真假资源判断标准"
+    },
+    {
+      "sku_id": "sku_039",
+      "classification": "factual",
+      "path": "skus/factual/sku_039",
+      "name": "传统企业家穿越周期的三条实践路径"
+    },
+    {
+      "sku_id": "sku_040",
+      "classification": "factual",
+      "path": "skus/factual/sku_040",
+      "name": "创新企业跨越周期的核心思维与落地建议"
+    },
+    {
+      "sku_id": "sku_041",
+      "classification": "factual",
+      "path": "skus/factual/sku_041",
+      "name": "康波周期核心规律与中国发展机遇"
+    },
+    {
+      "sku_id": "sku_042",
+      "classification": "factual",
+      "path": "skus/factual/sku_042",
+      "name": "中国多层次资本市场发展现状与趋势"
+    },
+    {
+      "sku_id": "sku_043",
+      "classification": "factual",
+      "path": "skus/factual/sku_043",
+      "name": "有根企业的三大核心能力"
+    },
+    {
+      "sku_id": "sku_044",
+      "classification": "factual",
+      "path": "skus/factual/sku_044",
+      "name": "商业模式梳理的十大核心问题"
+    },
+    {
+      "sku_id": "sku_045",
+      "classification": "factual",
+      "path": "skus/factual/sku_045",
+      "name": "BSC平衡计分卡战略工具"
+    },
+    {
+      "sku_id": "sku_046",
+      "classification": "factual",
+      "path": "skus/factual/sku_046",
+      "name": "企业真实与虚假护城河判断标准"
+    },
+    {
+      "sku_id": "sku_047",
+      "classification": "factual",
+      "path": "skus/factual/sku_047",
+      "name": "三大产业阶段的商业模式设计框架"
+    },
+    {
+      "sku_id": "sku_048",
+      "classification": "factual",
+      "path": "skus/factual/sku_048",
+      "name": "企业结构性增长两步方法论"
+    },
+    {
+      "sku_id": "sku_049",
+      "classification": "factual",
+      "path": "skus/factual/sku_049",
+      "name": "企业增长的七大维度"
+    },
+    {
+      "sku_id": "sku_050",
+      "classification": "factual",
+      "path": "skus/factual/sku_050",
+      "name": "企业生态位战略四大思维模型"
+    },
+    {
+      "sku_id": "sku_051",
+      "classification": "factual",
+      "path": "skus/factual/sku_051",
+      "name": "企业创新布局的3B策略"
+    },
+    {
+      "sku_id": "sku_052",
+      "classification": "factual",
+      "path": "skus/factual/sku_052",
+      "name": "财富增长三大认知账户"
+    },
+    {
+      "sku_id": "sku_053",
+      "classification": "factual",
+      "path": "skus/factual/sku_053",
+      "name": "财富本质与核心资产判断逻辑"
+    },
+    {
+      "sku_id": "sku_054",
+      "classification": "factual",
+      "path": "skus/factual/sku_054",
+      "name": "后地产时代的资产配置逻辑"
+    },
+    {
+      "sku_id": "sku_055",
+      "classification": "factual",
+      "path": "skus/factual/sku_055",
+      "name": "养老规划核心参考数据与动作建议"
+    },
+    {
+      "sku_id": "sku_056",
+      "classification": "factual",
+      "path": "skus/factual/sku_056",
+      "name": "一流公司投资公式"
+    },
+    {
+      "sku_id": "sku_057",
+      "classification": "factual",
+      "path": "skus/factual/sku_057",
+      "name": "给中国企业家的五条核心建议"
+    },
+    {
+      "sku_id": "sku_058",
+      "classification": "factual",
+      "path": "skus/factual/sku_058",
+      "name": "时间投资核心原则"
+    },
+    {
+      "sku_id": "skill_015",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_015",
+      "name": "enterprise-status-3-cycle-overlay-analysis"
+    },
+    {
+      "sku_id": "skill_016",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_016",
+      "name": "enterprise-lifecycle-4-stage-diagnosis-response"
+    },
+    {
+      "sku_id": "skill_017",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_017",
+      "name": "business-model-clarification-10-questions"
+    },
+    {
+      "sku_id": "skill_018",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_018",
+      "name": "balanced-scorecard-7-step-implementation"
+    },
+    {
+      "sku_id": "skill_019",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_019",
+      "name": "enterprise-moat-4-dimension-analysis"
+    },
+    {
+      "sku_id": "skill_020",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_020",
+      "name": "industry-stage-adaptive-business-model-design"
+    },
+    {
+      "sku_id": "skill_021",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_021",
+      "name": "enterprise-growth-direction-7-dimension-analysis"
+    },
+    {
+      "sku_id": "skill_022",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_022",
+      "name": "cyclical-structural-growth-2-step-methodology"
+    },
+    {
+      "sku_id": "skill_023",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_023",
+      "name": "enterprise-niche-strategy-4-step-implementation"
+    },
+    {
+      "sku_id": "skill_024",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_024",
+      "name": "enterprise-innovation-3b-strategy-implementation"
+    },
+    {
+      "sku_id": "skill_025",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_025",
+      "name": "core-asset-investment-cat-analysis"
+    },
+    {
+      "sku_id": "skill_026",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_026",
+      "name": "personal-wealth-3-account-allocation"
+    }
+  ],
+  "科技战略与投资策略10个建议与5大误区_chunk_001": [
+    {
+      "sku_id": "sku_059",
+      "classification": "factual",
+      "path": "skus/factual/sku_059",
+      "name": "技术进化S曲线与Gartner技术曲线特征对比"
+    },
+    {
+      "sku_id": "sku_060",
+      "classification": "factual",
+      "path": "skus/factual/sku_060",
+      "name": "技术产业化的两个核心关键时刻"
+    },
+    {
+      "sku_id": "sku_061",
+      "classification": "factual",
+      "path": "skus/factual/sku_061",
+      "name": "科技企业产业黄金时刻面临的两类竞争威胁"
+    },
+    {
+      "sku_id": "sku_062",
+      "classification": "factual",
+      "path": "skus/factual/sku_062",
+      "name": "茅台设立百亿科技基金的战略价值"
+    },
+    {
+      "sku_id": "sku_063",
+      "classification": "factual",
+      "path": "skus/factual/sku_063",
+      "name": "纳微级3D打印企业摩方精密的技术特征及商业模式升级"
+    },
+    {
+      "sku_id": "sku_064",
+      "classification": "factual",
+      "path": "skus/factual/sku_064",
+      "name": "不同市场主体技术产业化的最优入局时间"
+    },
+    {
+      "sku_id": "sku_065",
+      "classification": "factual",
+      "path": "skus/factual/sku_065",
+      "name": "科技创业企业的融资对象选择建议"
+    },
+    {
+      "sku_id": "sku_066",
+      "classification": "factual",
+      "path": "skus/factual/sku_066",
+      "name": "一级市场及产业CVC偏好的创业团队特征"
+    },
+    {
+      "sku_id": "sku_067",
+      "classification": "factual",
+      "path": "skus/factual/sku_067",
+      "name": "三四线城市创业者的「游泳式呼吸」成功模式"
+    },
+    {
+      "sku_id": "sku_068",
+      "classification": "factual",
+      "path": "skus/factual/sku_068",
+      "name": "中美博弈背景下的科技领域重点投资方向筛选逻辑"
+    },
+    {
+      "sku_id": "sku_069",
+      "classification": "factual",
+      "path": "skus/factual/sku_069",
+      "name": "专精特新企业的发展认知误区"
+    },
+    {
+      "sku_id": "sku_070",
+      "classification": "factual",
+      "path": "skus/factual/sku_070",
+      "name": "科学家创业的角色认知误区"
+    },
+    {
+      "sku_id": "sku_071",
+      "classification": "factual",
+      "path": "skus/factual/sku_071",
+      "name": "科技与消费的边界认知误区"
+    },
+    {
+      "sku_id": "sku_072",
+      "classification": "factual",
+      "path": "skus/factual/sku_072",
+      "name": "投资收益预期的认知误区"
+    },
+    {
+      "sku_id": "sku_073",
+      "classification": "factual",
+      "path": "skus/factual/sku_073",
+      "name": "「新质生产力」相关投资骗局的风险提示"
+    },
+    {
+      "sku_id": "sku_074",
+      "classification": "factual",
+      "path": "skus/factual/sku_074",
+      "name": "中美博弈中美国针对中国的「一明两暗」竞争策略"
+    },
+    {
+      "sku_id": "sku_075",
+      "classification": "factual",
+      "path": "skus/factual/sku_075",
+      "name": "中美科技产业转化模式对比"
+    },
+    {
+      "sku_id": "skill_027",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_027",
+      "name": "tech-startup-magic-moment-operation"
+    },
+    {
+      "sku_id": "skill_028",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_028",
+      "name": "industrial-investor-tech-project-entry-timing-selection"
+    },
+    {
+      "sku_id": "skill_029",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_029",
+      "name": "tech-company-core-team-construction"
+    },
+    {
+      "sku_id": "skill_030",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_030",
+      "name": "specialized-new-enterprise-development-path-selection"
+    },
+    {
+      "sku_id": "skill_031",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_031",
+      "name": "hard-tech-investment-track-screening"
+    },
+    {
+      "sku_id": "skill_032",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_032",
+      "name": "third-fourth-tier-city-swimming-breathing-entrepreneurship"
+    },
+    {
+      "sku_id": "skill_033",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_033",
+      "name": "new-productivity-investment-scam-identification"
+    },
+    {
+      "sku_id": "skill_034",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_034",
+      "name": "tech-enterprise-investor-selection"
+    },
+    {
+      "sku_id": "skill_035",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_035",
+      "name": "high-precision-manufacturing-business-model-upgrade"
+    },
+    {
+      "sku_id": "skill_036",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_036",
+      "name": "early-stage-investment-team-selection"
+    }
+  ],
+  "玥堂主【投资&创新】200+思维套图合集_chunk_001": [
+    {
+      "sku_id": "sku_076",
+      "classification": "factual",
+      "path": "skus/factual/sku_076",
+      "name": "四大创新原型及典型代表企业"
+    },
+    {
+      "sku_id": "sku_077",
+      "classification": "factual",
+      "path": "skus/factual/sku_077",
+      "name": "四次工业革命核心特征"
+    },
+    {
+      "sku_id": "sku_078",
+      "classification": "factual",
+      "path": "skus/factual/sku_078",
+      "name": "创新相对论模型核心构成"
+    },
+    {
+      "sku_id": "sku_079",
+      "classification": "factual",
+      "path": "skus/factual/sku_079",
+      "name": "福格（Fogg）行为模型"
+    },
+    {
+      "sku_id": "sku_080",
+      "classification": "factual",
+      "path": "skus/factual/sku_080",
+      "name": "标普500指数1940-2020年增长数据"
+    },
+    {
+      "sku_id": "sku_081",
+      "classification": "factual",
+      "path": "skus/factual/sku_081",
+      "name": "人类社会形态演进核心特征"
+    },
+    {
+      "sku_id": "sku_082",
+      "classification": "factual",
+      "path": "skus/factual/sku_082",
+      "name": "中小企业抗住困难的五字诀"
+    },
+    {
+      "sku_id": "sku_083",
+      "classification": "factual",
+      "path": "skus/factual/sku_083",
+      "name": "邓宁·克鲁格效应核心特征"
+    },
+    {
+      "sku_id": "sku_084",
+      "classification": "factual",
+      "path": "skus/factual/sku_084",
+      "name": "战略三大认知迷思"
+    },
+    {
+      "sku_id": "sku_085",
+      "classification": "factual",
+      "path": "skus/factual/sku_085",
+      "name": "企业生命底层四大核心基因"
+    },
+    {
+      "sku_id": "sku_086",
+      "classification": "factual",
+      "path": "skus/factual/sku_086",
+      "name": "企业生命周期各阶段核心特征与典型问题"
+    },
+    {
+      "sku_id": "sku_087",
+      "classification": "factual",
+      "path": "skus/factual/sku_087",
+      "name": "决策反馈回路逻辑"
+    },
+    {
+      "sku_id": "sku_088",
+      "classification": "factual",
+      "path": "skus/factual/sku_088",
+      "name": "全球技术层面冲突的两大核心技术"
+    },
+    {
+      "sku_id": "sku_089",
+      "classification": "factual",
+      "path": "skus/factual/sku_089",
+      "name": "社会结构进化根本逻辑"
+    },
+    {
+      "sku_id": "sku_090",
+      "classification": "factual",
+      "path": "skus/factual/sku_090",
+      "name": "老子思想中支撑创新的三大核心观点"
+    },
+    {
+      "sku_id": "sku_091",
+      "classification": "factual",
+      "path": "skus/factual/sku_091",
+      "name": "技术循环周期三阶段核心特征"
+    },
+    {
+      "sku_id": "sku_092",
+      "classification": "factual",
+      "path": "skus/factual/sku_092",
+      "name": "真假资源与真假增长判定标准"
+    },
+    {
+      "sku_id": "sku_093",
+      "classification": "factual",
+      "path": "skus/factual/sku_093",
+      "name": "企业护城河五大核心类型"
+    },
+    {
+      "sku_id": "sku_094",
+      "classification": "factual",
+      "path": "skus/factual/sku_094",
+      "name": "创业成功核心要素占比"
+    },
+    {
+      "sku_id": "sku_095",
+      "classification": "factual",
+      "path": "skus/factual/sku_095",
+      "name": "科学家创业成功率与科技创新死亡谷"
+    },
+    {
+      "sku_id": "sku_096",
+      "classification": "factual",
+      "path": "skus/factual/sku_096",
+      "name": "终局思维提升方法"
+    },
+    {
+      "sku_id": "sku_097",
+      "classification": "factual",
+      "path": "skus/factual/sku_097",
+      "name": "SWOT分析核心认知"
+    },
+    {
+      "sku_id": "sku_098",
+      "classification": "factual",
+      "path": "skus/factual/sku_098",
+      "name": "用人核心观点（用师者王）"
+    },
+    {
+      "sku_id": "sku_099",
+      "classification": "factual",
+      "path": "skus/factual/sku_099",
+      "name": "烟蒂股定义与投资特征"
+    },
+    {
+      "sku_id": "sku_100",
+      "classification": "factual",
+      "path": "skus/factual/sku_100",
+      "name": "格雷厄姆投资核心观点"
+    },
+    {
+      "sku_id": "sku_101",
+      "classification": "factual",
+      "path": "skus/factual/sku_101",
+      "name": "Gartner曲线投资应用要点"
+    },
+    {
+      "sku_id": "sku_102",
+      "classification": "factual",
+      "path": "skus/factual/sku_102",
+      "name": "BSC（平衡计分卡）核心逻辑"
+    },
+    {
+      "sku_id": "sku_103",
+      "classification": "factual",
+      "path": "skus/factual/sku_103",
+      "name": "产业渗透率与企业估值关系"
+    },
+    {
+      "sku_id": "sku_104",
+      "classification": "factual",
+      "path": "skus/factual/sku_104",
+      "name": "创业核心三步骤（柳传志三原则）"
+    },
+    {
+      "sku_id": "sku_105",
+      "classification": "factual",
+      "path": "skus/factual/sku_105",
+      "name": "1776年东西方核心标志性事件"
+    },
+    {
+      "sku_id": "sku_106",
+      "classification": "factual",
+      "path": "skus/factual/sku_106",
+      "name": "A股核心统计数据（截至2022年）"
+    },
+    {
+      "sku_id": "sku_107",
+      "classification": "factual",
+      "path": "skus/factual/sku_107",
+      "name": "全球及中国企业平均寿命统计数据"
+    },
+    {
+      "sku_id": "sku_108",
+      "classification": "factual",
+      "path": "skus/factual/sku_108",
+      "name": "半导体领域卡脖子九个层次"
+    },
+    {
+      "sku_id": "sku_109",
+      "classification": "factual",
+      "path": "skus/factual/sku_109",
+      "name": "日本失去的三十年三大抗衰退行业"
+    },
+    {
+      "sku_id": "sku_110",
+      "classification": "factual",
+      "path": "skus/factual/sku_110",
+      "name": "上市公司老板战略三观"
+    },
+    {
+      "sku_id": "sku_111",
+      "classification": "factual",
+      "path": "skus/factual/sku_111",
+      "name": "职场核心资产判定标准"
+    },
+    {
+      "sku_id": "sku_112",
+      "classification": "factual",
+      "path": "skus/factual/sku_112",
+      "name": "企业第二曲线投资三大方式"
+    },
+    {
+      "sku_id": "sku_113",
+      "classification": "factual",
+      "path": "skus/factual/sku_113",
+      "name": "企业估值核心影响因素"
+    },
+    {
+      "sku_id": "sku_114",
+      "classification": "factual",
+      "path": "skus/factual/sku_114",
+      "name": "创新传承SCL模型核心构成"
+    },
+    {
+      "sku_id": "sku_115",
+      "classification": "factual",
+      "path": "skus/factual/sku_115",
+      "name": "中美上市公司产业结构对比（截至2022年11月）"
+    },
+    {
+      "sku_id": "sku_116",
+      "classification": "factual",
+      "path": "skus/factual/sku_116",
+      "name": "Know-how（技术诀窍）定义"
+    },
+    {
+      "sku_id": "sku_117",
+      "classification": "factual",
+      "path": "skus/factual/sku_117",
+      "name": "2022年全球创新指数排名Top10国家/地区"
+    },
+    {
+      "sku_id": "sku_118",
+      "classification": "factual",
+      "path": "skus/factual/sku_118",
+      "name": "科技投资三阶段核心特征"
+    },
+    {
+      "sku_id": "sku_119",
+      "classification": "factual",
+      "path": "skus/factual/sku_119",
+      "name": "企业持续增长五大核心逻辑"
+    },
+    {
+      "sku_id": "sku_120",
+      "classification": "factual",
+      "path": "skus/factual/sku_120",
+      "name": "行业空间三大核心判断维度"
+    },
+    {
+      "sku_id": "sku_121",
+      "classification": "factual",
+      "path": "skus/factual/sku_121",
+      "name": "熵增与生命发展规律"
+    },
+    {
+      "sku_id": "sku_122",
+      "classification": "factual",
+      "path": "skus/factual/sku_122",
+      "name": "投资四大确定性判断维度"
+    },
+    {
+      "sku_id": "sku_123",
+      "classification": "factual",
+      "path": "skus/factual/sku_123",
+      "name": "行业发展五大阶段特征"
+    },
+    {
+      "sku_id": "sku_124",
+      "classification": "factual",
+      "path": "skus/factual/sku_124",
+      "name": "高退出壁垒行业核心类型"
+    },
+    {
+      "sku_id": "sku_125",
+      "classification": "factual",
+      "path": "skus/factual/sku_125",
+      "name": "人生财富积累三阶段（挣钱、赚钱、值钱）"
+    },
+    {
+      "sku_id": "sku_126",
+      "classification": "factual",
+      "path": "skus/factual/sku_126",
+      "name": "东芝事件核心脉络与启示"
+    },
+    {
+      "sku_id": "sku_127",
+      "classification": "factual",
+      "path": "skus/factual/sku_127",
+      "name": "逆周期垄断核心特征"
+    },
+    {
+      "sku_id": "sku_128",
+      "classification": "factual",
+      "path": "skus/factual/sku_128",
+      "name": "企业新业务失败两大核心原因"
+    },
+    {
+      "sku_id": "sku_129",
+      "classification": "factual",
+      "path": "skus/factual/sku_129",
+      "name": "商业模式核心不可复制要素"
+    },
+    {
+      "sku_id": "skill_037",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_037",
+      "name": "sme-hardship-resistance-five-character-workflow"
+    },
+    {
+      "sku_id": "skill_038",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_038",
+      "name": "scientific-decision-making-workflow"
+    },
+    {
+      "sku_id": "skill_039",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_039",
+      "name": "toddler-stage-enterprise-sales-risk-prevention"
+    },
+    {
+      "sku_id": "skill_040",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_040",
+      "name": "end-game-thinking-training-method"
+    },
+    {
+      "sku_id": "skill_041",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_041",
+      "name": "second-growth-curve-layout-workflow"
+    },
+    {
+      "sku_id": "skill_042",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_042",
+      "name": "30-minute-enterprise-analysis-framework"
+    },
+    {
+      "sku_id": "skill_043",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_043",
+      "name": "investment-determinism-search-method"
+    },
+    {
+      "sku_id": "skill_044",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_044",
+      "name": "startup-survival-under-giants-workflow"
+    },
+    {
+      "sku_id": "skill_045",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_045",
+      "name": "infant-stage-enterprise-board-construction"
+    },
+    {
+      "sku_id": "skill_046",
+      "classification": "procedural",
+      "path": "skus/procedural/skill_046",
+      "name": "startup-dual-capital-cycle-construction"
+    }
+  ],
+  "aggregated": [
+    {
+      "sku_id": "relational-knowledge-base",
+      "classification": "relational",
+      "path": "relational",
+      "name": "relational-knowledge-base"
+    },
+    {
+      "sku_id": "meta-knowledge",
+      "classification": "meta",
+      "path": "meta",
+      "name": "meta-knowledge"
+    }
+  ]
+}

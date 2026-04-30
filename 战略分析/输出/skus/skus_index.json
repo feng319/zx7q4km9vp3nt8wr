@@ -1,0 +1,1790 @@
+{
+  "created_at": "2026-04-29T09:57:22.619393",
+  "updated_at": "2026-04-29T10:21:02.669679",
+  "total_skus": 177,
+  "total_characters": 104728,
+  "chunks_processed": [
+    "BSC七步法：设计企业的战略地图_chunk_001",
+    "企业战略与财富增长创新蓝宝书_chunk_001",
+    "2026六大新兴产业发展形势展望_chunk_001",
+    "企业战略与财富增长创新蓝宝书_chunk_002",
+    "科技战略与投资策略10个建议与5大误区_chunk_001",
+    "玥堂主【投资&创新】200+思维套图合集_chunk_001"
+  ],
+  "skus": [
+    {
+      "sku_id": "sku_001",
+      "name": "BSC平衡计分卡基本定义",
+      "classification": "factual",
+      "path": "factual/sku_001",
+      "source_chunk": "BSC七步法：设计企业的战略地图_chunk_001",
+      "character_count": 301,
+      "description": "介绍BSC平衡计分卡的基础信息、核心定位、构成逻辑和核心价值",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_002",
+      "name": "BSC平衡计分卡四大核心维度",
+      "classification": "factual",
+      "path": "factual/sku_002",
+      "source_chunk": "BSC七步法：设计企业的战略地图_chunk_001",
+      "character_count": 255,
+      "description": "明确BSC平衡计分卡四大核心维度的覆盖范围和对应作用",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_003",
+      "name": "BSC平衡计分卡五项平衡特性",
+      "classification": "factual",
+      "path": "factual/sku_003",
+      "source_chunk": "BSC七步法：设计企业的战略地图_chunk_001",
+      "character_count": 257,
+      "description": "梳理BSC平衡计分卡具备的五类平衡特性及对应价值",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_004",
+      "name": "ESG评价体系定义",
+      "classification": "factual",
+      "path": "factual/sku_004",
+      "source_chunk": "BSC七步法：设计企业的战略地图_chunk_001",
+      "character_count": 133,
+      "description": "介绍ESG评价体系的创建主体、评估内容和适用场景",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_005",
+      "name": "BSC平衡计分卡落地实施七步法",
+      "classification": "factual",
+      "path": "factual/sku_005",
+      "source_chunk": "BSC七步法：设计企业的战略地图_chunk_001",
+      "character_count": 497,
+      "description": "列明企业推行BSC平衡计分卡、搭建战略地图的七步标准化操作流程",
+      "confidence": null
+    },
+    {
+      "sku_id": "skill_001",
+      "name": "bsc-strategy-map-construction-seven-step-method",
+      "classification": "procedural",
+      "path": "procedural/skill_001",
+      "source_chunk": "BSC七步法：设计企业的战略地图_chunk_001",
+      "character_count": 746,
+      "description": "当企业需要将战略落地、设计战略地图、构建平衡计分卡绩效管理体系时使用",
+      "confidence": null
+    },
+    {
+      "sku_id": "skill_002",
+      "name": "bsc-based-manager-potential-assessment-method",
+      "classification": "procedural",
+      "path": "procedural/skill_002",
+      "source_chunk": "BSC七步法：设计企业的战略地图_chunk_001",
+      "character_count": 500,
+      "description": "当需要评估管理者战略对齐能力、识别高潜力管理人才时使用",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_006",
+      "name": "巴菲特企业护城河判定标准",
+      "classification": "factual",
+      "path": "factual/sku_006",
+      "source_chunk": "企业战略与财富增长创新蓝宝书_chunk_001",
+      "character_count": 199,
+      "description": "巴菲特提出的衡量企业是否具备核心竞争壁垒的四条标准，以及护城河的局限性说明",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_007",
+      "name": "全球大类资产长期收益对比",
+      "classification": "factual",
+      "path": "factual/sku_007",
+      "source_chunk": "企业战略与财富增长创新蓝宝书_chunk_001",
+      "character_count": 276,
+      "description": "过去100年美国及中国不同大类资产的涨幅对比数据",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_008",
+      "name": "康波周期核心理论与历史演进",
+      "classification": "factual",
+      "path": "factual/sku_008",
+      "source_chunk": "企业战略与财富增长创新蓝宝书_chunk_001",
+      "character_count": 239,
+      "description": "康德拉季耶夫长波周期的定义、驱动因素、周期长度及历史上的五次康波情况",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_009",
+      "name": "中国改革开放以来的8次全民财富机遇",
+      "classification": "factual",
+      "path": "factual/sku_009",
+      "source_chunk": "企业战略与财富增长创新蓝宝书_chunk_001",
+      "character_count": 207,
+      "description": "中国改革开放至今普通民众可抓住的8次改变命运的时代级财富机会",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_010",
+      "name": "未来10年中国A股发展7大趋势",
+      "classification": "factual",
+      "path": "factual/sku_010",
+      "source_chunk": "企业战略与财富增长创新蓝宝书_chunk_001",
+      "character_count": 321,
+      "description": "对未来10年中国资本市场发展方向的7个核心判断",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_011",
+      "name": "企业布局未来资产的7大核心关键词",
+      "classification": "factual",
+      "path": "factual/sku_011",
+      "source_chunk": "企业战略与财富增长创新蓝宝书_chunk_001",
+      "character_count": 508,
+      "description": "指导企业、企业家判断趋势、布局资产的7个核心维度及内涵",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_012",
+      "name": "企业需要穿越的三类核心周期",
+      "classification": "factual",
+      "path": "factual/sku_012",
+      "source_chunk": "企业战略与财富增长创新蓝宝书_chunk_001",
+      "character_count": 167,
+      "description": "企业发展过程中需要应对的三类核心周期的特征及影响",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_013",
+      "name": "企业家应对不确定性的三大对冲策略",
+      "classification": "factual",
+      "path": "factual/sku_013",
+      "source_chunk": "企业战略与财富增长创新蓝宝书_chunk_001",
+      "character_count": 144,
+      "description": "在宏观不确定性环境下，企业家分散风险、稳定发展的三个核心对冲手段",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_014",
+      "name": "企业生命周期四大核心基因",
+      "classification": "factual",
+      "path": "factual/sku_014",
+      "source_chunk": "企业战略与财富增长创新蓝宝书_chunk_001",
+      "character_count": 140,
+      "description": "《企业生命周期》理论中提出的决定企业发展活力的四大核心基因",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_015",
+      "name": "连界核心业务模式与业绩",
+      "classification": "factual",
+      "path": "factual/sku_015",
+      "source_chunk": "企业战略与财富增长创新蓝宝书_chunk_001",
+      "character_count": 182,
+      "description": "连界公司的业务架构、核心逻辑及过往投资业绩",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_016",
+      "name": "核心资产定义与特征",
+      "classification": "factual",
+      "path": "factual/sku_016",
+      "source_chunk": "企业战略与财富增长创新蓝宝书_chunk_001",
+      "character_count": 82,
+      "description": "核心资产的分类、核心特征及未来10年增量核心资产的方向",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_017",
+      "name": "2020年全球货币放水与资产涨幅数据",
+      "classification": "factual",
+      "path": "factual/sku_017",
+      "source_chunk": "企业战略与财富增长创新蓝宝书_chunk_001",
+      "character_count": 204,
+      "description": "2020年新冠疫情期间全球央行放水规模及各类资产的涨幅数据",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_018",
+      "name": "2022年中美GDP与资本市场规模对比",
+      "classification": "factual",
+      "path": "factual/sku_018",
+      "source_chunk": "企业战略与财富增长创新蓝宝书_chunk_001",
+      "character_count": 298,
+      "description": "2022年末中美两国GDP、股市总市值及股市总市值占GDP比例的对比数据",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_019",
+      "name": "中外企业平均寿命数据",
+      "classification": "factual",
+      "path": "factual/sku_019",
+      "source_chunk": "企业战略与财富增长创新蓝宝书_chunk_001",
+      "character_count": 169,
+      "description": "中国及全球不同类型企业的平均寿命统计数据",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_020",
+      "name": "王玥（玥堂主）的创业历程",
+      "classification": "factual",
+      "path": "factual/sku_020",
+      "source_chunk": "企业战略与财富增长创新蓝宝书_chunk_001",
+      "character_count": 307,
+      "description": "连界董事长王玥的主要职业与创业经历节点",
+      "confidence": null
+    },
+    {
+      "sku_id": "skill_003",
+      "name": "enterprise-second-curve-layout-method",
+      "classification": "procedural",
+      "path": "procedural/skill_003",
+      "source_chunk": "企业战略与财富增长创新蓝宝书_chunk_001",
+      "character_count": 307,
+      "description": "当企业需要寻找新增长曲线，避免生命周期停滞，突破增长瓶颈时使用",
+      "confidence": null
+    },
+    {
+      "sku_id": "skill_004",
+      "name": "uncertainty-risk-hedging-strategy",
+      "classification": "procedural",
+      "path": "procedural/skill_004",
+      "source_chunk": "企业战略与财富增长创新蓝宝书_chunk_001",
+      "character_count": 294,
+      "description": "当宏观环境不确定性高，企业家需要对冲经营与财富缩水风险时使用",
+      "confidence": null
+    },
+    {
+      "sku_id": "skill_005",
+      "name": "core-asset-identification-method",
+      "classification": "procedural",
+      "path": "procedural/skill_005",
+      "source_chunk": "企业战略与财富增长创新蓝宝书_chunk_001",
+      "character_count": 383,
+      "description": "当需要识别可长期持有、具备高增长潜力的核心资产做投资布局时使用",
+      "confidence": null
+    },
+    {
+      "sku_id": "skill_006",
+      "name": "enterprise-cycle-position-judgment-method",
+      "classification": "procedural",
+      "path": "procedural/skill_006",
+      "source_chunk": "企业战略与财富增长创新蓝宝书_chunk_001",
+      "character_count": 417,
+      "description": "当需要判断企业所处发展阶段，制定匹配的经营发展战略时使用",
+      "confidence": null
+    },
+    {
+      "sku_id": "skill_007",
+      "name": "innovation-strategy-formulation-method",
+      "classification": "procedural",
+      "path": "procedural/skill_007",
+      "source_chunk": "企业战略与财富增长创新蓝宝书_chunk_001",
+      "character_count": 347,
+      "description": "当企业需要制定符合周期趋势、兼顾创新与增长的长期发展战略时使用",
+      "confidence": null
+    },
+    {
+      "sku_id": "skill_008",
+      "name": "capital-cycle-utilization-method",
+      "classification": "procedural",
+      "path": "procedural/skill_008",
+      "source_chunk": "企业战略与财富增长创新蓝宝书_chunk_001",
+      "character_count": 364,
+      "description": "当企业需要融资，借助资本力量加速发展、增强抗风险能力时使用",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_021",
+      "name": "大国博弈圈层驱动产业分析模型",
+      "classification": "factual",
+      "path": "factual/sku_021",
+      "source_chunk": "2026六大新兴产业发展形势展望_chunk_001",
+      "character_count": 253,
+      "description": "一套用于解构新兴产业发展逻辑的宏观分析框架，明确各圈层的功能定位与互动关系，可应用于多领域产业形势研判。",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_022",
+      "name": "2025年中国低空经济核心运营统计数据",
+      "classification": "factual",
+      "path": "factual/sku_022",
+      "source_chunk": "2026六大新兴产业发展形势展望_chunk_001",
+      "character_count": 272,
+      "description": "2025年中国低空经济各细分领域已公布的市场规模、运营主体、运行时长等统计指标。",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_023",
+      "name": "2026年中国低空经济发展核心判断",
+      "classification": "factual",
+      "path": "factual/sku_023",
+      "source_chunk": "2026六大新兴产业发展形势展望_chunk_001",
+      "character_count": 439,
+      "description": "2026年中国低空经济所处的发展阶段、核心驱动因素、各圈层发展特征及区域布局方向。",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_024",
+      "name": "2026年中国人工智能治理发展核心判断",
+      "classification": "factual",
+      "path": "factual/sku_024",
+      "source_chunk": "2026六大新兴产业发展形势展望_chunk_001",
+      "character_count": 409,
+      "description": "2026年中国人工智能治理所处的发展阶段、核心主线及各圈层发展特征。",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_025",
+      "name": "人工智能治理核心资产类型",
+      "classification": "factual",
+      "path": "factual/sku_025",
+      "source_chunk": "2026六大新兴产业发展形势展望_chunk_001",
+      "character_count": 109,
+      "description": "人工智能治理博弈过程中沉淀的四类高价值核心资产。",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_026",
+      "name": "2025年全球商业航天市场格局统计数据",
+      "classification": "factual",
+      "path": "factual/sku_026",
+      "source_chunk": "2026六大新兴产业发展形势展望_chunk_001",
+      "character_count": 240,
+      "description": "2025年全球商业航天市场规模、竞争格局的相关统计与判断。",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_027",
+      "name": "2026年中国商业航天发展核心判断",
+      "classification": "factual",
+      "path": "factual/sku_027",
+      "source_chunk": "2026六大新兴产业发展形势展望_chunk_001",
+      "character_count": 426,
+      "description": "2026年中国商业航天所处的发展阶段、核心主线及各圈层发展特征。",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_028",
+      "name": "中国商业航天区域功能分工布局",
+      "classification": "factual",
+      "path": "factual/sku_028",
+      "source_chunk": "2026六大新兴产业发展形势展望_chunk_001",
+      "character_count": 410,
+      "description": "中国商业航天产业全国统筹下的各区域功能定位、核心方向与沉淀资产类型。",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_029",
+      "name": "2026年中国未来产业发展核心判断",
+      "classification": "factual",
+      "path": "factual/sku_029",
+      "source_chunk": "2026六大新兴产业发展形势展望_chunk_001",
+      "character_count": 408,
+      "description": "2026年中国未来产业所处的发展阶段、核心主线及各圈层发展特征。",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_030",
+      "name": "未来产业核心参与者角色分类",
+      "classification": "factual",
+      "path": "factual/sku_030",
+      "source_chunk": "2026六大新兴产业发展形势展望_chunk_001",
+      "character_count": 413,
+      "description": "未来产业赛道中三类核心参与者的定位、核心能力要求与成功标志。",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_031",
+      "name": "2025年中国消费品工业运行统计数据",
+      "classification": "factual",
+      "path": "factual/sku_031",
+      "source_chunk": "2026六大新兴产业发展形势展望_chunk_001",
+      "character_count": 206,
+      "description": "2025年1-10月中国消费品工业及细分行业的增加值增速、占比等统计指标。",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_032",
+      "name": "2026年中国消费品工业发展核心判断",
+      "classification": "factual",
+      "path": "factual/sku_032",
+      "source_chunk": "2026六大新兴产业发展形势展望_chunk_001",
+      "character_count": 390,
+      "description": "2026年中国消费品工业所处的发展阶段、核心主线及各圈层发展特征。",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_033",
+      "name": "2025年中国新型电池产业运行统计数据",
+      "classification": "factual",
+      "path": "factual/sku_033",
+      "source_chunk": "2026六大新兴产业发展形势展望_chunk_001",
+      "character_count": 209,
+      "description": "2025年1-9月中国锂电池及上游核心材料的产量、增速等统计指标。",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_034",
+      "name": "2026年中国新型电池产业发展核心判断",
+      "classification": "factual",
+      "path": "factual/sku_034",
+      "source_chunk": "2026六大新兴产业发展形势展望_chunk_001",
+      "character_count": 365,
+      "description": "2026年中国新型电池产业所处的发展阶段、核心主线及各圈层发展特征。",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_035",
+      "name": "新型电池主流技术路线适配场景",
+      "classification": "factual",
+      "path": "factual/sku_035",
+      "source_chunk": "2026六大新兴产业发展形势展望_chunk_001",
+      "character_count": 490,
+      "description": "各类新型电池技术路线的核心特点与适配的应用场景。",
+      "confidence": null
+    },
+    {
+      "sku_id": "skill_009",
+      "name": "great-power-game-circle-driven-industry-analysis",
+      "classification": "procedural",
+      "path": "procedural/skill_009",
+      "source_chunk": "2026六大新兴产业发展形势展望_chunk_001",
+      "character_count": 537,
+      "description": "需要对低空经济、AI治理、商业航天、新型电池等新兴产业进行系统性战略分析、趋势预判、价值识别时使用",
+      "confidence": null
+    },
+    {
+      "sku_id": "skill_010",
+      "name": "future-industry-option-investment-evaluation",
+      "classification": "procedural",
+      "path": "procedural/skill_010",
+      "source_chunk": "2026六大新兴产业发展形势展望_chunk_001",
+      "character_count": 521,
+      "description": "需要对量子计算、可控核聚变、合成生物等未来产业早期项目进行投资评估、价值判断时使用",
+      "confidence": null
+    },
+    {
+      "sku_id": "skill_011",
+      "name": "consumer-goods-scenario-co-creation-method",
+      "classification": "procedural",
+      "path": "procedural/skill_011",
+      "source_chunk": "2026六大新兴产业发展形势展望_chunk_001",
+      "character_count": 399,
+      "description": "消费品企业需要挖掘新需求、创造新消费场景、突破同质化竞争推出创新产品时使用",
+      "confidence": null
+    },
+    {
+      "sku_id": "skill_012",
+      "name": "new-battery-technology-industrialization-workflow",
+      "classification": "procedural",
+      "path": "procedural/skill_012",
+      "source_chunk": "2026六大新兴产业发展形势展望_chunk_001",
+      "character_count": 504,
+      "description": "需要推进固态电池、钠离子电池等新型电池技术从实验室样品走向规模化商业化时使用",
+      "confidence": null
+    },
+    {
+      "sku_id": "skill_013",
+      "name": "future-industry-regional-functional-positioning",
+      "classification": "procedural",
+      "path": "procedural/skill_013",
+      "source_chunk": "2026六大新兴产业发展形势展望_chunk_001",
+      "character_count": 520,
+      "description": "地方政府规划未来产业布局、明确差异化发展定位、避免同质化低水平竞争时使用",
+      "confidence": null
+    },
+    {
+      "sku_id": "skill_014",
+      "name": "ai-governance-regulatory-sandbox-implementation",
+      "classification": "procedural",
+      "path": "procedural/skill_014",
+      "source_chunk": "2026六大新兴产业发展形势展望_chunk_001",
+      "character_count": 452,
+      "description": "监管部门或企业需要对AI新技术、新商业模式进行合规测试、风险验证时使用",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_036",
+      "name": "企业发展的三大叠加周期",
+      "classification": "factual",
+      "path": "factual/sku_036",
+      "source_chunk": "企业战略与财富增长创新蓝宝书_chunk_002",
+      "character_count": 205,
+      "description": "企业发展本质上受三类周期的叠加效应影响，可用于识别企业所处发展状态",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_037",
+      "name": "企业生命周期四大阶段特征",
+      "classification": "factual",
+      "path": "factual/sku_037",
+      "source_chunk": "企业战略与财富增长创新蓝宝书_chunk_002",
+      "character_count": 362,
+      "description": "企业生命周期可划分为四大阶段，各阶段有对应的典型特征与核心风险",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_038",
+      "name": "企业真假资源判断标准",
+      "classification": "factual",
+      "path": "factual/sku_038",
+      "source_chunk": "企业战略与财富增长创新蓝宝书_chunk_002",
+      "character_count": 179,
+      "description": "企业发展依赖的资源可分为真资源与假资源，假资源无法支撑长期增长，真资源具备三大核心特征",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_039",
+      "name": "传统企业家穿越周期的三条实践路径",
+      "classification": "factual",
+      "path": "factual/sku_039",
+      "source_chunk": "企业战略与财富增长创新蓝宝书_chunk_002",
+      "character_count": 152,
+      "description": "传统企业可通过三类路径实现与新技术、新趋势的结合，突破增长瓶颈",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_040",
+      "name": "创新企业跨越周期的核心思维与落地建议",
+      "classification": "factual",
+      "path": "factual/sku_040",
+      "source_chunk": "企业战略与财富增长创新蓝宝书_chunk_002",
+      "character_count": 244,
+      "description": "创新企业跨越周期需重点关注趋势与资本两大维度，配套三大落地动作",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_041",
+      "name": "康波周期核心规律与中国发展机遇",
+      "classification": "factual",
+      "path": "factual/sku_041",
+      "source_chunk": "企业战略与财富增长创新蓝宝书_chunk_002",
+      "character_count": 272,
+      "description": "康波周期是技术革命驱动产业周期的核心规律，当前正处于第五次向第六次康波转换的阶段",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_042",
+      "name": "中国多层次资本市场发展现状与趋势",
+      "classification": "factual",
+      "path": "factual/sku_042",
+      "source_chunk": "企业战略与财富增长创新蓝宝书_chunk_002",
+      "character_count": 311,
+      "description": "中国注册制改革后已形成多层次资本市场，未来将呈现规模扩张、优胜劣汰的特征",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_043",
+      "name": "有根企业的三大核心能力",
+      "classification": "factual",
+      "path": "factual/sku_043",
+      "source_chunk": "企业战略与财富增长创新蓝宝书_chunk_002",
+      "character_count": 200,
+      "description": "具备“脑中有魂、胸中有气、脚上有力”的有根企业，需具备三大核心战略能力",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_044",
+      "name": "商业模式梳理的十大核心问题",
+      "classification": "factual",
+      "path": "factual/sku_044",
+      "source_chunk": "企业战略与财富增长创新蓝宝书_chunk_002",
+      "character_count": 446,
+      "description": "梳理企业商业模式可通过十大问题逐一明确，形成清晰的商业逻辑",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_045",
+      "name": "BSC平衡计分卡战略工具",
+      "classification": "factual",
+      "path": "factual/sku_045",
+      "source_chunk": "企业战略与财富增长创新蓝宝书_chunk_002",
+      "character_count": 526,
+      "description": "BSC平衡计分卡是从四大维度将组织战略落地为可操作指标的管理工具，可用于战略规划、绩效考核、管理者能力评估",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_046",
+      "name": "企业真实与虚假护城河判断标准",
+      "classification": "factual",
+      "path": "factual/sku_046",
+      "source_chunk": "企业战略与财富增长创新蓝宝书_chunk_002",
+      "character_count": 679,
+      "description": "企业护城河是创造超额利润的可持续核心优势，可分为四类真实护城河与四类虚假护城河",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_047",
+      "name": "三大产业阶段的商业模式设计框架",
+      "classification": "factual",
+      "path": "factual/sku_047",
+      "source_chunk": "企业战略与财富增长创新蓝宝书_chunk_002",
+      "character_count": 1225,
+      "description": "产业发展可分为天使市场、高增长市场、规模稳定市场三个阶段，各阶段需匹配对应的商业模式与评价指标",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_048",
+      "name": "企业结构性增长两步方法论",
+      "classification": "factual",
+      "path": "factual/sku_048",
+      "source_chunk": "企业战略与财富增长创新蓝宝书_chunk_002",
+      "character_count": 451,
+      "description": "面临产业周期、组织周期加速，资本周期摇摆的三大挑战，企业可通过两步法实现结构性增长",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_049",
+      "name": "企业增长的七大维度",
+      "classification": "factual",
+      "path": "factual/sku_049",
+      "source_chunk": "企业战略与财富增长创新蓝宝书_chunk_002",
+      "character_count": 238,
+      "description": "企业增长可分为七大维度，前五个属于第一曲线增长，后两个属于第二曲线增长",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_050",
+      "name": "企业生态位战略四大思维模型",
+      "classification": "factual",
+      "path": "factual/sku_050",
+      "source_chunk": "企业战略与财富增长创新蓝宝书_chunk_002",
+      "character_count": 308,
+      "description": "企业找到并锁定战略生态位，需运用四大核心思维模型分步落地",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_051",
+      "name": "企业创新布局的3B策略",
+      "classification": "factual",
+      "path": "factual/sku_051",
+      "source_chunk": "企业战略与财富增长创新蓝宝书_chunk_002",
+      "character_count": 331,
+      "description": "企业布局创新业务可采用Buy、Borrow、Build三种核心策略，小米生态投资有六大筛选标准",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_052",
+      "name": "财富增长三大认知账户",
+      "classification": "factual",
+      "path": "factual/sku_052",
+      "source_chunk": "企业战略与财富增长创新蓝宝书_chunk_002",
+      "character_count": 181,
+      "description": "个人与家族的财富管理需同时建设三大认知账户，实现财富的长期价值",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_053",
+      "name": "财富本质与核心资产判断逻辑",
+      "classification": "factual",
+      "path": "factual/sku_053",
+      "source_chunk": "企业战略与财富增长创新蓝宝书_chunk_002",
+      "character_count": 378,
+      "description": "货币本质是政府发行的交易筹码，核心资产由规则塑造，判断资产价值需结合接盘能力与信贷属性",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_054",
+      "name": "后地产时代的资产配置逻辑",
+      "classification": "factual",
+      "path": "factual/sku_054",
+      "source_chunk": "企业战略与财富增长创新蓝宝书_chunk_002",
+      "character_count": 182,
+      "description": "房地产的黄金增长窗口已关闭，需通过配置高增长资产对冲货币超发的稀释效应",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_055",
+      "name": "养老规划核心参考数据与动作建议",
+      "classification": "factual",
+      "path": "factual/sku_055",
+      "source_chunk": "企业战略与财富增长创新蓝宝书_chunk_002",
+      "character_count": 410,
+      "description": "中国已进入老龄化社会，现有养老体系不足以支撑体面的老年生活，需提前做好财富规划",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_056",
+      "name": "一流公司投资公式",
+      "classification": "factual",
+      "path": "factual/sku_056",
+      "source_chunk": "企业战略与财富增长创新蓝宝书_chunk_002",
+      "character_count": 526,
+      "description": "筛选优质投资标的可从对的交易、对的模式、对的人三个维度评估，核心资产需符合货币、科技、产业链三大周期的黄金三角标准",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_057",
+      "name": "给中国企业家的五条核心建议",
+      "classification": "factual",
+      "path": "factual/sku_057",
+      "source_chunk": "企业战略与财富增长创新蓝宝书_chunk_002",
+      "character_count": 207,
+      "description": "周期切换阶段的中国企业家可遵循五条建议，抓住结构性增长机会",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_058",
+      "name": "时间投资核心原则",
+      "classification": "factual",
+      "path": "factual/sku_058",
+      "source_chunk": "企业战略与财富增长创新蓝宝书_chunk_002",
+      "character_count": 159,
+      "description": "时间是个人最核心的不可再生资产，需成为成功的时间投资人，实现时间价值最大化",
+      "confidence": null
+    },
+    {
+      "sku_id": "skill_015",
+      "name": "enterprise-status-3-cycle-overlay-analysis",
+      "classification": "procedural",
+      "path": "procedural/skill_015",
+      "source_chunk": "企业战略与财富增长创新蓝宝书_chunk_002",
+      "character_count": 380,
+      "description": "企业家识别企业发展状态、判断发展机遇和风险时使用",
+      "confidence": null
+    },
+    {
+      "sku_id": "skill_016",
+      "name": "enterprise-lifecycle-4-stage-diagnosis-response",
+      "classification": "procedural",
+      "path": "procedural/skill_016",
+      "source_chunk": "企业战略与财富增长创新蓝宝书_chunk_002",
+      "character_count": 503,
+      "description": "企业家诊断企业所处发展阶段、针对性解决核心问题、延长生命周期时使用",
+      "confidence": null
+    },
+    {
+      "sku_id": "skill_017",
+      "name": "business-model-clarification-10-questions",
+      "classification": "procedural",
+      "path": "procedural/skill_017",
+      "source_chunk": "企业战略与财富增长创新蓝宝书_chunk_002",
+      "character_count": 423,
+      "description": "创业者梳理自身商业模式、撰写商业计划书或投资人评估项目商业价值时使用",
+      "confidence": null
+    },
+    {
+      "sku_id": "skill_018",
+      "name": "balanced-scorecard-7-step-implementation",
+      "classification": "procedural",
+      "path": "procedural/skill_018",
+      "source_chunk": "企业战略与财富增长创新蓝宝书_chunk_002",
+      "character_count": 453,
+      "description": "企业制定战略地图、拆解绩效指标、对齐组织战略目标时使用",
+      "confidence": null
+    },
+    {
+      "sku_id": "skill_019",
+      "name": "enterprise-moat-4-dimension-analysis",
+      "classification": "procedural",
+      "path": "procedural/skill_019",
+      "source_chunk": "企业战略与财富增长创新蓝宝书_chunk_002",
+      "character_count": 422,
+      "description": "投资者评估企业长期投资价值、判断超额利润可持续性时使用",
+      "confidence": null
+    },
+    {
+      "sku_id": "skill_020",
+      "name": "industry-stage-adaptive-business-model-design",
+      "classification": "procedural",
+      "path": "procedural/skill_020",
+      "source_chunk": "企业战略与财富增长创新蓝宝书_chunk_002",
+      "character_count": 426,
+      "description": "企业根据所处产业发展阶段设计匹配商业模式、突破同质化竞争时使用",
+      "confidence": null
+    },
+    {
+      "sku_id": "skill_021",
+      "name": "enterprise-growth-direction-7-dimension-analysis",
+      "classification": "procedural",
+      "path": "procedural/skill_021",
+      "source_chunk": "企业战略与财富增长创新蓝宝书_chunk_002",
+      "character_count": 406,
+      "description": "企业寻找增长机会、规划第一/第二增长曲线时使用",
+      "confidence": null
+    },
+    {
+      "sku_id": "skill_022",
+      "name": "cyclical-structural-growth-2-step-methodology",
+      "classification": "procedural",
+      "path": "procedural/skill_022",
+      "source_chunk": "企业战略与财富增长创新蓝宝书_chunk_002",
+      "character_count": 436,
+      "description": "企业面临产业/组织周期加速、资本周期摇摆挑战时，寻找新增长点时使用",
+      "confidence": null
+    },
+    {
+      "sku_id": "skill_023",
+      "name": "enterprise-niche-strategy-4-step-implementation",
+      "classification": "procedural",
+      "path": "procedural/skill_023",
+      "source_chunk": "企业战略与财富增长创新蓝宝书_chunk_002",
+      "character_count": 361,
+      "description": "企业在竞争中寻找关键战略位置、构建差异化竞争优势时使用",
+      "confidence": null
+    },
+    {
+      "sku_id": "skill_024",
+      "name": "enterprise-innovation-3b-strategy-implementation",
+      "classification": "procedural",
+      "path": "procedural/skill_024",
+      "source_chunk": "企业战略与财富增长创新蓝宝书_chunk_002",
+      "character_count": 447,
+      "description": "企业布局创新业务、构建第二增长曲线时使用",
+      "confidence": null
+    },
+    {
+      "sku_id": "skill_025",
+      "name": "core-asset-investment-cat-analysis",
+      "classification": "procedural",
+      "path": "procedural/skill_025",
+      "source_chunk": "企业战略与财富增长创新蓝宝书_chunk_002",
+      "character_count": 388,
+      "description": "投资者评估一级/二级市场科技企业投资价值、判断交易合理性时使用",
+      "confidence": null
+    },
+    {
+      "sku_id": "skill_026",
+      "name": "personal-wealth-3-account-allocation",
+      "classification": "procedural",
+      "path": "procedural/skill_026",
+      "source_chunk": "企业战略与财富增长创新蓝宝书_chunk_002",
+      "character_count": 345,
+      "description": "高净值人群进行家族财富配置、实现财富传承和社会价值时使用",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_059",
+      "name": "技术进化S曲线与Gartner技术曲线特征对比",
+      "classification": "factual",
+      "path": "factual/sku_059",
+      "source_chunk": "科技战略与投资策略10个建议与5大误区_chunk_001",
+      "character_count": 352,
+      "description": "对比完整技术进化S曲线和Gartner公布的技术曲线（G曲线）的阶段划分及二者在技术产业化过程中的对应关系",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_060",
+      "name": "技术产业化的两个核心关键时刻",
+      "classification": "factual",
+      "path": "factual/sku_060",
+      "source_chunk": "科技战略与投资策略10个建议与5大误区_chunk_001",
+      "character_count": 201,
+      "description": "介绍技术产业化过程中的魔幻（泡沫）时刻和黄金时刻的特征及对应企业经营策略",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_061",
+      "name": "科技企业产业黄金时刻面临的两类竞争威胁",
+      "classification": "factual",
+      "path": "factual/sku_061",
+      "source_chunk": "科技战略与投资策略10个建议与5大误区_chunk_001",
+      "character_count": 144,
+      "description": "介绍科技企业进入技术产业化黄金时刻后可能遭遇的两类外部竞争主体的特征及典型案例",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_062",
+      "name": "茅台设立百亿科技基金的战略价值",
+      "classification": "factual",
+      "path": "factual/sku_062",
+      "source_chunk": "科技战略与投资策略10个建议与5大误区_chunk_001",
+      "character_count": 148,
+      "description": "分析茅台布局科技领域的双重战略意义及行业示范效应",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_063",
+      "name": "纳微级3D打印企业摩方精密的技术特征及商业模式升级",
+      "classification": "factual",
+      "path": "factual/sku_063",
+      "source_chunk": "科技战略与投资策略10个建议与5大误区_chunk_001",
+      "character_count": 206,
+      "description": "介绍全球顶级纳微级3D打印企业摩方精密的技术优势、原有商业模式痛点及升级路径",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_064",
+      "name": "不同市场主体技术产业化的最优入局时间",
+      "classification": "factual",
+      "path": "factual/sku_064",
+      "source_chunk": "科技战略与投资策略10个建议与5大误区_chunk_001",
+      "character_count": 148,
+      "description": "分别介绍初创企业、产业投资人、大型企业在技术产业化不同阶段的最优入局时机及策略",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_065",
+      "name": "科技创业企业的融资对象选择建议",
+      "classification": "factual",
+      "path": "factual/sku_065",
+      "source_chunk": "科技战略与投资策略10个建议与5大误区_chunk_001",
+      "character_count": 114,
+      "description": "介绍科技类创业企业选择投资方的核心建议及产业方投资的优势",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_066",
+      "name": "一级市场及产业CVC偏好的创业团队特征",
+      "classification": "factual",
+      "path": "factual/sku_066",
+      "source_chunk": "科技战略与投资策略10个建议与5大误区_chunk_001",
+      "character_count": 150,
+      "description": "介绍一级市场投资机构和企业战投部门优先选择的创业团队的核心特征",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_067",
+      "name": "三四线城市创业者的「游泳式呼吸」成功模式",
+      "classification": "factual",
+      "path": "factual/sku_067",
+      "source_chunk": "科技战略与投资策略10个建议与5大误区_chunk_001",
+      "character_count": 136,
+      "description": "介绍下沉市场创业者的典型成功模式及核心能力要求",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_068",
+      "name": "中美博弈背景下的科技领域重点投资方向筛选逻辑",
+      "classification": "factual",
+      "path": "factual/sku_068",
+      "source_chunk": "科技战略与投资策略10个建议与5大误区_chunk_001",
+      "character_count": 113,
+      "description": "介绍基于中国产业规划和美国对华技术出口管制清单的交集确定投资方向的逻辑及核心赛道",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_069",
+      "name": "专精特新企业的发展认知误区",
+      "classification": "factual",
+      "path": "factual/sku_069",
+      "source_chunk": "科技战略与投资策略10个建议与5大误区_chunk_001",
+      "character_count": 189,
+      "description": "介绍专精特新企业普遍存在的将上市作为唯一目标的误区及正确发展路径",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_070",
+      "name": "科学家创业的角色认知误区",
+      "classification": "factual",
+      "path": "factual/sku_070",
+      "source_chunk": "科技战略与投资策略10个建议与5大误区_chunk_001",
+      "character_count": 156,
+      "description": "介绍要求所有科学家担任企业董事长的认知误区及最优团队配置方案",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_071",
+      "name": "科技与消费的边界认知误区",
+      "classification": "factual",
+      "path": "factual/sku_071",
+      "source_chunk": "科技战略与投资策略10个建议与5大误区_chunk_001",
+      "character_count": 160,
+      "description": "介绍将科技与消费完全切割的认知误区及消费领域的科技属性体现",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_072",
+      "name": "投资收益预期的认知误区",
+      "classification": "factual",
+      "path": "factual/sku_072",
+      "source_chunk": "科技战略与投资策略10个建议与5大误区_chunk_001",
+      "character_count": 149,
+      "description": "介绍当前投资领域仍存在的追求高收益赚快钱的认知误区及新周期下的收益预期调整要求",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_073",
+      "name": "「新质生产力」相关投资骗局的风险提示",
+      "classification": "factual",
+      "path": "factual/sku_073",
+      "source_chunk": "科技战略与投资策略10个建议与5大误区_chunk_001",
+      "character_count": 118,
+      "description": "介绍未来可能出现的打着新质生产力旗号的投资骗局的特征及防范方法",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_074",
+      "name": "中美博弈中美国针对中国的「一明两暗」竞争策略",
+      "classification": "factual",
+      "path": "factual/sku_074",
+      "source_chunk": "科技战略与投资策略10个建议与5大误区_chunk_001",
+      "character_count": 155,
+      "description": "介绍中美博弈背景下美国在科技和金融领域对华采取的三类竞争手段的核心内容",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_075",
+      "name": "中美科技产业转化模式对比",
+      "classification": "factual",
+      "path": "factual/sku_075",
+      "source_chunk": "科技战略与投资策略10个建议与5大误区_chunk_001",
+      "character_count": 240,
+      "description": "对比美国和中国当前的科技产业转化模式的差异及核心特征",
+      "confidence": null
+    },
+    {
+      "sku_id": "skill_027",
+      "name": "tech-startup-magic-moment-operation",
+      "classification": "procedural",
+      "path": "procedural/skill_027",
+      "source_chunk": "科技战略与投资策略10个建议与5大误区_chunk_001",
+      "character_count": 271,
+      "description": "科技创业者在技术产业化魔幻时刻（泡沫期）开展融资和运营工作时使用",
+      "confidence": null
+    },
+    {
+      "sku_id": "skill_028",
+      "name": "industrial-investor-tech-project-entry-timing-selection",
+      "classification": "procedural",
+      "path": "procedural/skill_028",
+      "source_chunk": "科技战略与投资策略10个建议与5大误区_chunk_001",
+      "character_count": 332,
+      "description": "产业投资人选择科技项目投资时机时使用",
+      "confidence": null
+    },
+    {
+      "sku_id": "skill_029",
+      "name": "tech-company-core-team-construction",
+      "classification": "procedural",
+      "path": "procedural/skill_029",
+      "source_chunk": "科技战略与投资策略10个建议与5大误区_chunk_001",
+      "character_count": 282,
+      "description": "科技类创业公司搭建核心创始团队时使用",
+      "confidence": null
+    },
+    {
+      "sku_id": "skill_030",
+      "name": "specialized-new-enterprise-development-path-selection",
+      "classification": "procedural",
+      "path": "procedural/skill_030",
+      "source_chunk": "科技战略与投资策略10个建议与5大误区_chunk_001",
+      "character_count": 298,
+      "description": "专精特新中小企业制定长期发展战略时使用",
+      "confidence": null
+    },
+    {
+      "sku_id": "skill_031",
+      "name": "hard-tech-investment-track-screening",
+      "classification": "procedural",
+      "path": "procedural/skill_031",
+      "source_chunk": "科技战略与投资策略10个建议与5大误区_chunk_001",
+      "character_count": 288,
+      "description": "筛选硬科技赛道投资方向时使用",
+      "confidence": null
+    },
+    {
+      "sku_id": "skill_032",
+      "name": "third-fourth-tier-city-swimming-breathing-entrepreneurship",
+      "classification": "procedural",
+      "path": "procedural/skill_032",
+      "source_chunk": "科技战略与投资策略10个建议与5大误区_chunk_001",
+      "character_count": 297,
+      "description": "三四线城市创业者设计创业路径时使用",
+      "confidence": null
+    },
+    {
+      "sku_id": "skill_033",
+      "name": "new-productivity-investment-scam-identification",
+      "classification": "procedural",
+      "path": "procedural/skill_033",
+      "source_chunk": "科技战略与投资策略10个建议与5大误区_chunk_001",
+      "character_count": 274,
+      "description": "识别打着新质生产力旗号的投资骗局时使用",
+      "confidence": null
+    },
+    {
+      "sku_id": "skill_034",
+      "name": "tech-enterprise-investor-selection",
+      "classification": "procedural",
+      "path": "procedural/skill_034",
+      "source_chunk": "科技战略与投资策略10个建议与5大误区_chunk_001",
+      "character_count": 259,
+      "description": "科技创业公司选择融资投资方时使用",
+      "confidence": null
+    },
+    {
+      "sku_id": "skill_035",
+      "name": "high-precision-manufacturing-business-model-upgrade",
+      "classification": "procedural",
+      "path": "procedural/skill_035",
+      "source_chunk": "科技战略与投资策略10个建议与5大误区_chunk_001",
+      "character_count": 311,
+      "description": "拥有核心技术但客户分散的高端制造企业升级商业模式时使用",
+      "confidence": null
+    },
+    {
+      "sku_id": "skill_036",
+      "name": "early-stage-investment-team-selection",
+      "classification": "procedural",
+      "path": "procedural/skill_036",
+      "source_chunk": "科技战略与投资策略10个建议与5大误区_chunk_001",
+      "character_count": 278,
+      "description": "一级市场投资人筛选初创企业投资标的时使用",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_076",
+      "name": "四大创新原型及典型代表企业",
+      "classification": "factual",
+      "path": "factual/sku_076",
+      "source_chunk": "玥堂主【投资&创新】200+思维套图合集_chunk_001",
+      "character_count": 89,
+      "description": "创新领域划分的四大原型类型及各类型对应的典型企业案例",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_077",
+      "name": "四次工业革命核心特征",
+      "classification": "factual",
+      "path": "factual/sku_077",
+      "source_chunk": "玥堂主【投资&创新】200+思维套图合集_chunk_001",
+      "character_count": 436,
+      "description": "人类近现代四次工业革命的时间区间、核心驱动技术及产生的社会价值",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_078",
+      "name": "创新相对论模型核心构成",
+      "classification": "factual",
+      "path": "factual/sku_078",
+      "source_chunk": "玥堂主【投资&创新】200+思维套图合集_chunk_001",
+      "character_count": 80,
+      "description": "创新相对论参考爱因斯坦质能公式提出的三大核心构成要素（科技创新机制、消费市场、资本市场三螺旋），构成产业创新生态的基础框架",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_079",
+      "name": "福格（Fogg）行为模型",
+      "classification": "factual",
+      "path": "factual/sku_079",
+      "source_chunk": "玥堂主【投资&创新】200+思维套图合集_chunk_001",
+      "character_count": 138,
+      "description": "福格提出的行为产生的核心构成公式及各要素含义",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_080",
+      "name": "标普500指数1940-2020年增长数据",
+      "classification": "factual",
+      "path": "factual/sku_080",
+      "source_chunk": "玥堂主【投资&创新】200+思维套图合集_chunk_001",
+      "character_count": 181,
+      "description": "标普500指数在1940-1980、1980-2020两个阶段的涨幅及对应时代背景",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_081",
+      "name": "人类社会形态演进核心特征",
+      "classification": "factual",
+      "path": "factual/sku_081",
+      "source_chunk": "玥堂主【投资&创新】200+思维套图合集_chunk_001",
+      "character_count": 388,
+      "description": "从原始社会到共产主义社会各社会形态的核心属性及唯物史观核心定义",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_082",
+      "name": "中小企业抗住困难的五字诀",
+      "classification": "factual",
+      "path": "factual/sku_082",
+      "source_chunk": "玥堂主【投资&创新】200+思维套图合集_chunk_001",
+      "character_count": 288,
+      "description": "中小企业应对经营困境的五个核心动作及对应含义",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_083",
+      "name": "邓宁·克鲁格效应核心特征",
+      "classification": "factual",
+      "path": "factual/sku_083",
+      "source_chunk": "玥堂主【投资&创新】200+思维套图合集_chunk_001",
+      "character_count": 337,
+      "description": "邓宁·克鲁格效应呈现的人认知水平与自信程度的对应关系",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_084",
+      "name": "战略三大认知迷思",
+      "classification": "factual",
+      "path": "factual/sku_084",
+      "source_chunk": "玥堂主【投资&创新】200+思维套图合集_chunk_001",
+      "character_count": 234,
+      "description": "关于战略的三个常见错误认知及正确定义，明确战略是明确行动取舍+资源倾斜配置的二元结构，而非单纯的竞争、增长计划或目标设定",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_085",
+      "name": "企业生命底层四大核心基因",
+      "classification": "factual",
+      "path": "factual/sku_085",
+      "source_chunk": "玥堂主【投资&创新】200+思维套图合集_chunk_001",
+      "character_count": 217,
+      "description": "支撑企业正常发育的四大核心基因及内涵",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_086",
+      "name": "企业生命周期各阶段核心特征与典型问题",
+      "classification": "factual",
+      "path": "factual/sku_086",
+      "source_chunk": "玥堂主【投资&创新】200+思维套图合集_chunk_001",
+      "character_count": 823,
+      "description": "企业从孕育期到死亡期全生命周期各阶段的正常特征、异常问题及发展路径",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_087",
+      "name": "决策反馈回路逻辑",
+      "classification": "factual",
+      "path": "factual/sku_087",
+      "source_chunk": "玥堂主【投资&创新】200+思维套图合集_chunk_001",
+      "character_count": 127,
+      "description": "不同场景下适用的决策思维模式及决策原则",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_088",
+      "name": "全球技术层面冲突的两大核心技术",
+      "classification": "factual",
+      "path": "factual/sku_088",
+      "source_chunk": "玥堂主【投资&创新】200+思维套图合集_chunk_001",
+      "character_count": 134,
+      "description": "当前世界两极技术冲突对应的两大核心技术及各自特征",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_089",
+      "name": "社会结构进化根本逻辑",
+      "classification": "factual",
+      "path": "factual/sku_089",
+      "source_chunk": "玥堂主【投资&创新】200+思维套图合集_chunk_001",
+      "character_count": 288,
+      "description": "社会结构进化的本质及各文明阶段核心资源",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_090",
+      "name": "老子思想中支撑创新的三大核心观点",
+      "classification": "factual",
+      "path": "factual/sku_090",
+      "source_chunk": "玥堂主【投资&创新】200+思维套图合集_chunk_001",
+      "character_count": 251,
+      "description": "老子思想中对创新有指导价值的三个核心主张及内涵",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_091",
+      "name": "技术循环周期三阶段核心特征",
+      "classification": "factual",
+      "path": "factual/sku_091",
+      "source_chunk": "玥堂主【投资&创新】200+思维套图合集_chunk_001",
+      "character_count": 211,
+      "description": "技术从初创到成熟的三个阶段的市场特征、参与主体及规则变化，涵盖早期创新、商业化、规则明确阶段的技术全生命周期监管适配原则",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_092",
+      "name": "真假资源与真假增长判定标准",
+      "classification": "factual",
+      "path": "factual/sku_092",
+      "source_chunk": "玥堂主【投资&创新】200+思维套图合集_chunk_001",
+      "character_count": 247,
+      "description": "企业经营中真假资源、真假增长的区分判定标准",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_093",
+      "name": "企业护城河五大核心类型",
+      "classification": "factual",
+      "path": "factual/sku_093",
+      "source_chunk": "玥堂主【投资&创新】200+思维套图合集_chunk_001",
+      "character_count": 414,
+      "description": "企业构建难以被对手复制的核心竞争力的五大类别及内涵",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_094",
+      "name": "创业成功核心要素占比",
+      "classification": "factual",
+      "path": "factual/sku_094",
+      "source_chunk": "玥堂主【投资&创新】200+思维套图合集_chunk_001",
+      "character_count": 117,
+      "description": "赛道选择与管理团队对创业成功的贡献占比",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_095",
+      "name": "科学家创业成功率与科技创新死亡谷",
+      "classification": "factual",
+      "path": "factual/sku_095",
+      "source_chunk": "玥堂主【投资&创新】200+思维套图合集_chunk_001",
+      "character_count": 120,
+      "description": "科学家创业的成功概率及科技创新从研发到商业化存在的鸿沟特征",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_096",
+      "name": "终局思维提升方法",
+      "classification": "factual",
+      "path": "factual/sku_096",
+      "source_chunk": "玥堂主【投资&创新】200+思维套图合集_chunk_001",
+      "character_count": 99,
+      "description": "训练提升终局思维的两个核心方法",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_097",
+      "name": "SWOT分析核心认知",
+      "classification": "factual",
+      "path": "factual/sku_097",
+      "source_chunk": "玥堂主【投资&创新】200+思维套图合集_chunk_001",
+      "character_count": 111,
+      "description": "SWOT分析的核心特征及应用注意事项",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_098",
+      "name": "用人核心观点（用师者王）",
+      "classification": "factual",
+      "path": "factual/sku_098",
+      "source_chunk": "玥堂主【投资&创新】200+思维套图合集_chunk_001",
+      "character_count": 175,
+      "description": "不同用人方式对应的组织发展结果",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_099",
+      "name": "烟蒂股定义与投资特征",
+      "classification": "factual",
+      "path": "factual/sku_099",
+      "source_chunk": "玥堂主【投资&创新】200+思维套图合集_chunk_001",
+      "character_count": 97,
+      "description": "巴菲特提出的烟蒂股概念的内涵与投资价值",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_100",
+      "name": "格雷厄姆投资核心观点",
+      "classification": "factual",
+      "path": "factual/sku_100",
+      "source_chunk": "玥堂主【投资&创新】200+思维套图合集_chunk_001",
+      "character_count": 122,
+      "description": "证券分析之父本杰明·格雷厄姆提出的投资核心要素",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_101",
+      "name": "Gartner曲线投资应用要点",
+      "classification": "factual",
+      "path": "factual/sku_101",
+      "source_chunk": "玥堂主【投资&创新】200+思维套图合集_chunk_001",
+      "character_count": 81,
+      "description": "Gartner技术曲线对投资的指导价值",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_102",
+      "name": "BSC（平衡计分卡）核心逻辑",
+      "classification": "factual",
+      "path": "factual/sku_102",
+      "source_chunk": "玥堂主【投资&创新】200+思维套图合集_chunk_001",
+      "character_count": 186,
+      "description": "平衡计分卡作为战略绩效管理体系的四大核心维度",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_103",
+      "name": "产业渗透率与企业估值关系",
+      "classification": "factual",
+      "path": "factual/sku_103",
+      "source_chunk": "玥堂主【投资&创新】200+思维套图合集_chunk_001",
+      "character_count": 209,
+      "description": "产业渗透率不同阶段对应的企业估值特征",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_104",
+      "name": "创业核心三步骤（柳传志三原则）",
+      "classification": "factual",
+      "path": "factual/sku_104",
+      "source_chunk": "玥堂主【投资&创新】200+思维套图合集_chunk_001",
+      "character_count": 85,
+      "description": "柳传志提出的创业核心三大步骤及优先级",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_105",
+      "name": "1776年东西方核心标志性事件",
+      "classification": "factual",
+      "path": "factual/sku_105",
+      "source_chunk": "玥堂主【投资&创新】200+思维套图合集_chunk_001",
+      "character_count": 177,
+      "description": "1776年作为东西方发展分水岭的核心事件",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_106",
+      "name": "A股核心统计数据（截至2022年）",
+      "classification": "factual",
+      "path": "factual/sku_106",
+      "source_chunk": "玥堂主【投资&创新】200+思维套图合集_chunk_001",
+      "character_count": 409,
+      "description": "2012-2022年A股市场的核心统计指标",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_107",
+      "name": "全球及中国企业平均寿命统计数据",
+      "classification": "factual",
+      "path": "factual/sku_107",
+      "source_chunk": "玥堂主【投资&创新】200+思维套图合集_chunk_001",
+      "character_count": 209,
+      "description": "不同类型企业的平均寿命统计结果",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_108",
+      "name": "半导体领域卡脖子九个层次",
+      "classification": "factual",
+      "path": "factual/sku_108",
+      "source_chunk": "玥堂主【投资&创新】200+思维套图合集_chunk_001",
+      "character_count": 96,
+      "description": "半导体领域从上层应用到底层基础的九大卡脖子环节",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_109",
+      "name": "日本失去的三十年三大抗衰退行业",
+      "classification": "factual",
+      "path": "factual/sku_109",
+      "source_chunk": "玥堂主【投资&创新】200+思维套图合集_chunk_001",
+      "character_count": 122,
+      "description": "日本经济停滞三十年期间保持增长的三大核心行业",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_110",
+      "name": "上市公司老板战略三观",
+      "classification": "factual",
+      "path": "factual/sku_110",
+      "source_chunk": "玥堂主【投资&创新】200+思维套图合集_chunk_001",
+      "character_count": 175,
+      "description": "上市公司老板应具备的三大战略核心认知",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_111",
+      "name": "职场核心资产判定标准",
+      "classification": "factual",
+      "path": "factual/sku_111",
+      "source_chunk": "玥堂主【投资&创新】200+思维套图合集_chunk_001",
+      "character_count": 146,
+      "description": "职场中真正具备长期价值的核心资产特征",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_112",
+      "name": "企业第二曲线投资三大方式",
+      "classification": "factual",
+      "path": "factual/sku_112",
+      "source_chunk": "玥堂主【投资&创新】200+思维套图合集_chunk_001",
+      "character_count": 166,
+      "description": "企业布局第二曲线的三种核心投资方式及特征",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_113",
+      "name": "企业估值核心影响因素",
+      "classification": "factual",
+      "path": "factual/sku_113",
+      "source_chunk": "玥堂主【投资&创新】200+思维套图合集_chunk_001",
+      "character_count": 140,
+      "description": "资本市场对企业估值的两大核心影响因素",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_114",
+      "name": "创新传承SCL模型核心构成",
+      "classification": "factual",
+      "path": "factual/sku_114",
+      "source_chunk": "玥堂主【投资&创新】200+思维套图合集_chunk_001",
+      "character_count": 212,
+      "description": "支撑企业创新传承的SCL模型三大核心构成",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_115",
+      "name": "中美上市公司产业结构对比（截至2022年11月）",
+      "classification": "factual",
+      "path": "factual/sku_115",
+      "source_chunk": "玥堂主【投资&创新】200+思维套图合集_chunk_001",
+      "character_count": 337,
+      "description": "中美两国上市公司总市值与产业结构的对比数据",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_116",
+      "name": "Know-how（技术诀窍）定义",
+      "classification": "factual",
+      "path": "factual/sku_116",
+      "source_chunk": "玥堂主【投资&创新】200+思维套图合集_chunk_001",
+      "character_count": 90,
+      "description": "量产场景下Know-how的内涵与形成逻辑",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_117",
+      "name": "2022年全球创新指数排名Top10国家/地区",
+      "classification": "factual",
+      "path": "factual/sku_117",
+      "source_chunk": "玥堂主【投资&创新】200+思维套图合集_chunk_001",
+      "character_count": 243,
+      "description": "世界知识产权组织发布的2022年全球创新指数排名前十的国家及得分",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_118",
+      "name": "科技投资三阶段核心特征",
+      "classification": "factual",
+      "path": "factual/sku_118",
+      "source_chunk": "玥堂主【投资&创新】200+思维套图合集_chunk_001",
+      "character_count": 247,
+      "description": "科技公司从0到1到N过程中对应的三个投资阶段的核心特征",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_119",
+      "name": "企业持续增长五大核心逻辑",
+      "classification": "factual",
+      "path": "factual/sku_119",
+      "source_chunk": "玥堂主【投资&创新】200+思维套图合集_chunk_001",
+      "character_count": 85,
+      "description": "支撑企业持续增长的五大核心路径",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_120",
+      "name": "行业空间三大核心判断维度",
+      "classification": "factual",
+      "path": "factual/sku_120",
+      "source_chunk": "玥堂主【投资&创新】200+思维套图合集_chunk_001",
+      "character_count": 189,
+      "description": "判断一个行业未来增长空间的三大核心维度",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_121",
+      "name": "熵增与生命发展规律",
+      "classification": "factual",
+      "path": "factual/sku_121",
+      "source_chunk": "玥堂主【投资&创新】200+思维套图合集_chunk_001",
+      "character_count": 96,
+      "description": "物理学熵增定律与生命进化的核心关系",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_122",
+      "name": "投资四大确定性判断维度",
+      "classification": "factual",
+      "path": "factual/sku_122",
+      "source_chunk": "玥堂主【投资&创新】200+思维套图合集_chunk_001",
+      "character_count": 128,
+      "description": "投资中寻找确定性机会的四大核心判断维度",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_123",
+      "name": "行业发展五大阶段特征",
+      "classification": "factual",
+      "path": "factual/sku_123",
+      "source_chunk": "玥堂主【投资&创新】200+思维套图合集_chunk_001",
+      "character_count": 384,
+      "description": "行业从萌芽到衰落的五个发展阶段的特征与典型案例",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_124",
+      "name": "高退出壁垒行业核心类型",
+      "classification": "factual",
+      "path": "factual/sku_124",
+      "source_chunk": "玥堂主【投资&创新】200+思维套图合集_chunk_001",
+      "character_count": 226,
+      "description": "导致行业退出壁垒高的四大核心原因及典型案例",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_125",
+      "name": "人生财富积累三阶段（挣钱、赚钱、值钱）",
+      "classification": "factual",
+      "path": "factual/sku_125",
+      "source_chunk": "玥堂主【投资&创新】200+思维套图合集_chunk_001",
+      "character_count": 185,
+      "description": "个人财富积累的三个阶段的核心特征",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_126",
+      "name": "东芝事件核心脉络与启示",
+      "classification": "factual",
+      "path": "factual/sku_126",
+      "source_chunk": "玥堂主【投资&创新】200+思维套图合集_chunk_001",
+      "character_count": 209,
+      "description": "1980年代东芝向苏联出口机床事件的核心过程与背后逻辑",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_127",
+      "name": "逆周期垄断核心特征",
+      "classification": "factual",
+      "path": "factual/sku_127",
+      "source_chunk": "玥堂主【投资&创新】200+思维套图合集_chunk_001",
+      "character_count": 158,
+      "description": "不同经济周期下市场竞争格局的变化特征",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_128",
+      "name": "企业新业务失败两大核心原因",
+      "classification": "factual",
+      "path": "factual/sku_128",
+      "source_chunk": "玥堂主【投资&创新】200+思维套图合集_chunk_001",
+      "character_count": 132,
+      "description": "企业布局新业务无法成功起飞的两大核心原因",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_129",
+      "name": "商业模式核心不可复制要素",
+      "classification": "factual",
+      "path": "factual/sku_129",
+      "source_chunk": "玥堂主【投资&创新】200+思维套图合集_chunk_001",
+      "character_count": 81,
+      "description": "商业模式中最难复制的核心要素",
+      "confidence": null
+    },
+    {
+      "sku_id": "skill_037",
+      "name": "sme-hardship-resistance-five-character-workflow",
+      "classification": "procedural",
+      "path": "procedural/skill_037",
+      "source_chunk": "玥堂主【投资&创新】200+思维套图合集_chunk_001",
+      "character_count": 322,
+      "description": "中小企业遭遇经营困难时使用，用于提升生存概率、平稳渡过难关",
+      "confidence": null
+    },
+    {
+      "sku_id": "skill_038",
+      "name": "scientific-decision-making-workflow",
+      "classification": "procedural",
+      "path": "procedural/skill_038",
+      "source_chunk": "玥堂主【投资&创新】200+思维套图合集_chunk_001",
+      "character_count": 249,
+      "description": "企业或个人面临重要决策时使用，提升决策的准确性与可行性",
+      "confidence": null
+    },
+    {
+      "sku_id": "skill_039",
+      "name": "toddler-stage-enterprise-sales-risk-prevention",
+      "classification": "procedural",
+      "path": "procedural/skill_039",
+      "source_chunk": "玥堂主【投资&创新】200+思维套图合集_chunk_001",
+      "character_count": 306,
+      "description": "企业进入学步期（有稳定客户、重复购买）时使用，避免反应性销售陷阱",
+      "confidence": null
+    },
+    {
+      "sku_id": "skill_040",
+      "name": "end-game-thinking-training-method",
+      "classification": "procedural",
+      "path": "procedural/skill_040",
+      "source_chunk": "玥堂主【投资&创新】200+思维套图合集_chunk_001",
+      "character_count": 241,
+      "description": "企投家制定战略时使用，避免战术勤奋掩盖战略懒惰",
+      "confidence": null
+    },
+    {
+      "sku_id": "skill_041",
+      "name": "second-growth-curve-layout-workflow",
+      "classification": "procedural",
+      "path": "procedural/skill_041",
+      "source_chunk": "玥堂主【投资&创新】200+思维套图合集_chunk_001",
+      "character_count": 280,
+      "description": "企业处于壮年期或增长拐点出现前使用，突破增长瓶颈实现持续发展",
+      "confidence": null
+    },
+    {
+      "sku_id": "skill_042",
+      "name": "30-minute-enterprise-analysis-framework",
+      "classification": "procedural",
+      "path": "procedural/skill_042",
+      "source_chunk": "玥堂主【投资&创新】200+思维套图合集_chunk_001",
+      "character_count": 283,
+      "description": "分析企业投资价值或经营状况时使用，快速判断企业核心质地",
+      "confidence": null
+    },
+    {
+      "sku_id": "skill_043",
+      "name": "investment-determinism-search-method",
+      "classification": "procedural",
+      "path": "procedural/skill_043",
+      "source_chunk": "玥堂主【投资&创新】200+思维套图合集_chunk_001",
+      "character_count": 286,
+      "description": "做投资决策时使用，筛选高确定性标的，提升投资成功率",
+      "confidence": null
+    },
+    {
+      "sku_id": "skill_044",
+      "name": "startup-survival-under-giants-workflow",
+      "classification": "procedural",
+      "path": "procedural/skill_044",
+      "source_chunk": "玥堂主【投资&创新】200+思维套图合集_chunk_001",
+      "character_count": 238,
+      "description": "初创企业面临巨头竞争时使用，保障存活并实现长期发展",
+      "confidence": null
+    },
+    {
+      "sku_id": "skill_045",
+      "name": "infant-stage-enterprise-board-construction",
+      "classification": "procedural",
+      "path": "procedural/skill_045",
+      "source_chunk": "玥堂主【投资&创新】200+思维套图合集_chunk_001",
+      "character_count": 249,
+      "description": "企业处于婴儿期（初创阶段）时使用，提升初创成功率",
+      "confidence": null
+    },
+    {
+      "sku_id": "skill_046",
+      "name": "startup-dual-capital-cycle-construction",
+      "classification": "procedural",
+      "path": "procedural/skill_046",
+      "source_chunk": "玥堂主【投资&创新】200+思维套图合集_chunk_001",
+      "character_count": 271,
+      "description": "企业创始人搭建资金体系时使用，加速企业发展",
+      "confidence": null
+    },
+    {
+      "sku_id": "relational-knowledge-base",
+      "name": "relational-knowledge-base",
+      "classification": "relational",
+      "path": "relational",
+      "source_chunk": "aggregated",
+      "character_count": 45023,
+      "description": "Domain label hierarchy and terminology glossary",
+      "confidence": null
+    },
+    {
+      "sku_id": "meta-knowledge",
+      "name": "meta-knowledge",
+      "classification": "meta",
+      "path": "meta",
+      "source_chunk": "aggregated",
+      "character_count": 10906,
+      "description": "SKU routing (mapping.md) and creative insights (eureka.md)",
+      "confidence": null
+    }
+  ],
+  "factual_count": 129,
+  "relational_count": 1,
+  "procedural_count": 46,
+  "meta_count": 1
+}

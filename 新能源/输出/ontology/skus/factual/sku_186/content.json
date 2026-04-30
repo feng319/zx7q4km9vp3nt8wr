@@ -1,0 +1,15 @@
+{
+  "capacity_subsidy": {
+    "target": "虚拟电厂聚合商",
+    "standard": "不超过50元/千瓦的稳定可调能力补贴，例：5兆瓦稳定可调量最高可获25万元补贴"
+  },
+  "response_reward": {
+    "target": "参与响应的聚合商及企业",
+    "standard": "每响应1度电补贴不超过6元"
+  },
+  "supporting_subsidy": {
+    "energy_storage": "并网且接入碳达峰平台的储能，按每放电1度补贴0.15元（限一定年限）",
+    "charging_pile": "具备V2G功能的充电桩给予不高于80元/千瓦的建设补贴",
+    "photovoltaic": "接入虚拟电厂的光伏项目给予并网补贴"
+  }
+}

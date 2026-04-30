@@ -1,0 +1,62 @@
+{
+  "created_at": "2026-04-29T09:45:36.968951",
+  "total_chunks": 6,
+  "total_tokens": 251155,
+  "source_files": [
+    "2026六大新兴产业发展形势展望.md",
+    "BSC七步法：设计企业的战略地图.md",
+    "企业战略与财富增长创新蓝宝书.md",
+    "玥堂主【投资&创新】200+思维套图合集.md",
+    "科技战略与投资策略10个建议与5大误区.md"
+  ],
+  "chunks": [
+    {
+      "chunk_id": "2026六大新兴产业发展形势展望_chunk_001",
+      "file_path": "2026六大新兴产业发展形势展望_chunk_001.md",
+      "title": "2026六大新兴产业发展形势展望",
+      "estimated_tokens": 77556,
+      "source_file": "2026六大新兴产业发展形势展望.md",
+      "chunking_method": "single"
+    },
+    {
+      "chunk_id": "BSC七步法：设计企业的战略地图_chunk_001",
+      "file_path": "BSC七步法：设计企业的战略地图_chunk_001.md",
+      "title": "BSC七步法：设计企业的战略地图",
+      "estimated_tokens": 3678,
+      "source_file": "BSC七步法：设计企业的战略地图.md",
+      "chunking_method": "single"
+    },
+    {
+      "chunk_id": "企业战略与财富增长创新蓝宝书_chunk_001",
+      "file_path": "企业战略与财富增长创新蓝宝书_chunk_001.md",
+      "title": "第一章 把握趋势",
+      "estimated_tokens": 32597,
+      "source_file": "企业战略与财富增长创新蓝宝书.md",
+      "chunking_method": "llm"
+    },
+    {
+      "chunk_id": "企业战略与财富增长创新蓝宝书_chunk_002",
+      "file_path": "企业战略与财富增长创新蓝宝书_chunk_002.md",
+      "title": "Part 2",
+      "estimated_tokens": 85969,
+      "source_file": "企业战略与财富增长创新蓝宝书.md",
+      "chunking_method": "llm"
+    },
+    {
+      "chunk_id": "玥堂主【投资&创新】200+思维套图合集_chunk_001",
+      "file_path": "玥堂主【投资&创新】200+思维套图合集_chunk_001.md",
+      "title": "玥堂主【投资&创新】200+思维套图合集",
+      "estimated_tokens": 35702,
+      "source_file": "玥堂主【投资&创新】200+思维套图合集.md",
+      "chunking_method": "single"
+    },
+    {
+      "chunk_id": "科技战略与投资策略10个建议与5大误区_chunk_001",
+      "file_path": "科技战略与投资策略10个建议与5大误区_chunk_001.md",
+      "title": "科技战略与投资策略10个建议与5大误区",
+      "estimated_tokens": 15653,
+      "source_file": "科技战略与投资策略10个建议与5大误区.md",
+      "chunking_method": "single"
+    }
+  ]
+}

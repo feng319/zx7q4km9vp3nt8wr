@@ -1,0 +1,50 @@
+[
+  {
+    "system_name": "绩效考核体系",
+    "core_function": "员工管理",
+    "implementation_focus": "目标分解",
+    "long_term_value": "组织效率"
+  },
+  {
+    "system_name": "商业模式体系",
+    "core_function": "盈利设计",
+    "implementation_focus": "版本迭代",
+    "long_term_value": "持续竞争力"
+  },
+  {
+    "system_name": "产品质量体系",
+    "core_function": "产品标准",
+    "implementation_focus": "经理负责制",
+    "long_term_value": "品牌基础"
+  },
+  {
+    "system_name": "经销商盈利体系",
+    "core_function": "渠道盈利",
+    "implementation_focus": "共赢机制",
+    "long_term_value": "渠道稳定"
+  },
+  {
+    "system_name": "人力资源体系",
+    "core_function": "人才管理",
+    "implementation_focus": "利益分配",
+    "long_term_value": "人才保留"
+  },
+  {
+    "system_name": "品牌维护体系",
+    "core_function": "品牌管理",
+    "implementation_focus": "B端/C端差异化运营",
+    "long_term_value": "品牌增值"
+  },
+  {
+    "system_name": "企业复制体系",
+    "core_function": "规模化扩张",
+    "implementation_focus": "企业大学建设",
+    "long_term_value": "规模化基础"
+  },
+  {
+    "system_name": "财务运作体系",
+    "core_function": "资本管理",
+    "implementation_focus": "并表并购",
+    "long_term_value": "资产增值"
+  }
+]
