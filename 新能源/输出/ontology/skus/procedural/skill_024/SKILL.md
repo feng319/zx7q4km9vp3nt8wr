@@ -1,14 +1,23 @@
 ---
-name: off-grid-microgrid-storage-operation-strategy-formulation
-description: 适用于需连续稳定供电的离网型微电网，制定储能运行策略时使用
+name: microgrid-cloud-edge-control-architecture
+description: Implement a two-layer control system for microgrids: cloud platform for strategy and edge controller for fast execution.
 ---
 
-- 概述：制定离网微电网储能运行策略，保障连续可靠供电，降低用能成本
-- 步骤：
-  1. 明确储能核心作用为存储光伏电力，优先消纳清洁能源
-  2. 设定储能剩余电量预警阈值
-  3. 联动柴油发电机控制系统制定供电补能规则
-- 决策点：
-  - 如果电池剩余电量高于15%：优先使用光伏、储能电力满足负载需求
-  - 如果电池剩余电量低至15%：启动柴油发电机以最大负载运行，同时为电池充电、满足负载用电需求
-- 预期结果：实现离网微电网连续稳定供电，最大化清洁能源利用率，降低用能成本
+## Overview
+Reliable microgrid operation requires rapid response to changes in generation and load. A cloud‑edge architecture combines global optimization with local real‑time control.
+
+## Steps
+1. **Deploy a cloud‑based energy management platform** (e.g., ‘Xuanyuan Digital Energy Cloud’) that:
+   - Monitors all devices and sensors.
+   - Runs big‑data analytics and forecasting.
+   - Generates optimal dispatch strategies (scheduling, curtailment, energy arbitrage).
+2. **Install an edge smart energy controller** at the microgrid site that:
+   - Collects local real‑time data (µs‑ms resolution).
+   - Executes control commands (switching, curtailment, storage charge/discharge).
+   - Handles fault detection and safety protection with local AI computation.
+3. **Establish communication protocols** – cloud periodically sends updated strategy parameters; edge reports operational data and alarms.
+4. **Configure fallback modes** – if cloud connection is lost, edge controls autonomously using last‑received strategy and local rules.
+5. **Test and commission** – validate latency, loss‑of‑communication behavior, and overall reliability.
+
+## Expected Result
+A system that combines the intelligence of cloud‑side optimization with the speed and reliability of local edge control, improving energy efficiency and supply security.

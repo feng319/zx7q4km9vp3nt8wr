@@ -1,7 +1,7 @@
-# local-platform-company-new-energy-operation-optimization
+# how-to-design-cchp-energy-service
 
 - **分类**: procedural
-- **来源**: 报告-固德威江西德安县调研报告：光储充一体化项目怎么做？_chunk_001
-- **字符数**: 360
+- **来源**: 报告-安悦节能调研报告：怎样做冷热电综合能源服务？_chunk_001
+- **字符数**: 627
 
-地方平台公司开展新能源投资、应对电力市场化发展挑战时使用
+当为工业企业设计冷热电综合能源服务方案时，遵循此分步流程以协同多技术实现节能降碳。

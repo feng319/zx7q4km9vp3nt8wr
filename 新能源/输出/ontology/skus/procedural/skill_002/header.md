@@ -1,7 +1,7 @@
-# ukraine-distributed-pv-storage-roi-calculation-method
+# prepare-for-unified-bidding
 
 - **分类**: procedural
-- **来源**: 报告-乌克兰新能源市场机会调研报告_chunk_001
-- **字符数**: 364
+- **来源**: 报告-《关于优化集中式新能源发电企业市场报价的通知（试行）》深度解读与战略分析_chunk_001
+- **字符数**: 780
 
-评估乌克兰分布式光伏加储能项目的投资回报可行性时使用
+在申请集中报价前，完成数据打通、内部协议制定和风控模型建设等准备工作。

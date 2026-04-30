@@ -1,7 +1,7 @@
-# scenario-customized-ac-vpp-regulation-scheme-development-process
+# small-site-v2g-integration
 
 - **分类**: procedural
-- **来源**: 报告-恒实盛景调研报告：怎样做空调虚拟电厂？_chunk_001
-- **字符数**: 530
+- **来源**: 报告-特来电零碳大楼调研报告：怎样做车网互动？_chunk_001
+- **字符数**: 912
 
-接入新的不同场景的空调用户（如写字楼、医院、商场等），需要定制专属调控方案时使用
+如何在园区、办公楼等小场景中集成车网互动（V2G），实现降本降碳。

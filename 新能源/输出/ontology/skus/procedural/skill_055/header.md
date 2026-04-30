@@ -1,7 +1,7 @@
-# zero-cost-ac-user-vpp-access-cooperation-process
+# ev-owner-v2g-incentive-program
 
 - **分类**: procedural
-- **来源**: 报告-恒实盛景调研报告：怎样做空调虚拟电厂？_chunk_001
-- **字符数**: 369
+- **来源**: 报告-特来电零碳大楼调研报告：怎样做车网互动？_chunk_001
+- **字符数**: 673
 
-空调用户意向接入虚拟电厂，采用运营商全投资模式开展合作时使用
+激励电动汽车车主参与V2G放电，解决电池寿命顾虑与便捷性问题。

@@ -1,7 +1,7 @@
-# dual-district-flexible-interconnection-solution-design
+# zero-carbon-park-general-contractor-capability-assessment
 
 - **分类**: procedural
-- **来源**: 报告-紫电捷控调研报告：交直流微电网怎么做？_chunk_001
-- **字符数**: 626
+- **来源**: 报告-良信电器调研报告：怎样建设零碳工厂？_chunk_001
+- **字符数**: 602
 
-当需要解决相邻配电台区负载不平衡、光伏上网难、新增负荷供电不足，降低变压器扩容成本时使用
+评估或选择零碳园区总包服务商时使用，明确总包方应具备的核心能力

@@ -1,7 +1,7 @@
-# heavy-duty-truck-swap-station-return-calculation
+# operate-solar-thermal-electric-storage-modes
 
 - **分类**: procedural
-- **来源**: 报告-国海绿能一线调研报告：重卡换电站怎么做？_chunk_001
-- **字符数**: 448
+- **来源**: 报告-安悦节能调研报告：怎样做冷热电综合能源服务？_chunk_001
+- **字符数**: 605
 
-当需要测算重卡换电站的投资收益、回本周期，评估项目盈利性时使用
+运行“太阳能制热+电加热+固体储热”系统时，根据实时条件在四种工况间切换，实现最优经济运行。

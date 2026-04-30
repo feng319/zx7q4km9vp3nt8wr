@@ -1,7 +1,7 @@
-# flexible-anti-backflow-implementation-process
+# energy-storage-frequency-regulation-market-participation
 
 - **分类**: procedural
-- **来源**: 报告-固德威江西德安县调研报告：光储充一体化项目怎么做？_chunk_001
-- **字符数**: 458
+- **来源**: 报告-奇峰聚能调研报告：飞轮储能怎么做？_chunk_001
+- **字符数**: 949
 
-零碳园区光储充项目需要实现光伏余电不上网、防止电力反送电网时使用
+适用于独立储能电站注册并参与电力一次调频市场交易的完整操作流程，基于山西等省份现行规则。

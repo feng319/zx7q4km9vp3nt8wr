@@ -1,7 +1,7 @@
-# park-level-microgrid-project-implementation-workflow
+# mx-microgrid-expert-energy-scheduling
 
 - **分类**: procedural
-- **来源**: 报告-电管家一线调研报告：微电网怎么赚钱？_chunk_001
-- **字符数**: 577
+- **来源**: 报告-良信电器调研报告：怎样建设零碳工厂？_chunk_001
+- **字符数**: 641
 
-当需要落地运营园区级微电网项目、构建多元盈利结构、实现项目可复制时使用
+当需要对零碳工厂的源网荷储系统进行AI优化调度时使用，根据不同的运营目标选择策略

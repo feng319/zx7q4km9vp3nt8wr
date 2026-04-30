@@ -1,7 +1,7 @@
-# african-remote-mine-microgrid-operation-maintenance
+# deploy-microgrid-remote-ops
 
 - **分类**: procedural
 - **来源**: 报告-三一硅能非洲调研报告：在非洲如何做矿山微电网？_chunk_001
-- **字符数**: 386
+- **字符数**: 546
 
-运维非洲偏远地区的矿山微电网，解决运维人员配置不足、故障响应不及时问题时使用
+在矿区偏远地区建立少人值班+远程监控的微电网运维体系，利用星链回传数据。

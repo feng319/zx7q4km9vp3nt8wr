@@ -1,7 +1,7 @@
-# carbon-neutral-community-commercial-operation-workflow
+# ac-dc-microgrid-operation-mode-switching
 
 - **分类**: procedural
-- **来源**: 报告-深石集团调研报告：房地产企业怎样做新能源？_chunk_001
-- **字符数**: 472
+- **来源**: 报告-紫电捷控调研报告：交直流微电网怎么做？_chunk_001
+- **字符数**: 886
 
-用于为已建成的碳中和社区设计盈利模式，实现无补贴下的成本回收与可持续商业化运营时使用。
+当交直流微电网需要保障不间断供电时，按四种模式自动切换运行，实现离网和并网状态管理

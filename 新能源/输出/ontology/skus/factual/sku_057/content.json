@@ -1,0 +1,27 @@
+{
+  "baseline_diesel_only": {
+    "annual_diesel_consumption_liters": 6300000,
+    "diesel_price_usd_per_liter": 1.3,
+    "first_year_energy_cost_usd": 8190000,
+    "annual_escalation_rate": 0.02,
+    "total_15_year_cost_usd": 133440000
+  },
+  "hybrid_solution": {
+    "first_year_electricity_fee_usd": 3440000,
+    "first_year_diesel_fuel_usd": 480000,
+    "first_year_diesel_maintenance_usd": 120000,
+    "first_year_total_cost_usd": 4040000,
+    "annual_escalation_rate": 0.02,
+    "total_15_year_cost_usd": 69870000
+  },
+  "owner_savings_15_years_usd": 63570000,
+  "developer_financials": {
+    "investment_usd": 13400000,
+    "first_year_revenue_usd": 3440000,
+    "annual_revenue_escalation": 0.02,
+    "total_15_year_revenue_usd": 59480000,
+    "profit_usd": 46080000,
+    "payback_period": "约4年"
+  },
+  "contract_terms": "开发商负责融资、建设、运维及性能保证，签约15年，到期后电站无偿移交业主；电费年增2%，柴油燃料和日常维护由业主承担。"
+}

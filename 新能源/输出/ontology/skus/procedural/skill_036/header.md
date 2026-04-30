@@ -1,7 +1,7 @@
-# optical-storage-charging-station-break-even-point-calculation
+# battery-swap-station-cooperation-model-selection
 
 - **分类**: procedural
-- **来源**: 报告-固德威江西德安县调研报告：光储充一体化项目怎么做？_chunk_001
-- **字符数**: 369
+- **来源**: 报告-国海绿能一线调研报告：重卡换电站怎么做？_chunk_001
+- **字符数**: 763
 
-光储充项目制定与用能企业的结算电价、评估盈利空间时使用
+根据资金实力、专业能力和使用期限，选择适合的重卡换电站投资合作模式。

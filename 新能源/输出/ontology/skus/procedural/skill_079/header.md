@@ -1,7 +1,7 @@
-# zero-carbon-factory-source-grid-load-storage-construction
+# zambia-local-after-sales-strategy
 
 - **分类**: procedural
-- **来源**: 报告-良信电器调研报告：怎样建设零碳工厂？_chunk_001
-- **字符数**: 455
+- **来源**: 报告-非洲调研报告（二）：中国新能源企业在赞比亚有什么机会？_chunk_001
+- **字符数**: 608
 
-当需要搭建零碳工厂底层能源基础设施，实现高比例绿电消纳时使用
+在赞比亚新能源市场竞争中建立本地化售后服务体系，提升客户留存率和品牌信誉。

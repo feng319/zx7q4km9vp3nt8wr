@@ -1,7 +1,7 @@
-# multi-stakeholder-optical-storage-charging-project-implementatio
+# top-lift-battery-swap-procedure
 
 - **分类**: procedural
-- **来源**: 报告-固德威江西德安县调研报告：光储充一体化项目怎么做？_chunk_001
-- **字符数**: 381
+- **来源**: 报告-国海绿能一线调研报告：重卡换电站怎么做？_chunk_001
+- **字符数**: 461
 
-多参与方、多设备供应商的光储充一体化项目落地实施时使用
+了解顶吊式重卡换电站自动更换大容量电池包的操作步骤。

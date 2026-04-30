@@ -1,7 +1,7 @@
-# independent-energy-station-primary-frequency-regulation-particip
+# develop-long-term-integrated-energy-customer
 
 - **分类**: procedural
-- **来源**: 报告-奇峰聚能调研报告：飞轮储能怎么做？_chunk_001
-- **字符数**: 560
+- **来源**: 报告-安悦节能调研报告：怎样做冷热电综合能源服务？_chunk_001
+- **字符数**: 527
 
-当独立储能电站需要参与山西电网一次调频市场交易获取收益时使用
+在综合能源服务中建立长期客户关系，通过持续深耕和业务协同，不断挖掘同一客户的新服务机会。

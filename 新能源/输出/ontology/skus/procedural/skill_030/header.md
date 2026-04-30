@@ -1,7 +1,7 @@
-# virtual-power-plant-participate-in-valley-filling-service-proces
+# anti-backflow-control-for-pv-storage-charging-station
 
 - **分类**: procedural
-- **来源**: 报告-协鑫能科调研报告：江苏最大虚拟电厂是怎么做成的？_chunk_001
-- **字符数**: 624
+- **来源**: 报告-固德威江西德安县调研报告：光储充一体化项目怎么做？_chunk_001
+- **字符数**: 870
 
-当收到电网调度机构发布的填谷需求时，组织负荷资源参与服务的全流程
+在光储充电站中实现防逆流控制，确保光伏余电不上电网，适用于需要100%本地消纳的项目

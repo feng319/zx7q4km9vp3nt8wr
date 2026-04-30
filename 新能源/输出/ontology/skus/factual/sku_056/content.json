@@ -1,14 +1,29 @@
 {
-  "归属主体": "协鑫集团旗下协鑫能科",
-  "行业地位": "江苏省第一批入市虚拟电厂，当前江苏最大虚拟电厂",
-  "发展历程": [
-    "2012年启动灵活性资源聚合业务",
-    "电力需求侧管理试点期间提供用户永久性降低高峰负荷服务",
-    "后续参与江苏省电力需求响应",
-    "2021-2023年成立专业团队开展可调负荷辅助服务市场研究与落地"
-  ],
-  "规模参数": "聚合可调节负荷资源达600MW，约占江苏省总量的30%，规模全省第一",
-  "类型属性": "负荷型虚拟电厂，聚合资源包括钢铁、石化、水泥等高耗能工业负荷，以及充换电站、储能等",
-  "核心依托": "自主开发的虚拟电厂管理调度平台",
-  "直接收入来源": "组织可调负荷资源与电网互动，参与电力需求响应、削峰填谷电力辅助服务获取收益"
+  "location": "莫桑比克采矿场",
+  "microgrid_type": "离网光储柴微电网",
+  "pv": {
+    "capacity_MWp": 10,
+    "type": "双面光伏板",
+    "estimated_annual_generation_GWh": 17.181
+  },
+  "battery_storage": {
+    "capacity_MWh": 21,
+    "operation_strategy": "提供冗余可靠电力；当剩余电量低至15%时，柴油发电机满负荷运行，同时为电池充电和满足负载"
+  },
+  "diesel_generator": {
+    "microgrid_capacity_MW": 4.5,
+    "existing_generators": "12台×350kW柴油发电机（原用于采矿作业）",
+    "lifestyle_generators": "1台275kVA + 2台70kVA（轮流运行）"
+  },
+  "transmission_line": {
+    "voltage_kV": 33,
+    "length_km": 18.5,
+    "pole_type": "混凝土杆",
+    "purpose": "将光伏电力从营地附近输送到各采矿区域"
+  },
+  "total_load": {
+    "peak_power_kW": ">3000",
+    "daily_energy_kWh": ">72000"
+  },
+  "investment_total_cost_usd": 13400000
 }

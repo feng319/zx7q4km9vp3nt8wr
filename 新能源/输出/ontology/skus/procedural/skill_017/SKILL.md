@@ -1,14 +1,20 @@
 ---
-name: local-platform-city-level-vpp-construction-workflow
-description: 地方平台公司主导规划建设城市级虚拟电厂时使用
+name: design-dc-voltage-level
+description: Determine the DC bus voltage level for a DC microgrid using demand, economy, and safety principles.
 ---
 
-### 概述
-地方平台公司建设城市级虚拟电厂的标准实施路径，可充分发挥地方资源协调优势，联合专业服务商落地项目。
-### 步骤
-1. 全面盘查城市政策、用电、光伏开发情况，摸清能源底数，开展虚拟电厂顶层设计，确定承接主体、合作模式、建设路径
-2. 聚合全市资源，投资建设分布式光伏、用户侧储能、光储充放电站、重卡换电站等资产并接入虚拟电厂平台
-3. 依托虚拟电厂开展电力交易，实现现货动态峰谷套利，同时推广热泵、光储充系统、微网系统等可调资源，挖掘投资机会
-4. 持续优化运营，扩张接入更多分布式电力资源
-### 预期结果
-建成可稳定运营的城市级虚拟电厂，支撑城市新能源发展规划，提升城市能源供给能力、降碳能力和招商竞争力
+## Overview
+Selecting the DC supply voltage level is critical for a direct-current microgrid. The design must balance the needs of connected equipment, economic efficiency, and safety.
+
+## Steps
+1. **Inventory all DC loads and storage devices** – list each equipment's required voltage level, including batteries and power converters.
+2. **Apply the demand principle** – minimize the number of voltage tiers while covering as many devices as possible. Group equipment with similar voltage requirements.
+3. **Apply the economy principle** – favor higher voltage levels to reduce current, thereby decreasing cable cross‑section and line losses.
+4. **Apply the safety principle** – evaluate touch voltage risks and select a level that meets local safety standards (e.g., below hazardous thresholds).
+5. **Finalize the voltage level** – choose a single value that satisfies all three principles. Document the rationale.
+
+## Decision Points
+- If multiple voltage tiers are unavoidable, limit them to the minimum necessary and add DC/DC converters only where essential.
+
+## Expected Result
+A single DC bus voltage (e.g., 750 V) that serves the majority of loads efficiently and safely, with clear justification for any additional converter stages.

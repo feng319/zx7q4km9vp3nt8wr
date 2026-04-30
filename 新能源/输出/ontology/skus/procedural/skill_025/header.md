@@ -1,7 +1,7 @@
-# microgrid-differentiated-refined-service-implementation
+# vpp-valley-filling-operation
 
 - **分类**: procedural
-- **来源**: 报告-则鸣新能源调研报告：怎么样做好微电网？_chunk_001
-- **字符数**: 354
+- **来源**: 报告-协鑫能科调研报告：江苏最大虚拟电厂是怎么做成的？_chunk_001
+- **字符数**: 916
 
-适用于微电网服务商打造差异化竞争力，服务个性化需求场景时使用
+当虚拟电厂收到电网填谷需求时，执行从需求匹配、负荷邀约、申报、实时调度到结算分成的完整流程。

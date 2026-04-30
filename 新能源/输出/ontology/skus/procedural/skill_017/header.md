@@ -1,7 +1,7 @@
-# local-platform-city-level-vpp-construction-workflow
+# design-dc-voltage-level
 
 - **分类**: procedural
-- **来源**: 报告-固德威一线调研报告：城市级虚拟电厂怎么做？_chunk_001
-- **字符数**: 415
+- **来源**: 报告-则鸣新能源调研报告：怎么样做好微电网？_chunk_001
+- **字符数**: 1,394
 
-地方平台公司主导规划建设城市级虚拟电厂时使用
+Determine the DC bus voltage level for a DC microgrid using demand, economy, and safety principles.

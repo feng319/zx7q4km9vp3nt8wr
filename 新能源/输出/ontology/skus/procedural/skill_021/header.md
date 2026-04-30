@@ -1,7 +1,7 @@
-# dc-supply-voltage-level-design-procedure
+# perform-detailed-load-analysis
 
 - **分类**: procedural
 - **来源**: 报告-则鸣新能源调研报告：怎么样做好微电网？_chunk_001
-- **字符数**: 337
+- **字符数**: 1,605
 
-适用于微电网项目设计阶段，确定直流供电电压等级时使用
+Go beyond power measurements to study working principles of special loads, building accurate models 

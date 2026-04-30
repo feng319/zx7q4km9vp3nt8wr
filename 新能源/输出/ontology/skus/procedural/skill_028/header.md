@@ -1,7 +1,7 @@
-# remote-industrial-off-grid-microgrid-planning-procedure
+# solar-storage-charging-vpp-participation
 
 - **分类**: procedural
-- **来源**: 报告-则鸣新能源调研报告：怎么样做好微电网？_chunk_001
-- **字符数**: 351
+- **来源**: 报告-协鑫能科调研报告：江苏最大虚拟电厂是怎么做成的？_chunk_001
+- **字符数**: 1,127
 
-适用于无大电网覆盖的偏远工矿区的离网型微电网规划设计
+指导分布式光伏、用户侧储能和充电桩协同参与虚拟电厂填谷服务，以经济性最优的方式调度并计算收益。

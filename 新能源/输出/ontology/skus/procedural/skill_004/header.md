@@ -1,7 +1,7 @@
-# centralized-bidding-winning-plan-disaggregation
+# ukraine-new-energy-opportunity-screening
 
 - **分类**: procedural
-- **来源**: 报告-《关于优化集中式新能源发电企业市场报价的通知（试行）》深度解读与战略分析_chunk_001
-- **字符数**: 417
+- **来源**: 报告-乌克兰新能源市场机会调研报告_chunk_001
+- **字符数**: 1,350
 
-集中报价实体在现货市场中标后，将中标发电计划分解至下属物理场站时使用
+基于当前乌克兰能源格局，系统性识别和评估新能源市场机会的框架，涵盖光伏、储能、工业用电及细分产品。

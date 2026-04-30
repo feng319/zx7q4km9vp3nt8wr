@@ -1,7 +1,7 @@
-# bboxx-africa-solar-cooperation-workflow
+# activate-real-estate-assets-to-create-energy-load
 
 - **分类**: procedural
-- **来源**: 报告-正泰安能光伏星调研报告：在非洲如何做户用光伏？_chunk_001
-- **字符数**: 436
+- **来源**: 报告-深石集团调研报告：房地产企业怎样做新能源？_chunk_001
+- **字符数**: 920
 
-中国企业与BBOXX在非洲开展户用光伏业务合作时使用
+通过盘活闲置房地产资产、增加人流量来创造新的用电负荷，为新能源项目奠定负荷基础。

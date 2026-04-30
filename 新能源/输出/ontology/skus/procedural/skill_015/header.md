@@ -1,7 +1,7 @@
-# industrial-user-vpp-demand-response-participation-flow
+# local-platform-vpp-implementation-guide
 
 - **分类**: procedural
-- **来源**: 报告-兆瓦云调研报告：虚拟电厂的下一城在哪里？_chunk_001
-- **字符数**: 469
+- **来源**: 报告-固德威一线调研报告：城市级虚拟电厂怎么做？_chunk_001
+- **字符数**: 954
 
-当工业用户想要接入虚拟电厂参与调峰填谷服务获取收益时使用
+地方平台公司布局城市级虚拟电厂的实施指南，涵盖能力评估、合作伙伴选择、分工协作与早期行动，帮助弥补专业化短板。

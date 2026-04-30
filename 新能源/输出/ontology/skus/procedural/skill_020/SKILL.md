@@ -1,13 +1,28 @@
 ---
-name: cooperation-with-local-energy-platform-workflow
-description: 企业寻求与地方能源平台公司合作开展虚拟电厂相关业务时使用
+name: optimize-underperforming-microgrid
+description: Diagnose and improve a microgrid that suffers from low PV/storage utilization due to sizing errors or policy changes.
 ---
 
-### 概述
-满足地方能源平台合作要求的必备条件和合作落地逻辑，可帮助企业对接地方平台落地新能源项目。
-### 步骤
-1. 确认自身具备三个核心合作条件：一是有实力雄厚的集团作为合作主体，可承接大型项目；二是具备产业资产整合能力，可整合光储充投资、运营、节能改造、售电、碳解决方案、金融等资源；三是可设计平衡各方利益、保障投资方合理回报的落地方案
-2. 结合当地政策导向，为地方政府及平台提供符合其发展目标的定制化落地方案
-3. 作为落地服务商辅助平台公司实施项目，获取合理收益
-### 预期结果
-达成与地方能源平台的长期合作，顺利落地虚拟电厂及相关新能源项目
+## Overview
+Many microgrids underperform because initial design failed to accurately predict load profiles or because regulations changed after construction. This method enables systematic optimization.
+
+## Steps
+1. **Collect operational data** – gather historical data on load consumption, PV generation, and storage charge/discharge.
+2. **Investigate local grid policy changes** – identify new constraints (e.g., prohibition of surplus feed‑in, new tariff structures).
+3. **Analyze root causes of underperformance**:
+   - Compare actual load curves against design assumptions.
+   - Identify mismatches between storage capacity and actual usable capacity.
+   - Check if control strategy aligns with current regulations.
+4. **Re‑design the control strategy**:
+   - If export is banned, shift to maximizing self‑consumption (e.g., store excess PV in batteries and use during non‑generation hours).
+   - Adjust charge/discharge schedules to avoid fixed peak/valley cycles that no longer fit.
+5. **Simulate and validate** the new strategy using digital twin or offline simulation.
+6. **Deploy updated parameters** to the energy management system.
+7. **Monitor KPIs** (PV self‑consumption rate, storage utilization rate) for at least one billing cycle.
+
+## Decision Points
+- If policy no longer allows power export: **reconfigure storage to absorb surplus PV** and discharge during load peaks, even if not aligned with grid peak/valley pricing.
+- If storage capacity is severely oversized: accept that full utilization may be impossible; focus on maximizing useful cycles within remaining constraints.
+
+## Expected Result
+Significantly improved PV self‑consumption rate (e.g., from <50% to >90%) and storage utilization rate (e.g., from 50% to >75%), with the limitation that some overcapacity losses may persist.

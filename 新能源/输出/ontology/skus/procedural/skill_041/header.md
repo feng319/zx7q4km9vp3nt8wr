@@ -1,7 +1,7 @@
-# heavy-duty-truck-swap-business-cooperation-selection
+# deploy-ground-source-heat-pump-system
 
 - **分类**: procedural
-- **来源**: 报告-国海绿能一线调研报告：重卡换电站怎么做？_chunk_001
-- **字符数**: 406
+- **来源**: 报告-安悦节能调研报告：怎样做冷热电综合能源服务？_chunk_001
+- **字符数**: 505
 
-当需要选择适配的重卡换电业务合作模式入局该领域时使用
+为建筑提供清洁高效的供冷/供暖方案，利用浅层地热能替代化石能源，适用于有打井条件的场地。

@@ -1,7 +1,7 @@
-# 1-plus-n-new-energy-business-expansion-methodology
+# zero-carbon-factory-source-grid-load-storage-design
 
 - **分类**: procedural
-- **来源**: 报告-电管家一线调研报告：微电网怎么赚钱？_chunk_001
-- **字符数**: 462
+- **来源**: 报告-良信电器调研报告：怎样建设零碳工厂？_chunk_001
+- **字符数**: 763
 
-当新能源企业需要拓展业务、提升用户粘性、丰富盈利渠道、应对单一业务盈利难问题时使用
+设计包含源网荷储架构及光储直柔微电网的零碳工厂方案时使用

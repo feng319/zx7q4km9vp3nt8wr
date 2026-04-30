@@ -1,7 +1,7 @@
-# low-efficiency-microgrid-optimization-reconstruction-procedure
+# vpp-resource-coding-system
 
 - **分类**: procedural
-- **来源**: 报告-则鸣新能源调研报告：怎么样做好微电网？_chunk_001
-- **字符数**: 384
+- **来源**: 报告-协鑫能科调研报告：江苏最大虚拟电厂是怎么做成的？_chunk_001
+- **字符数**: 850
 
-适用于已建成但运行效率低、资源浪费的微电网的优化改造工作
+为虚拟电厂聚合的负荷用户和可调设备建立统一编码体系，实现高效分类、检索和调度管理。

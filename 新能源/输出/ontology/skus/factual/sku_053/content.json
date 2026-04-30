@@ -1,0 +1,83 @@
+{
+  "system_type": "交直流混合光储直柔微电网（并网型，可选离网切换）",
+  "pv": [
+    {
+      "type": "晶硅组件",
+      "capacity_kWp": 605
+    },
+    {
+      "type": "光热组件(PVT)",
+      "capacity_kWp": 4.4
+    },
+    {
+      "type": "钙钛矿组件",
+      "capacity_kWp": 1.3
+    }
+  ],
+  "energy_storage": [
+    {
+      "type": "全钒液流电池",
+      "power_kW": 125,
+      "capacity_kWh": 500
+    },
+    {
+      "type": "锂电池",
+      "power_kW": 50,
+      "capacity_kWh": 100
+    }
+  ],
+  "dc_loads": [
+    {
+      "type": "直流照明",
+      "power_kW": 7.8
+    },
+    {
+      "type": "直流空调",
+      "power_kW": 15
+    },
+    {
+      "type": "LED大屏",
+      "power_kW": 1
+    },
+    {
+      "type": "V2G直流充电桩",
+      "power_kW": 120,
+      "rated_voltage": "DC750V"
+    }
+  ],
+  "ac_loads": [
+    {
+      "type": "7kW慢充充电桩",
+      "quantity": 36,
+      "unit_power_kW": 7
+    },
+    {
+      "type": "120kW快充充电桩",
+      "quantity": 2,
+      "unit_power_kW": 120
+    },
+    {
+      "type": "其他交流负载",
+      "description": "未具体列出"
+    }
+  ],
+  "converters": {
+    "dc_converter": "直流变流器，用于电压、电流/功率转换与母线匹配",
+    "ac_dc_converter": {
+      "type": "柔直AC-DC变换器",
+      "power_kW": 500,
+      "连接": "交直流母线之间"
+    }
+  },
+  "control_system": "光储直柔建筑系统柔性控制平台",
+  "islanding_option": "加装500kW并离网切换柜后，直流微电网可离网运行；离网时锂电池储能容量和PCS功率提高至500kW以增强供电安全",
+  "voltage_levels": {
+    "直流母线": "750V",
+    "交流母线": "380V"
+  },
+  "topology": "单主线结构（非冗余），单网式组网",
+  "operational_results": {
+    "annual_renewable_generation_kWh": 700000,
+    "annual_co2_reduction_t": 470
+  }
+}

@@ -1,7 +1,7 @@
-# heavy-duty-truck-swap-station-feasibility-analysis
+# select-waste-heat-recovery-technology
 
 - **分类**: procedural
-- **来源**: 报告-国海绿能一线调研报告：重卡换电站怎么做？_chunk_001
-- **字符数**: 388
+- **来源**: 报告-安悦节能调研报告：怎样做冷热电综合能源服务？_chunk_001
+- **字符数**: 502
 
-当需要判断目标客户车队是否适合投资建设重卡换电站时使用
+根据工业余热的温度、形态和现场条件，通过决策树选择最合适的回收利用技术。

@@ -1,12 +1,22 @@
 ---
-name: dc-supply-voltage-level-design-procedure
-description: 适用于微电网项目设计阶段，确定直流供电电压等级时使用
+name: perform-detailed-load-analysis
+description: Go beyond power measurements to study working principles of special loads, building accurate models for microgrid design.
 ---
 
-- 概述：为直流微电网设计合理的供电电压等级，平衡需求、经济性与安全性
-- 步骤：
-  1. 梳理项目内所有直流负荷、储能装置的用电电压等级需求
-  2. 评估不同电压等级下的线缆成本、线路损耗情况
-  3. 评估不同电压等级下的电击安全隐患风险
-- 决策点：无，需同时满足三大原则：需求原则（最少电压层级覆盖最多设备需求）、经济原则（尽量选更高电压降低损耗）、安全原则（控制电击安全隐患）
-- 预期结果：输出符合项目实际的直流供电电压等级方案，如750V直流/380V交流的组合
+## Overview
+Standard load analysis focuses on power and energy; however, many real‑world loads have non‑linear or dynamic behaviors that can cause instability (e.g., flicker) if not modeled correctly.
+
+## Steps
+1. **Catalogue all electrical loads** in the facility, noting rated power, voltage, and any unusual characteristics.
+2. **Identify special loads** – equipment with variable frequency drives, arc furnaces, large LED arrays, motors with high inrush current, etc.
+3. **Study working principles** – consult equipment manuals, run lab tests if possible, to understand transient and steady‑state behavior.
+4. **Build specialized models** – incorporate electrical parameters (impedance, inertia, control loops) into simulation tools.
+5. **Validate models against test data** – compare simulated response with field measurements.
+6. **Integrate models into microgrid design** – use these models during dimensioning of energy storage, power converters, and protection settings.
+7. **Maintain a knowledge library** – document each special load type for reuse in future projects.
+
+## Decision Points
+- If testing reveals significant deviation from standard load profiles: **build a custom model** rather than using a generic equivalent.
+
+## Expected Result
+A microgrid design that remains stable under all real operating conditions, avoiding issues like voltage flicker or resonance that arise from unmodeled load dynamics.

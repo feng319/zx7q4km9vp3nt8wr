@@ -1,7 +1,7 @@
-# virtual-power-plant-peak-regulation-participation-workflow
+# off-grid-solar-market-entry-four-steps
 
 - **分类**: procedural
-- **来源**: 报告-广林汇智调研报告：在西北地区怎么做虚拟电厂？_chunk_001
-- **字符数**: 572
+- **来源**: 报告-正泰安能光伏星调研报告：在非洲如何做户用光伏？_chunk_001
+- **字符数**: 736
 
-当作为负荷型虚拟电厂运营商，需要参与电网调峰辅助服务获取收益时使用
+当企业计划进入非洲离网户用光伏市场时，遵循此四步法快速建立本地分销网络。

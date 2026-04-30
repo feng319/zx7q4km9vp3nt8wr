@@ -1,7 +1,7 @@
-# solar-after-sales-service-network-construction-workflow
+# one-plus-n-energy-expansion-strategy
 
 - **分类**: procedural
-- **来源**: 报告-正泰安能光伏星调研报告：在非洲如何做户用光伏？_chunk_001
-- **字符数**: 324
+- **来源**: 报告-电管家一线调研报告：微电网怎么赚钱？_chunk_001
+- **字符数**: 1,156
 
-在非洲搭建户用光伏售后服务网络时使用
+通过先建立一项核心高粘性服务（1），锁定电力用户负载，再横向拓展多种能源业务（N）的组合盈利模式。适用于寻求新能源业务转型或多元化发展的能源服务商。

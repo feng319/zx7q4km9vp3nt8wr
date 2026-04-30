@@ -1,7 +1,7 @@
-# office-building-ground-source-heat-pump-scheme-design
+# zone-based-ac-precision-control-strategy
 
 - **分类**: procedural
-- **来源**: 报告-安悦节能调研报告：怎样做冷热电综合能源服务？_chunk_001
-- **字符数**: 348
+- **来源**: 报告-恒实盛景调研报告：怎样做空调虚拟电厂？_chunk_001
+- **字符数**: 949
 
-当为厂区/园区办公楼设计供冷供热替代方案，降低传统供能碳排放时使用
+针对复杂建筑（如医院、商场）的空调虚拟电厂精细化分区调控策略制定方法，确保体感舒适前提下的柔性调温。

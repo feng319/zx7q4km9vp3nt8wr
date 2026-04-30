@@ -1,7 +1,7 @@
-# load-type-vpp-high-energy-enterprise-aggregation-workflow
+# mpesa-data-credit-risk-assessment
 
 - **分类**: procedural
-- **来源**: 报告-广林汇智调研报告：在西北地区怎么做虚拟电厂？_chunk_001
-- **字符数**: 418
+- **来源**: 报告-正泰安能光伏星调研报告：在非洲如何做户用光伏？_chunk_001
+- **字符数**: 811
 
-当负荷型虚拟电厂需要拓展聚合的高耗能企业资源，扩大调节规模时使用
+利用移动支付平台数据为无金融记录的非洲农村家庭建立小额征信系统，用于户用光伏分期付款的风险评估。

@@ -1,142 +1,276 @@
 {
   "roots": [
     {
-      "name": "新能源领域",
+      "name": "电力市场",
       "children": [
         {
-          "name": "新能源政策",
+          "name": "报价模式",
           "children": []
         },
         {
-          "name": "新能源产品",
+          "name": "结算机制",
+          "children": []
+        },
+        {
+          "name": "调度机制",
+          "children": []
+        },
+        {
+          "name": "聚合模式",
           "children": [
             {
-              "name": "光伏类产品",
-              "children": []
-            },
-            {
-              "name": "储能类产品",
+              "name": "虚拟电厂",
               "children": [
                 {
-                  "name": "储热类产品",
+                  "name": "电网系虚拟电厂",
                   "children": []
                 },
                 {
-                  "name": "液流电池类产品",
+                  "name": "售电型虚拟电厂",
                   "children": []
                 },
                 {
-                  "name": "按储能时长",
+                  "name": "发电类型虚拟电厂",
+                  "children": []
+                },
+                {
+                  "name": "按聚合类型",
                   "children": [
                     {
-                      "name": "长时储能",
+                      "name": "电源型虚拟电厂",
+                      "children": []
+                    },
+                    {
+                      "name": "负荷型虚拟电厂",
                       "children": []
                     }
                   ]
                 },
                 {
-                  "name": "按应用场景",
+                  "name": "按规模",
                   "children": [
                     {
-                      "name": "电网侧储能",
+                      "name": "城市级虚拟电厂",
                       "children": []
                     },
                     {
-                      "name": "电源侧储能",
+                      "name": "县级虚拟电厂",
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "name": "按发展阶段",
+                  "children": [
+                    {
+                      "name": "邀约型虚拟电厂",
+                      "children": []
+                    },
+                    {
+                      "name": "市场型虚拟电厂",
+                      "children": []
+                    },
+                    {
+                      "name": "跨空间自主调度型虚拟电厂",
                       "children": []
                     }
                   ]
                 }
               ]
-            },
+            }
+          ]
+        },
+        {
+          "name": "新能源基地",
+          "children": []
+        },
+        {
+          "name": "发电类型",
+          "children": []
+        },
+        {
+          "name": "电力传输",
+          "children": []
+        },
+        {
+          "name": "非正规市场",
+          "children": []
+        },
+        {
+          "name": "购电协议",
+          "children": []
+        },
+        {
+          "name": "辅助服务市场",
+          "children": [
             {
-              "name": "风电类产品",
+              "name": "一次调频",
               "children": []
             },
             {
-              "name": "新能源应用产品",
-              "children": [
-                {
-                  "name": "虚拟电厂类产品",
-                  "children": [
-                    {
-                      "name": "按覆盖规模",
-                      "children": [
-                        {
-                          "name": "城市级虚拟电厂",
-                          "children": []
-                        },
-                        {
-                          "name": "县级虚拟电厂",
-                          "children": []
-                        },
-                        {
-                          "name": "园区级虚拟电厂",
-                          "children": []
-                        }
-                      ]
-                    },
-                    {
-                      "name": "按聚合资源类型",
-                      "children": [
-                        {
-                          "name": "电源型虚拟电厂",
-                          "children": []
-                        },
-                        {
-                          "name": "负荷型虚拟电厂",
-                          "children": []
-                        },
-                        {
-                          "name": "混合型虚拟电厂",
-                          "children": []
-                        }
-                      ]
-                    },
-                    {
-                      "name": "按发展阶段",
-                      "children": [
-                        {
-                          "name": "邀约型虚拟电厂",
-                          "children": []
-                        },
-                        {
-                          "name": "市场型虚拟电厂",
-                          "children": []
-                        },
-                        {
-                          "name": "跨空间自主调度型虚拟电厂",
-                          "children": []
-                        }
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "name": "换电站类产品",
-                  "children": []
-                },
-                {
-                  "name": "热泵类产品",
-                  "children": []
-                },
-                {
-                  "name": "车网互动类产品",
-                  "children": []
-                }
-              ]
-            },
-            {
-              "name": "低碳冶炼技术",
+              "name": "二次调频",
               "children": []
             }
           ]
         },
         {
-          "name": "新能源系统",
+          "name": "车网互动",
           "children": [
             {
-              "name": "微电网类系统",
+              "name": "有序充电",
+              "children": []
+            },
+            {
+              "name": "V2G",
+              "children": []
+            }
+          ]
+        },
+        {
+          "name": "隔墙售电",
+          "children": []
+        },
+        {
+          "name": "电算协同",
+          "children": []
+        }
+      ]
+    },
+    {
+      "name": "电力市场政策",
+      "children": [
+        {
+          "name": "改革文件",
+          "children": []
+        },
+        {
+          "name": "政策原则",
+          "children": []
+        },
+        {
+          "name": "电价政策",
+          "children": []
+        },
+        {
+          "name": "碳排放权交易政策",
+          "children": []
+        },
+        {
+          "name": "可再生能源消纳政策",
+          "children": []
+        }
+      ]
+    },
+    {
+      "name": "经济学概念",
+      "children": [
+        {
+          "name": "市场失灵",
+          "children": []
+        },
+        {
+          "name": "反垄断",
+          "children": []
+        },
+        {
+          "name": "市场力约束",
+          "children": []
+        }
+      ]
+    },
+    {
+      "name": "企业运营",
+      "children": [
+        {
+          "name": "资产组合管理",
+          "children": []
+        },
+        {
+          "name": "交易策略",
+          "children": []
+        },
+        {
+          "name": "内部结算",
+          "children": []
+        },
+        {
+          "name": "风险控制",
+          "children": []
+        },
+        {
+          "name": "EPC总承包",
+          "children": []
+        },
+        {
+          "name": "地方平台公司",
+          "children": []
+        },
+        {
+          "name": "综合能源服务",
+          "children": [
+            {
+              "name": "电力运维托管服务",
+              "children": []
+            }
+          ]
+        },
+        {
+          "name": "商业模式",
+          "children": []
+        }
+      ]
+    },
+    {
+      "name": "技术架构",
+      "children": [
+        {
+          "name": "储能系统",
+          "children": [
+            {
+              "name": "飞轮储能",
+              "children": []
+            },
+            {
+              "name": "液流电池",
+              "children": []
+            },
+            {
+              "name": "按冷却方式",
+              "children": [
+                {
+                  "name": "液冷储能",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "新能源设备",
+          "children": [
+            {
+              "name": "换电设施",
+              "children": []
+            }
+          ]
+        },
+        {
+          "name": "智能硬件",
+          "children": []
+        },
+        {
+          "name": "新能源车辆",
+          "children": []
+        },
+        {
+          "name": "微电网",
+          "children": [
+            {
+              "name": "矿山微电网",
+              "children": []
+            },
+            {
+              "name": "按连接方式",
               "children": [
                 {
                   "name": "离网型微电网",
@@ -145,103 +279,175 @@
                 {
                   "name": "并网型微电网",
                   "children": []
-                },
+                }
+              ]
+            },
+            {
+              "name": "按电流类型",
+              "children": [
                 {
                   "name": "交直流混合微电网",
-                  "children": []
-                },
-                {
-                  "name": "光储直柔微电网",
-                  "children": []
-                },
-                {
-                  "name": "园区级微电网",
-                  "children": []
-                },
-                {
-                  "name": "工业直流微电网",
-                  "children": []
-                },
-                {
-                  "name": "工业绿色微电网",
-                  "children": []
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "新能源工程服务",
-          "children": [
-            {
-              "name": "综合能源服务",
-              "children": [
-                {
-                  "name": "工业余热利用服务",
-                  "children": []
-                },
-                {
-                  "name": "综合能碳管理服务",
-                  "children": []
-                },
-                {
-                  "name": "碳中和社区服务",
-                  "children": []
-                },
-                {
-                  "name": "零碳园区建设服务",
-                  "children": []
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "新能源市场",
-          "children": [
-            {
-              "name": "调峰辅助服务市场",
-              "children": [
-                {
-                  "name": "填谷辅助服务",
-                  "children": []
-                },
-                {
-                  "name": "削峰辅助服务",
-                  "children": []
-                },
-                {
-                  "name": "调频辅助服务",
                   "children": []
                 }
               ]
             },
             {
-              "name": "非洲新能源市场",
+              "name": "按技术特点",
               "children": [
                 {
-                  "name": "肯尼亚新能源市场",
+                  "name": "光储直柔微电网",
                   "children": []
-                },
+                }
+              ]
+            },
+            {
+              "name": "光储充微电网",
+              "children": []
+            },
+            {
+              "name": "工业绿色微电网",
+              "children": []
+            }
+          ]
+        },
+        {
+          "name": "能源管理系统",
+          "children": [
+            {
+              "name": "虚拟电厂管理平台",
+              "children": []
+            }
+          ]
+        },
+        {
+          "name": "节能技术",
+          "children": []
+        }
+      ]
+    },
+    {
+      "name": "职业",
+      "children": []
+    },
+    {
+      "name": "海外市场",
+      "children": [
+        {
+          "name": "非洲市场",
+          "children": []
+        }
+      ]
+    },
+    {
+      "name": "虚拟电厂",
+      "children": [
+        {
+          "name": "按聚合类型",
+          "children": [
+            {
+              "name": "负荷型虚拟电厂",
+              "children": [
                 {
-                  "name": "赞比亚新能源市场",
+                  "name": "空调虚拟电厂",
                   "children": []
                 }
               ]
             }
           ]
-        },
+        }
+      ]
+    },
+    {
+      "name": "辅助服务市场",
+      "children": [
         {
-          "name": "新能源出海业务",
+          "name": "需求侧响应",
+          "children": [
+            {
+              "name": "日前需求响应市场",
+              "children": []
+            },
+            {
+              "name": "日内需求响应市场",
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "工业降碳",
+      "children": [
+        {
+          "name": "钢铁行业降碳",
           "children": []
         },
         {
-          "name": "能源数字化设备",
+          "name": "零碳工厂",
           "children": []
         },
         {
-          "name": "新能源企业",
+          "name": "零碳产业园",
           "children": []
+        }
+      ]
+    },
+    {
+      "name": "碳市场",
+      "children": [
+        {
+          "name": "碳排放核算范围",
+          "children": []
+        }
+      ]
+    },
+    {
+      "name": "微电网",
+      "children": [
+        {
+          "name": "按应用场景",
+          "children": [
+            {
+              "name": "工业直流微电网",
+              "children": []
+            }
+          ]
+        },
+        {
+          "name": "按互联方式",
+          "children": [
+            {
+              "name": "台区柔直互联微电网",
+              "children": []
+            }
+          ]
+        },
+        {
+          "name": "按电流类型",
+          "children": [
+            {
+              "name": "直流微电网",
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "储能系统",
+      "children": [
+        {
+          "name": "按并网位置",
+          "children": [
+            {
+              "name": "电网侧储能",
+              "children": []
+            },
+            {
+              "name": "电源侧储能",
+              "children": []
+            }
+          ]
         }
       ]
     }

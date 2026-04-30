@@ -1,7 +1,7 @@
-# building-ac-dc-microgrid-photovoltaic-consumption-strategy-formu
+# zero-carbon-ecosystem-partnership-building
 
 - **分类**: procedural
-- **来源**: 报告-紫电捷控调研报告：交直流微电网怎么做？_chunk_001
-- **字符数**: 350
+- **来源**: 报告-良信电器调研报告：怎样建设零碳工厂？_chunk_001
+- **字符数**: 676
 
-当需要制定建筑类交直流微电网的光伏消纳策略，提升绿电使用率、降低建筑碳排放时使用
+组建零碳园区建设生态合作伙伴联盟时使用，整合跨领域技术与企业

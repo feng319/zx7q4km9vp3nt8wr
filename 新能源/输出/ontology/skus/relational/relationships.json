@@ -1,214 +1,34 @@
 {
   "entries": [
     {
-      "subject": "新能源市场",
-      "predicate": "superset-of",
-      "object": "乌克兰新能源市场",
-      "source_chunks": [
-        "报告-乌克兰新能源市场机会调研报告_chunk_001"
-      ],
-      "confidence": 1.0
-    },
-    {
-      "subject": "乌克兰新能源市场",
-      "predicate": "superset-of",
-      "object": "分布式光伏市场",
-      "source_chunks": [
-        "报告-乌克兰新能源市场机会调研报告_chunk_001"
-      ],
-      "confidence": 1.0
-    },
-    {
-      "subject": "乌克兰新能源市场",
-      "predicate": "superset-of",
-      "object": "户用储能市场",
-      "source_chunks": [
-        "报告-乌克兰新能源市场机会调研报告_chunk_001"
-      ],
-      "confidence": 1.0
-    },
-    {
-      "subject": "乌克兰新能源市场",
-      "predicate": "superset-of",
-      "object": "风电市场",
-      "source_chunks": [
-        "报告-乌克兰新能源市场机会调研报告_chunk_001"
-      ],
-      "confidence": 1.0
-    },
-    {
-      "subject": "乌克兰新能源市场",
-      "predicate": "superset-of",
-      "object": "工业用电配套新能源项目市场",
-      "source_chunks": [
-        "报告-乌克兰新能源市场机会调研报告_chunk_001"
-      ],
-      "confidence": 1.0
-    },
-    {
-      "subject": "乌克兰新能源政策",
-      "predicate": "superset-of",
-      "object": "光伏组件储能设备进口免关税增值税政策",
-      "source_chunks": [
-        "报告-乌克兰新能源市场机会调研报告_chunk_001"
-      ],
-      "confidence": 1.0
-    },
-    {
-      "subject": "乌克兰新能源政策",
-      "predicate": "superset-of",
-      "object": "居民光储系统安装无息贷款补贴政策",
-      "source_chunks": [
-        "报告-乌克兰新能源市场机会调研报告_chunk_001"
-      ],
-      "confidence": 1.0
-    },
-    {
-      "subject": "乌克兰新能源政策",
-      "predicate": "superset-of",
-      "object": "公共场所强制安装光储系统政策",
-      "source_chunks": [
-        "报告-乌克兰新能源市场机会调研报告_chunk_001"
-      ],
-      "confidence": 1.0
-    },
-    {
-      "subject": "乌克兰新能源政策",
-      "predicate": "superset-of",
-      "object": "新能源项目并网手续简化政策",
-      "source_chunks": [
-        "报告-乌克兰新能源市场机会调研报告_chunk_001"
-      ],
-      "confidence": 1.0
-    },
-    {
-      "subject": "俄乌冲突",
-      "predicate": "causes",
-      "object": "乌克兰传统油气供应中断",
-      "source_chunks": [
-        "报告-乌克兰新能源市场机会调研报告_chunk_001"
-      ],
-      "confidence": 1.0
-    },
-    {
-      "subject": "俄乌冲突",
-      "predicate": "causes",
-      "object": "乌克兰煤电厂大面积损毁",
-      "source_chunks": [
-        "报告-乌克兰新能源市场机会调研报告_chunk_001"
-      ],
-      "confidence": 1.0
-    },
-    {
-      "subject": "俄乌冲突",
-      "predicate": "causes",
-      "object": "乌克兰分布式光储系统需求增长",
-      "source_chunks": [
-        "报告-乌克兰新能源市场机会调研报告_chunk_001"
-      ],
-      "confidence": 1.0
-    },
-    {
-      "subject": "乌克兰战后重建",
-      "predicate": "causes",
-      "object": "乌克兰新能源市场需求爆发式增长",
-      "source_chunks": [
-        "报告-乌克兰新能源市场机会调研报告_chunk_001"
-      ],
-      "confidence": 0.8
-    },
-    {
-      "subject": "乌克兰加入欧盟",
-      "predicate": "requires",
-      "object": "2030年新能源发电占比达到40%",
-      "source_chunks": [
-        "报告-乌克兰新能源市场机会调研报告_chunk_001"
-      ],
-      "confidence": 1.0
-    },
-    {
-      "subject": "分布式光储系统",
-      "predicate": "enables",
-      "object": "降低对集中式电网的依赖",
-      "source_chunks": [
-        "报告-乌克兰新能源市场机会调研报告_chunk_001"
-      ],
-      "confidence": 1.0
-    },
-    {
-      "subject": "中国新能源产品",
-      "predicate": "has-a",
-      "object": "价格优势",
-      "source_chunks": [
-        "报告-乌克兰新能源市场机会调研报告_chunk_001"
-      ],
-      "confidence": 1.0
-    },
-    {
-      "subject": "开拓乌克兰新能源市场",
-      "predicate": "requires",
-      "object": "产品质量过硬",
-      "source_chunks": [
-        "报告-乌克兰新能源市场机会调研报告_chunk_001"
-      ],
-      "confidence": 1.0
-    },
-    {
-      "subject": "开拓乌克兰新能源市场",
-      "predicate": "requires",
-      "object": "完善售后服务体系",
-      "source_chunks": [
-        "报告-乌克兰新能源市场机会调研报告_chunk_001"
-      ],
-      "confidence": 1.0
-    },
-    {
-      "subject": "开拓乌克兰新能源市场",
-      "predicate": "requires",
-      "object": "优先布局中国具有竞争优势的产品",
-      "source_chunks": [
-        "报告-乌克兰新能源市场机会调研报告_chunk_001"
-      ],
-      "confidence": 1.0
-    },
-    {
-      "subject": "开拓乌克兰新能源市场",
-      "predicate": "requires",
-      "object": "提前布局",
-      "source_chunks": [
-        "报告-乌克兰新能源市场机会调研报告_chunk_001"
-      ],
-      "confidence": 1.0
-    },
-    {
-      "subject": "新能源政策",
-      "predicate": "superset-of",
-      "object": "《关于优化集中式新能源发电企业市场报价的通知（试行）》",
-      "source_chunks": [
-        "报告-《关于优化集中式新能源发电企业市场报价的通知（试行）》深度解读与战略分析_chunk_001"
-      ],
-      "confidence": 1.0
-    },
-    {
-      "subject": "《关于优化集中式新能源发电企业市场报价的通知（试行）》",
-      "predicate": "regulates",
-      "object": "集中报价行为",
-      "source_chunks": [
-        "报告-《关于优化集中式新能源发电企业市场报价的通知（试行）》深度解读与战略分析_chunk_001"
-      ],
-      "confidence": 1.0
-    },
-    {
       "subject": "集中报价",
       "predicate": "enables",
-      "object": "新能源发电集团资产组合管理",
+      "object": "资产组合效应",
       "source_chunks": [
         "报告-《关于优化集中式新能源发电企业市场报价的通知（试行）》深度解读与战略分析_chunk_001"
       ],
       "confidence": 1.0
     },
     {
-      "subject": "新能源发电边际成本接近零",
+      "subject": "规模约束",
+      "predicate": "regulates",
+      "object": "市场力",
+      "source_chunks": [
+        "报告-《关于优化集中式新能源发电企业市场报价的通知（试行）》深度解读与战略分析_chunk_001"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "subject": "四不改变原则",
+      "predicate": "causes",
+      "object": "计划分解算法",
+      "source_chunks": [
+        "报告-《关于优化集中式新能源发电企业市场报价的通知（试行）》深度解读与战略分析_chunk_001"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "subject": "边际成本为零的诅咒",
       "predicate": "causes",
       "object": "价格蚕食效应",
       "source_chunks": [
@@ -217,202 +37,103 @@
       "confidence": 1.0
     },
     {
-      "subject": "集中报价",
-      "predicate": "requires",
-      "object": "统一的场站运行数据系统",
+      "subject": "身份约束",
+      "predicate": "contradicts",
+      "object": "卡特尔",
       "source_chunks": [
         "报告-《关于优化集中式新能源发电企业市场报价的通知（试行）》深度解读与战略分析_chunk_001"
       ],
       "confidence": 1.0
     },
     {
-      "subject": "新能源市场",
-      "predicate": "superset-of",
-      "object": "电力现货市场",
-      "source_chunks": [
-        "报告-《关于优化集中式新能源发电企业市场报价的通知（试行）》深度解读与战略分析_chunk_001"
-      ],
-      "confidence": 1.0
-    },
-    {
-      "subject": "分布式光伏",
-      "predicate": "related-to",
-      "object": "虚拟电厂",
-      "source_chunks": [
-        "报告-《关于优化集中式新能源发电企业市场报价的通知（试行）》深度解读与战略分析_chunk_001"
-      ],
-      "confidence": 1.0
-    },
-    {
-      "subject": "集中报价",
+      "subject": "风光互补",
       "predicate": "enables",
-      "object": "风光互补优化发电",
+      "object": "资产组合效应",
       "source_chunks": [
         "报告-《关于优化集中式新能源发电企业市场报价的通知（试行）》深度解读与战略分析_chunk_001"
       ],
-      "confidence": 1.0
+      "confidence": 0.8
     },
     {
       "subject": "沙戈荒大基地",
-      "predicate": "contradicts",
-      "object": "集中报价适用范围",
+      "predicate": "has-a",
+      "object": "特高压外送",
       "source_chunks": [
         "报告-《关于优化集中式新能源发电企业市场报价的通知（试行）》深度解读与战略分析_chunk_001"
       ],
       "confidence": 1.0
     },
     {
-      "subject": "新能源市场",
-      "predicate": "superset-of",
-      "object": "非洲新能源市场",
-      "source_chunks": [
-        "报告-三一硅能非洲调研报告：在非洲如何做矿山微电网？_chunk_001"
-      ],
-      "confidence": 1.0
-    },
-    {
-      "subject": "非洲新能源市场",
-      "predicate": "superset-of",
-      "object": "矿山微电网市场",
-      "source_chunks": [
-        "报告-三一硅能非洲调研报告：在非洲如何做矿山微电网？_chunk_001"
-      ],
-      "confidence": 1.0
-    },
-    {
-      "subject": "非洲公共电网基础设施薄弱",
-      "predicate": "causes",
-      "object": "非洲矿区供电短缺问题",
-      "source_chunks": [
-        "报告-三一硅能非洲调研报告：在非洲如何做矿山微电网？_chunk_001"
-      ],
-      "confidence": 1.0
-    },
-    {
-      "subject": "矿山微电网",
-      "predicate": "enables",
-      "object": "非洲矿区稳定供电",
-      "source_chunks": [
-        "报告-三一硅能非洲调研报告：在非洲如何做矿山微电网？_chunk_001"
-      ],
-      "confidence": 1.0
-    },
-    {
-      "subject": "矿山微电网项目",
-      "predicate": "requires",
-      "object": "前期物流风险预判",
-      "source_chunks": [
-        "报告-三一硅能非洲调研报告：在非洲如何做矿山微电网？_chunk_001"
-      ],
-      "confidence": 1.0
-    },
-    {
-      "subject": "矿山微电网项目",
-      "predicate": "requires",
-      "object": "高质量施工管控",
-      "source_chunks": [
-        "报告-三一硅能非洲调研报告：在非洲如何做矿山微电网？_chunk_001"
-      ],
-      "confidence": 1.0
-    },
-    {
-      "subject": "赞比亚乔瓦矿山光储微电网项目",
-      "predicate": "example-of",
-      "object": "光储柴微电网",
-      "source_chunks": [
-        "报告-三一硅能非洲调研报告：在非洲如何做矿山微电网？_chunk_001"
-      ],
-      "confidence": 1.0
-    },
-    {
-      "subject": "矿山微电网",
-      "predicate": "superset-of",
-      "object": "光储柴微电网",
-      "source_chunks": [
-        "报告-三一硅能非洲调研报告：在非洲如何做矿山微电网？_chunk_001"
-      ],
-      "confidence": 1.0
-    },
-    {
-      "subject": "开拓非洲矿山微电网市场",
-      "predicate": "requires",
-      "object": "完善客户风险尽调",
-      "source_chunks": [
-        "报告-三一硅能非洲调研报告：在非洲如何做矿山微电网？_chunk_001"
-      ],
-      "confidence": 1.0
-    },
-    {
-      "subject": "新能源系统",
-      "predicate": "superset-of",
-      "object": "微电网类系统",
-      "source_chunks": [
-        "报告-三一硅能非洲调研报告：在非洲如何做矿山微电网？_chunk_001"
-      ],
-      "confidence": 1.0
-    },
-    {
-      "subject": "能源管理系统",
-      "predicate": "part-of",
-      "object": "微电网类系统",
-      "source_chunks": [
-        "报告-三一硅能非洲调研报告：在非洲如何做矿山微电网？_chunk_001"
-      ],
-      "confidence": 1.0
-    },
-    {
-      "subject": "开拓非洲矿山微电网市场",
-      "predicate": "requires",
-      "object": "合理设置投资回收周期",
-      "source_chunks": [
-        "报告-三一硅能非洲调研报告：在非洲如何做矿山微电网？_chunk_001"
-      ],
-      "confidence": 1.0
-    },
-    {
-      "subject": "中非矿业合作基础",
-      "predicate": "enables",
-      "object": "中国新能源企业进入非洲矿山微电网市场",
-      "source_chunks": [
-        "报告-三一硅能非洲调研报告：在非洲如何做矿山微电网？_chunk_001"
-      ],
-      "confidence": 1.0
-    },
-    {
-      "subject": "新能源出海业务",
-      "predicate": "superset-of",
-      "object": "非洲新能源电站开发业务",
-      "source_chunks": [
-        "报告-三一硅能非洲调研报告：在非洲如何做矿山微电网？_chunk_001"
-      ],
-      "confidence": 1.0
-    },
-    {
-      "subject": "新能源工程服务",
-      "predicate": "superset-of",
-      "object": "EPC",
-      "source_chunks": [
-        "报告-三一硅能非洲调研报告：在非洲如何做矿山微电网？_chunk_001"
-      ],
-      "confidence": 1.0
-    },
-    {
-      "subject": "微电网类系统",
-      "predicate": "enables",
-      "object": "非洲离网区域工业用电保障",
-      "source_chunks": [
-        "报告-三一硅能非洲调研报告：在非洲如何做矿山微电网？_chunk_001"
-      ],
-      "confidence": 1.0
-    },
-    {
-      "subject": "矿山微电网运维效果",
+      "subject": "集中报价",
       "predicate": "depends-on",
-      "object": "前期设计和施工质量",
+      "object": "数据湖",
       "source_chunks": [
-        "报告-三一硅能非洲调研报告：在非洲如何做矿山微电网？_chunk_001"
+        "报告-《关于优化集中式新能源发电企业市场报价的通知（试行）》深度解读与战略分析_chunk_001"
       ],
       "confidence": 1.0
+    },
+    {
+      "subject": "独立结算",
+      "predicate": "requires",
+      "object": "内部转移定价",
+      "source_chunks": [
+        "报告-《关于优化集中式新能源发电企业市场报价的通知（试行）》深度解读与战略分析_chunk_001"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "subject": "四不改变原则",
+      "predicate": "superset-of",
+      "object": "独立结算",
+      "source_chunks": [
+        "报告-《关于优化集中式新能源发电企业市场报价的通知（试行）》深度解读与战略分析_chunk_001"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "subject": "四不改变原则",
+      "predicate": "superset-of",
+      "object": "调度独立",
+      "source_chunks": [
+        "报告-《关于优化集中式新能源发电企业市场报价的通知（试行）》深度解读与战略分析_chunk_001"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "subject": "《关于优化集中式新能源发电企业市场报价的通知（试行）》",
+      "predicate": "regulates",
+      "object": "集中报价",
+      "source_chunks": [
+        "报告-《关于优化集中式新能源发电企业市场报价的通知（试行）》深度解读与战略分析_chunk_001"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "subject": "能源安全",
+      "predicate": "causes",
+      "object": "分布式能源",
+      "source_chunks": [
+        "报告-乌克兰新能源市场机会调研报告_chunk_001"
+      ],
+      "confidence": 0.8
+    },
+    {
+      "subject": "分布式光伏",
+      "predicate": "enables",
+      "object": "户用储能",
+      "source_chunks": [
+        "报告-乌克兰新能源市场机会调研报告_chunk_001"
+      ],
+      "confidence": 0.8
+    },
+    {
+      "subject": "绿色电价",
+      "predicate": "causes",
+      "object": "分布式光伏",
+      "source_chunks": [
+        "报告-乌克兰新能源市场机会调研报告_chunk_001"
+      ],
+      "confidence": 0.8
     },
     {
       "subject": "虚拟电厂",
@@ -442,79 +163,169 @@
       "confidence": 1.0
     },
     {
-      "subject": "北京兆瓦云数据科技有限公司",
-      "predicate": "example-of",
-      "object": "虚拟电厂运营商",
+      "subject": "虚拟电厂",
+      "predicate": "requires",
+      "object": "三级调控架构",
       "source_chunks": [
         "报告-兆瓦云调研报告：虚拟电厂的下一城在哪里？_chunk_001"
       ],
       "confidence": 1.0
     },
     {
-      "subject": "虚拟电厂运营",
+      "subject": "虚拟电厂",
+      "predicate": "related-to",
+      "object": "辅助服务市场",
+      "source_chunks": [
+        "报告-兆瓦云调研报告：虚拟电厂的下一城在哪里？_chunk_001"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "subject": "电网系虚拟电厂",
+      "predicate": "related-to",
+      "object": "辅助服务市场",
+      "source_chunks": [
+        "报告-兆瓦云调研报告：虚拟电厂的下一城在哪里？_chunk_001"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "subject": "售电型虚拟电厂",
+      "predicate": "related-to",
+      "object": "偏差收益",
+      "source_chunks": [
+        "报告-兆瓦云调研报告：虚拟电厂的下一城在哪里？_chunk_001"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "subject": "超额回收机制",
+      "predicate": "regulates",
+      "object": "偏差收益",
+      "source_chunks": [
+        "报告-兆瓦云调研报告：虚拟电厂的下一城在哪里？_chunk_001"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "subject": "超额回收机制",
       "predicate": "depends-on",
-      "object": "运营逻辑",
-      "source_chunks": [
-        "报告-兆瓦云调研报告：虚拟电厂的下一城在哪里？_chunk_001"
-      ],
-      "confidence": 1.0
-    },
-    {
-      "subject": "新能源入市",
-      "predicate": "causes",
-      "object": "发电类型虚拟电厂发展机会",
+      "object": "现货偏差率",
       "source_chunks": [
         "报告-兆瓦云调研报告：虚拟电厂的下一城在哪里？_chunk_001"
       ],
       "confidence": 0.8
     },
     {
-      "subject": "售电型虚拟电厂",
-      "predicate": "enables",
-      "object": "售电公司现货套利",
-      "source_chunks": [
-        "报告-兆瓦云调研报告：虚拟电厂的下一城在哪里？_chunk_001"
-      ],
-      "confidence": 1.0
-    },
-    {
-      "subject": "电力现货市场",
-      "predicate": "related-to",
-      "object": "调峰辅助服务",
-      "source_chunks": [
-        "报告-兆瓦云调研报告：虚拟电厂的下一城在哪里？_chunk_001"
-      ],
-      "confidence": 1.0
-    },
-    {
-      "subject": "调峰辅助服务市场",
-      "predicate": "implements",
-      "object": "低价优先出清规则",
-      "source_chunks": [
-        "报告-兆瓦云调研报告：虚拟电厂的下一城在哪里？_chunk_001"
-      ],
-      "confidence": 1.0
-    },
-    {
-      "subject": "大型工业可调负荷",
-      "predicate": "enables",
-      "object": "削峰填谷服务参与",
-      "source_chunks": [
-        "报告-兆瓦云调研报告：虚拟电厂的下一城在哪里？_chunk_001"
-      ],
-      "confidence": 1.0
-    },
-    {
-      "subject": "虚拟电厂类产品",
+      "subject": "辅助服务市场",
       "predicate": "superset-of",
-      "object": "城市级虚拟电厂",
+      "object": "削峰填谷",
       "source_chunks": [
-        "报告-固德威一线调研报告：城市级虚拟电厂怎么做？_chunk_001"
+        "报告-兆瓦云调研报告：虚拟电厂的下一城在哪里？_chunk_001"
+      ],
+      "confidence": 0.8
+    },
+    {
+      "subject": "虚拟电厂功率调节能力测试平台",
+      "predicate": "certifies",
+      "object": "虚拟电厂",
+      "source_chunks": [
+        "报告-兆瓦云调研报告：虚拟电厂的下一城在哪里？_chunk_001"
       ],
       "confidence": 1.0
     },
     {
-      "subject": "虚拟电厂类产品",
+      "subject": "分布式光伏",
+      "predicate": "enables",
+      "object": "发电类型虚拟电厂",
+      "source_chunks": [
+        "报告-兆瓦云调研报告：虚拟电厂的下一城在哪里？_chunk_001"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "subject": "偏差结算",
+      "predicate": "related-to",
+      "object": "偏差收益",
+      "source_chunks": [
+        "报告-兆瓦云调研报告：虚拟电厂的下一城在哪里？_chunk_001"
+      ],
+      "confidence": 0.8
+    },
+    {
+      "subject": "微电网",
+      "predicate": "superset-of",
+      "object": "矿山微电网",
+      "source_chunks": [
+        "报告-三一硅能非洲调研报告：在非洲如何做矿山微电网？_chunk_001"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "subject": "微电网",
+      "predicate": "superset-of",
+      "object": "光储柴微电网",
+      "source_chunks": [
+        "报告-三一硅能非洲调研报告：在非洲如何做矿山微电网？_chunk_001"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "subject": "微电网",
+      "predicate": "requires",
+      "object": "能源管理系统",
+      "source_chunks": [
+        "报告-三一硅能非洲调研报告：在非洲如何做矿山微电网？_chunk_001"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "subject": "光储柴微电网",
+      "predicate": "has-a",
+      "object": "分布式光伏",
+      "source_chunks": [
+        "报告-三一硅能非洲调研报告：在非洲如何做矿山微电网？_chunk_001"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "subject": "光储柴微电网",
+      "predicate": "has-a",
+      "object": "储能系统",
+      "source_chunks": [
+        "报告-三一硅能非洲调研报告：在非洲如何做矿山微电网？_chunk_001"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "subject": "弱电网",
+      "predicate": "related-to",
+      "object": "微电网",
+      "source_chunks": [
+        "报告-三一硅能非洲调研报告：在非洲如何做矿山微电网？_chunk_001"
+      ],
+      "confidence": 0.8
+    },
+    {
+      "subject": "购电协议",
+      "predicate": "enables",
+      "object": "微电网",
+      "source_chunks": [
+        "报告-三一硅能非洲调研报告：在非洲如何做矿山微电网？_chunk_001"
+      ],
+      "confidence": 0.8
+    },
+    {
+      "subject": "源网荷储",
+      "predicate": "related-to",
+      "object": "微电网",
+      "source_chunks": [
+        "报告-三一硅能非洲调研报告：在非洲如何做矿山微电网？_chunk_001"
+      ],
+      "confidence": 0.8
+    },
+    {
+      "subject": "虚拟电厂",
       "predicate": "superset-of",
       "object": "电源型虚拟电厂",
       "source_chunks": [
@@ -523,7 +334,7 @@
       "confidence": 1.0
     },
     {
-      "subject": "虚拟电厂类产品",
+      "subject": "虚拟电厂",
       "predicate": "superset-of",
       "object": "负荷型虚拟电厂",
       "source_chunks": [
@@ -532,80 +343,8 @@
       "confidence": 1.0
     },
     {
-      "subject": "电源型虚拟电厂",
-      "predicate": "depends-on",
-      "object": "分布式光伏",
-      "source_chunks": [
-        "报告-固德威一线调研报告：城市级虚拟电厂怎么做？_chunk_001"
-      ],
-      "confidence": 1.0
-    },
-    {
-      "subject": "负荷型虚拟电厂",
-      "predicate": "depends-on",
-      "object": "可调负荷",
-      "source_chunks": [
-        "报告-固德威一线调研报告：城市级虚拟电厂怎么做？_chunk_001"
-      ],
-      "confidence": 1.0
-    },
-    {
-      "subject": "城市级虚拟电厂",
-      "predicate": "depends-on",
-      "object": "分布式光伏",
-      "source_chunks": [
-        "报告-固德威一线调研报告：城市级虚拟电厂怎么做？_chunk_001"
-      ],
-      "confidence": 1.0
-    },
-    {
-      "subject": "城市级虚拟电厂",
-      "predicate": "depends-on",
-      "object": "储能类产品",
-      "source_chunks": [
-        "报告-固德威一线调研报告：城市级虚拟电厂怎么做？_chunk_001"
-      ],
-      "confidence": 1.0
-    },
-    {
-      "subject": "城市级虚拟电厂",
-      "predicate": "depends-on",
-      "object": "可调负荷",
-      "source_chunks": [
-        "报告-固德威一线调研报告：城市级虚拟电厂怎么做？_chunk_001"
-      ],
-      "confidence": 1.0
-    },
-    {
-      "subject": "绿证",
-      "predicate": "certifies",
-      "object": "绿电",
-      "source_chunks": [
-        "报告-固德威一线调研报告：城市级虚拟电厂怎么做？_chunk_001"
-      ],
-      "confidence": 1.0
-    },
-    {
-      "subject": "电源型虚拟电厂",
-      "predicate": "enables",
-      "object": "绿电交易",
-      "source_chunks": [
-        "报告-固德威一线调研报告：城市级虚拟电厂怎么做？_chunk_001"
-      ],
-      "confidence": 1.0
-    },
-    {
-      "subject": "负荷型虚拟电厂",
-      "predicate": "enables",
-      "object": "需求侧响应",
-      "source_chunks": [
-        "报告-固德威一线调研报告：城市级虚拟电厂怎么做？_chunk_001"
-      ],
-      "confidence": 1.0
-    },
-    {
-      "subject": "广德城市级虚拟电厂",
-      "predicate": "example-of",
+      "subject": "虚拟电厂",
+      "predicate": "superset-of",
       "object": "城市级虚拟电厂",
       "source_chunks": [
         "报告-固德威一线调研报告：城市级虚拟电厂怎么做？_chunk_001"
@@ -613,8 +352,8 @@
       "confidence": 1.0
     },
     {
-      "subject": "广德固德威合资虚拟电厂运营公司",
-      "predicate": "example-of",
+      "subject": "虚拟电厂",
+      "predicate": "requires",
       "object": "虚拟电厂运营商",
       "source_chunks": [
         "报告-固德威一线调研报告：城市级虚拟电厂怎么做？_chunk_001"
@@ -622,43 +361,34 @@
       "confidence": 1.0
     },
     {
-      "subject": "虚拟电厂运营",
-      "predicate": "depends-on",
-      "object": "能源管理系统",
+      "subject": "虚拟电厂",
+      "predicate": "related-to",
+      "object": "源网荷储",
       "source_chunks": [
         "报告-固德威一线调研报告：城市级虚拟电厂怎么做？_chunk_001"
       ],
-      "confidence": 1.0
+      "confidence": 0.8
     },
     {
-      "subject": "城市级虚拟电厂建设",
-      "predicate": "requires",
-      "object": "换电站",
-      "source_chunks": [
-        "报告-固德威一线调研报告：城市级虚拟电厂怎么做？_chunk_001"
-      ],
-      "confidence": 1.0
-    },
-    {
-      "subject": "电源型虚拟电厂",
+      "subject": "虚拟电厂运营商",
       "predicate": "related-to",
       "object": "售电公司",
       "source_chunks": [
         "报告-固德威一线调研报告：城市级虚拟电厂怎么做？_chunk_001"
       ],
-      "confidence": 1.0
+      "confidence": 0.8
     },
     {
-      "subject": "负荷型虚拟电厂",
+      "subject": "地方平台公司",
       "predicate": "related-to",
-      "object": "电力辅助服务",
+      "object": "虚拟电厂运营商",
       "source_chunks": [
         "报告-固德威一线调研报告：城市级虚拟电厂怎么做？_chunk_001"
       ],
       "confidence": 1.0
     },
     {
-      "subject": "微电网类系统",
+      "subject": "微电网",
       "predicate": "superset-of",
       "object": "离网型微电网",
       "source_chunks": [
@@ -667,7 +397,7 @@
       "confidence": 1.0
     },
     {
-      "subject": "微电网类系统",
+      "subject": "微电网",
       "predicate": "superset-of",
       "object": "并网型微电网",
       "source_chunks": [
@@ -676,7 +406,7 @@
       "confidence": 1.0
     },
     {
-      "subject": "微电网类系统",
+      "subject": "微电网",
       "predicate": "superset-of",
       "object": "交直流混合微电网",
       "source_chunks": [
@@ -685,7 +415,7 @@
       "confidence": 1.0
     },
     {
-      "subject": "微电网类系统",
+      "subject": "微电网",
       "predicate": "superset-of",
       "object": "光储直柔微电网",
       "source_chunks": [
@@ -695,88 +425,7 @@
     },
     {
       "subject": "离网型微电网",
-      "predicate": "enables",
-      "object": "偏远地区用电保障",
-      "source_chunks": [
-        "报告-则鸣新能源调研报告：怎么样做好微电网？_chunk_001"
-      ],
-      "confidence": 1.0
-    },
-    {
-      "subject": "并网型微电网",
-      "predicate": "enables",
-      "object": "分布式风光消纳",
-      "source_chunks": [
-        "报告-则鸣新能源调研报告：怎么样做好微电网？_chunk_001"
-      ],
-      "confidence": 1.0
-    },
-    {
-      "subject": "并网型微电网",
-      "predicate": "enables",
-      "object": "用能户降低碳排放",
-      "source_chunks": [
-        "报告-则鸣新能源调研报告：怎么样做好微电网？_chunk_001"
-      ],
-      "confidence": 1.0
-    },
-    {
-      "subject": "并网型微电网",
-      "predicate": "enables",
-      "object": "用能户降低用能成本",
-      "source_chunks": [
-        "报告-则鸣新能源调研报告：怎么样做好微电网？_chunk_001"
-      ],
-      "confidence": 1.0
-    },
-    {
-      "subject": "微电网建设",
-      "predicate": "requires",
-      "object": "规划设计能力",
-      "source_chunks": [
-        "报告-则鸣新能源调研报告：怎么样做好微电网？_chunk_001"
-      ],
-      "confidence": 1.0
-    },
-    {
-      "subject": "微电网建设",
-      "predicate": "requires",
-      "object": "能源管理软硬件系统",
-      "source_chunks": [
-        "报告-则鸣新能源调研报告：怎么样做好微电网？_chunk_001"
-      ],
-      "confidence": 1.0
-    },
-    {
-      "subject": "微电网运营",
-      "predicate": "depends-on",
-      "object": "云平台调控策略",
-      "source_chunks": [
-        "报告-则鸣新能源调研报告：怎么样做好微电网？_chunk_001"
-      ],
-      "confidence": 1.0
-    },
-    {
-      "subject": "微电网运营",
-      "predicate": "depends-on",
-      "object": "边缘控制器执行",
-      "source_chunks": [
-        "报告-则鸣新能源调研报告：怎么样做好微电网？_chunk_001"
-      ],
-      "confidence": 1.0
-    },
-    {
-      "subject": "交直流混合微电网",
-      "predicate": "enables",
-      "object": "降低交直流转换能耗",
-      "source_chunks": [
-        "报告-则鸣新能源调研报告：怎么样做好微电网？_chunk_001"
-      ],
-      "confidence": 1.0
-    },
-    {
-      "subject": "莫桑比克采矿场离网微电网项目",
-      "predicate": "example-of",
+      "predicate": "related-to",
       "object": "光储柴微电网",
       "source_chunks": [
         "报告-则鸣新能源调研报告：怎么样做好微电网？_chunk_001"
@@ -784,45 +433,54 @@
       "confidence": 1.0
     },
     {
-      "subject": "微电网设计缺陷",
-      "predicate": "causes",
-      "object": "储能容量超配浪费",
+      "subject": "并网型微电网",
+      "predicate": "related-to",
+      "object": "分布式光伏",
       "source_chunks": [
         "报告-则鸣新能源调研报告：怎么样做好微电网？_chunk_001"
       ],
       "confidence": 1.0
     },
     {
-      "subject": "微电网设计缺陷",
-      "predicate": "causes",
-      "object": "光伏消纳不足",
-      "source_chunks": [
-        "报告-则鸣新能源调研报告：怎么样做好微电网？_chunk_001"
-      ],
-      "confidence": 1.0
-    },
-    {
-      "subject": "微电网优化运营",
+      "subject": "微电网",
       "predicate": "requires",
-      "object": "精细化负荷分析",
+      "object": "智慧能源控制器",
       "source_chunks": [
         "报告-则鸣新能源调研报告：怎么样做好微电网？_chunk_001"
       ],
       "confidence": 1.0
     },
     {
-      "subject": "微电网优化运营",
+      "subject": "微电网",
       "predicate": "requires",
-      "object": "适配本地政策的控制算法",
+      "object": "微电网能量管理系统",
       "source_chunks": [
         "报告-则鸣新能源调研报告：怎么样做好微电网？_chunk_001"
       ],
       "confidence": 1.0
     },
     {
-      "subject": "离网微电网运行",
-      "predicate": "depends-on",
-      "object": "储能冗余供电策略",
+      "subject": "能源管理系统",
+      "predicate": "superset-of",
+      "object": "微电网能量管理系统",
+      "source_chunks": [
+        "报告-则鸣新能源调研报告：怎么样做好微电网？_chunk_001"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "subject": "负荷分析",
+      "predicate": "enables",
+      "object": "微电网",
+      "source_chunks": [
+        "报告-则鸣新能源调研报告：怎么样做好微电网？_chunk_001"
+      ],
+      "confidence": 0.8
+    },
+    {
+      "subject": "光储柴微电网",
+      "predicate": "has-a",
+      "object": "柴油发电机",
       "source_chunks": [
         "报告-则鸣新能源调研报告：怎么样做好微电网？_chunk_001"
       ],
@@ -838,16 +496,7 @@
       "confidence": 1.0
     },
     {
-      "subject": "协鑫能科",
-      "predicate": "example-of",
-      "object": "虚拟电厂运营商",
-      "source_chunks": [
-        "报告-协鑫能科调研报告：江苏最大虚拟电厂是怎么做成的？_chunk_001"
-      ],
-      "confidence": 1.0
-    },
-    {
-      "subject": "调峰辅助服务市场",
+      "subject": "辅助服务市场",
       "predicate": "superset-of",
       "object": "填谷辅助服务",
       "source_chunks": [
@@ -856,80 +505,8 @@
       "confidence": 1.0
     },
     {
-      "subject": "调峰辅助服务市场",
+      "subject": "削峰填谷",
       "predicate": "superset-of",
-      "object": "削峰辅助服务",
-      "source_chunks": [
-        "报告-协鑫能科调研报告：江苏最大虚拟电厂是怎么做成的？_chunk_001"
-      ],
-      "confidence": 1.0
-    },
-    {
-      "subject": "可调负荷",
-      "predicate": "superset-of",
-      "object": "水蓄冷储罐",
-      "source_chunks": [
-        "报告-协鑫能科调研报告：江苏最大虚拟电厂是怎么做成的？_chunk_001"
-      ],
-      "confidence": 1.0
-    },
-    {
-      "subject": "虚拟电厂运营",
-      "predicate": "depends-on",
-      "object": "虚拟电厂管理调度平台",
-      "source_chunks": [
-        "报告-协鑫能科调研报告：江苏最大虚拟电厂是怎么做成的？_chunk_001"
-      ],
-      "confidence": 1.0
-    },
-    {
-      "subject": "虚拟电厂运营",
-      "predicate": "depends-on",
-      "object": "资源编码体系",
-      "source_chunks": [
-        "报告-协鑫能科调研报告：江苏最大虚拟电厂是怎么做成的？_chunk_001"
-      ],
-      "confidence": 1.0
-    },
-    {
-      "subject": "填谷辅助服务",
-      "predicate": "depends-on",
-      "object": "基线负荷",
-      "source_chunks": [
-        "报告-协鑫能科调研报告：江苏最大虚拟电厂是怎么做成的？_chunk_001"
-      ],
-      "confidence": 1.0
-    },
-    {
-      "subject": "削峰辅助服务",
-      "predicate": "depends-on",
-      "object": "基线负荷",
-      "source_chunks": [
-        "报告-协鑫能科调研报告：江苏最大虚拟电厂是怎么做成的？_chunk_001"
-      ],
-      "confidence": 1.0
-    },
-    {
-      "subject": "协鑫仓颉能源管理平台",
-      "predicate": "example-of",
-      "object": "能源管理系统",
-      "source_chunks": [
-        "报告-协鑫能科调研报告：江苏最大虚拟电厂是怎么做成的？_chunk_001"
-      ],
-      "confidence": 1.0
-    },
-    {
-      "subject": "协鑫灵活资源聚合平台",
-      "predicate": "example-of",
-      "object": "虚拟电厂管理调度平台",
-      "source_chunks": [
-        "报告-协鑫能科调研报告：江苏最大虚拟电厂是怎么做成的？_chunk_001"
-      ],
-      "confidence": 1.0
-    },
-    {
-      "subject": "光储系统",
-      "predicate": "related-to",
       "object": "填谷辅助服务",
       "source_chunks": [
         "报告-协鑫能科调研报告：江苏最大虚拟电厂是怎么做成的？_chunk_001"
@@ -937,9 +514,9 @@
       "confidence": 1.0
     },
     {
-      "subject": "光储充系统",
-      "predicate": "related-to",
-      "object": "填谷辅助服务",
+      "subject": "储能系统",
+      "predicate": "superset-of",
+      "object": "蓄冷罐",
       "source_chunks": [
         "报告-协鑫能科调研报告：江苏最大虚拟电厂是怎么做成的？_chunk_001"
       ],
@@ -947,6 +524,33 @@
     },
     {
       "subject": "分布式光伏",
+      "predicate": "causes",
+      "object": "填谷辅助服务",
+      "source_chunks": [
+        "报告-协鑫能科调研报告：江苏最大虚拟电厂是怎么做成的？_chunk_001"
+      ],
+      "confidence": 0.8
+    },
+    {
+      "subject": "虚拟电厂运营商",
+      "predicate": "has-a",
+      "object": "资源编码体系",
+      "source_chunks": [
+        "报告-协鑫能科调研报告：江苏最大虚拟电厂是怎么做成的？_chunk_001"
+      ],
+      "confidence": 0.8
+    },
+    {
+      "subject": "光储充协同",
+      "predicate": "enables",
+      "object": "填谷辅助服务",
+      "source_chunks": [
+        "报告-协鑫能科调研报告：江苏最大虚拟电厂是怎么做成的？_chunk_001"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "subject": "虚拟电厂运营商",
       "predicate": "related-to",
       "object": "填谷辅助服务",
       "source_chunks": [
@@ -955,7 +559,16 @@
       "confidence": 1.0
     },
     {
-      "subject": "储能类产品",
+      "subject": "负荷型虚拟电厂",
+      "predicate": "related-to",
+      "object": "填谷辅助服务",
+      "source_chunks": [
+        "报告-协鑫能科调研报告：江苏最大虚拟电厂是怎么做成的？_chunk_001"
+      ],
+      "confidence": 0.8
+    },
+    {
+      "subject": "基线负荷",
       "predicate": "related-to",
       "object": "填谷辅助服务",
       "source_chunks": [
@@ -964,61 +577,16 @@
       "confidence": 1.0
     },
     {
-      "subject": "虚拟电厂",
-      "predicate": "enables",
-      "object": "可调负荷收益提升",
-      "source_chunks": [
-        "报告-协鑫能科调研报告：江苏最大虚拟电厂是怎么做成的？_chunk_001"
-      ],
-      "confidence": 1.0
-    },
-    {
-      "subject": "负荷型虚拟电厂",
-      "predicate": "enables",
-      "object": "填谷辅助服务参与",
-      "source_chunks": [
-        "报告-协鑫能科调研报告：江苏最大虚拟电厂是怎么做成的？_chunk_001"
-      ],
-      "confidence": 1.0
-    },
-    {
-      "subject": "负荷型虚拟电厂",
-      "predicate": "enables",
-      "object": "削峰辅助服务参与",
-      "source_chunks": [
-        "报告-协鑫能科调研报告：江苏最大虚拟电厂是怎么做成的？_chunk_001"
-      ],
-      "confidence": 1.0
-    },
-    {
-      "subject": "光储协调控制器",
-      "predicate": "part-of",
-      "object": "能源管理系统",
+      "subject": "光储充一体化项目",
+      "predicate": "requires",
+      "object": "光储充协同",
       "source_chunks": [
         "报告-固德威江西德安县调研报告：光储充一体化项目怎么做？_chunk_001"
       ],
       "confidence": 1.0
     },
     {
-      "subject": "电流互感器",
-      "predicate": "part-of",
-      "object": "能源管理系统",
-      "source_chunks": [
-        "报告-固德威江西德安县调研报告：光储充一体化项目怎么做？_chunk_001"
-      ],
-      "confidence": 1.0
-    },
-    {
-      "subject": "高压防逆流电表",
-      "predicate": "is-a",
-      "object": "智能电表",
-      "source_chunks": [
-        "报告-固德威江西德安县调研报告：光储充一体化项目怎么做？_chunk_001"
-      ],
-      "confidence": 1.0
-    },
-    {
-      "subject": "光储充系统",
+      "subject": "光储充协同",
       "predicate": "requires",
       "object": "光储协调控制器",
       "source_chunks": [
@@ -1027,99 +595,9 @@
       "confidence": 1.0
     },
     {
-      "subject": "光储充系统",
+      "subject": "光储充协同",
       "predicate": "requires",
-      "object": "电流互感器",
-      "source_chunks": [
-        "报告-固德威江西德安县调研报告：光储充一体化项目怎么做？_chunk_001"
-      ],
-      "confidence": 1.0
-    },
-    {
-      "subject": "光储充系统",
-      "predicate": "requires",
-      "object": "智能电表",
-      "source_chunks": [
-        "报告-固德威江西德安县调研报告：光储充一体化项目怎么做？_chunk_001"
-      ],
-      "confidence": 1.0
-    },
-    {
-      "subject": "防逆流失效",
-      "predicate": "caused-by",
-      "object": "数据采集精度不足",
-      "source_chunks": [
-        "报告-固德威江西德安县调研报告：光储充一体化项目怎么做？_chunk_001"
-      ],
-      "confidence": 1.0
-    },
-    {
-      "subject": "防逆流失效",
-      "predicate": "caused-by",
-      "object": "系统响应速度慢",
-      "source_chunks": [
-        "报告-固德威江西德安县调研报告：光储充一体化项目怎么做？_chunk_001"
-      ],
-      "confidence": 1.0
-    },
-    {
-      "subject": "防逆流失效",
-      "predicate": "caused-by",
-      "object": "通讯线路不稳定",
-      "source_chunks": [
-        "报告-固德威江西德安县调研报告：光储充一体化项目怎么做？_chunk_001"
-      ],
-      "confidence": 1.0
-    },
-    {
-      "subject": "柔性防逆流策略",
-      "predicate": "enables",
-      "object": "降低弃光率",
-      "source_chunks": [
-        "报告-固德威江西德安县调研报告：光储充一体化项目怎么做？_chunk_001"
-      ],
-      "confidence": 1.0
-    },
-    {
-      "subject": "柔性防逆流策略",
-      "predicate": "enables",
-      "object": "提高光伏发电收益",
-      "source_chunks": [
-        "报告-固德威江西德安县调研报告：光储充一体化项目怎么做？_chunk_001"
-      ],
-      "confidence": 1.0
-    },
-    {
-      "subject": "光储充系统运营收益",
-      "predicate": "depends-on",
-      "object": "充放电运营策略",
-      "source_chunks": [
-        "报告-固德威江西德安县调研报告：光储充一体化项目怎么做？_chunk_001"
-      ],
-      "confidence": 1.0
-    },
-    {
-      "subject": "县级虚拟电厂",
-      "predicate": "superset-of",
-      "object": "光储充系统",
-      "source_chunks": [
-        "报告-固德威江西德安县调研报告：光储充一体化项目怎么做？_chunk_001"
-      ],
-      "confidence": 0.8
-    },
-    {
-      "subject": "新能源资产增值",
-      "predicate": "depends-on",
-      "object": "能源资源整合",
-      "source_chunks": [
-        "报告-固德威江西德安县调研报告：光储充一体化项目怎么做？_chunk_001"
-      ],
-      "confidence": 1.0
-    },
-    {
-      "subject": "德安县重卡光储充项目",
-      "predicate": "example-of",
-      "object": "光储充系统",
+      "object": "能源管理系统",
       "source_chunks": [
         "报告-固德威江西德安县调研报告：光储充一体化项目怎么做？_chunk_001"
       ],
@@ -1137,16 +615,34 @@
     {
       "subject": "光储协调控制器",
       "predicate": "regulates",
-      "object": "储能变流器",
+      "object": "储能系统",
       "source_chunks": [
         "报告-固德威江西德安县调研报告：光储充一体化项目怎么做？_chunk_001"
       ],
       "confidence": 1.0
     },
     {
-      "subject": "德安县县级虚拟电厂",
-      "predicate": "example-of",
-      "object": "县级虚拟电厂",
+      "subject": "防逆流",
+      "predicate": "requires",
+      "object": "防逆流电表",
+      "source_chunks": [
+        "报告-固德威江西德安县调研报告：光储充一体化项目怎么做？_chunk_001"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "subject": "防逆流电表",
+      "predicate": "related-to",
+      "object": "下行功率",
+      "source_chunks": [
+        "报告-固德威江西德安县调研报告：光储充一体化项目怎么做？_chunk_001"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "subject": "度电盈亏平衡点",
+      "predicate": "related-to",
+      "object": "结算电价",
       "source_chunks": [
         "报告-固德威江西德安县调研报告：光储充一体化项目怎么做？_chunk_001"
       ],
@@ -1154,123 +650,105 @@
     },
     {
       "subject": "虚拟电厂",
-      "predicate": "enables",
-      "object": "提升分布式光伏资产价值",
+      "predicate": "superset-of",
+      "object": "县级虚拟电厂",
       "source_chunks": [
         "报告-固德威江西德安县调研报告：光储充一体化项目怎么做？_chunk_001"
       ],
       "confidence": 1.0
     },
     {
-      "subject": "换电站类产品",
-      "predicate": "superset-of",
-      "object": "重卡换电站",
-      "source_chunks": [
-        "报告-国海绿能一线调研报告：重卡换电站怎么做？_chunk_001"
-      ],
-      "confidence": 1.0
-    },
-    {
-      "subject": "重卡换电站",
-      "predicate": "superset-of",
-      "object": "顶吊式换电站",
-      "source_chunks": [
-        "报告-国海绿能一线调研报告：重卡换电站怎么做？_chunk_001"
-      ],
-      "confidence": 1.0
-    },
-    {
-      "subject": "重卡换电站",
-      "predicate": "has-a",
-      "object": "换电机器人",
-      "source_chunks": [
-        "报告-国海绿能一线调研报告：重卡换电站怎么做？_chunk_001"
-      ],
-      "confidence": 1.0
-    },
-    {
-      "subject": "重卡换电站",
-      "predicate": "enables",
-      "object": "电动重卡补能",
-      "source_chunks": [
-        "报告-国海绿能一线调研报告：重卡换电站怎么做？_chunk_001"
-      ],
-      "confidence": 1.0
-    },
-    {
-      "subject": "重卡换电站运营",
-      "predicate": "depends-on",
-      "object": "换电服务费",
-      "source_chunks": [
-        "报告-国海绿能一线调研报告：重卡换电站怎么做？_chunk_001"
-      ],
-      "confidence": 1.0
-    },
-    {
-      "subject": "重卡换电站建设",
+      "subject": "零碳示范园区",
       "predicate": "requires",
-      "object": "EPC",
+      "object": "光储充一体化项目",
       "source_chunks": [
-        "报告-国海绿能一线调研报告：重卡换电站怎么做？_chunk_001"
+        "报告-固德威江西德安县调研报告：光储充一体化项目怎么做？_chunk_001"
       ],
-      "confidence": 1.0
+      "confidence": 0.8
     },
     {
-      "subject": "城市级虚拟电厂",
-      "predicate": "requires",
-      "object": "重卡换电站",
-      "source_chunks": [
-        "报告-国海绿能一线调研报告：重卡换电站怎么做？_chunk_001"
-      ],
-      "confidence": 1.0
-    },
-    {
-      "subject": "重卡换电站",
+      "subject": "地方平台公司",
       "predicate": "related-to",
+      "object": "资源整合",
+      "source_chunks": [
+        "报告-固德威江西德安县调研报告：光储充一体化项目怎么做？_chunk_001"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "subject": "资源整合",
+      "predicate": "enables",
       "object": "虚拟电厂",
       "source_chunks": [
-        "报告-国海绿能一线调研报告：重卡换电站怎么做？_chunk_001"
+        "报告-固德威江西德安县调研报告：光储充一体化项目怎么做？_chunk_001"
       ],
       "confidence": 1.0
     },
     {
-      "subject": "重卡换电站",
+      "subject": "柔性防逆流",
       "predicate": "related-to",
-      "object": "源网荷储一体化模式",
+      "object": "弃光率",
       "source_chunks": [
-        "报告-国海绿能一线调研报告：重卡换电站怎么做？_chunk_001"
+        "报告-固德威江西德安县调研报告：光储充一体化项目怎么做？_chunk_001"
       ],
       "confidence": 1.0
     },
     {
-      "subject": "新能源市场",
+      "subject": "分布式光伏",
       "predicate": "superset-of",
-      "object": "重卡换电市场",
+      "object": "车棚光伏",
       "source_chunks": [
-        "报告-国海绿能一线调研报告：重卡换电站怎么做？_chunk_001"
+        "报告-固德威江西德安县调研报告：光储充一体化项目怎么做？_chunk_001"
       ],
       "confidence": 1.0
     },
     {
-      "subject": "源网荷储一体化模式",
+      "subject": "储能系统",
+      "predicate": "related-to",
+      "object": "两充两放策略",
+      "source_chunks": [
+        "报告-固德威江西德安县调研报告：光储充一体化项目怎么做？_chunk_001"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "subject": "智慧能源控制器",
       "predicate": "superset-of",
-      "object": "风光储充换综合能源站",
+      "object": "光储协调控制器",
       "source_chunks": [
-        "报告-国海绿能一线调研报告：重卡换电站怎么做？_chunk_001"
+        "报告-固德威江西德安县调研报告：光储充一体化项目怎么做？_chunk_001"
       ],
       "confidence": 1.0
     },
     {
-      "subject": "国海绿能（上海）能源有限公司",
-      "predicate": "example-of",
-      "object": "新能源设备制造商",
+      "subject": "虚拟电厂",
+      "predicate": "related-to",
+      "object": "需求侧响应",
       "source_chunks": [
-        "报告-国海绿能一线调研报告：重卡换电站怎么做？_chunk_001"
+        "报告-固德威江西德安县调研报告：光储充一体化项目怎么做？_chunk_001"
       ],
       "confidence": 1.0
     },
     {
-      "subject": "储能类产品",
+      "subject": "电流互感器",
+      "predicate": "related-to",
+      "object": "智能电表",
+      "source_chunks": [
+        "报告-固德威江西德安县调研报告：光储充一体化项目怎么做？_chunk_001"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "subject": "能源管理系统",
+      "predicate": "superset-of",
+      "object": "智慧能源平台",
+      "source_chunks": [
+        "报告-固德威江西德安县调研报告：光储充一体化项目怎么做？_chunk_001"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "subject": "储能系统",
       "predicate": "superset-of",
       "object": "飞轮储能",
       "source_chunks": [
@@ -1279,25 +757,7 @@
       "confidence": 1.0
     },
     {
-      "subject": "调峰辅助服务市场",
-      "predicate": "superset-of",
-      "object": "调频辅助服务",
-      "source_chunks": [
-        "报告-奇峰聚能调研报告：飞轮储能怎么做？_chunk_001"
-      ],
-      "confidence": 1.0
-    },
-    {
-      "subject": "电力辅助服务",
-      "predicate": "superset-of",
-      "object": "调频辅助服务",
-      "source_chunks": [
-        "报告-奇峰聚能调研报告：飞轮储能怎么做？_chunk_001"
-      ],
-      "confidence": 1.0
-    },
-    {
-      "subject": "调频辅助服务",
+      "subject": "辅助服务市场",
       "predicate": "superset-of",
       "object": "一次调频",
       "source_chunks": [
@@ -1306,9 +766,36 @@
       "confidence": 1.0
     },
     {
-      "subject": "调频辅助服务",
+      "subject": "辅助服务市场",
       "predicate": "superset-of",
       "object": "二次调频",
+      "source_chunks": [
+        "报告-奇峰聚能调研报告：飞轮储能怎么做？_chunk_001"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "subject": "飞轮储能",
+      "predicate": "enables",
+      "object": "一次调频",
+      "source_chunks": [
+        "报告-奇峰聚能调研报告：飞轮储能怎么做？_chunk_001"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "subject": "飞轮储能",
+      "predicate": "enables",
+      "object": "二次调频",
+      "source_chunks": [
+        "报告-奇峰聚能调研报告：飞轮储能怎么做？_chunk_001"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "subject": "一次调频",
+      "predicate": "depends-on",
+      "object": "频率死区",
       "source_chunks": [
         "报告-奇峰聚能调研报告：飞轮储能怎么做？_chunk_001"
       ],
@@ -1324,18 +811,54 @@
       "confidence": 1.0
     },
     {
-      "subject": "飞轮储能",
-      "predicate": "related-to",
-      "object": "一次调频",
+      "subject": "K值",
+      "predicate": "has-a",
+      "object": "响应时间性能指标",
       "source_chunks": [
         "报告-奇峰聚能调研报告：飞轮储能怎么做？_chunk_001"
       ],
       "confidence": 1.0
     },
     {
-      "subject": "飞轮储能",
+      "subject": "K值",
+      "predicate": "has-a",
+      "object": "响应速率性能指标",
+      "source_chunks": [
+        "报告-奇峰聚能调研报告：飞轮储能怎么做？_chunk_001"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "subject": "K值",
+      "predicate": "has-a",
+      "object": "响应精度性能指标",
+      "source_chunks": [
+        "报告-奇峰聚能调研报告：飞轮储能怎么做？_chunk_001"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "subject": "排序价格",
+      "predicate": "depends-on",
+      "object": "K值",
+      "source_chunks": [
+        "报告-奇峰聚能调研报告：飞轮储能怎么做？_chunk_001"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "subject": "独立储能电站",
       "predicate": "related-to",
-      "object": "二次调频",
+      "object": "辅助服务市场",
+      "source_chunks": [
+        "报告-奇峰聚能调研报告：飞轮储能怎么做？_chunk_001"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "subject": "混合储能电站",
+      "predicate": "has-a",
+      "object": "飞轮储能",
       "source_chunks": [
         "报告-奇峰聚能调研报告：飞轮储能怎么做？_chunk_001"
       ],
@@ -1344,41 +867,86 @@
     {
       "subject": "两个细则",
       "predicate": "regulates",
-      "object": "一次调频考核管理",
+      "object": "一次调频",
       "source_chunks": [
         "报告-奇峰聚能调研报告：飞轮储能怎么做？_chunk_001"
       ],
       "confidence": 1.0
     },
     {
-      "subject": "北京奇峰聚能科技有限公司",
-      "predicate": "example-of",
-      "object": "新能源企业",
+      "subject": "调频里程",
+      "predicate": "related-to",
+      "object": "辅助服务市场",
       "source_chunks": [
         "报告-奇峰聚能调研报告：飞轮储能怎么做？_chunk_001"
       ],
       "confidence": 1.0
     },
     {
-      "subject": "新能源应用产品",
-      "predicate": "superset-of",
-      "object": "热泵类产品",
+      "subject": "飞轮储能",
+      "predicate": "has-a",
+      "object": "飞轮转子",
+      "source_chunks": [
+        "报告-奇峰聚能调研报告：飞轮储能怎么做？_chunk_001"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "subject": "重卡换电站",
+      "predicate": "related-to",
+      "object": "虚拟电厂",
+      "source_chunks": [
+        "报告-国海绿能一线调研报告：重卡换电站怎么做？_chunk_001"
+      ],
+      "confidence": 0.8
+    },
+    {
+      "subject": "重卡换电站",
+      "predicate": "related-to",
+      "object": "源网荷储",
+      "source_chunks": [
+        "报告-国海绿能一线调研报告：重卡换电站怎么做？_chunk_001"
+      ],
+      "confidence": 0.8
+    },
+    {
+      "subject": "重卡换电站",
+      "predicate": "has-a",
+      "object": "换电服务费",
+      "source_chunks": [
+        "报告-国海绿能一线调研报告：重卡换电站怎么做？_chunk_001"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "subject": "重卡换电站",
+      "predicate": "related-to",
+      "object": "电动物流车",
+      "source_chunks": [
+        "报告-国海绿能一线调研报告：重卡换电站怎么做？_chunk_001"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "subject": "售电服务",
+      "predicate": "enables",
+      "object": "综合能源服务",
+      "source_chunks": [
+        "报告-安悦节能调研报告：怎样做冷热电综合能源服务？_chunk_001"
+      ],
+      "confidence": 0.8
+    },
+    {
+      "subject": "固体储热装置",
+      "predicate": "enables",
+      "object": "峰谷套利",
       "source_chunks": [
         "报告-安悦节能调研报告：怎样做冷热电综合能源服务？_chunk_001"
       ],
       "confidence": 1.0
     },
     {
-      "subject": "热泵类产品",
-      "predicate": "superset-of",
-      "object": "地源热泵",
-      "source_chunks": [
-        "报告-安悦节能调研报告：怎样做冷热电综合能源服务？_chunk_001"
-      ],
-      "confidence": 1.0
-    },
-    {
-      "subject": "热泵类产品",
+      "subject": "热泵",
       "predicate": "superset-of",
       "object": "空气源热泵",
       "source_chunks": [
@@ -1387,144 +955,45 @@
       "confidence": 1.0
     },
     {
-      "subject": "新能源工程服务",
+      "subject": "热泵",
       "predicate": "superset-of",
-      "object": "综合能源服务",
+      "object": "地源热泵",
       "source_chunks": [
         "报告-安悦节能调研报告：怎样做冷热电综合能源服务？_chunk_001"
       ],
       "confidence": 1.0
     },
     {
-      "subject": "综合能源服务",
+      "subject": "热泵",
       "predicate": "superset-of",
-      "object": "工业余热利用服务",
+      "object": "电压缩热泵",
       "source_chunks": [
         "报告-安悦节能调研报告：怎样做冷热电综合能源服务？_chunk_001"
       ],
       "confidence": 1.0
     },
     {
-      "subject": "储能类产品",
+      "subject": "热泵",
       "predicate": "superset-of",
-      "object": "储热类产品",
+      "object": "吸收式热泵",
       "source_chunks": [
         "报告-安悦节能调研报告：怎样做冷热电综合能源服务？_chunk_001"
       ],
       "confidence": 1.0
     },
     {
-      "subject": "储热类产品",
-      "predicate": "superset-of",
-      "object": "固体储热",
-      "source_chunks": [
-        "报告-安悦节能调研报告：怎样做冷热电综合能源服务？_chunk_001"
-      ],
-      "confidence": 1.0
-    },
-    {
-      "subject": "山东安悦节能技术有限公司",
-      "predicate": "example-of",
-      "object": "新能源企业",
-      "source_chunks": [
-        "报告-安悦节能调研报告：怎样做冷热电综合能源服务？_chunk_001"
-      ],
-      "confidence": 1.0
-    },
-    {
-      "subject": "山东安悦节能技术有限公司",
+      "subject": "工业余热利用",
       "predicate": "related-to",
-      "object": "综合能源服务",
+      "object": "热泵",
       "source_chunks": [
         "报告-安悦节能调研报告：怎样做冷热电综合能源服务？_chunk_001"
       ],
-      "confidence": 1.0
+      "confidence": 0.8
     },
     {
-      "subject": "固体储热",
-      "predicate": "enables",
-      "object": "电价峰谷套利",
-      "source_chunks": [
-        "报告-安悦节能调研报告：怎样做冷热电综合能源服务？_chunk_001"
-      ],
-      "confidence": 1.0
-    },
-    {
-      "subject": "线性菲涅尔式太阳能聚光集热系统",
-      "predicate": "requires",
-      "object": "太阳能跟踪控制系统",
-      "source_chunks": [
-        "报告-安悦节能调研报告：怎样做冷热电综合能源服务？_chunk_001"
-      ],
-      "confidence": 1.0
-    },
-    {
-      "subject": "工业余热",
-      "predicate": "related-to",
-      "object": "综合能源服务",
-      "source_chunks": [
-        "报告-安悦节能调研报告：怎样做冷热电综合能源服务？_chunk_001"
-      ],
-      "confidence": 1.0
-    },
-    {
-      "subject": "综合能源服务",
-      "predicate": "enables",
-      "object": "企业节能降碳",
-      "source_chunks": [
-        "报告-安悦节能调研报告：怎样做冷热电综合能源服务？_chunk_001"
-      ],
-      "confidence": 1.0
-    },
-    {
-      "subject": "ORC膨胀发电方案",
-      "predicate": "related-to",
-      "object": "工业余热",
-      "source_chunks": [
-        "报告-安悦节能调研报告：怎样做冷热电综合能源服务？_chunk_001"
-      ],
-      "confidence": 1.0
-    },
-    {
-      "subject": "蒸汽机械再压缩节能方案",
-      "predicate": "related-to",
-      "object": "工业余热",
-      "source_chunks": [
-        "报告-安悦节能调研报告：怎样做冷热电综合能源服务？_chunk_001"
-      ],
-      "confidence": 1.0
-    },
-    {
-      "subject": "吸收式热泵解决方案",
-      "predicate": "related-to",
-      "object": "工业余热",
-      "source_chunks": [
-        "报告-安悦节能调研报告：怎样做冷热电综合能源服务？_chunk_001"
-      ],
-      "confidence": 1.0
-    },
-    {
-      "subject": "电压缩热泵解决方案",
-      "predicate": "related-to",
-      "object": "工业余热",
-      "source_chunks": [
-        "报告-安悦节能调研报告：怎样做冷热电综合能源服务？_chunk_001"
-      ],
-      "confidence": 1.0
-    },
-    {
-      "subject": "直接换热技术",
-      "predicate": "related-to",
-      "object": "工业余热",
-      "source_chunks": [
-        "报告-安悦节能调研报告：怎样做冷热电综合能源服务？_chunk_001"
-      ],
-      "confidence": 1.0
-    },
-    {
-      "subject": "合同能源管理",
-      "predicate": "related-to",
-      "object": "综合能源服务",
+      "subject": "太阳能跟踪控制系统",
+      "predicate": "part-of",
+      "object": "线性菲涅尔式集热系统",
       "source_chunks": [
         "报告-安悦节能调研报告：怎样做冷热电综合能源服务？_chunk_001"
       ],
@@ -1533,68 +1002,14 @@
     {
       "subject": "综合能源服务",
       "predicate": "related-to",
-      "object": "售电",
+      "object": "虚拟电厂",
       "source_chunks": [
         "报告-安悦节能调研报告：怎样做冷热电综合能源服务？_chunk_001"
       ],
-      "confidence": 1.0
+      "confidence": 0.6
     },
     {
-      "subject": "虚拟电厂类产品",
-      "predicate": "superset-of",
-      "object": "混合型虚拟电厂",
-      "source_chunks": [
-        "报告-广林汇智调研报告：在西北地区怎么做虚拟电厂？_chunk_001"
-      ],
-      "confidence": 1.0
-    },
-    {
-      "subject": "虚拟电厂类产品",
-      "predicate": "superset-of",
-      "object": "邀约型虚拟电厂",
-      "source_chunks": [
-        "报告-广林汇智调研报告：在西北地区怎么做虚拟电厂？_chunk_001"
-      ],
-      "confidence": 1.0
-    },
-    {
-      "subject": "虚拟电厂类产品",
-      "predicate": "superset-of",
-      "object": "市场型虚拟电厂",
-      "source_chunks": [
-        "报告-广林汇智调研报告：在西北地区怎么做虚拟电厂？_chunk_001"
-      ],
-      "confidence": 1.0
-    },
-    {
-      "subject": "虚拟电厂类产品",
-      "predicate": "superset-of",
-      "object": "跨空间自主调度型虚拟电厂",
-      "source_chunks": [
-        "报告-广林汇智调研报告：在西北地区怎么做虚拟电厂？_chunk_001"
-      ],
-      "confidence": 1.0
-    },
-    {
-      "subject": "西安广林汇智能源科技有限公司",
-      "predicate": "example-of",
-      "object": "虚拟电厂运营商",
-      "source_chunks": [
-        "报告-广林汇智调研报告：在西北地区怎么做虚拟电厂？_chunk_001"
-      ],
-      "confidence": 1.0
-    },
-    {
-      "subject": "西安广林汇智能源科技有限公司",
-      "predicate": "example-of",
-      "object": "负荷聚合商",
-      "source_chunks": [
-        "报告-广林汇智调研报告：在西北地区怎么做虚拟电厂？_chunk_001"
-      ],
-      "confidence": 1.0
-    },
-    {
-      "subject": "高新能源渗透率送端电网",
+      "subject": "新能源渗透率",
       "predicate": "causes",
       "object": "消纳缺口",
       "source_chunks": [
@@ -1603,7 +1018,7 @@
       "confidence": 1.0
     },
     {
-      "subject": "高新能源渗透率送端电网",
+      "subject": "新能源渗透率",
       "predicate": "causes",
       "object": "安全缺口",
       "source_chunks": [
@@ -1613,35 +1028,26 @@
     },
     {
       "subject": "消纳缺口",
-      "predicate": "requires",
-      "object": "灵活性调节资源",
-      "source_chunks": [
-        "报告-广林汇智调研报告：在西北地区怎么做虚拟电厂？_chunk_001"
-      ],
-      "confidence": 1.0
-    },
-    {
-      "subject": "安全缺口",
-      "predicate": "requires",
-      "object": "灵活性调节资源",
-      "source_chunks": [
-        "报告-广林汇智调研报告：在西北地区怎么做虚拟电厂？_chunk_001"
-      ],
-      "confidence": 1.0
-    },
-    {
-      "subject": "灵活性调节资源",
-      "predicate": "superset-of",
+      "predicate": "enables",
       "object": "虚拟电厂",
       "source_chunks": [
         "报告-广林汇智调研报告：在西北地区怎么做虚拟电厂？_chunk_001"
       ],
-      "confidence": 1.0
+      "confidence": 0.8
     },
     {
-      "subject": "负荷型虚拟电厂",
-      "predicate": "depends-on",
-      "object": "丰富可调负荷资源",
+      "subject": "安全缺口",
+      "predicate": "enables",
+      "object": "虚拟电厂",
+      "source_chunks": [
+        "报告-广林汇智调研报告：在西北地区怎么做虚拟电厂？_chunk_001"
+      ],
+      "confidence": 0.8
+    },
+    {
+      "subject": "邀约型虚拟电厂",
+      "predicate": "related-to",
+      "object": "调峰辅助服务",
       "source_chunks": [
         "报告-广林汇智调研报告：在西北地区怎么做虚拟电厂？_chunk_001"
       ],
@@ -1649,17 +1055,8 @@
     },
     {
       "subject": "邀约型虚拟电厂",
-      "predicate": "enables",
-      "object": "参与调峰辅助服务",
-      "source_chunks": [
-        "报告-广林汇智调研报告：在西北地区怎么做虚拟电厂？_chunk_001"
-      ],
-      "confidence": 1.0
-    },
-    {
-      "subject": "邀约型虚拟电厂",
-      "predicate": "enables",
-      "object": "参与需求侧响应",
+      "predicate": "related-to",
+      "object": "需求侧响应",
       "source_chunks": [
         "报告-广林汇智调研报告：在西北地区怎么做虚拟电厂？_chunk_001"
       ],
@@ -1667,7 +1064,7 @@
     },
     {
       "subject": "市场型虚拟电厂",
-      "predicate": "depends-on",
+      "predicate": "related-to",
       "object": "电力现货市场",
       "source_chunks": [
         "报告-广林汇智调研报告：在西北地区怎么做虚拟电厂？_chunk_001"
@@ -1675,9 +1072,9 @@
       "confidence": 1.0
     },
     {
-      "subject": "调峰辅助服务市场",
+      "subject": "调峰辅助服务",
       "predicate": "superset-of",
-      "object": "跨省调峰辅助服务",
+      "object": "填谷辅助服务",
       "source_chunks": [
         "报告-广林汇智调研报告：在西北地区怎么做虚拟电厂？_chunk_001"
       ],
@@ -1686,114 +1083,15 @@
     {
       "subject": "《关于建立健全电力辅助服务市场价格机制的通知》",
       "predicate": "regulates",
-      "object": "调峰辅助服务价格上限设置",
+      "object": "调峰辅助服务费",
       "source_chunks": [
         "报告-广林汇智调研报告：在西北地区怎么做虚拟电厂？_chunk_001"
       ],
       "confidence": 1.0
     },
     {
-      "subject": "《关于建立健全电力辅助服务市场价格机制的通知》",
-      "predicate": "causes",
-      "object": "虚拟电厂盈利模式向电力现货交易转型",
-      "source_chunks": [
-        "报告-广林汇智调研报告：在西北地区怎么做虚拟电厂？_chunk_001"
-      ],
-      "confidence": 1.0
-    },
-    {
-      "subject": "负荷型虚拟电厂运营",
-      "predicate": "requires",
-      "object": "聚合高耗能负荷企业",
-      "source_chunks": [
-        "报告-广林汇智调研报告：在西北地区怎么做虚拟电厂？_chunk_001"
-      ],
-      "confidence": 1.0
-    },
-    {
-      "subject": "负荷型虚拟电厂运营",
-      "predicate": "requires",
-      "object": "梳理负荷企业生产流程",
-      "source_chunks": [
-        "报告-广林汇智调研报告：在西北地区怎么做虚拟电厂？_chunk_001"
-      ],
-      "confidence": 1.0
-    },
-    {
-      "subject": "负荷型虚拟电厂运营",
-      "predicate": "requires",
-      "object": "为负荷企业明确收益预期",
-      "source_chunks": [
-        "报告-广林汇智调研报告：在西北地区怎么做虚拟电厂？_chunk_001"
-      ],
-      "confidence": 1.0
-    },
-    {
-      "subject": "负荷型虚拟电厂运营",
-      "predicate": "requires",
-      "object": "具备负荷聚合商市场主体资格",
-      "source_chunks": [
-        "报告-广林汇智调研报告：在西北地区怎么做虚拟电厂？_chunk_001"
-      ],
-      "confidence": 1.0
-    },
-    {
-      "subject": "虚拟电厂",
-      "predicate": "enables",
-      "object": "售电公司商业模式升级",
-      "source_chunks": [
-        "报告-广林汇智调研报告：在西北地区怎么做虚拟电厂？_chunk_001"
-      ],
-      "confidence": 1.0
-    },
-    {
-      "subject": "虚拟电厂",
-      "predicate": "enables",
-      "object": "新能源资产增值",
-      "source_chunks": [
-        "报告-广林汇智调研报告：在西北地区怎么做虚拟电厂？_chunk_001"
-      ],
-      "confidence": 1.0
-    },
-    {
-      "subject": "Next Kraftwerke",
+      "subject": "恒实盛景虚拟电厂",
       "predicate": "example-of",
-      "object": "虚拟电厂运营商",
-      "source_chunks": [
-        "报告-广林汇智调研报告：在西北地区怎么做虚拟电厂？_chunk_001"
-      ],
-      "confidence": 1.0
-    },
-    {
-      "subject": "东南地区高耗能企业向西北转移",
-      "predicate": "causes",
-      "object": "西北地区可调负荷资源丰富",
-      "source_chunks": [
-        "报告-广林汇智调研报告：在西北地区怎么做虚拟电厂？_chunk_001"
-      ],
-      "confidence": 1.0
-    },
-    {
-      "subject": "西北地区可调负荷资源丰富",
-      "predicate": "enables",
-      "object": "西北地区负荷型虚拟电厂发展",
-      "source_chunks": [
-        "报告-广林汇智调研报告：在西北地区怎么做虚拟电厂？_chunk_001"
-      ],
-      "confidence": 1.0
-    },
-    {
-      "subject": "广林汇智虚拟电厂",
-      "predicate": "example-of",
-      "object": "负荷型虚拟电厂",
-      "source_chunks": [
-        "报告-广林汇智调研报告：在西北地区怎么做虚拟电厂？_chunk_001"
-      ],
-      "confidence": 1.0
-    },
-    {
-      "subject": "虚拟电厂类产品",
-      "predicate": "superset-of",
       "object": "空调虚拟电厂",
       "source_chunks": [
         "报告-恒实盛景调研报告：怎样做空调虚拟电厂？_chunk_001"
@@ -1801,16 +1099,7 @@
       "confidence": 1.0
     },
     {
-      "subject": "负荷型虚拟电厂",
-      "predicate": "superset-of",
-      "object": "空调虚拟电厂",
-      "source_chunks": [
-        "报告-恒实盛景调研报告：怎样做空调虚拟电厂？_chunk_001"
-      ],
-      "confidence": 1.0
-    },
-    {
-      "subject": "深圳恒实盛景科技有限责任公司",
+      "subject": "恒实盛景",
       "predicate": "example-of",
       "object": "虚拟电厂运营商",
       "source_chunks": [
@@ -1819,144 +1108,90 @@
       "confidence": 1.0
     },
     {
-      "subject": "深圳恒实盛景科技有限责任公司",
-      "predicate": "example-of",
-      "object": "负荷聚合商",
-      "source_chunks": [
-        "报告-恒实盛景调研报告：怎样做空调虚拟电厂？_chunk_001"
-      ],
-      "confidence": 1.0
-    },
-    {
-      "subject": "北京恒泰实达科技股份有限公司",
-      "predicate": "has-a",
-      "object": "深圳恒实盛景科技有限责任公司",
-      "source_chunks": [
-        "报告-恒实盛景调研报告：怎样做空调虚拟电厂？_chunk_001"
-      ],
-      "confidence": 1.0
-    },
-    {
       "subject": "空调虚拟电厂",
-      "predicate": "depends-on",
-      "object": "建筑热惯性",
-      "source_chunks": [
-        "报告-恒实盛景调研报告：怎样做空调虚拟电厂？_chunk_001"
-      ],
-      "confidence": 1.0
-    },
-    {
-      "subject": "空调虚拟电厂",
-      "predicate": "depends-on",
-      "object": "水蓄冷储罐",
-      "source_chunks": [
-        "报告-恒实盛景调研报告：怎样做空调虚拟电厂？_chunk_001"
-      ],
-      "confidence": 1.0
-    },
-    {
-      "subject": "空调虚拟电厂",
-      "predicate": "depends-on",
-      "object": "冰蓄冷柜",
-      "source_chunks": [
-        "报告-恒实盛景调研报告：怎样做空调虚拟电厂？_chunk_001"
-      ],
-      "confidence": 1.0
-    },
-    {
-      "subject": "空调虚拟电厂",
-      "predicate": "depends-on",
-      "object": "空调负荷",
-      "source_chunks": [
-        "报告-恒实盛景调研报告：怎样做空调虚拟电厂？_chunk_001"
-      ],
-      "confidence": 1.0
-    },
-    {
-      "subject": "空调虚拟电厂",
-      "predicate": "depends-on",
-      "object": "人体热舒适模型",
-      "source_chunks": [
-        "报告-恒实盛景调研报告：怎样做空调虚拟电厂？_chunk_001"
-      ],
-      "confidence": 1.0
-    },
-    {
-      "subject": "空调虚拟电厂",
-      "predicate": "depends-on",
-      "object": "仿生控制算法",
-      "source_chunks": [
-        "报告-恒实盛景调研报告：怎样做空调虚拟电厂？_chunk_001"
-      ],
-      "confidence": 1.0
-    },
-    {
-      "subject": "空调虚拟电厂",
-      "predicate": "depends-on",
-      "object": "AI调控算法",
-      "source_chunks": [
-        "报告-恒实盛景调研报告：怎样做空调虚拟电厂？_chunk_001"
-      ],
-      "confidence": 1.0
-    },
-    {
-      "subject": "空调虚拟电厂",
-      "predicate": "enables",
-      "object": "削峰辅助服务",
-      "source_chunks": [
-        "报告-恒实盛景调研报告：怎样做空调虚拟电厂？_chunk_001"
-      ],
-      "confidence": 1.0
-    },
-    {
-      "subject": "可调负荷",
-      "predicate": "superset-of",
-      "object": "空调负荷",
-      "source_chunks": [
-        "报告-恒实盛景调研报告：怎样做空调虚拟电厂？_chunk_001"
-      ],
-      "confidence": 1.0
-    },
-    {
-      "subject": "综合能源服务",
-      "predicate": "superset-of",
-      "object": "虚拟电厂+产业",
-      "source_chunks": [
-        "报告-恒实盛景调研报告：怎样做空调虚拟电厂？_chunk_001"
-      ],
-      "confidence": 1.0
-    },
-    {
-      "subject": "水蓄冷储罐",
       "predicate": "related-to",
-      "object": "冰蓄冷柜",
+      "object": "需求侧响应",
       "source_chunks": [
         "报告-恒实盛景调研报告：怎样做空调虚拟电厂？_chunk_001"
       ],
       "confidence": 1.0
     },
     {
-      "subject": "分布式光伏",
+      "subject": "需求侧响应",
       "predicate": "superset-of",
-      "object": "户用光伏",
+      "object": "日前需求响应市场",
       "source_chunks": [
-        "报告-正泰安能光伏星调研报告：在非洲如何做户用光伏？_chunk_001"
+        "报告-恒实盛景调研报告：怎样做空调虚拟电厂？_chunk_001"
       ],
       "confidence": 1.0
     },
     {
-      "subject": "非洲新能源市场",
+      "subject": "需求侧响应",
       "predicate": "superset-of",
-      "object": "户用光伏市场",
+      "object": "日内需求响应市场",
       "source_chunks": [
-        "报告-正泰安能光伏星调研报告：在非洲如何做户用光伏？_chunk_001"
+        "报告-恒实盛景调研报告：怎样做空调虚拟电厂？_chunk_001"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "subject": "热惯性",
+      "predicate": "enables",
+      "object": "空调虚拟电厂",
+      "source_chunks": [
+        "报告-恒实盛景调研报告：怎样做空调虚拟电厂？_chunk_001"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "subject": "空调虚拟电厂",
+      "predicate": "enables",
+      "object": "无感节能",
+      "source_chunks": [
+        "报告-恒实盛景调研报告：怎样做空调虚拟电厂？_chunk_001"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "subject": "全投资模式",
+      "predicate": "related-to",
+      "object": "虚拟电厂运营商",
+      "source_chunks": [
+        "报告-恒实盛景调研报告：怎样做空调虚拟电厂？_chunk_001"
+      ],
+      "confidence": 0.8
+    },
+    {
+      "subject": "仿生控制算法",
+      "predicate": "part-of",
+      "object": "空调虚拟电厂",
+      "source_chunks": [
+        "报告-恒实盛景调研报告：怎样做空调虚拟电厂？_chunk_001"
+      ],
+      "confidence": 0.8
+    },
+    {
+      "subject": "虚拟电厂+产业",
+      "predicate": "related-to",
+      "object": "虚拟电厂",
+      "source_chunks": [
+        "报告-恒实盛景调研报告：怎样做空调虚拟电厂？_chunk_001"
       ],
       "confidence": 1.0
     },
     {
       "subject": "IEC 62257",
-      "predicate": "regulates",
-      "object": "户用光伏",
+      "predicate": "certifies",
+      "object": "户用离网光伏系统",
+      "source_chunks": [
+        "报告-正泰安能光伏星调研报告：在非洲如何做户用光伏？_chunk_001"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "subject": "户用离网光伏系统",
+      "predicate": "has-a",
+      "object": "PAYGo控制器",
       "source_chunks": [
         "报告-正泰安能光伏星调研报告：在非洲如何做户用光伏？_chunk_001"
       ],
@@ -1964,375 +1199,115 @@
     },
     {
       "subject": "PAYGo控制器",
-      "predicate": "part-of",
-      "object": "光储系统",
-      "source_chunks": [
-        "报告-正泰安能光伏星调研报告：在非洲如何做户用光伏？_chunk_001"
-      ],
-      "confidence": 1.0
-    },
-    {
-      "subject": "户用光伏",
-      "predicate": "part-of",
-      "object": "离网型微电网",
-      "source_chunks": [
-        "报告-正泰安能光伏星调研报告：在非洲如何做户用光伏？_chunk_001"
-      ],
-      "confidence": 1.0
-    },
-    {
-      "subject": "M-PESA",
-      "predicate": "enables",
-      "object": "能源服务分期付费模式",
-      "source_chunks": [
-        "报告-正泰安能光伏星调研报告：在非洲如何做户用光伏？_chunk_001"
-      ],
-      "confidence": 1.0
-    },
-    {
-      "subject": "正泰安能",
-      "predicate": "example-of",
-      "object": "新能源企业",
-      "source_chunks": [
-        "报告-正泰安能光伏星调研报告：在非洲如何做户用光伏？_chunk_001"
-      ],
-      "confidence": 1.0
-    },
-    {
-      "subject": "BBOXX公司",
-      "predicate": "example-of",
-      "object": "新能源企业",
-      "source_chunks": [
-        "报告-正泰安能光伏星调研报告：在非洲如何做户用光伏？_chunk_001"
-      ],
-      "confidence": 1.0
-    },
-    {
-      "subject": "户用光伏市场",
-      "predicate": "depends-on",
-      "object": "融资渠道",
-      "source_chunks": [
-        "报告-正泰安能光伏星调研报告：在非洲如何做户用光伏？_chunk_001"
-      ],
-      "confidence": 1.0
-    },
-    {
-      "subject": "BBOXX公司",
-      "predicate": "depends-on",
-      "object": "M-PESA",
-      "source_chunks": [
-        "报告-正泰安能光伏星调研报告：在非洲如何做户用光伏？_chunk_001"
-      ],
-      "confidence": 1.0
-    },
-    {
-      "subject": "非洲户用光伏市场开拓",
-      "predicate": "requires",
-      "object": "本地化线下推广",
-      "source_chunks": [
-        "报告-正泰安能光伏星调研报告：在非洲如何做户用光伏？_chunk_001"
-      ],
-      "confidence": 1.0
-    },
-    {
-      "subject": "非洲户用光伏市场开拓",
-      "predicate": "requires",
-      "object": "本地化售后服务网络",
-      "source_chunks": [
-        "报告-正泰安能光伏星调研报告：在非洲如何做户用光伏？_chunk_001"
-      ],
-      "confidence": 1.0
-    },
-    {
-      "subject": "Lighting Global项目",
-      "predicate": "enables",
-      "object": "户用光伏市场规范化发展",
-      "source_chunks": [
-        "报告-正泰安能光伏星调研报告：在非洲如何做户用光伏？_chunk_001"
-      ],
-      "confidence": 1.0
-    },
-    {
-      "subject": "Mission 300项目",
-      "predicate": "enables",
-      "object": "户用光伏市场发展",
-      "source_chunks": [
-        "报告-正泰安能光伏星调研报告：在非洲如何做户用光伏？_chunk_001"
-      ],
-      "confidence": 1.0
-    },
-    {
-      "subject": "新能源出海业务",
-      "predicate": "superset-of",
-      "object": "能源服务出海",
-      "source_chunks": [
-        "报告-正泰安能光伏星调研报告：在非洲如何做户用光伏？_chunk_001"
-      ],
-      "confidence": 1.0
-    },
-    {
-      "subject": "短流程炼钢",
-      "predicate": "depends-on",
-      "object": "废钢",
-      "source_chunks": [
-        "报告-河钢集团一线调研报告：钢铁行业存在哪些双碳机会？_chunk_001"
-      ],
-      "confidence": 1.0
-    },
-    {
-      "subject": "氢能炼钢",
-      "predicate": "requires",
-      "object": "绿氢",
-      "source_chunks": [
-        "报告-河钢集团一线调研报告：钢铁行业存在哪些双碳机会？_chunk_001"
-      ],
-      "confidence": 1.0
-    },
-    {
-      "subject": "短流程炼钢",
-      "predicate": "causes",
-      "object": "钢铁生产碳排放降低",
-      "source_chunks": [
-        "报告-河钢集团一线调研报告：钢铁行业存在哪些双碳机会？_chunk_001"
-      ],
-      "confidence": 1.0
-    },
-    {
-      "subject": "氢能炼钢",
-      "predicate": "causes",
-      "object": "钢铁生产碳排放降低",
-      "source_chunks": [
-        "报告-河钢集团一线调研报告：钢铁行业存在哪些双碳机会？_chunk_001"
-      ],
-      "confidence": 1.0
-    },
-    {
-      "subject": "高炉富氢冶炼",
-      "predicate": "causes",
-      "object": "钢铁生产碳排放降低",
-      "source_chunks": [
-        "报告-河钢集团一线调研报告：钢铁行业存在哪些双碳机会？_chunk_001"
-      ],
-      "confidence": 1.0
-    },
-    {
-      "subject": "工业余热利用服务",
-      "predicate": "causes",
-      "object": "钢铁生产能耗降低",
-      "source_chunks": [
-        "报告-河钢集团一线调研报告：钢铁行业存在哪些双碳机会？_chunk_001"
-      ],
-      "confidence": 1.0
-    },
-    {
-      "subject": "绿证",
-      "predicate": "certifies",
-      "object": "钢铁企业绿电消费",
-      "source_chunks": [
-        "报告-河钢集团一线调研报告：钢铁行业存在哪些双碳机会？_chunk_001"
-      ],
-      "confidence": 1.0
-    },
-    {
-      "subject": "河钢集团有限公司",
-      "predicate": "example-of",
-      "object": "高耗能低碳转型企业",
-      "source_chunks": [
-        "报告-河钢集团一线调研报告：钢铁行业存在哪些双碳机会？_chunk_001"
-      ],
-      "confidence": 1.0
-    },
-    {
-      "subject": "绿钢",
-      "predicate": "related-to",
-      "object": "氢能炼钢",
-      "source_chunks": [
-        "报告-河钢集团一线调研报告：钢铁行业存在哪些双碳机会？_chunk_001"
-      ],
-      "confidence": 1.0
-    },
-    {
-      "subject": "《关于加快推动制造业绿色化发展的指导意见》",
-      "predicate": "regulates",
-      "object": "短流程炼钢比例提升",
-      "source_chunks": [
-        "报告-河钢集团一线调研报告：钢铁行业存在哪些双碳机会？_chunk_001"
-      ],
-      "confidence": 1.0
-    },
-    {
-      "subject": "综合能碳管理服务",
-      "predicate": "related-to",
-      "object": "钢铁企业低碳转型",
-      "source_chunks": [
-        "报告-河钢集团一线调研报告：钢铁行业存在哪些双碳机会？_chunk_001"
-      ],
-      "confidence": 1.0
-    },
-    {
-      "subject": "电动重卡",
-      "predicate": "related-to",
-      "object": "钢铁企业物流绿色转型",
-      "source_chunks": [
-        "报告-河钢集团一线调研报告：钢铁行业存在哪些双碳机会？_chunk_001"
-      ],
-      "confidence": 1.0
-    },
-    {
-      "subject": "深石集团",
       "predicate": "implements",
-      "object": "生物圈三号",
+      "object": "分期付费",
       "source_chunks": [
-        "报告-深石集团调研报告：房地产企业怎样做新能源？_chunk_001"
+        "报告-正泰安能光伏星调研报告：在非洲如何做户用光伏？_chunk_001"
       ],
       "confidence": 1.0
     },
     {
-      "subject": "深石集团",
-      "predicate": "implements",
-      "object": "加减绿碳金战略",
-      "source_chunks": [
-        "报告-深石集团调研报告：房地产企业怎样做新能源？_chunk_001"
-      ],
-      "confidence": 1.0
-    },
-    {
-      "subject": "生物圈三号",
-      "predicate": "depends-on",
-      "object": "分布式光伏",
-      "source_chunks": [
-        "报告-深石集团调研报告：房地产企业怎样做新能源？_chunk_001"
-      ],
-      "confidence": 1.0
-    },
-    {
-      "subject": "生物圈三号",
-      "predicate": "depends-on",
-      "object": "储能",
-      "source_chunks": [
-        "报告-深石集团调研报告：房地产企业怎样做新能源？_chunk_001"
-      ],
-      "confidence": 1.0
-    },
-    {
-      "subject": "生物圈三号",
-      "predicate": "depends-on",
-      "object": "综合能碳管理服务",
-      "source_chunks": [
-        "报告-深石集团调研报告：房地产企业怎样做新能源？_chunk_001"
-      ],
-      "confidence": 1.0
-    },
-    {
-      "subject": "生物圈三号",
-      "predicate": "depends-on",
-      "object": "智能电表",
-      "source_chunks": [
-        "报告-深石集团调研报告：房地产企业怎样做新能源？_chunk_001"
-      ],
-      "confidence": 1.0
-    },
-    {
-      "subject": "生物圈三号",
+      "subject": "离网型微电网",
       "predicate": "superset-of",
-      "object": "四零餐厅",
+      "object": "户用离网光伏系统",
       "source_chunks": [
-        "报告-深石集团调研报告：房地产企业怎样做新能源？_chunk_001"
+        "报告-正泰安能光伏星调研报告：在非洲如何做户用光伏？_chunk_001"
       ],
-      "confidence": 1.0
+      "confidence": 0.8
     },
     {
-      "subject": "磁悬浮制冷机组",
+      "subject": "分期付费",
       "predicate": "enables",
-      "object": "制冷能耗降低",
+      "object": "户用离网光伏系统",
       "source_chunks": [
-        "报告-深石集团调研报告：房地产企业怎样做新能源？_chunk_001"
+        "报告-正泰安能光伏星调研报告：在非洲如何做户用光伏？_chunk_001"
       ],
-      "confidence": 1.0
+      "confidence": 0.8
     },
     {
-      "subject": "冰蓄冷技术",
-      "predicate": "enables",
-      "object": "峰谷套利",
+      "subject": "能源即服务",
+      "predicate": "related-to",
+      "object": "商业模式",
       "source_chunks": [
-        "报告-深石集团调研报告：房地产企业怎样做新能源？_chunk_001"
+        "报告-正泰安能光伏星调研报告：在非洲如何做户用光伏？_chunk_001"
       ],
-      "confidence": 1.0
+      "confidence": 0.6
     },
     {
-      "subject": "黑水虻厨余垃圾处理技术",
-      "predicate": "enables",
-      "object": "厨余垃圾资源化利用",
-      "source_chunks": [
-        "报告-深石集团调研报告：房地产企业怎样做新能源？_chunk_001"
-      ],
-      "confidence": 1.0
-    },
-    {
-      "subject": "固碳砖",
-      "predicate": "enables",
-      "object": "建筑碳排放降低",
-      "source_chunks": [
-        "报告-深石集团调研报告：房地产企业怎样做新能源？_chunk_001"
-      ],
-      "confidence": 1.0
-    },
-    {
-      "subject": "碳普惠",
-      "predicate": "certifies",
-      "object": "分布式光伏减排量",
-      "source_chunks": [
-        "报告-深石集团调研报告：房地产企业怎样做新能源？_chunk_001"
-      ],
-      "confidence": 1.0
-    },
-    {
-      "subject": "碳普惠",
-      "predicate": "enables",
-      "object": "分布式光伏减排量变现",
-      "source_chunks": [
-        "报告-深石集团调研报告：房地产企业怎样做新能源？_chunk_001"
-      ],
-      "confidence": 1.0
-    },
-    {
-      "subject": "新能源项目",
-      "predicate": "depends-on",
-      "object": "稳定负荷消纳",
-      "source_chunks": [
-        "报告-深石集团调研报告：房地产企业怎样做新能源？_chunk_001"
-      ],
-      "confidence": 1.0
-    },
-    {
-      "subject": "新能源项目",
-      "predicate": "requires",
-      "object": "产业判断能力",
-      "source_chunks": [
-        "报告-深石集团调研报告：房地产企业怎样做新能源？_chunk_001"
-      ],
-      "confidence": 1.0
-    },
-    {
-      "subject": "跨界新能源企业",
-      "predicate": "depends-on",
-      "object": "原有领域核心能力",
-      "source_chunks": [
-        "报告-深石集团调研报告：房地产企业怎样做新能源？_chunk_001"
-      ],
-      "confidence": 1.0
-    },
-    {
-      "subject": "车网互动类产品",
-      "predicate": "superset-of",
-      "object": "车网互动",
+      "subject": "电动汽车无序充电",
+      "predicate": "causes",
+      "object": "电网调峰压力",
       "source_chunks": [
         "报告-特来电零碳大楼调研报告：怎样做车网互动？_chunk_001"
       ],
       "confidence": 1.0
     },
     {
-      "subject": "车网互动类产品",
+      "subject": "车网互动",
+      "predicate": "enables",
+      "object": "削峰填谷",
+      "source_chunks": [
+        "报告-特来电零碳大楼调研报告：怎样做车网互动？_chunk_001"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "subject": "V2G",
+      "predicate": "requires",
+      "object": "V2G充电桩",
+      "source_chunks": [
+        "报告-特来电零碳大楼调研报告：怎样做车网互动？_chunk_001"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "subject": "需量控制",
+      "predicate": "related-to",
+      "object": "需量电费",
+      "source_chunks": [
+        "报告-特来电零碳大楼调研报告：怎样做车网互动？_chunk_001",
+        "报告-良信电器调研报告：怎样建设零碳工厂？_chunk_001"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "subject": "V2G",
+      "predicate": "enables",
+      "object": "需量控制",
+      "source_chunks": [
+        "报告-特来电零碳大楼调研报告：怎样做车网互动？_chunk_001"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "subject": "新能源渗透率",
+      "predicate": "related-to",
+      "object": "电碳因子",
+      "source_chunks": [
+        "报告-特来电零碳大楼调研报告：怎样做车网互动？_chunk_001"
+      ],
+      "confidence": 0.8
+    },
+    {
+      "subject": "电池梯次利用",
+      "predicate": "enables",
+      "object": "储能系统",
+      "source_chunks": [
+        "报告-特来电零碳大楼调研报告：怎样做车网互动？_chunk_001"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "subject": "车网互动",
+      "predicate": "superset-of",
+      "object": "有序充电",
+      "source_chunks": [
+        "报告-特来电零碳大楼调研报告：怎样做车网互动？_chunk_001"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "subject": "车网互动",
       "predicate": "superset-of",
       "object": "V2G",
       "source_chunks": [
@@ -2341,196 +1316,34 @@
       "confidence": 1.0
     },
     {
-      "subject": "车网互动类产品",
+      "subject": "微电网",
       "predicate": "superset-of",
-      "object": "AI极速立体泊车系统",
+      "object": "光储充微电网",
       "source_chunks": [
-        "报告-特来电零碳大楼调研报告：怎样做车网互动？_chunk_001"
+        "报告-电管家一线调研报告：微电网怎么赚钱？_chunk_001"
       ],
       "confidence": 1.0
     },
     {
-      "subject": "车网互动类产品",
-      "predicate": "superset-of",
-      "object": "自动充电机械臂",
-      "source_chunks": [
-        "报告-特来电零碳大楼调研报告：怎样做车网互动？_chunk_001"
-      ],
-      "confidence": 1.0
-    },
-    {
-      "subject": "新能源政策",
-      "predicate": "superset-of",
-      "object": "《关于公布首批车网互动规模化应用试点的通知》",
-      "source_chunks": [
-        "报告-特来电零碳大楼调研报告：怎样做车网互动？_chunk_001"
-      ],
-      "confidence": 1.0
-    },
-    {
-      "subject": "新能源政策",
-      "predicate": "superset-of",
-      "object": "《电动汽车充电设施服务能力“三年倍增”行动方案（2025—2027 年）》",
-      "source_chunks": [
-        "报告-特来电零碳大楼调研报告：怎样做车网互动？_chunk_001"
-      ],
-      "confidence": 1.0
-    },
-    {
-      "subject": "新能源政策",
-      "predicate": "superset-of",
-      "object": "《关于促进电网高质量发展的指导意见》",
-      "source_chunks": [
-        "报告-特来电零碳大楼调研报告：怎样做车网互动？_chunk_001"
-      ],
-      "confidence": 1.0
-    },
-    {
-      "subject": "青岛特中和智慧科技有限公司",
-      "predicate": "example-of",
-      "object": "新能源企业",
-      "source_chunks": [
-        "报告-特来电零碳大楼调研报告：怎样做车网互动？_chunk_001"
-      ],
-      "confidence": 1.0
-    },
-    {
-      "subject": "碲化镉光伏玻璃",
-      "predicate": "example-of",
-      "object": "光伏类产品",
-      "source_chunks": [
-        "报告-特来电零碳大楼调研报告：怎样做车网互动？_chunk_001"
-      ],
-      "confidence": 1.0
-    },
-    {
-      "subject": "梯次储能",
-      "predicate": "example-of",
-      "object": "储能类产品",
-      "source_chunks": [
-        "报告-特来电零碳大楼调研报告：怎样做车网互动？_chunk_001"
-      ],
-      "confidence": 1.0
-    },
-    {
-      "subject": "电动汽车无序充电",
-      "predicate": "causes",
-      "object": "调峰辅助服务成本提升",
-      "source_chunks": [
-        "报告-特来电零碳大楼调研报告：怎样做车网互动？_chunk_001"
-      ],
-      "confidence": 1.0
-    },
-    {
-      "subject": "车网互动",
+      "subject": "光储充微电网",
       "predicate": "enables",
-      "object": "削峰辅助服务",
+      "object": "虚拟电厂",
       "source_chunks": [
-        "报告-特来电零碳大楼调研报告：怎样做车网互动？_chunk_001"
+        "报告-电管家一线调研报告：微电网怎么赚钱？_chunk_001"
       ],
       "confidence": 1.0
     },
     {
-      "subject": "车网互动",
+      "subject": "隔墙售电",
       "predicate": "enables",
-      "object": "填谷辅助服务",
-      "source_chunks": [
-        "报告-特来电零碳大楼调研报告：怎样做车网互动？_chunk_001"
-      ],
-      "confidence": 1.0
-    },
-    {
-      "subject": "V2G",
-      "predicate": "part-of",
-      "object": "车网互动",
-      "source_chunks": [
-        "报告-特来电零碳大楼调研报告：怎样做车网互动？_chunk_001"
-      ],
-      "confidence": 1.0
-    },
-    {
-      "subject": "车网互动",
-      "predicate": "depends-on",
-      "object": "V2G直流充电桩",
-      "source_chunks": [
-        "报告-特来电零碳大楼调研报告：怎样做车网互动？_chunk_001"
-      ],
-      "confidence": 1.0
-    },
-    {
-      "subject": "车网互动",
-      "predicate": "depends-on",
-      "object": "能源管理系统",
-      "source_chunks": [
-        "报告-特来电零碳大楼调研报告：怎样做车网互动？_chunk_001"
-      ],
-      "confidence": 1.0
-    },
-    {
-      "subject": "车网互动",
-      "predicate": "part-of",
-      "object": "综合能源服务",
-      "source_chunks": [
-        "报告-特来电零碳大楼调研报告：怎样做车网互动？_chunk_001"
-      ],
-      "confidence": 0.8
-    },
-    {
-      "subject": "车网互动",
-      "predicate": "part-of",
-      "object": "新型电力系统",
-      "source_chunks": [
-        "报告-特来电零碳大楼调研报告：怎样做车网互动？_chunk_001"
-      ],
-      "confidence": 1.0
-    },
-    {
-      "subject": "微电网类系统",
-      "predicate": "superset-of",
-      "object": "园区级微电网",
+      "object": "源网荷储一体化",
       "source_chunks": [
         "报告-电管家一线调研报告：微电网怎么赚钱？_chunk_001"
       ],
       "confidence": 1.0
     },
     {
-      "subject": "电管家集团股份有限公司",
-      "predicate": "example-of",
-      "object": "新能源企业",
-      "source_chunks": [
-        "报告-电管家一线调研报告：微电网怎么赚钱？_chunk_001"
-      ],
-      "confidence": 1.0
-    },
-    {
-      "subject": "上海张江智能电力发展有限公司",
-      "predicate": "example-of",
-      "object": "新能源企业",
-      "source_chunks": [
-        "报告-电管家一线调研报告：微电网怎么赚钱？_chunk_001"
-      ],
-      "confidence": 1.0
-    },
-    {
-      "subject": "电管家集团股份有限公司",
-      "predicate": "implements",
-      "object": "“1+N”多元化能源业务模式",
-      "source_chunks": [
-        "报告-电管家一线调研报告：微电网怎么赚钱？_chunk_001"
-      ],
-      "confidence": 1.0
-    },
-    {
-      "subject": "园区级微电网",
-      "predicate": "requires",
-      "object": "稳定用电消纳",
-      "source_chunks": [
-        "报告-电管家一线调研报告：微电网怎么赚钱？_chunk_001"
-      ],
-      "confidence": 1.0
-    },
-    {
-      "subject": "园区级微电网",
+      "subject": "分布式光伏",
       "predicate": "enables",
       "object": "隔墙售电",
       "source_chunks": [
@@ -2539,130 +1352,301 @@
       "confidence": 1.0
     },
     {
-      "subject": "张江金科中心园区微电网项目",
-      "predicate": "example-of",
-      "object": "园区级微电网",
+      "subject": "1+N商业模式",
+      "predicate": "related-to",
+      "object": "电力运维托管服务",
       "source_chunks": [
         "报告-电管家一线调研报告：微电网怎么赚钱？_chunk_001"
       ],
       "confidence": 1.0
     },
     {
-      "subject": "张江金科中心园区微电网项目",
-      "predicate": "example-of",
-      "object": "源网荷储一体化模式",
+      "subject": "负载为王",
+      "predicate": "related-to",
+      "object": "1+N商业模式",
+      "source_chunks": [
+        "报告-电管家一线调研报告：微电网怎么赚钱？_chunk_001"
+      ],
+      "confidence": 0.8
+    },
+    {
+      "subject": "服务即基建",
+      "predicate": "related-to",
+      "object": "负载为王",
+      "source_chunks": [
+        "报告-电管家一线调研报告：微电网怎么赚钱？_chunk_001"
+      ],
+      "confidence": 0.8
+    },
+    {
+      "subject": "综合能源服务",
+      "predicate": "superset-of",
+      "object": "电力运维托管服务",
       "source_chunks": [
         "报告-电管家一线调研报告：微电网怎么赚钱？_chunk_001"
       ],
       "confidence": 1.0
     },
     {
-      "subject": "微电网项目运营",
-      "predicate": "depends-on",
-      "object": "利益分配平衡",
+      "subject": "冰蓄冷",
+      "predicate": "enables",
+      "object": "峰谷套利",
       "source_chunks": [
-        "报告-电管家一线调研报告：微电网怎么赚钱？_chunk_001"
+        "报告-深石集团调研报告：房地产企业怎样做新能源？_chunk_001"
       ],
       "confidence": 1.0
     },
     {
-      "subject": "隔墙售电",
+      "subject": "碳普惠",
+      "predicate": "enables",
+      "object": "分布式光伏",
+      "source_chunks": [
+        "报告-深石集团调研报告：房地产企业怎样做新能源？_chunk_001"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "subject": "碳中和社区",
+      "predicate": "related-to",
+      "object": "零碳示范园区",
+      "source_chunks": [
+        "报告-深石集团调研报告：房地产企业怎样做新能源？_chunk_001"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "subject": "加减绿碳金战略",
+      "predicate": "implements",
+      "object": "碳中和社区",
+      "source_chunks": [
+        "报告-深石集团调研报告：房地产企业怎样做新能源？_chunk_001"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "subject": "绿电直连",
+      "predicate": "enables",
+      "object": "分布式光伏",
+      "source_chunks": [
+        "报告-深石集团调研报告：房地产企业怎样做新能源？_chunk_001"
+      ],
+      "confidence": 0.8
+    },
+    {
+      "subject": "短流程炼钢",
+      "predicate": "enables",
+      "object": "钢铁行业降碳",
+      "source_chunks": [
+        "报告-河钢集团一线调研报告：钢铁行业存在哪些双碳机会？_chunk_001"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "subject": "氢能炼钢",
+      "predicate": "enables",
+      "object": "钢铁行业降碳",
+      "source_chunks": [
+        "报告-河钢集团一线调研报告：钢铁行业存在哪些双碳机会？_chunk_001"
+      ],
+      "confidence": 0.8
+    },
+    {
+      "subject": "高炉富氢冶炼",
+      "predicate": "enables",
+      "object": "钢铁行业降碳",
+      "source_chunks": [
+        "报告-河钢集团一线调研报告：钢铁行业存在哪些双碳机会？_chunk_001"
+      ],
+      "confidence": 0.8
+    },
+    {
+      "subject": "余热利用",
+      "predicate": "enables",
+      "object": "钢铁行业降碳",
+      "source_chunks": [
+        "报告-河钢集团一线调研报告：钢铁行业存在哪些双碳机会？_chunk_001"
+      ],
+      "confidence": 0.8
+    },
+    {
+      "subject": "余压利用",
+      "predicate": "enables",
+      "object": "钢铁行业降碳",
+      "source_chunks": [
+        "报告-河钢集团一线调研报告：钢铁行业存在哪些双碳机会？_chunk_001"
+      ],
+      "confidence": 0.6
+    },
+    {
+      "subject": "可再生能源电力消纳责任权重",
       "predicate": "requires",
-      "object": "运营范围内物业产权统一",
+      "object": "绿电消费比例",
       "source_chunks": [
-        "报告-电管家一线调研报告：微电网怎么赚钱？_chunk_001"
+        "报告-河钢集团一线调研报告：钢铁行业存在哪些双碳机会？_chunk_001"
       ],
       "confidence": 1.0
     },
     {
-      "subject": "园区级微电网",
+      "subject": "综合能碳管理",
+      "predicate": "enables",
+      "object": "钢铁行业降碳",
+      "source_chunks": [
+        "报告-河钢集团一线调研报告：钢铁行业存在哪些双碳机会？_chunk_001"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "subject": "碳排放权交易市场",
+      "predicate": "related-to",
+      "object": "钢铁行业",
+      "source_chunks": [
+        "报告-河钢集团一线调研报告：钢铁行业存在哪些双碳机会？_chunk_001"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "subject": "氢能炼钢",
+      "predicate": "causes",
+      "object": "绿钢",
+      "source_chunks": [
+        "报告-河钢集团一线调研报告：钢铁行业存在哪些双碳机会？_chunk_001"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "subject": "综合能碳管理",
+      "predicate": "has-a",
+      "object": "能碳管理",
+      "source_chunks": [
+        "报告-河钢集团一线调研报告：钢铁行业存在哪些双碳机会？_chunk_001"
+      ],
+      "confidence": 0.8
+    },
+    {
+      "subject": "节能降碳",
+      "predicate": "enables",
+      "object": "钢铁行业降碳",
+      "source_chunks": [
+        "报告-河钢集团一线调研报告：钢铁行业存在哪些双碳机会？_chunk_001"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "subject": "分时电价",
+      "predicate": "enables",
+      "object": "虚拟电厂",
+      "source_chunks": [
+        "报告-苏州工业园区的虚拟电厂调研报告：怎样做区域级虚拟电厂_chunk_001"
+      ],
+      "confidence": 0.8
+    },
+    {
+      "subject": "容量补贴",
+      "predicate": "enables",
+      "object": "虚拟电厂",
+      "source_chunks": [
+        "报告-苏州工业园区的虚拟电厂调研报告：怎样做区域级虚拟电厂_chunk_001"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "subject": "响应奖励",
+      "predicate": "enables",
+      "object": "虚拟电厂",
+      "source_chunks": [
+        "报告-苏州工业园区的虚拟电厂调研报告：怎样做区域级虚拟电厂_chunk_001"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "subject": "配套支持",
+      "predicate": "enables",
+      "object": "虚拟电厂",
+      "source_chunks": [
+        "报告-苏州工业园区的虚拟电厂调研报告：怎样做区域级虚拟电厂_chunk_001"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "subject": "虚拟电厂管理平台",
+      "predicate": "regulates",
+      "object": "虚拟电厂运营商",
+      "source_chunks": [
+        "报告-苏州工业园区的虚拟电厂调研报告：怎样做区域级虚拟电厂_chunk_001"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "subject": "虚拟电厂管理平台",
+      "predicate": "related-to",
+      "object": "碳普惠",
+      "source_chunks": [
+        "报告-苏州工业园区的虚拟电厂调研报告：怎样做区域级虚拟电厂_chunk_001"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "subject": "微电网",
+      "predicate": "superset-of",
+      "object": "工业绿色微电网",
+      "source_chunks": [
+        "报告-苏州工业园区的虚拟电厂调研报告：怎样做区域级虚拟电厂_chunk_001"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "subject": "工业绿色微电网",
       "predicate": "related-to",
       "object": "虚拟电厂",
       "source_chunks": [
-        "报告-电管家一线调研报告：微电网怎么赚钱？_chunk_001"
+        "报告-苏州工业园区的虚拟电厂调研报告：怎样做区域级虚拟电厂_chunk_001"
       ],
       "confidence": 1.0
     },
     {
-      "subject": "功率因数达标",
-      "predicate": "enables",
-      "object": "功率因数奖励",
+      "subject": "新型负荷",
+      "predicate": "related-to",
+      "object": "虚拟电厂",
       "source_chunks": [
-        "报告-电管家一线调研报告：微电网怎么赚钱？_chunk_001"
+        "报告-苏州工业园区的虚拟电厂调研报告：怎样做区域级虚拟电厂_chunk_001"
       ],
       "confidence": 1.0
     },
     {
-      "subject": "电管家集团股份有限公司",
-      "predicate": "has-a",
-      "object": "电力管家服务板块",
-      "source_chunks": [
-        "报告-电管家一线调研报告：微电网怎么赚钱？_chunk_001"
-      ],
-      "confidence": 1.0
-    },
-    {
-      "subject": "电管家集团股份有限公司",
-      "predicate": "has-a",
-      "object": "电力工程服务板块",
-      "source_chunks": [
-        "报告-电管家一线调研报告：微电网怎么赚钱？_chunk_001"
-      ],
-      "confidence": 1.0
-    },
-    {
-      "subject": "电管家集团股份有限公司",
-      "predicate": "has-a",
-      "object": "智能微电网服务板块",
-      "source_chunks": [
-        "报告-电管家一线调研报告：微电网怎么赚钱？_chunk_001"
-      ],
-      "confidence": 1.0
-    },
-    {
-      "subject": "电管家集团股份有限公司",
-      "predicate": "has-a",
-      "object": "电力交易服务板块",
-      "source_chunks": [
-        "报告-电管家一线调研报告：微电网怎么赚钱？_chunk_001"
-      ],
-      "confidence": 1.0
-    },
-    {
-      "subject": "微电网类系统",
-      "predicate": "superset-of",
-      "object": "工业直流微电网",
+      "subject": "光储直柔微电网",
+      "predicate": "is-a",
+      "object": "交直流混合微电网",
       "source_chunks": [
         "报告-紫电捷控调研报告：交直流微电网怎么做？_chunk_001"
       ],
       "confidence": 1.0
     },
     {
-      "subject": "北京紫电捷控电气有限公司",
-      "predicate": "example-of",
-      "object": "新能源企业",
+      "subject": "台区柔直互联微电网",
+      "predicate": "is-a",
+      "object": "交直流混合微电网",
       "source_chunks": [
         "报告-紫电捷控调研报告：交直流微电网怎么做？_chunk_001"
       ],
       "confidence": 1.0
     },
     {
-      "subject": "微电网内直流电源及直流负荷占比提升",
-      "predicate": "causes",
-      "object": "交直流混合微电网发展需求增加",
+      "subject": "直流微电网",
+      "predicate": "is-a",
+      "object": "微电网",
       "source_chunks": [
         "报告-紫电捷控调研报告：交直流微电网怎么做？_chunk_001"
       ],
       "confidence": 1.0
     },
     {
-      "subject": "交直流混合微电网",
-      "predicate": "requires",
-      "object": "STS无缝并离网切换单元",
+      "subject": "工业直流微电网",
+      "predicate": "is-a",
+      "object": "微电网",
       "source_chunks": [
         "报告-紫电捷控调研报告：交直流微电网怎么做？_chunk_001"
       ],
-      "confidence": 1.0
+      "confidence": 0.8
     },
     {
       "subject": "交直流混合微电网",
@@ -2675,7 +1659,16 @@
     },
     {
       "subject": "交直流混合微电网",
-      "predicate": "requires",
+      "predicate": "has-a",
+      "object": "静态转换开关",
+      "source_chunks": [
+        "报告-紫电捷控调研报告：交直流微电网怎么做？_chunk_001"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "subject": "交直流混合微电网",
+      "predicate": "has-a",
       "object": "DCDC功率变换单元",
       "source_chunks": [
         "报告-紫电捷控调研报告：交直流微电网怎么做？_chunk_001"
@@ -2684,7 +1677,7 @@
     },
     {
       "subject": "交直流混合微电网",
-      "predicate": "requires",
+      "predicate": "has-a",
       "object": "微电网终端管控装置",
       "source_chunks": [
         "报告-紫电捷控调研报告：交直流微电网怎么做？_chunk_001"
@@ -2693,8 +1686,8 @@
     },
     {
       "subject": "双台区柔直互联",
-      "predicate": "requires",
-      "object": "直流微电网",
+      "predicate": "enables",
+      "object": "台区柔直互联微电网",
       "source_chunks": [
         "报告-紫电捷控调研报告：交直流微电网怎么做？_chunk_001"
       ],
@@ -2702,8 +1695,8 @@
     },
     {
       "subject": "双台区柔直互联",
-      "predicate": "enables",
-      "object": "配电台区富余容量利用",
+      "predicate": "related-to",
+      "object": "配电台区",
       "source_chunks": [
         "报告-紫电捷控调研报告：交直流微电网怎么做？_chunk_001"
       ],
@@ -2711,51 +1704,15 @@
     },
     {
       "subject": "双台区柔直互联",
-      "predicate": "enables",
-      "object": "分布式光伏消纳率提升",
+      "predicate": "related-to",
+      "object": "分布式光伏",
       "source_chunks": [
         "报告-紫电捷控调研报告：交直流微电网怎么做？_chunk_001"
       ],
-      "confidence": 1.0
+      "confidence": 0.8
     },
     {
-      "subject": "双台区柔直互联",
-      "predicate": "enables",
-      "object": "微电网供电安全性可靠性提升",
-      "source_chunks": [
-        "报告-紫电捷控调研报告：交直流微电网怎么做？_chunk_001"
-      ],
-      "confidence": 1.0
-    },
-    {
-      "subject": "双台区柔直互联",
-      "predicate": "enables",
-      "object": "分布式光伏上网难问题解决",
-      "source_chunks": [
-        "报告-紫电捷控调研报告：交直流微电网怎么做？_chunk_001"
-      ],
-      "confidence": 1.0
-    },
-    {
-      "subject": "交直流混合微电网",
-      "predicate": "enables",
-      "object": "交直流转换损耗降低",
-      "source_chunks": [
-        "报告-紫电捷控调研报告：交直流微电网怎么做？_chunk_001"
-      ],
-      "confidence": 1.0
-    },
-    {
-      "subject": "储能类产品",
-      "predicate": "superset-of",
-      "object": "液流电池类产品",
-      "source_chunks": [
-        "报告-纬景储能调研报告：液流电池为储能带来的机会_chunk_001"
-      ],
-      "confidence": 1.0
-    },
-    {
-      "subject": "液流电池类产品",
+      "subject": "液流电池",
       "predicate": "superset-of",
       "object": "锌铁液流电池",
       "source_chunks": [
@@ -2764,7 +1721,7 @@
       "confidence": 1.0
     },
     {
-      "subject": "液流电池类产品",
+      "subject": "液流电池",
       "predicate": "superset-of",
       "object": "全钒液流电池",
       "source_chunks": [
@@ -2773,7 +1730,7 @@
       "confidence": 1.0
     },
     {
-      "subject": "液流电池类产品",
+      "subject": "液流电池",
       "predicate": "superset-of",
       "object": "铁铬液流电池",
       "source_chunks": [
@@ -2782,7 +1739,7 @@
       "confidence": 1.0
     },
     {
-      "subject": "液流电池类产品",
+      "subject": "液流电池",
       "predicate": "superset-of",
       "object": "锌溴液流电池",
       "source_chunks": [
@@ -2791,7 +1748,7 @@
       "confidence": 1.0
     },
     {
-      "subject": "液流电池类产品",
+      "subject": "液流电池",
       "predicate": "superset-of",
       "object": "全铁液流电池",
       "source_chunks": [
@@ -2802,7 +1759,7 @@
     {
       "subject": "液流电池",
       "predicate": "has-a",
-      "object": "电解液储罐",
+      "object": "电堆",
       "source_chunks": [
         "报告-纬景储能调研报告：液流电池为储能带来的机会_chunk_001"
       ],
@@ -2811,7 +1768,25 @@
     {
       "subject": "液流电池",
       "predicate": "has-a",
-      "object": "电堆",
+      "object": "双极板",
+      "source_chunks": [
+        "报告-纬景储能调研报告：液流电池为储能带来的机会_chunk_001"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "subject": "液流电池",
+      "predicate": "has-a",
+      "object": "离子交换膜",
+      "source_chunks": [
+        "报告-纬景储能调研报告：液流电池为储能带来的机会_chunk_001"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "subject": "液流电池",
+      "predicate": "has-a",
+      "object": "电解液",
       "source_chunks": [
         "报告-纬景储能调研报告：液流电池为储能带来的机会_chunk_001"
       ],
@@ -2836,72 +1811,27 @@
       "confidence": 1.0
     },
     {
-      "subject": "电堆",
+      "subject": "液流电池",
       "predicate": "has-a",
-      "object": "离子交换膜",
+      "object": "功率容量解耦",
       "source_chunks": [
         "报告-纬景储能调研报告：液流电池为储能带来的机会_chunk_001"
       ],
       "confidence": 1.0
     },
     {
-      "subject": "电堆",
-      "predicate": "has-a",
-      "object": "双极板",
-      "source_chunks": [
-        "报告-纬景储能调研报告：液流电池为储能带来的机会_chunk_001"
-      ],
-      "confidence": 1.0
-    },
-    {
-      "subject": "纬景储能科技有限公司",
-      "predicate": "example-of",
-      "object": "新能源企业",
-      "source_chunks": [
-        "报告-纬景储能调研报告：液流电池为储能带来的机会_chunk_001"
-      ],
-      "confidence": 1.0
-    },
-    {
-      "subject": "新能源政策",
-      "predicate": "superset-of",
-      "object": "《新型储能制造业高质量发展行动方案》",
-      "source_chunks": [
-        "报告-纬景储能调研报告：液流电池为储能带来的机会_chunk_001"
-      ],
-      "confidence": 1.0
-    },
-    {
-      "subject": "《新型储能制造业高质量发展行动方案》",
-      "predicate": "regulates",
-      "object": "液流电池产业发展",
-      "source_chunks": [
-        "报告-纬景储能调研报告：液流电池为储能带来的机会_chunk_001"
-      ],
-      "confidence": 1.0
-    },
-    {
-      "subject": "液流电池功率容量解耦特性",
+      "subject": "液流电池",
       "predicate": "enables",
-      "object": "长时储能应用",
+      "object": "长时储能",
       "source_chunks": [
         "报告-纬景储能调研报告：液流电池为储能带来的机会_chunk_001"
       ],
       "confidence": 1.0
     },
     {
-      "subject": "液流电池长循环寿命",
-      "predicate": "causes",
-      "object": "平准化储能成本降低",
-      "source_chunks": [
-        "报告-纬景储能调研报告：液流电池为储能带来的机会_chunk_001"
-      ],
-      "confidence": 1.0
-    },
-    {
-      "subject": "液流电池本征安全属性",
-      "predicate": "causes",
-      "object": "消防要求低于锂电池",
+      "subject": "本征安全",
+      "predicate": "related-to",
+      "object": "液流电池",
       "source_chunks": [
         "报告-纬景储能调研报告：液流电池为储能带来的机会_chunk_001"
       ],
@@ -2914,28 +1844,73 @@
       "source_chunks": [
         "报告-纬景储能调研报告：液流电池为储能带来的机会_chunk_001"
       ],
+      "confidence": 0.8
+    },
+    {
+      "subject": "液流电池",
+      "predicate": "related-to",
+      "object": "零碳示范园区",
+      "source_chunks": [
+        "报告-纬景储能调研报告：液流电池为储能带来的机会_chunk_001"
+      ],
+      "confidence": 0.8
+    },
+    {
+      "subject": "液流电池",
+      "predicate": "enables",
+      "object": "光储平价",
+      "source_chunks": [
+        "报告-纬景储能调研报告：液流电池为储能带来的机会_chunk_001"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "subject": "液流电池",
+      "predicate": "enables",
+      "object": "风储平价",
+      "source_chunks": [
+        "报告-纬景储能调研报告：液流电池为储能带来的机会_chunk_001"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "subject": "液流电池",
+      "predicate": "enables",
+      "object": "源网荷储",
+      "source_chunks": [
+        "报告-纬景储能调研报告：液流电池为储能带来的机会_chunk_001"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "subject": "液流电池",
+      "predicate": "related-to",
+      "object": "微电网",
+      "source_chunks": [
+        "报告-纬景储能调研报告：液流电池为储能带来的机会_chunk_001"
+      ],
       "confidence": 1.0
     },
     {
       "subject": "长时储能",
-      "predicate": "enables",
-      "object": "高比例绿电供电",
+      "predicate": "related-to",
+      "object": "离网型微电网",
       "source_chunks": [
         "报告-纬景储能调研报告：液流电池为储能带来的机会_chunk_001"
       ],
       "confidence": 1.0
     },
     {
-      "subject": "锌枝晶",
-      "predicate": "caused-by",
-      "object": "锌基液流电池充放电锌沉积过程",
+      "subject": "长时储能",
+      "predicate": "related-to",
+      "object": "零碳示范园区",
       "source_chunks": [
         "报告-纬景储能调研报告：液流电池为储能带来的机会_chunk_001"
       ],
       "confidence": 1.0
     },
     {
-      "subject": "新型电力系统建设",
+      "subject": "智算中心",
       "predicate": "requires",
       "object": "长时储能",
       "source_chunks": [
@@ -2944,16 +1919,97 @@
       "confidence": 1.0
     },
     {
-      "subject": "综合能源服务",
-      "predicate": "superset-of",
-      "object": "零碳园区建设服务",
+      "subject": "功率容量解耦",
+      "predicate": "enables",
+      "object": "长时储能",
+      "source_chunks": [
+        "报告-纬景储能调研报告：液流电池为储能带来的机会_chunk_001"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "subject": "锌枝晶",
+      "predicate": "contradicts",
+      "object": "锌铁液流电池",
+      "source_chunks": [
+        "报告-纬景储能调研报告：液流电池为储能带来的机会_chunk_001"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "subject": "《新型储能制造业高质量发展行动方案》",
+      "predicate": "enables",
+      "object": "液流电池",
+      "source_chunks": [
+        "报告-纬景储能调研报告：液流电池为储能带来的机会_chunk_001"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "subject": "零碳工厂",
+      "predicate": "has-a",
+      "object": "源网荷储",
       "source_chunks": [
         "报告-良信电器调研报告：怎样建设零碳工厂？_chunk_001"
       ],
       "confidence": 1.0
     },
     {
-      "subject": "《零碳工厂评价规范 T/CECA-G:0171-2022》",
+      "subject": "零碳工厂",
+      "predicate": "has-a",
+      "object": "液冷储能",
+      "source_chunks": [
+        "报告-良信电器调研报告：怎样建设零碳工厂？_chunk_001"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "subject": "零碳工厂",
+      "predicate": "has-a",
+      "object": "光储直柔微电网",
+      "source_chunks": [
+        "报告-良信电器调研报告：怎样建设零碳工厂？_chunk_001"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "subject": "零碳工厂",
+      "predicate": "requires",
+      "object": "智能配电系统",
+      "source_chunks": [
+        "报告-良信电器调研报告：怎样建设零碳工厂？_chunk_001"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "subject": "智能配电系统",
+      "predicate": "enables",
+      "object": "微电网能量管理系统",
+      "source_chunks": [
+        "报告-良信电器调研报告：怎样建设零碳工厂？_chunk_001"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "subject": "MX微网专家",
+      "predicate": "example-of",
+      "object": "微电网能量管理系统",
+      "source_chunks": [
+        "报告-良信电器调研报告：怎样建设零碳工厂？_chunk_001"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "subject": "智能低压电器",
+      "predicate": "part-of",
+      "object": "智能配电系统",
+      "source_chunks": [
+        "报告-良信电器调研报告：怎样建设零碳工厂？_chunk_001"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "subject": "《零碳工厂评价规范》",
       "predicate": "certifies",
       "object": "零碳工厂",
       "source_chunks": [
@@ -2962,711 +2018,63 @@
       "confidence": 1.0
     },
     {
-      "subject": "智能低压电器",
-      "predicate": "part-of",
-      "object": "智能化配电软硬件一体化解决方案",
-      "source_chunks": [
-        "报告-良信电器调研报告：怎样建设零碳工厂？_chunk_001"
-      ],
-      "confidence": 1.0
-    },
-    {
-      "subject": "PTX站控单元",
-      "predicate": "part-of",
-      "object": "智能化配电软硬件一体化解决方案",
-      "source_chunks": [
-        "报告-良信电器调研报告：怎样建设零碳工厂？_chunk_001"
-      ],
-      "confidence": 1.0
-    },
-    {
-      "subject": "PX配电专家",
-      "predicate": "part-of",
-      "object": "智能化配电软硬件一体化解决方案",
-      "source_chunks": [
-        "报告-良信电器调研报告：怎样建设零碳工厂？_chunk_001"
-      ],
-      "confidence": 1.0
-    },
-    {
-      "subject": "源网荷储一体化模式",
+      "subject": "输电开放接入政策",
       "predicate": "enables",
-      "object": "零碳工厂运营",
+      "object": "矿业直供电",
       "source_chunks": [
-        "报告-良信电器调研报告：怎样建设零碳工厂？_chunk_001"
+        "报告-非洲调研报告（二）：中国新能源企业在赞比亚有什么机会？_chunk_001"
       ],
       "confidence": 1.0
     },
     {
-      "subject": "MX微网专家软件",
-      "predicate": "regulates",
-      "object": "源网荷储设备运行",
+      "subject": "矿业直供电",
+      "predicate": "requires",
+      "object": "购电协议",
       "source_chunks": [
-        "报告-良信电器调研报告：怎样建设零碳工厂？_chunk_001"
+        "报告-非洲调研报告（二）：中国新能源企业在赞比亚有什么机会？_chunk_001"
       ],
       "confidence": 1.0
     },
     {
-      "subject": "上海良信股份有限公司",
-      "predicate": "is-a",
-      "object": "新能源企业",
+      "subject": "实施协议",
+      "predicate": "related-to",
+      "object": "投资者",
       "source_chunks": [
-        "报告-良信电器调研报告：怎样建设零碳工厂？_chunk_001"
+        "报告-非洲调研报告（二）：中国新能源企业在赞比亚有什么机会？_chunk_001"
       ],
       "confidence": 1.0
     },
     {
-      "subject": "良云智慧能源（广东）有限公司",
-      "predicate": "is-a",
-      "object": "新能源企业",
+      "subject": "投资保护协议",
+      "predicate": "related-to",
+      "object": "外国投资者",
       "source_chunks": [
-        "报告-良信电器调研报告：怎样建设零碳工厂？_chunk_001"
+        "报告-非洲调研报告（二）：中国新能源企业在赞比亚有什么机会？_chunk_001"
       ],
       "confidence": 1.0
     },
     {
-      "subject": "上海良信股份有限公司",
+      "subject": "投资保护协议",
       "predicate": "has-a",
-      "object": "良云智慧能源（广东）有限公司",
+      "object": "利润汇回保障",
       "source_chunks": [
-        "报告-良信电器调研报告：怎样建设零碳工厂？_chunk_001"
+        "报告-非洲调研报告（二）：中国新能源企业在赞比亚有什么机会？_chunk_001"
       ],
       "confidence": 1.0
     },
     {
-      "subject": "零碳工厂建设",
-      "predicate": "requires",
-      "object": "源网荷储一体化方案",
-      "source_chunks": [
-        "报告-良信电器调研报告：怎样建设零碳工厂？_chunk_001"
-      ],
-      "confidence": 1.0
-    },
-    {
-      "subject": "零碳园区建设",
-      "predicate": "requires",
-      "object": "生态合作伙伴联盟",
-      "source_chunks": [
-        "报告-良信电器调研报告：怎样建设零碳工厂？_chunk_001"
-      ],
-      "confidence": 1.0
-    },
-    {
-      "subject": "零碳园区建设",
-      "predicate": "requires",
-      "object": "具备顶层设计与系统集成能力的总包方",
-      "source_chunks": [
-        "报告-良信电器调研报告：怎样建设零碳工厂？_chunk_001"
-      ],
-      "confidence": 1.0
-    },
-    {
-      "subject": "良信海盐零碳工厂办公楼微电网",
-      "predicate": "example-of",
-      "object": "光储直柔微电网",
-      "source_chunks": [
-        "报告-良信电器调研报告：怎样建设零碳工厂？_chunk_001"
-      ],
-      "confidence": 1.0
-    },
-    {
-      "subject": "光储直柔微电网",
-      "predicate": "example-of",
-      "object": "并网型微电网",
-      "source_chunks": [
-        "报告-良信电器调研报告：怎样建设零碳工厂？_chunk_001"
-      ],
-      "confidence": 1.0
-    },
-    {
-      "subject": "液冷储能",
-      "predicate": "part-of",
-      "object": "零碳工厂源网荷储系统",
-      "source_chunks": [
-        "报告-良信电器调研报告：怎样建设零碳工厂？_chunk_001"
-      ],
-      "confidence": 1.0
-    },
-    {
-      "subject": "分布式风电",
-      "predicate": "part-of",
-      "object": "零碳工厂源端能源供应",
-      "source_chunks": [
-        "报告-良信电器调研报告：怎样建设零碳工厂？_chunk_001"
-      ],
-      "confidence": 1.0
-    },
-    {
-      "subject": "分布式光伏",
-      "predicate": "part-of",
-      "object": "零碳工厂源端能源供应",
-      "source_chunks": [
-        "报告-良信电器调研报告：怎样建设零碳工厂？_chunk_001"
-      ],
-      "confidence": 1.0
-    },
-    {
-      "subject": "智能低压电器",
-      "predicate": "enables",
-      "object": "零碳工厂能源数据采集",
-      "source_chunks": [
-        "报告-良信电器调研报告：怎样建设零碳工厂？_chunk_001"
-      ],
-      "confidence": 1.0
-    },
-    {
-      "subject": "虚拟电厂类产品",
-      "predicate": "superset-of",
-      "object": "园区级虚拟电厂",
-      "source_chunks": [
-        "报告-苏州工业园区的虚拟电厂调研报告：怎样做区域级虚拟电厂_chunk_001"
-      ],
-      "confidence": 1.0
-    },
-    {
-      "subject": "微电网类系统",
-      "predicate": "superset-of",
-      "object": "工业绿色微电网",
-      "source_chunks": [
-        "报告-苏州工业园区的虚拟电厂调研报告：怎样做区域级虚拟电厂_chunk_001"
-      ],
-      "confidence": 1.0
-    },
-    {
-      "subject": "《工业绿色微电网建设与应用指南（2026—2030年）》",
-      "predicate": "regulates",
-      "object": "工业绿色微电网建设",
-      "source_chunks": [
-        "报告-苏州工业园区的虚拟电厂调研报告：怎样做区域级虚拟电厂_chunk_001"
-      ],
-      "confidence": 1.0
-    },
-    {
-      "subject": "苏州工业园区虚拟电厂",
-      "predicate": "example-of",
-      "object": "园区级虚拟电厂",
-      "source_chunks": [
-        "报告-苏州工业园区的虚拟电厂调研报告：怎样做区域级虚拟电厂_chunk_001"
-      ],
-      "confidence": 1.0
-    },
-    {
-      "subject": "协鑫能科技术股份有限公司",
-      "predicate": "example-of",
-      "object": "虚拟电厂运营商",
-      "source_chunks": [
-        "报告-苏州工业园区的虚拟电厂调研报告：怎样做区域级虚拟电厂_chunk_001"
-      ],
-      "confidence": 1.0
-    },
-    {
-      "subject": "园区级虚拟电厂",
-      "predicate": "depends-on",
-      "object": "虚拟电厂聚合商",
-      "source_chunks": [
-        "报告-苏州工业园区的虚拟电厂调研报告：怎样做区域级虚拟电厂_chunk_001"
-      ],
-      "confidence": 1.0
-    },
-    {
-      "subject": "园区级虚拟电厂",
-      "predicate": "depends-on",
-      "object": "可调负荷",
-      "source_chunks": [
-        "报告-苏州工业园区的虚拟电厂调研报告：怎样做区域级虚拟电厂_chunk_001"
-      ],
-      "confidence": 1.0
-    },
-    {
-      "subject": "园区级虚拟电厂",
-      "predicate": "depends-on",
-      "object": "分布式光伏",
-      "source_chunks": [
-        "报告-苏州工业园区的虚拟电厂调研报告：怎样做区域级虚拟电厂_chunk_001"
-      ],
-      "confidence": 1.0
-    },
-    {
-      "subject": "园区级虚拟电厂",
-      "predicate": "depends-on",
-      "object": "储能类产品",
-      "source_chunks": [
-        "报告-苏州工业园区的虚拟电厂调研报告：怎样做区域级虚拟电厂_chunk_001"
-      ],
-      "confidence": 1.0
-    },
-    {
-      "subject": "园区级虚拟电厂",
-      "predicate": "enables",
-      "object": "新能源消纳",
-      "source_chunks": [
-        "报告-苏州工业园区的虚拟电厂调研报告：怎样做区域级虚拟电厂_chunk_001"
-      ],
-      "confidence": 1.0
-    },
-    {
-      "subject": "《电力中长期市场基本规则》",
-      "predicate": "regulates",
-      "object": "电力中长期市场交易",
-      "source_chunks": [
-        "报告-苏州工业园区的虚拟电厂调研报告：怎样做区域级虚拟电厂_chunk_001"
-      ],
-      "confidence": 1.0
-    },
-    {
-      "subject": "虚拟电厂聚合商",
-      "predicate": "enables",
-      "object": "需求侧响应参与",
-      "source_chunks": [
-        "报告-苏州工业园区的虚拟电厂调研报告：怎样做区域级虚拟电厂_chunk_001"
-      ],
-      "confidence": 1.0
-    },
-    {
-      "subject": "虚拟电厂",
+      "subject": "交通电动化",
       "predicate": "related-to",
-      "object": "工业绿色微电网",
+      "object": "车网互动",
       "source_chunks": [
-        "报告-苏州工业园区的虚拟电厂调研报告：怎样做区域级虚拟电厂_chunk_001"
-      ],
-      "confidence": 1.0
-    },
-    {
-      "subject": "工业绿色转型",
-      "predicate": "requires",
-      "object": "虚拟电厂配套建设",
-      "source_chunks": [
-        "报告-苏州工业园区的虚拟电厂调研报告：怎样做区域级虚拟电厂_chunk_001"
+        "报告-非洲调研报告（二）：中国新能源企业在赞比亚有什么机会？_chunk_001"
       ],
       "confidence": 0.8
-    },
-    {
-      "subject": "虚拟电厂",
-      "predicate": "enables",
-      "object": "用能风险管理",
-      "source_chunks": [
-        "报告-苏州工业园区的虚拟电厂调研报告：怎样做区域级虚拟电厂_chunk_001"
-      ],
-      "confidence": 1.0
-    },
-    {
-      "subject": "新能源政策",
-      "predicate": "superset-of",
-      "object": "《关于深化新能源上网电价市场化改革促进新能源高质量发展的通知》",
-      "source_chunks": [
-        "报告-远景科技调研报告：如何把握储能 AIDC领域未来机会_chunk_001"
-      ],
-      "confidence": 1.0
-    },
-    {
-      "subject": "《关于深化新能源上网电价市场化改革促进新能源高质量发展的通知》",
-      "predicate": "regulates",
-      "object": "强制配储",
-      "source_chunks": [
-        "报告-远景科技调研报告：如何把握储能 AIDC领域未来机会_chunk_001"
-      ],
-      "confidence": 1.0
-    },
-    {
-      "subject": "储能类产品",
-      "predicate": "superset-of",
-      "object": "电网侧储能",
-      "source_chunks": [
-        "报告-远景科技调研报告：如何把握储能 AIDC领域未来机会_chunk_001"
-      ],
-      "confidence": 1.0
-    },
-    {
-      "subject": "储能类产品",
-      "predicate": "superset-of",
-      "object": "电源侧储能",
-      "source_chunks": [
-        "报告-远景科技调研报告：如何把握储能 AIDC领域未来机会_chunk_001"
-      ],
-      "confidence": 1.0
-    },
-    {
-      "subject": "电网侧储能",
-      "predicate": "requires",
-      "object": "储能设备高可靠性",
-      "source_chunks": [
-        "报告-远景科技调研报告：如何把握储能 AIDC领域未来机会_chunk_001"
-      ],
-      "confidence": 1.0
-    },
-    {
-      "subject": "电网侧储能",
-      "predicate": "requires",
-      "object": "储能设备高转换效率",
-      "source_chunks": [
-        "报告-远景科技调研报告：如何把握储能 AIDC领域未来机会_chunk_001"
-      ],
-      "confidence": 1.0
-    },
-    {
-      "subject": "电网侧储能",
-      "predicate": "enables",
-      "object": "调峰辅助服务",
-      "source_chunks": [
-        "报告-远景科技调研报告：如何把握储能 AIDC领域未来机会_chunk_001"
-      ],
-      "confidence": 1.0
-    },
-    {
-      "subject": "电网侧储能",
-      "predicate": "enables",
-      "object": "电力现货市场",
-      "source_chunks": [
-        "报告-远景科技调研报告：如何把握储能 AIDC领域未来机会_chunk_001"
-      ],
-      "confidence": 1.0
-    },
-    {
-      "subject": "电力现货市场",
-      "predicate": "depends-on",
-      "object": "精准气象预测",
-      "source_chunks": [
-        "报告-远景科技调研报告：如何把握储能 AIDC领域未来机会_chunk_001"
-      ],
-      "confidence": 1.0
-    },
-    {
-      "subject": "电力现货市场",
-      "predicate": "depends-on",
-      "object": "智能化交易系统",
-      "source_chunks": [
-        "报告-远景科技调研报告：如何把握储能 AIDC领域未来机会_chunk_001"
-      ],
-      "confidence": 1.0
-    },
-    {
-      "subject": "EnOS储能产销一体化管理平台",
-      "predicate": "enables",
-      "object": "电力现货交易自动化",
-      "source_chunks": [
-        "报告-远景科技调研报告：如何把握储能 AIDC领域未来机会_chunk_001"
-      ],
-      "confidence": 1.0
-    },
-    {
-      "subject": "AIDC",
-      "predicate": "related-to",
-      "object": "新能源消纳",
-      "source_chunks": [
-        "报告-远景科技调研报告：如何把握储能 AIDC领域未来机会_chunk_001"
-      ],
-      "confidence": 1.0
-    },
-    {
-      "subject": "新能源政策",
-      "predicate": "superset-of",
-      "object": "《数据中心绿色低碳发展专项行动计划》",
-      "source_chunks": [
-        "报告-远景科技调研报告：如何把握储能 AIDC领域未来机会_chunk_001"
-      ],
-      "confidence": 1.0
-    },
-    {
-      "subject": "《数据中心绿色低碳发展专项行动计划》",
-      "predicate": "regulates",
-      "object": "数据中心绿电占比要求",
-      "source_chunks": [
-        "报告-远景科技调研报告：如何把握储能 AIDC领域未来机会_chunk_001"
-      ],
-      "confidence": 1.0
-    },
-    {
-      "subject": "新能源政策",
-      "predicate": "superset-of",
-      "object": "《关于促进可再生能源绿色电力证书市场高质量发展的意见》",
-      "source_chunks": [
-        "报告-远景科技调研报告：如何把握储能 AIDC领域未来机会_chunk_001"
-      ],
-      "confidence": 1.0
-    },
-    {
-      "subject": "电算协同",
-      "predicate": "enables",
-      "object": "新能源消纳效率提升",
-      "source_chunks": [
-        "报告-远景科技调研报告：如何把握储能 AIDC领域未来机会_chunk_001"
-      ],
-      "confidence": 1.0
-    },
-    {
-      "subject": "远景科技集团",
-      "predicate": "example-of",
-      "object": "新能源企业",
-      "source_chunks": [
-        "报告-远景科技调研报告：如何把握储能 AIDC领域未来机会_chunk_001"
-      ],
-      "confidence": 1.0
-    },
-    {
-      "subject": "杰文斯悖论",
-      "predicate": "causes",
-      "object": "AI技术效率提升带动能源总需求增长",
-      "source_chunks": [
-        "报告-远景科技调研报告：如何把握储能 AIDC领域未来机会_chunk_001"
-      ],
-      "confidence": 0.8
-    },
-    {
-      "subject": "新能源应用产品",
-      "predicate": "superset-of",
-      "object": "AIDC",
-      "source_chunks": [
-        "报告-远景科技调研报告：如何把握储能 AIDC领域未来机会_chunk_001"
-      ],
-      "confidence": 1.0
-    },
-    {
-      "subject": "金风科技股份有限公司",
-      "predicate": "example-of",
-      "object": "新能源企业",
-      "source_chunks": [
-        "报告-金风科技调研报告：我国首个碳中和园区是怎样建成的？_chunk_001"
-      ],
-      "confidence": 1.0
-    },
-    {
-      "subject": "金风科技亦庄智慧园区",
-      "predicate": "example-of",
-      "object": "零碳园区",
-      "source_chunks": [
-        "报告-金风科技调研报告：我国首个碳中和园区是怎样建成的？_chunk_001"
-      ],
-      "confidence": 1.0
-    },
-    {
-      "subject": "零碳园区建设服务",
-      "predicate": "requires",
-      "object": "碳管理体系规划能力",
-      "source_chunks": [
-        "报告-金风科技调研报告：我国首个碳中和园区是怎样建成的？_chunk_001"
-      ],
-      "confidence": 1.0
-    },
-    {
-      "subject": "零碳园区建设服务",
-      "predicate": "requires",
-      "object": "碳交易服务能力",
-      "source_chunks": [
-        "报告-金风科技调研报告：我国首个碳中和园区是怎样建成的？_chunk_001"
-      ],
-      "confidence": 1.0
-    },
-    {
-      "subject": "零碳园区建设服务",
-      "predicate": "requires",
-      "object": "零碳基础设施建设能力",
-      "source_chunks": [
-        "报告-金风科技调研报告：我国首个碳中和园区是怎样建成的？_chunk_001"
-      ],
-      "confidence": 1.0
-    },
-    {
-      "subject": "零碳园区建设服务",
-      "predicate": "requires",
-      "object": "零碳运营能力",
-      "source_chunks": [
-        "报告-金风科技调研报告：我国首个碳中和园区是怎样建成的？_chunk_001"
-      ],
-      "confidence": 1.0
-    },
-    {
-      "subject": "零碳园区建设服务",
-      "predicate": "requires",
-      "object": "咨询认证服务能力",
-      "source_chunks": [
-        "报告-金风科技调研报告：我国首个碳中和园区是怎样建成的？_chunk_001"
-      ],
-      "confidence": 1.0
-    },
-    {
-      "subject": "零碳园区运营",
-      "predicate": "depends-on",
-      "object": "零碳操作系统",
-      "source_chunks": [
-        "报告-金风科技调研报告：我国首个碳中和园区是怎样建成的？_chunk_001"
-      ],
-      "confidence": 1.0
-    },
-    {
-      "subject": "绿洲零碳操作系统",
-      "predicate": "example-of",
-      "object": "能源数字化设备",
-      "source_chunks": [
-        "报告-金风科技调研报告：我国首个碳中和园区是怎样建成的？_chunk_001"
-      ],
-      "confidence": 1.0
-    },
-    {
-      "subject": "碳账户",
-      "predicate": "part-of",
-      "object": "绿洲零碳操作系统",
-      "source_chunks": [
-        "报告-金风科技调研报告：我国首个碳中和园区是怎样建成的？_chunk_001"
-      ],
-      "confidence": 1.0
-    },
-    {
-      "subject": "零碳园区",
-      "predicate": "requires",
-      "object": "可再生能源替代市电",
-      "source_chunks": [
-        "报告-金风科技调研报告：我国首个碳中和园区是怎样建成的？_chunk_001"
-      ],
-      "confidence": 1.0
-    },
-    {
-      "subject": "零碳园区运营",
-      "predicate": "depends-on",
-      "object": "发电预测能力",
-      "source_chunks": [
-        "报告-金风科技调研报告：我国首个碳中和园区是怎样建成的？_chunk_001"
-      ],
-      "confidence": 1.0
-    },
-    {
-      "subject": "中国核证减排量",
-      "predicate": "enables",
-      "object": "碳排放抵消",
-      "source_chunks": [
-        "报告-金风科技调研报告：我国首个碳中和园区是怎样建成的？_chunk_001"
-      ],
-      "confidence": 1.0
-    },
-    {
-      "subject": "水蓄冷储罐",
-      "predicate": "enables",
-      "object": "绿电消纳",
-      "source_chunks": [
-        "报告-金风科技调研报告：我国首个碳中和园区是怎样建成的？_chunk_001"
-      ],
-      "confidence": 1.0
-    },
-    {
-      "subject": "可调负荷",
-      "predicate": "enables",
-      "object": "风光发电匹配消纳",
-      "source_chunks": [
-        "报告-金风科技调研报告：我国首个碳中和园区是怎样建成的？_chunk_001"
-      ],
-      "confidence": 1.0
-    },
-    {
-      "subject": "零碳园区建设",
-      "predicate": "requires",
-      "object": "经历低碳、近零碳、零碳三阶段",
-      "source_chunks": [
-        "报告-金风科技调研报告：我国首个碳中和园区是怎样建成的？_chunk_001"
-      ],
-      "confidence": 1.0
-    },
-    {
-      "subject": "金风科技股份有限公司",
-      "predicate": "implements",
-      "object": "绿洲零碳操作系统",
-      "source_chunks": [
-        "报告-金风科技调研报告：我国首个碳中和园区是怎样建成的？_chunk_001"
-      ],
-      "confidence": 1.0
-    },
-    {
-      "subject": "4小时超短期滚动功率预测",
-      "predicate": "enables",
-      "object": "降低风光出力预测误差",
-      "source_chunks": [
-        "报告-金风科技调研报告：我国首个碳中和园区是怎样建成的？_chunk_001"
-      ],
-      "confidence": 1.0
-    },
-    {
-      "subject": "绿电区块链溯源技术",
-      "predicate": "enables",
-      "object": "绿电消费溯源",
-      "source_chunks": [
-        "报告-金风科技调研报告：我国首个碳中和园区是怎样建成的？_chunk_001"
-      ],
-      "confidence": 1.0
-    },
-    {
-      "subject": "非洲新能源市场",
-      "predicate": "superset-of",
-      "object": "肯尼亚新能源市场",
-      "source_chunks": [
-        "报告-非洲调研报告（一）：中国新能源企业在肯尼亚有什么机会？_chunk_001"
-      ],
-      "confidence": 1.0
-    },
-    {
-      "subject": "肯尼亚新能源市场",
-      "predicate": "superset-of",
-      "object": "分布式工商业光伏市场",
-      "source_chunks": [
-        "报告-非洲调研报告（一）：中国新能源企业在肯尼亚有什么机会？_chunk_001"
-      ],
-      "confidence": 1.0
-    },
-    {
-      "subject": "肯尼亚新能源市场",
-      "predicate": "superset-of",
-      "object": "户用光伏市场",
-      "source_chunks": [
-        "报告-非洲调研报告（一）：中国新能源企业在肯尼亚有什么机会？_chunk_001"
-      ],
-      "confidence": 1.0
-    },
-    {
-      "subject": "肯尼亚新能源市场",
-      "predicate": "superset-of",
-      "object": "集中式光伏市场",
-      "source_chunks": [
-        "报告-非洲调研报告（一）：中国新能源企业在肯尼亚有什么机会？_chunk_001"
-      ],
-      "confidence": 1.0
-    },
-    {
-      "subject": "肯尼亚新能源市场",
-      "predicate": "superset-of",
-      "object": "风电市场",
-      "source_chunks": [
-        "报告-非洲调研报告（一）：中国新能源企业在肯尼亚有什么机会？_chunk_001"
-      ],
-      "confidence": 1.0
-    },
-    {
-      "subject": "肯尼亚新能源市场",
-      "predicate": "superset-of",
-      "object": "地热发电市场",
-      "source_chunks": [
-        "报告-非洲调研报告（一）：中国新能源企业在肯尼亚有什么机会？_chunk_001"
-      ],
-      "confidence": 1.0
-    },
-    {
-      "subject": "肯尼亚高电价",
-      "predicate": "causes",
-      "object": "肯尼亚政府推动新能源发展降低用能成本",
-      "source_chunks": [
-        "报告-非洲调研报告（一）：中国新能源企业在肯尼亚有什么机会？_chunk_001"
-      ],
-      "confidence": 1.0
-    },
-    {
-      "subject": "肯尼亚固定电价补贴机制叫停",
-      "predicate": "causes",
-      "object": "肯尼亚实施能源拍卖机制",
-      "source_chunks": [
-        "报告-非洲调研报告（一）：中国新能源企业在肯尼亚有什么机会？_chunk_001"
-      ],
-      "confidence": 1.0
     },
     {
       "subject": "能源拍卖机制",
-      "predicate": "regulates",
-      "object": "肯尼亚新能源项目上网电价",
+      "predicate": "contradicts",
+      "object": "绿色电价",
       "source_chunks": [
         "报告-非洲调研报告（一）：中国新能源企业在肯尼亚有什么机会？_chunk_001"
       ],
@@ -3674,42 +2082,15 @@
     },
     {
       "subject": "净计量政策",
-      "predicate": "regulates",
-      "object": "分布式光伏余电上网电费抵扣行为",
+      "predicate": "enables",
+      "object": "余电上网",
       "source_chunks": [
         "报告-非洲调研报告（一）：中国新能源企业在肯尼亚有什么机会？_chunk_001"
       ],
       "confidence": 1.0
     },
     {
-      "subject": "肯尼亚电网建设薄弱",
-      "predicate": "causes",
-      "object": "肯尼亚中短期新能源发展以分布式为主",
-      "source_chunks": [
-        "报告-非洲调研报告（一）：中国新能源企业在肯尼亚有什么机会？_chunk_001"
-      ],
-      "confidence": 1.0
-    },
-    {
-      "subject": "肯尼亚户用光伏市场",
-      "predicate": "requires",
-      "object": "预付费体系",
-      "source_chunks": [
-        "报告-非洲调研报告（一）：中国新能源企业在肯尼亚有什么机会？_chunk_001"
-      ],
-      "confidence": 0.8
-    },
-    {
-      "subject": "肯尼亚户用光伏市场",
-      "predicate": "requires",
-      "object": "小额分期付款机制",
-      "source_chunks": [
-        "报告-非洲调研报告（一）：中国新能源企业在肯尼亚有什么机会？_chunk_001"
-      ],
-      "confidence": 0.8
-    },
-    {
-      "subject": "肯尼亚开放接入制度",
+      "subject": "输电开放接入政策",
       "predicate": "enables",
       "object": "隔墙售电",
       "source_chunks": [
@@ -3718,328 +2099,193 @@
       "confidence": 1.0
     },
     {
-      "subject": "开拓肯尼亚新能源市场",
-      "predicate": "requires",
-      "object": "深耕本地",
-      "source_chunks": [
-        "报告-非洲调研报告（一）：中国新能源企业在肯尼亚有什么机会？_chunk_001"
-      ],
-      "confidence": 1.0
-    },
-    {
-      "subject": "开拓肯尼亚新能源市场",
-      "predicate": "requires",
-      "object": "重视产品质量",
-      "source_chunks": [
-        "报告-非洲调研报告（一）：中国新能源企业在肯尼亚有什么机会？_chunk_001"
-      ],
-      "confidence": 1.0
-    },
-    {
-      "subject": "开拓肯尼亚新能源市场",
-      "predicate": "requires",
-      "object": "完善售后服务体系",
-      "source_chunks": [
-        "报告-非洲调研报告（一）：中国新能源企业在肯尼亚有什么机会？_chunk_001"
-      ],
-      "confidence": 1.0
-    },
-    {
-      "subject": "印度企业深耕本地",
+      "subject": "弱电网",
       "predicate": "causes",
-      "object": "印度企业在肯尼亚新能源市场占有率高",
+      "object": "分布式光伏",
       "source_chunks": [
         "报告-非洲调研报告（一）：中国新能源企业在肯尼亚有什么机会？_chunk_001"
       ],
       "confidence": 1.0
     },
     {
-      "subject": "深耕本地",
-      "predicate": "enables",
-      "object": "降低肯尼亚新能源项目投资风险",
+      "subject": "分布式光伏",
+      "predicate": "superset-of",
+      "object": "工商业光伏",
       "source_chunks": [
         "报告-非洲调研报告（一）：中国新能源企业在肯尼亚有什么机会？_chunk_001"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "subject": "分布式光伏",
+      "predicate": "superset-of",
+      "object": "户用光伏",
+      "source_chunks": [
+        "报告-非洲调研报告（一）：中国新能源企业在肯尼亚有什么机会？_chunk_001"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "subject": "户用光伏",
+      "predicate": "superset-of",
+      "object": "户用离网光伏系统",
+      "source_chunks": [
+        "报告-非洲调研报告（一）：中国新能源企业在肯尼亚有什么机会？_chunk_001"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "subject": "工商业光伏",
+      "predicate": "implements",
+      "object": "自发自用",
+      "source_chunks": [
+        "报告-非洲调研报告（一）：中国新能源企业在肯尼亚有什么机会？_chunk_001"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "subject": "日内电力现货市场",
+      "predicate": "part-of",
+      "object": "电力现货市场",
+      "source_chunks": [
+        "报告-远景科技调研报告：如何把握储能 AIDC领域未来机会_chunk_001"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "subject": "智算中心",
+      "predicate": "implements",
+      "object": "电算协同",
+      "source_chunks": [
+        "报告-远景科技调研报告：如何把握储能 AIDC领域未来机会_chunk_001"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "subject": "日前现货交易",
+      "predicate": "depends-on",
+      "object": "天气预测",
+      "source_chunks": [
+        "报告-远景科技调研报告：如何把握储能 AIDC领域未来机会_chunk_001"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "subject": "强制配储",
+      "predicate": "causes",
+      "object": "电源侧储能",
+      "source_chunks": [
+        "报告-远景科技调研报告：如何把握储能 AIDC领域未来机会_chunk_001"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "subject": "136号文",
+      "predicate": "contradicts",
+      "object": "强制配储",
+      "source_chunks": [
+        "报告-远景科技调研报告：如何把握储能 AIDC领域未来机会_chunk_001"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "subject": "绿电消费比例",
+      "predicate": "regulates",
+      "object": "智算中心",
+      "source_chunks": [
+        "报告-远景科技调研报告：如何把握储能 AIDC领域未来机会_chunk_001"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "subject": "零碳园区",
+      "predicate": "requires",
+      "object": "零碳操作系统",
+      "source_chunks": [
+        "报告-金风科技调研报告：我国首个碳中和园区是怎样建成的？_chunk_001"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "subject": "碳账户",
+      "predicate": "part-of",
+      "object": "零碳操作系统",
+      "source_chunks": [
+        "报告-金风科技调研报告：我国首个碳中和园区是怎样建成的？_chunk_001"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "subject": "发电预测",
+      "predicate": "enables",
+      "object": "负荷调度",
+      "source_chunks": [
+        "报告-金风科技调研报告：我国首个碳中和园区是怎样建成的？_chunk_001"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "subject": "超短期滚动功率预测",
+      "predicate": "is-a",
+      "object": "发电预测",
+      "source_chunks": [
+        "报告-金风科技调研报告：我国首个碳中和园区是怎样建成的？_chunk_001"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "subject": "绿电直连",
+      "predicate": "enables",
+      "object": "绿电溯源",
+      "source_chunks": [
+        "报告-金风科技调研报告：我国首个碳中和园区是怎样建成的？_chunk_001"
+      ],
+      "confidence": 0.6
+    },
+    {
+      "subject": "区块链溯源绿电",
+      "predicate": "enables",
+      "object": "绿电溯源",
+      "source_chunks": [
+        "报告-金风科技调研报告：我国首个碳中和园区是怎样建成的？_chunk_001"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "subject": "水蓄冷罐",
+      "predicate": "related-to",
+      "object": "负荷调度",
+      "source_chunks": [
+        "报告-金风科技调研报告：我国首个碳中和园区是怎样建成的？_chunk_001"
       ],
       "confidence": 0.8
     },
     {
-      "subject": "图尔卡纳湖风电项目",
-      "predicate": "example-of",
-      "object": "风电类产品",
-      "source_chunks": [
-        "报告-非洲调研报告（一）：中国新能源企业在肯尼亚有什么机会？_chunk_001"
-      ],
-      "confidence": 1.0
-    },
-    {
-      "subject": "肯尼亚国家发电公司",
-      "predicate": "is-a",
-      "object": "新能源企业",
-      "source_chunks": [
-        "报告-非洲调研报告（一）：中国新能源企业在肯尼亚有什么机会？_chunk_001"
-      ],
-      "confidence": 1.0
-    },
-    {
-      "subject": "肯尼亚输电有限公司",
-      "predicate": "is-a",
-      "object": "新能源企业",
-      "source_chunks": [
-        "报告-非洲调研报告（一）：中国新能源企业在肯尼亚有什么机会？_chunk_001"
-      ],
-      "confidence": 1.0
-    },
-    {
-      "subject": "肯尼亚电力照明公司",
-      "predicate": "is-a",
-      "object": "新能源企业",
-      "source_chunks": [
-        "报告-非洲调研报告（一）：中国新能源企业在肯尼亚有什么机会？_chunk_001"
-      ],
-      "confidence": 1.0
-    },
-    {
-      "subject": "ESKL",
-      "predicate": "is-a",
-      "object": "新能源企业",
-      "source_chunks": [
-        "报告-非洲调研报告（一）：中国新能源企业在肯尼亚有什么机会？_chunk_001"
-      ],
-      "confidence": 1.0
-    },
-    {
-      "subject": "SpenoMatic Solar",
-      "predicate": "is-a",
-      "object": "新能源企业",
-      "source_chunks": [
-        "报告-非洲调研报告（一）：中国新能源企业在肯尼亚有什么机会？_chunk_001"
-      ],
-      "confidence": 1.0
-    },
-    {
-      "subject": "肯尼亚政府分布式光伏鼓励政策",
-      "predicate": "causes",
-      "object": "肯尼亚分布式工商业光伏市场发展机会",
-      "source_chunks": [
-        "报告-非洲调研报告（一）：中国新能源企业在肯尼亚有什么机会？_chunk_001"
-      ],
-      "confidence": 1.0
-    },
-    {
-      "subject": "非洲新能源市场",
-      "predicate": "superset-of",
-      "object": "赞比亚新能源市场",
-      "source_chunks": [
-        "报告-非洲调研报告（二）：中国新能源企业在赞比亚有什么机会？_chunk_001"
-      ],
-      "confidence": 1.0
-    },
-    {
-      "subject": "赞比亚新能源市场",
-      "predicate": "superset-of",
-      "object": "公用事业级大型光伏储能电站市场",
-      "source_chunks": [
-        "报告-非洲调研报告（二）：中国新能源企业在赞比亚有什么机会？_chunk_001"
-      ],
-      "confidence": 1.0
-    },
-    {
-      "subject": "赞比亚新能源市场",
-      "predicate": "superset-of",
-      "object": "矿业直供电项目市场",
-      "source_chunks": [
-        "报告-非洲调研报告（二）：中国新能源企业在赞比亚有什么机会？_chunk_001"
-      ],
-      "confidence": 1.0
-    },
-    {
-      "subject": "赞比亚新能源市场",
-      "predicate": "superset-of",
-      "object": "工商业分布式光储市场",
-      "source_chunks": [
-        "报告-非洲调研报告（二）：中国新能源企业在赞比亚有什么机会？_chunk_001"
-      ],
-      "confidence": 1.0
-    },
-    {
-      "subject": "赞比亚新能源市场",
-      "predicate": "superset-of",
-      "object": "农村电气化离网光储市场",
-      "source_chunks": [
-        "报告-非洲调研报告（二）：中国新能源企业在赞比亚有什么机会？_chunk_001"
-      ],
-      "confidence": 1.0
-    },
-    {
-      "subject": "赞比亚新能源市场",
-      "predicate": "superset-of",
-      "object": "交通电动化市场",
-      "source_chunks": [
-        "报告-非洲调研报告（二）：中国新能源企业在赞比亚有什么机会？_chunk_001"
-      ],
-      "confidence": 1.0
-    },
-    {
-      "subject": "赞比亚新能源市场",
-      "predicate": "superset-of",
-      "object": "电力出口项目市场",
-      "source_chunks": [
-        "报告-非洲调研报告（二）：中国新能源企业在赞比亚有什么机会？_chunk_001"
-      ],
-      "confidence": 1.0
-    },
-    {
-      "subject": "赞比亚连续干旱",
-      "predicate": "causes",
-      "object": "赞比亚水电发电能力骤降",
-      "source_chunks": [
-        "报告-非洲调研报告（二）：中国新能源企业在赞比亚有什么机会？_chunk_001"
-      ],
-      "confidence": 1.0
-    },
-    {
-      "subject": "赞比亚水电发电能力骤降",
-      "predicate": "causes",
-      "object": "赞比亚电力缺口扩大",
-      "source_chunks": [
-        "报告-非洲调研报告（二）：中国新能源企业在赞比亚有什么机会？_chunk_001"
-      ],
-      "confidence": 1.0
-    },
-    {
-      "subject": "赞比亚电力缺口扩大",
-      "predicate": "causes",
-      "object": "赞比亚新能源投资政策放开",
-      "source_chunks": [
-        "报告-非洲调研报告（二）：中国新能源企业在赞比亚有什么机会？_chunk_001"
-      ],
-      "confidence": 1.0
-    },
-    {
-      "subject": "输电开放接入政策",
+      "subject": "CCER",
       "predicate": "enables",
-      "object": "独立发电商直接向终端大用户售电",
+      "object": "碳抵销",
       "source_chunks": [
-        "报告-非洲调研报告（二）：中国新能源企业在赞比亚有什么机会？_chunk_001"
+        "报告-金风科技调研报告：我国首个碳中和园区是怎样建成的？_chunk_001"
       ],
       "confidence": 1.0
     },
     {
-      "subject": "开拓赞比亚新能源市场",
+      "subject": "零碳园区",
       "predicate": "requires",
-      "object": "完善本地售后服务体系",
+      "object": "综合能源服务",
       "source_chunks": [
-        "报告-非洲调研报告（二）：中国新能源企业在赞比亚有什么机会？_chunk_001"
+        "报告-金风科技调研报告：我国首个碳中和园区是怎样建成的？_chunk_001"
       ],
       "confidence": 1.0
     },
     {
-      "subject": "开拓赞比亚新能源市场",
-      "predicate": "requires",
-      "object": "建立本地库存保障快速响应",
-      "source_chunks": [
-        "报告-非洲调研报告（二）：中国新能源企业在赞比亚有什么机会？_chunk_001"
-      ],
-      "confidence": 1.0
-    },
-    {
-      "subject": "开拓赞比亚新能源市场",
-      "predicate": "requires",
-      "object": "优先开展EPC项目或小型投资建立样板",
-      "source_chunks": [
-        "报告-非洲调研报告（二）：中国新能源企业在赞比亚有什么机会？_chunk_001"
-      ],
-      "confidence": 1.0
-    },
-    {
-      "subject": "开拓赞比亚新能源市场",
-      "predicate": "requires",
-      "object": "抱团出海形成产业链配套联盟",
-      "source_chunks": [
-        "报告-非洲调研报告（二）：中国新能源企业在赞比亚有什么机会？_chunk_001"
-      ],
-      "confidence": 1.0
-    },
-    {
-      "subject": "中赞长期友好合作关系",
+      "subject": "碳账户",
       "predicate": "enables",
-      "object": "中国新能源企业进入赞比亚市场",
+      "object": "综合能碳管理",
       "source_chunks": [
-        "报告-非洲调研报告（二）：中国新能源企业在赞比亚有什么机会？_chunk_001"
+        "报告-金风科技调研报告：我国首个碳中和园区是怎样建成的？_chunk_001"
       ],
-      "confidence": 1.0
-    },
-    {
-      "subject": "赞比亚政局稳定",
-      "predicate": "enables",
-      "object": "中国新能源企业投资赞比亚新能源市场",
-      "source_chunks": [
-        "报告-非洲调研报告（二）：中国新能源企业在赞比亚有什么机会？_chunk_001"
-      ],
-      "confidence": 1.0
-    },
-    {
-      "subject": "赞比亚铜产业扩张",
-      "predicate": "causes",
-      "object": "赞比亚电力需求增长",
-      "source_chunks": [
-        "报告-非洲调研报告（二）：中国新能源企业在赞比亚有什么机会？_chunk_001"
-      ],
-      "confidence": 1.0
-    },
-    {
-      "subject": "购电协议审批提速政策",
-      "predicate": "enables",
-      "object": "新能源项目快速落地赞比亚",
-      "source_chunks": [
-        "报告-非洲调研报告（二）：中国新能源企业在赞比亚有什么机会？_chunk_001"
-      ],
-      "confidence": 1.0
-    },
-    {
-      "subject": "投资注册快车道政策",
-      "predicate": "enables",
-      "object": "外资新能源企业快速进入赞比亚市场",
-      "source_chunks": [
-        "报告-非洲调研报告（二）：中国新能源企业在赞比亚有什么机会？_chunk_001"
-      ],
-      "confidence": 1.0
-    },
-    {
-      "subject": "赞比亚新能源支持政策",
-      "predicate": "superset-of",
-      "object": "输电开放接入政策",
-      "source_chunks": [
-        "报告-非洲调研报告（二）：中国新能源企业在赞比亚有什么机会？_chunk_001"
-      ],
-      "confidence": 1.0
-    },
-    {
-      "subject": "赞比亚新能源支持政策",
-      "predicate": "superset-of",
-      "object": "购电协议审批提速政策",
-      "source_chunks": [
-        "报告-非洲调研报告（二）：中国新能源企业在赞比亚有什么机会？_chunk_001"
-      ],
-      "confidence": 1.0
-    },
-    {
-      "subject": "赞比亚新能源支持政策",
-      "predicate": "superset-of",
-      "object": "投资注册快车道政策",
-      "source_chunks": [
-        "报告-非洲调研报告（二）：中国新能源企业在赞比亚有什么机会？_chunk_001"
-      ],
-      "confidence": 1.0
-    },
-    {
-      "subject": "赞比亚新能源支持政策",
-      "predicate": "superset-of",
-      "object": "投资保护协议",
-      "source_chunks": [
-        "报告-非洲调研报告（二）：中国新能源企业在赞比亚有什么机会？_chunk_001"
-      ],
-      "confidence": 1.0
+      "confidence": 0.8
     }
   ]
 }

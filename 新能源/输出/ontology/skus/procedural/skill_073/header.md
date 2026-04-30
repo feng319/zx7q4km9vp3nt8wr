@@ -1,7 +1,7 @@
-# new-energy-project-differentiated-competition-strategy
+# smart-low-voltage-power-distribution-integration
 
 - **分类**: procedural
-- **来源**: 报告-电管家一线调研报告：微电网怎么赚钱？_chunk_001
-- **字符数**: 414
+- **来源**: 报告-良信电器调研报告：怎样建设零碳工厂？_chunk_001
+- **字符数**: 655
 
-当新能源项目面临同质化价格竞争、需要获取独家开发权时使用
+当需要将传统低压电器升级为智能数据采集与控制节点，搭建零碳工厂能源数据底座时使用

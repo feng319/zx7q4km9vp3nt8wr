@@ -1,13 +1,25 @@
 ---
-name: microgrid-main-line-structure-selection-procedure
-description: 适用于直流微电网设计阶段，选择能量传输主线结构时使用
+name: offgrid-microgrid-feasibility-analysis
+description: Calculate cost savings and ROI for a solar-storage-diesel off-grid microgrid replacing pure diesel generation.
 ---
 
-- 概述：为微电网选择合适的能量传输主线结构，平衡供电可靠性与建设成本
-- 步骤：
-  1. 调研业主对供电稳定性的要求等级
-  2. 评估单主线、冗余式主线两种结构的建设成本差异
-- 决策点：
-  - 如果业主对供电稳定性要求较高：选择冗余式双主线结构，保障故障/检修时供电不中断
-  - 如果业主对供电稳定性要求一般：选择单主线结构，降低建设成本
-- 预期结果：确定符合项目需求的主线结构方案
+## Overview
+For remote off‑grid sites, building a solar‑storage‑diesel hybrid microgrid can drastically reduce fuel costs. This method structures the financial evaluation for both the energy off‑taker and the developer.
+
+## Steps
+1. **Inventory current diesel consumption** – collect daily/hourly fuel usage of all generators, diesel price, and annual maintenance costs.
+2. **Calculate baseline 15‑year fuel costs** assuming annual price escalation (e.g., 2%): `Sum_{year=1..15} (annual_diesel_cost * (1+escalation)^(year-1))`.
+3. **Design a hybrid system** – size PV (MWp), battery storage (MWh), and remaining diesel backup based on load profiles and solar resource data.
+4. **Estimate total investment cost** – include solar, storage, diesel generators, transmission lines, and construction.
+5. **Structure the Power Purchase Agreement (PPA)/lease terms** – define off‑taker annual payment, escalation rate, and contract duration.
+6. **Compute off‑taker’s new annual costs** – PPA payment plus remaining diesel fuel and maintenance (still paid by off‑taker).
+7. **Compute off‑taker’s total cost over 15 years** with the same escalation assumption.
+8. **Compute developer revenue** – sum of PPA payments over the contract period.
+9. **Evaluate payback** – developer’s simple payback = investment / first‑year revenue.
+10. **Present results** – savings for off‑taker, IRR for developer, payback period.
+
+## Decision Points
+- If the simple payback exceeds 5‑7 years, renegotiate PPA price or consider system downsizing.
+
+## Expected Result
+A clear financial model showing a win‑win outcome: double‑digit million‑dollar savings for the off‑taker and an attractive return for the developer (e.g., payback in 4 years, >$46M total revenue over 15 years).

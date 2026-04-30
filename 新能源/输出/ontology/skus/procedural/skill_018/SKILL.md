@@ -1,15 +1,21 @@
 ---
-name: power-source-type-vpp-operation-workflow
-description: 聚合分布式发电资源开展电源型虚拟电厂运营时使用
+name: select-main-bus-structure
+description: Choose between a single or redundant main bus architecture for a DC microgrid based on reliability requirements.
 ---
 
-### 概述
-以聚合各类发电资源为主的电源型虚拟电厂的落地运作模式，可实现发电到售电的闭环，平衡各方利益。
-### 步骤
-1. 由能源聚合商（虚拟电厂运营商）聚合分布式光伏、风电等各类发电资源
-2. 聚合商统一收购各电站电力，打包卖给合作售电公司
-3. 售电公司将绿电平进平出供给用电用户，绿电不足部分由售电公司补充其他电源满足用户需求
-### 决策点
-- 如果聚合商同时拥有售电资质：可直接向用户售电，无需第三方售电公司参与，实现发-聚-售一体化运营
-### 预期结果
-形成发电-聚合-售电完整闭环，分布式电站收益提升，售电公司绑定用户获得火电收益，用户绿电需求得到满足且用电成本稳定
+## Overview
+The main bus is the backbone of the microgrid, connecting all power sources, storage, and loads. It can be implemented as a single string or with a redundant backup line.
+
+## Steps
+1. **Assess the user's power supply continuity requirement** – consult the facility owner about the maximum acceptable outage duration and sensitivity to interruptions.
+2. **Evaluate single‑bus structure** – suitable for non‑critical sites where occasional downtime is acceptable and cost savings are prioritized.
+3. **Evaluate redundant‑bus structure** – adds a secondary main bus used only during faults or maintenance; suitable for critical operations.
+4. **Compare total cost and complexity** – redundant structure increases cabling, switchgear, and control complexity.
+5. **Make recommendation** – based on the balance between reliability needs and budget.
+
+## Decision Points
+- If reliability is paramount (e.g., data centers, hospitals): choose **redundant main bus**.
+- If reliability is moderate (e.g., commercial buildings, general parks): choose **single main bus** to control costs.
+
+## Expected Result
+A clearly documented main bus architecture choice aligned with the client's operational requirements and budget.

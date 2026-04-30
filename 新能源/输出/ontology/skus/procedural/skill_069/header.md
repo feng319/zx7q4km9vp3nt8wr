@@ -1,7 +1,7 @@
-# office-v2g-owner-participation-process
+# flow-battery-application-suitability-assessment
 
 - **分类**: procedural
-- **来源**: 报告-特来电零碳大楼调研报告：怎样做车网互动？_chunk_001
-- **字符数**: 352
+- **来源**: 报告-纬景储能调研报告：液流电池为储能带来的机会_chunk_001
+- **字符数**: 1,152
 
-当电动汽车车主在配备V2G设施的办公楼/园区停车，想要参与车网互动获得收益时使用
+系统评估锌铁液流电池储能是否适用于特定项目或场景，基于安全、长时储能、微电网等因素进行决策。

@@ -1,13 +1,26 @@
 ---
-name: load-type-vpp-expansion-workflow
-description: 电源型虚拟电厂标杆项目跑通后拓展负荷侧虚拟电厂时使用
+name: design-microgrid-networking-topology
+description: Select the networking topology (single, dual, ring, mesh) for microgrid units based on coverage area and reliability needs.
 ---
 
-### 概述
-从已落地的电源型虚拟电厂延伸拓展负荷侧虚拟电厂的实施路径，可进一步扩大虚拟电厂规模。
-### 步骤
-1. 复制零碳示范园区建设经验，为当地工业企业提供用能优化、降碳解决方案，黏住用电负荷
-2. 在负荷侧场景挖掘光、储、充电站等投资机会，建设相关可控负荷资产
-3. 将储能、光储充、热泵等可控负荷接入虚拟电厂平台
-### 预期结果
-建成负荷型虚拟电厂，整体VPP规模达到临界值，可开展电力零售、动态峰谷套利等增值业务
+## Overview
+Microgrid unit interconnection can follow four topologies: single‑network, dual‑network, ring‑network, and mesh‑network. The choice impacts control complexity and reliability.
+
+## Steps
+1. **Determine the physical scale of the microgrid** – measure the geographical spread of power sources and loads.
+2. **Map criticality of load zones** – identify any areas that cannot tolerate interruption.
+3. **Evaluate topologies**:
+   - **Single‑network**: simple control, lowest cost, suitable for small areas.
+   - **Dual‑network**: moderate redundancy, medium complexity.
+   - **Ring‑network**: higher reliability via loop connections, more complex protection.
+   - **Mesh‑network**: highest reliability, maximum complexity and cost.
+4. **Select the simplest topology that meets reliability requirements** – typical small to medium sites use single or ring topology.
+5. **Document the chosen topology and the inter‑connection switching devices** (DC breakers or bidirectional DC/DC converters).
+
+## Decision Points
+- If the power supply range is small and loads are not highly critical: use **single‑network** to simplify control.
+- If higher reliability is needed for a medium area: consider **ring‑network**.
+- For large, highly distributed, mission‑critical systems: evaluate **mesh‑network**.
+
+## Expected Result
+A topology design that balances operational reliability, control complexity, and cost.

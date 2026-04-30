@@ -1,7 +1,7 @@
-# second-gen-vpp-day-ahead-spot-market-trading-workflow
+# paygo-mobile-payment-unlock-workflow
 
 - **分类**: procedural
-- **来源**: 报告-广林汇智调研报告：在西北地区怎么做虚拟电厂？_chunk_001
-- **字符数**: 423
+- **来源**: 报告-正泰安能光伏星调研报告：在非洲如何做户用光伏？_chunk_001
+- **字符数**: 847
 
-当运营第二代市场型虚拟电厂，需要参与电力现货交易降低用电成本获取收益时使用
+在离网光伏系统中实现按天付费的PAYGo技术闭环，通过移动支付、激活码和远程控制完成付费解锁。

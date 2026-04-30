@@ -1,7 +1,7 @@
-# steel-enterprise-energy-carbon-management-scheme-formulation
+# steel-carbon-management-plan
 
 - **分类**: procedural
 - **来源**: 报告-河钢集团一线调研报告：钢铁行业存在哪些双碳机会？_chunk_001
-- **字符数**: 528
+- **字符数**: 1,411
 
-当钢铁企业需要系统性制定综合降碳方案，兼顾降碳目标与生产经济性时使用
+为钢铁企业制定系统性的综合能碳管理方案，涵盖诊断、目标设定、路径规划和实施监查全流程。

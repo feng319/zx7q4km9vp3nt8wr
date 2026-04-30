@@ -1,7 +1,7 @@
-# traditional-enterprise-new-energy-cross-border-layout-strategy
+# dual-tai-qu-flexible-dc-interconnection-assessment
 
 - **分类**: procedural
-- **来源**: 报告-深石集团调研报告：房地产企业怎样做新能源？_chunk_001
-- **字符数**: 434
+- **来源**: 报告-紫电捷控调研报告：交直流微电网怎么做？_chunk_001
+- **字符数**: 860
 
-用于非能源领域传统企业计划跨界布局新能源业务，依托自身原有资源构建差异化竞争优势时使用。
+评估两个相邻配电台区是否适合采用柔直互联微电网，以解决负载不平衡、光伏消纳或供电可靠性问题

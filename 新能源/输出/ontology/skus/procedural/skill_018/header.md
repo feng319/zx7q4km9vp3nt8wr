@@ -1,7 +1,7 @@
-# power-source-type-vpp-operation-workflow
+# select-main-bus-structure
 
 - **分类**: procedural
-- **来源**: 报告-固德威一线调研报告：城市级虚拟电厂怎么做？_chunk_001
-- **字符数**: 387
+- **来源**: 报告-则鸣新能源调研报告：怎么样做好微电网？_chunk_001
+- **字符数**: 1,388
 
-聚合分布式发电资源开展电源型虚拟电厂运营时使用
+Choose between a single or redundant main bus architecture for a DC microgrid based on reliability r

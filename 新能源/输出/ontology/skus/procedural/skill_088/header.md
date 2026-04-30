@@ -1,7 +1,7 @@
-# grid-side-energy-storage-project-feasibility-assessment
+# electricity-computing-coordination-implementation
 
 - **分类**: procedural
 - **来源**: 报告-远景科技调研报告：如何把握储能 AIDC领域未来机会_chunk_001
-- **字符数**: 436
+- **字符数**: 1,048
 
-当计划投资、建设、运营电网侧储能项目，评估项目盈利可行性时使用。
+实施电算协同项目，实现数据中心与新能源电站同步规划、建设、运营，使算力随绿电转移

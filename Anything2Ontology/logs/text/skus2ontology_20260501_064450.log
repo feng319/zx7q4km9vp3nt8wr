@@ -1,0 +1,2 @@
+2026-04-30T22:44:50.967805Z [info     ] Starting ontology pipeline     [skus2ontology.pipeline] ontology_dir='G:\\Program Files\\AI coding\\知识萃取\\新能源\\输出\\ontology' skip_chatbot=False skus_dir='G:\\Program Files\\AI coding\\知识萃取\\新能源\\输出\\skus'
+2026-04-30T22:44:50.968806Z [info     ] Starting ontology assembly     [skus2ontology.assembler] ontology_dir='G:\\Program Files\\AI coding\\知识萃取\\新能源\\输出\\ontology' skus_dir='G:\\Program Files\\AI coding\\知识萃取\\新能源\\输出\\skus'
