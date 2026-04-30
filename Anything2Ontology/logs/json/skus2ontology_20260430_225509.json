@@ -3,3 +3,6 @@
 {"total_lines": 971, "matched": 944, "event": "slug\u2192path inline resolution", "logger": "skus2ontology.chatbot", "level": "info", "timestamp": "2026-04-30T14:55:09.303440Z"}
 {"original_chars": 49322, "compressed_chars": 29995, "event": "Loaded mapping.md (compressed)", "logger": "skus2ontology.chatbot", "level": "info", "timestamp": "2026-04-30T14:55:09.303968Z"}
 {"chars": 16728, "event": "Loaded eureka.md", "logger": "skus2ontology.chatbot", "level": "info", "timestamp": "2026-04-30T14:55:09.321523Z"}
+{"model": "deepseek/deepseek-v4-pro-free", "attempt": 1, "error": "Connection error.", "event": "LLM chat call failed (retryable)", "logger": "skus2ontology.utils.llm_client", "level": "warning", "timestamp": "2026-04-30T15:10:41.541069Z"}
+{"delay_seconds": 5, "attempt": 1, "event": "Retrying after delay", "logger": "skus2ontology.utils.llm_client", "level": "info", "timestamp": "2026-04-30T15:10:41.541865Z"}
+{"model": "deepseek/deepseek-v4-pro-free", "status": 429, "error": "Error code: 429 - {'error': {'code': '429', 'type': 'rate_limit', 'message': 'Rate limit exceeded'}}", "event": "LLM chat call failed (non-retryable)", "logger": "skus2ontology.utils.llm_client", "level": "error", "timestamp": "2026-04-30T15:12:27.138749Z"}

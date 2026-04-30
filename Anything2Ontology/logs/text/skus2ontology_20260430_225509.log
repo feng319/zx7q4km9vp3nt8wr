@@ -3,3 +3,6 @@
 2026-04-30T14:55:09.303440Z [info     ] slug→path inline resolution    [skus2ontology.chatbot] matched=944 total_lines=971
 2026-04-30T14:55:09.303968Z [info     ] Loaded mapping.md (compressed) [skus2ontology.chatbot] compressed_chars=29995 original_chars=49322
 2026-04-30T14:55:09.321523Z [info     ] Loaded eureka.md               [skus2ontology.chatbot] chars=16728
+2026-04-30T15:10:41.541069Z [warning  ] LLM chat call failed (retryable) [skus2ontology.utils.llm_client] attempt=1 error='Connection error.' model=deepseek/deepseek-v4-pro-free
+2026-04-30T15:10:41.541865Z [info     ] Retrying after delay           [skus2ontology.utils.llm_client] attempt=1 delay_seconds=5
+2026-04-30T15:12:27.138749Z [error    ] LLM chat call failed (non-retryable) [skus2ontology.utils.llm_client] error="Error code: 429 - {'error': {'code': '429', 'type': 'rate_limit', 'message': 'Rate limit exceeded'}}" model=deepseek/deepseek-v4-pro-free status=429
