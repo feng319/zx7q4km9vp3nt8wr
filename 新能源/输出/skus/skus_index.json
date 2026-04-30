@@ -1,8 +1,8 @@
 {
   "created_at": "2026-04-30T23:58:12.790314",
-  "updated_at": "2026-05-01T01:27:33.134463",
-  "total_skus": 274,
-  "total_characters": 281015,
+  "updated_at": "2026-05-01T01:28:37.110426",
+  "total_skus": 291,
+  "total_characters": 301367,
   "chunks_processed": [
     "报告-《关于优化集中式新能源发电企业市场报价的通知（试行）》深度解读与战略分析_chunk_001",
     "报告-乌克兰新能源市场机会调研报告_chunk_001",
@@ -23,7 +23,8 @@
     "报告-深石集团调研报告：房地产企业怎样做新能源？_chunk_001",
     "报告-河钢集团一线调研报告：钢铁行业存在哪些双碳机会？_chunk_001",
     "报告-苏州工业园区的虚拟电厂调研报告：怎样做区域级虚拟电厂_chunk_001",
-    "报告-紫电捷控调研报告：交直流微电网怎么做？_chunk_001"
+    "报告-紫电捷控调研报告：交直流微电网怎么做？_chunk_001",
+    "报告-纬景储能调研报告：液流电池为储能带来的机会_chunk_001"
   ],
   "skus": [
     {
@@ -2747,16 +2748,6 @@
       "confidence": null
     },
     {
-      "sku_id": "relational-knowledge-base",
-      "name": "relational-knowledge-base",
-      "classification": "relational",
-      "path": "relational",
-      "source_chunk": "aggregated",
-      "character_count": 137280,
-      "description": "Domain label hierarchy and terminology glossary",
-      "confidence": null
-    },
-    {
       "sku_id": "meta-knowledge",
       "name": "meta-knowledge",
       "classification": "meta",
@@ -2765,10 +2756,190 @@
       "character_count": 24849,
       "description": "SKU routing (mapping.md) and creative insights (eureka.md)",
       "confidence": null
+    },
+    {
+      "sku_id": "sku_214",
+      "name": "锌铁液流电池原材料成本优势",
+      "classification": "factual",
+      "path": "factual/sku_214",
+      "source_chunk": "报告-纬景储能调研报告：液流电池为储能带来的机会_chunk_001",
+      "character_count": 295,
+      "description": "锌铁液流电池与全钒液流电池在关键原材料储量及价格上的对比，显示锌铁路线拥有明显的降本潜力。",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_215",
+      "name": "液流电池的基本结构与工作原理",
+      "classification": "factual",
+      "path": "factual/sku_215",
+      "source_chunk": "报告-纬景储能调研报告：液流电池为储能带来的机会_chunk_001",
+      "character_count": 213,
+      "description": "液流电池是一种以液态电解质存储电能的电化学储能技术，其结构包含双储罐、电堆和循环泵，通过活性物质价态变化进行充放电。",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_216",
+      "name": "锌铁液流电池储能电站度电成本（LCOS）计算示例",
+      "classification": "factual",
+      "path": "factual/sku_216",
+      "source_chunk": "报告-纬景储能调研报告：液流电池为储能带来的机会_chunk_001",
+      "character_count": 382,
+      "description": "以100kW/400kWh锌铁液流电池项目为例，介绍度电成本计算方法，结果约为0.49元/kWh，展示液流电池通过长寿命摊薄成本的经济性逻辑。",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_217",
+      "name": "液流电池与锂电池储能循环寿命及初期投资对比",
+      "classification": "factual",
+      "path": "factual/sku_217",
+      "source_chunk": "报告-纬景储能调研报告：液流电池为储能带来的机会_chunk_001",
+      "character_count": 308,
+      "description": "液流电池循环寿命可达2万-3万次（20年以上），远超锂电池的约10年；尽管初期投资高（2000-3000元/kWh vs 锂电池<1000元/kWh），但超长寿命和可维护性使得度电成本趋于接近。",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_218",
+      "name": "液流电池功率容量解耦特性与长时储能降本机制",
+      "classification": "factual",
+      "path": "factual/sku_218",
+      "source_chunk": "报告-纬景储能调研报告：液流电池为储能带来的机会_chunk_001",
+      "character_count": 268,
+      "description": "液流电池的功率模块（电堆）和容量模块（储罐及电解液）物理分离，可单独增加容量以延长储能时长至8-10小时，摊薄功率设备成本，是长时储能经济性的关键。",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_219",
+      "name": "液流电池本征安全特性及消防标准优势",
+      "classification": "factual",
+      "path": "factual/sku_219",
+      "source_chunk": "报告-纬景储能调研报告：液流电池为储能带来的机会_chunk_001",
+      "character_count": 264,
+      "description": "液流电池采用水系电解液且活性物质不可燃，具备本征安全，消防要求远低于锂电池，可进入城市室内场景，降低安全隐性成本。",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_220",
+      "name": "液流电池在绿电高比例场景中的长时储能需求机遇",
+      "classification": "factual",
+      "path": "factual/sku_220",
+      "source_chunk": "报告-纬景储能调研报告：液流电池为储能带来的机会_chunk_001",
+      "character_count": 199,
+      "description": "智算中心、零碳园区等追求高比例绿电且要求供电稳定，需要10小时以上长时储能来平移风光出力波动，液流电池因其长时、安全、经济性成为更佳选择。",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_221",
+      "name": "离网微电网中“风光+液流电池”供电的经济性",
+      "classification": "factual",
+      "path": "factual/sku_221",
+      "source_chunk": "报告-纬景储能调研报告：液流电池为储能带来的机会_chunk_001",
+      "character_count": 180,
+      "description": "在偏远无电网区域，采用风光发电配液流电池储能的综合供电成本可低于1元/kWh，明显优于柴油发电（约1.5-2元/kWh），已在中石油青海井场等场景应用。",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_222",
+      "name": "国家层面液流电池及长时储能支持政策",
+      "classification": "factual",
+      "path": "factual/sku_222",
+      "source_chunk": "报告-纬景储能调研报告：液流电池为储能带来的机会_chunk_001",
+      "character_count": 473,
+      "description": "多项国家政策明确支持液流电池关键材料技术攻关和长时储能发展，包括《新型储能制造业高质量发展行动方案》等文件。",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_223",
+      "name": "地方层面液流电池及长时储能支持政策",
+      "classification": "factual",
+      "path": "factual/sku_223",
+      "source_chunk": "报告-纬景储能调研报告：液流电池为储能带来的机会_chunk_001",
+      "character_count": 1158,
+      "description": "多个省份及城市发布了推动液流电池产业发展的专项政策或涉及液流电池应用的指导文件，部分明确鼓励液流电池大规模应用与示范。",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_224",
+      "name": "上海浦东新区针对液流电池等新型储能项目的补贴政策",
+      "classification": "factual",
+      "path": "factual/sku_224",
+      "source_chunk": "报告-纬景储能调研报告：液流电池为储能带来的机会_chunk_001",
+      "character_count": 167,
+      "description": "浦东新区2025年节能低碳专项资金管理办法规定，对采用液流电池、钠电池等技术且装机≥500kW、放电时长≥2h的新型储能项目，按固定资产投资额给予不超过30%的一次性补贴，锂电池项目不在此列。",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_225",
+      "name": "纬景储能公司在锌铁液流电池领域的关键成就与行业地位",
+      "classification": "factual",
+      "path": "factual/sku_225",
+      "source_chunk": "报告-纬景储能调研报告：液流电池为储能带来的机会_chunk_001",
+      "character_count": 220,
+      "description": "纬景储能成立于2018年，专注锌铁液流电池，拥有全球首个吉瓦级液流电池工厂、国家能源局新型储能示范项目以及锌铁液流电池领域首个CNAS认证实验室，是国内液流电池领军企业之一。",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_226",
+      "name": "液流电池成本下降前景及实现光储平价的潜力",
+      "classification": "factual",
+      "path": "factual/sku_226",
+      "source_chunk": "报告-纬景储能调研报告：液流电池为储能带来的机会_chunk_001",
+      "character_count": 263,
+      "description": "美国能源部研究认为液流电池是唯一能将度电成本做到5美分/kWh的电化学储能；纬景储能预测未来几年可降至0.2元/kWh，从而与煤电标杆电价（约0.39元/kWh）持平，开启光储平价时代。",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_227",
+      "name": "锌铁液流电池锌枝晶技术挑战及其突破",
+      "classification": "factual",
+      "path": "factual/sku_227",
+      "source_chunk": "报告-纬景储能调研报告：液流电池为储能带来的机会_chunk_001",
+      "character_count": 139,
+      "description": "锌铁液流电池曾面临锌枝晶刺穿离子膜的技术难点，纬景储能通过电解液、添加剂、电极结构和涂层的独家创新设计解决了该问题，扫除了该路线产业化的关键障碍。",
+      "confidence": null
+    },
+    {
+      "sku_id": "skill_068",
+      "name": "lcos-calculation-for-zinc-iron-flow-battery",
+      "classification": "procedural",
+      "path": "procedural/skill_068",
+      "source_chunk": "报告-纬景储能调研报告：液流电池为储能带来的机会_chunk_001",
+      "character_count": 1511,
+      "description": "计算锌铁液流电池储能电站的平准化度电成本（LCOS），用于项目经济性评估和不同储能技术路线对比。",
+      "confidence": null
+    },
+    {
+      "sku_id": "skill_069",
+      "name": "flow-battery-application-suitability-assessment",
+      "classification": "procedural",
+      "path": "procedural/skill_069",
+      "source_chunk": "报告-纬景储能调研报告：液流电池为储能带来的机会_chunk_001",
+      "character_count": 1152,
+      "description": "系统评估锌铁液流电池储能是否适用于特定项目或场景，基于安全、长时储能、微电网等因素进行决策。",
+      "confidence": null
+    },
+    {
+      "sku_id": "skill_070",
+      "name": "cost-reduction-by-extending-duration-in-flow-battery",
+      "classification": "procedural",
+      "path": "procedural/skill_070",
+      "source_chunk": "报告-纬景储能调研报告：液流电池为储能带来的机会_chunk_001",
+      "character_count": 992,
+      "description": "利用液流电池功率与容量解耦特性，通过增加储罐容量延长储能时长，以摊薄功率设备成本，优化初始投资。",
+      "confidence": null
+    },
+    {
+      "sku_id": "relational-knowledge-base",
+      "name": "relational-knowledge-base",
+      "classification": "relational",
+      "path": "relational",
+      "source_chunk": "aggregated",
+      "character_count": 149448,
+      "description": "Domain label hierarchy and terminology glossary",
+      "confidence": null
     }
   ],
-  "factual_count": 205,
+  "factual_count": 219,
   "relational_count": 1,
-  "procedural_count": 67,
+  "procedural_count": 70,
   "meta_count": 1
 }

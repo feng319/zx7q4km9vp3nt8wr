@@ -1709,6 +1709,240 @@
         "报告-紫电捷控调研报告：交直流微电网怎么做？_chunk_001"
       ],
       "confidence": 0.8
+    },
+    {
+      "subject": "液流电池",
+      "predicate": "superset-of",
+      "object": "锌铁液流电池",
+      "source_chunks": [
+        "报告-纬景储能调研报告：液流电池为储能带来的机会_chunk_001"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "subject": "液流电池",
+      "predicate": "superset-of",
+      "object": "全钒液流电池",
+      "source_chunks": [
+        "报告-纬景储能调研报告：液流电池为储能带来的机会_chunk_001"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "subject": "液流电池",
+      "predicate": "superset-of",
+      "object": "铁铬液流电池",
+      "source_chunks": [
+        "报告-纬景储能调研报告：液流电池为储能带来的机会_chunk_001"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "subject": "液流电池",
+      "predicate": "superset-of",
+      "object": "锌溴液流电池",
+      "source_chunks": [
+        "报告-纬景储能调研报告：液流电池为储能带来的机会_chunk_001"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "subject": "液流电池",
+      "predicate": "superset-of",
+      "object": "全铁液流电池",
+      "source_chunks": [
+        "报告-纬景储能调研报告：液流电池为储能带来的机会_chunk_001"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "subject": "液流电池",
+      "predicate": "has-a",
+      "object": "电堆",
+      "source_chunks": [
+        "报告-纬景储能调研报告：液流电池为储能带来的机会_chunk_001"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "subject": "液流电池",
+      "predicate": "has-a",
+      "object": "双极板",
+      "source_chunks": [
+        "报告-纬景储能调研报告：液流电池为储能带来的机会_chunk_001"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "subject": "液流电池",
+      "predicate": "has-a",
+      "object": "离子交换膜",
+      "source_chunks": [
+        "报告-纬景储能调研报告：液流电池为储能带来的机会_chunk_001"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "subject": "液流电池",
+      "predicate": "has-a",
+      "object": "电解液",
+      "source_chunks": [
+        "报告-纬景储能调研报告：液流电池为储能带来的机会_chunk_001"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "subject": "液流电池",
+      "predicate": "has-a",
+      "object": "循环系统",
+      "source_chunks": [
+        "报告-纬景储能调研报告：液流电池为储能带来的机会_chunk_001"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "subject": "液流电池",
+      "predicate": "has-a",
+      "object": "电池管理系统",
+      "source_chunks": [
+        "报告-纬景储能调研报告：液流电池为储能带来的机会_chunk_001"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "subject": "液流电池",
+      "predicate": "has-a",
+      "object": "功率容量解耦",
+      "source_chunks": [
+        "报告-纬景储能调研报告：液流电池为储能带来的机会_chunk_001"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "subject": "液流电池",
+      "predicate": "enables",
+      "object": "长时储能",
+      "source_chunks": [
+        "报告-纬景储能调研报告：液流电池为储能带来的机会_chunk_001"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "subject": "本征安全",
+      "predicate": "related-to",
+      "object": "液流电池",
+      "source_chunks": [
+        "报告-纬景储能调研报告：液流电池为储能带来的机会_chunk_001"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "subject": "液流电池",
+      "predicate": "related-to",
+      "object": "离网型微电网",
+      "source_chunks": [
+        "报告-纬景储能调研报告：液流电池为储能带来的机会_chunk_001"
+      ],
+      "confidence": 0.8
+    },
+    {
+      "subject": "液流电池",
+      "predicate": "related-to",
+      "object": "零碳示范园区",
+      "source_chunks": [
+        "报告-纬景储能调研报告：液流电池为储能带来的机会_chunk_001"
+      ],
+      "confidence": 0.8
+    },
+    {
+      "subject": "液流电池",
+      "predicate": "enables",
+      "object": "光储平价",
+      "source_chunks": [
+        "报告-纬景储能调研报告：液流电池为储能带来的机会_chunk_001"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "subject": "液流电池",
+      "predicate": "enables",
+      "object": "风储平价",
+      "source_chunks": [
+        "报告-纬景储能调研报告：液流电池为储能带来的机会_chunk_001"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "subject": "液流电池",
+      "predicate": "enables",
+      "object": "源网荷储",
+      "source_chunks": [
+        "报告-纬景储能调研报告：液流电池为储能带来的机会_chunk_001"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "subject": "液流电池",
+      "predicate": "related-to",
+      "object": "微电网",
+      "source_chunks": [
+        "报告-纬景储能调研报告：液流电池为储能带来的机会_chunk_001"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "subject": "长时储能",
+      "predicate": "related-to",
+      "object": "离网型微电网",
+      "source_chunks": [
+        "报告-纬景储能调研报告：液流电池为储能带来的机会_chunk_001"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "subject": "长时储能",
+      "predicate": "related-to",
+      "object": "零碳示范园区",
+      "source_chunks": [
+        "报告-纬景储能调研报告：液流电池为储能带来的机会_chunk_001"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "subject": "智算中心",
+      "predicate": "requires",
+      "object": "长时储能",
+      "source_chunks": [
+        "报告-纬景储能调研报告：液流电池为储能带来的机会_chunk_001"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "subject": "功率容量解耦",
+      "predicate": "enables",
+      "object": "长时储能",
+      "source_chunks": [
+        "报告-纬景储能调研报告：液流电池为储能带来的机会_chunk_001"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "subject": "锌枝晶",
+      "predicate": "contradicts",
+      "object": "锌铁液流电池",
+      "source_chunks": [
+        "报告-纬景储能调研报告：液流电池为储能带来的机会_chunk_001"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "subject": "《新型储能制造业高质量发展行动方案》",
+      "predicate": "enables",
+      "object": "液流电池",
+      "source_chunks": [
+        "报告-纬景储能调研报告：液流电池为储能带来的机会_chunk_001"
+      ],
+      "confidence": 1.0
     }
   ]
 }
