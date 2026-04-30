@@ -1,0 +1,5 @@
+2026-04-30T15:19:24.732125Z [info     ] Starting spec chatbot          [skus2ontology.chatbot] max_rounds=5 phase2_only=False
+2026-04-30T15:19:24.736354Z [info     ] Built name_to_path lookup      [skus2ontology.chatbot] entries=958
+2026-04-30T15:19:24.738695Z [info     ] slug→path inline resolution    [skus2ontology.chatbot] matched=944 total_lines=971
+2026-04-30T15:19:24.738695Z [info     ] Loaded mapping.md (compressed) [skus2ontology.chatbot] compressed_chars=29995 original_chars=49322
+2026-04-30T15:19:24.739692Z [info     ] Loaded eureka.md               [skus2ontology.chatbot] chars=16728
