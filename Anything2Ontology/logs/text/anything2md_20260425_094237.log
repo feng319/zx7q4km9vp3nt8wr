@@ -1,0 +1,87 @@
+2026-04-25T01:42:37.725475Z [info     ] Starting Anything2Markdown pipeline [anything2markdown.cli]
+2026-04-25T01:42:37.726476Z [info     ] Input directory                [anything2markdown.cli] path='G:\\Program Files\\AI coding\\知识萃取\\新能源\\输入'
+2026-04-25T01:42:37.726476Z [info     ] Output directory               [anything2markdown.cli] path='G:\\Program Files\\AI coding\\知识萃取\\新能源\\输出'
+2026-04-25T01:42:38.812456Z [warning  ] Repomix not found. Install with: npm install -g repomix [anything2markdown.url_parsers.repomix_parser]
+2026-04-25T01:42:38.813452Z [info     ] Starting Anything2Markdown pipeline [anything2markdown.pipeline] input_dir='G:\\Program Files\\AI coding\\知识萃取\\新能源\\输入' output_dir='G:\\Program Files\\AI coding\\知识萃取\\新能源\\输出'
+2026-04-25T01:42:38.813955Z [info     ] Processing file                [anything2markdown.pipeline] file=报告-《关于优化集中式新能源发电企业市场报价的通知（试行）》深度解读与战略分析.docx
+2026-04-25T01:42:38.814963Z [info     ] MarkItDown parsing             [anything2markdown.parsers.markitdown_parser] file=报告-《关于优化集中式新能源发电企业市场报价的通知（试行）》深度解读与战略分析.docx
+2026-04-25T01:42:38.993165Z [info     ] MarkItDown success             [anything2markdown.parsers.markitdown_parser] chars=9034 file=报告-《关于优化集中式新能源发电企业市场报价的通知（试行）》深度解读与战略分析.docx output=报告-《关于优化集中式新能源发电企业市场报价的通知（试行）》深度解读与战略分析.md
+2026-04-25T01:42:38.993165Z [info     ] Processing file                [anything2markdown.pipeline] file=报告-三一硅能非洲调研报告：在非洲如何做矿山微电网？.docx
+2026-04-25T01:42:38.994179Z [info     ] MarkItDown parsing             [anything2markdown.parsers.markitdown_parser] file=报告-三一硅能非洲调研报告：在非洲如何做矿山微电网？.docx
+2026-04-25T01:42:39.137404Z [info     ] MarkItDown success             [anything2markdown.parsers.markitdown_parser] chars=9814 file=报告-三一硅能非洲调研报告：在非洲如何做矿山微电网？.docx output=报告-三一硅能非洲调研报告：在非洲如何做矿山微电网？.md
+2026-04-25T01:42:39.137404Z [info     ] Processing file                [anything2markdown.pipeline] file=报告-乌克兰新能源市场机会调研报告.docx
+2026-04-25T01:42:39.137404Z [info     ] MarkItDown parsing             [anything2markdown.parsers.markitdown_parser] file=报告-乌克兰新能源市场机会调研报告.docx
+2026-04-25T01:42:39.271174Z [info     ] MarkItDown success             [anything2markdown.parsers.markitdown_parser] chars=7068 file=报告-乌克兰新能源市场机会调研报告.docx output=报告-乌克兰新能源市场机会调研报告.md
+2026-04-25T01:42:39.271174Z [info     ] Processing file                [anything2markdown.pipeline] file=报告-兆瓦云调研报告：虚拟电厂的下一城在哪里？.docx
+2026-04-25T01:42:39.272222Z [info     ] MarkItDown parsing             [anything2markdown.parsers.markitdown_parser] file=报告-兆瓦云调研报告：虚拟电厂的下一城在哪里？.docx
+2026-04-25T01:42:39.339632Z [info     ] MarkItDown success             [anything2markdown.parsers.markitdown_parser] chars=7986 file=报告-兆瓦云调研报告：虚拟电厂的下一城在哪里？.docx output=报告-兆瓦云调研报告：虚拟电厂的下一城在哪里？.md
+2026-04-25T01:42:39.339632Z [info     ] Processing file                [anything2markdown.pipeline] file=报告-则鸣新能源调研报告：怎么样做好微电网？.docx
+2026-04-25T01:42:39.341028Z [info     ] MarkItDown parsing             [anything2markdown.parsers.markitdown_parser] file=报告-则鸣新能源调研报告：怎么样做好微电网？.docx
+2026-04-25T01:42:39.492174Z [info     ] MarkItDown success             [anything2markdown.parsers.markitdown_parser] chars=9150 file=报告-则鸣新能源调研报告：怎么样做好微电网？.docx output=报告-则鸣新能源调研报告：怎么样做好微电网？.md
+2026-04-25T01:42:39.492174Z [info     ] Processing file                [anything2markdown.pipeline] file=报告-协鑫能科调研报告：江苏最大虚拟电厂是怎么做成的？.docx
+2026-04-25T01:42:39.493677Z [info     ] MarkItDown parsing             [anything2markdown.parsers.markitdown_parser] file=报告-协鑫能科调研报告：江苏最大虚拟电厂是怎么做成的？.docx
+2026-04-25T01:42:39.634455Z [info     ] MarkItDown success             [anything2markdown.parsers.markitdown_parser] chars=8329 file=报告-协鑫能科调研报告：江苏最大虚拟电厂是怎么做成的？.docx output=报告-协鑫能科调研报告：江苏最大虚拟电厂是怎么做成的？.md
+2026-04-25T01:42:39.634455Z [info     ] Processing file                [anything2markdown.pipeline] file=报告-固德威一线调研报告：城市级虚拟电厂怎么做？.docx
+2026-04-25T01:42:39.635624Z [info     ] MarkItDown parsing             [anything2markdown.parsers.markitdown_parser] file=报告-固德威一线调研报告：城市级虚拟电厂怎么做？.docx
+2026-04-25T01:42:39.709276Z [info     ] MarkItDown success             [anything2markdown.parsers.markitdown_parser] chars=8616 file=报告-固德威一线调研报告：城市级虚拟电厂怎么做？.docx output=报告-固德威一线调研报告：城市级虚拟电厂怎么做？.md
+2026-04-25T01:42:39.709276Z [info     ] Processing file                [anything2markdown.pipeline] file=报告-固德威江西德安县调研报告：光储充一体化项目怎么做？.docx
+2026-04-25T01:42:39.709276Z [info     ] MarkItDown parsing             [anything2markdown.parsers.markitdown_parser] file=报告-固德威江西德安县调研报告：光储充一体化项目怎么做？.docx
+2026-04-25T01:42:39.840712Z [info     ] MarkItDown success             [anything2markdown.parsers.markitdown_parser] chars=7432 file=报告-固德威江西德安县调研报告：光储充一体化项目怎么做？.docx output=报告-固德威江西德安县调研报告：光储充一体化项目怎么做？.md
+2026-04-25T01:42:39.840712Z [info     ] Processing file                [anything2markdown.pipeline] file=报告-国海绿能一线调研报告：重卡换电站怎么做？.docx
+2026-04-25T01:42:39.840712Z [info     ] MarkItDown parsing             [anything2markdown.parsers.markitdown_parser] file=报告-国海绿能一线调研报告：重卡换电站怎么做？.docx
+2026-04-25T01:42:39.983993Z [info     ] MarkItDown success             [anything2markdown.parsers.markitdown_parser] chars=8885 file=报告-国海绿能一线调研报告：重卡换电站怎么做？.docx output=报告-国海绿能一线调研报告：重卡换电站怎么做？.md
+2026-04-25T01:42:39.983993Z [info     ] Processing file                [anything2markdown.pipeline] file=报告-奇峰聚能调研报告：飞轮储能怎么做？.docx
+2026-04-25T01:42:39.985403Z [info     ] MarkItDown parsing             [anything2markdown.parsers.markitdown_parser] file=报告-奇峰聚能调研报告：飞轮储能怎么做？.docx
+2026-04-25T01:42:40.057542Z [info     ] MarkItDown success             [anything2markdown.parsers.markitdown_parser] chars=9629 file=报告-奇峰聚能调研报告：飞轮储能怎么做？.docx output=报告-奇峰聚能调研报告：飞轮储能怎么做？.md
+2026-04-25T01:42:40.058541Z [info     ] Processing file                [anything2markdown.pipeline] file=报告-安悦节能调研报告：怎样做冷热电综合能源服务？.docx
+2026-04-25T01:42:40.058541Z [info     ] MarkItDown parsing             [anything2markdown.parsers.markitdown_parser] file=报告-安悦节能调研报告：怎样做冷热电综合能源服务？.docx
+2026-04-25T01:42:40.185510Z [info     ] MarkItDown success             [anything2markdown.parsers.markitdown_parser] chars=9438 file=报告-安悦节能调研报告：怎样做冷热电综合能源服务？.docx output=报告-安悦节能调研报告：怎样做冷热电综合能源服务？.md
+2026-04-25T01:42:40.185510Z [info     ] Processing file                [anything2markdown.pipeline] file=报告-广林汇智调研报告：在西北地区怎么做虚拟电厂？.docx
+2026-04-25T01:42:40.186509Z [info     ] MarkItDown parsing             [anything2markdown.parsers.markitdown_parser] file=报告-广林汇智调研报告：在西北地区怎么做虚拟电厂？.docx
+2026-04-25T01:42:40.311797Z [info     ] MarkItDown success             [anything2markdown.parsers.markitdown_parser] chars=8227 file=报告-广林汇智调研报告：在西北地区怎么做虚拟电厂？.docx output=报告-广林汇智调研报告：在西北地区怎么做虚拟电厂？.md
+2026-04-25T01:42:40.311797Z [info     ] Processing file                [anything2markdown.pipeline] file=报告-恒实盛景调研报告：怎样做空调虚拟电厂？.docx
+2026-04-25T01:42:40.311797Z [info     ] MarkItDown parsing             [anything2markdown.parsers.markitdown_parser] file=报告-恒实盛景调研报告：怎样做空调虚拟电厂？.docx
+2026-04-25T01:42:40.392421Z [info     ] MarkItDown success             [anything2markdown.parsers.markitdown_parser] chars=8020 file=报告-恒实盛景调研报告：怎样做空调虚拟电厂？.docx output=报告-恒实盛景调研报告：怎样做空调虚拟电厂？.md
+2026-04-25T01:42:40.393423Z [info     ] Processing file                [anything2markdown.pipeline] file=报告-正泰安能光伏星调研报告：在非洲如何做户用光伏？.docx
+2026-04-25T01:42:40.393423Z [info     ] MarkItDown parsing             [anything2markdown.parsers.markitdown_parser] file=报告-正泰安能光伏星调研报告：在非洲如何做户用光伏？.docx
+2026-04-25T01:42:40.543789Z [info     ] MarkItDown success             [anything2markdown.parsers.markitdown_parser] chars=9971 file=报告-正泰安能光伏星调研报告：在非洲如何做户用光伏？.docx output=报告-正泰安能光伏星调研报告：在非洲如何做户用光伏？.md
+2026-04-25T01:42:40.543789Z [info     ] Processing file                [anything2markdown.pipeline] file=报告-河钢集团一线调研报告：钢铁行业存在哪些双碳机会？.docx
+2026-04-25T01:42:40.544791Z [info     ] MarkItDown parsing             [anything2markdown.parsers.markitdown_parser] file=报告-河钢集团一线调研报告：钢铁行业存在哪些双碳机会？.docx
+2026-04-25T01:42:40.694593Z [info     ] MarkItDown success             [anything2markdown.parsers.markitdown_parser] chars=10948 file=报告-河钢集团一线调研报告：钢铁行业存在哪些双碳机会？.docx output=报告-河钢集团一线调研报告：钢铁行业存在哪些双碳机会？.md
+2026-04-25T01:42:40.694593Z [info     ] Processing file                [anything2markdown.pipeline] file=报告-深石集团调研报告：房地产企业怎样做新能源？.docx
+2026-04-25T01:42:40.695642Z [info     ] MarkItDown parsing             [anything2markdown.parsers.markitdown_parser] file=报告-深石集团调研报告：房地产企业怎样做新能源？.docx
+2026-04-25T01:42:40.788138Z [info     ] MarkItDown success             [anything2markdown.parsers.markitdown_parser] chars=8031 file=报告-深石集团调研报告：房地产企业怎样做新能源？.docx output=报告-深石集团调研报告：房地产企业怎样做新能源？.md
+2026-04-25T01:42:40.788138Z [info     ] Processing file                [anything2markdown.pipeline] file=报告-特来电零碳大楼调研报告：怎样做车网互动？.docx
+2026-04-25T01:42:40.788138Z [info     ] MarkItDown parsing             [anything2markdown.parsers.markitdown_parser] file=报告-特来电零碳大楼调研报告：怎样做车网互动？.docx
+2026-04-25T01:42:40.935484Z [info     ] MarkItDown success             [anything2markdown.parsers.markitdown_parser] chars=8656 file=报告-特来电零碳大楼调研报告：怎样做车网互动？.docx output=报告-特来电零碳大楼调研报告：怎样做车网互动？.md
+2026-04-25T01:42:40.936485Z [info     ] Processing file                [anything2markdown.pipeline] file=报告-电管家一线调研报告：微电网怎么赚钱？.docx
+2026-04-25T01:42:40.936485Z [info     ] MarkItDown parsing             [anything2markdown.parsers.markitdown_parser] file=报告-电管家一线调研报告：微电网怎么赚钱？.docx
+2026-04-25T01:42:41.119807Z [info     ] MarkItDown success             [anything2markdown.parsers.markitdown_parser] chars=9110 file=报告-电管家一线调研报告：微电网怎么赚钱？.docx output=报告-电管家一线调研报告：微电网怎么赚钱？.md
+2026-04-25T01:42:41.119807Z [info     ] Processing file                [anything2markdown.pipeline] file=报告-紫电捷控调研报告：交直流微电网怎么做？.docx
+2026-04-25T01:42:41.119807Z [info     ] MarkItDown parsing             [anything2markdown.parsers.markitdown_parser] file=报告-紫电捷控调研报告：交直流微电网怎么做？.docx
+2026-04-25T01:42:41.257495Z [info     ] MarkItDown success             [anything2markdown.parsers.markitdown_parser] chars=7752 file=报告-紫电捷控调研报告：交直流微电网怎么做？.docx output=报告-紫电捷控调研报告：交直流微电网怎么做？.md
+2026-04-25T01:42:41.257495Z [info     ] Processing file                [anything2markdown.pipeline] file=报告-纬景储能调研报告：液流电池为储能带来的机会.docx
+2026-04-25T01:42:41.258832Z [info     ] MarkItDown parsing             [anything2markdown.parsers.markitdown_parser] file=报告-纬景储能调研报告：液流电池为储能带来的机会.docx
+2026-04-25T01:42:41.394253Z [info     ] MarkItDown success             [anything2markdown.parsers.markitdown_parser] chars=10490 file=报告-纬景储能调研报告：液流电池为储能带来的机会.docx output=报告-纬景储能调研报告：液流电池为储能带来的机会.md
+2026-04-25T01:42:41.395255Z [info     ] Processing file                [anything2markdown.pipeline] file=报告-良信电器调研报告：怎样建设零碳工厂？.docx
+2026-04-25T01:42:41.395255Z [info     ] MarkItDown parsing             [anything2markdown.parsers.markitdown_parser] file=报告-良信电器调研报告：怎样建设零碳工厂？.docx
+2026-04-25T01:42:41.529860Z [info     ] MarkItDown success             [anything2markdown.parsers.markitdown_parser] chars=8267 file=报告-良信电器调研报告：怎样建设零碳工厂？.docx output=报告-良信电器调研报告：怎样建设零碳工厂？.md
+2026-04-25T01:42:41.530856Z [info     ] Processing file                [anything2markdown.pipeline] file=报告-苏州工业园区的虚拟电厂调研报告：怎样做区域级虚拟电厂.docx
+2026-04-25T01:42:41.530856Z [info     ] MarkItDown parsing             [anything2markdown.parsers.markitdown_parser] file=报告-苏州工业园区的虚拟电厂调研报告：怎样做区域级虚拟电厂.docx
+2026-04-25T01:42:41.770260Z [info     ] MarkItDown success             [anything2markdown.parsers.markitdown_parser] chars=8260 file=报告-苏州工业园区的虚拟电厂调研报告：怎样做区域级虚拟电厂.docx output=报告-苏州工业园区的虚拟电厂调研报告：怎样做区域级虚拟电厂.md
+2026-04-25T01:42:41.771265Z [info     ] Processing file                [anything2markdown.pipeline] file='报告-远景科技调研报告：如何把握储能 AIDC领域未来机会.docx'
+2026-04-25T01:42:41.771265Z [info     ] MarkItDown parsing             [anything2markdown.parsers.markitdown_parser] file='报告-远景科技调研报告：如何把握储能 AIDC领域未来机会.docx'
+2026-04-25T01:42:41.848485Z [info     ] MarkItDown success             [anything2markdown.parsers.markitdown_parser] chars=11181 file='报告-远景科技调研报告：如何把握储能 AIDC领域未来机会.docx' output='报告-远景科技调研报告：如何把握储能 AIDC领域未来机会.md'
+2026-04-25T01:42:41.848485Z [info     ] Processing file                [anything2markdown.pipeline] file=报告-金风科技调研报告：我国首个碳中和园区是怎样建成的？.docx
+2026-04-25T01:42:41.849502Z [info     ] MarkItDown parsing             [anything2markdown.parsers.markitdown_parser] file=报告-金风科技调研报告：我国首个碳中和园区是怎样建成的？.docx
+2026-04-25T01:42:41.973986Z [info     ] MarkItDown success             [anything2markdown.parsers.markitdown_parser] chars=7760 file=报告-金风科技调研报告：我国首个碳中和园区是怎样建成的？.docx output=报告-金风科技调研报告：我国首个碳中和园区是怎样建成的？.md
+2026-04-25T01:42:41.973986Z [info     ] Processing file                [anything2markdown.pipeline] file=报告-非洲调研报告（一）：中国新能源企业在肯尼亚有什么机会？.docx
+2026-04-25T01:42:41.975062Z [info     ] MarkItDown parsing             [anything2markdown.parsers.markitdown_parser] file=报告-非洲调研报告（一）：中国新能源企业在肯尼亚有什么机会？.docx
+2026-04-25T01:42:42.120483Z [info     ] MarkItDown success             [anything2markdown.parsers.markitdown_parser] chars=9702 file=报告-非洲调研报告（一）：中国新能源企业在肯尼亚有什么机会？.docx output=报告-非洲调研报告（一）：中国新能源企业在肯尼亚有什么机会？.md
+2026-04-25T01:42:42.121490Z [info     ] Processing file                [anything2markdown.pipeline] file=报告-非洲调研报告（二）：中国新能源企业在赞比亚有什么机会？.docx
+2026-04-25T01:42:42.121490Z [info     ] MarkItDown parsing             [anything2markdown.parsers.markitdown_parser] file=报告-非洲调研报告（二）：中国新能源企业在赞比亚有什么机会？.docx
+2026-04-25T01:42:42.198424Z [info     ] MarkItDown success             [anything2markdown.parsers.markitdown_parser] chars=9847 file=报告-非洲调研报告（二）：中国新能源企业在赞比亚有什么机会？.docx output=报告-非洲调研报告（二）：中国新能源企业在赞比亚有什么机会？.md
+2026-04-25T01:42:42.199526Z [info     ] File processing complete       [anything2markdown.pipeline] files_processed=26
+2026-04-25T01:42:42.199526Z [info     ] URL processing complete        [anything2markdown.pipeline] urls_processed=0
+2026-04-25T01:42:42.199526Z [info     ] Pipeline completed             [anything2markdown.pipeline] duration_seconds=3.39 failed=0 skipped=0 success=26 total_processed=26
+2026-04-25T01:42:42.201622Z [info     ] Saved parse results index      [anything2markdown.pipeline] path='G:\\Program Files\\AI coding\\知识萃取\\新能源\\输出\\parse_results_index.json'

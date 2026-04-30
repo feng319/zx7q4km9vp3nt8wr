@@ -1,0 +1,27 @@
+2026-04-24T10:19:43.659639Z [info     ] Starting extraction pipeline   [chunks2skus.pipeline] chunks_dir='G:\\Program Files\\AI coding\\知识萃取\\输出\\chunks' output_dir=output\skus
+2026-04-24T10:19:43.662058Z [info     ] Loaded chunks                  [chunks2skus.router] count=40
+2026-04-24T10:19:43.662058Z [info     ] Processing chunks              [chunks2skus.pipeline] total=40
+2026-04-24T10:19:43.663149Z [info     ] Processing chunk               [chunks2skus.pipeline] chunk_id=企业战略与财富增长创新蓝宝书_chunk_019 progress=21/40
+2026-04-24T10:19:43.663149Z [info     ] Processing chunk               [chunks2skus.router] chunk_id=企业战略与财富增长创新蓝宝书_chunk_019 title=第一组理管商博内容 tokens=5785
+2026-04-24T10:19:43.664153Z [info     ] Extracting factual knowledge   [chunks2skus.extractors.factual_extractor] chunk_id=企业战略与财富增长创新蓝宝书_chunk_019
+2026-04-24T10:19:45.242726Z [info     ] Model does not support response_format parameter, error detected [chunks2skus.utils.llm_client] error="Error code: 400 - {'error': {'code': 'InvalidParameter', 'message': 'The parameter `response_format.type` specified in the request are not valid: `json_object` is not supported by this model. Request " model=doubao-seed-2-0-pro-260215
+2026-04-24T10:19:45.249340Z [info     ] Model does not support JSON mode, caching and retrying without it [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215
+2026-04-24T10:19:54.087657Z [info     ] Successfully parsed JSON response [chunks2skus.utils.llm_client] keys=['facts']
+2026-04-24T10:19:54.088824Z [info     ] No factual knowledge found in chunk [chunks2skus.extractors.factual_extractor] chunk_id=企业战略与财富增长创新蓝宝书_chunk_019
+2026-04-24T10:19:54.089889Z [info     ] Extracting relational knowledge [chunks2skus.extractors.relational_extractor] chunk_id=企业战略与财富增长创新蓝宝书_chunk_019
+2026-04-24T10:21:19.487606Z [info     ] Successfully parsed JSON response [chunks2skus.utils.llm_client] keys=['label_tree', 'glossary', 'relationships']
+2026-04-24T10:21:19.492765Z [info     ] Relational extraction complete [chunks2skus.extractors.relational_extractor] chunk_id=企业战略与财富增长创新蓝宝书_chunk_019 labels=7 relationships=35 terms=18
+2026-04-24T10:21:19.494770Z [info     ] Extracting procedural knowledge [chunks2skus.extractors.procedural_extractor] chunk_id=企业战略与财富增长创新蓝宝书_chunk_019
+2026-04-24T10:21:23.133161Z [info     ] Successfully parsed JSON response [chunks2skus.utils.llm_client] keys=['procedures']
+2026-04-24T10:21:23.135163Z [info     ] No procedural knowledge found in chunk [chunks2skus.extractors.procedural_extractor] chunk_id=企业战略与财富增长创新蓝宝书_chunk_019
+2026-04-24T10:21:23.139658Z [info     ] Extracting meta knowledge      [chunks2skus.extractors.meta_extractor] chunk_id=企业战略与财富增长创新蓝宝书_chunk_019
+2026-04-24T10:22:03.821658Z [info     ] Successfully parsed JSON response [chunks2skus.utils.llm_client] keys=['mapping_content']
+2026-04-24T10:22:10.068003Z [info     ] Successfully parsed JSON response [chunks2skus.utils.llm_client] keys=['updated', 'eureka_content']
+2026-04-24T10:22:10.072205Z [info     ] Meta extraction complete       [chunks2skus.extractors.meta_extractor] chunk_id=企业战略与财富增长创新蓝宝书_chunk_019 eureka_chars=1137 mapping_chars=3649
+2026-04-24T10:22:10.080886Z [info     ] Chunk processed                [chunks2skus.pipeline] chunk_id=企业战略与财富增长创新蓝宝书_chunk_019 new_skus=2 total_skus=65
+2026-04-24T10:22:10.082388Z [info     ] Processing chunk               [chunks2skus.pipeline] chunk_id=企业战略与财富增长创新蓝宝书_chunk_020 progress=22/40
+2026-04-24T10:22:10.083409Z [info     ] Processing chunk               [chunks2skus.router] chunk_id=企业战略与财富增长创新蓝宝书_chunk_020 title=第一组理管商博表格 tokens=5785
+2026-04-24T10:22:10.096837Z [info     ] Extracting factual knowledge   [chunks2skus.extractors.factual_extractor] chunk_id=企业战略与财富增长创新蓝宝书_chunk_020
+2026-04-24T10:22:19.604780Z [info     ] Successfully parsed JSON response [chunks2skus.utils.llm_client] keys=['facts']
+2026-04-24T10:22:19.604780Z [info     ] No factual knowledge found in chunk [chunks2skus.extractors.factual_extractor] chunk_id=企业战略与财富增长创新蓝宝书_chunk_020
+2026-04-24T10:22:19.607302Z [info     ] Extracting relational knowledge [chunks2skus.extractors.relational_extractor] chunk_id=企业战略与财富增长创新蓝宝书_chunk_020

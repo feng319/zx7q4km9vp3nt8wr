@@ -1,0 +1,9 @@
+2026-04-29T09:11:49.226627Z [info     ] Starting spec chatbot          [skus2ontology.chatbot] max_rounds=5
+2026-04-29T09:11:49.227736Z [info     ] Loaded mapping.md titles       [skus2ontology.chatbot] original_chars=9125 title_chars=237
+2026-04-29T09:11:49.227736Z [info     ] Loaded eureka.md               [skus2ontology.chatbot] chars=1781
+2026-04-29T09:31:33.783813Z [info     ] Built SKU index summary        [skus2ontology.chatbot] chars=11242 sku_count=177
+2026-04-29T09:33:15.770836Z [info     ] Phase 2 anchor replacement complete [skus2ontology.chatbot] draft_chars=2762 final_chars=2851
+2026-04-29T09:33:15.777516Z [info     ] Remaining anchors              [skus2ontology.chatbot] count=10 sample=['【锚点：个人职业发展BSC迁移框架】', '【锚点：轻资产行业个体依赖问题解决方案】', '【锚点：新兴技术全周期监管适配原则】', '【锚点：区域专精特新扶持政策汇总】', '【锚点：产业赛道竞争格局分析方法】', '【锚点：科技项目投资风险防控模型】', '【锚点：产业创新生态三螺旋搭建原则】', '【锚点：同赛道标杆企业战略案例库】', '【锚点：科技项目投资风险防控模型】', '【锚点：通用目标拆解因果链平衡设计原则】']
+2026-04-29T09:33:15.779016Z [info     ] Backed up existing spec.md     [skus2ontology.chatbot] backup='G:\\Program Files\\AI coding\\知识萃取\\战略分析\\输出\\ontology\\spec.md.bak.20260429_173315'
+2026-04-29T09:33:15.782345Z [info     ] Saved spec.md                  [skus2ontology.chatbot] chars=2851 path='G:\\Program Files\\AI coding\\知识萃取\\战略分析\\输出\\ontology\\spec.md'
+2026-04-29T09:33:15.787711Z [info     ] Saved chat log                 [skus2ontology.pipeline] confirmed=False path='G:\\Program Files\\AI coding\\知识萃取\\战略分析\\输出\\ontology\\chat_log.json' rounds=5

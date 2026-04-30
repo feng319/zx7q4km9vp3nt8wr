@@ -1,0 +1,32 @@
+2026-04-27T12:03:01.730324Z [info     ] Starting Anything2Markdown pipeline [anything2markdown.cli]
+2026-04-27T12:03:01.759913Z [info     ] Input directory                [anything2markdown.cli] path='G:\\Program Files\\AI coding\\知识萃取\\商业模式\\输入'
+2026-04-27T12:03:01.770604Z [info     ] Output directory               [anything2markdown.cli] path='G:\\Program Files\\AI coding\\知识萃取\\商业模式\\输出'
+2026-04-27T12:03:01.775641Z [warning  ] Repomix not found. Install with: npm install -g repomix [anything2markdown.url_parsers.repomix_parser]
+2026-04-27T12:03:01.776637Z [info     ] Starting Anything2Markdown pipeline [anything2markdown.pipeline] input_dir='G:\\Program Files\\AI coding\\知识萃取\\商业模式\\输入' output_dir='G:\\Program Files\\AI coding\\知识萃取\\商业模式\\输出'
+2026-04-27T12:03:01.777633Z [info     ] Processing items in parallel   [anything2markdown.pipeline] count=5 max_workers=8 task_type=api
+2026-04-27T12:03:01.778631Z [info     ] Processing file                [anything2markdown.pipeline] file=1.业务不变，营收秒变（X50）的商业模式_笔记.pdf
+2026-04-27T12:03:01.779896Z [info     ] Processing file                [anything2markdown.pipeline] file='2.ODM OEM，超过耐K、A迪净利的商业模式_笔记.pdf'
+2026-04-27T12:03:01.780893Z [info     ] Processing file                [anything2markdown.pipeline] file=3.费用归边，流量占股的商业模式_笔记.pdf
+2026-04-27T12:03:01.780893Z [info     ] MarkItDown parsing             [anything2markdown.parsers.markitdown_parser] file=1.业务不变，营收秒变（X50）的商业模式_笔记.pdf
+2026-04-27T12:03:01.781894Z [info     ] Processing file                [anything2markdown.pipeline] file=4.上下通吃，打通经销商合伙人激励的模式.pdf
+2026-04-27T12:03:01.782890Z [info     ] MarkItDown parsing             [anything2markdown.parsers.markitdown_parser] file='2.ODM OEM，超过耐K、A迪净利的商业模式_笔记.pdf'
+2026-04-27T12:03:01.782890Z [info     ] MarkItDown parsing             [anything2markdown.parsers.markitdown_parser] file=3.费用归边，流量占股的商业模式_笔记.pdf
+2026-04-27T12:03:01.782890Z [info     ] Processing file                [anything2markdown.pipeline] file=5.不做主机厂，专注整合商的模式_笔记.pdf
+2026-04-27T12:03:01.784393Z [info     ] MarkItDown parsing             [anything2markdown.parsers.markitdown_parser] file=4.上下通吃，打通经销商合伙人激励的模式.pdf
+2026-04-27T12:03:01.786579Z [info     ] MarkItDown parsing             [anything2markdown.parsers.markitdown_parser] file=5.不做主机厂，专注整合商的模式_笔记.pdf
+2026-04-27T12:03:02.709208Z [info     ] MarkItDown success             [anything2markdown.parsers.markitdown_parser] chars=1855 file='2.ODM OEM，超过耐K、A迪净利的商业模式_笔记.pdf' output='2.ODM OEM，超过耐K、A迪净利的商业模式_笔记.md'
+2026-04-27T12:03:02.877343Z [info     ] MarkItDown success             [anything2markdown.parsers.markitdown_parser] chars=1508 file=1.业务不变，营收秒变（X50）的商业模式_笔记.pdf output=1.业务不变，营收秒变（X50）的商业模式_笔记.md
+2026-04-27T12:03:02.903353Z [info     ] MarkItDown success             [anything2markdown.parsers.markitdown_parser] chars=307 file=3.费用归边，流量占股的商业模式_笔记.pdf output=3.费用归边，流量占股的商业模式_笔记.md
+2026-04-27T12:03:02.903353Z [info     ] MarkItDown success             [anything2markdown.parsers.markitdown_parser] chars=2544 file=5.不做主机厂，专注整合商的模式_笔记.pdf output=5.不做主机厂，专注整合商的模式_笔记.md
+2026-04-27T12:03:02.905346Z [info     ] MarkItDown success             [anything2markdown.parsers.markitdown_parser] chars=1211 file=4.上下通吃，打通经销商合伙人激励的模式.pdf output=4.上下通吃，打通经销商合伙人激励的模式.md
+2026-04-27T12:03:02.906343Z [info     ] Low valid chars for short PDF, fallback to OCR [anything2markdown.router] threshold=500 valid_chars=284
+2026-04-27T12:03:02.908843Z [info     ] Falling back to PaddleOCR-VL   [anything2markdown.pipeline] file=3.费用归边，流量占股的商业模式_笔记.pdf
+2026-04-27T12:03:04.010252Z [info     ] PaddleOCR-VL parsing           [anything2markdown.parsers.paddleocr_vl_parser] file=3.费用归边，流量占股的商业模式_笔记.pdf
+2026-04-27T12:03:04.012248Z [info     ] PaddleOCR-VL starting OCR      [anything2markdown.parsers.paddleocr_vl_parser] dpi=150 file=3.费用归边，流量占股的商业模式_笔记.pdf model=PaddlePaddle/PaddleOCR-VL-1.5 pages=1 start_page=1
+2026-04-27T12:03:04.950804Z [warning  ] PaddleOCR-VL: API call failed  [anything2markdown.parsers.paddleocr_vl_parser] attempt=1 error="Error code: 404 - {'error': {'code': 'InvalidEndpointOrModel.NotFound', 'message': 'The model or endpoint PaddlePaddle/PaddleOCR-VL-1.5 does not exist or you do not have access to it. Request id: 02177729138500186475d51b405451fc484fdd1a9abe503462f5e', 'param': '', 'type': 'Not Found'}}" page=1
+2026-04-27T12:03:05.013452Z [warning  ] PaddleOCR-VL: API call failed  [anything2markdown.parsers.paddleocr_vl_parser] attempt=2 error="Error code: 404 - {'error': {'code': 'InvalidEndpointOrModel.NotFound', 'message': 'The model or endpoint PaddlePaddle/PaddleOCR-VL-1.5 does not exist or you do not have access to it. Request id: 02177729138519186475d51b405451fc484fdd1a9abe50311dba0', 'param': '', 'type': 'Not Found'}}" page=1
+2026-04-27T12:03:05.017475Z [info     ] PaddleOCR-VL complete          [anything2markdown.parsers.paddleocr_vl_parser] chars=27 duration=2.1s file=3.费用归边，流量占股的商业模式_笔记.pdf pages=1 pages_failed=1
+2026-04-27T12:03:05.018978Z [info     ] File processing complete       [anything2markdown.pipeline] files_processed=5
+2026-04-27T12:03:05.019989Z [info     ] URL processing complete        [anything2markdown.pipeline] urls_processed=0
+2026-04-27T12:03:05.019989Z [info     ] Pipeline completed             [anything2markdown.pipeline] duration_seconds=3.24 failed=0 skipped=0 success=5 total_processed=5
+2026-04-27T12:03:05.021985Z [info     ] Saved parse results index      [anything2markdown.pipeline] path='G:\\Program Files\\AI coding\\知识萃取\\商业模式\\输出\\parse_results_index.json'

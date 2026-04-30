@@ -1,0 +1,12 @@
+{"skus_dir": "output\\skus", "ontology_dir": "G:\\Program Files\\AI coding\\\u77e5\u8bc6\u8403\u53d6\\\u65b0\u80fd\u6e90\\\u8f93\u51fa\\ontology", "skip_chatbot": true, "event": "Starting ontology pipeline", "logger": "skus2ontology.pipeline", "level": "info", "timestamp": "2026-04-28T15:43:17.848522Z"}
+{"skus_dir": "C:\\Users\\56839\\.claude\\skills\\Anything2Ontology\\output\\skus", "ontology_dir": "G:\\Program Files\\AI coding\\\u77e5\u8bc6\u8403\u53d6\\\u65b0\u80fd\u6e90\\\u8f93\u51fa\\ontology", "event": "Starting ontology assembly", "logger": "skus2ontology.assembler", "level": "info", "timestamp": "2026-04-28T15:43:17.849522Z"}
+{"subdir": "factual", "files": 442, "event": "Copied directory", "logger": "skus2ontology.assembler", "level": "info", "timestamp": "2026-04-28T15:43:18.530531Z"}
+{"subdir": "procedural", "files": 202, "event": "Copied directory", "logger": "skus2ontology.assembler", "level": "info", "timestamp": "2026-04-28T15:43:18.825724Z"}
+{"subdir": "relational", "files": 4, "event": "Copied directory", "logger": "skus2ontology.assembler", "level": "info", "timestamp": "2026-04-28T15:43:18.832214Z"}
+{"paths_rewritten": 324, "event": "Copied and rewrote skus_index.json", "logger": "skus2ontology.assembler", "level": "info", "timestamp": "2026-04-28T15:43:18.841222Z"}
+{"event": "Copied eureka.md to ontology root", "logger": "skus2ontology.assembler", "level": "info", "timestamp": "2026-04-28T15:43:18.843217Z"}
+{"paths_rewritten": 0, "event": "Rewrote mapping.md", "logger": "skus2ontology.assembler", "level": "info", "timestamp": "2026-04-28T15:43:18.845209Z"}
+{"total_files": 651, "factual": 221, "procedural": 101, "paths_rewritten": 324, "event": "Assembly complete", "logger": "skus2ontology.assembler", "level": "info", "timestamp": "2026-04-28T15:43:18.847727Z"}
+{"path": "G:\\Program Files\\AI coding\\\u77e5\u8bc6\u8403\u53d6\\\u65b0\u80fd\u6e90\\\u8f93\u51fa\\ontology\\README.md", "event": "Generated README.md", "logger": "skus2ontology.readme_generator", "level": "info", "timestamp": "2026-04-28T15:43:18.849725Z"}
+{"path": "G:\\Program Files\\AI coding\\\u77e5\u8bc6\u8403\u53d6\\\u65b0\u80fd\u6e90\\\u8f93\u51fa\\ontology\\ontology_manifest.json", "event": "Saved ontology manifest", "logger": "skus2ontology.pipeline", "level": "info", "timestamp": "2026-04-28T15:43:18.851718Z"}
+{"total_files": 651, "has_spec": false, "has_readme": true, "duration_seconds": "1.0", "event": "Ontology pipeline complete", "logger": "skus2ontology.pipeline", "level": "info", "timestamp": "2026-04-28T15:43:18.851718Z"}

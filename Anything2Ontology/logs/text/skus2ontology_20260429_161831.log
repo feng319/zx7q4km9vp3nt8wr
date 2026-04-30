@@ -1,0 +1,20 @@
+2026-04-29T08:18:31.600861Z [info     ] Starting ontology pipeline     [skus2ontology.pipeline] ontology_dir='G:\\Program Files\\AI coding\\知识萃取\\战略分析\\输出\\ontology' skip_chatbot=False skus_dir='G:\\Program Files\\AI coding\\知识萃取\\战略分析\\输出\\skus'
+2026-04-29T08:18:31.602873Z [info     ] Starting ontology assembly     [skus2ontology.assembler] ontology_dir='G:\\Program Files\\AI coding\\知识萃取\\战略分析\\输出\\ontology' skus_dir='G:\\Program Files\\AI coding\\知识萃取\\战略分析\\输出\\skus'
+2026-04-29T08:18:32.273651Z [info     ] Copied directory               [skus2ontology.assembler] files=258 subdir=factual
+2026-04-29T08:18:32.435148Z [info     ] Copied directory               [skus2ontology.assembler] files=92 subdir=procedural
+2026-04-29T08:18:32.450664Z [info     ] Copied directory               [skus2ontology.assembler] files=4 subdir=relational
+2026-04-29T08:18:32.471124Z [info     ] Copied and rewrote skus_index.json [skus2ontology.assembler] paths_rewritten=175
+2026-04-29T08:18:32.486980Z [info     ] Copied eureka.md to ontology root [skus2ontology.assembler]
+2026-04-29T08:18:32.490028Z [info     ] Rewrote mapping.md             [skus2ontology.assembler] paths_rewritten=0
+2026-04-29T08:18:32.490028Z [info     ] Assembly complete              [skus2ontology.assembler] factual=129 paths_rewritten=175 procedural=46 total_files=357
+2026-04-29T08:18:32.492266Z [info     ] Starting spec chatbot          [skus2ontology.chatbot] max_rounds=5
+2026-04-29T08:18:32.493768Z [info     ] Loaded mapping.md titles       [skus2ontology.chatbot] original_chars=9125 title_chars=237
+2026-04-29T08:18:32.493768Z [info     ] Loaded eureka.md               [skus2ontology.chatbot] chars=1781
+2026-04-29T08:32:05.965669Z [info     ] Built SKU index summary        [skus2ontology.chatbot] chars=11224 sku_count=177
+2026-04-29T08:33:49.580628Z [info     ] Phase 2 anchor replacement complete [skus2ontology.chatbot] draft_chars=2194 final_chars=2411
+2026-04-29T08:33:49.586866Z [info     ] Remaining anchors              [skus2ontology.chatbot] count=5 sample=['【锚点：新兴技术全周期监管适配原则】', '【锚点：科技投资与风险防控】', '【锚点：通用战略的二元结构定义原则】', '【锚点：产业创新生态的三螺旋搭建原则】', '【锚点：轻资产行业个体依赖问题的跨领域解决方案】']
+2026-04-29T08:33:49.588870Z [info     ] Saved spec.md                  [skus2ontology.chatbot] chars=2411 path='G:\\Program Files\\AI coding\\知识萃取\\战略分析\\输出\\ontology\\spec.md'
+2026-04-29T08:33:49.595742Z [info     ] Saved chat log                 [skus2ontology.pipeline] confirmed=True path='G:\\Program Files\\AI coding\\知识萃取\\战略分析\\输出\\ontology\\chat_log.json' rounds=4
+2026-04-29T08:33:49.597056Z [info     ] Generated README.md            [skus2ontology.readme_generator] path='G:\\Program Files\\AI coding\\知识萃取\\战略分析\\输出\\ontology\\README.md'
+2026-04-29T08:33:49.612583Z [info     ] Saved ontology manifest        [skus2ontology.pipeline] path='G:\\Program Files\\AI coding\\知识萃取\\战略分析\\输出\\ontology\\ontology_manifest.json'
+2026-04-29T08:33:49.615600Z [info     ] Ontology pipeline complete     [skus2ontology.pipeline] duration_seconds=918.0 has_readme=True has_spec=True total_files=357

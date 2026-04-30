@@ -1,0 +1,10 @@
+2026-04-29T13:46:06.846749Z [info     ] Starting spec chatbot          [skus2ontology.chatbot] max_rounds=5
+2026-04-29T13:46:06.847745Z [info     ] slug→path inline resolution    [skus2ontology.chatbot] matched=175 total_lines=198
+2026-04-29T13:46:06.848742Z [info     ] Loaded mapping.md (compressed) [skus2ontology.chatbot] compressed_chars=9948 original_chars=9125
+2026-04-29T13:46:06.848742Z [info     ] Loaded eureka.md               [skus2ontology.chatbot] chars=1781
+2026-04-29T13:48:23.538836Z [info     ] Built SKU index summary        [skus2ontology.chatbot] chars=11242 sku_count=177
+2026-04-29T13:49:28.062333Z [info     ] Phase 2 anchor replacement complete [skus2ontology.chatbot] draft_chars=1918 final_chars=1899
+2026-04-29T13:49:28.062333Z [info     ] Remaining anchors              [skus2ontology.chatbot] count=2 sample=['【锚点：全行业科创企业经营对标数据库】', '【锚点：全国各省市科创/专精特新政策数据库】']
+2026-04-29T13:49:28.064468Z [info     ] Backed up existing spec.md     [skus2ontology.chatbot] backup='G:\\Program Files\\AI coding\\知识萃取\\战略分析\\输出\\ontology\\spec.md.bak.20260429_214928'
+2026-04-29T13:49:28.064468Z [info     ] Saved spec.md                  [skus2ontology.chatbot] chars=1899 path='G:\\Program Files\\AI coding\\知识萃取\\战略分析\\输出\\ontology\\spec.md'
+2026-04-29T13:49:28.066873Z [info     ] Saved chat log                 [skus2ontology.pipeline] confirmed=True path='G:\\Program Files\\AI coding\\知识萃取\\战略分析\\输出\\ontology\\chat_log.json' rounds=2

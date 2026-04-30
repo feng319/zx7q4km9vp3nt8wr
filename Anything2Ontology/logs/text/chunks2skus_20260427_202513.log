@@ -1,0 +1,222 @@
+2026-04-27T12:25:13.106621Z [info     ] Force reset: clearing existing index for full re-extraction [chunks2skus.pipeline]
+2026-04-27T12:25:13.106621Z [info     ] Starting extraction pipeline   [chunks2skus.pipeline] chunks_dir='G:\\Program Files\\AI coding\\知识萃取\\商业模式\\输出\\chunks' force_reset=True output_dir=output\skus
+2026-04-27T12:25:13.111604Z [info     ] Deleted index file for force reset [chunks2skus.pipeline]
+2026-04-27T12:25:13.125593Z [info     ] Deleted state file for force reset [chunks2skus.pipeline] path=output\skus\relational\label_tree.json
+2026-04-27T12:25:13.142065Z [info     ] Deleted state file for force reset [chunks2skus.pipeline] path=output\skus\relational\glossary.json
+2026-04-27T12:25:13.154543Z [info     ] Deleted state file for force reset [chunks2skus.pipeline] path=output\skus\relational\relationships.json
+2026-04-27T12:25:13.156542Z [info     ] Deleted state file for force reset [chunks2skus.pipeline] path=output\skus\meta\mapping.md
+2026-04-27T12:25:13.156542Z [info     ] Deleted state file for force reset [chunks2skus.pipeline] path=output\skus\meta\eureka.md
+2026-04-27T12:25:13.158535Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_001
+2026-04-27T12:25:13.159533Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_002
+2026-04-27T12:25:13.161526Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_003
+2026-04-27T12:25:13.165045Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_004
+2026-04-27T12:25:13.167040Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_005
+2026-04-27T12:25:13.168037Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_006
+2026-04-27T12:25:13.169033Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_007
+2026-04-27T12:25:13.171027Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_008
+2026-04-27T12:25:13.172024Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_009
+2026-04-27T12:25:13.173021Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_010
+2026-04-27T12:25:13.174520Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_011
+2026-04-27T12:25:13.176517Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_012
+2026-04-27T12:25:13.177513Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_013
+2026-04-27T12:25:13.181010Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_014
+2026-04-27T12:25:13.182006Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_015
+2026-04-27T12:25:13.183999Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_016
+2026-04-27T12:25:13.185501Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_017
+2026-04-27T12:25:13.186583Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_018
+2026-04-27T12:25:13.188283Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_019
+2026-04-27T12:25:13.189301Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_020
+2026-04-27T12:25:13.191319Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_021
+2026-04-27T12:25:13.192316Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_022
+2026-04-27T12:25:13.195827Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_023
+2026-04-27T12:25:13.198196Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_024
+2026-04-27T12:25:13.200351Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_025
+2026-04-27T12:25:13.202345Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\procedural\skill_001
+2026-04-27T12:25:13.203849Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\procedural\skill_002
+2026-04-27T12:25:13.205906Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\procedural\skill_003
+2026-04-27T12:25:13.206949Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\procedural\skill_004
+2026-04-27T12:25:13.209369Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\procedural\skill_005
+2026-04-27T12:25:13.211362Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\procedural\skill_006
+2026-04-27T12:25:13.213862Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\procedural\skill_007
+2026-04-27T12:25:13.215904Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\procedural\skill_008
+2026-04-27T12:25:13.217900Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\procedural\skill_009
+2026-04-27T12:25:13.219894Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\procedural\skill_010
+2026-04-27T12:25:13.221887Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\procedural\skill_011
+2026-04-27T12:25:13.223881Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\procedural\skill_012
+2026-04-27T12:25:13.227380Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\procedural\skill_013
+2026-04-27T12:25:13.228377Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\procedural\skill_014
+2026-04-27T12:25:13.230825Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\procedural\skill_015
+2026-04-27T12:25:13.233818Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\procedural\skill_016
+2026-04-27T12:25:13.234832Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\procedural\skill_017
+2026-04-27T12:25:13.236828Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\procedural\skill_018
+2026-04-27T12:25:13.241067Z [info     ] Loaded chunks                  [chunks2skus.router] count=5
+2026-04-27T12:25:13.242062Z [info     ] Processing chunks              [chunks2skus.pipeline] total=5
+2026-04-27T12:25:13.242062Z [info     ] Submitting chunk for Factual/Procedural [chunks2skus.pipeline] chunk_id=1.业务不变，营收秒变（X50）的商业模式_笔记_chunk_001
+2026-04-27T12:25:13.243809Z [info     ] Submitting chunk for Factual/Procedural [chunks2skus.pipeline] chunk_id='2.ODM OEM，超过耐K、A迪净利的商业模式_笔记_chunk_001'
+2026-04-27T12:25:13.243809Z [info     ] Extracting factual knowledge   [chunks2skus.extractors.factual_extractor] chunk_id=1.业务不变，营收秒变（X50）的商业模式_笔记_chunk_001
+2026-04-27T12:25:13.244853Z [info     ] [MONITOR] call_llm_json starting [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215
+2026-04-27T12:25:13.244853Z [info     ] Submitting chunk for Factual/Procedural [chunks2skus.pipeline] chunk_id=3.费用归边，流量占股的商业模式_笔记_chunk_001
+2026-04-27T12:25:13.244853Z [info     ] Extracting factual knowledge   [chunks2skus.extractors.factual_extractor] chunk_id='2.ODM OEM，超过耐K、A迪净利的商业模式_笔记_chunk_001'
+2026-04-27T12:25:13.244853Z [info     ] [MONITOR] Creating thread-local OpenAI client [chunks2skus.utils.llm_client] base_url=https://ark.cn-beijing.volces.com/api/v3 thread=ThreadPoolExecutor-0_0
+2026-04-27T12:25:13.246491Z [info     ] Submitting chunk for Factual/Procedural [chunks2skus.pipeline] chunk_id=4.上下通吃，打通经销商合伙人激励的模式_chunk_001
+2026-04-27T12:25:13.246491Z [info     ] [MONITOR] call_llm_json starting [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215
+2026-04-27T12:25:13.246491Z [info     ] Extracting factual knowledge   [chunks2skus.extractors.factual_extractor] chunk_id=3.费用归边，流量占股的商业模式_笔记_chunk_001
+2026-04-27T12:25:13.249020Z [info     ] [MONITOR] Creating thread-local OpenAI client [chunks2skus.utils.llm_client] base_url=https://ark.cn-beijing.volces.com/api/v3 thread=ThreadPoolExecutor-0_1
+2026-04-27T12:25:13.249020Z [info     ] Submitting chunk for Factual/Procedural [chunks2skus.pipeline] chunk_id=5.不做主机厂，专注整合商的模式_笔记_chunk_001
+2026-04-27T12:25:13.249020Z [info     ] [MONITOR] call_llm_json starting [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215
+2026-04-27T12:25:13.249020Z [info     ] Extracting factual knowledge   [chunks2skus.extractors.factual_extractor] chunk_id=4.上下通吃，打通经销商合伙人激励的模式_chunk_001
+2026-04-27T12:25:13.251152Z [info     ] [MONITOR] Creating thread-local OpenAI client [chunks2skus.utils.llm_client] base_url=https://ark.cn-beijing.volces.com/api/v3 thread=ThreadPoolExecutor-0_2
+2026-04-27T12:25:13.251152Z [info     ] [MONITOR] call_llm_json starting [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215
+2026-04-27T12:25:13.252150Z [info     ] [MONITOR] Creating thread-local OpenAI client [chunks2skus.utils.llm_client] base_url=https://ark.cn-beijing.volces.com/api/v3 thread=ThreadPoolExecutor-0_3
+2026-04-27T12:25:14.876590Z [info     ] [MONITOR] Starting LLM call    [chunks2skus.utils.llm_client] attempt=0 max_tokens=64000 model=doubao-seed-2-0-pro-260215 prompt_length=1473 temperature=0.3
+2026-04-27T12:25:14.885084Z [info     ] [MONITOR] Starting LLM call    [chunks2skus.utils.llm_client] attempt=0 max_tokens=64000 model=doubao-seed-2-0-pro-260215 prompt_length=2655 temperature=0.3
+2026-04-27T12:25:14.888077Z [info     ] [MONITOR] Starting LLM call    [chunks2skus.utils.llm_client] attempt=0 max_tokens=64000 model=doubao-seed-2-0-pro-260215 prompt_length=2952 temperature=0.3
+2026-04-27T12:25:14.906055Z [info     ] [MONITOR] Starting LLM call    [chunks2skus.utils.llm_client] attempt=0 max_tokens=64000 model=doubao-seed-2-0-pro-260215 prompt_length=3299 temperature=0.3
+2026-04-27T12:25:18.815122Z [info     ] [MONITOR] LLM call SUCCESS     [chunks2skus.utils.llm_client] attempt=0 finish_reason=stop model=doubao-seed-2-0-pro-260215 response_length=13
+2026-04-27T12:25:18.816121Z [info     ] [MONITOR] JSON parse SUCCESS   [chunks2skus.utils.llm_client] keys=['facts']
+2026-04-27T12:25:18.819256Z [info     ] No factual knowledge found in chunk [chunks2skus.extractors.factual_extractor] chunk_id=3.费用归边，流量占股的商业模式_笔记_chunk_001
+2026-04-27T12:25:18.820252Z [info     ] Extracting procedural knowledge [chunks2skus.extractors.procedural_extractor] chunk_id=3.费用归边，流量占股的商业模式_笔记_chunk_001
+2026-04-27T12:25:18.822246Z [info     ] [MONITOR] call_llm_json starting [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215
+2026-04-27T12:25:18.822246Z [info     ] [MONITOR] Starting LLM call    [chunks2skus.utils.llm_client] attempt=0 max_tokens=64000 model=doubao-seed-2-0-pro-260215 prompt_length=834 temperature=0.3
+2026-04-27T12:25:21.777326Z [info     ] [MONITOR] LLM call SUCCESS     [chunks2skus.utils.llm_client] attempt=0 finish_reason=stop model=doubao-seed-2-0-pro-260215 response_length=18
+2026-04-27T12:25:21.778331Z [info     ] [MONITOR] JSON parse SUCCESS   [chunks2skus.utils.llm_client] keys=['procedures']
+2026-04-27T12:25:21.784194Z [info     ] No procedural knowledge found in chunk [chunks2skus.extractors.procedural_extractor] chunk_id=3.费用归边，流量占股的商业模式_笔记_chunk_001
+2026-04-27T12:25:21.784194Z [info     ] Extracting relational knowledge [chunks2skus.extractors.relational_extractor] chunk_id=3.费用归边，流量占股的商业模式_笔记_chunk_001
+2026-04-27T12:25:21.785202Z [info     ] Extracting factual knowledge   [chunks2skus.extractors.factual_extractor] chunk_id=5.不做主机厂，专注整合商的模式_笔记_chunk_001
+2026-04-27T12:25:21.785202Z [info     ] Relational context size        [chunks2skus.extractors.relational_extractor] alias_map_chars=5 chunk_id=3.费用归边，流量占股的商业模式_笔记_chunk_001 glossary_count=0 label_nodes_count=0 label_tree_chars=0 relevant_relations_chars=9 term_list_chars=0
+2026-04-27T12:25:21.785202Z [info     ] [MONITOR] call_llm_json starting [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215
+2026-04-27T12:25:21.786281Z [info     ] [MONITOR] call_llm_json starting [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215
+2026-04-27T12:25:21.786281Z [info     ] [MONITOR] Starting LLM call    [chunks2skus.utils.llm_client] attempt=0 max_tokens=64000 model=doubao-seed-2-0-pro-260215 prompt_length=3988 temperature=0.3
+2026-04-27T12:25:21.786281Z [info     ] [MONITOR] Creating thread-local OpenAI client [chunks2skus.utils.llm_client] base_url=https://ark.cn-beijing.volces.com/api/v3 thread='Thread-1 (relational_consumer)'
+2026-04-27T12:25:22.786084Z [info     ] [MONITOR] Starting LLM call    [chunks2skus.utils.llm_client] attempt=0 max_tokens=128000 model=doubao-seed-2-0-pro-260215 prompt_length=2012 temperature=0.3
+2026-04-27T12:25:27.158895Z [info     ] [MONITOR] LLM call SUCCESS     [chunks2skus.utils.llm_client] attempt=0 finish_reason=stop model=doubao-seed-2-0-pro-260215 response_length=97
+2026-04-27T12:25:27.158895Z [info     ] [MONITOR] JSON parse SUCCESS   [chunks2skus.utils.llm_client] keys=['new_labels', 'new_glossary', 'updated_glossary', 'new_relationships']
+2026-04-27T12:25:27.161963Z [info     ] Added new labels               [chunks2skus.extractors.relational_extractor] chunk_id=3.费用归边，流量占股的商业模式_笔记_chunk_001 count=0
+2026-04-27T12:25:27.162962Z [info     ] Merged new glossary entries    [chunks2skus.extractors.relational_extractor] chunk_id=3.费用归边，流量占股的商业模式_笔记_chunk_001 count=0
+2026-04-27T12:25:27.162962Z [info     ] Updated existing glossary entries [chunks2skus.extractors.relational_extractor] chunk_id=3.费用归边，流量占股的商业模式_笔记_chunk_001 fallback_count=0 total_in_response=0 updated_count=0
+2026-04-27T12:25:27.164465Z [info     ] Merged new relationships       [chunks2skus.extractors.relational_extractor] chunk_id=3.费用归边，流量占股的商业模式_笔记_chunk_001 count=0
+2026-04-27T12:25:27.168479Z [info     ] Relational extraction complete [chunks2skus.extractors.relational_extractor] chunk_id=3.费用归边，流量占股的商业模式_笔记_chunk_001 labels=0 relationships=0 terms=0
+2026-04-27T12:25:27.170473Z [info     ] Chunk processed                [chunks2skus.pipeline] chunk_id=3.费用归边，流量占股的商业模式_笔记_chunk_001 new_skus=1 total_skus=1
+2026-04-27T12:26:32.577293Z [info     ] [MONITOR] LLM call SUCCESS     [chunks2skus.utils.llm_client] attempt=0 finish_reason=stop model=doubao-seed-2-0-pro-260215 response_length=2625
+2026-04-27T12:26:32.580625Z [info     ] [MONITOR] JSON parse SUCCESS   [chunks2skus.utils.llm_client] keys=['facts']
+2026-04-27T12:26:32.584620Z [info     ] Skipping trivially short SKU   [chunks2skus.extractors.factual_extractor] chars=55 name=上市公司经销商转股东典型案例
+2026-04-27T12:26:32.592347Z [info     ] Factual extraction complete    [chunks2skus.extractors.factual_extractor] chunk_id=4.上下通吃，打通经销商合伙人激励的模式_chunk_001 skus_created=6
+2026-04-27T12:26:32.592347Z [info     ] Extracting procedural knowledge [chunks2skus.extractors.procedural_extractor] chunk_id=4.上下通吃，打通经销商合伙人激励的模式_chunk_001
+2026-04-27T12:26:32.594458Z [info     ] [MONITOR] call_llm_json starting [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215
+2026-04-27T12:26:32.597041Z [info     ] [MONITOR] Starting LLM call    [chunks2skus.utils.llm_client] attempt=0 max_tokens=64000 model=doubao-seed-2-0-pro-260215 prompt_length=2016 temperature=0.3
+2026-04-27T12:26:39.531296Z [info     ] [MONITOR] LLM call SUCCESS     [chunks2skus.utils.llm_client] attempt=0 finish_reason=stop model=doubao-seed-2-0-pro-260215 response_length=2558
+2026-04-27T12:26:39.532031Z [info     ] [MONITOR] JSON parse SUCCESS   [chunks2skus.utils.llm_client] keys=['facts']
+2026-04-27T12:26:39.544732Z [info     ] Factual extraction complete    [chunks2skus.extractors.factual_extractor] chunk_id=5.不做主机厂，专注整合商的模式_笔记_chunk_001 skus_created=7
+2026-04-27T12:26:39.545728Z [info     ] Extracting procedural knowledge [chunks2skus.extractors.procedural_extractor] chunk_id=5.不做主机厂，专注整合商的模式_笔记_chunk_001
+2026-04-27T12:26:39.545728Z [info     ] [MONITOR] call_llm_json starting [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215
+2026-04-27T12:26:39.546724Z [info     ] [MONITOR] Starting LLM call    [chunks2skus.utils.llm_client] attempt=0 max_tokens=64000 model=doubao-seed-2-0-pro-260215 prompt_length=3349 temperature=0.3
+2026-04-27T12:26:51.434581Z [info     ] [MONITOR] LLM call SUCCESS     [chunks2skus.utils.llm_client] attempt=0 finish_reason=stop model=doubao-seed-2-0-pro-260215 response_length=3127
+2026-04-27T12:26:51.435084Z [info     ] [MONITOR] JSON parse SUCCESS   [chunks2skus.utils.llm_client] keys=['facts']
+2026-04-27T12:26:51.438594Z [warning  ] Markdown SKU lacks structure markers [chunks2skus.extractors.factual_extractor] chars=72 name=深州国际全产业链代工优势
+2026-04-27T12:26:51.439594Z [info     ] Skipping trivially short SKU   [chunks2skus.extractors.factual_extractor] chars=72 name=深州国际全产业链代工优势
+2026-04-27T12:26:51.442584Z [warning  ] Markdown SKU lacks structure markers [chunks2skus.extractors.factual_extractor] chars=55 name=服装企业不同模式上市估值差异
+2026-04-27T12:26:51.442584Z [info     ] Skipping trivially short SKU   [chunks2skus.extractors.factual_extractor] chars=55 name=服装企业不同模式上市估值差异
+2026-04-27T12:26:51.443580Z [warning  ] Markdown SKU lacks structure markers [chunks2skus.extractors.factual_extractor] chars=87 name=深州国际核心客户与话语权情况
+2026-04-27T12:26:51.451084Z [info     ] Factual extraction complete    [chunks2skus.extractors.factual_extractor] chunk_id='2.ODM OEM，超过耐K、A迪净利的商业模式_笔记_chunk_001' skus_created=7
+2026-04-27T12:26:51.451084Z [info     ] Extracting procedural knowledge [chunks2skus.extractors.procedural_extractor] chunk_id='2.ODM OEM，超过耐K、A迪净利的商业模式_笔记_chunk_001'
+2026-04-27T12:26:51.452081Z [info     ] [MONITOR] call_llm_json starting [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215
+2026-04-27T12:26:51.452081Z [info     ] [MONITOR] Starting LLM call    [chunks2skus.utils.llm_client] attempt=0 max_tokens=64000 model=doubao-seed-2-0-pro-260215 prompt_length=2660 temperature=0.3
+2026-04-27T12:26:52.977286Z [info     ] [MONITOR] LLM call SUCCESS     [chunks2skus.utils.llm_client] attempt=0 finish_reason=stop model=doubao-seed-2-0-pro-260215 response_length=2539
+2026-04-27T12:26:52.978323Z [info     ] [MONITOR] JSON parse SUCCESS   [chunks2skus.utils.llm_client] keys=['facts']
+2026-04-27T12:26:52.988342Z [info     ] Factual extraction complete    [chunks2skus.extractors.factual_extractor] chunk_id=1.业务不变，营收秒变（X50）的商业模式_笔记_chunk_001 skus_created=5
+2026-04-27T12:26:52.989019Z [info     ] Extracting procedural knowledge [chunks2skus.extractors.procedural_extractor] chunk_id=1.业务不变，营收秒变（X50）的商业模式_笔记_chunk_001
+2026-04-27T12:26:52.989522Z [info     ] [MONITOR] call_llm_json starting [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215
+2026-04-27T12:26:52.989522Z [info     ] [MONITOR] Starting LLM call    [chunks2skus.utils.llm_client] attempt=0 max_tokens=64000 model=doubao-seed-2-0-pro-260215 prompt_length=2313 temperature=0.3
+2026-04-27T12:27:36.162100Z [info     ] [MONITOR] LLM call SUCCESS     [chunks2skus.utils.llm_client] attempt=0 finish_reason=stop model=doubao-seed-2-0-pro-260215 response_length=2464
+2026-04-27T12:27:36.162752Z [info     ] [MONITOR] JSON parse SUCCESS   [chunks2skus.utils.llm_client] keys=['procedures']
+2026-04-27T12:27:36.173248Z [info     ] Procedural extraction complete [chunks2skus.extractors.procedural_extractor] chunk_id=4.上下通吃，打通经销商合伙人激励的模式_chunk_001 skills_created=5
+2026-04-27T12:27:36.174245Z [info     ] Extracting relational knowledge [chunks2skus.extractors.relational_extractor] chunk_id=4.上下通吃，打通经销商合伙人激励的模式_chunk_001
+2026-04-27T12:27:36.175241Z [info     ] Relational context size        [chunks2skus.extractors.relational_extractor] alias_map_chars=5 chunk_id=4.上下通吃，打通经销商合伙人激励的模式_chunk_001 glossary_count=0 label_nodes_count=0 label_tree_chars=0 relevant_relations_chars=9 term_list_chars=0
+2026-04-27T12:27:36.176741Z [info     ] [MONITOR] call_llm_json starting [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215
+2026-04-27T12:27:36.176741Z [info     ] [MONITOR] Starting LLM call    [chunks2skus.utils.llm_client] attempt=0 max_tokens=128000 model=doubao-seed-2-0-pro-260215 prompt_length=3194 temperature=0.3
+2026-04-27T12:27:37.009362Z [info     ] [MONITOR] LLM call SUCCESS     [chunks2skus.utils.llm_client] attempt=0 finish_reason=stop model=doubao-seed-2-0-pro-260215 response_length=2789
+2026-04-27T12:27:37.010874Z [info     ] [MONITOR] JSON parse SUCCESS   [chunks2skus.utils.llm_client] keys=['procedures']
+2026-04-27T12:27:37.022867Z [info     ] Procedural extraction complete [chunks2skus.extractors.procedural_extractor] chunk_id=5.不做主机厂，专注整合商的模式_笔记_chunk_001 skills_created=6
+2026-04-27T12:27:41.911763Z [info     ] [MONITOR] LLM call SUCCESS     [chunks2skus.utils.llm_client] attempt=0 finish_reason=stop model=doubao-seed-2-0-pro-260215 response_length=2330
+2026-04-27T12:27:41.912769Z [info     ] [MONITOR] JSON parse SUCCESS   [chunks2skus.utils.llm_client] keys=['procedures']
+2026-04-27T12:27:41.921329Z [info     ] Procedural extraction complete [chunks2skus.extractors.procedural_extractor] chunk_id='2.ODM OEM，超过耐K、A迪净利的商业模式_笔记_chunk_001' skills_created=5
+2026-04-27T12:27:58.863458Z [info     ] [MONITOR] LLM call SUCCESS     [chunks2skus.utils.llm_client] attempt=0 finish_reason=stop model=doubao-seed-2-0-pro-260215 response_length=1489
+2026-04-27T12:27:58.864495Z [info     ] [MONITOR] JSON parse SUCCESS   [chunks2skus.utils.llm_client] keys=['procedures']
+2026-04-27T12:27:58.872053Z [info     ] Procedural extraction complete [chunks2skus.extractors.procedural_extractor] chunk_id=1.业务不变，营收秒变（X50）的商业模式_笔记_chunk_001 skills_created=3
+2026-04-27T12:27:58.873049Z [info     ] Factual/Procedural phase complete [chunks2skus.pipeline] chunks=5 concurrency=4 duration_seconds=165.6
+2026-04-27T12:28:59.311242Z [info     ] [MONITOR] LLM call SUCCESS     [chunks2skus.utils.llm_client] attempt=0 finish_reason=stop model=doubao-seed-2-0-pro-260215 response_length=3583
+2026-04-27T12:28:59.312262Z [info     ] [MONITOR] JSON parse SUCCESS   [chunks2skus.utils.llm_client] keys=['new_labels', 'new_glossary', 'updated_glossary', 'new_relationships']
+2026-04-27T12:28:59.314513Z [info     ] Added new labels               [chunks2skus.extractors.relational_extractor] chunk_id=4.上下通吃，打通经销商合伙人激励的模式_chunk_001 count=6
+2026-04-27T12:28:59.315612Z [info     ] Merged new glossary entries    [chunks2skus.extractors.relational_extractor] chunk_id=4.上下通吃，打通经销商合伙人激励的模式_chunk_001 count=9
+2026-04-27T12:28:59.315612Z [info     ] Updated existing glossary entries [chunks2skus.extractors.relational_extractor] chunk_id=4.上下通吃，打通经销商合伙人激励的模式_chunk_001 fallback_count=0 total_in_response=0 updated_count=0
+2026-04-27T12:28:59.316677Z [info     ] Merged new relationships       [chunks2skus.extractors.relational_extractor] chunk_id=4.上下通吃，打通经销商合伙人激励的模式_chunk_001 count=16
+2026-04-27T12:28:59.316677Z [info     ] Relationship predicate distribution [chunks2skus.extractors.relational_extractor] distribution={'example-of': 4, 'is-a': 1, 'implements': 3, 'causes': 3, 'enables': 1, 'related-to': 1, 'has-a': 2, 'depends-on': 1} total=16
+2026-04-27T12:28:59.320341Z [info     ] Relational extraction complete [chunks2skus.extractors.relational_extractor] chunk_id=4.上下通吃，打通经销商合伙人激励的模式_chunk_001 labels=2 relationships=16 terms=9
+2026-04-27T12:28:59.322400Z [info     ] Chunk processed                [chunks2skus.pipeline] chunk_id=4.上下通吃，打通经销商合伙人激励的模式_chunk_001 new_skus=12 total_skus=12
+2026-04-27T12:28:59.322400Z [info     ] Extracting relational knowledge [chunks2skus.extractors.relational_extractor] chunk_id=5.不做主机厂，专注整合商的模式_笔记_chunk_001
+2026-04-27T12:28:59.323404Z [info     ] Relational context size        [chunks2skus.extractors.relational_extractor] alias_map_chars=12 chunk_id=5.不做主机厂，专注整合商的模式_笔记_chunk_001 glossary_count=9 label_nodes_count=6 label_tree_chars=41 relevant_relations_chars=9 term_list_chars=63
+2026-04-27T12:28:59.324610Z [info     ] [MONITOR] call_llm_json starting [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215
+2026-04-27T12:28:59.324610Z [info     ] [MONITOR] Starting LLM call    [chunks2skus.utils.llm_client] attempt=0 max_tokens=128000 model=doubao-seed-2-0-pro-260215 prompt_length=4638 temperature=0.3
+2026-04-27T12:30:28.335441Z [info     ] [MONITOR] LLM call SUCCESS     [chunks2skus.utils.llm_client] attempt=0 finish_reason=stop model=doubao-seed-2-0-pro-260215 response_length=2865
+2026-04-27T12:30:28.337095Z [info     ] [MONITOR] JSON parse SUCCESS   [chunks2skus.utils.llm_client] keys=['new_labels', 'new_glossary', 'updated_glossary', 'new_relationships']
+2026-04-27T12:30:28.349178Z [info     ] Added new labels               [chunks2skus.extractors.relational_extractor] chunk_id=5.不做主机厂，专注整合商的模式_笔记_chunk_001 count=2
+2026-04-27T12:30:28.349178Z [info     ] Merged new glossary entries    [chunks2skus.extractors.relational_extractor] chunk_id=5.不做主机厂，专注整合商的模式_笔记_chunk_001 count=9
+2026-04-27T12:30:28.350175Z [info     ] Updated existing glossary entries [chunks2skus.extractors.relational_extractor] chunk_id=5.不做主机厂，专注整合商的模式_笔记_chunk_001 fallback_count=0 total_in_response=0 updated_count=0
+2026-04-27T12:30:28.350175Z [info     ] Merged new relationships       [chunks2skus.extractors.relational_extractor] chunk_id=5.不做主机厂，专注整合商的模式_笔记_chunk_001 count=10
+2026-04-27T12:30:28.351172Z [info     ] Relationship predicate distribution [chunks2skus.extractors.relational_extractor] distribution={'example-of': 7, 'is-a': 1, 'implements': 4, 'causes': 3, 'enables': 5, 'related-to': 1, 'has-a': 2, 'depends-on': 1, 'requires': 1, 'caused-by': 1} total=26
+2026-04-27T12:30:28.353671Z [info     ] Relational extraction complete [chunks2skus.extractors.relational_extractor] chunk_id=5.不做主机厂，专注整合商的模式_笔记_chunk_001 labels=2 relationships=26 terms=18
+2026-04-27T12:30:28.355667Z [info     ] Chunk processed                [chunks2skus.pipeline] chunk_id=5.不做主机厂，专注整合商的模式_笔记_chunk_001 new_skus=14 total_skus=25
+2026-04-27T12:30:28.356664Z [info     ] Extracting relational knowledge [chunks2skus.extractors.relational_extractor] chunk_id='2.ODM OEM，超过耐K、A迪净利的商业模式_笔记_chunk_001'
+2026-04-27T12:30:28.356664Z [info     ] Relational context size        [chunks2skus.extractors.relational_extractor] alias_map_chars=80 chunk_id='2.ODM OEM，超过耐K、A迪净利的商业模式_笔记_chunk_001' glossary_count=18 label_nodes_count=8 label_tree_chars=60 relevant_relations_chars=9 term_list_chars=131
+2026-04-27T12:30:28.357660Z [info     ] [MONITOR] call_llm_json starting [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215
+2026-04-27T12:30:28.357660Z [info     ] [MONITOR] Starting LLM call    [chunks2skus.utils.llm_client] attempt=0 max_tokens=128000 model=doubao-seed-2-0-pro-260215 prompt_length=4105 temperature=0.3
+2026-04-27T12:32:09.352355Z [info     ] [MONITOR] LLM call SUCCESS     [chunks2skus.utils.llm_client] attempt=0 finish_reason=stop model=doubao-seed-2-0-pro-260215 response_length=2850
+2026-04-27T12:32:09.353382Z [info     ] [MONITOR] JSON parse SUCCESS   [chunks2skus.utils.llm_client] keys=['new_labels', 'new_glossary', 'updated_glossary', 'new_relationships']
+2026-04-27T12:32:09.355882Z [info     ] Added new labels               [chunks2skus.extractors.relational_extractor] chunk_id='2.ODM OEM，超过耐K、A迪净利的商业模式_笔记_chunk_001' count=3
+2026-04-27T12:32:09.356881Z [info     ] Merged new glossary entries    [chunks2skus.extractors.relational_extractor] chunk_id='2.ODM OEM，超过耐K、A迪净利的商业模式_笔记_chunk_001' count=4
+2026-04-27T12:32:09.356881Z [info     ] Updated existing glossary entries [chunks2skus.extractors.relational_extractor] chunk_id='2.ODM OEM，超过耐K、A迪净利的商业模式_笔记_chunk_001' fallback_count=0 total_in_response=3 updated_count=3
+2026-04-27T12:32:09.357878Z [info     ] Merged new relationships       [chunks2skus.extractors.relational_extractor] chunk_id='2.ODM OEM，超过耐K、A迪净利的商业模式_笔记_chunk_001' count=11
+2026-04-27T12:32:09.357878Z [info     ] Relationship predicate distribution [chunks2skus.extractors.relational_extractor] distribution={'example-of': 10, 'is-a': 1, 'implements': 5, 'causes': 5, 'enables': 7, 'related-to': 1, 'has-a': 2, 'depends-on': 1, 'requires': 1, 'caused-by': 1, 'part-of': 3} total=37
+2026-04-27T12:32:09.360868Z [info     ] Relational extraction complete [chunks2skus.extractors.relational_extractor] chunk_id='2.ODM OEM，超过耐K、A迪净利的商业模式_笔记_chunk_001' labels=2 relationships=37 terms=22
+2026-04-27T12:32:09.362862Z [info     ] Chunk processed                [chunks2skus.pipeline] chunk_id='2.ODM OEM，超过耐K、A迪净利的商业模式_笔记_chunk_001' new_skus=13 total_skus=37
+2026-04-27T12:32:09.362862Z [info     ] Extracting relational knowledge [chunks2skus.extractors.relational_extractor] chunk_id=1.业务不变，营收秒变（X50）的商业模式_笔记_chunk_001
+2026-04-27T12:32:09.364364Z [info     ] Relational context size        [chunks2skus.extractors.relational_extractor] alias_map_chars=80 chunk_id=1.业务不变，营收秒变（X50）的商业模式_笔记_chunk_001 glossary_count=22 label_nodes_count=11 label_tree_chars=91 relevant_relations_chars=9 term_list_chars=168
+2026-04-27T12:32:09.365374Z [info     ] [MONITOR] call_llm_json starting [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215
+2026-04-27T12:32:09.365374Z [info     ] [MONITOR] Starting LLM call    [chunks2skus.utils.llm_client] attempt=0 max_tokens=128000 model=doubao-seed-2-0-pro-260215 prompt_length=3826 temperature=0.3
+2026-04-27T12:33:59.940636Z [info     ] [MONITOR] LLM call SUCCESS     [chunks2skus.utils.llm_client] attempt=0 finish_reason=stop model=doubao-seed-2-0-pro-260215 response_length=1826
+2026-04-27T12:33:59.941140Z [info     ] [MONITOR] JSON parse SUCCESS   [chunks2skus.utils.llm_client] keys=['new_labels', 'new_glossary', 'updated_glossary', 'new_relationships']
+2026-04-27T12:33:59.951643Z [info     ] Added new labels               [chunks2skus.extractors.relational_extractor] chunk_id=1.业务不变，营收秒变（X50）的商业模式_笔记_chunk_001 count=0
+2026-04-27T12:33:59.953636Z [info     ] Merged new glossary entries    [chunks2skus.extractors.relational_extractor] chunk_id=1.业务不变，营收秒变（X50）的商业模式_笔记_chunk_001 count=3
+2026-04-27T12:33:59.953636Z [info     ] Updated existing glossary entries [chunks2skus.extractors.relational_extractor] chunk_id=1.业务不变，营收秒变（X50）的商业模式_笔记_chunk_001 fallback_count=0 total_in_response=1 updated_count=1
+2026-04-27T12:33:59.954632Z [info     ] Merged new relationships       [chunks2skus.extractors.relational_extractor] chunk_id=1.业务不变，营收秒变（X50）的商业模式_笔记_chunk_001 count=9
+2026-04-27T12:33:59.955630Z [info     ] Relationship predicate distribution [chunks2skus.extractors.relational_extractor] distribution={'example-of': 11, 'is-a': 1, 'implements': 5, 'causes': 9, 'enables': 9, 'related-to': 1, 'has-a': 2, 'depends-on': 1, 'requires': 1, 'caused-by': 1, 'part-of': 3, 'superset-of': 2} total=46
+2026-04-27T12:33:59.959201Z [info     ] Relational extraction complete [chunks2skus.extractors.relational_extractor] chunk_id=1.业务不变，营收秒变（X50）的商业模式_笔记_chunk_001 labels=2 relationships=46 terms=25
+2026-04-27T12:33:59.961075Z [info     ] Running meta extraction batch  [chunks2skus.pipeline] chunks=5 new_skus=49 total_content_chars=7329
+2026-04-27T12:33:59.962085Z [info     ] Extracting meta knowledge      [chunks2skus.extractors.meta_extractor] chunk_ids='3.费用归边，流量占股的商业模式_笔记_chunk_001, 4.上下通吃，打通经销商合伙人激励的模式_chunk_001, 5.不做主机厂，专注整合商的模式_笔记_chunk_001, 2.ODM OEM，超过耐K、A迪净利的商业模式_笔记_chunk_001, 1.业务不变，营收秒变（X50）的商业模式_笔记_chunk_001'
+2026-04-27T12:33:59.964187Z [info     ] [MONITOR] Creating thread-local OpenAI client [chunks2skus.utils.llm_client] base_url=https://ark.cn-beijing.volces.com/api/v3 thread=ThreadPoolExecutor-1_0
+2026-04-27T12:33:59.964187Z [info     ] [MONITOR] Creating thread-local OpenAI client [chunks2skus.utils.llm_client] base_url=https://ark.cn-beijing.volces.com/api/v3 thread=ThreadPoolExecutor-1_1
+2026-04-27T12:34:01.484352Z [info     ] [MONITOR] Starting LLM call    [chunks2skus.utils.llm_client] attempt=0 max_tokens=32000 model=doubao-seed-2-0-pro-260215 prompt_length=5488 temperature=0.2
+2026-04-27T12:34:01.486851Z [info     ] [MONITOR] Starting LLM call    [chunks2skus.utils.llm_client] attempt=0 max_tokens=32000 model=doubao-seed-2-0-pro-260215 prompt_length=9628 temperature=0.7
+2026-04-27T12:35:03.841594Z [info     ] [MONITOR] LLM call SUCCESS     [chunks2skus.utils.llm_client] attempt=0 finish_reason=stop model=doubao-seed-2-0-pro-260215 response_length=1021
+2026-04-27T12:35:03.844591Z [info     ] Updated eureka.md              [chunks2skus.extractors.meta_extractor] chunk_ids='3.费用归边，流量占股的商业模式_笔记_chunk_001, 4.上下通吃，打通经销商合伙人激励的模式_chunk_001, 5.不做主机厂，专注整合商的模式_笔记_chunk_001, 2.ODM OEM，超过耐K、A迪净利的商业模式_笔记_chunk_001, 1.业务不变，营收秒变（X50）的商业模式_笔记_chunk_001' new_size=1021 old_size=42
+2026-04-27T12:36:09.525605Z [info     ] [MONITOR] LLM call SUCCESS     [chunks2skus.utils.llm_client] attempt=0 finish_reason=stop model=doubao-seed-2-0-pro-260215 response_length=2492
+2026-04-27T12:36:09.527610Z [warning  ] Header-mapping title mismatch  [chunks2skus.extractors.meta_extractor] header_title=distributor-to-shareholder-channel-refor mapping_line='- `procedural/skill_001`: 传统制造企业需要绑定经销商、降低渠道内耗、提升渠道掌控力时查阅' sku_path=skill_001
+2026-04-27T12:36:09.536091Z [warning  ] Header-mapping title mismatch  [chunks2skus.extractors.meta_extractor] header_title=manufacturing-off-season-rebate-policy-d mapping_line='- `procedural/skill_002`: 传统生产制造企业需要填平淡季生产成本缺口、预收经销商资金、巩固市场地位时查阅' sku_path=skill_002
+2026-04-27T12:36:09.537088Z [warning  ] Header-mapping title mismatch  [chunks2skus.extractors.meta_extractor] header_title=manufacturer-upstream-industry-integrati mapping_line='- `procedural/skill_003`: 制造企业需要提升核心零部件自主可控能力、降低供应链成本、提升毛利率时查阅' sku_path=skill_003
+2026-04-27T12:36:09.537088Z [warning  ] Header-mapping title mismatch  [chunks2skus.extractors.meta_extractor] header_title=soe-mixed-ownership-reform-counter-acqui mapping_line='- `procedural/skill_004`: 国有企业管理团队需要获得企业实际控制权、完成混合所有制改革时查阅' sku_path=skill_004
+2026-04-27T12:36:09.541863Z [warning  ] Header-mapping title mismatch  [chunks2skus.extractors.meta_extractor] header_title=traditional-enterprise-global-expansion- mapping_line='- `procedural/skill_005`: 传统制造企业需要进行全球化业务扩张、降低海外扩张成本时查阅' sku_path=skill_005
+2026-04-27T12:36:09.543855Z [warning  ] Header-mapping title mismatch  [chunks2skus.extractors.meta_extractor] header_title=light-asset-manufacturing-transformation mapping_line='- `procedural/skill_006`: 制造企业计划从全链条重资产模式转向轻资产运营模式时查阅' sku_path=skill_006
+2026-04-27T12:36:09.545848Z [warning  ] Header-mapping title mismatch  [chunks2skus.extractors.meta_extractor] header_title=after-sales-differentiated-competitivene mapping_line='- `procedural/skill_007`: 企业想要通过售后服务打造差异化竞争优势、提升用户转化率时查阅' sku_path=skill_007
+2026-04-27T12:36:09.546845Z [warning  ] Header-mapping title mismatch  [chunks2skus.extractors.meta_extractor] header_title=light-asset-enterprise-ipo-qualification mapping_line='- `procedural/skill_008`: 轻资产企业筹备IPO，应对资本对行业属性相关资质质疑时查阅' sku_path=skill_008
+2026-04-27T12:36:09.547842Z [warning  ] Header-mapping title mismatch  [chunks2skus.extractors.meta_extractor] header_title=overseas-spac-reverse-merger-listing-wor mapping_line='- `procedural/skill_009`: 国内轻资产企业想要快速实现海外上市融资时查阅' sku_path=skill_009
+2026-04-27T12:36:09.547842Z [warning  ] Header-mapping title mismatch  [chunks2skus.extractors.meta_extractor] header_title=b-end-product-scaled-promotion-workflow mapping_line='- `procedural/skill_010`: 企业推广B端属性的产品，想要快速扩大市场覆盖时查阅' sku_path=skill_010
+2026-04-27T12:36:09.549345Z [warning  ] Header-mapping title mismatch  [chunks2skus.extractors.meta_extractor] header_title=online-cloud-chain-channel-expansion-wor mapping_line='- `procedural/skill_011`: 轻资产企业想要拓展线上销售渠道，降低流量成本时查阅' sku_path=skill_011
+2026-04-27T12:36:09.551352Z [warning  ] Header-mapping title mismatch  [chunks2skus.extractors.meta_extractor] header_title=garment-enterprise-global-capacity-layou mapping_line='- `procedural/skill_014`: 服装生产企业需要应对劳动力成本上升、国际贸易摩擦风险时查阅' sku_path=skill_014
+2026-04-27T12:36:09.553347Z [warning  ] Header-mapping title mismatch  [chunks2skus.extractors.meta_extractor] header_title=bs-business-model-implementation mapping_line='- `procedural/skill_017`: 代工企业需要优化商业模式、突破低资本价值困境、提升营收和估值时查阅' sku_path=skill_017
+2026-04-27T12:36:09.559830Z [warning  ] Header-mapping title mismatch  [chunks2skus.extractors.meta_extractor] header_title=oem-enterprise-valuation-upgrade-workflo mapping_line='- `procedural/skill_018`: 代工企业需要提升股价、优化估值体系、向科技类企业估值靠拢时查阅' sku_path=skill_018
+2026-04-27T12:36:09.560829Z [warning  ] Header-mapping title mismatch  [chunks2skus.extractors.meta_extractor] header_title=bs-model-oem-financial-risk-assessment mapping_line='- `procedural/skill_019`: 评估采用BS模式的代工企业经营风险、分析财务健康状况时查阅' sku_path=skill_019
+2026-04-27T12:36:09.562825Z [info     ] Updated mapping.md (diff merge) [chunks2skus.extractors.meta_extractor] chunk_id=1.业务不变，营收秒变（X50）的商业模式_笔记_chunk_001 diff_lines=60 new_size=2537 old_size=57
+2026-04-27T12:36:09.564818Z [info     ] Meta extraction complete       [chunks2skus.extractors.meta_extractor] chunk_ids='3.费用归边，流量占股的商业模式_笔记_chunk_001, 4.上下通吃，打通经销商合伙人激励的模式_chunk_001, 5.不做主机厂，专注整合商的模式_笔记_chunk_001, 2.ODM OEM，超过耐K、A迪净利的商业模式_笔记_chunk_001, 1.业务不变，营收秒变（X50）的商业模式_笔记_chunk_001' eureka_chars=1021 mapping_chars=2537
+2026-04-27T12:36:09.566185Z [info     ] Chunk processed                [chunks2skus.pipeline] chunk_id=1.业务不变，营收秒变（X50）的商业模式_笔记_chunk_001 new_skus=9 total_skus=46
+2026-04-27T12:36:09.567181Z [info     ] Relational consumer phase complete [chunks2skus.pipeline] duration_seconds=490.7 note='overlaps with FP phase in pipeline wall-clock'
+2026-04-27T12:36:09.567181Z [info     ] Extraction pipeline complete   [chunks2skus.pipeline] chunks_processed=5 duration_seconds=656.5 total_characters=34230 total_skus=46

@@ -1,0 +1,49 @@
+{
+  "equity_structure": [
+    {
+      "shareholder": "陆正耀",
+      "share_ratio": "30.53%",
+      "identity": "最大股东"
+    },
+    {
+      "shareholder": "Summer Fame Limited",
+      "share_ratio": "19.68%",
+      "identity": "钱治亚家族信托"
+    },
+    {
+      "shareholder": "Mayer Investment Fund",
+      "share_ratio": "12.4%",
+      "identity": "陆正耀姐姐实际控制"
+    },
+    {
+      "shareholder": "大钲资本（黎辉）",
+      "share_ratio": "11.9%",
+      "identity": "机构投资方"
+    },
+    {
+      "shareholder": "愉悦资本（刘二海）",
+      "share_ratio": "6.75%",
+      "identity": "机构投资方"
+    }
+  ],
+  "operation_strategy": {
+    "core_positioning": "垄断写字楼场景的即时消费入口，面向职场白领群体",
+    "user_operation": "强制使用APP/小程序下单，建立完整用户画像，通过企业微信加好友、建群、发优惠券运营私域流量，配送时效3分钟，三只松鼠将其列为核心竞争对手（用户画像高度一致）"
+  },
+  "financial_fraud_incident": [
+    {
+      "time": "2020年4月2日",
+      "event": "浑水做空数月后自曝收入造假22亿元，股价单日暴跌76%，连续6次熔断，COO刘健被指为唯一责任人"
+    },
+    {
+      "subsequent_processing": "关闭不盈利门店，陆正耀出局，由大钲资本和愉悦资本接管，推出新品「小绿茶」等进行品牌重塑"
+    }
+  ],
+  "capital_operation_routine": [
+    "烧钱打价格战抢占市场，向一级市场贩卖「赚钱可能性」融资",
+    "形成垄断或垄断预期后上市，获得第一波分红收益",
+    "粉饰业绩抬高股价后股东套现，获得第二波收益",
+    "宣布巨额亏损后卖壳，获得第三波收益"
+  ],
+  "follow_up_projects": "陆正耀后续复制该模式推出趣小面、舌尖英雄、库迪咖啡等项目"
+}

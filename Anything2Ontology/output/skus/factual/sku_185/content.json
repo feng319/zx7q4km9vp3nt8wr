@@ -1,0 +1,13 @@
+{
+  "response_scenario": "工作日高峰时段削峰需求",
+  "response_period": "次日17:00-18:00",
+  "participants": [
+    "4家虚拟电厂聚合商",
+    "34家园区用电企业"
+  ],
+  "declared_response_capacity": "21.404兆瓦",
+  "actual_response_capacity": "20.151兆瓦",
+  "response_accuracy": "约94%",
+  "reduced_electricity_consumption": "约2万度",
+  "estimated_income": "按3元/度的需求响应补贴标准测算可获约2万元补贴，由参与的聚合商及企业分成"
+}

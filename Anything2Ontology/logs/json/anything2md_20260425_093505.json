@@ -1,0 +1,9 @@
+{"event": "Starting Anything2Markdown pipeline", "logger": "anything2markdown.cli", "level": "info", "timestamp": "2026-04-25T01:35:05.269194Z"}
+{"path": "G:\\Program Files\\AI coding\\\u77e5\u8bc6\u8403\u53d6\\\u65b0\u80fd\u6e90\\\u8f93\u5165", "event": "Input directory", "logger": "anything2markdown.cli", "level": "info", "timestamp": "2026-04-25T01:35:05.269194Z"}
+{"path": "G:\\Program Files\\AI coding\\\u77e5\u8bc6\u8403\u53d6\\\u65b0\u80fd\u6e90\\\u8f93\u51fa", "event": "Output directory", "logger": "anything2markdown.cli", "level": "info", "timestamp": "2026-04-25T01:35:05.269194Z"}
+{"event": "Repomix not found. Install with: npm install -g repomix", "logger": "anything2markdown.url_parsers.repomix_parser", "level": "warning", "timestamp": "2026-04-25T01:35:06.383406Z"}
+{"input_dir": "G:\\Program Files\\AI coding\\\u77e5\u8bc6\u8403\u53d6\\\u65b0\u80fd\u6e90\\\u8f93\u5165", "output_dir": "G:\\Program Files\\AI coding\\\u77e5\u8bc6\u8403\u53d6\\\u65b0\u80fd\u6e90\\\u8f93\u51fa", "event": "Starting Anything2Markdown pipeline", "logger": "anything2markdown.pipeline", "level": "info", "timestamp": "2026-04-25T01:35:06.384423Z"}
+{"files_processed": 0, "event": "File processing complete", "logger": "anything2markdown.pipeline", "level": "info", "timestamp": "2026-04-25T01:35:06.384423Z"}
+{"urls_processed": 0, "event": "URL processing complete", "logger": "anything2markdown.pipeline", "level": "info", "timestamp": "2026-04-25T01:35:06.384423Z"}
+{"duration_seconds": "0.00", "total_processed": 0, "success": 0, "failed": 0, "skipped": 0, "event": "Pipeline completed", "logger": "anything2markdown.pipeline", "level": "info", "timestamp": "2026-04-25T01:35:06.385425Z"}
+{"path": "G:\\Program Files\\AI coding\\\u77e5\u8bc6\u8403\u53d6\\\u65b0\u80fd\u6e90\\\u8f93\u51fa\\parse_results_index.json", "event": "Saved parse results index", "logger": "anything2markdown.pipeline", "level": "info", "timestamp": "2026-04-25T01:35:06.409693Z"}

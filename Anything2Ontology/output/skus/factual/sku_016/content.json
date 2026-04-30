@@ -1,0 +1,47 @@
+{
+  "industry_basic_info": "中国现有18家白酒上市公司，行业具有高毛利、深护城河特点，渠道模式经历五个发展阶段：计划经济统销阶段→1988年后价格管制开放阶段→1996年后经销商崛起阶段→2004年后厂商收回主导权阶段→2011-2020年厂商经销商共同主导阶段",
+  "four_modes_comparison": [
+    {
+      "mode_name": "五粮液大商模式",
+      "core_feature": "总代理模式，分五级代理覆盖市场，配套OEM贴牌模式，后期因品牌管理混乱被茅台反超；2017年后改革限制OEM品牌数量，2018-2020年营收年均增长30%",
+      "dominant_party": "经销商主导"
+    },
+    {
+      "mode_name": "贵州茅台小商模式",
+      "core_feature": "选择小规模经销商，易于管控，专卖店员工工资和装修由公司承担，严格执行先款后货政策，预收账款规模大；2018年后裁减经销商提升直销比例，50%直销比例相当于再造一个茅台",
+      "dominant_party": "厂商主导"
+    },
+    {
+      "mode_name": "洋河1+1模式",
+      "core_feature": "厂商委派业务代表入驻经销商主导市场开发，经销商仅负责物流和资金周转，拥有3万名地推人员，配套盘中盘模式、配额制强化管控，2019年后调整为1+1+N模式优化厂商关系",
+      "dominant_party": "厂商主导"
+    },
+    {
+      "mode_name": "泸州老窖期权模式",
+      "core_feature": "设立区域期权公司，由销售团队与核心经销商共同出资，经销商兼具投资者与经营者身份，销售费用率比行业低约5个百分点；后期延伸出品牌专营模式，强化终端控制力",
+      "dominant_party": "厂商与经销商共同主导"
+    }
+  ],
+  "option_mode_vs_pure_option_comparison": [
+    {
+      "comparison_dimension": "品牌运营",
+      "option_mode_plus_franchise": "单品牌专营",
+      "pure_option_mode": "多品牌并行"
+    },
+    {
+      "comparison_dimension": "渠道层级",
+      "option_mode_plus_franchise": "三级管控体系",
+      "pure_option_mode": "扁平化结构"
+    },
+    {
+      "comparison_dimension": "利润导向",
+      "option_mode_plus_franchise": "聚焦高利润单品",
+      "pure_option_mode": "存在资源分配冲突"
+    },
+    {
+      "comparison_dimension": "股权转换",
+      "option_mode_plus_franchise": "需按销量现金入股",
+      "pure_option_mode": "原始股东直接转换"
+    }
+  ]
+}

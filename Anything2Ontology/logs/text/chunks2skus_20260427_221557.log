@@ -1,0 +1,108 @@
+2026-04-27T14:15:57.284100Z [info     ] Force reset: clearing existing index for full re-extraction [chunks2skus.pipeline]
+2026-04-27T14:15:57.285097Z [info     ] Starting extraction pipeline   [chunks2skus.pipeline] chunks_dir='G:\\Program Files\\AI coding\\知识萃取\\商业模式\\输出\\chunks' force_reset=True output_dir=output\skus
+2026-04-27T14:15:57.289594Z [info     ] Deleted index file for force reset [chunks2skus.pipeline]
+2026-04-27T14:15:57.292584Z [info     ] Deleted state file for force reset [chunks2skus.pipeline] path=output\skus\relational\label_tree.json
+2026-04-27T14:15:57.294577Z [info     ] Deleted state file for force reset [chunks2skus.pipeline] path=output\skus\relational\glossary.json
+2026-04-27T14:15:57.296081Z [info     ] Deleted state file for force reset [chunks2skus.pipeline] path=output\skus\relational\relationships.json
+2026-04-27T14:15:57.297095Z [info     ] Deleted state file for force reset [chunks2skus.pipeline] path=output\skus\meta\mapping.md
+2026-04-27T14:15:57.298091Z [info     ] Deleted state file for force reset [chunks2skus.pipeline] path=output\skus\meta\eureka.md
+2026-04-27T14:15:57.300088Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_001
+2026-04-27T14:15:57.302081Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_002
+2026-04-27T14:15:57.303078Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_003
+2026-04-27T14:15:57.306571Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_004
+2026-04-27T14:15:57.308571Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_005
+2026-04-27T14:15:57.309567Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_006
+2026-04-27T14:15:57.311560Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_007
+2026-04-27T14:15:57.312557Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_008
+2026-04-27T14:15:57.314552Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_009
+2026-04-27T14:15:57.316056Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_010
+2026-04-27T14:15:57.318073Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_011
+2026-04-27T14:15:57.319070Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_012
+2026-04-27T14:15:57.322060Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_013
+2026-04-27T14:15:57.324053Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_014
+2026-04-27T14:15:57.326550Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_015
+2026-04-27T14:15:57.328550Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_016
+2026-04-27T14:15:57.329547Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_017
+2026-04-27T14:15:57.332536Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_018
+2026-04-27T14:15:57.334529Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_019
+2026-04-27T14:15:57.338045Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_020
+2026-04-27T14:15:57.340042Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_021
+2026-04-27T14:15:57.342036Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_022
+2026-04-27T14:15:57.344029Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_023
+2026-04-27T14:15:57.346022Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_024
+2026-04-27T14:15:57.348528Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_025
+2026-04-27T14:15:57.350519Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\procedural\skill_001
+2026-04-27T14:15:57.353511Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\procedural\skill_002
+2026-04-27T14:15:57.356010Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\procedural\skill_003
+2026-04-27T14:15:57.358048Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\procedural\skill_004
+2026-04-27T14:15:57.360046Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\procedural\skill_005
+2026-04-27T14:15:57.363036Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\procedural\skill_006
+2026-04-27T14:15:57.365031Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\procedural\skill_007
+2026-04-27T14:15:57.368533Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\procedural\skill_008
+2026-04-27T14:15:57.371522Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\procedural\skill_009
+2026-04-27T14:15:57.373515Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\procedural\skill_010
+2026-04-27T14:15:57.374512Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\procedural\skill_011
+2026-04-27T14:15:57.377033Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\procedural\skill_012
+2026-04-27T14:15:57.379030Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\procedural\skill_013
+2026-04-27T14:15:57.382020Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\procedural\skill_014
+2026-04-27T14:15:57.385009Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\procedural\skill_015
+2026-04-27T14:15:57.386511Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\procedural\skill_016
+2026-04-27T14:15:57.388511Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\procedural\skill_017
+2026-04-27T14:15:57.390504Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\procedural\skill_018
+2026-04-27T14:15:57.393495Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\procedural\skill_019
+2026-04-27T14:15:57.397011Z [info     ] Loaded chunks                  [chunks2skus.router] count=1
+2026-04-27T14:15:57.400005Z [info     ] Processing chunks              [chunks2skus.pipeline] total=1
+2026-04-27T14:15:57.401002Z [info     ] Submitting chunk for Factual/Procedural [chunks2skus.pipeline] chunk_id=连锁企业的商业模式和股权模式_chunk_001
+2026-04-27T14:15:57.402995Z [info     ] Extracting factual knowledge   [chunks2skus.extractors.factual_extractor] chunk_id=连锁企业的商业模式和股权模式_chunk_001
+2026-04-27T14:15:57.402995Z [info     ] [MONITOR] call_llm_json starting [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215
+2026-04-27T14:15:57.403991Z [info     ] [MONITOR] Creating thread-local OpenAI client [chunks2skus.utils.llm_client] base_url=https://ark.cn-beijing.volces.com/api/v3 thread=ThreadPoolExecutor-1_0
+2026-04-27T14:15:58.482059Z [info     ] [MONITOR] Starting LLM call    [chunks2skus.utils.llm_client] attempt=0 max_tokens=64000 model=doubao-seed-2-0-pro-260215 prompt_length=43313 temperature=0.3
+2026-04-27T14:21:09.317859Z [info     ] [MONITOR] LLM call SUCCESS     [chunks2skus.utils.llm_client] attempt=0 finish_reason=stop model=doubao-seed-2-0-pro-260215 response_length=27426
+2026-04-27T14:21:09.322368Z [info     ] [MONITOR] JSON parse SUCCESS   [chunks2skus.utils.llm_client] keys=['facts']
+2026-04-27T14:21:09.368114Z [info     ] Factual extraction complete    [chunks2skus.extractors.factual_extractor] chunk_id=连锁企业的商业模式和股权模式_chunk_001 skus_created=27
+2026-04-27T14:21:09.369111Z [info     ] Extracting procedural knowledge [chunks2skus.extractors.procedural_extractor] chunk_id=连锁企业的商业模式和股权模式_chunk_001
+2026-04-27T14:21:09.371107Z [info     ] [MONITOR] call_llm_json starting [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215
+2026-04-27T14:21:09.372216Z [info     ] [MONITOR] Starting LLM call    [chunks2skus.utils.llm_client] attempt=0 max_tokens=64000 model=doubao-seed-2-0-pro-260215 prompt_length=42674 temperature=0.3
+2026-04-27T14:22:56.259327Z [info     ] [MONITOR] LLM call SUCCESS     [chunks2skus.utils.llm_client] attempt=0 finish_reason=stop model=doubao-seed-2-0-pro-260215 response_length=6236
+2026-04-27T14:22:56.261320Z [info     ] [MONITOR] JSON parse SUCCESS   [chunks2skus.utils.llm_client] keys=['procedures']
+2026-04-27T14:22:56.278906Z [info     ] Procedural extraction complete [chunks2skus.extractors.procedural_extractor] chunk_id=连锁企业的商业模式和股权模式_chunk_001 skills_created=11
+2026-04-27T14:22:56.278906Z [info     ] Extracting relational knowledge [chunks2skus.extractors.relational_extractor] chunk_id=连锁企业的商业模式和股权模式_chunk_001
+2026-04-27T14:22:56.279915Z [info     ] Factual/Procedural phase complete [chunks2skus.pipeline] chunks=1 concurrency=1 duration_seconds=418.9
+2026-04-27T14:22:56.279915Z [info     ] Relational context size        [chunks2skus.extractors.relational_extractor] alias_map_chars=5 chunk_id=连锁企业的商业模式和股权模式_chunk_001 glossary_count=0 label_nodes_count=0 label_tree_chars=0 relevant_relations_chars=9 term_list_chars=0
+2026-04-27T14:22:56.284899Z [info     ] [MONITOR] call_llm_json starting [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215
+2026-04-27T14:22:56.284899Z [info     ] [MONITOR] Creating thread-local OpenAI client [chunks2skus.utils.llm_client] base_url=https://ark.cn-beijing.volces.com/api/v3 thread='Thread-1 (relational_consumer)'
+2026-04-27T14:22:57.349443Z [info     ] [MONITOR] Starting LLM call    [chunks2skus.utils.llm_client] attempt=0 max_tokens=16000 model=doubao-seed-2-0-pro-260215 prompt_length=43852 temperature=0.3
+2026-04-27T14:24:21.613824Z [info     ] [MONITOR] LLM call SUCCESS     [chunks2skus.utils.llm_client] attempt=0 finish_reason=stop model=doubao-seed-2-0-pro-260215 response_length=5471
+2026-04-27T14:24:21.614828Z [info     ] [MONITOR] JSON parse SUCCESS   [chunks2skus.utils.llm_client] keys=['new_labels', 'new_glossary', 'updated_glossary', 'new_relationships']
+2026-04-27T14:24:21.618337Z [info     ] Added new labels               [chunks2skus.extractors.relational_extractor] chunk_id=连锁企业的商业模式和股权模式_chunk_001 count=13
+2026-04-27T14:24:21.618337Z [info     ] Merged new glossary entries    [chunks2skus.extractors.relational_extractor] chunk_id=连锁企业的商业模式和股权模式_chunk_001 count=17
+2026-04-27T14:24:21.619334Z [info     ] Updated existing glossary entries [chunks2skus.extractors.relational_extractor] chunk_id=连锁企业的商业模式和股权模式_chunk_001 fallback_count=0 total_in_response=0 updated_count=0
+2026-04-27T14:24:21.619836Z [info     ] Merged new relationships       [chunks2skus.extractors.relational_extractor] chunk_id=连锁企业的商业模式和股权模式_chunk_001 count=17
+2026-04-27T14:24:21.620835Z [info     ] Relationship predicate distribution [chunks2skus.extractors.relational_extractor] distribution={'example-of': 4, 'superset-of': 9, 'certifies': 1, 'enables': 3} total=17
+2026-04-27T14:24:21.620835Z [warning  ] Predicate ratio exceeds 30%    [chunks2skus.extractors.relational_extractor] count=9 predicate=superset-of ratio=52.9% total=17
+2026-04-27T14:24:21.624822Z [info     ] Relational extraction complete [chunks2skus.extractors.relational_extractor] chunk_id=连锁企业的商业模式和股权模式_chunk_001 labels=9 relationships=17 terms=17
+2026-04-27T14:24:21.627321Z [info     ] Chunk processed                [chunks2skus.pipeline] chunk_id=连锁企业的商业模式和股权模式_chunk_001 new_skus=39 total_skus=39
+2026-04-27T14:24:21.628333Z [info     ] Relational consumer phase complete [chunks2skus.pipeline] duration_seconds=85.3 note='overlaps with FP phase in pipeline wall-clock'
+2026-04-27T14:24:21.628333Z [info     ] Running meta extraction batch  [chunks2skus.pipeline] chunks=1 new_skus=39 total_content_chars=6029
+2026-04-27T14:24:21.629330Z [info     ] Extracting meta knowledge      [chunks2skus.extractors.meta_extractor] chunk_ids=连锁企业的商业模式和股权模式_chunk_001
+2026-04-27T14:24:21.630329Z [info     ] [MONITOR] Creating thread-local OpenAI client [chunks2skus.utils.llm_client] base_url=https://ark.cn-beijing.volces.com/api/v3 thread=ThreadPoolExecutor-2_0
+2026-04-27T14:24:21.630329Z [info     ] [MONITOR] Creating thread-local OpenAI client [chunks2skus.utils.llm_client] base_url=https://ark.cn-beijing.volces.com/api/v3 thread=ThreadPoolExecutor-2_1
+2026-04-27T14:24:23.081813Z [info     ] [MONITOR] Starting LLM call    [chunks2skus.utils.llm_client] attempt=0 max_tokens=32000 model=doubao-seed-2-0-pro-260215 prompt_length=4272 temperature=0.2
+2026-04-27T14:24:23.097579Z [info     ] [MONITOR] Starting LLM call    [chunks2skus.utils.llm_client] attempt=0 max_tokens=32000 model=doubao-seed-2-0-pro-260215 prompt_length=8353 temperature=0.7
+2026-04-27T14:25:09.067339Z [info     ] [MONITOR] LLM call SUCCESS     [chunks2skus.utils.llm_client] attempt=0 finish_reason=stop model=doubao-seed-2-0-pro-260215 response_length=873
+2026-04-27T14:25:09.068860Z [info     ] Updated eureka.md              [chunks2skus.extractors.meta_extractor] chunk_ids=连锁企业的商业模式和股权模式_chunk_001 new_size=873 old_size=42
+2026-04-27T14:25:32.487868Z [info     ] [MONITOR] LLM call SUCCESS     [chunks2skus.utils.llm_client] attempt=0 finish_reason=stop model=doubao-seed-2-0-pro-260215 response_length=1992
+2026-04-27T14:25:32.494940Z [warning  ] Header-mapping title mismatch  [chunks2skus.extractors.meta_extractor] header_title=chain-store-franchisee-recruitment-workf mapping_line='- `procedural/skill_001`: 需要拓展连锁加盟网络、快速建立渠道覆盖时查阅' sku_path=skill_001
+2026-04-27T14:25:32.496934Z [warning  ] Header-mapping title mismatch  [chunks2skus.extractors.meta_extractor] header_title=brand-naming-optimization-process mapping_line='- `procedural/skill_002`: 需要为新品牌/新产品命名、降低传播成本时查阅' sku_path=skill_002
+2026-04-27T14:25:32.497930Z [warning  ] Header-mapping title mismatch  [chunks2skus.extractors.meta_extractor] header_title=upstream-downstream-equity-incentive-pro mapping_line='- `procedural/skill_003`: 需要绑定供应商、经销商利益，提升产业链协同效率时查阅' sku_path=skill_003
+2026-04-27T14:25:32.499432Z [warning  ] Header-mapping title mismatch  [chunks2skus.extractors.meta_extractor] header_title=chain-store-participation-to-control-exp mapping_line='- `procedural/skill_004`: 需要低风险快速扩张连锁规模、整合行业资源时查阅' sku_path=skill_004
+2026-04-27T14:25:32.500431Z [warning  ] Header-mapping title mismatch  [chunks2skus.extractors.meta_extractor] header_title=chain-store-financing-operation-process mapping_line='- `procedural/skill_005`: 需要对接资本、为连锁企业获得股权融资时查阅' sku_path=skill_005
+2026-04-27T14:25:32.501428Z [warning  ] Header-mapping title mismatch  [chunks2skus.extractors.meta_extractor] header_title=catering-chain-standardization-construct mapping_line='- `procedural/skill_006`: 需要为餐饮企业搭建可复制连锁体系、降低人才依赖时查阅' sku_path=skill_006
+2026-04-27T14:25:32.502425Z [warning  ] Header-mapping title mismatch  [chunks2skus.extractors.meta_extractor] header_title=chain-store-cost-reduction-workflow mapping_line='- `procedural/skill_007`: 需要降低连锁企业运营成本、提升利润率时查阅' sku_path=skill_007
+2026-04-27T14:25:32.502425Z [warning  ] Header-mapping title mismatch  [chunks2skus.extractors.meta_extractor] header_title=brand-communication-strategy-formulation mapping_line='- `procedural/skill_008`: 需要制定品牌传播方案、提升品牌认知和市场份额时查阅' sku_path=skill_008
+2026-04-27T14:25:32.507674Z [warning  ] Header-mapping title mismatch  [chunks2skus.extractors.meta_extractor] header_title=chain-store-control-right-protection-pro mapping_line='- `procedural/skill_009`: 需要在连锁企业股权融资、并购扩张时保护创始人控制权时查阅' sku_path=skill_009
+2026-04-27T14:25:32.508178Z [warning  ] Header-mapping title mismatch  [chunks2skus.extractors.meta_extractor] header_title=education-chain-master-apprentice-fissio mapping_line='- `procedural/skill_010`: 需要为教育培训类连锁企业快速裂变校区、提升团队积极性时查阅' sku_path=skill_010
+2026-04-27T14:25:32.509177Z [warning  ] Header-mapping title mismatch  [chunks2skus.extractors.meta_extractor] header_title=b-end-c-end-brand-construction-process mapping_line='- `procedural/skill_011`: 需要针对B端或C端客群搭建品牌体系时查阅' sku_path=skill_011
+2026-04-27T14:25:32.511173Z [info     ] Updated mapping.md (diff merge) [chunks2skus.extractors.meta_extractor] chunk_id=连锁企业的商业模式和股权模式_chunk_001 diff_lines=44 new_size=2037 old_size=57
+2026-04-27T14:25:32.513166Z [info     ] Meta extraction complete       [chunks2skus.extractors.meta_extractor] chunk_ids=连锁企业的商业模式和股权模式_chunk_001 eureka_chars=873 mapping_chars=2037
+2026-04-27T14:25:32.514164Z [info     ] Extraction pipeline complete   [chunks2skus.pipeline] chunks_processed=1 duration_seconds=575.2 total_characters=43014 total_skus=40

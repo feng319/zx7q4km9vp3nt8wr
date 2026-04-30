@@ -1,0 +1,12 @@
+2026-04-29T14:30:10.816937Z [info     ] Starting spec chatbot          [skus2ontology.chatbot] max_rounds=5
+2026-04-29T14:30:10.821398Z [info     ] Built name_to_path lookup      [skus2ontology.chatbot] entries=958
+2026-04-29T14:30:10.823453Z [info     ] slug→path inline resolution    [skus2ontology.chatbot] matched=944 total_lines=971
+2026-04-29T14:30:10.824476Z [info     ] Loaded mapping.md (compressed) [skus2ontology.chatbot] compressed_chars=29995 original_chars=49322
+2026-04-29T14:30:10.825102Z [info     ] Loaded eureka.md               [skus2ontology.chatbot] chars=16728
+2026-04-29T14:43:17.783949Z [warning  ] SKU index summary truncated    [skus2ontology.chatbot] limit=25000 original_chars=65604
+2026-04-29T14:43:17.783949Z [info     ] Built SKU index summary        [skus2ontology.chatbot] chars=25004 sku_count=962
+2026-04-29T14:45:04.659151Z [info     ] Phase 2 anchor replacement complete [skus2ontology.chatbot] draft_chars=6950 final_chars=6932
+2026-04-29T14:45:04.659719Z [info     ] Remaining anchors              [skus2ontology.chatbot] count=92 sample=['【锚点：利益共同体长效激励机制设计规则】', '【锚点：细分领域心智占位溢价规律】', '【锚点：以租代购结合履约保函的金融供应链模式操作逻辑及各方收益】', '【锚点：平台模式核心风险、价值基础及不同行业的应用困境与参考案例】', '【锚点：类金融模式信用杠杆操作方法、上市前财务要求及行业机会】', '【锚点：数据资产估值溢价规律】', '【锚点：盈利点优先级筛选规则】', '【锚点：以租代购结合履约保函的金融供应链模式操作逻辑及各方收益】', '【锚点：类金融预收款扩张机制设计规则】', '【锚点：To B、To C、To G三类生意目标客群、核心要求及典型案例】']
+2026-04-29T14:45:04.661722Z [info     ] Backed up existing spec.md     [skus2ontology.chatbot] backup='G:\\Program Files\\AI coding\\知识萃取\\商业模式资本\\输出\\ontology\\spec.md.bak.20260429_224504'
+2026-04-29T14:45:04.662720Z [info     ] Saved spec.md                  [skus2ontology.chatbot] chars=6932 path='G:\\Program Files\\AI coding\\知识萃取\\商业模式资本\\输出\\ontology\\spec.md'
+2026-04-29T14:45:04.665235Z [info     ] Saved chat log                 [skus2ontology.pipeline] confirmed=False path='G:\\Program Files\\AI coding\\知识萃取\\商业模式资本\\输出\\ontology\\chat_log.json' rounds=5

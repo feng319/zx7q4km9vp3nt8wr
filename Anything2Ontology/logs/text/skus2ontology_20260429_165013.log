@@ -1,0 +1,5 @@
+2026-04-29T08:50:13.882228Z [info     ] Starting ontology pipeline     [skus2ontology.pipeline] ontology_dir='G:\\Program Files\\AI coding\\知识萃取\\战略分析\\输出\\ontology' skip_chatbot=False skus_dir='G:\\Program Files\\AI coding\\知识萃取\\战略分析\\输出\\skus'
+2026-04-29T08:50:13.884428Z [info     ] Starting ontology assembly     [skus2ontology.assembler] ontology_dir='G:\\Program Files\\AI coding\\知识萃取\\战略分析\\输出\\ontology' skus_dir='G:\\Program Files\\AI coding\\知识萃取\\战略分析\\输出\\skus'
+2026-04-29T08:50:14.296062Z [info     ] Copied directory               [skus2ontology.assembler] files=258 subdir=factual
+2026-04-29T08:50:14.492428Z [info     ] Copied directory               [skus2ontology.assembler] files=92 subdir=procedural
+2026-04-29T08:50:14.501470Z [info     ] Copied directory               [skus2ontology.assembler] files=4 subdir=relational

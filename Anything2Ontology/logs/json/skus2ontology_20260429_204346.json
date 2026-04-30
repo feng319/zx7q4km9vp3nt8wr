@@ -1,0 +1,3 @@
+{"max_rounds": 5, "event": "Starting spec chatbot", "logger": "skus2ontology.chatbot", "level": "info", "timestamp": "2026-04-29T12:43:46.701641Z"}
+{"original_chars": 9125, "compressed_chars": 9073, "event": "Loaded mapping.md (compressed)", "logger": "skus2ontology.chatbot", "level": "info", "timestamp": "2026-04-29T12:43:46.717187Z"}
+{"chars": 1781, "event": "Loaded eureka.md", "logger": "skus2ontology.chatbot", "level": "info", "timestamp": "2026-04-29T12:43:46.729097Z"}

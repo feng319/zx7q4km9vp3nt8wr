@@ -1,0 +1,21 @@
+2026-04-24T10:04:37.774565Z [info     ] Starting extraction pipeline   [chunks2skus.pipeline] chunks_dir='G:\\Program Files\\AI coding\\知识萃取\\输出\\chunks' output_dir=output\skus
+2026-04-24T10:04:37.780168Z [info     ] Loaded chunks                  [chunks2skus.router] count=40
+2026-04-24T10:04:37.780168Z [info     ] Processing chunks              [chunks2skus.pipeline] total=40
+2026-04-24T10:04:37.781171Z [info     ] Processing chunk               [chunks2skus.pipeline] chunk_id=企业战略与财富增长创新蓝宝书_chunk_018 progress=20/40
+2026-04-24T10:04:37.782174Z [info     ] Processing chunk               [chunks2skus.router] chunk_id=企业战略与财富增长创新蓝宝书_chunk_018 title=首轮理管商博排布 tokens=5785
+2026-04-24T10:04:37.789911Z [info     ] Extracting factual knowledge   [chunks2skus.extractors.factual_extractor] chunk_id=企业战略与财富增长创新蓝宝书_chunk_018
+2026-04-24T10:04:39.412352Z [info     ] Model does not support response_format parameter, error detected [chunks2skus.utils.llm_client] error="Error code: 400 - {'error': {'code': 'InvalidParameter', 'message': 'The parameter `response_format.type` specified in the request are not valid: `json_object` is not supported by this model. Request " model=ep-m-20260320122633-qplf7
+2026-04-24T10:04:39.414820Z [info     ] Model does not support JSON mode, caching and retrying without it [chunks2skus.utils.llm_client] model=ep-m-20260320122633-qplf7
+2026-04-24T10:04:43.158267Z [error    ] Extractor failed               [chunks2skus.router] chunk_id=企业战略与财富增长创新蓝宝书_chunk_018 error="name 'parse_json_json_response' is not defined" extractor=factual
+2026-04-24T10:04:43.159273Z [info     ] Extracting relational knowledge [chunks2skus.extractors.relational_extractor] chunk_id=企业战略与财富增长创新蓝宝书_chunk_018
+2026-04-24T10:06:07.460035Z [error    ] Extractor failed               [chunks2skus.router] chunk_id=企业战略与财富增长创新蓝宝书_chunk_018 error="name 'parse_json_json_response' is not defined" extractor=relational
+2026-04-24T10:06:07.462045Z [info     ] Extracting procedural knowledge [chunks2skus.extractors.procedural_extractor] chunk_id=企业战略与财富增长创新蓝宝书_chunk_018
+2026-04-24T10:06:12.567366Z [error    ] Extractor failed               [chunks2skus.router] chunk_id=企业战略与财富增长创新蓝宝书_chunk_018 error="name 'parse_json_json_response' is not defined" extractor=procedural
+2026-04-24T10:06:12.572358Z [info     ] Extracting meta knowledge      [chunks2skus.extractors.meta_extractor] chunk_id=企业战略与财富增长创新蓝宝书_chunk_018
+2026-04-24T10:07:02.897163Z [error    ] Extractor failed               [chunks2skus.router] chunk_id=企业战略与财富增长创新蓝宝书_chunk_018 error="name 'parse_json_json_response' is not defined" extractor=meta
+2026-04-24T10:07:02.899822Z [info     ] Chunk processed                [chunks2skus.pipeline] chunk_id=企业战略与财富增长创新蓝宝书_chunk_018 new_skus=0 total_skus=63
+2026-04-24T10:07:02.902589Z [info     ] Processing chunk               [chunks2skus.pipeline] chunk_id=企业战略与财富增长创新蓝宝书_chunk_019 progress=21/40
+2026-04-24T10:07:02.903623Z [info     ] Processing chunk               [chunks2skus.router] chunk_id=企业战略与财富增长创新蓝宝书_chunk_019 title=第一组理管商博内容 tokens=5785
+2026-04-24T10:07:02.915314Z [info     ] Extracting factual knowledge   [chunks2skus.extractors.factual_extractor] chunk_id=企业战略与财富增长创新蓝宝书_chunk_019
+2026-04-24T10:07:11.247904Z [error    ] Extractor failed               [chunks2skus.router] chunk_id=企业战略与财富增长创新蓝宝书_chunk_019 error="name 'parse_json_json_response' is not defined" extractor=factual
+2026-04-24T10:07:11.249333Z [info     ] Extracting relational knowledge [chunks2skus.extractors.relational_extractor] chunk_id=企业战略与财富增长创新蓝宝书_chunk_019

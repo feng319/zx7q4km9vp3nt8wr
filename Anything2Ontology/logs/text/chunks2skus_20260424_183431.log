@@ -1,0 +1,21 @@
+2026-04-24T10:34:31.814820Z [info     ] Starting extraction pipeline   [chunks2skus.pipeline] chunks_dir='G:\\Program Files\\AI coding\\知识萃取\\输出\\chunks' output_dir=output\skus
+2026-04-24T10:34:31.816874Z [info     ] Loaded chunks                  [chunks2skus.router] count=40
+2026-04-24T10:34:31.816874Z [info     ] Processing chunks              [chunks2skus.pipeline] total=40
+2026-04-24T10:34:31.817991Z [info     ] Processing chunk               [chunks2skus.pipeline] chunk_id=企业战略与财富增长创新蓝宝书_chunk_021 progress=23/40
+2026-04-24T10:34:31.817991Z [info     ] Processing chunk               [chunks2skus.router] chunk_id=企业战略与财富增长创新蓝宝书_chunk_021 title=第一组理管商博块 tokens=5785
+2026-04-24T10:34:31.820508Z [info     ] Extracting factual knowledge   [chunks2skus.extractors.factual_extractor] chunk_id=企业战略与财富增长创新蓝宝书_chunk_021
+2026-04-24T10:34:32.966946Z [info     ] Attempting call with responses API and response_format [chunks2skus.utils.llm_client] format={'type': 'json_object'} model=doubao-seed-2-0-pro-260215
+2026-04-24T10:34:32.966946Z [info     ] Trying responses API (火山引擎)    [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215
+2026-04-24T10:34:33.207157Z [info     ] Attempting chat API with response_format [chunks2skus.utils.llm_client] format={'type': 'json_object'} model=doubao-seed-2-0-pro-260215
+2026-04-24T10:34:33.208155Z [info     ] Making chat API call (fallback) [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215
+2026-04-24T10:34:33.469337Z [info     ] Model does not support response_format parameter, error detected [chunks2skus.utils.llm_client] error="Error code: 400 - {'error': {'code': 'InvalidParameter', 'message': 'The parameter `response_format.type` specified in the request are not valid: `json_object` is not supported by this model. Request " model=doubao-seed-2-0-pro-260215
+2026-04-24T10:34:33.470331Z [info     ] Model does not support JSON mode, caching and retrying without it [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215
+2026-04-24T10:34:33.472545Z [info     ] Trying responses API (火山引擎)    [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215
+2026-04-24T10:34:33.474561Z [info     ] Making chat API call (fallback) [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215
+2026-04-24T10:34:43.722985Z [info     ] Chat API call successful       [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215 response_length=13
+2026-04-24T10:34:43.723988Z [info     ] Successfully parsed JSON response [chunks2skus.utils.llm_client] keys=['facts']
+2026-04-24T10:34:43.723988Z [info     ] Facts array details            [chunks2skus.utils.llm_client] count=0 preview=[]
+2026-04-24T10:34:43.724990Z [info     ] No factual knowledge found in chunk [chunks2skus.extractors.factual_extractor] chunk_id=企业战略与财富增长创新蓝宝书_chunk_021
+2026-04-24T10:34:43.725987Z [info     ] Extracting relational knowledge [chunks2skus.extractors.relational_extractor] chunk_id=企业战略与财富增长创新蓝宝书_chunk_021
+2026-04-24T10:34:43.726489Z [info     ] Trying responses API (火山引擎)    [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215
+2026-04-24T10:34:43.728659Z [info     ] Making chat API call (fallback) [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215

@@ -1,0 +1,228 @@
+2026-04-29T01:57:22.619393Z [info     ] Force reset: clearing existing index for full re-extraction [chunks2skus.pipeline]
+2026-04-29T01:57:22.619393Z [info     ] Starting extraction pipeline   [chunks2skus.pipeline] chunks_dir='G:\\Program Files\\AI coding\\知识萃取\\战略分析\\输出\\chunks' force_reset=True output_dir='G:\\Program Files\\AI coding\\知识萃取\\战略分析\\输出\\skus'
+2026-04-29T01:57:22.621925Z [info     ] Deleted state file for force reset [chunks2skus.pipeline] path='G:\\Program Files\\AI coding\\知识萃取\\战略分析\\输出\\skus\\meta\\mapping.md'
+2026-04-29T01:57:22.623428Z [info     ] Deleted state file for force reset [chunks2skus.pipeline] path='G:\\Program Files\\AI coding\\知识萃取\\战略分析\\输出\\skus\\meta\\eureka.md'
+2026-04-29T01:57:22.626050Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path='G:\\Program Files\\AI coding\\知识萃取\\战略分析\\输出\\skus\\factual\\sku_001'
+2026-04-29T01:57:22.627177Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path='G:\\Program Files\\AI coding\\知识萃取\\战略分析\\输出\\skus\\factual\\sku_002'
+2026-04-29T01:57:22.628482Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path='G:\\Program Files\\AI coding\\知识萃取\\战略分析\\输出\\skus\\factual\\sku_003'
+2026-04-29T01:57:22.629984Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path='G:\\Program Files\\AI coding\\知识萃取\\战略分析\\输出\\skus\\factual\\sku_004'
+2026-04-29T01:57:22.631121Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path='G:\\Program Files\\AI coding\\知识萃取\\战略分析\\输出\\skus\\factual\\sku_005'
+2026-04-29T01:57:22.633838Z [info     ] Loaded chunks                  [chunks2skus.router] count=6
+2026-04-29T01:57:22.635222Z [info     ] Processing chunks              [chunks2skus.pipeline] total=6
+2026-04-29T01:57:22.636225Z [info     ] Submitting chunk for Factual/Procedural [chunks2skus.pipeline] chunk_id=2026六大新兴产业发展形势展望_chunk_001
+2026-04-29T01:57:22.636225Z [info     ] Submitting chunk for Factual/Procedural [chunks2skus.pipeline] chunk_id=BSC七步法：设计企业的战略地图_chunk_001
+2026-04-29T01:57:22.637325Z [info     ] Extracting factual knowledge   [chunks2skus.extractors.factual_extractor] chunk_id=2026六大新兴产业发展形势展望_chunk_001
+2026-04-29T01:57:22.637325Z [info     ] [MONITOR] call_llm_json starting [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215
+2026-04-29T01:57:22.637325Z [info     ] Submitting chunk for Factual/Procedural [chunks2skus.pipeline] chunk_id=企业战略与财富增长创新蓝宝书_chunk_001
+2026-04-29T01:57:22.637325Z [info     ] Extracting factual knowledge   [chunks2skus.extractors.factual_extractor] chunk_id=BSC七步法：设计企业的战略地图_chunk_001
+2026-04-29T01:57:22.638438Z [info     ] [MONITOR] Creating thread-local OpenAI client [chunks2skus.utils.llm_client] base_url=https://ark.cn-beijing.volces.com/api/v3 thread=ThreadPoolExecutor-1_0
+2026-04-29T01:57:22.639509Z [info     ] [MONITOR] call_llm_json starting [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215
+2026-04-29T01:57:22.639509Z [info     ] Submitting chunk for Factual/Procedural [chunks2skus.pipeline] chunk_id=企业战略与财富增长创新蓝宝书_chunk_002
+2026-04-29T01:57:22.639509Z [info     ] Extracting factual knowledge   [chunks2skus.extractors.factual_extractor] chunk_id=企业战略与财富增长创新蓝宝书_chunk_001
+2026-04-29T01:57:22.641838Z [info     ] [MONITOR] Creating thread-local OpenAI client [chunks2skus.utils.llm_client] base_url=https://ark.cn-beijing.volces.com/api/v3 thread=ThreadPoolExecutor-1_1
+2026-04-29T01:57:22.645379Z [info     ] [MONITOR] call_llm_json starting [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215
+2026-04-29T01:57:22.645379Z [info     ] Submitting chunk for Factual/Procedural [chunks2skus.pipeline] chunk_id=玥堂主【投资&创新】200+思维套图合集_chunk_001
+2026-04-29T01:57:22.646385Z [info     ] Extracting factual knowledge   [chunks2skus.extractors.factual_extractor] chunk_id=企业战略与财富增长创新蓝宝书_chunk_002
+2026-04-29T01:57:22.646385Z [info     ] [MONITOR] Creating thread-local OpenAI client [chunks2skus.utils.llm_client] base_url=https://ark.cn-beijing.volces.com/api/v3 thread=ThreadPoolExecutor-1_2
+2026-04-29T01:57:22.646385Z [info     ] Submitting chunk for Factual/Procedural [chunks2skus.pipeline] chunk_id=科技战略与投资策略10个建议与5大误区_chunk_001
+2026-04-29T01:57:22.647680Z [info     ] [MONITOR] call_llm_json starting [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215
+2026-04-29T01:57:22.648835Z [info     ] [MONITOR] Creating thread-local OpenAI client [chunks2skus.utils.llm_client] base_url=https://ark.cn-beijing.volces.com/api/v3 thread=ThreadPoolExecutor-1_3
+2026-04-29T01:57:24.271984Z [info     ] [MONITOR] Starting LLM call    [chunks2skus.utils.llm_client] attempt=0 max_tokens=64000 model=doubao-seed-2-0-pro-260215 prompt_length=30598 temperature=0.3
+2026-04-29T01:57:24.290230Z [info     ] [MONITOR] Starting LLM call    [chunks2skus.utils.llm_client] attempt=0 max_tokens=64000 model=doubao-seed-2-0-pro-260215 prompt_length=78571 temperature=0.3
+2026-04-29T01:57:24.297382Z [info     ] [MONITOR] Starting LLM call    [chunks2skus.utils.llm_client] attempt=0 max_tokens=64000 model=doubao-seed-2-0-pro-260215 prompt_length=5111 temperature=0.3
+2026-04-29T01:57:24.301839Z [info     ] [MONITOR] Starting LLM call    [chunks2skus.utils.llm_client] attempt=0 max_tokens=64000 model=doubao-seed-2-0-pro-260215 prompt_length=63493 temperature=0.3
+2026-04-29T01:58:39.530227Z [info     ] [MONITOR] LLM call SUCCESS     [chunks2skus.utils.llm_client] attempt=0 finish_reason=stop model=doubao-seed-2-0-pro-260215 response_length=2393
+2026-04-29T01:58:39.531226Z [info     ] [MONITOR] JSON parse SUCCESS   [chunks2skus.utils.llm_client] keys=['facts']
+2026-04-29T01:58:39.553157Z [info     ] Factual extraction complete    [chunks2skus.extractors.factual_extractor] chunk_id=BSC七步法：设计企业的战略地图_chunk_001 skus_created=5
+2026-04-29T01:58:39.553157Z [info     ] Extracting procedural knowledge [chunks2skus.extractors.procedural_extractor] chunk_id=BSC七步法：设计企业的战略地图_chunk_001
+2026-04-29T01:58:39.557171Z [info     ] [MONITOR] call_llm_json starting [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215
+2026-04-29T01:58:39.560114Z [info     ] [MONITOR] Starting LLM call    [chunks2skus.utils.llm_client] attempt=0 max_tokens=64000 model=doubao-seed-2-0-pro-260215 prompt_length=4472 temperature=0.3
+2026-04-29T01:59:26.171608Z [info     ] [MONITOR] LLM call SUCCESS     [chunks2skus.utils.llm_client] attempt=0 finish_reason=stop model=doubao-seed-2-0-pro-260215 response_length=1592
+2026-04-29T01:59:26.173874Z [info     ] [MONITOR] JSON parse SUCCESS   [chunks2skus.utils.llm_client] keys=['procedures']
+2026-04-29T01:59:26.188742Z [info     ] Procedural extraction complete [chunks2skus.extractors.procedural_extractor] chunk_id=BSC七步法：设计企业的战略地图_chunk_001 skills_created=2
+2026-04-29T01:59:26.189820Z [info     ] Extracting relational knowledge [chunks2skus.extractors.relational_extractor] chunk_id=BSC七步法：设计企业的战略地图_chunk_001
+2026-04-29T01:59:26.189820Z [info     ] Extracting factual knowledge   [chunks2skus.extractors.factual_extractor] chunk_id=玥堂主【投资&创新】200+思维套图合集_chunk_001
+2026-04-29T01:59:26.191303Z [info     ] Relational context size        [chunks2skus.extractors.relational_extractor] alias_map_chars=5 chunk_id=BSC七步法：设计企业的战略地图_chunk_001 glossary_count=0 label_nodes_count=0 label_tree_chars=0 relevant_relations_chars=9 term_list_chars=0
+2026-04-29T01:59:26.191303Z [info     ] [MONITOR] call_llm_json starting [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215
+2026-04-29T01:59:26.191303Z [info     ] [MONITOR] call_llm_json starting [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215
+2026-04-29T01:59:26.192706Z [info     ] [MONITOR] Starting LLM call    [chunks2skus.utils.llm_client] attempt=0 max_tokens=64000 model=doubao-seed-2-0-pro-260215 prompt_length=35310 temperature=0.3
+2026-04-29T01:59:26.192706Z [info     ] [MONITOR] Creating thread-local OpenAI client [chunks2skus.utils.llm_client] base_url=https://ark.cn-beijing.volces.com/api/v3 thread='Thread-1 (relational_consumer)'
+2026-04-29T01:59:27.337510Z [info     ] [MONITOR] Starting LLM call    [chunks2skus.utils.llm_client] attempt=0 max_tokens=128000 model=doubao-seed-2-0-pro-260215 prompt_length=5650 temperature=0.3
+2026-04-29T02:00:11.958200Z [warning  ] [MONITOR] LLM call retryable API error [chunks2skus.utils.llm_client] attempt=0 max_attempts=2 status_code=429
+2026-04-29T02:00:21.427074Z [info     ] [MONITOR] LLM call SUCCESS     [chunks2skus.utils.llm_client] attempt=0 finish_reason=stop model=doubao-seed-2-0-pro-260215 response_length=6131
+2026-04-29T02:00:21.428081Z [info     ] [MONITOR] JSON parse SUCCESS   [chunks2skus.utils.llm_client] keys=['facts']
+2026-04-29T02:00:21.482541Z [info     ] Factual extraction complete    [chunks2skus.extractors.factual_extractor] chunk_id=企业战略与财富增长创新蓝宝书_chunk_001 skus_created=15
+2026-04-29T02:00:21.483537Z [info     ] Extracting procedural knowledge [chunks2skus.extractors.procedural_extractor] chunk_id=企业战略与财富增长创新蓝宝书_chunk_001
+2026-04-29T02:00:21.486000Z [info     ] [MONITOR] call_llm_json starting [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215
+2026-04-29T02:00:21.486000Z [info     ] [MONITOR] Starting LLM call    [chunks2skus.utils.llm_client] attempt=0 max_tokens=64000 model=doubao-seed-2-0-pro-260215 prompt_length=29959 temperature=0.3
+2026-04-29T02:00:23.498295Z [warning  ] [MONITOR] LLM call retryable API error [chunks2skus.utils.llm_client] attempt=0 max_attempts=2 status_code=429
+2026-04-29T02:01:03.390532Z [info     ] [MONITOR] LLM call SUCCESS     [chunks2skus.utils.llm_client] attempt=0 finish_reason=stop model=doubao-seed-2-0-pro-260215 response_length=3140
+2026-04-29T02:01:03.391037Z [info     ] [MONITOR] JSON parse SUCCESS   [chunks2skus.utils.llm_client] keys=['new_labels', 'new_glossary', 'updated_glossary', 'new_relationships']
+2026-04-29T02:01:03.397223Z [info     ] Added new labels               [chunks2skus.extractors.relational_extractor] chunk_id=BSC七步法：设计企业的战略地图_chunk_001 count=5
+2026-04-29T02:01:03.399308Z [info     ] Merged new glossary entries    [chunks2skus.extractors.relational_extractor] chunk_id=BSC七步法：设计企业的战略地图_chunk_001 count=6
+2026-04-29T02:01:03.399308Z [info     ] Updated existing glossary entries [chunks2skus.extractors.relational_extractor] chunk_id=BSC七步法：设计企业的战略地图_chunk_001 fallback_count=0 total_in_response=0 updated_count=0
+2026-04-29T02:01:03.400811Z [info     ] Merged new relationships       [chunks2skus.extractors.relational_extractor] chunk_id=BSC七步法：设计企业的战略地图_chunk_001 count=15
+2026-04-29T02:01:03.401819Z [info     ] Relationship predicate distribution [chunks2skus.extractors.relational_extractor] distribution={'superset-of': 2, 'has-a': 4, 'enables': 3, 'requires': 2, 'example-of': 4} total=15
+2026-04-29T02:01:03.404496Z [info     ] Relational extraction complete [chunks2skus.extractors.relational_extractor] chunk_id=BSC七步法：设计企业的战略地图_chunk_001 labels=5 relationships=15 terms=6
+2026-04-29T02:01:03.406927Z [info     ] Chunk processed                [chunks2skus.pipeline] chunk_id=BSC七步法：设计企业的战略地图_chunk_001 new_skus=8 total_skus=8
+2026-04-29T02:01:11.959189Z [warning  ] [MONITOR] Retrying LLM call    [chunks2skus.utils.llm_client] attempt=1 max_retries=1 model=doubao-seed-2-0-pro-260215
+2026-04-29T02:01:23.501041Z [warning  ] [MONITOR] Retrying LLM call    [chunks2skus.utils.llm_client] attempt=1 max_retries=1 model=doubao-seed-2-0-pro-260215
+2026-04-29T02:01:26.960427Z [info     ] [MONITOR] Starting LLM call    [chunks2skus.utils.llm_client] attempt=1 max_tokens=64000 model=doubao-seed-2-0-pro-260215 prompt_length=35310 temperature=0.3
+2026-04-29T02:01:31.052247Z [info     ] [MONITOR] LLM call SUCCESS     [chunks2skus.utils.llm_client] attempt=0 finish_reason=stop model=doubao-seed-2-0-pro-260215 response_length=8079
+2026-04-29T02:01:31.054518Z [info     ] [MONITOR] JSON parse SUCCESS   [chunks2skus.utils.llm_client] keys=['facts']
+2026-04-29T02:01:31.095348Z [info     ] Factual extraction complete    [chunks2skus.extractors.factual_extractor] chunk_id=2026六大新兴产业发展形势展望_chunk_001 skus_created=15
+2026-04-29T02:01:31.096646Z [info     ] Extracting procedural knowledge [chunks2skus.extractors.procedural_extractor] chunk_id=2026六大新兴产业发展形势展望_chunk_001
+2026-04-29T02:01:31.097865Z [info     ] [MONITOR] call_llm_json starting [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215
+2026-04-29T02:01:31.097865Z [info     ] [MONITOR] Starting LLM call    [chunks2skus.utils.llm_client] attempt=0 max_tokens=64000 model=doubao-seed-2-0-pro-260215 prompt_length=62854 temperature=0.3
+2026-04-29T02:01:38.502611Z [info     ] [MONITOR] Starting LLM call    [chunks2skus.utils.llm_client] attempt=1 max_tokens=64000 model=doubao-seed-2-0-pro-260215 prompt_length=29959 temperature=0.3
+2026-04-29T02:02:02.251454Z [info     ] [MONITOR] LLM call SUCCESS     [chunks2skus.utils.llm_client] attempt=0 finish_reason=stop model=doubao-seed-2-0-pro-260215 response_length=12414
+2026-04-29T02:02:02.253456Z [info     ] [MONITOR] JSON parse SUCCESS   [chunks2skus.utils.llm_client] keys=['facts']
+2026-04-29T02:02:02.344664Z [info     ] Factual extraction complete    [chunks2skus.extractors.factual_extractor] chunk_id=企业战略与财富增长创新蓝宝书_chunk_002 skus_created=23
+2026-04-29T02:02:02.345663Z [info     ] Extracting procedural knowledge [chunks2skus.extractors.procedural_extractor] chunk_id=企业战略与财富增长创新蓝宝书_chunk_002
+2026-04-29T02:02:02.346663Z [info     ] [MONITOR] call_llm_json starting [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215
+2026-04-29T02:02:02.347664Z [info     ] [MONITOR] Starting LLM call    [chunks2skus.utils.llm_client] attempt=0 max_tokens=64000 model=doubao-seed-2-0-pro-260215 prompt_length=77932 temperature=0.3
+2026-04-29T02:03:05.365322Z [info     ] [MONITOR] LLM call SUCCESS     [chunks2skus.utils.llm_client] attempt=1 finish_reason=stop model=doubao-seed-2-0-pro-260215 response_length=3063
+2026-04-29T02:03:05.366334Z [info     ] [MONITOR] JSON parse SUCCESS   [chunks2skus.utils.llm_client] keys=['procedures']
+2026-04-29T02:03:05.507304Z [info     ] Procedural extraction complete [chunks2skus.extractors.procedural_extractor] chunk_id=企业战略与财富增长创新蓝宝书_chunk_001 skills_created=6
+2026-04-29T02:03:05.508303Z [info     ] Extracting relational knowledge [chunks2skus.extractors.relational_extractor] chunk_id=企业战略与财富增长创新蓝宝书_chunk_001
+2026-04-29T02:03:05.509302Z [info     ] Extracting factual knowledge   [chunks2skus.extractors.factual_extractor] chunk_id=科技战略与投资策略10个建议与5大误区_chunk_001
+2026-04-29T02:03:05.510301Z [info     ] Relational context size        [chunks2skus.extractors.relational_extractor] alias_map_chars=74 chunk_id=企业战略与财富增长创新蓝宝书_chunk_001 glossary_count=6 label_nodes_count=5 label_tree_chars=36 relevant_relations_chars=44 term_list_chars=42
+2026-04-29T02:03:05.510301Z [info     ] [MONITOR] call_llm_json starting [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215
+2026-04-29T02:03:05.511803Z [info     ] [MONITOR] call_llm_json starting [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215
+2026-04-29T02:03:05.512801Z [info     ] [MONITOR] Starting LLM call    [chunks2skus.utils.llm_client] attempt=0 max_tokens=64000 model=doubao-seed-2-0-pro-260215 prompt_length=16088 temperature=0.3
+2026-04-29T02:03:05.512801Z [info     ] [MONITOR] Starting LLM call    [chunks2skus.utils.llm_client] attempt=0 max_tokens=128000 model=doubao-seed-2-0-pro-260215 prompt_length=31319 temperature=0.3
+2026-04-29T02:03:20.032298Z [info     ] [MONITOR] LLM call SUCCESS     [chunks2skus.utils.llm_client] attempt=0 finish_reason=stop model=doubao-seed-2-0-pro-260215 response_length=3913
+2026-04-29T02:03:20.033296Z [info     ] [MONITOR] JSON parse SUCCESS   [chunks2skus.utils.llm_client] keys=['procedures']
+2026-04-29T02:03:20.063202Z [info     ] Procedural extraction complete [chunks2skus.extractors.procedural_extractor] chunk_id=2026六大新兴产业发展形势展望_chunk_001 skills_created=6
+2026-04-29T02:04:05.594540Z [info     ] [MONITOR] LLM call SUCCESS     [chunks2skus.utils.llm_client] attempt=0 finish_reason=stop model=doubao-seed-2-0-pro-260215 response_length=6936
+2026-04-29T02:04:05.596543Z [info     ] [MONITOR] JSON parse SUCCESS   [chunks2skus.utils.llm_client] keys=['procedures']
+2026-04-29T02:04:05.707180Z [info     ] Procedural extraction complete [chunks2skus.extractors.procedural_extractor] chunk_id=企业战略与财富增长创新蓝宝书_chunk_002 skills_created=12
+2026-04-29T02:04:43.309829Z [info     ] [MONITOR] LLM call SUCCESS     [chunks2skus.utils.llm_client] attempt=0 finish_reason=stop model=doubao-seed-2-0-pro-260215 response_length=2719
+2026-04-29T02:04:43.311969Z [info     ] [MONITOR] JSON parse SUCCESS   [chunks2skus.utils.llm_client] keys=['new_labels', 'new_glossary', 'updated_glossary', 'new_relationships']
+2026-04-29T02:04:43.319482Z [info     ] Added new labels               [chunks2skus.extractors.relational_extractor] chunk_id=企业战略与财富增长创新蓝宝书_chunk_001 count=2
+2026-04-29T02:04:43.319482Z [info     ] Merged new glossary entries    [chunks2skus.extractors.relational_extractor] chunk_id=企业战略与财富增长创新蓝宝书_chunk_001 count=10
+2026-04-29T02:04:43.319482Z [info     ] Updated existing glossary entries [chunks2skus.extractors.relational_extractor] chunk_id=企业战略与财富增长创新蓝宝书_chunk_001 fallback_count=0 total_in_response=0 updated_count=0
+2026-04-29T02:04:43.321913Z [info     ] Merged new relationships       [chunks2skus.extractors.relational_extractor] chunk_id=企业战略与财富增长创新蓝宝书_chunk_001 count=5
+2026-04-29T02:04:43.323313Z [info     ] Relationship predicate distribution [chunks2skus.extractors.relational_extractor] distribution={'superset-of': 4, 'has-a': 4, 'enables': 4, 'requires': 2, 'example-of': 4, 'causes': 2} total=20
+2026-04-29T02:04:43.326530Z [info     ] Relational extraction complete [chunks2skus.extractors.relational_extractor] chunk_id=企业战略与财富增长创新蓝宝书_chunk_001 labels=7 relationships=20 terms=16
+2026-04-29T02:04:43.329460Z [info     ] Chunk processed                [chunks2skus.pipeline] chunk_id=企业战略与财富增长创新蓝宝书_chunk_001 new_skus=22 total_skus=29
+2026-04-29T02:04:43.330465Z [info     ] Extracting relational knowledge [chunks2skus.extractors.relational_extractor] chunk_id=2026六大新兴产业发展形势展望_chunk_001
+2026-04-29T02:04:43.332837Z [info     ] Relational context size        [chunks2skus.extractors.relational_extractor] alias_map_chars=175 chunk_id=2026六大新兴产业发展形势展望_chunk_001 glossary_count=16 label_nodes_count=7 label_tree_chars=52 relevant_relations_chars=17 term_list_chars=105
+2026-04-29T02:04:43.334155Z [info     ] [MONITOR] call_llm_json starting [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215
+2026-04-29T02:04:43.335155Z [info     ] [MONITOR] Starting LLM call    [chunks2skus.utils.llm_client] attempt=0 max_tokens=128000 model=doubao-seed-2-0-pro-260215 prompt_length=64368 temperature=0.3
+2026-04-29T02:05:38.309492Z [info     ] [MONITOR] LLM call SUCCESS     [chunks2skus.utils.llm_client] attempt=0 finish_reason=stop model=doubao-seed-2-0-pro-260215 response_length=5923
+2026-04-29T02:05:38.310494Z [info     ] [MONITOR] JSON parse SUCCESS   [chunks2skus.utils.llm_client] keys=['facts']
+2026-04-29T02:05:38.354108Z [warning  ] Markdown SKU lacks structure markers [chunks2skus.extractors.factual_extractor] chars=55 name=产业资本对科技类企业的投资偏好
+2026-04-29T02:05:38.355609Z [info     ] Skipping trivially short SKU   [chunks2skus.extractors.factual_extractor] chars=55 name=产业资本对科技类企业的投资偏好
+2026-04-29T02:05:38.513661Z [info     ] Factual extraction complete    [chunks2skus.extractors.factual_extractor] chunk_id=科技战略与投资策略10个建议与5大误区_chunk_001 skus_created=17
+2026-04-29T02:05:38.513661Z [info     ] Extracting procedural knowledge [chunks2skus.extractors.procedural_extractor] chunk_id=科技战略与投资策略10个建议与5大误区_chunk_001
+2026-04-29T02:05:38.516655Z [info     ] [MONITOR] call_llm_json starting [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215
+2026-04-29T02:05:38.517722Z [info     ] [MONITOR] Starting LLM call    [chunks2skus.utils.llm_client] attempt=0 max_tokens=64000 model=doubao-seed-2-0-pro-260215 prompt_length=15449 temperature=0.3
+2026-04-29T02:07:18.785074Z [info     ] [MONITOR] LLM call SUCCESS     [chunks2skus.utils.llm_client] attempt=0 finish_reason=stop model=doubao-seed-2-0-pro-260215 response_length=4448
+2026-04-29T02:07:18.787089Z [info     ] [MONITOR] JSON parse SUCCESS   [chunks2skus.utils.llm_client] keys=['procedures']
+2026-04-29T02:07:18.862963Z [info     ] Procedural extraction complete [chunks2skus.extractors.procedural_extractor] chunk_id=科技战略与投资策略10个建议与5大误区_chunk_001 skills_created=10
+2026-04-29T02:08:07.199170Z [info     ] [MONITOR] LLM call SUCCESS     [chunks2skus.utils.llm_client] attempt=1 finish_reason=stop model=doubao-seed-2-0-pro-260215 response_length=22664
+2026-04-29T02:08:07.204675Z [info     ] [MONITOR] JSON parse SUCCESS   [chunks2skus.utils.llm_client] keys=['facts']
+2026-04-29T02:08:07.224862Z [info     ] Skipping trivially short SKU   [chunks2skus.extractors.factual_extractor] chars=30 name=人类社会发展核心驱动力
+2026-04-29T02:08:07.305548Z [warning  ] Markdown SKU lacks structure markers [chunks2skus.extractors.factual_extractor] chars=111 name=SWOT分析核心认知
+2026-04-29T02:08:07.308060Z [warning  ] Markdown SKU lacks structure markers [chunks2skus.extractors.factual_extractor] chars=97 name=烟蒂股定义与投资特征
+2026-04-29T02:08:07.311261Z [warning  ] Markdown SKU lacks structure markers [chunks2skus.extractors.factual_extractor] chars=122 name=格雷厄姆投资核心观点
+2026-04-29T02:08:07.327352Z [warning  ] Markdown SKU lacks structure markers [chunks2skus.extractors.factual_extractor] chars=81 name=Gartner曲线投资应用要点
+2026-04-29T02:08:07.339296Z [warning  ] Markdown SKU lacks structure markers [chunks2skus.extractors.factual_extractor] chars=49 name=颠覆式创新核心观点（克里斯坦森）
+2026-04-29T02:08:07.340298Z [info     ] Skipping trivially short SKU   [chunks2skus.extractors.factual_extractor] chars=49 name=颠覆式创新核心观点（克里斯坦森）
+2026-04-29T02:08:07.353775Z [info     ] Skipping trivially short SKU   [chunks2skus.extractors.factual_extractor] chars=41 name=资本市场盈利的三大来源
+2026-04-29T02:08:07.375013Z [warning  ] Markdown SKU lacks structure markers [chunks2skus.extractors.factual_extractor] chars=90 name=Know-how（技术诀窍）定义
+2026-04-29T02:08:07.395744Z [warning  ] Markdown SKU lacks structure markers [chunks2skus.extractors.factual_extractor] chars=96 name=熵增与生命发展规律
+2026-04-29T02:08:07.431467Z [info     ] Skipping trivially short SKU   [chunks2skus.extractors.factual_extractor] chars=62 name=创业企业在巨头阴影下的生存两部曲
+2026-04-29T02:08:07.432482Z [warning  ] Markdown SKU lacks structure markers [chunks2skus.extractors.factual_extractor] chars=62 name=创业战略定力核心逻辑
+2026-04-29T02:08:07.437100Z [info     ] Skipping trivially short SKU   [chunks2skus.extractors.factual_extractor] chars=62 name=创业战略定力核心逻辑
+2026-04-29T02:08:07.438112Z [warning  ] Markdown SKU lacks structure markers [chunks2skus.extractors.factual_extractor] chars=47 name=服务属性与企业市值关系
+2026-04-29T02:08:07.438112Z [info     ] Skipping trivially short SKU   [chunks2skus.extractors.factual_extractor] chars=47 name=服务属性与企业市值关系
+2026-04-29T02:08:07.439113Z [warning  ] Markdown SKU lacks structure markers [chunks2skus.extractors.factual_extractor] chars=81 name=商业模式核心不可复制要素
+2026-04-29T02:08:07.442205Z [info     ] Factual extraction complete    [chunks2skus.extractors.factual_extractor] chunk_id=玥堂主【投资&创新】200+思维套图合集_chunk_001 skus_created=54
+2026-04-29T02:08:07.442205Z [info     ] Extracting procedural knowledge [chunks2skus.extractors.procedural_extractor] chunk_id=玥堂主【投资&创新】200+思维套图合集_chunk_001
+2026-04-29T02:08:07.443206Z [info     ] [MONITOR] call_llm_json starting [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215
+2026-04-29T02:08:07.443206Z [info     ] [MONITOR] Starting LLM call    [chunks2skus.utils.llm_client] attempt=0 max_tokens=64000 model=doubao-seed-2-0-pro-260215 prompt_length=34671 temperature=0.3
+2026-04-29T02:09:07.654971Z [info     ] [MONITOR] LLM call SUCCESS     [chunks2skus.utils.llm_client] attempt=0 finish_reason=stop model=doubao-seed-2-0-pro-260215 response_length=6439
+2026-04-29T02:09:07.656491Z [info     ] [MONITOR] JSON parse SUCCESS   [chunks2skus.utils.llm_client] keys=['new_labels', 'new_glossary', 'updated_glossary', 'new_relationships']
+2026-04-29T02:09:07.659493Z [info     ] Added new labels               [chunks2skus.extractors.relational_extractor] chunk_id=2026六大新兴产业发展形势展望_chunk_001 count=3
+2026-04-29T02:09:07.659493Z [info     ] Merged new glossary entries    [chunks2skus.extractors.relational_extractor] chunk_id=2026六大新兴产业发展形势展望_chunk_001 count=22
+2026-04-29T02:09:07.660809Z [info     ] Updated existing glossary entries [chunks2skus.extractors.relational_extractor] chunk_id=2026六大新兴产业发展形势展望_chunk_001 fallback_count=0 total_in_response=3 updated_count=3
+2026-04-29T02:09:07.662082Z [info     ] Merged new relationships       [chunks2skus.extractors.relational_extractor] chunk_id=2026六大新兴产业发展形势展望_chunk_001 count=17
+2026-04-29T02:09:07.662082Z [info     ] Relationship predicate distribution [chunks2skus.extractors.relational_extractor] distribution={'superset-of': 12, 'has-a': 4, 'enables': 6, 'requires': 8, 'example-of': 4, 'causes': 2, 'related-to': 1} total=37
+2026-04-29T02:09:07.662082Z [warning  ] Predicate ratio exceeds 30%    [chunks2skus.extractors.relational_extractor] count=12 predicate=superset-of ratio=32.4% total=37
+2026-04-29T02:09:07.667085Z [info     ] Relational extraction complete [chunks2skus.extractors.relational_extractor] chunk_id=2026六大新兴产业发展形势展望_chunk_001 labels=10 relationships=37 terms=38
+2026-04-29T02:09:07.670164Z [info     ] Chunk processed                [chunks2skus.pipeline] chunk_id=2026六大新兴产业发展形势展望_chunk_001 new_skus=22 total_skus=50
+2026-04-29T02:09:07.672267Z [info     ] Extracting relational knowledge [chunks2skus.extractors.relational_extractor] chunk_id=企业战略与财富增长创新蓝宝书_chunk_002
+2026-04-29T02:09:07.677804Z [info     ] Relational context size        [chunks2skus.extractors.relational_extractor] alias_map_chars=323 chunk_id=企业战略与财富增长创新蓝宝书_chunk_002 glossary_count=38 label_nodes_count=10 label_tree_chars=69 relevant_relations_chars=394 term_list_chars=249
+2026-04-29T02:09:07.679805Z [info     ] [MONITOR] call_llm_json starting [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215
+2026-04-29T02:09:07.679805Z [info     ] [MONITOR] Starting LLM call    [chunks2skus.utils.llm_client] attempt=0 max_tokens=128000 model=doubao-seed-2-0-pro-260215 prompt_length=80132 temperature=0.3
+2026-04-29T02:09:25.445562Z [info     ] [MONITOR] LLM call SUCCESS     [chunks2skus.utils.llm_client] attempt=0 finish_reason=stop model=doubao-seed-2-0-pro-260215 response_length=4280
+2026-04-29T02:09:25.447067Z [info     ] [MONITOR] JSON parse SUCCESS   [chunks2skus.utils.llm_client] keys=['procedures']
+2026-04-29T02:09:25.475807Z [info     ] Procedural extraction complete [chunks2skus.extractors.procedural_extractor] chunk_id=玥堂主【投资&创新】200+思维套图合集_chunk_001 skills_created=10
+2026-04-29T02:09:25.476807Z [info     ] Factual/Procedural phase complete [chunks2skus.pipeline] chunks=6 concurrency=4 duration_seconds=722.8
+2026-04-29T02:12:52.786055Z [info     ] [MONITOR] LLM call SUCCESS     [chunks2skus.utils.llm_client] attempt=0 finish_reason=stop model=doubao-seed-2-0-pro-260215 response_length=8785
+2026-04-29T02:12:52.787056Z [info     ] [MONITOR] JSON parse SUCCESS   [chunks2skus.utils.llm_client] keys=['new_labels', 'new_glossary', 'updated_glossary', 'new_relationships']
+2026-04-29T02:12:52.792828Z [info     ] Added new labels               [chunks2skus.extractors.relational_extractor] chunk_id=企业战略与财富增长创新蓝宝书_chunk_002 count=0
+2026-04-29T02:12:52.794205Z [info     ] Merged new glossary entries    [chunks2skus.extractors.relational_extractor] chunk_id=企业战略与财富增长创新蓝宝书_chunk_002 count=20
+2026-04-29T02:12:52.795204Z [info     ] Updated existing glossary entries [chunks2skus.extractors.relational_extractor] chunk_id=企业战略与财富增长创新蓝宝书_chunk_002 fallback_count=0 total_in_response=7 updated_count=7
+2026-04-29T02:12:52.796221Z [info     ] Merged new relationships       [chunks2skus.extractors.relational_extractor] chunk_id=企业战略与财富增长创新蓝宝书_chunk_002 count=33
+2026-04-29T02:12:52.796221Z [info     ] Relationship predicate distribution [chunks2skus.extractors.relational_extractor] distribution={'superset-of': 19, 'has-a': 14, 'enables': 7, 'requires': 10, 'example-of': 5, 'causes': 9, 'related-to': 1, 'depends-on': 4, 'caused-by': 1} total=70
+2026-04-29T02:12:52.800227Z [info     ] Relational extraction complete [chunks2skus.extractors.relational_extractor] chunk_id=企业战略与财富增长创新蓝宝书_chunk_002 labels=10 relationships=70 terms=58
+2026-04-29T02:12:52.803123Z [info     ] Chunk processed                [chunks2skus.pipeline] chunk_id=企业战略与财富增长创新蓝宝书_chunk_002 new_skus=36 total_skus=85
+2026-04-29T02:12:52.805184Z [info     ] Extracting relational knowledge [chunks2skus.extractors.relational_extractor] chunk_id=科技战略与投资策略10个建议与5大误区_chunk_001
+2026-04-29T02:12:52.809618Z [info     ] Relational context size        [chunks2skus.extractors.relational_extractor] alias_map_chars=377 chunk_id=科技战略与投资策略10个建议与5大误区_chunk_001 glossary_count=58 label_nodes_count=10 label_tree_chars=69 relevant_relations_chars=430 term_list_chars=383
+2026-04-29T02:12:52.809618Z [info     ] [MONITOR] call_llm_json starting [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215
+2026-04-29T02:12:52.811120Z [info     ] [MONITOR] Starting LLM call    [chunks2skus.utils.llm_client] attempt=0 max_tokens=128000 model=doubao-seed-2-0-pro-260215 prompt_length=17873 temperature=0.3
+2026-04-29T02:15:38.209176Z [info     ] [MONITOR] LLM call SUCCESS     [chunks2skus.utils.llm_client] attempt=0 finish_reason=stop model=doubao-seed-2-0-pro-260215 response_length=4841
+2026-04-29T02:15:38.210311Z [info     ] [MONITOR] JSON parse SUCCESS   [chunks2skus.utils.llm_client] keys=['new_labels', 'new_glossary', 'updated_glossary', 'new_relationships']
+2026-04-29T02:15:38.220185Z [info     ] Added new labels               [chunks2skus.extractors.relational_extractor] chunk_id=科技战略与投资策略10个建议与5大误区_chunk_001 count=2
+2026-04-29T02:15:38.221686Z [info     ] Merged new glossary entries    [chunks2skus.extractors.relational_extractor] chunk_id=科技战略与投资策略10个建议与5大误区_chunk_001 count=14
+2026-04-29T02:15:38.222696Z [info     ] Updated existing glossary entries [chunks2skus.extractors.relational_extractor] chunk_id=科技战略与投资策略10个建议与5大误区_chunk_001 fallback_count=0 total_in_response=2 updated_count=2
+2026-04-29T02:15:38.223820Z [info     ] Merged new relationships       [chunks2skus.extractors.relational_extractor] chunk_id=科技战略与投资策略10个建议与5大误区_chunk_001 count=18
+2026-04-29T02:15:38.223820Z [info     ] Relationship predicate distribution [chunks2skus.extractors.relational_extractor] distribution={'superset-of': 31, 'has-a': 16, 'enables': 7, 'requires': 12, 'example-of': 5, 'causes': 9, 'related-to': 1, 'depends-on': 6, 'caused-by': 1} total=88
+2026-04-29T02:15:38.225821Z [info     ] Predicate count over 20        [chunks2skus.extractors.relational_extractor] predicates={'superset-of': 31}
+2026-04-29T02:15:38.226821Z [warning  ] Predicate ratio exceeds 30%    [chunks2skus.extractors.relational_extractor] count=31 predicate=superset-of ratio=35.2% total=88
+2026-04-29T02:15:38.231832Z [info     ] Relational extraction complete [chunks2skus.extractors.relational_extractor] chunk_id=科技战略与投资策略10个建议与5大误区_chunk_001 labels=10 relationships=88 terms=72
+2026-04-29T02:15:38.234067Z [info     ] Running meta extraction batch  [chunks2skus.pipeline] chunks=5 new_skus=111 total_content_chars=27827
+2026-04-29T02:15:38.234067Z [info     ] Chunk processed                [chunks2skus.pipeline] chunk_id=科技战略与投资策略10个建议与5大误区_chunk_001 new_skus=28 total_skus=112
+2026-04-29T02:15:38.235067Z [info     ] Extracting meta knowledge      [chunks2skus.extractors.meta_extractor] chunk_ids='BSC七步法：设计企业的战略地图_chunk_001, 企业战略与财富增长创新蓝宝书_chunk_001, 2026六大新兴产业发展形势展望_chunk_001, 企业战略与财富增长创新蓝宝书_chunk_002, 科技战略与投资策略10个建议与5大误区_chunk_001'
+2026-04-29T02:15:38.236071Z [info     ] Extracting relational knowledge [chunks2skus.extractors.relational_extractor] chunk_id=玥堂主【投资&创新】200+思维套图合集_chunk_001
+2026-04-29T02:15:38.240071Z [info     ] Relational context size        [chunks2skus.extractors.relational_extractor] alias_map_chars=419 chunk_id=玥堂主【投资&创新】200+思维套图合集_chunk_001 glossary_count=72 label_nodes_count=12 label_tree_chars=84 relevant_relations_chars=938 term_list_chars=485
+2026-04-29T02:15:38.240071Z [info     ] [MONITOR] Creating thread-local OpenAI client [chunks2skus.utils.llm_client] base_url=https://ark.cn-beijing.volces.com/api/v3 thread=ThreadPoolExecutor-2_0
+2026-04-29T02:15:38.241573Z [info     ] [MONITOR] call_llm_json starting [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215
+2026-04-29T02:15:38.241573Z [info     ] [MONITOR] Creating thread-local OpenAI client [chunks2skus.utils.llm_client] base_url=https://ark.cn-beijing.volces.com/api/v3 thread=ThreadPoolExecutor-2_1
+2026-04-29T02:15:38.242586Z [info     ] [MONITOR] Starting LLM call    [chunks2skus.utils.llm_client] attempt=0 max_tokens=128000 model=doubao-seed-2-0-pro-260215 prompt_length=37762 temperature=0.3
+2026-04-29T02:15:39.703987Z [info     ] [MONITOR] Starting LLM call    [chunks2skus.utils.llm_client] attempt=0 max_tokens=32000 model=doubao-seed-2-0-pro-260215 prompt_length=11161 temperature=0.2
+2026-04-29T02:15:39.719577Z [info     ] [MONITOR] Starting LLM call    [chunks2skus.utils.llm_client] attempt=0 max_tokens=32000 model=doubao-seed-2-0-pro-260215 prompt_length=12978 temperature=0.7
+2026-04-29T02:16:28.445106Z [info     ] [MONITOR] LLM call SUCCESS     [chunks2skus.utils.llm_client] attempt=0 finish_reason=stop model=doubao-seed-2-0-pro-260215 response_length=682
+2026-04-29T02:16:28.447280Z [info     ] Updated eureka.md              [chunks2skus.extractors.meta_extractor] chunk_ids='BSC七步法：设计企业的战略地图_chunk_001, 企业战略与财富增长创新蓝宝书_chunk_001, 2026六大新兴产业发展形势展望_chunk_001, 企业战略与财富增长创新蓝宝书_chunk_002, 科技战略与投资策略10个建议与5大误区_chunk_001' new_size=682 old_size=42
+2026-04-29T02:17:48.610685Z [info     ] [MONITOR] LLM call SUCCESS     [chunks2skus.utils.llm_client] attempt=0 finish_reason=stop model=doubao-seed-2-0-pro-260215 response_length=5822
+2026-04-29T02:17:48.615740Z [warning  ] Low overlap mapping entry      [chunks2skus.extractors.meta_extractor] description_anchor=面临产业周期、组织周 mapping_line='- `factual/sku_048`: 需要了解企业实现结构性增长的两步方法论时查阅' sku_path=sku_048
+2026-04-29T02:17:48.616754Z [warning  ] Low overlap mapping entry      [chunks2skus.extractors.meta_extractor] description_anchor=中国已进入老龄化社会 mapping_line='- `factual/sku_055`: 需要获取养老规划核心参考数据与动作建议时查阅' sku_path=sku_055
+2026-04-29T02:17:48.619010Z [warning  ] Low overlap mapping entry      [chunks2skus.extractors.meta_extractor] description_anchor=分别介绍初创企业、产 mapping_line='- `factual/sku_064`: 需要了解不同市场主体技术产业化的最优入局时间及策略时查阅' sku_path=sku_064
+2026-04-29T02:17:48.619010Z [warning  ] Low overlap mapping entry      [chunks2skus.extractors.meta_extractor] description_anchor=介绍基于中国产业规划 mapping_line='- `factual/sku_068`: 需要了解中美博弈背景下的科技领域重点投资方向筛选逻辑时查阅' sku_path=sku_068
+2026-04-29T02:17:48.620512Z [warning  ] Low overlap mapping entry      [chunks2skus.extractors.meta_extractor] description_anchor=介绍未来可能出现的打 mapping_line='- `factual/sku_073`: 需要了解「新质生产力」相关投资骗局的特征及防范方法时查阅' sku_path=sku_073
+2026-04-29T02:17:48.621511Z [warning  ] Low overlap mapping entry      [chunks2skus.extractors.meta_extractor] description_anchor=对比美国和中国当前的 mapping_line='- `factual/sku_075`: 需要了解中美科技产业转化模式差异及核心特征时查阅' sku_path=sku_075
+2026-04-29T02:17:48.623513Z [info     ] Updated mapping.md (diff merge) [chunks2skus.extractors.meta_extractor] chunk_id=科技战略与投资策略10个建议与5大误区_chunk_001 diff_lines=152 new_size=5867 old_size=57
+2026-04-29T02:17:48.626014Z [info     ] Meta extraction complete       [chunks2skus.extractors.meta_extractor] chunk_ids='BSC七步法：设计企业的战略地图_chunk_001, 企业战略与财富增长创新蓝宝书_chunk_001, 2026六大新兴产业发展形势展望_chunk_001, 企业战略与财富增长创新蓝宝书_chunk_002, 科技战略与投资策略10个建议与5大误区_chunk_001' eureka_chars=682 mapping_chars=5867
+2026-04-29T02:18:29.231951Z [info     ] [MONITOR] LLM call SUCCESS     [chunks2skus.utils.llm_client] attempt=0 finish_reason=stop model=doubao-seed-2-0-pro-260215 response_length=7531
+2026-04-29T02:18:29.237355Z [info     ] [MONITOR] JSON parse SUCCESS   [chunks2skus.utils.llm_client] keys=['term', 'definition', 'new_aliases', 'new_related_terms']
+2026-04-29T02:18:29.238416Z [info     ] Relationship predicate distribution [chunks2skus.extractors.relational_extractor] distribution={'superset-of': 31, 'has-a': 16, 'enables': 7, 'requires': 12, 'example-of': 5, 'causes': 9, 'related-to': 1, 'depends-on': 6, 'caused-by': 1} total=88
+2026-04-29T02:18:29.239857Z [info     ] Predicate count over 20        [chunks2skus.extractors.relational_extractor] predicates={'superset-of': 31}
+2026-04-29T02:18:29.239857Z [warning  ] Predicate ratio exceeds 30%    [chunks2skus.extractors.relational_extractor] count=31 predicate=superset-of ratio=35.2% total=88
+2026-04-29T02:18:29.244618Z [info     ] Relational extraction complete [chunks2skus.extractors.relational_extractor] chunk_id=玥堂主【投资&创新】200+思维套图合集_chunk_001 labels=10 relationships=88 terms=72
+2026-04-29T02:18:29.246636Z [info     ] Chunk processed                [chunks2skus.pipeline] chunk_id=玥堂主【投资&创新】200+思维套图合集_chunk_001 new_skus=65 total_skus=177
+2026-04-29T02:18:29.254470Z [info     ] Relational consumer phase complete [chunks2skus.pipeline] duration_seconds=543.8 note='overlaps with FP phase in pipeline wall-clock'
+2026-04-29T02:18:29.256840Z [info     ] Running meta extraction batch  [chunks2skus.pipeline] chunks=1 new_skus=64 total_content_chars=6035
+2026-04-29T02:18:29.256840Z [info     ] Extracting meta knowledge      [chunks2skus.extractors.meta_extractor] chunk_ids=玥堂主【投资&创新】200+思维套图合集_chunk_001
+2026-04-29T02:18:29.258159Z [info     ] [MONITOR] Creating thread-local OpenAI client [chunks2skus.utils.llm_client] base_url=https://ark.cn-beijing.volces.com/api/v3 thread=ThreadPoolExecutor-3_0
+2026-04-29T02:18:29.259362Z [info     ] [MONITOR] Creating thread-local OpenAI client [chunks2skus.utils.llm_client] base_url=https://ark.cn-beijing.volces.com/api/v3 thread=ThreadPoolExecutor-3_1
+2026-04-29T02:18:30.634138Z [info     ] [MONITOR] Starting LLM call    [chunks2skus.utils.llm_client] attempt=0 max_tokens=32000 model=doubao-seed-2-0-pro-260215 prompt_length=11393 temperature=0.2
+2026-04-29T02:18:30.635205Z [info     ] [MONITOR] Starting LLM call    [chunks2skus.utils.llm_client] attempt=0 max_tokens=32000 model=doubao-seed-2-0-pro-260215 prompt_length=9711 temperature=0.7
+2026-04-29T02:19:38.709570Z [info     ] [MONITOR] LLM call SUCCESS     [chunks2skus.utils.llm_client] attempt=0 finish_reason=stop model=doubao-seed-2-0-pro-260215 response_length=1781
+2026-04-29T02:19:38.713122Z [info     ] Updated eureka.md              [chunks2skus.extractors.meta_extractor] chunk_ids=玥堂主【投资&创新】200+思维套图合集_chunk_001 new_size=1781 old_size=682
+2026-04-29T02:21:02.633627Z [info     ] [MONITOR] LLM call SUCCESS     [chunks2skus.utils.llm_client] attempt=0 finish_reason=stop model=doubao-seed-2-0-pro-260215 response_length=3373
+2026-04-29T02:21:02.655835Z [info     ] Updated mapping.md (diff merge) [chunks2skus.extractors.meta_extractor] chunk_id=玥堂主【投资&创新】200+思维套图合集_chunk_001 diff_lines=81 new_size=9125 old_size=5867
+2026-04-29T02:21:02.662153Z [info     ] Meta extraction complete       [chunks2skus.extractors.meta_extractor] chunk_ids=玥堂主【投资&创新】200+思维套图合集_chunk_001 eureka_chars=1781 mapping_chars=9125
+2026-04-29T02:21:02.681638Z [info     ] Extraction pipeline complete   [chunks2skus.pipeline] chunks_processed=6 duration_seconds=1420.1 total_characters=104728 total_skus=177

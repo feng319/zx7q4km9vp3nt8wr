@@ -1,0 +1,17 @@
+2026-04-29T01:40:48.204532Z [info     ] Starting chunking pipeline     [markdown2chunks.pipeline] input_dir='G:\\Program Files\\AI coding\\知识萃取\\战略分析\\输出' output_dir='G:\\Program Files\\AI coding\\知识萃取\\战略分析\\输出\\chunks'
+2026-04-29T01:40:48.210354Z [info     ] Found files                    [markdown2chunks.pipeline] json=1 markdown=6
+2026-04-29T01:40:48.210354Z [info     ] Processing markdown            [markdown2chunks.pipeline] file=2026六大新兴产业发展形势展望.md
+2026-04-29T01:40:48.391012Z [info     ] Processed markdown             [markdown2chunks.pipeline] chunks=1 file=2026六大新兴产业发展形势展望.md
+2026-04-29T01:40:48.391012Z [info     ] Processing markdown            [markdown2chunks.pipeline] file=BSC七步法：设计企业的战略地图.md
+2026-04-29T01:40:48.394412Z [info     ] Processed markdown             [markdown2chunks.pipeline] chunks=1 file=BSC七步法：设计企业的战略地图.md
+2026-04-29T01:40:48.395549Z [info     ] Processing markdown            [markdown2chunks.pipeline] file=~$战略与财富增长创新蓝宝书.md
+2026-04-29T01:40:48.396592Z [info     ] Processed markdown             [markdown2chunks.pipeline] chunks=1 file=~$战略与财富增长创新蓝宝书.md
+2026-04-29T01:40:48.397677Z [info     ] Processing markdown            [markdown2chunks.pipeline] file=企业战略与财富增长创新蓝宝书.md
+2026-04-29T01:41:55.808256Z [info     ] Created chunk                  [markdown2chunks.chunkers.llm_chunker] chars=29151 index=1 remaining=77129
+2026-04-29T01:41:55.845960Z [info     ] LLM chunking complete          [markdown2chunks.chunkers.llm_chunker] chunks=2 input_tokens=118566
+2026-04-29T01:41:55.848532Z [info     ] Processed markdown             [markdown2chunks.pipeline] chunks=2 file=企业战略与财富增长创新蓝宝书.md
+2026-04-29T01:41:55.850015Z [info     ] Processing markdown            [markdown2chunks.pipeline] file=玥堂主【投资&创新】200+思维套图合集.md
+2026-04-29T01:41:55.880987Z [info     ] Processed markdown             [markdown2chunks.pipeline] chunks=1 file=玥堂主【投资&创新】200+思维套图合集.md
+2026-04-29T01:41:55.882191Z [info     ] Processing markdown            [markdown2chunks.pipeline] file=科技战略与投资策略10个建议与5大误区.md
+2026-04-29T01:41:55.896140Z [info     ] Processed markdown             [markdown2chunks.pipeline] chunks=1 file=科技战略与投资策略10个建议与5大误区.md
+2026-04-29T01:41:55.905463Z [info     ] Chunking pipeline complete     [markdown2chunks.pipeline] duration_seconds=67.7 source_files=6 total_chunks=7 total_tokens=251314

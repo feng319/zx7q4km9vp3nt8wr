@@ -1,0 +1,55 @@
+2026-04-25T15:35:57.796952Z [info     ] Starting chunking pipeline     [markdown2chunks.pipeline] input_dir='G:\\Program Files\\AI coding\\知识萃取\\新能源\\输出' output_dir='G:\\Program Files\\AI coding\\知识萃取\\新能源\\输出\\chunks'
+2026-04-25T15:35:57.809444Z [info     ] Found files                    [markdown2chunks.pipeline] json=1 markdown=26
+2026-04-25T15:35:57.810440Z [info     ] Processing markdown            [markdown2chunks.pipeline] file=报告-《关于优化集中式新能源发电企业市场报价的通知（试行）》深度解读与战略分析.md
+2026-04-25T15:35:57.958505Z [info     ] Processed markdown             [markdown2chunks.pipeline] chunks=1 file=报告-《关于优化集中式新能源发电企业市场报价的通知（试行）》深度解读与战略分析.md
+2026-04-25T15:35:57.958505Z [info     ] Processing markdown            [markdown2chunks.pipeline] file=报告-三一硅能非洲调研报告：在非洲如何做矿山微电网？.md
+2026-04-25T15:35:57.964680Z [info     ] Processed markdown             [markdown2chunks.pipeline] chunks=1 file=报告-三一硅能非洲调研报告：在非洲如何做矿山微电网？.md
+2026-04-25T15:35:57.965834Z [info     ] Processing markdown            [markdown2chunks.pipeline] file=报告-乌克兰新能源市场机会调研报告.md
+2026-04-25T15:35:57.970197Z [info     ] Processed markdown             [markdown2chunks.pipeline] chunks=1 file=报告-乌克兰新能源市场机会调研报告.md
+2026-04-25T15:35:57.972640Z [info     ] Processing markdown            [markdown2chunks.pipeline] file=报告-兆瓦云调研报告：虚拟电厂的下一城在哪里？.md
+2026-04-25T15:35:57.978085Z [info     ] Processed markdown             [markdown2chunks.pipeline] chunks=1 file=报告-兆瓦云调研报告：虚拟电厂的下一城在哪里？.md
+2026-04-25T15:35:57.979261Z [info     ] Processing markdown            [markdown2chunks.pipeline] file=报告-则鸣新能源调研报告：怎么样做好微电网？.md
+2026-04-25T15:35:57.985743Z [info     ] Processed markdown             [markdown2chunks.pipeline] chunks=1 file=报告-则鸣新能源调研报告：怎么样做好微电网？.md
+2026-04-25T15:35:57.987838Z [info     ] Processing markdown            [markdown2chunks.pipeline] file=报告-协鑫能科调研报告：江苏最大虚拟电厂是怎么做成的？.md
+2026-04-25T15:35:57.993367Z [info     ] Processed markdown             [markdown2chunks.pipeline] chunks=1 file=报告-协鑫能科调研报告：江苏最大虚拟电厂是怎么做成的？.md
+2026-04-25T15:35:57.993367Z [info     ] Processing markdown            [markdown2chunks.pipeline] file=报告-固德威一线调研报告：城市级虚拟电厂怎么做？.md
+2026-04-25T15:35:57.998674Z [info     ] Processed markdown             [markdown2chunks.pipeline] chunks=1 file=报告-固德威一线调研报告：城市级虚拟电厂怎么做？.md
+2026-04-25T15:35:57.999674Z [info     ] Processing markdown            [markdown2chunks.pipeline] file=报告-固德威江西德安县调研报告：光储充一体化项目怎么做？.md
+2026-04-25T15:35:58.006605Z [info     ] Processed markdown             [markdown2chunks.pipeline] chunks=1 file=报告-固德威江西德安县调研报告：光储充一体化项目怎么做？.md
+2026-04-25T15:35:58.006605Z [info     ] Processing markdown            [markdown2chunks.pipeline] file=报告-国海绿能一线调研报告：重卡换电站怎么做？.md
+2026-04-25T15:35:58.011671Z [info     ] Processed markdown             [markdown2chunks.pipeline] chunks=1 file=报告-国海绿能一线调研报告：重卡换电站怎么做？.md
+2026-04-25T15:35:58.012677Z [info     ] Processing markdown            [markdown2chunks.pipeline] file=报告-奇峰聚能调研报告：飞轮储能怎么做？.md
+2026-04-25T15:35:58.018191Z [info     ] Processed markdown             [markdown2chunks.pipeline] chunks=1 file=报告-奇峰聚能调研报告：飞轮储能怎么做？.md
+2026-04-25T15:35:58.021211Z [info     ] Processing markdown            [markdown2chunks.pipeline] file=报告-安悦节能调研报告：怎样做冷热电综合能源服务？.md
+2026-04-25T15:35:58.026736Z [info     ] Processed markdown             [markdown2chunks.pipeline] chunks=1 file=报告-安悦节能调研报告：怎样做冷热电综合能源服务？.md
+2026-04-25T15:35:58.026736Z [info     ] Processing markdown            [markdown2chunks.pipeline] file=报告-广林汇智调研报告：在西北地区怎么做虚拟电厂？.md
+2026-04-25T15:35:58.032045Z [info     ] Processed markdown             [markdown2chunks.pipeline] chunks=1 file=报告-广林汇智调研报告：在西北地区怎么做虚拟电厂？.md
+2026-04-25T15:35:58.035589Z [info     ] Processing markdown            [markdown2chunks.pipeline] file=报告-恒实盛景调研报告：怎样做空调虚拟电厂？.md
+2026-04-25T15:35:58.040681Z [info     ] Processed markdown             [markdown2chunks.pipeline] chunks=1 file=报告-恒实盛景调研报告：怎样做空调虚拟电厂？.md
+2026-04-25T15:35:58.040681Z [info     ] Processing markdown            [markdown2chunks.pipeline] file=报告-正泰安能光伏星调研报告：在非洲如何做户用光伏？.md
+2026-04-25T15:35:58.046700Z [info     ] Processed markdown             [markdown2chunks.pipeline] chunks=1 file=报告-正泰安能光伏星调研报告：在非洲如何做户用光伏？.md
+2026-04-25T15:35:58.046700Z [info     ] Processing markdown            [markdown2chunks.pipeline] file=报告-河钢集团一线调研报告：钢铁行业存在哪些双碳机会？.md
+2026-04-25T15:35:58.054763Z [info     ] Processed markdown             [markdown2chunks.pipeline] chunks=1 file=报告-河钢集团一线调研报告：钢铁行业存在哪些双碳机会？.md
+2026-04-25T15:35:58.055915Z [info     ] Processing markdown            [markdown2chunks.pipeline] file=报告-深石集团调研报告：房地产企业怎样做新能源？.md
+2026-04-25T15:35:58.060969Z [info     ] Processed markdown             [markdown2chunks.pipeline] chunks=1 file=报告-深石集团调研报告：房地产企业怎样做新能源？.md
+2026-04-25T15:35:58.061974Z [info     ] Processing markdown            [markdown2chunks.pipeline] file=报告-特来电零碳大楼调研报告：怎样做车网互动？.md
+2026-04-25T15:35:58.067722Z [info     ] Processed markdown             [markdown2chunks.pipeline] chunks=1 file=报告-特来电零碳大楼调研报告：怎样做车网互动？.md
+2026-04-25T15:35:58.067722Z [info     ] Processing markdown            [markdown2chunks.pipeline] file=报告-电管家一线调研报告：微电网怎么赚钱？.md
+2026-04-25T15:35:58.072861Z [info     ] Processed markdown             [markdown2chunks.pipeline] chunks=1 file=报告-电管家一线调研报告：微电网怎么赚钱？.md
+2026-04-25T15:35:58.072861Z [info     ] Processing markdown            [markdown2chunks.pipeline] file=报告-紫电捷控调研报告：交直流微电网怎么做？.md
+2026-04-25T15:35:58.088778Z [info     ] Processed markdown             [markdown2chunks.pipeline] chunks=1 file=报告-紫电捷控调研报告：交直流微电网怎么做？.md
+2026-04-25T15:35:58.088778Z [info     ] Processing markdown            [markdown2chunks.pipeline] file=报告-纬景储能调研报告：液流电池为储能带来的机会.md
+2026-04-25T15:35:58.094799Z [info     ] Processed markdown             [markdown2chunks.pipeline] chunks=1 file=报告-纬景储能调研报告：液流电池为储能带来的机会.md
+2026-04-25T15:35:58.097610Z [info     ] Processing markdown            [markdown2chunks.pipeline] file=报告-良信电器调研报告：怎样建设零碳工厂？.md
+2026-04-25T15:35:58.105236Z [info     ] Processed markdown             [markdown2chunks.pipeline] chunks=1 file=报告-良信电器调研报告：怎样建设零碳工厂？.md
+2026-04-25T15:35:58.105236Z [info     ] Processing markdown            [markdown2chunks.pipeline] file=报告-苏州工业园区的虚拟电厂调研报告：怎样做区域级虚拟电厂.md
+2026-04-25T15:35:58.109667Z [info     ] Processed markdown             [markdown2chunks.pipeline] chunks=1 file=报告-苏州工业园区的虚拟电厂调研报告：怎样做区域级虚拟电厂.md
+2026-04-25T15:35:58.113211Z [info     ] Processing markdown            [markdown2chunks.pipeline] file='报告-远景科技调研报告：如何把握储能 AIDC领域未来机会.md'
+2026-04-25T15:35:58.120748Z [info     ] Processed markdown             [markdown2chunks.pipeline] chunks=1 file='报告-远景科技调研报告：如何把握储能 AIDC领域未来机会.md'
+2026-04-25T15:35:58.121752Z [info     ] Processing markdown            [markdown2chunks.pipeline] file=报告-金风科技调研报告：我国首个碳中和园区是怎样建成的？.md
+2026-04-25T15:35:58.127111Z [info     ] Processed markdown             [markdown2chunks.pipeline] chunks=1 file=报告-金风科技调研报告：我国首个碳中和园区是怎样建成的？.md
+2026-04-25T15:35:58.129207Z [info     ] Processing markdown            [markdown2chunks.pipeline] file=报告-非洲调研报告（一）：中国新能源企业在肯尼亚有什么机会？.md
+2026-04-25T15:35:58.134947Z [info     ] Processed markdown             [markdown2chunks.pipeline] chunks=1 file=报告-非洲调研报告（一）：中国新能源企业在肯尼亚有什么机会？.md
+2026-04-25T15:35:58.135950Z [info     ] Processing markdown            [markdown2chunks.pipeline] file=报告-非洲调研报告（二）：中国新能源企业在赞比亚有什么机会？.md
+2026-04-25T15:35:58.140963Z [info     ] Processed markdown             [markdown2chunks.pipeline] chunks=1 file=报告-非洲调研报告（二）：中国新能源企业在赞比亚有什么机会？.md
+2026-04-25T15:35:58.147231Z [info     ] Chunking pipeline complete     [markdown2chunks.pipeline] duration_seconds=0.4 source_files=26 total_chunks=26 total_tokens=259397

@@ -1,0 +1,9 @@
+2026-04-25T01:35:05.269194Z [info     ] Starting Anything2Markdown pipeline [anything2markdown.cli]
+2026-04-25T01:35:05.269194Z [info     ] Input directory                [anything2markdown.cli] path='G:\\Program Files\\AI coding\\知识萃取\\新能源\\输入'
+2026-04-25T01:35:05.269194Z [info     ] Output directory               [anything2markdown.cli] path='G:\\Program Files\\AI coding\\知识萃取\\新能源\\输出'
+2026-04-25T01:35:06.383406Z [warning  ] Repomix not found. Install with: npm install -g repomix [anything2markdown.url_parsers.repomix_parser]
+2026-04-25T01:35:06.384423Z [info     ] Starting Anything2Markdown pipeline [anything2markdown.pipeline] input_dir='G:\\Program Files\\AI coding\\知识萃取\\新能源\\输入' output_dir='G:\\Program Files\\AI coding\\知识萃取\\新能源\\输出'
+2026-04-25T01:35:06.384423Z [info     ] File processing complete       [anything2markdown.pipeline] files_processed=0
+2026-04-25T01:35:06.384423Z [info     ] URL processing complete        [anything2markdown.pipeline] urls_processed=0
+2026-04-25T01:35:06.385425Z [info     ] Pipeline completed             [anything2markdown.pipeline] duration_seconds=0.00 failed=0 skipped=0 success=0 total_processed=0
+2026-04-25T01:35:06.409693Z [info     ] Saved parse results index      [anything2markdown.pipeline] path='G:\\Program Files\\AI coding\\知识萃取\\新能源\\输出\\parse_results_index.json'

@@ -1,0 +1,9 @@
+2026-04-29T10:00:12.729354Z [info     ] Starting spec chatbot          [skus2ontology.chatbot] max_rounds=5
+2026-04-29T10:00:12.730351Z [info     ] Loaded mapping.md titles       [skus2ontology.chatbot] original_chars=9125 title_chars=237
+2026-04-29T10:00:12.731356Z [info     ] Loaded eureka.md               [skus2ontology.chatbot] chars=1781
+2026-04-29T10:08:36.975274Z [info     ] Built SKU index summary        [skus2ontology.chatbot] chars=11242 sku_count=177
+2026-04-29T10:09:53.592798Z [info     ] Phase 2 anchor replacement complete [skus2ontology.chatbot] draft_chars=2638 final_chars=3330
+2026-04-29T10:09:53.594305Z [info     ] Remaining anchors              [skus2ontology.chatbot] count=1 sample=['【锚点：区域专精特新扶持政策、科技创业政策适配方法、区域产业载体资源匹配方法】']
+2026-04-29T10:09:53.596372Z [info     ] Backed up existing spec.md     [skus2ontology.chatbot] backup='G:\\Program Files\\AI coding\\知识萃取\\战略分析\\输出\\ontology\\spec.md.bak.20260429_180953'
+2026-04-29T10:09:53.596372Z [info     ] Saved spec.md                  [skus2ontology.chatbot] chars=3330 path='G:\\Program Files\\AI coding\\知识萃取\\战略分析\\输出\\ontology\\spec.md'
+2026-04-29T10:09:53.598617Z [info     ] Saved chat log                 [skus2ontology.pipeline] confirmed=False path='G:\\Program Files\\AI coding\\知识萃取\\战略分析\\输出\\ontology\\chat_log.json' rounds=5

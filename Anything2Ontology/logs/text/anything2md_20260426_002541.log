@@ -1,0 +1,61 @@
+2026-04-25T16:25:41.341051Z [info     ] Starting Anything2Markdown pipeline [anything2markdown.cli]
+2026-04-25T16:25:41.342053Z [info     ] Input directory                [anything2markdown.cli] path='G:\\Program Files\\AI coding\\知识萃取\\新能源\\输入'
+2026-04-25T16:25:41.357053Z [info     ] Output directory               [anything2markdown.cli] path='G:\\Program Files\\AI coding\\知识萃取\\新能源\\输出'
+2026-04-25T16:25:42.496921Z [warning  ] Repomix not found. Install with: npm install -g repomix [anything2markdown.url_parsers.repomix_parser]
+2026-04-25T16:25:42.498046Z [info     ] Starting Anything2Markdown pipeline [anything2markdown.pipeline] input_dir='G:\\Program Files\\AI coding\\知识萃取\\新能源\\输入' output_dir='G:\\Program Files\\AI coding\\知识萃取\\新能源\\输出'
+2026-04-25T16:25:42.503323Z [info     ] Processing file                [anything2markdown.pipeline] file=报告-《关于优化集中式新能源发电企业市场报价的通知（试行）》深度解读与战略分析.docx
+2026-04-25T16:25:42.504327Z [info     ] Skipping already-processed file [anything2markdown.pipeline] file=报告-《关于优化集中式新能源发电企业市场报价的通知（试行）》深度解读与战略分析.docx output=报告-《关于优化集中式新能源发电企业市场报价的通知（试行）》深度解读与战略分析.md
+2026-04-25T16:25:42.505328Z [info     ] Processing file                [anything2markdown.pipeline] file=报告-三一硅能非洲调研报告：在非洲如何做矿山微电网？.docx
+2026-04-25T16:25:42.505328Z [info     ] Skipping already-processed file [anything2markdown.pipeline] file=报告-三一硅能非洲调研报告：在非洲如何做矿山微电网？.docx output=报告-三一硅能非洲调研报告：在非洲如何做矿山微电网？.md
+2026-04-25T16:25:42.506332Z [info     ] Processing file                [anything2markdown.pipeline] file=报告-乌克兰新能源市场机会调研报告.docx
+2026-04-25T16:25:42.506332Z [info     ] Skipping already-processed file [anything2markdown.pipeline] file=报告-乌克兰新能源市场机会调研报告.docx output=报告-乌克兰新能源市场机会调研报告.md
+2026-04-25T16:25:42.507336Z [info     ] Processing file                [anything2markdown.pipeline] file=报告-兆瓦云调研报告：虚拟电厂的下一城在哪里？.docx
+2026-04-25T16:25:42.507336Z [info     ] Skipping already-processed file [anything2markdown.pipeline] file=报告-兆瓦云调研报告：虚拟电厂的下一城在哪里？.docx output=报告-兆瓦云调研报告：虚拟电厂的下一城在哪里？.md
+2026-04-25T16:25:42.508337Z [info     ] Processing file                [anything2markdown.pipeline] file=报告-则鸣新能源调研报告：怎么样做好微电网？.docx
+2026-04-25T16:25:42.509336Z [info     ] Skipping already-processed file [anything2markdown.pipeline] file=报告-则鸣新能源调研报告：怎么样做好微电网？.docx output=报告-则鸣新能源调研报告：怎么样做好微电网？.md
+2026-04-25T16:25:42.510460Z [info     ] Processing file                [anything2markdown.pipeline] file=报告-协鑫能科调研报告：江苏最大虚拟电厂是怎么做成的？.docx
+2026-04-25T16:25:42.510460Z [info     ] Skipping already-processed file [anything2markdown.pipeline] file=报告-协鑫能科调研报告：江苏最大虚拟电厂是怎么做成的？.docx output=报告-协鑫能科调研报告：江苏最大虚拟电厂是怎么做成的？.md
+2026-04-25T16:25:42.511475Z [info     ] Processing file                [anything2markdown.pipeline] file=报告-固德威一线调研报告：城市级虚拟电厂怎么做？.docx
+2026-04-25T16:25:42.511475Z [info     ] Skipping already-processed file [anything2markdown.pipeline] file=报告-固德威一线调研报告：城市级虚拟电厂怎么做？.docx output=报告-固德威一线调研报告：城市级虚拟电厂怎么做？.md
+2026-04-25T16:25:42.512478Z [info     ] Processing file                [anything2markdown.pipeline] file=报告-固德威江西德安县调研报告：光储充一体化项目怎么做？.docx
+2026-04-25T16:25:42.512478Z [info     ] Skipping already-processed file [anything2markdown.pipeline] file=报告-固德威江西德安县调研报告：光储充一体化项目怎么做？.docx output=报告-固德威江西德安县调研报告：光储充一体化项目怎么做？.md
+2026-04-25T16:25:42.513496Z [info     ] Processing file                [anything2markdown.pipeline] file=报告-国海绿能一线调研报告：重卡换电站怎么做？.docx
+2026-04-25T16:25:42.513496Z [info     ] Skipping already-processed file [anything2markdown.pipeline] file=报告-国海绿能一线调研报告：重卡换电站怎么做？.docx output=报告-国海绿能一线调研报告：重卡换电站怎么做？.md
+2026-04-25T16:25:42.514499Z [info     ] Processing file                [anything2markdown.pipeline] file=报告-奇峰聚能调研报告：飞轮储能怎么做？.docx
+2026-04-25T16:25:42.515630Z [info     ] Skipping already-processed file [anything2markdown.pipeline] file=报告-奇峰聚能调研报告：飞轮储能怎么做？.docx output=报告-奇峰聚能调研报告：飞轮储能怎么做？.md
+2026-04-25T16:25:42.515630Z [info     ] Processing file                [anything2markdown.pipeline] file=报告-安悦节能调研报告：怎样做冷热电综合能源服务？.docx
+2026-04-25T16:25:42.516641Z [info     ] Skipping already-processed file [anything2markdown.pipeline] file=报告-安悦节能调研报告：怎样做冷热电综合能源服务？.docx output=报告-安悦节能调研报告：怎样做冷热电综合能源服务？.md
+2026-04-25T16:25:42.522426Z [info     ] Processing file                [anything2markdown.pipeline] file=报告-广林汇智调研报告：在西北地区怎么做虚拟电厂？.docx
+2026-04-25T16:25:42.523431Z [info     ] Skipping already-processed file [anything2markdown.pipeline] file=报告-广林汇智调研报告：在西北地区怎么做虚拟电厂？.docx output=报告-广林汇智调研报告：在西北地区怎么做虚拟电厂？.md
+2026-04-25T16:25:42.523431Z [info     ] Processing file                [anything2markdown.pipeline] file=报告-恒实盛景调研报告：怎样做空调虚拟电厂？.docx
+2026-04-25T16:25:42.524450Z [info     ] Skipping already-processed file [anything2markdown.pipeline] file=报告-恒实盛景调研报告：怎样做空调虚拟电厂？.docx output=报告-恒实盛景调研报告：怎样做空调虚拟电厂？.md
+2026-04-25T16:25:42.525454Z [info     ] Processing file                [anything2markdown.pipeline] file=报告-正泰安能光伏星调研报告：在非洲如何做户用光伏？.docx
+2026-04-25T16:25:42.525454Z [info     ] Skipping already-processed file [anything2markdown.pipeline] file=报告-正泰安能光伏星调研报告：在非洲如何做户用光伏？.docx output=报告-正泰安能光伏星调研报告：在非洲如何做户用光伏？.md
+2026-04-25T16:25:42.526458Z [info     ] Processing file                [anything2markdown.pipeline] file=报告-河钢集团一线调研报告：钢铁行业存在哪些双碳机会？.docx
+2026-04-25T16:25:42.527465Z [info     ] Skipping already-processed file [anything2markdown.pipeline] file=报告-河钢集团一线调研报告：钢铁行业存在哪些双碳机会？.docx output=报告-河钢集团一线调研报告：钢铁行业存在哪些双碳机会？.md
+2026-04-25T16:25:42.528469Z [info     ] Processing file                [anything2markdown.pipeline] file=报告-深石集团调研报告：房地产企业怎样做新能源？.docx
+2026-04-25T16:25:42.528469Z [info     ] Skipping already-processed file [anything2markdown.pipeline] file=报告-深石集团调研报告：房地产企业怎样做新能源？.docx output=报告-深石集团调研报告：房地产企业怎样做新能源？.md
+2026-04-25T16:25:42.529466Z [info     ] Processing file                [anything2markdown.pipeline] file=报告-特来电零碳大楼调研报告：怎样做车网互动？.docx
+2026-04-25T16:25:42.529466Z [info     ] Skipping already-processed file [anything2markdown.pipeline] file=报告-特来电零碳大楼调研报告：怎样做车网互动？.docx output=报告-特来电零碳大楼调研报告：怎样做车网互动？.md
+2026-04-25T16:25:42.530941Z [info     ] Processing file                [anything2markdown.pipeline] file=报告-电管家一线调研报告：微电网怎么赚钱？.docx
+2026-04-25T16:25:42.530941Z [info     ] Skipping already-processed file [anything2markdown.pipeline] file=报告-电管家一线调研报告：微电网怎么赚钱？.docx output=报告-电管家一线调研报告：微电网怎么赚钱？.md
+2026-04-25T16:25:42.532174Z [info     ] Processing file                [anything2markdown.pipeline] file=报告-紫电捷控调研报告：交直流微电网怎么做？.docx
+2026-04-25T16:25:42.536166Z [info     ] Skipping already-processed file [anything2markdown.pipeline] file=报告-紫电捷控调研报告：交直流微电网怎么做？.docx output=报告-紫电捷控调研报告：交直流微电网怎么做？.md
+2026-04-25T16:25:42.537599Z [info     ] Processing file                [anything2markdown.pipeline] file=报告-纬景储能调研报告：液流电池为储能带来的机会.docx
+2026-04-25T16:25:42.537599Z [info     ] Skipping already-processed file [anything2markdown.pipeline] file=报告-纬景储能调研报告：液流电池为储能带来的机会.docx output=报告-纬景储能调研报告：液流电池为储能带来的机会.md
+2026-04-25T16:25:42.539103Z [info     ] Processing file                [anything2markdown.pipeline] file=报告-良信电器调研报告：怎样建设零碳工厂？.docx
+2026-04-25T16:25:42.539103Z [info     ] Skipping already-processed file [anything2markdown.pipeline] file=报告-良信电器调研报告：怎样建设零碳工厂？.docx output=报告-良信电器调研报告：怎样建设零碳工厂？.md
+2026-04-25T16:25:42.540117Z [info     ] Processing file                [anything2markdown.pipeline] file=报告-苏州工业园区的虚拟电厂调研报告：怎样做区域级虚拟电厂.docx
+2026-04-25T16:25:42.541186Z [info     ] Skipping already-processed file [anything2markdown.pipeline] file=报告-苏州工业园区的虚拟电厂调研报告：怎样做区域级虚拟电厂.docx output=报告-苏州工业园区的虚拟电厂调研报告：怎样做区域级虚拟电厂.md
+2026-04-25T16:25:42.541186Z [info     ] Processing file                [anything2markdown.pipeline] file='报告-远景科技调研报告：如何把握储能 AIDC领域未来机会.docx'
+2026-04-25T16:25:42.542192Z [info     ] Skipping already-processed file [anything2markdown.pipeline] file='报告-远景科技调研报告：如何把握储能 AIDC领域未来机会.docx' output='报告-远景科技调研报告：如何把握储能 AIDC领域未来机会.md'
+2026-04-25T16:25:42.543195Z [info     ] Processing file                [anything2markdown.pipeline] file=报告-金风科技调研报告：我国首个碳中和园区是怎样建成的？.docx
+2026-04-25T16:25:42.544210Z [info     ] Skipping already-processed file [anything2markdown.pipeline] file=报告-金风科技调研报告：我国首个碳中和园区是怎样建成的？.docx output=报告-金风科技调研报告：我国首个碳中和园区是怎样建成的？.md
+2026-04-25T16:25:42.544210Z [info     ] Processing file                [anything2markdown.pipeline] file=报告-非洲调研报告（一）：中国新能源企业在肯尼亚有什么机会？.docx
+2026-04-25T16:25:42.545230Z [info     ] Skipping already-processed file [anything2markdown.pipeline] file=报告-非洲调研报告（一）：中国新能源企业在肯尼亚有什么机会？.docx output=报告-非洲调研报告（一）：中国新能源企业在肯尼亚有什么机会？.md
+2026-04-25T16:25:42.545230Z [info     ] Processing file                [anything2markdown.pipeline] file=报告-非洲调研报告（二）：中国新能源企业在赞比亚有什么机会？.docx
+2026-04-25T16:25:42.546234Z [info     ] Skipping already-processed file [anything2markdown.pipeline] file=报告-非洲调研报告（二）：中国新能源企业在赞比亚有什么机会？.docx output=报告-非洲调研报告（二）：中国新能源企业在赞比亚有什么机会？.md
+2026-04-25T16:25:42.547238Z [info     ] File processing complete       [anything2markdown.pipeline] files_processed=26
+2026-04-25T16:25:42.551654Z [info     ] URL processing complete        [anything2markdown.pipeline] urls_processed=0
+2026-04-25T16:25:42.551654Z [info     ] Pipeline completed             [anything2markdown.pipeline] duration_seconds=0.05 failed=0 skipped=0 success=26 total_processed=26
+2026-04-25T16:25:42.553661Z [info     ] Saved parse results index      [anything2markdown.pipeline] path='G:\\Program Files\\AI coding\\知识萃取\\新能源\\输出\\parse_results_index.json'

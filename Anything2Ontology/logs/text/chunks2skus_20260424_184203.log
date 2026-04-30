@@ -1,0 +1,597 @@
+2026-04-24T10:42:03.075944Z [info     ] Starting extraction pipeline   [chunks2skus.pipeline] chunks_dir='G:\\Program Files\\AI coding\\知识萃取\\输出\\chunks' output_dir=output\skus
+2026-04-24T10:42:03.076447Z [info     ] Loaded chunks                  [chunks2skus.router] count=40
+2026-04-24T10:42:03.077673Z [info     ] Processing chunks              [chunks2skus.pipeline] total=40
+2026-04-24T10:42:03.077673Z [info     ] Processing chunk               [chunks2skus.pipeline] chunk_id=企业战略与财富增长创新蓝宝书_chunk_021 progress=23/40
+2026-04-24T10:42:03.077673Z [info     ] Processing chunk               [chunks2skus.router] chunk_id=企业战略与财富增长创新蓝宝书_chunk_021 title=第一组理管商博块 tokens=5785
+2026-04-24T10:42:03.078679Z [info     ] Extracting factual knowledge   [chunks2skus.extractors.factual_extractor] chunk_id=企业战略与财富增长创新蓝宝书_chunk_021
+2026-04-24T10:42:03.078679Z [info     ] [MONITOR] call_llm_json starting [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215
+2026-04-24T10:42:03.078679Z [info     ] [MONITOR] Creating OpenAI client [chunks2skus.utils.llm_client] base_url=https://ark.cn-beijing.volces.com/api/v3
+2026-04-24T10:42:04.223633Z [info     ] [MONITOR] Starting LLM call    [chunks2skus.utils.llm_client] max_tokens=4000 model=doubao-seed-2-0-pro-260215 prompt_length=16668 temperature=0.3
+2026-04-24T10:42:12.469514Z [info     ] [MONITOR] LLM call SUCCESS     [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215 response_length=13 response_preview='{"facts": []}'
+2026-04-24T10:42:12.470533Z [info     ] [MONITOR] JSON parse SUCCESS   [chunks2skus.utils.llm_client] keys=['facts']
+2026-04-24T10:42:12.470533Z [info     ] [MONITOR] Facts extracted      [chunks2skus.utils.llm_client] count=0 facts_preview=[]
+2026-04-24T10:42:12.470533Z [info     ] No factual knowledge found in chunk [chunks2skus.extractors.factual_extractor] chunk_id=企业战略与财富增长创新蓝宝书_chunk_021
+2026-04-24T10:42:12.470533Z [info     ] Extracting relational knowledge [chunks2skus.extractors.relational_extractor] chunk_id=企业战略与财富增长创新蓝宝书_chunk_021
+2026-04-24T10:42:12.471584Z [info     ] [MONITOR] call_llm_json starting [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215
+2026-04-24T10:42:12.471584Z [info     ] [MONITOR] Starting LLM call    [chunks2skus.utils.llm_client] max_tokens=8000 model=doubao-seed-2-0-pro-260215 prompt_length=28694 temperature=0.3
+2026-04-24T10:43:36.916646Z [info     ] [MONITOR] LLM call SUCCESS     [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215 response_length=12319 response_preview='{\n  "label_tree": {\n    "roots": [\n      {\n        "name": "分析模型",\n        "children": [\n          {\n            "name": "大国博弈圈层驱动模型",\n            "ch'
+2026-04-24T10:43:36.916646Z [info     ] [MONITOR] JSON parse SUCCESS   [chunks2skus.utils.llm_client] keys=['label_tree', 'glossary', 'relationships']
+2026-04-24T10:43:36.921923Z [info     ] Relational extraction complete [chunks2skus.extractors.relational_extractor] chunk_id=企业战略与财富增长创新蓝宝书_chunk_021 labels=7 relationships=35 terms=18
+2026-04-24T10:43:36.923916Z [info     ] Extracting procedural knowledge [chunks2skus.extractors.procedural_extractor] chunk_id=企业战略与财富增长创新蓝宝书_chunk_021
+2026-04-24T10:43:36.923916Z [info     ] [MONITOR] call_llm_json starting [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215
+2026-04-24T10:43:36.923916Z [info     ] [MONITOR] Starting LLM call    [chunks2skus.utils.llm_client] max_tokens=6000 model=doubao-seed-2-0-pro-260215 prompt_length=16600 temperature=0.3
+2026-04-24T10:43:41.390634Z [info     ] [MONITOR] LLM call SUCCESS     [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215 response_length=18 response_preview='{"procedures": []}'
+2026-04-24T10:43:41.391640Z [info     ] [MONITOR] JSON parse SUCCESS   [chunks2skus.utils.llm_client] keys=['procedures']
+2026-04-24T10:43:41.391640Z [info     ] No procedural knowledge found in chunk [chunks2skus.extractors.procedural_extractor] chunk_id=企业战略与财富增长创新蓝宝书_chunk_021
+2026-04-24T10:43:41.392670Z [info     ] Extracting meta knowledge      [chunks2skus.extractors.meta_extractor] chunk_id=企业战略与财富增长创新蓝宝书_chunk_021
+2026-04-24T10:43:41.394174Z [info     ] [MONITOR] call_llm_json starting [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215
+2026-04-24T10:43:41.394174Z [info     ] [MONITOR] Starting LLM call    [chunks2skus.utils.llm_client] max_tokens=8000 model=doubao-seed-2-0-pro-260215 prompt_length=4200 temperature=0.2
+2026-04-24T10:45:40.486300Z [info     ] [MONITOR] LLM call SUCCESS     [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215 response_length=4034 response_preview='{\n    "mapping_content": "# SKU 映射\\n\\n本文件将所有标准知识单元（SKU）映射到其使用场景。\\n\\n---\\n\\n## 一、术语与基础定义类 [relational]\\n| SKU路径 | 内容描述 | 适用场景 |\\n|--------|---------|--'
+2026-04-24T10:45:40.487309Z [info     ] [MONITOR] JSON parse SUCCESS   [chunks2skus.utils.llm_client] keys=['mapping_content']
+2026-04-24T10:45:40.489336Z [info     ] [MONITOR] call_llm_json starting [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215
+2026-04-24T10:45:40.489336Z [info     ] [MONITOR] Starting LLM call    [chunks2skus.utils.llm_client] max_tokens=3000 model=doubao-seed-2-0-pro-260215 prompt_length=9805 temperature=0.7
+2026-04-24T10:45:47.730434Z [info     ] [MONITOR] LLM call SUCCESS     [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215 response_length=50 response_preview='{\n    "updated": false,\n    "eureka_content": ""\n}'
+2026-04-24T10:45:47.731443Z [info     ] [MONITOR] JSON parse SUCCESS   [chunks2skus.utils.llm_client] keys=['updated', 'eureka_content']
+2026-04-24T10:45:47.732439Z [info     ] Meta extraction complete       [chunks2skus.extractors.meta_extractor] chunk_id=企业战略与财富增长创新蓝宝书_chunk_021 eureka_chars=1137 mapping_chars=3833
+2026-04-24T10:45:47.735935Z [info     ] Chunk processed                [chunks2skus.pipeline] chunk_id=企业战略与财富增长创新蓝宝书_chunk_021 new_skus=2 total_skus=69
+2026-04-24T10:45:47.737225Z [info     ] Processing chunk               [chunks2skus.pipeline] chunk_id=企业战略与财富增长创新蓝宝书_chunk_022 progress=24/40
+2026-04-24T10:45:47.737225Z [info     ] Processing chunk               [chunks2skus.router] chunk_id=企业战略与财富增长创新蓝宝书_chunk_022 title=第一组理管商博 tokens=5785
+2026-04-24T10:45:47.752710Z [info     ] Extracting factual knowledge   [chunks2skus.extractors.factual_extractor] chunk_id=企业战略与财富增长创新蓝宝书_chunk_022
+2026-04-24T10:45:47.753735Z [info     ] [MONITOR] call_llm_json starting [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215
+2026-04-24T10:45:47.753735Z [info     ] [MONITOR] Starting LLM call    [chunks2skus.utils.llm_client] max_tokens=4000 model=doubao-seed-2-0-pro-260215 prompt_length=16668 temperature=0.3
+2026-04-24T10:45:58.529774Z [info     ] [MONITOR] LLM call SUCCESS     [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215 response_length=13 response_preview='{"facts": []}'
+2026-04-24T10:45:58.530789Z [info     ] [MONITOR] JSON parse SUCCESS   [chunks2skus.utils.llm_client] keys=['facts']
+2026-04-24T10:45:58.530789Z [info     ] [MONITOR] Facts extracted      [chunks2skus.utils.llm_client] count=0 facts_preview=[]
+2026-04-24T10:45:58.530789Z [info     ] No factual knowledge found in chunk [chunks2skus.extractors.factual_extractor] chunk_id=企业战略与财富增长创新蓝宝书_chunk_022
+2026-04-24T10:45:58.531828Z [info     ] Extracting relational knowledge [chunks2skus.extractors.relational_extractor] chunk_id=企业战略与财富增长创新蓝宝书_chunk_022
+2026-04-24T10:45:58.532861Z [info     ] [MONITOR] call_llm_json starting [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215
+2026-04-24T10:45:58.532861Z [info     ] [MONITOR] Starting LLM call    [chunks2skus.utils.llm_client] max_tokens=8000 model=doubao-seed-2-0-pro-260215 prompt_length=28694 temperature=0.3
+2026-04-24T10:47:25.781997Z [info     ] [MONITOR] LLM call SUCCESS     [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215 response_length=12319 response_preview='{\n  "label_tree": {\n    "roots": [\n      {\n        "name": "分析模型",\n        "children": [\n          {\n            "name": "大国博弈圈层驱动模型",\n            "ch'
+2026-04-24T10:47:25.783122Z [info     ] [MONITOR] JSON parse SUCCESS   [chunks2skus.utils.llm_client] keys=['label_tree', 'glossary', 'relationships']
+2026-04-24T10:47:25.787736Z [info     ] Relational extraction complete [chunks2skus.extractors.relational_extractor] chunk_id=企业战略与财富增长创新蓝宝书_chunk_022 labels=7 relationships=35 terms=18
+2026-04-24T10:47:25.788735Z [info     ] Extracting procedural knowledge [chunks2skus.extractors.procedural_extractor] chunk_id=企业战略与财富增长创新蓝宝书_chunk_022
+2026-04-24T10:47:25.788735Z [info     ] [MONITOR] call_llm_json starting [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215
+2026-04-24T10:47:25.788735Z [info     ] [MONITOR] Starting LLM call    [chunks2skus.utils.llm_client] max_tokens=6000 model=doubao-seed-2-0-pro-260215 prompt_length=16600 temperature=0.3
+2026-04-24T10:47:30.027300Z [info     ] [MONITOR] LLM call SUCCESS     [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215 response_length=18 response_preview='{"procedures": []}'
+2026-04-24T10:47:30.027300Z [info     ] [MONITOR] JSON parse SUCCESS   [chunks2skus.utils.llm_client] keys=['procedures']
+2026-04-24T10:47:30.027300Z [info     ] No procedural knowledge found in chunk [chunks2skus.extractors.procedural_extractor] chunk_id=企业战略与财富增长创新蓝宝书_chunk_022
+2026-04-24T10:47:30.028304Z [info     ] Extracting meta knowledge      [chunks2skus.extractors.meta_extractor] chunk_id=企业战略与财富增长创新蓝宝书_chunk_022
+2026-04-24T10:47:30.028304Z [info     ] [MONITOR] call_llm_json starting [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215
+2026-04-24T10:47:30.028304Z [info     ] [MONITOR] Starting LLM call    [chunks2skus.utils.llm_client] max_tokens=8000 model=doubao-seed-2-0-pro-260215 prompt_length=4467 temperature=0.2
+2026-04-24T10:48:17.955987Z [info     ] [MONITOR] LLM call SUCCESS     [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215 response_length=4130 response_preview='{\n    "mapping_content": "# SKU 映射\\n\\n本文件将所有标准知识单元（SKU）映射到其使用场景。\\n\\n---\\n\\n## 一、术语与基础定义类 [relational]\\n| SKU路径 | 内容描述 | 适用场景 |\\n|--------|---------|--'
+2026-04-24T10:48:17.956597Z [info     ] [MONITOR] JSON parse SUCCESS   [chunks2skus.utils.llm_client] keys=['mapping_content']
+2026-04-24T10:48:17.957615Z [info     ] [MONITOR] call_llm_json starting [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215
+2026-04-24T10:48:17.957615Z [info     ] [MONITOR] Starting LLM call    [chunks2skus.utils.llm_client] max_tokens=3000 model=doubao-seed-2-0-pro-260215 prompt_length=9805 temperature=0.7
+2026-04-24T10:48:21.745768Z [info     ] [MONITOR] LLM call SUCCESS     [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215 response_length=50 response_preview='{\n    "updated": false,\n    "eureka_content": ""\n}'
+2026-04-24T10:48:21.746283Z [info     ] [MONITOR] JSON parse SUCCESS   [chunks2skus.utils.llm_client] keys=['updated', 'eureka_content']
+2026-04-24T10:48:21.747311Z [info     ] Meta extraction complete       [chunks2skus.extractors.meta_extractor] chunk_id=企业战略与财富增长创新蓝宝书_chunk_022 eureka_chars=1137 mapping_chars=3925
+2026-04-24T10:48:21.749460Z [info     ] Chunk processed                [chunks2skus.pipeline] chunk_id=企业战略与财富增长创新蓝宝书_chunk_022 new_skus=2 total_skus=71
+2026-04-24T10:48:21.749460Z [info     ] Processing chunk               [chunks2skus.pipeline] chunk_id=企业战略与财富增长创新蓝宝书_chunk_023 progress=25/40
+2026-04-24T10:48:21.749460Z [info     ] Processing chunk               [chunks2skus.router] chunk_id=企业战略与财富增长创新蓝宝书_chunk_023 title=第一组理管商博 tokens=5785
+2026-04-24T10:48:21.764446Z [info     ] Extracting factual knowledge   [chunks2skus.extractors.factual_extractor] chunk_id=企业战略与财富增长创新蓝宝书_chunk_023
+2026-04-24T10:48:21.764446Z [info     ] [MONITOR] call_llm_json starting [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215
+2026-04-24T10:48:21.764446Z [info     ] [MONITOR] Starting LLM call    [chunks2skus.utils.llm_client] max_tokens=4000 model=doubao-seed-2-0-pro-260215 prompt_length=16668 temperature=0.3
+2026-04-24T10:48:28.812735Z [info     ] [MONITOR] LLM call SUCCESS     [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215 response_length=13 response_preview='{"facts": []}'
+2026-04-24T10:48:28.812735Z [info     ] [MONITOR] JSON parse SUCCESS   [chunks2skus.utils.llm_client] keys=['facts']
+2026-04-24T10:48:28.812735Z [info     ] [MONITOR] Facts extracted      [chunks2skus.utils.llm_client] count=0 facts_preview=[]
+2026-04-24T10:48:28.814001Z [info     ] No factual knowledge found in chunk [chunks2skus.extractors.factual_extractor] chunk_id=企业战略与财富增长创新蓝宝书_chunk_023
+2026-04-24T10:48:28.814001Z [info     ] Extracting relational knowledge [chunks2skus.extractors.relational_extractor] chunk_id=企业战略与财富增长创新蓝宝书_chunk_023
+2026-04-24T10:48:28.814001Z [info     ] [MONITOR] call_llm_json starting [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215
+2026-04-24T10:48:28.814001Z [info     ] [MONITOR] Starting LLM call    [chunks2skus.utils.llm_client] max_tokens=8000 model=doubao-seed-2-0-pro-260215 prompt_length=28694 temperature=0.3
+2026-04-24T10:49:58.699841Z [info     ] [MONITOR] LLM call SUCCESS     [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215 response_length=12319 response_preview='{\n  "label_tree": {\n    "roots": [\n      {\n        "name": "分析模型",\n        "children": [\n          {\n            "name": "大国博弈圈层驱动模型",\n            "ch'
+2026-04-24T10:49:58.700848Z [info     ] [MONITOR] JSON parse SUCCESS   [chunks2skus.utils.llm_client] keys=['label_tree', 'glossary', 'relationships']
+2026-04-24T10:49:58.706318Z [info     ] Relational extraction complete [chunks2skus.extractors.relational_extractor] chunk_id=企业战略与财富增长创新蓝宝书_chunk_023 labels=7 relationships=35 terms=18
+2026-04-24T10:49:58.708413Z [info     ] Extracting procedural knowledge [chunks2skus.extractors.procedural_extractor] chunk_id=企业战略与财富增长创新蓝宝书_chunk_023
+2026-04-24T10:49:58.708413Z [info     ] [MONITOR] call_llm_json starting [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215
+2026-04-24T10:49:58.708413Z [info     ] [MONITOR] Starting LLM call    [chunks2skus.utils.llm_client] max_tokens=6000 model=doubao-seed-2-0-pro-260215 prompt_length=16600 temperature=0.3
+2026-04-24T10:50:01.882311Z [info     ] [MONITOR] LLM call SUCCESS     [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215 response_length=18 response_preview='{"procedures": []}'
+2026-04-24T10:50:01.883336Z [info     ] [MONITOR] JSON parse SUCCESS   [chunks2skus.utils.llm_client] keys=['procedures']
+2026-04-24T10:50:01.883336Z [info     ] No procedural knowledge found in chunk [chunks2skus.extractors.procedural_extractor] chunk_id=企业战略与财富增长创新蓝宝书_chunk_023
+2026-04-24T10:50:01.884350Z [info     ] Extracting meta knowledge      [chunks2skus.extractors.meta_extractor] chunk_id=企业战略与财富增长创新蓝宝书_chunk_023
+2026-04-24T10:50:01.884350Z [info     ] [MONITOR] call_llm_json starting [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215
+2026-04-24T10:50:01.885854Z [info     ] [MONITOR] Starting LLM call    [chunks2skus.utils.llm_client] max_tokens=8000 model=doubao-seed-2-0-pro-260215 prompt_length=4732 temperature=0.2
+2026-04-24T10:50:51.599073Z [info     ] [MONITOR] LLM call SUCCESS     [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215 response_length=4224 response_preview='{\n  "mapping_content": "# SKU 映射\\n\\n本文件将所有标准知识单元（SKU）映射到其使用场景。\\n\\n---\\n\\n## 一、术语与基础定义类 [relational]\\n| SKU路径 | 内容描述 | 适用场景 |\\n|--------|---------|----'
+2026-04-24T10:50:51.599073Z [info     ] [MONITOR] JSON parse SUCCESS   [chunks2skus.utils.llm_client] keys=['mapping_content']
+2026-04-24T10:50:51.601066Z [info     ] [MONITOR] call_llm_json starting [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215
+2026-04-24T10:50:51.601066Z [info     ] [MONITOR] Starting LLM call    [chunks2skus.utils.llm_client] max_tokens=3000 model=doubao-seed-2-0-pro-260215 prompt_length=9805 temperature=0.7
+2026-04-24T10:50:56.094480Z [info     ] [MONITOR] LLM call SUCCESS     [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215 response_length=46 response_preview='{\n  "updated": false,\n  "eureka_content": ""\n}'
+2026-04-24T10:50:56.094480Z [info     ] [MONITOR] JSON parse SUCCESS   [chunks2skus.utils.llm_client] keys=['updated', 'eureka_content']
+2026-04-24T10:50:56.097158Z [info     ] Meta extraction complete       [chunks2skus.extractors.meta_extractor] chunk_id=企业战略与财富增长创新蓝宝书_chunk_023 eureka_chars=1137 mapping_chars=4017
+2026-04-24T10:50:56.098162Z [info     ] Chunk processed                [chunks2skus.pipeline] chunk_id=企业战略与财富增长创新蓝宝书_chunk_023 new_skus=2 total_skus=73
+2026-04-24T10:50:56.099216Z [info     ] Processing chunk               [chunks2skus.pipeline] chunk_id=企业战略与财富增长创新蓝宝书_chunk_024 progress=26/40
+2026-04-24T10:50:56.099216Z [info     ] Processing chunk               [chunks2skus.router] chunk_id=企业战略与财富增长创新蓝宝书_chunk_024 title=第一组理管商博表格 tokens=5785
+2026-04-24T10:50:56.109760Z [info     ] Extracting factual knowledge   [chunks2skus.extractors.factual_extractor] chunk_id=企业战略与财富增长创新蓝宝书_chunk_024
+2026-04-24T10:50:56.109760Z [info     ] [MONITOR] call_llm_json starting [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215
+2026-04-24T10:50:56.109760Z [info     ] [MONITOR] Starting LLM call    [chunks2skus.utils.llm_client] max_tokens=4000 model=doubao-seed-2-0-pro-260215 prompt_length=16668 temperature=0.3
+2026-04-24T10:51:05.304577Z [info     ] [MONITOR] LLM call SUCCESS     [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215 response_length=13 response_preview='{"facts": []}'
+2026-04-24T10:51:05.306090Z [info     ] [MONITOR] JSON parse SUCCESS   [chunks2skus.utils.llm_client] keys=['facts']
+2026-04-24T10:51:05.306090Z [info     ] [MONITOR] Facts extracted      [chunks2skus.utils.llm_client] count=0 facts_preview=[]
+2026-04-24T10:51:05.306090Z [info     ] No factual knowledge found in chunk [chunks2skus.extractors.factual_extractor] chunk_id=企业战略与财富增长创新蓝宝书_chunk_024
+2026-04-24T10:51:05.306090Z [info     ] Extracting relational knowledge [chunks2skus.extractors.relational_extractor] chunk_id=企业战略与财富增长创新蓝宝书_chunk_024
+2026-04-24T10:51:05.307114Z [info     ] [MONITOR] call_llm_json starting [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215
+2026-04-24T10:51:05.307114Z [info     ] [MONITOR] Starting LLM call    [chunks2skus.utils.llm_client] max_tokens=8000 model=doubao-seed-2-0-pro-260215 prompt_length=28694 temperature=0.3
+2026-04-24T10:52:14.504814Z [info     ] [MONITOR] LLM call SUCCESS     [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215 response_length=12319 response_preview='{\n  "label_tree": {\n    "roots": [\n      {\n        "name": "分析模型",\n        "children": [\n          {\n            "name": "大国博弈圈层驱动模型",\n            "ch'
+2026-04-24T10:52:14.506361Z [info     ] [MONITOR] JSON parse SUCCESS   [chunks2skus.utils.llm_client] keys=['label_tree', 'glossary', 'relationships']
+2026-04-24T10:52:14.513164Z [info     ] Relational extraction complete [chunks2skus.extractors.relational_extractor] chunk_id=企业战略与财富增长创新蓝宝书_chunk_024 labels=7 relationships=35 terms=18
+2026-04-24T10:52:14.514167Z [info     ] Extracting procedural knowledge [chunks2skus.extractors.procedural_extractor] chunk_id=企业战略与财富增长创新蓝宝书_chunk_024
+2026-04-24T10:52:14.514167Z [info     ] [MONITOR] call_llm_json starting [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215
+2026-04-24T10:52:14.515178Z [info     ] [MONITOR] Starting LLM call    [chunks2skus.utils.llm_client] max_tokens=6000 model=doubao-seed-2-0-pro-260215 prompt_length=16600 temperature=0.3
+2026-04-24T10:52:18.405140Z [info     ] [MONITOR] LLM call SUCCESS     [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215 response_length=18 response_preview='{"procedures": []}'
+2026-04-24T10:52:18.406642Z [info     ] [MONITOR] JSON parse SUCCESS   [chunks2skus.utils.llm_client] keys=['procedures']
+2026-04-24T10:52:18.408680Z [info     ] No procedural knowledge found in chunk [chunks2skus.extractors.procedural_extractor] chunk_id=企业战略与财富增长创新蓝宝书_chunk_024
+2026-04-24T10:52:18.408680Z [info     ] Extracting meta knowledge      [chunks2skus.extractors.meta_extractor] chunk_id=企业战略与财富增长创新蓝宝书_chunk_024
+2026-04-24T10:52:18.410699Z [info     ] [MONITOR] call_llm_json starting [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215
+2026-04-24T10:52:18.411739Z [info     ] [MONITOR] Starting LLM call    [chunks2skus.utils.llm_client] max_tokens=8000 model=doubao-seed-2-0-pro-260215 prompt_length=4997 temperature=0.2
+2026-04-24T10:53:09.503685Z [info     ] [MONITOR] LLM call SUCCESS     [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215 response_length=4320 response_preview='{\n  "mapping_content": "# SKU 映射\\n\\n本文件将所有标准知识单元（SKU）映射到其使用场景。\\n\\n---\\n\\n## 一、术语与基础定义类 [relational]\\n| SKU路径 | 内容描述 | 适用场景 |\\n|--------|---------|----'
+2026-04-24T10:53:09.503685Z [info     ] [MONITOR] JSON parse SUCCESS   [chunks2skus.utils.llm_client] keys=['mapping_content']
+2026-04-24T10:53:09.505991Z [info     ] [MONITOR] call_llm_json starting [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215
+2026-04-24T10:53:09.505991Z [info     ] [MONITOR] Starting LLM call    [chunks2skus.utils.llm_client] max_tokens=3000 model=doubao-seed-2-0-pro-260215 prompt_length=9805 temperature=0.7
+2026-04-24T10:53:16.331185Z [info     ] [MONITOR] LLM call SUCCESS     [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215 response_length=42 response_preview='{\n"updated": false,\n"eureka_content": ""\n}'
+2026-04-24T10:53:16.332301Z [info     ] [MONITOR] JSON parse SUCCESS   [chunks2skus.utils.llm_client] keys=['updated', 'eureka_content']
+2026-04-24T10:53:16.334294Z [info     ] Meta extraction complete       [chunks2skus.extractors.meta_extractor] chunk_id=企业战略与财富增长创新蓝宝书_chunk_024 eureka_chars=1137 mapping_chars=4109
+2026-04-24T10:53:16.336288Z [info     ] Chunk processed                [chunks2skus.pipeline] chunk_id=企业战略与财富增长创新蓝宝书_chunk_024 new_skus=2 total_skus=75
+2026-04-24T10:53:16.341778Z [info     ] Processing chunk               [chunks2skus.pipeline] chunk_id=企业战略与财富增长创新蓝宝书_chunk_025 progress=27/40
+2026-04-24T10:53:16.341778Z [info     ] Processing chunk               [chunks2skus.router] chunk_id=企业战略与财富增长创新蓝宝书_chunk_025 title=第一组理管商博表 tokens=5785
+2026-04-24T10:53:16.359483Z [info     ] Extracting factual knowledge   [chunks2skus.extractors.factual_extractor] chunk_id=企业战略与财富增长创新蓝宝书_chunk_025
+2026-04-24T10:53:16.360489Z [info     ] [MONITOR] call_llm_json starting [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215
+2026-04-24T10:53:16.360489Z [info     ] [MONITOR] Starting LLM call    [chunks2skus.utils.llm_client] max_tokens=4000 model=doubao-seed-2-0-pro-260215 prompt_length=16668 temperature=0.3
+2026-04-24T10:53:25.288696Z [info     ] [MONITOR] LLM call SUCCESS     [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215 response_length=13 response_preview='{"facts": []}'
+2026-04-24T10:53:25.288696Z [info     ] [MONITOR] JSON parse SUCCESS   [chunks2skus.utils.llm_client] keys=['facts']
+2026-04-24T10:53:25.289700Z [info     ] [MONITOR] Facts extracted      [chunks2skus.utils.llm_client] count=0 facts_preview=[]
+2026-04-24T10:53:25.289700Z [info     ] No factual knowledge found in chunk [chunks2skus.extractors.factual_extractor] chunk_id=企业战略与财富增长创新蓝宝书_chunk_025
+2026-04-24T10:53:25.289700Z [info     ] Extracting relational knowledge [chunks2skus.extractors.relational_extractor] chunk_id=企业战略与财富增长创新蓝宝书_chunk_025
+2026-04-24T10:53:25.289700Z [info     ] [MONITOR] call_llm_json starting [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215
+2026-04-24T10:53:25.290703Z [info     ] [MONITOR] Starting LLM call    [chunks2skus.utils.llm_client] max_tokens=8000 model=doubao-seed-2-0-pro-260215 prompt_length=28694 temperature=0.3
+2026-04-24T10:54:42.383144Z [info     ] [MONITOR] LLM call SUCCESS     [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215 response_length=18435 response_preview='{\n    "label_tree": {\n        "roots": [\n            {\n                "name": "分析模型",\n                "children": [\n                    {\n           '
+2026-04-24T10:54:42.384510Z [info     ] [MONITOR] JSON parse SUCCESS   [chunks2skus.utils.llm_client] keys=['label_tree', 'glossary', 'relationships']
+2026-04-24T10:54:42.390224Z [info     ] Relational extraction complete [chunks2skus.extractors.relational_extractor] chunk_id=企业战略与财富增长创新蓝宝书_chunk_025 labels=7 relationships=35 terms=18
+2026-04-24T10:54:42.391274Z [info     ] Extracting procedural knowledge [chunks2skus.extractors.procedural_extractor] chunk_id=企业战略与财富增长创新蓝宝书_chunk_025
+2026-04-24T10:54:42.391274Z [info     ] [MONITOR] call_llm_json starting [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215
+2026-04-24T10:54:42.392302Z [info     ] [MONITOR] Starting LLM call    [chunks2skus.utils.llm_client] max_tokens=6000 model=doubao-seed-2-0-pro-260215 prompt_length=16600 temperature=0.3
+2026-04-24T10:54:47.843545Z [info     ] [MONITOR] LLM call SUCCESS     [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215 response_length=18 response_preview='{"procedures": []}'
+2026-04-24T10:54:47.844560Z [info     ] [MONITOR] JSON parse SUCCESS   [chunks2skus.utils.llm_client] keys=['procedures']
+2026-04-24T10:54:47.844560Z [info     ] No procedural knowledge found in chunk [chunks2skus.extractors.procedural_extractor] chunk_id=企业战略与财富增长创新蓝宝书_chunk_025
+2026-04-24T10:54:47.844560Z [info     ] Extracting meta knowledge      [chunks2skus.extractors.meta_extractor] chunk_id=企业战略与财富增长创新蓝宝书_chunk_025
+2026-04-24T10:54:47.846063Z [info     ] [MONITOR] call_llm_json starting [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215
+2026-04-24T10:54:47.846063Z [info     ] [MONITOR] Starting LLM call    [chunks2skus.utils.llm_client] max_tokens=8000 model=doubao-seed-2-0-pro-260215 prompt_length=5262 temperature=0.2
+2026-04-24T10:55:41.957635Z [info     ] [MONITOR] LLM call SUCCESS     [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215 response_length=4416 response_preview='{\n  "mapping_content": "# SKU 映射\\n\\n本文件将所有标准知识单元（SKU）映射到其使用场景。\\n\\n---\\n\\n## 一、术语与基础定义类 [relational]\\n| SKU路径 | 内容描述 | 适用场景 |\\n|--------|---------|----'
+2026-04-24T10:55:41.958138Z [info     ] [MONITOR] JSON parse SUCCESS   [chunks2skus.utils.llm_client] keys=['mapping_content']
+2026-04-24T10:55:41.959139Z [info     ] [MONITOR] call_llm_json starting [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215
+2026-04-24T10:55:41.960150Z [info     ] [MONITOR] Starting LLM call    [chunks2skus.utils.llm_client] max_tokens=3000 model=doubao-seed-2-0-pro-260215 prompt_length=9805 temperature=0.7
+2026-04-24T10:55:46.205187Z [info     ] [MONITOR] LLM call SUCCESS     [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215 response_length=46 response_preview='{\n  "updated": false,\n  "eureka_content": ""\n}'
+2026-04-24T10:55:46.206186Z [info     ] [MONITOR] JSON parse SUCCESS   [chunks2skus.utils.llm_client] keys=['updated', 'eureka_content']
+2026-04-24T10:55:46.208223Z [info     ] Meta extraction complete       [chunks2skus.extractors.meta_extractor] chunk_id=企业战略与财富增长创新蓝宝书_chunk_025 eureka_chars=1137 mapping_chars=4201
+2026-04-24T10:55:46.209224Z [info     ] Chunk processed                [chunks2skus.pipeline] chunk_id=企业战略与财富增长创新蓝宝书_chunk_025 new_skus=2 total_skus=77
+2026-04-24T10:55:46.210227Z [info     ] Processing chunk               [chunks2skus.pipeline] chunk_id=企业战略与财富增长创新蓝宝书_chunk_026 progress=28/40
+2026-04-24T10:55:46.210227Z [info     ] Processing chunk               [chunks2skus.router] chunk_id=企业战略与财富增长创新蓝宝书_chunk_026 title=第一轮理管商博区块 tokens=5785
+2026-04-24T10:55:46.220967Z [info     ] Extracting factual knowledge   [chunks2skus.extractors.factual_extractor] chunk_id=企业战略与财富增长创新蓝宝书_chunk_026
+2026-04-24T10:55:46.220967Z [info     ] [MONITOR] call_llm_json starting [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215
+2026-04-24T10:55:46.220967Z [info     ] [MONITOR] Starting LLM call    [chunks2skus.utils.llm_client] max_tokens=4000 model=doubao-seed-2-0-pro-260215 prompt_length=16668 temperature=0.3
+2026-04-24T10:55:52.258800Z [info     ] [MONITOR] LLM call SUCCESS     [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215 response_length=13 response_preview='{"facts": []}'
+2026-04-24T10:55:52.259806Z [info     ] [MONITOR] JSON parse SUCCESS   [chunks2skus.utils.llm_client] keys=['facts']
+2026-04-24T10:55:52.259806Z [info     ] [MONITOR] Facts extracted      [chunks2skus.utils.llm_client] count=0 facts_preview=[]
+2026-04-24T10:55:52.260803Z [info     ] No factual knowledge found in chunk [chunks2skus.extractors.factual_extractor] chunk_id=企业战略与财富增长创新蓝宝书_chunk_026
+2026-04-24T10:55:52.260803Z [info     ] Extracting relational knowledge [chunks2skus.extractors.relational_extractor] chunk_id=企业战略与财富增长创新蓝宝书_chunk_026
+2026-04-24T10:55:52.260803Z [info     ] [MONITOR] call_llm_json starting [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215
+2026-04-24T10:55:52.261800Z [info     ] [MONITOR] Starting LLM call    [chunks2skus.utils.llm_client] max_tokens=8000 model=doubao-seed-2-0-pro-260215 prompt_length=28694 temperature=0.3
+2026-04-24T10:57:23.477712Z [info     ] [MONITOR] LLM call SUCCESS     [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215 response_length=12319 response_preview='{\n  "label_tree": {\n    "roots": [\n      {\n        "name": "分析模型",\n        "children": [\n          {\n            "name": "大国博弈圈层驱动模型",\n            "ch'
+2026-04-24T10:57:23.480962Z [info     ] [MONITOR] JSON parse SUCCESS   [chunks2skus.utils.llm_client] keys=['label_tree', 'glossary', 'relationships']
+2026-04-24T10:57:23.487663Z [info     ] Relational extraction complete [chunks2skus.extractors.relational_extractor] chunk_id=企业战略与财富增长创新蓝宝书_chunk_026 labels=7 relationships=35 terms=18
+2026-04-24T10:57:23.488866Z [info     ] Extracting procedural knowledge [chunks2skus.extractors.procedural_extractor] chunk_id=企业战略与财富增长创新蓝宝书_chunk_026
+2026-04-24T10:57:23.488866Z [info     ] [MONITOR] call_llm_json starting [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215
+2026-04-24T10:57:23.489874Z [info     ] [MONITOR] Starting LLM call    [chunks2skus.utils.llm_client] max_tokens=6000 model=doubao-seed-2-0-pro-260215 prompt_length=16600 temperature=0.3
+2026-04-24T10:57:28.224341Z [info     ] [MONITOR] LLM call SUCCESS     [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215 response_length=18 response_preview='{"procedures": []}'
+2026-04-24T10:57:28.224341Z [info     ] [MONITOR] JSON parse SUCCESS   [chunks2skus.utils.llm_client] keys=['procedures']
+2026-04-24T10:57:28.225848Z [info     ] No procedural knowledge found in chunk [chunks2skus.extractors.procedural_extractor] chunk_id=企业战略与财富增长创新蓝宝书_chunk_026
+2026-04-24T10:57:28.225848Z [info     ] Extracting meta knowledge      [chunks2skus.extractors.meta_extractor] chunk_id=企业战略与财富增长创新蓝宝书_chunk_026
+2026-04-24T10:57:28.226859Z [info     ] [MONITOR] call_llm_json starting [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215
+2026-04-24T10:57:28.226859Z [info     ] [MONITOR] Starting LLM call    [chunks2skus.utils.llm_client] max_tokens=8000 model=doubao-seed-2-0-pro-260215 prompt_length=5527 temperature=0.2
+2026-04-24T10:58:56.849237Z [info     ] [MONITOR] LLM call SUCCESS     [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215 response_length=4514 response_preview='{\n    "mapping_content": "# SKU 映射\\n\\n本文件将所有标准知识单元（SKU）映射到其使用场景。\\n\\n---\\n\\n## 一、术语与基础定义类 [relational]\\n| SKU路径 | 内容描述 | 适用场景 |\\n|--------|---------|--'
+2026-04-24T10:58:56.850852Z [info     ] [MONITOR] JSON parse SUCCESS   [chunks2skus.utils.llm_client] keys=['mapping_content']
+2026-04-24T10:58:56.853023Z [info     ] [MONITOR] call_llm_json starting [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215
+2026-04-24T10:58:56.853023Z [info     ] [MONITOR] Starting LLM call    [chunks2skus.utils.llm_client] max_tokens=3000 model=doubao-seed-2-0-pro-260215 prompt_length=9805 temperature=0.7
+2026-04-24T10:59:01.757311Z [info     ] [MONITOR] LLM call SUCCESS     [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215 response_length=46 response_preview='{\n  "updated": false,\n  "eureka_content": ""\n}'
+2026-04-24T10:59:01.757311Z [info     ] [MONITOR] JSON parse SUCCESS   [chunks2skus.utils.llm_client] keys=['updated', 'eureka_content']
+2026-04-24T10:59:01.760491Z [info     ] Meta extraction complete       [chunks2skus.extractors.meta_extractor] chunk_id=企业战略与财富增长创新蓝宝书_chunk_026 eureka_chars=1137 mapping_chars=4293
+2026-04-24T10:59:01.763030Z [info     ] Chunk processed                [chunks2skus.pipeline] chunk_id=企业战略与财富增长创新蓝宝书_chunk_026 new_skus=2 total_skus=79
+2026-04-24T10:59:01.764092Z [info     ] Processing chunk               [chunks2skus.pipeline] chunk_id=企业战略与财富增长创新蓝宝书_chunk_027 progress=29/40
+2026-04-24T10:59:01.764092Z [info     ] Processing chunk               [chunks2skus.router] chunk_id=企业战略与财富增长创新蓝宝书_chunk_027 title=第一组理管商博表格 tokens=5785
+2026-04-24T10:59:01.781180Z [info     ] Extracting factual knowledge   [chunks2skus.extractors.factual_extractor] chunk_id=企业战略与财富增长创新蓝宝书_chunk_027
+2026-04-24T10:59:01.782188Z [info     ] [MONITOR] call_llm_json starting [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215
+2026-04-24T10:59:01.783214Z [info     ] [MONITOR] Starting LLM call    [chunks2skus.utils.llm_client] max_tokens=4000 model=doubao-seed-2-0-pro-260215 prompt_length=16668 temperature=0.3
+2026-04-24T10:59:13.533496Z [info     ] [MONITOR] LLM call SUCCESS     [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215 response_length=13 response_preview='{"facts": []}'
+2026-04-24T10:59:13.533496Z [info     ] [MONITOR] JSON parse SUCCESS   [chunks2skus.utils.llm_client] keys=['facts']
+2026-04-24T10:59:13.534902Z [info     ] [MONITOR] Facts extracted      [chunks2skus.utils.llm_client] count=0 facts_preview=[]
+2026-04-24T10:59:13.534902Z [info     ] No factual knowledge found in chunk [chunks2skus.extractors.factual_extractor] chunk_id=企业战略与财富增长创新蓝宝书_chunk_027
+2026-04-24T10:59:13.534902Z [info     ] Extracting relational knowledge [chunks2skus.extractors.relational_extractor] chunk_id=企业战略与财富增长创新蓝宝书_chunk_027
+2026-04-24T10:59:13.535906Z [info     ] [MONITOR] call_llm_json starting [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215
+2026-04-24T10:59:13.535906Z [info     ] [MONITOR] Starting LLM call    [chunks2skus.utils.llm_client] max_tokens=8000 model=doubao-seed-2-0-pro-260215 prompt_length=28694 temperature=0.3
+2026-04-24T11:00:27.982629Z [info     ] [MONITOR] LLM call SUCCESS     [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215 response_length=12319 response_preview='{\n  "label_tree": {\n    "roots": [\n      {\n        "name": "分析模型",\n        "children": [\n          {\n            "name": "大国博弈圈层驱动模型",\n            "ch'
+2026-04-24T11:00:27.983633Z [info     ] [MONITOR] JSON parse SUCCESS   [chunks2skus.utils.llm_client] keys=['label_tree', 'glossary', 'relationships']
+2026-04-24T11:00:27.987150Z [info     ] Relational extraction complete [chunks2skus.extractors.relational_extractor] chunk_id=企业战略与财富增长创新蓝宝书_chunk_027 labels=7 relationships=35 terms=18
+2026-04-24T11:00:27.988154Z [info     ] Extracting procedural knowledge [chunks2skus.extractors.procedural_extractor] chunk_id=企业战略与财富增长创新蓝宝书_chunk_027
+2026-04-24T11:00:27.988154Z [info     ] [MONITOR] call_llm_json starting [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215
+2026-04-24T11:00:27.989156Z [info     ] [MONITOR] Starting LLM call    [chunks2skus.utils.llm_client] max_tokens=6000 model=doubao-seed-2-0-pro-260215 prompt_length=16600 temperature=0.3
+2026-04-24T11:00:31.594873Z [info     ] [MONITOR] LLM call SUCCESS     [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215 response_length=18 response_preview='{"procedures": []}'
+2026-04-24T11:00:31.596378Z [info     ] [MONITOR] JSON parse SUCCESS   [chunks2skus.utils.llm_client] keys=['procedures']
+2026-04-24T11:00:31.596378Z [info     ] No procedural knowledge found in chunk [chunks2skus.extractors.procedural_extractor] chunk_id=企业战略与财富增长创新蓝宝书_chunk_027
+2026-04-24T11:00:31.597380Z [info     ] Extracting meta knowledge      [chunks2skus.extractors.meta_extractor] chunk_id=企业战略与财富增长创新蓝宝书_chunk_027
+2026-04-24T11:00:31.597380Z [info     ] [MONITOR] call_llm_json starting [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215
+2026-04-24T11:00:31.598392Z [info     ] [MONITOR] Starting LLM call    [chunks2skus.utils.llm_client] max_tokens=8000 model=doubao-seed-2-0-pro-260215 prompt_length=5792 temperature=0.2
+2026-04-24T11:01:24.572886Z [info     ] [MONITOR] LLM call SUCCESS     [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215 response_length=4608 response_preview='{\n  "mapping_content": "# SKU 映射\\n\\n本文件将所有标准知识单元（SKU）映射到其使用场景。\\n\\n---\\n\\n## 一、术语与基础定义类 [relational]\\n| SKU路径 | 内容描述 | 适用场景 |\\n|--------|---------|----'
+2026-04-24T11:01:24.573898Z [info     ] [MONITOR] JSON parse SUCCESS   [chunks2skus.utils.llm_client] keys=['mapping_content']
+2026-04-24T11:01:24.575898Z [info     ] [MONITOR] call_llm_json starting [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215
+2026-04-24T11:01:24.575898Z [info     ] [MONITOR] Starting LLM call    [chunks2skus.utils.llm_client] max_tokens=3000 model=doubao-seed-2-0-pro-260215 prompt_length=9805 temperature=0.7
+2026-04-24T11:01:29.180789Z [info     ] [MONITOR] LLM call SUCCESS     [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215 response_length=46 response_preview='{\n  "updated": false,\n  "eureka_content": ""\n}'
+2026-04-24T11:01:29.181797Z [info     ] [MONITOR] JSON parse SUCCESS   [chunks2skus.utils.llm_client] keys=['updated', 'eureka_content']
+2026-04-24T11:01:29.184151Z [info     ] Meta extraction complete       [chunks2skus.extractors.meta_extractor] chunk_id=企业战略与财富增长创新蓝宝书_chunk_027 eureka_chars=1137 mapping_chars=4385
+2026-04-24T11:01:29.185167Z [info     ] Chunk processed                [chunks2skus.pipeline] chunk_id=企业战略与财富增长创新蓝宝书_chunk_027 new_skus=2 total_skus=81
+2026-04-24T11:01:29.186163Z [info     ] Processing chunk               [chunks2skus.pipeline] chunk_id=企业战略与财富增长创新蓝宝书_chunk_028 progress=30/40
+2026-04-24T11:01:29.186666Z [info     ] Processing chunk               [chunks2skus.router] chunk_id=企业战略与财富增长创新蓝宝书_chunk_028 title=第一组理管商表格 tokens=5785
+2026-04-24T11:01:29.195057Z [info     ] Extracting factual knowledge   [chunks2skus.extractors.factual_extractor] chunk_id=企业战略与财富增长创新蓝宝书_chunk_028
+2026-04-24T11:01:29.195057Z [info     ] [MONITOR] call_llm_json starting [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215
+2026-04-24T11:01:29.195057Z [info     ] [MONITOR] Starting LLM call    [chunks2skus.utils.llm_client] max_tokens=4000 model=doubao-seed-2-0-pro-260215 prompt_length=16668 temperature=0.3
+2026-04-24T11:01:40.684847Z [info     ] [MONITOR] LLM call SUCCESS     [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215 response_length=13 response_preview='{"facts": []}'
+2026-04-24T11:01:40.684847Z [info     ] [MONITOR] JSON parse SUCCESS   [chunks2skus.utils.llm_client] keys=['facts']
+2026-04-24T11:01:40.686362Z [info     ] [MONITOR] Facts extracted      [chunks2skus.utils.llm_client] count=0 facts_preview=[]
+2026-04-24T11:01:40.686362Z [info     ] No factual knowledge found in chunk [chunks2skus.extractors.factual_extractor] chunk_id=企业战略与财富增长创新蓝宝书_chunk_028
+2026-04-24T11:01:40.686362Z [info     ] Extracting relational knowledge [chunks2skus.extractors.relational_extractor] chunk_id=企业战略与财富增长创新蓝宝书_chunk_028
+2026-04-24T11:01:40.687391Z [info     ] [MONITOR] call_llm_json starting [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215
+2026-04-24T11:01:40.687391Z [info     ] [MONITOR] Starting LLM call    [chunks2skus.utils.llm_client] max_tokens=8000 model=doubao-seed-2-0-pro-260215 prompt_length=28694 temperature=0.3
+2026-04-24T11:02:58.935812Z [info     ] [MONITOR] LLM call SUCCESS     [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215 response_length=12823 response_preview='{\n  "label_tree": {\n    "roots": [\n      {\n        "name": "分析模型",\n        "children": [\n          {\n            "name": "大国博弈圈层驱动模型",\n            "ch'
+2026-04-24T11:02:58.935812Z [info     ] [MONITOR] JSON parse SUCCESS   [chunks2skus.utils.llm_client] keys=['label_tree', 'glossary', 'relationships']
+2026-04-24T11:02:58.941239Z [info     ] Relational extraction complete [chunks2skus.extractors.relational_extractor] chunk_id=企业战略与财富增长创新蓝宝书_chunk_028 labels=7 relationships=35 terms=18
+2026-04-24T11:02:58.945826Z [info     ] Extracting procedural knowledge [chunks2skus.extractors.procedural_extractor] chunk_id=企业战略与财富增长创新蓝宝书_chunk_028
+2026-04-24T11:02:58.945826Z [info     ] [MONITOR] call_llm_json starting [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215
+2026-04-24T11:02:58.945826Z [info     ] [MONITOR] Starting LLM call    [chunks2skus.utils.llm_client] max_tokens=6000 model=doubao-seed-2-0-pro-260215 prompt_length=16600 temperature=0.3
+2026-04-24T11:03:03.027114Z [info     ] [MONITOR] LLM call SUCCESS     [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215 response_length=18 response_preview='{"procedures": []}'
+2026-04-24T11:03:03.029242Z [info     ] [MONITOR] JSON parse SUCCESS   [chunks2skus.utils.llm_client] keys=['procedures']
+2026-04-24T11:03:03.030522Z [info     ] No procedural knowledge found in chunk [chunks2skus.extractors.procedural_extractor] chunk_id=企业战略与财富增长创新蓝宝书_chunk_028
+2026-04-24T11:03:03.030522Z [info     ] Extracting meta knowledge      [chunks2skus.extractors.meta_extractor] chunk_id=企业战略与财富增长创新蓝宝书_chunk_028
+2026-04-24T11:03:03.031996Z [info     ] [MONITOR] call_llm_json starting [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215
+2026-04-24T11:03:03.033005Z [info     ] [MONITOR] Starting LLM call    [chunks2skus.utils.llm_client] max_tokens=8000 model=doubao-seed-2-0-pro-260215 prompt_length=6057 temperature=0.2
+2026-04-24T11:04:41.708745Z [info     ] [MONITOR] LLM call SUCCESS     [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215 response_length=4706 response_preview='{\n    "mapping_content": "# SKU 映射\\n\\n本文件将所有标准知识单元（SKU）映射到其使用场景。\\n\\n---\\n\\n## 一、术语与基础定义类 [relational]\\n| SKU路径 | 内容描述 | 适用场景 |\\n|--------|---------|--'
+2026-04-24T11:04:41.709755Z [info     ] [MONITOR] JSON parse SUCCESS   [chunks2skus.utils.llm_client] keys=['mapping_content']
+2026-04-24T11:04:41.710935Z [info     ] [MONITOR] call_llm_json starting [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215
+2026-04-24T11:04:41.711946Z [info     ] [MONITOR] Starting LLM call    [chunks2skus.utils.llm_client] max_tokens=3000 model=doubao-seed-2-0-pro-260215 prompt_length=9805 temperature=0.7
+2026-04-24T11:04:46.402986Z [info     ] [MONITOR] LLM call SUCCESS     [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215 response_length=46 response_preview='{\n  "updated": false,\n  "eureka_content": ""\n}'
+2026-04-24T11:04:46.403993Z [info     ] [MONITOR] JSON parse SUCCESS   [chunks2skus.utils.llm_client] keys=['updated', 'eureka_content']
+2026-04-24T11:04:46.406004Z [info     ] Meta extraction complete       [chunks2skus.extractors.meta_extractor] chunk_id=企业战略与财富增长创新蓝宝书_chunk_028 eureka_chars=1137 mapping_chars=4477
+2026-04-24T11:04:46.408235Z [info     ] Chunk processed                [chunks2skus.pipeline] chunk_id=企业战略与财富增长创新蓝宝书_chunk_028 new_skus=2 total_skus=83
+2026-04-24T11:04:46.408235Z [info     ] Processing chunk               [chunks2skus.pipeline] chunk_id=企业战略与财富增长创新蓝宝书_chunk_029 progress=31/40
+2026-04-24T11:04:46.409522Z [info     ] Processing chunk               [chunks2skus.router] chunk_id=企业战略与财富增长创新蓝宝书_chunk_029 title=第一轮理管商博内容 tokens=5785
+2026-04-24T11:04:46.424276Z [info     ] Extracting factual knowledge   [chunks2skus.extractors.factual_extractor] chunk_id=企业战略与财富增长创新蓝宝书_chunk_029
+2026-04-24T11:04:46.425282Z [info     ] [MONITOR] call_llm_json starting [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215
+2026-04-24T11:04:46.425282Z [info     ] [MONITOR] Starting LLM call    [chunks2skus.utils.llm_client] max_tokens=4000 model=doubao-seed-2-0-pro-260215 prompt_length=16668 temperature=0.3
+2026-04-24T11:04:56.859396Z [info     ] [MONITOR] LLM call SUCCESS     [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215 response_length=13 response_preview='{"facts": []}'
+2026-04-24T11:04:56.860401Z [info     ] [MONITOR] JSON parse SUCCESS   [chunks2skus.utils.llm_client] keys=['facts']
+2026-04-24T11:04:56.860401Z [info     ] [MONITOR] Facts extracted      [chunks2skus.utils.llm_client] count=0 facts_preview=[]
+2026-04-24T11:04:56.860401Z [info     ] No factual knowledge found in chunk [chunks2skus.extractors.factual_extractor] chunk_id=企业战略与财富增长创新蓝宝书_chunk_029
+2026-04-24T11:04:56.861401Z [info     ] Extracting relational knowledge [chunks2skus.extractors.relational_extractor] chunk_id=企业战略与财富增长创新蓝宝书_chunk_029
+2026-04-24T11:04:56.861401Z [info     ] [MONITOR] call_llm_json starting [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215
+2026-04-24T11:04:56.862419Z [info     ] [MONITOR] Starting LLM call    [chunks2skus.utils.llm_client] max_tokens=8000 model=doubao-seed-2-0-pro-260215 prompt_length=28694 temperature=0.3
+2026-04-24T11:06:06.736710Z [info     ] [MONITOR] LLM call SUCCESS     [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215 response_length=12823 response_preview='{\n  "label_tree": {\n    "roots": [\n      {\n        "name": "分析模型",\n        "children": [\n          {\n            "name": "大国博弈圈层驱动模型",\n            "ch'
+2026-04-24T11:06:06.739049Z [info     ] [MONITOR] JSON parse SUCCESS   [chunks2skus.utils.llm_client] keys=['label_tree', 'glossary', 'relationships']
+2026-04-24T11:06:06.751620Z [info     ] Relational extraction complete [chunks2skus.extractors.relational_extractor] chunk_id=企业战略与财富增长创新蓝宝书_chunk_029 labels=7 relationships=35 terms=18
+2026-04-24T11:06:06.752626Z [info     ] Extracting procedural knowledge [chunks2skus.extractors.procedural_extractor] chunk_id=企业战略与财富增长创新蓝宝书_chunk_029
+2026-04-24T11:06:06.753633Z [info     ] [MONITOR] call_llm_json starting [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215
+2026-04-24T11:06:06.753633Z [info     ] [MONITOR] Starting LLM call    [chunks2skus.utils.llm_client] max_tokens=6000 model=doubao-seed-2-0-pro-260215 prompt_length=16600 temperature=0.3
+2026-04-24T11:06:10.546536Z [info     ] [MONITOR] LLM call SUCCESS     [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215 response_length=18 response_preview='{"procedures": []}'
+2026-04-24T11:06:10.547538Z [info     ] [MONITOR] JSON parse SUCCESS   [chunks2skus.utils.llm_client] keys=['procedures']
+2026-04-24T11:06:10.547538Z [info     ] No procedural knowledge found in chunk [chunks2skus.extractors.procedural_extractor] chunk_id=企业战略与财富增长创新蓝宝书_chunk_029
+2026-04-24T11:06:10.547538Z [info     ] Extracting meta knowledge      [chunks2skus.extractors.meta_extractor] chunk_id=企业战略与财富增长创新蓝宝书_chunk_029
+2026-04-24T11:06:10.548587Z [info     ] [MONITOR] call_llm_json starting [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215
+2026-04-24T11:06:10.548587Z [info     ] [MONITOR] Starting LLM call    [chunks2skus.utils.llm_client] max_tokens=8000 model=doubao-seed-2-0-pro-260215 prompt_length=6322 temperature=0.2
+2026-04-24T11:07:00.460487Z [info     ] [MONITOR] LLM call SUCCESS     [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215 response_length=4798 response_preview='{\n  "mapping_content": "# SKU 映射\\n\\n本文件将所有标准知识单元（SKU）映射到其使用场景。\\n\\n---\\n\\n## 一、术语与基础定义类 [relational]\\n| SKU路径 | 内容描述 | 适用场景 |\\n|--------|---------|----'
+2026-04-24T11:07:00.461505Z [info     ] [MONITOR] JSON parse SUCCESS   [chunks2skus.utils.llm_client] keys=['mapping_content']
+2026-04-24T11:07:00.463770Z [info     ] [MONITOR] call_llm_json starting [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215
+2026-04-24T11:07:00.463770Z [info     ] [MONITOR] Starting LLM call    [chunks2skus.utils.llm_client] max_tokens=3000 model=doubao-seed-2-0-pro-260215 prompt_length=9805 temperature=0.7
+2026-04-24T11:07:05.109228Z [info     ] [MONITOR] LLM call SUCCESS     [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215 response_length=46 response_preview='{\n  "updated": false,\n  "eureka_content": ""\n}'
+2026-04-24T11:07:05.110247Z [info     ] [MONITOR] JSON parse SUCCESS   [chunks2skus.utils.llm_client] keys=['updated', 'eureka_content']
+2026-04-24T11:07:05.112287Z [info     ] Meta extraction complete       [chunks2skus.extractors.meta_extractor] chunk_id=企业战略与财富增长创新蓝宝书_chunk_029 eureka_chars=1137 mapping_chars=4567
+2026-04-24T11:07:05.114423Z [info     ] Chunk processed                [chunks2skus.pipeline] chunk_id=企业战略与财富增长创新蓝宝书_chunk_029 new_skus=2 total_skus=85
+2026-04-24T11:07:05.114423Z [info     ] Processing chunk               [chunks2skus.pipeline] chunk_id=企业战略与财富增长创新蓝宝书_chunk_030 progress=32/40
+2026-04-24T11:07:05.114423Z [info     ] Processing chunk               [chunks2skus.router] chunk_id=企业战略与财富增长创新蓝宝书_chunk_030 title=第一组理管商博块 tokens=5785
+2026-04-24T11:07:05.126011Z [info     ] Extracting factual knowledge   [chunks2skus.extractors.factual_extractor] chunk_id=企业战略与财富增长创新蓝宝书_chunk_030
+2026-04-24T11:07:05.126011Z [info     ] [MONITOR] call_llm_json starting [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215
+2026-04-24T11:07:05.127022Z [info     ] [MONITOR] Starting LLM call    [chunks2skus.utils.llm_client] max_tokens=4000 model=doubao-seed-2-0-pro-260215 prompt_length=16668 temperature=0.3
+2026-04-24T11:07:11.904905Z [info     ] [MONITOR] LLM call SUCCESS     [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215 response_length=13 response_preview='{"facts": []}'
+2026-04-24T11:07:11.905904Z [info     ] [MONITOR] JSON parse SUCCESS   [chunks2skus.utils.llm_client] keys=['facts']
+2026-04-24T11:07:11.905904Z [info     ] [MONITOR] Facts extracted      [chunks2skus.utils.llm_client] count=0 facts_preview=[]
+2026-04-24T11:07:11.906406Z [info     ] No factual knowledge found in chunk [chunks2skus.extractors.factual_extractor] chunk_id=企业战略与财富增长创新蓝宝书_chunk_030
+2026-04-24T11:07:11.906406Z [info     ] Extracting relational knowledge [chunks2skus.extractors.relational_extractor] chunk_id=企业战略与财富增长创新蓝宝书_chunk_030
+2026-04-24T11:07:11.906406Z [info     ] [MONITOR] call_llm_json starting [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215
+2026-04-24T11:07:11.907644Z [info     ] [MONITOR] Starting LLM call    [chunks2skus.utils.llm_client] max_tokens=8000 model=doubao-seed-2-0-pro-260215 prompt_length=28694 temperature=0.3
+2026-04-24T11:08:27.942702Z [info     ] [MONITOR] LLM call SUCCESS     [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215 response_length=12319 response_preview='{\n  "label_tree": {\n    "roots": [\n      {\n        "name": "分析模型",\n        "children": [\n          {\n            "name": "大国博弈圈层驱动模型",\n            "ch'
+2026-04-24T11:08:27.943710Z [info     ] [MONITOR] JSON parse SUCCESS   [chunks2skus.utils.llm_client] keys=['label_tree', 'glossary', 'relationships']
+2026-04-24T11:08:27.947232Z [info     ] Relational extraction complete [chunks2skus.extractors.relational_extractor] chunk_id=企业战略与财富增长创新蓝宝书_chunk_030 labels=7 relationships=35 terms=18
+2026-04-24T11:08:27.948251Z [info     ] Extracting procedural knowledge [chunks2skus.extractors.procedural_extractor] chunk_id=企业战略与财富增长创新蓝宝书_chunk_030
+2026-04-24T11:08:27.948251Z [info     ] [MONITOR] call_llm_json starting [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215
+2026-04-24T11:08:27.949261Z [info     ] [MONITOR] Starting LLM call    [chunks2skus.utils.llm_client] max_tokens=6000 model=doubao-seed-2-0-pro-260215 prompt_length=16600 temperature=0.3
+2026-04-24T11:08:32.194413Z [info     ] [MONITOR] LLM call SUCCESS     [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215 response_length=18 response_preview='{"procedures": []}'
+2026-04-24T11:08:32.195924Z [info     ] [MONITOR] JSON parse SUCCESS   [chunks2skus.utils.llm_client] keys=['procedures']
+2026-04-24T11:08:32.197024Z [info     ] No procedural knowledge found in chunk [chunks2skus.extractors.procedural_extractor] chunk_id=企业战略与财富增长创新蓝宝书_chunk_030
+2026-04-24T11:08:32.198319Z [info     ] Extracting meta knowledge      [chunks2skus.extractors.meta_extractor] chunk_id=企业战略与财富增长创新蓝宝书_chunk_030
+2026-04-24T11:08:32.200361Z [info     ] [MONITOR] call_llm_json starting [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215
+2026-04-24T11:08:32.201434Z [info     ] [MONITOR] Starting LLM call    [chunks2skus.utils.llm_client] max_tokens=8000 model=doubao-seed-2-0-pro-260215 prompt_length=6585 temperature=0.2
+2026-04-24T11:10:11.675947Z [info     ] [MONITOR] LLM call SUCCESS     [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215 response_length=4898 response_preview='{\n    "mapping_content": "# SKU 映射\\n\\n本文件将所有标准知识单元（SKU）映射到其使用场景。\\n\\n---\\n\\n## 一、术语与基础定义类 [relational]\\n| SKU路径 | 内容描述 | 适用场景 |\\n|--------|---------|--'
+2026-04-24T11:10:11.678429Z [info     ] [MONITOR] JSON parse SUCCESS   [chunks2skus.utils.llm_client] keys=['mapping_content']
+2026-04-24T11:10:11.682646Z [info     ] [MONITOR] call_llm_json starting [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215
+2026-04-24T11:10:11.682646Z [info     ] [MONITOR] Starting LLM call    [chunks2skus.utils.llm_client] max_tokens=3000 model=doubao-seed-2-0-pro-260215 prompt_length=9805 temperature=0.7
+2026-04-24T11:10:16.113295Z [info     ] [MONITOR] LLM call SUCCESS     [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215 response_length=46 response_preview='{\n  "updated": false,\n  "eureka_content": ""\n}'
+2026-04-24T11:10:16.115835Z [info     ] [MONITOR] JSON parse SUCCESS   [chunks2skus.utils.llm_client] keys=['updated', 'eureka_content']
+2026-04-24T11:10:16.121225Z [info     ] Meta extraction complete       [chunks2skus.extractors.meta_extractor] chunk_id=企业战略与财富增长创新蓝宝书_chunk_030 eureka_chars=1137 mapping_chars=4661
+2026-04-24T11:10:16.126320Z [info     ] Chunk processed                [chunks2skus.pipeline] chunk_id=企业战略与财富增长创新蓝宝书_chunk_030 new_skus=2 total_skus=87
+2026-04-24T11:10:16.126320Z [info     ] Processing chunk               [chunks2skus.pipeline] chunk_id=企业战略与财富增长创新蓝宝书_chunk_031 progress=33/40
+2026-04-24T11:10:16.127330Z [info     ] Processing chunk               [chunks2skus.router] chunk_id=企业战略与财富增长创新蓝宝书_chunk_031 title=首组理管商博表格 tokens=5785
+2026-04-24T11:10:16.142247Z [info     ] Extracting factual knowledge   [chunks2skus.extractors.factual_extractor] chunk_id=企业战略与财富增长创新蓝宝书_chunk_031
+2026-04-24T11:10:16.142247Z [info     ] [MONITOR] call_llm_json starting [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215
+2026-04-24T11:10:16.143327Z [info     ] [MONITOR] Starting LLM call    [chunks2skus.utils.llm_client] max_tokens=4000 model=doubao-seed-2-0-pro-260215 prompt_length=16668 temperature=0.3
+2026-04-24T11:10:23.282835Z [info     ] [MONITOR] LLM call SUCCESS     [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215 response_length=13 response_preview='{"facts": []}'
+2026-04-24T11:10:23.283838Z [info     ] [MONITOR] JSON parse SUCCESS   [chunks2skus.utils.llm_client] keys=['facts']
+2026-04-24T11:10:23.283838Z [info     ] [MONITOR] Facts extracted      [chunks2skus.utils.llm_client] count=0 facts_preview=[]
+2026-04-24T11:10:23.283838Z [info     ] No factual knowledge found in chunk [chunks2skus.extractors.factual_extractor] chunk_id=企业战略与财富增长创新蓝宝书_chunk_031
+2026-04-24T11:10:23.283838Z [info     ] Extracting relational knowledge [chunks2skus.extractors.relational_extractor] chunk_id=企业战略与财富增长创新蓝宝书_chunk_031
+2026-04-24T11:10:23.285340Z [info     ] [MONITOR] call_llm_json starting [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215
+2026-04-24T11:10:23.285340Z [info     ] [MONITOR] Starting LLM call    [chunks2skus.utils.llm_client] max_tokens=8000 model=doubao-seed-2-0-pro-260215 prompt_length=28694 temperature=0.3
+2026-04-24T11:11:47.070990Z [info     ] [MONITOR] LLM call SUCCESS     [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215 response_length=12319 response_preview='{\n  "label_tree": {\n    "roots": [\n      {\n        "name": "分析模型",\n        "children": [\n          {\n            "name": "大国博弈圈层驱动模型",\n            "ch'
+2026-04-24T11:11:47.073013Z [info     ] [MONITOR] JSON parse SUCCESS   [chunks2skus.utils.llm_client] keys=['label_tree', 'glossary', 'relationships']
+2026-04-24T11:11:47.084136Z [info     ] Relational extraction complete [chunks2skus.extractors.relational_extractor] chunk_id=企业战略与财富增长创新蓝宝书_chunk_031 labels=7 relationships=35 terms=18
+2026-04-24T11:11:47.086680Z [info     ] Extracting procedural knowledge [chunks2skus.extractors.procedural_extractor] chunk_id=企业战略与财富增长创新蓝宝书_chunk_031
+2026-04-24T11:11:47.087894Z [info     ] [MONITOR] call_llm_json starting [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215
+2026-04-24T11:11:47.088913Z [info     ] [MONITOR] Starting LLM call    [chunks2skus.utils.llm_client] max_tokens=6000 model=doubao-seed-2-0-pro-260215 prompt_length=16600 temperature=0.3
+2026-04-24T11:11:50.818070Z [info     ] [MONITOR] LLM call SUCCESS     [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215 response_length=18 response_preview='{"procedures": []}'
+2026-04-24T11:11:50.819086Z [info     ] [MONITOR] JSON parse SUCCESS   [chunks2skus.utils.llm_client] keys=['procedures']
+2026-04-24T11:11:50.820099Z [info     ] No procedural knowledge found in chunk [chunks2skus.extractors.procedural_extractor] chunk_id=企业战略与财富增长创新蓝宝书_chunk_031
+2026-04-24T11:11:50.821111Z [info     ] Extracting meta knowledge      [chunks2skus.extractors.meta_extractor] chunk_id=企业战略与财富增长创新蓝宝书_chunk_031
+2026-04-24T11:11:50.823131Z [info     ] [MONITOR] call_llm_json starting [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215
+2026-04-24T11:11:50.823131Z [info     ] [MONITOR] Starting LLM call    [chunks2skus.utils.llm_client] max_tokens=8000 model=doubao-seed-2-0-pro-260215 prompt_length=6852 temperature=0.2
+2026-04-24T11:12:59.218924Z [info     ] [MONITOR] LLM call SUCCESS     [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215 response_length=4994 response_preview='{\n    "mapping_content": "# SKU 映射\\n\\n本文件将所有标准知识单元（SKU）映射到其使用场景。\\n\\n---\\n\\n## 一、术语与基础定义类 [relational]\\n| SKU路径 | 内容描述 | 适用场景 |\\n|--------|---------|--'
+2026-04-24T11:12:59.219952Z [info     ] [MONITOR] JSON parse SUCCESS   [chunks2skus.utils.llm_client] keys=['mapping_content']
+2026-04-24T11:12:59.223148Z [info     ] [MONITOR] call_llm_json starting [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215
+2026-04-24T11:12:59.223148Z [info     ] [MONITOR] Starting LLM call    [chunks2skus.utils.llm_client] max_tokens=3000 model=doubao-seed-2-0-pro-260215 prompt_length=9805 temperature=0.7
+2026-04-24T11:13:03.738555Z [info     ] [MONITOR] LLM call SUCCESS     [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215 response_length=50 response_preview='{\n    "updated": false,\n    "eureka_content": ""\n}'
+2026-04-24T11:13:03.739569Z [info     ] [MONITOR] JSON parse SUCCESS   [chunks2skus.utils.llm_client] keys=['updated', 'eureka_content']
+2026-04-24T11:13:03.740568Z [info     ] Meta extraction complete       [chunks2skus.extractors.meta_extractor] chunk_id=企业战略与财富增长创新蓝宝书_chunk_031 eureka_chars=1137 mapping_chars=4753
+2026-04-24T11:13:03.742591Z [info     ] Chunk processed                [chunks2skus.pipeline] chunk_id=企业战略与财富增长创新蓝宝书_chunk_031 new_skus=2 total_skus=89
+2026-04-24T11:13:03.742591Z [info     ] Processing chunk               [chunks2skus.pipeline] chunk_id=企业战略与财富增长创新蓝宝书_chunk_032 progress=34/40
+2026-04-24T11:13:03.743663Z [info     ] Processing chunk               [chunks2skus.router] chunk_id=企业战略与财富增长创新蓝宝书_chunk_032 title=第一轮理管商博内容 tokens=5785
+2026-04-24T11:13:03.759139Z [info     ] Extracting factual knowledge   [chunks2skus.extractors.factual_extractor] chunk_id=企业战略与财富增长创新蓝宝书_chunk_032
+2026-04-24T11:13:03.760254Z [info     ] [MONITOR] call_llm_json starting [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215
+2026-04-24T11:13:03.760254Z [info     ] [MONITOR] Starting LLM call    [chunks2skus.utils.llm_client] max_tokens=4000 model=doubao-seed-2-0-pro-260215 prompt_length=16668 temperature=0.3
+2026-04-24T11:13:26.928354Z [info     ] [MONITOR] LLM call SUCCESS     [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215 response_length=13 response_preview='{"facts": []}'
+2026-04-24T11:13:26.929369Z [info     ] [MONITOR] JSON parse SUCCESS   [chunks2skus.utils.llm_client] keys=['facts']
+2026-04-24T11:13:26.929369Z [info     ] [MONITOR] Facts extracted      [chunks2skus.utils.llm_client] count=0 facts_preview=[]
+2026-04-24T11:13:26.930376Z [info     ] No factual knowledge found in chunk [chunks2skus.extractors.factual_extractor] chunk_id=企业战略与财富增长创新蓝宝书_chunk_032
+2026-04-24T11:13:26.930376Z [info     ] Extracting relational knowledge [chunks2skus.extractors.relational_extractor] chunk_id=企业战略与财富增长创新蓝宝书_chunk_032
+2026-04-24T11:13:26.931880Z [info     ] [MONITOR] call_llm_json starting [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215
+2026-04-24T11:13:26.931880Z [info     ] [MONITOR] Starting LLM call    [chunks2skus.utils.llm_client] max_tokens=8000 model=doubao-seed-2-0-pro-260215 prompt_length=28694 temperature=0.3
+2026-04-24T11:14:54.801371Z [info     ] [MONITOR] LLM call SUCCESS     [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215 response_length=12319 response_preview='{\n  "label_tree": {\n    "roots": [\n      {\n        "name": "分析模型",\n        "children": [\n          {\n            "name": "大国博弈圈层驱动模型",\n            "ch'
+2026-04-24T11:14:54.805409Z [info     ] [MONITOR] JSON parse SUCCESS   [chunks2skus.utils.llm_client] keys=['label_tree', 'glossary', 'relationships']
+2026-04-24T11:14:54.812970Z [info     ] Relational extraction complete [chunks2skus.extractors.relational_extractor] chunk_id=企业战略与财富增长创新蓝宝书_chunk_032 labels=7 relationships=35 terms=18
+2026-04-24T11:14:54.813993Z [info     ] Extracting procedural knowledge [chunks2skus.extractors.procedural_extractor] chunk_id=企业战略与财富增长创新蓝宝书_chunk_032
+2026-04-24T11:14:54.813993Z [info     ] [MONITOR] call_llm_json starting [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215
+2026-04-24T11:14:54.814503Z [info     ] [MONITOR] Starting LLM call    [chunks2skus.utils.llm_client] max_tokens=6000 model=doubao-seed-2-0-pro-260215 prompt_length=16600 temperature=0.3
+2026-04-24T11:14:58.763410Z [info     ] [MONITOR] LLM call SUCCESS     [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215 response_length=18 response_preview='{"procedures": []}'
+2026-04-24T11:14:58.766099Z [info     ] [MONITOR] JSON parse SUCCESS   [chunks2skus.utils.llm_client] keys=['procedures']
+2026-04-24T11:14:58.767111Z [info     ] No procedural knowledge found in chunk [chunks2skus.extractors.procedural_extractor] chunk_id=企业战略与财富增长创新蓝宝书_chunk_032
+2026-04-24T11:14:58.768131Z [info     ] Extracting meta knowledge      [chunks2skus.extractors.meta_extractor] chunk_id=企业战略与财富增长创新蓝宝书_chunk_032
+2026-04-24T11:14:58.770790Z [info     ] [MONITOR] call_llm_json starting [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215
+2026-04-24T11:14:58.772192Z [info     ] [MONITOR] Starting LLM call    [chunks2skus.utils.llm_client] max_tokens=8000 model=doubao-seed-2-0-pro-260215 prompt_length=7117 temperature=0.2
+2026-04-24T11:15:48.978195Z [info     ] [MONITOR] LLM call SUCCESS     [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215 response_length=5090 response_preview='{\n    "mapping_content": "# SKU 映射\\n\\n本文件将所有标准知识单元（SKU）映射到其使用场景。\\n\\n---\\n\\n## 一、术语与基础定义类 [relational]\\n| SKU路径 | 内容描述 | 适用场景 |\\n|--------|---------|--'
+2026-04-24T11:15:48.980559Z [info     ] [MONITOR] JSON parse SUCCESS   [chunks2skus.utils.llm_client] keys=['mapping_content']
+2026-04-24T11:15:48.985908Z [info     ] [MONITOR] call_llm_json starting [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215
+2026-04-24T11:15:48.986981Z [info     ] [MONITOR] Starting LLM call    [chunks2skus.utils.llm_client] max_tokens=3000 model=doubao-seed-2-0-pro-260215 prompt_length=9805 temperature=0.7
+2026-04-24T11:15:53.763369Z [info     ] [MONITOR] LLM call SUCCESS     [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215 response_length=46 response_preview='{\n  "updated": false,\n  "eureka_content": ""\n}'
+2026-04-24T11:15:53.764372Z [info     ] [MONITOR] JSON parse SUCCESS   [chunks2skus.utils.llm_client] keys=['updated', 'eureka_content']
+2026-04-24T11:15:53.769209Z [info     ] Meta extraction complete       [chunks2skus.extractors.meta_extractor] chunk_id=企业战略与财富增长创新蓝宝书_chunk_032 eureka_chars=1137 mapping_chars=4845
+2026-04-24T11:15:53.773201Z [info     ] Chunk processed                [chunks2skus.pipeline] chunk_id=企业战略与财富增长创新蓝宝书_chunk_032 new_skus=2 total_skus=91
+2026-04-24T11:15:53.773740Z [info     ] Processing chunk               [chunks2skus.pipeline] chunk_id=企业战略与财富增长创新蓝宝书_chunk_033 progress=35/40
+2026-04-24T11:15:53.775464Z [info     ] Processing chunk               [chunks2skus.router] chunk_id=企业战略与财富增长创新蓝宝书_chunk_033 title=第一组理管商博表格 tokens=5785
+2026-04-24T11:15:53.784453Z [info     ] Extracting factual knowledge   [chunks2skus.extractors.factual_extractor] chunk_id=企业战略与财富增长创新蓝宝书_chunk_033
+2026-04-24T11:15:53.785959Z [info     ] [MONITOR] call_llm_json starting [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215
+2026-04-24T11:15:53.787000Z [info     ] [MONITOR] Starting LLM call    [chunks2skus.utils.llm_client] max_tokens=4000 model=doubao-seed-2-0-pro-260215 prompt_length=16668 temperature=0.3
+2026-04-24T11:16:03.308838Z [info     ] [MONITOR] LLM call SUCCESS     [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215 response_length=13 response_preview='{"facts": []}'
+2026-04-24T11:16:03.310829Z [info     ] [MONITOR] JSON parse SUCCESS   [chunks2skus.utils.llm_client] keys=['facts']
+2026-04-24T11:16:03.312824Z [info     ] [MONITOR] Facts extracted      [chunks2skus.utils.llm_client] count=0 facts_preview=[]
+2026-04-24T11:16:03.313819Z [info     ] No factual knowledge found in chunk [chunks2skus.extractors.factual_extractor] chunk_id=企业战略与财富增长创新蓝宝书_chunk_033
+2026-04-24T11:16:03.314814Z [info     ] Extracting relational knowledge [chunks2skus.extractors.relational_extractor] chunk_id=企业战略与财富增长创新蓝宝书_chunk_033
+2026-04-24T11:16:03.316320Z [info     ] [MONITOR] call_llm_json starting [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215
+2026-04-24T11:16:03.317322Z [info     ] [MONITOR] Starting LLM call    [chunks2skus.utils.llm_client] max_tokens=8000 model=doubao-seed-2-0-pro-260215 prompt_length=28694 temperature=0.3
+2026-04-24T11:17:38.928495Z [info     ] [MONITOR] LLM call SUCCESS     [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215 response_length=12319 response_preview='{\n  "label_tree": {\n    "roots": [\n      {\n        "name": "分析模型",\n        "children": [\n          {\n            "name": "大国博弈圈层驱动模型",\n            "ch'
+2026-04-24T11:17:38.928495Z [info     ] [MONITOR] JSON parse SUCCESS   [chunks2skus.utils.llm_client] keys=['label_tree', 'glossary', 'relationships']
+2026-04-24T11:17:38.931533Z [info     ] Relational extraction complete [chunks2skus.extractors.relational_extractor] chunk_id=企业战略与财富增长创新蓝宝书_chunk_033 labels=7 relationships=35 terms=18
+2026-04-24T11:17:38.932898Z [info     ] Extracting procedural knowledge [chunks2skus.extractors.procedural_extractor] chunk_id=企业战略与财富增长创新蓝宝书_chunk_033
+2026-04-24T11:17:38.933918Z [info     ] [MONITOR] call_llm_json starting [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215
+2026-04-24T11:17:38.933918Z [info     ] [MONITOR] Starting LLM call    [chunks2skus.utils.llm_client] max_tokens=6000 model=doubao-seed-2-0-pro-260215 prompt_length=16600 temperature=0.3
+2026-04-24T11:17:42.071871Z [info     ] [MONITOR] LLM call SUCCESS     [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215 response_length=18 response_preview='{"procedures": []}'
+2026-04-24T11:17:42.073906Z [info     ] [MONITOR] JSON parse SUCCESS   [chunks2skus.utils.llm_client] keys=['procedures']
+2026-04-24T11:17:42.075917Z [info     ] No procedural knowledge found in chunk [chunks2skus.extractors.procedural_extractor] chunk_id=企业战略与财富增长创新蓝宝书_chunk_033
+2026-04-24T11:17:42.077574Z [info     ] Extracting meta knowledge      [chunks2skus.extractors.meta_extractor] chunk_id=企业战略与财富增长创新蓝宝书_chunk_033
+2026-04-24T11:17:42.079862Z [info     ] [MONITOR] call_llm_json starting [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215
+2026-04-24T11:17:42.080869Z [info     ] [MONITOR] Starting LLM call    [chunks2skus.utils.llm_client] max_tokens=8000 model=doubao-seed-2-0-pro-260215 prompt_length=7382 temperature=0.2
+2026-04-24T11:18:48.524178Z [info     ] [MONITOR] LLM call SUCCESS     [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215 response_length=5186 response_preview='{\n    "mapping_content": "# SKU 映射\\n\\n本文件将所有标准知识单元（SKU）映射到其使用场景。\\n\\n---\\n\\n## 一、术语与基础定义类 [relational]\\n| SKU路径 | 内容描述 | 适用场景 |\\n|--------|---------|--'
+2026-04-24T11:18:48.525182Z [info     ] [MONITOR] JSON parse SUCCESS   [chunks2skus.utils.llm_client] keys=['mapping_content']
+2026-04-24T11:18:48.526179Z [info     ] [MONITOR] call_llm_json starting [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215
+2026-04-24T11:18:48.526179Z [info     ] [MONITOR] Starting LLM call    [chunks2skus.utils.llm_client] max_tokens=3000 model=doubao-seed-2-0-pro-260215 prompt_length=9805 temperature=0.7
+2026-04-24T11:18:52.784058Z [info     ] [MONITOR] LLM call SUCCESS     [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215 response_length=46 response_preview='{\n  "updated": false,\n  "eureka_content": ""\n}'
+2026-04-24T11:18:52.785073Z [info     ] [MONITOR] JSON parse SUCCESS   [chunks2skus.utils.llm_client] keys=['updated', 'eureka_content']
+2026-04-24T11:18:52.786071Z [info     ] Meta extraction complete       [chunks2skus.extractors.meta_extractor] chunk_id=企业战略与财富增长创新蓝宝书_chunk_033 eureka_chars=1137 mapping_chars=4937
+2026-04-24T11:18:52.788515Z [info     ] Chunk processed                [chunks2skus.pipeline] chunk_id=企业战略与财富增长创新蓝宝书_chunk_033 new_skus=2 total_skus=93
+2026-04-24T11:18:52.789528Z [info     ] Processing chunk               [chunks2skus.pipeline] chunk_id=企业战略与财富增长创新蓝宝书_chunk_034 progress=36/40
+2026-04-24T11:18:52.789528Z [info     ] Processing chunk               [chunks2skus.router] chunk_id=企业战略与财富增长创新蓝宝书_chunk_034 title=第一组理管商博表 tokens=5785
+2026-04-24T11:18:52.816098Z [info     ] Extracting factual knowledge   [chunks2skus.extractors.factual_extractor] chunk_id=企业战略与财富增长创新蓝宝书_chunk_034
+2026-04-24T11:18:52.817118Z [info     ] [MONITOR] call_llm_json starting [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215
+2026-04-24T11:18:52.817118Z [info     ] [MONITOR] Starting LLM call    [chunks2skus.utils.llm_client] max_tokens=4000 model=doubao-seed-2-0-pro-260215 prompt_length=16668 temperature=0.3
+2026-04-24T11:19:02.706138Z [info     ] [MONITOR] LLM call SUCCESS     [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215 response_length=13 response_preview='{"facts": []}'
+2026-04-24T11:19:02.707939Z [info     ] [MONITOR] JSON parse SUCCESS   [chunks2skus.utils.llm_client] keys=['facts']
+2026-04-24T11:19:02.709050Z [info     ] [MONITOR] Facts extracted      [chunks2skus.utils.llm_client] count=0 facts_preview=[]
+2026-04-24T11:19:02.709050Z [info     ] No factual knowledge found in chunk [chunks2skus.extractors.factual_extractor] chunk_id=企业战略与财富增长创新蓝宝书_chunk_034
+2026-04-24T11:19:02.710059Z [info     ] Extracting relational knowledge [chunks2skus.extractors.relational_extractor] chunk_id=企业战略与财富增长创新蓝宝书_chunk_034
+2026-04-24T11:19:02.711068Z [info     ] [MONITOR] call_llm_json starting [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215
+2026-04-24T11:19:02.712075Z [info     ] [MONITOR] Starting LLM call    [chunks2skus.utils.llm_client] max_tokens=8000 model=doubao-seed-2-0-pro-260215 prompt_length=28694 temperature=0.3
+2026-04-24T11:20:19.791634Z [info     ] [MONITOR] LLM call SUCCESS     [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215 response_length=12319 response_preview='{\n  "label_tree": {\n    "roots": [\n      {\n        "name": "分析模型",\n        "children": [\n          {\n            "name": "大国博弈圈层驱动模型",\n            "ch'
+2026-04-24T11:20:19.792151Z [info     ] [MONITOR] JSON parse SUCCESS   [chunks2skus.utils.llm_client] keys=['label_tree', 'glossary', 'relationships']
+2026-04-24T11:20:19.795673Z [info     ] Relational extraction complete [chunks2skus.extractors.relational_extractor] chunk_id=企业战略与财富增长创新蓝宝书_chunk_034 labels=7 relationships=35 terms=18
+2026-04-24T11:20:19.796695Z [info     ] Extracting procedural knowledge [chunks2skus.extractors.procedural_extractor] chunk_id=企业战略与财富增长创新蓝宝书_chunk_034
+2026-04-24T11:20:19.796695Z [info     ] [MONITOR] call_llm_json starting [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215
+2026-04-24T11:20:19.796695Z [info     ] [MONITOR] Starting LLM call    [chunks2skus.utils.llm_client] max_tokens=6000 model=doubao-seed-2-0-pro-260215 prompt_length=16600 temperature=0.3
+2026-04-24T11:20:23.587686Z [info     ] [MONITOR] LLM call SUCCESS     [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215 response_length=18 response_preview='{"procedures": []}'
+2026-04-24T11:20:23.588719Z [info     ] [MONITOR] JSON parse SUCCESS   [chunks2skus.utils.llm_client] keys=['procedures']
+2026-04-24T11:20:23.589730Z [info     ] No procedural knowledge found in chunk [chunks2skus.extractors.procedural_extractor] chunk_id=企业战略与财富增长创新蓝宝书_chunk_034
+2026-04-24T11:20:23.589730Z [info     ] Extracting meta knowledge      [chunks2skus.extractors.meta_extractor] chunk_id=企业战略与财富增长创新蓝宝书_chunk_034
+2026-04-24T11:20:23.590739Z [info     ] [MONITOR] call_llm_json starting [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215
+2026-04-24T11:20:23.591765Z [info     ] [MONITOR] Starting LLM call    [chunks2skus.utils.llm_client] max_tokens=8000 model=doubao-seed-2-0-pro-260215 prompt_length=7647 temperature=0.2
+2026-04-24T11:21:26.008193Z [info     ] [MONITOR] LLM call SUCCESS     [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215 response_length=5280 response_preview='{\n  "mapping_content": "# SKU 映射\\n\\n本文件将所有标准知识单元（SKU）映射到其使用场景。\\n\\n---\\n\\n## 一、术语与基础定义类 [relational]\\n| SKU路径 | 内容描述 | 适用场景 |\\n|--------|---------|----'
+2026-04-24T11:21:26.009205Z [info     ] [MONITOR] JSON parse SUCCESS   [chunks2skus.utils.llm_client] keys=['mapping_content']
+2026-04-24T11:21:26.010214Z [info     ] [MONITOR] call_llm_json starting [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215
+2026-04-24T11:21:26.010214Z [info     ] [MONITOR] Starting LLM call    [chunks2skus.utils.llm_client] max_tokens=3000 model=doubao-seed-2-0-pro-260215 prompt_length=9805 temperature=0.7
+2026-04-24T11:21:30.402103Z [info     ] [MONITOR] LLM call SUCCESS     [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215 response_length=50 response_preview='{\n    "updated": false,\n    "eureka_content": ""\n}'
+2026-04-24T11:21:30.403112Z [info     ] [MONITOR] JSON parse SUCCESS   [chunks2skus.utils.llm_client] keys=['updated', 'eureka_content']
+2026-04-24T11:21:30.404108Z [info     ] Meta extraction complete       [chunks2skus.extractors.meta_extractor] chunk_id=企业战略与财富增长创新蓝宝书_chunk_034 eureka_chars=1137 mapping_chars=5029
+2026-04-24T11:21:30.407616Z [info     ] Chunk processed                [chunks2skus.pipeline] chunk_id=企业战略与财富增长创新蓝宝书_chunk_034 new_skus=2 total_skus=95
+2026-04-24T11:21:30.407616Z [info     ] Processing chunk               [chunks2skus.pipeline] chunk_id=企业战略与财富增长创新蓝宝书_chunk_035 progress=37/40
+2026-04-24T11:21:30.407616Z [info     ] Processing chunk               [chunks2skus.router] chunk_id=企业战略与财富增长创新蓝宝书_chunk_035 title='Part 35' tokens=98361
+2026-04-24T11:21:30.425832Z [info     ] Extracting factual knowledge   [chunks2skus.extractors.factual_extractor] chunk_id=企业战略与财富增长创新蓝宝书_chunk_035
+2026-04-24T11:21:30.425832Z [info     ] [MONITOR] call_llm_json starting [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215
+2026-04-24T11:21:30.426844Z [info     ] [MONITOR] Starting LLM call    [chunks2skus.utils.llm_client] max_tokens=4000 model=doubao-seed-2-0-pro-260215 prompt_length=271500 temperature=0.3
+2026-04-24T11:21:45.317601Z [info     ] [MONITOR] LLM call SUCCESS     [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215 response_length=13 response_preview='{"facts": []}'
+2026-04-24T11:21:45.319714Z [info     ] [MONITOR] JSON parse SUCCESS   [chunks2skus.utils.llm_client] keys=['facts']
+2026-04-24T11:21:45.319714Z [info     ] [MONITOR] Facts extracted      [chunks2skus.utils.llm_client] count=0 facts_preview=[]
+2026-04-24T11:21:45.320718Z [info     ] No factual knowledge found in chunk [chunks2skus.extractors.factual_extractor] chunk_id=企业战略与财富增长创新蓝宝书_chunk_035
+2026-04-24T11:21:45.320718Z [info     ] Extracting relational knowledge [chunks2skus.extractors.relational_extractor] chunk_id=企业战略与财富增长创新蓝宝书_chunk_035
+2026-04-24T11:21:45.320718Z [info     ] [MONITOR] call_llm_json starting [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215
+2026-04-24T11:21:45.321742Z [info     ] [MONITOR] Starting LLM call    [chunks2skus.utils.llm_client] max_tokens=8000 model=doubao-seed-2-0-pro-260215 prompt_length=283526 temperature=0.3
+2026-04-24T11:23:18.211979Z [info     ] [MONITOR] LLM call SUCCESS     [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215 response_length=12319 response_preview='{\n  "label_tree": {\n    "roots": [\n      {\n        "name": "分析模型",\n        "children": [\n          {\n            "name": "大国博弈圈层驱动模型",\n            "ch'
+2026-04-24T11:23:18.212994Z [info     ] [MONITOR] JSON parse SUCCESS   [chunks2skus.utils.llm_client] keys=['label_tree', 'glossary', 'relationships']
+2026-04-24T11:23:18.217022Z [info     ] Relational extraction complete [chunks2skus.extractors.relational_extractor] chunk_id=企业战略与财富增长创新蓝宝书_chunk_035 labels=7 relationships=35 terms=18
+2026-04-24T11:23:18.218041Z [info     ] Extracting procedural knowledge [chunks2skus.extractors.procedural_extractor] chunk_id=企业战略与财富增长创新蓝宝书_chunk_035
+2026-04-24T11:23:18.219339Z [info     ] [MONITOR] call_llm_json starting [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215
+2026-04-24T11:23:18.219339Z [info     ] [MONITOR] Starting LLM call    [chunks2skus.utils.llm_client] max_tokens=6000 model=doubao-seed-2-0-pro-260215 prompt_length=271432 temperature=0.3
+2026-04-24T11:23:26.344705Z [info     ] [MONITOR] LLM call SUCCESS     [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215 response_length=18 response_preview='{"procedures": []}'
+2026-04-24T11:23:26.345704Z [info     ] [MONITOR] JSON parse SUCCESS   [chunks2skus.utils.llm_client] keys=['procedures']
+2026-04-24T11:23:26.346205Z [info     ] No procedural knowledge found in chunk [chunks2skus.extractors.procedural_extractor] chunk_id=企业战略与财富增长创新蓝宝书_chunk_035
+2026-04-24T11:23:26.346205Z [info     ] Extracting meta knowledge      [chunks2skus.extractors.meta_extractor] chunk_id=企业战略与财富增长创新蓝宝书_chunk_035
+2026-04-24T11:23:26.346205Z [info     ] [MONITOR] call_llm_json starting [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215
+2026-04-24T11:23:26.346205Z [info     ] [MONITOR] Starting LLM call    [chunks2skus.utils.llm_client] max_tokens=8000 model=doubao-seed-2-0-pro-260215 prompt_length=7912 temperature=0.2
+2026-04-24T11:24:24.531842Z [info     ] [MONITOR] LLM call SUCCESS     [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215 response_length=5378 response_preview='{\n    "mapping_content": "# SKU 映射\\n\\n本文件将所有标准知识单元（SKU）映射到其使用场景。\\n\\n---\\n\\n## 一、术语与基础定义类 [relational]\\n| SKU路径 | 内容描述 | 适用场景 |\\n|--------|---------|--'
+2026-04-24T11:24:24.532858Z [info     ] [MONITOR] JSON parse SUCCESS   [chunks2skus.utils.llm_client] keys=['mapping_content']
+2026-04-24T11:24:24.533873Z [info     ] [MONITOR] call_llm_json starting [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215
+2026-04-24T11:24:24.533873Z [info     ] [MONITOR] Starting LLM call    [chunks2skus.utils.llm_client] max_tokens=3000 model=doubao-seed-2-0-pro-260215 prompt_length=9805 temperature=0.7
+2026-04-24T11:24:28.397460Z [info     ] [MONITOR] LLM call SUCCESS     [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215 response_length=46 response_preview='{\n  "updated": false,\n  "eureka_content": ""\n}'
+2026-04-24T11:24:28.397460Z [info     ] [MONITOR] JSON parse SUCCESS   [chunks2skus.utils.llm_client] keys=['updated', 'eureka_content']
+2026-04-24T11:24:28.399916Z [info     ] Meta extraction complete       [chunks2skus.extractors.meta_extractor] chunk_id=企业战略与财富增长创新蓝宝书_chunk_035 eureka_chars=1137 mapping_chars=5121
+2026-04-24T11:24:28.401938Z [info     ] Chunk processed                [chunks2skus.pipeline] chunk_id=企业战略与财富增长创新蓝宝书_chunk_035 new_skus=2 total_skus=97
+2026-04-24T11:24:28.401938Z [info     ] Processing chunk               [chunks2skus.pipeline] chunk_id=玥堂主【投资&创新】200+思维套图合集_chunk_001 progress=38/40
+2026-04-24T11:24:28.403034Z [info     ] Processing chunk               [chunks2skus.router] chunk_id=玥堂主【投资&创新】200+思维套图合集_chunk_001 title=玥堂主【投资&创新】200+思维套图合集 tokens=35702
+2026-04-24T11:24:28.414492Z [info     ] Extracting factual knowledge   [chunks2skus.extractors.factual_extractor] chunk_id=玥堂主【投资&创新】200+思维套图合集_chunk_001
+2026-04-24T11:24:28.414492Z [info     ] [MONITOR] call_llm_json starting [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215
+2026-04-24T11:24:28.415994Z [info     ] [MONITOR] Starting LLM call    [chunks2skus.utils.llm_client] max_tokens=4000 model=doubao-seed-2-0-pro-260215 prompt_length=34607 temperature=0.3
+2026-04-24T11:39:18.431388Z [info     ] [MONITOR] LLM call SUCCESS     [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215 response_length=8870 response_preview='{\n  "facts": [\n    {\n      "name": "四大创新原型及对应案例",\n      "description": "四种创新原型的分类及代表企业",\n      "content_type": "json",\n      "content": [\n        {"创新'
+2026-04-24T11:39:18.432393Z [warning  ] [MONITOR] All JSON parsing methods FAILED [chunks2skus.utils.llm_client] full_text='{\n  "facts": [\n    {\n      "name": "四大创新原型及对应案例",\n      "description": "四种创新原型的分类及代表企业",\n      "content_type": "json",\n      "content": [\n        {"创新类型":"客户中心型创新","代表企业":"海底捞"},\n        {"创新类型":"效率驱动型创新","代表企业":"用友网络"},\n        {"创新类型":"工程技术型创新","代表企业":"Apple"},\n        {"创新类型":"科学研究型创新","代表企业":"Moderna"}\n      ]\n    },\n    {\n      "name": "现代文明发展路径与四次工业革命",\n      "description": "四次工业革命的时间、核心技术、标志性产物及影响",\n      "content_type": "json",\n      "content": [\n        {\n          "阶段":"第一次工业革命（蒸汽机）",\n' preview='{\n  "facts": [\n    {\n      "name": "四大创新原型及对应案例",\n      "description": "四种创新原型的分类及代表企业",\n      "content_type": "json",\n      "content": [\n        {"创新类型":"客户中心型创新","代表企业":"海底捞"},\n        {"创新类型":"效率驱动'
+2026-04-24T11:39:18.433398Z [warning  ] [MONITOR] JSON parse FAILED, will retry [chunks2skus.utils.llm_client] response_preview='{\n  "facts": [\n    {\n      "name": "四大创新原型及对应案例",\n      "description": "四种创新原型的分类及代表企业",\n      "content_type": "json",\n      "content": [\n        {"创新类型":"客户中心型创新","代表企业":"海底捞"},\n        {"创新类型":"效率驱动型创新","代表企业":"用友网络"},\n        {"创新类型":"工程技术型创新","代表企业":"Apple"},\n        {"创新类型":"科学研究型创新","代表企业":"Mo'
+2026-04-24T11:39:18.433398Z [info     ] [MONITOR] Retry 1/2            [chunks2skus.utils.llm_client]
+2026-04-24T11:39:18.434749Z [info     ] [MONITOR] Starting LLM call    [chunks2skus.utils.llm_client] max_tokens=4000 model=doubao-seed-2-0-pro-260215 prompt_length=35066 temperature=0.19999999999999998
+2026-04-24T11:41:25.147269Z [info     ] [MONITOR] LLM call SUCCESS     [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215 response_length=8631 response_preview='{\n  "facts": [\n    {\n      "name": "四大创新原型及对应代表企业",\n      "description": "四大创新原型的分类及各自对应的典型企业案例",\n      "content_type": "json",\n      "content": [\n   '
+2026-04-24T11:41:25.148281Z [warning  ] [MONITOR] All JSON parsing methods FAILED [chunks2skus.utils.llm_client] full_text='{\n  "facts": [\n    {\n      "name": "四大创新原型及对应代表企业",\n      "description": "四大创新原型的分类及各自对应的典型企业案例",\n      "content_type": "json",\n      "content": [\n        {"创新类型": "客户中心型创新", "代表企业": "海底捞"},\n        {"创新类型": "效率驱动型创新", "代表企业": "用友网络"},\n        {"创新类型": "工程技术型创新", "代表企业": "Apple"},\n        {"创新类型": "科学研究型创新", "代表企业": "Moderna"}\n      ]\n    },\n    {\n      "name": "现代文明发展路径与对应工业革命阶段",\n      "description": "不同年代对应的工业革命阶段、核心影响及代表性技术产品",\n      "content_type": "json",\n      "content": [\n        {"时间段":' preview='{\n  "facts": [\n    {\n      "name": "四大创新原型及对应代表企业",\n      "description": "四大创新原型的分类及各自对应的典型企业案例",\n      "content_type": "json",\n      "content": [\n        {"创新类型": "客户中心型创新", "代表企业": "海底捞"},\n        {'
+2026-04-24T11:41:25.149286Z [info     ] [MONITOR] Retry 2/2            [chunks2skus.utils.llm_client]
+2026-04-24T11:41:25.149286Z [info     ] [MONITOR] Starting LLM call    [chunks2skus.utils.llm_client] max_tokens=4000 model=doubao-seed-2-0-pro-260215 prompt_length=35066 temperature=0.19999999999999998
+2026-04-24T11:43:53.755835Z [info     ] [MONITOR] LLM call SUCCESS     [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215 response_length=8178 response_preview='{\n  "facts": [\n    {\n      "name": "四大创新原型及对应代表企业",\n      "description": "玥堂主投资&创新思维模型中的四大创新原型分类及各自对应典型企业",\n      "content_type": "json",\n      "conte'
+2026-04-24T11:43:53.757356Z [info     ] [MONITOR] JSON parse SUCCESS on retry [chunks2skus.utils.llm_client] attempt=2 keys=['facts']
+2026-04-24T11:43:53.786254Z [info     ] Factual extraction complete    [chunks2skus.extractors.factual_extractor] chunk_id=玥堂主【投资&创新】200+思维套图合集_chunk_001 skus_created=21
+2026-04-24T11:43:53.786254Z [info     ] Extracting relational knowledge [chunks2skus.extractors.relational_extractor] chunk_id=玥堂主【投资&创新】200+思维套图合集_chunk_001
+2026-04-24T11:43:53.787254Z [info     ] [MONITOR] call_llm_json starting [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215
+2026-04-24T11:43:53.787254Z [info     ] [MONITOR] Starting LLM call    [chunks2skus.utils.llm_client] max_tokens=8000 model=doubao-seed-2-0-pro-260215 prompt_length=46645 temperature=0.3
+2026-04-24T11:47:08.481730Z [info     ] [MONITOR] LLM call SUCCESS     [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215 response_length=18821 response_preview='{\n  "label_tree": {\n    "roots": [\n      {\n        "name": "分析模型",\n        "children": [\n          {\n            "name": "大国博弈圈层驱动模型",\n            "ch'
+2026-04-24T11:47:08.482744Z [info     ] [MONITOR] JSON parse SUCCESS   [chunks2skus.utils.llm_client] keys=['label_tree', 'glossary', 'relationships']
+2026-04-24T11:47:08.487623Z [info     ] Relational extraction complete [chunks2skus.extractors.relational_extractor] chunk_id=玥堂主【投资&创新】200+思维套图合集_chunk_001 labels=8 relationships=56 terms=34
+2026-04-24T11:47:08.488631Z [info     ] Extracting procedural knowledge [chunks2skus.extractors.procedural_extractor] chunk_id=玥堂主【投资&创新】200+思维套图合集_chunk_001
+2026-04-24T11:47:08.489807Z [info     ] [MONITOR] call_llm_json starting [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215
+2026-04-24T11:47:08.489807Z [info     ] [MONITOR] Starting LLM call    [chunks2skus.utils.llm_client] max_tokens=6000 model=doubao-seed-2-0-pro-260215 prompt_length=34539 temperature=0.3
+2026-04-24T11:48:28.831465Z [info     ] [MONITOR] LLM call SUCCESS     [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215 response_length=4799 response_preview='{\n  "procedures": [\n    {\n      "name": "small-enterprise-difficulty-response-five-character-method",\n      "description": "中小企业面临经营困境、需要平稳度过危机时使用",\n '
+2026-04-24T11:48:28.832515Z [info     ] [MONITOR] JSON parse SUCCESS   [chunks2skus.utils.llm_client] keys=['procedures']
+2026-04-24T11:48:28.845864Z [info     ] Procedural extraction complete [chunks2skus.extractors.procedural_extractor] chunk_id=玥堂主【投资&创新】200+思维套图合集_chunk_001 skills_created=10
+2026-04-24T11:48:28.846873Z [info     ] Extracting meta knowledge      [chunks2skus.extractors.meta_extractor] chunk_id=玥堂主【投资&创新】200+思维套图合集_chunk_001
+2026-04-24T11:48:28.847948Z [info     ] [MONITOR] call_llm_json starting [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215
+2026-04-24T11:48:28.847948Z [info     ] [MONITOR] Starting LLM call    [chunks2skus.utils.llm_client] max_tokens=8000 model=doubao-seed-2-0-pro-260215 prompt_length=10256 temperature=0.2
+2026-04-24T11:49:40.731284Z [info     ] [MONITOR] LLM call SUCCESS     [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215 response_length=3457 response_preview='{\n    "mapping_content": "# SKU 映射\\n\\n本文件将所有标准知识单元（SKU）映射到其使用场景。\\n\\n---\\n\\n## 一、术语与基础定义类 [relational]\\n| SKU路径 | 内容描述 | 适用场景 |\\n|--------|---------|--'
+2026-04-24T11:49:40.731284Z [info     ] [MONITOR] JSON parse SUCCESS   [chunks2skus.utils.llm_client] keys=['mapping_content']
+2026-04-24T11:49:40.733315Z [info     ] [MONITOR] call_llm_json starting [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215
+2026-04-24T11:49:40.734451Z [info     ] [MONITOR] Starting LLM call    [chunks2skus.utils.llm_client] max_tokens=3000 model=doubao-seed-2-0-pro-260215 prompt_length=9811 temperature=0.7
+2026-04-24T11:50:41.170785Z [info     ] [MONITOR] LLM call SUCCESS     [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215 response_length=1875 response_preview='{\n  "updated": true,\n  "eureka_content": "# 灵感笔记\\n知识提取过程中发现的跨领域洞察和创意。\\n---\\n## 新兴产业通用分析框架\\n可将任何战略新兴产业置于「大国博弈外圈约束+科技圈核心引擎+人口圈需求土壤+资本圈产业燃料」的圈层互动模型中，穿透现象'
+2026-04-24T11:50:41.173315Z [info     ] [MONITOR] JSON parse SUCCESS   [chunks2skus.utils.llm_client] keys=['updated', 'eureka_content']
+2026-04-24T11:50:41.176938Z [info     ] Updated eureka.md              [chunks2skus.extractors.meta_extractor] chunk_id=玥堂主【投资&创新】200+思维套图合集_chunk_001
+2026-04-24T11:50:41.180241Z [info     ] Meta extraction complete       [chunks2skus.extractors.meta_extractor] chunk_id=玥堂主【投资&创新】200+思维套图合集_chunk_001 eureka_chars=1798 mapping_chars=3265
+2026-04-24T11:50:41.182267Z [info     ] Chunk processed                [chunks2skus.pipeline] chunk_id=玥堂主【投资&创新】200+思维套图合集_chunk_001 new_skus=33 total_skus=130
+2026-04-24T11:50:41.182267Z [info     ] Processing chunk               [chunks2skus.pipeline] chunk_id=科技战略与投资策略10个建议与5大误区(1)_chunk_001 progress=39/40
+2026-04-24T11:50:41.183270Z [info     ] Processing chunk               [chunks2skus.router] chunk_id=科技战略与投资策略10个建议与5大误区(1)_chunk_001 title=科技战略与投资策略10个建议与5大误区(1) tokens=15653
+2026-04-24T11:50:41.189994Z [info     ] Extracting factual knowledge   [chunks2skus.extractors.factual_extractor] chunk_id=科技战略与投资策略10个建议与5大误区(1)_chunk_001
+2026-04-24T11:50:41.191199Z [info     ] [MONITOR] call_llm_json starting [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215
+2026-04-24T11:50:41.191199Z [info     ] [MONITOR] Starting LLM call    [chunks2skus.utils.llm_client] max_tokens=4000 model=doubao-seed-2-0-pro-260215 prompt_length=15385 temperature=0.3
+2026-04-24T11:52:56.318714Z [info     ] [MONITOR] LLM call SUCCESS     [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215 response_length=5152 response_preview='{\n    "facts": [\n        {\n            "name": "技术产业化关键时刻及相关曲线定义",\n            "description": "明确技术产业化的两个核心关键时刻，以及技术进化S曲线、Gartner技术曲线的阶段划分与特征",\n      '
+2026-04-24T11:52:56.319752Z [info     ] [MONITOR] JSON parse SUCCESS   [chunks2skus.utils.llm_client] keys=['facts']
+2026-04-24T11:52:56.321111Z [info     ] [MONITOR] Facts extracted      [chunks2skus.utils.llm_client] count=11 facts_preview="[{'name': '技术产业化关键时刻及相关曲线定义', 'description': '明确技术产业化的两个核心关键时刻，以及技术进化S曲线、Gartner技术曲线的阶段划分与特征', 'content_type': 'markdown', 'content': '1. 技术进化S曲线：完整包含四个阶段，分别为起步阶段、加速阶段、成熟阶段、衰退阶段。\\n2. Gartner技术曲线（G曲线）：包含五个阶段，分别为技术萌芽期、期望膨胀期、泡沫幻灭期、爬升恢复期、稳步增长期。两条曲线前端、后端完全贴合，仅中间阶段存在差异。\\n3. 技术产业化第一个关键时刻：魔幻时刻（又称泡沫时刻），对应G曲线波峰位置，此时媒体、资本热捧新技术，距离实际产业化仍有距离，创业者应在此阶段融够可穿越泡沫期的资金，控制商业化节奏与现金流。\\n4. 技术产业化第二个关键时刻：黄金时刻，对应两条曲线后段重合位置，此时市场基础设施成熟、场景需求增多，资本回流，存活的企业将进入产业化爆发期。'}, {'name': '科技企业创业初期两类跨界竞争风险', 'description': '介绍科技企业进入产业黄金时刻后可能面临的两类跨界竞争者（黄雀）的特征', 'content_type': 'markdown', 'content': '科技企业在进入产业黄金时刻后，可能面临两类跨界竞争者的冲击：\\n1. 第一类是行业大公司：依托自身资源优势延伸业务，直接摘取科技创业公司的成熟技术成果，典型案例为苹果iPhone触屏手机对传统按键手机行业的颠覆。\\n2. 第二类是拥有场景需求的产业方：基于自身场景需求反向整合新能源等科技产业链，打造细分场景产品，例如冷链运输、消防车、救护车等场景方可以反向整合新能源车产业链。投资机构更偏好拥有场景需求、可快速整合新技术的细分赛道企业。'}, {'name': '行业龙头布局科技创新的价值（茅台案例）', 'description': '以茅台设立100亿科技基金为例，说明行业龙头布局科技创新的必要性与战略意义', 'content_type': 'markdown', 'content': '茅台作为白酒行业龙头，产能稀缺难以通过提价、并购实现持续增长，布局科技基金寻找第二曲线是正确的战略选择，其意义包含两层：\\n1. 技术跨界融合价值：新材料、新工艺、新能源等新技术可能与茅台酿酒、种植等产业链环节产生结合，提升自身产业效率。\\n2. 社会责任价值：茅台作为国有资本市场旗舰，可通过投资推动新技术产业化，带动就业与GDP增长，支持国家科技创新与新质生产力发展战略。未来将有更多中国行业龙头承担科技创新牵头责任。'}, {'name': '摩方精密3D打印案例与大规模定制模式', 'description': '介绍纳微级3D打印企业摩方精密的技术优势、场景探索及大规模定制商业模式', 'content_type': 'markdown', 'content': '摩方精密是全球领先的纳微级3D打印企业，技术领先全球同行数年，可打印火柴头大小、结构完整的鸟巢模型，原有客户为全球2000家高端工业企业、航天公司、科研院所，单客户设备需求量小。通过探索场景，首先打通了牙齿美白贴片应用场景，其超精密3D打印技术可制作超薄、坚固、使用寿命达10年以上的牙齿贴片，避免打磨牙釉的痛点。该企业探索出大规模定制的新型商业模式，即结合大规模生产的成本优势与高度定制化的需求适配能力，过去两年一级市场估值实现多倍增长。'}, {'name': '技术领域入局时机建议', 'description': '分别针对初创企业、产业投资人给出技术产业化不同阶段的入局时机建议', 'content_type': 'markdown', 'content': '1. 初创企业入局时机：建议在魔幻时刻入局，此时获得媒体、资本关注度高，创始人需保持清醒，探索清晰商业模式，融到足够支撑穿越泡沫期的资金。\\n2. 产业投资人入局时机：不建议在魔幻时刻投资，应等待泡沫破裂后入局，可选择两类方式：一是吸纳经历过创业失败的成熟人才成立新事业部，二是投资行业内剩余的成熟创业者，把握行业成熟期增长红利。'}, {'name': '产业方客户作为投资人的优势', 'description': '说明产业方是科技创业企业更优投资方的原因与价值', 'content_type': 'markdown', 'content': '当前科技创业者多为科学家+企业家的组合，拥有10-20年产业经验。产业方是比传统VC、PE更优的早期投资方：产业方清晰了解技术的场景适配性，不会给出泡沫化估值，可提供合理估值；标杆产业客户入股可验证技术可行性，对企业发展具备战略意义。'}, {'name': '一级市场偏好的创业团队特征', 'description': '介绍一级市场及上市公司CVC偏好的创业团队的核心特征', 'content_type': 'markdown', 'content': '一级市场及上市公司CVC最偏好历经淬火的创业团队：即经历过创业挫折、烧掉过融资甚至破产过，已经找到明确落地场景、即将进入爆发期的团队，最优团队结构为科学家+投资人/企业家的组合，科学家负责技术创新，投资人/企业家负责商业资源整合、融资与商务谈判。'}, {'name': '成功创业者的典型特征', 'description': '介绍创业成功人群的两类核心特征：乐观主义特质、游泳式呼吸创业模式', 'content_type': 'markdown', 'content': '1. 乐观主义特质：成功创业者多为乐观主义者，对自身产品、公司及行业机会充满信心，工作充满激情，不会因外部负面判断放弃推进项目。\\n2. 游泳式呼吸创业模式：常见于三四线城市成功创业者，核心是既能学习一二线城市的先进商业模式，又能快速下沉结合本地实际场景落地执行，典型案例为餐饮品牌老乡鸡的创始人。'}, {'name': '重点投资方向判定逻辑', 'description': '介绍基于中国产业规划与美国对华技术禁止清单的交集确定重点投资方向的逻辑', 'content_type': 'markdown', 'content': '投资重点关注两个圈的交集：第一个圈是中国发布的新兴产业规划（包含中国制造2025、2035远景规划等），第二个圈是美国发布的对华出口禁止技术清单。交集领域的典型赛道包括先进材料、商业航天、合成生物、先进制造智能装备，这类领域的企业将获得中国资本市场的优先支持。'}, {'name': '科技领域创业与投资五大误区', 'description': '列举科技创业与投资领域的五大常见误区及对应的正确引导建议', 'content_type': 'json', 'content': [{'misconception': '专精特新企业要以上市为终局目标', 'correct_suggestion': '国内专精特新企业数量接近10万家，中国资本市场仅能容纳约1万家上市公司，90%的专精特新企业无法上市。企业应先以成为好公司为目标，优先做到年销售额5亿、年净利润5000万，上市是后续可选的战略选择，不应作为唯一目标避免经营动作变形。'}, {'misconception': '鼓励所有科学家担任企业董事长', 'correct_suggestion': '80%的科学家不适合担任董事长岗位，科学家的核心能力是技术钻研，董事长需要具备资源整合、团队管理、客户拓展等经营能力，最优配置为科学家+企业家/投资人的互信组合，避免人才浪费。'}, {'misconception': '消费行业没有科技属性，科技与消费相互割裂', 'correct_suggestion': '硬科技发展的最终目的是落地消费提升民生，消费行业存在大量科技应用，例如扫地机器人、特医食品、食品生产物流技术等，应支持具备科技属性的消费企业获得资本市场支持。'}, {'misconception': '投资可以持续获得10%以上的年化高收益，要赚快钱', 'correct_suggestion': '过去依托房地产的高收益投资时代已经结束，监管已明确不存在保本保收益的金融产品，新质生产力相关的技术产业化周期长达3-10年，投资人与企业应转变心态，适应赚慢钱、赚长钱的周期。'}, {'misconception': '打着新质生产力旗号的短期高收益理财产品是合规投资产品', 'correct_suggestion': '技术产业化周期较长，若存在包装新质生产力概念、承诺1-2年短期高收益的理财产品，必然是骗局，投资人应选择具备合规资质的金融机构发行的符合合格投资人要求的产品。'}]}, {'name': '中美博弈美国对华一明两暗牌及中国应对方向', 'description': '介绍中美博弈中美国打出的一明两暗牌的具体内容，以及中国的应对优势与方向', 'content_type': 'markdown', 'content': '中美博弈中美国对华打出一明两暗三张牌：\\n1. 明牌：减少对华贸易订单，试图取消中国在WTO的优惠待遇抬高中国出口成本。\\n2. 第一张暗牌：通过美元加息、带动日本加息等方式抽走中国市场流动性，减少外资流入中国资本市场规模。\\n3. 第二张暗牌：打击中国民营经济与金融从业者的信心，利用预期差影响经营者、投资者的判断。\\n中国的核心优势是拥有庞大的消费市场与品类齐全的制造业基础，应对方向是引导金融流向新质生产力相关的实体产业，发挥自身禀赋吸引外资回流，走通技术产业化的发展路径。'}]"
+2026-04-24T11:52:56.336988Z [info     ] Factual extraction complete    [chunks2skus.extractors.factual_extractor] chunk_id=科技战略与投资策略10个建议与5大误区(1)_chunk_001 skus_created=11
+2026-04-24T11:52:56.336988Z [info     ] Extracting relational knowledge [chunks2skus.extractors.relational_extractor] chunk_id=科技战略与投资策略10个建议与5大误区(1)_chunk_001
+2026-04-24T11:52:56.337992Z [info     ] [MONITOR] call_llm_json starting [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215
+2026-04-24T11:52:56.337992Z [info     ] [MONITOR] Starting LLM call    [chunks2skus.utils.llm_client] max_tokens=8000 model=doubao-seed-2-0-pro-260215 prompt_length=30044 temperature=0.3
+2026-04-24T11:56:54.131927Z [info     ] [MONITOR] LLM call SUCCESS     [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215 response_length=22569 response_preview='{\n  "label_tree": {\n    "roots": [\n      {\n        "name": "分析模型",\n        "children": [\n          {\n            "name": "大国博弈圈层驱动模型",\n            "ch'
+2026-04-24T11:56:54.132944Z [warning  ] [MONITOR] All JSON parsing methods FAILED [chunks2skus.utils.llm_client] full_text='{\n  "label_tree": {\n    "roots": [\n      {\n        "name": "分析模型",\n        "children": [\n          {\n            "name": "大国博弈圈层驱动模型",\n            "children": [\n              {\n                "name": "大国博弈圈",\n                "children": []\n              },\n              {\n                "name": "科技圈",\n                "children": []\n              },\n              {\n                "name": "人口圈",\n                "children": []\n              },\n              {\n                "name": "资本圈",\n     ' preview='{\n  "label_tree": {\n    "roots": [\n      {\n        "name": "分析模型",\n        "children": [\n          {\n            "name": "大国博弈圈层驱动模型",\n            "children": [\n              {\n                "name":'
+2026-04-24T11:56:54.132944Z [warning  ] [MONITOR] JSON parse FAILED, will retry [chunks2skus.utils.llm_client] response_preview='{\n  "label_tree": {\n    "roots": [\n      {\n        "name": "分析模型",\n        "children": [\n          {\n            "name": "大国博弈圈层驱动模型",\n            "children": [\n              {\n                "name": "大国博弈圈",\n                "children": []\n              },\n              {\n                "name": "科'
+2026-04-24T11:56:54.134285Z [info     ] [MONITOR] Retry 1/2            [chunks2skus.utils.llm_client]
+2026-04-24T11:56:54.134285Z [info     ] [MONITOR] Starting LLM call    [chunks2skus.utils.llm_client] max_tokens=8000 model=doubao-seed-2-0-pro-260215 prompt_length=30503 temperature=0.19999999999999998
+2026-04-24T11:59:50.656564Z [info     ] [MONITOR] LLM call SUCCESS     [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215 response_length=20593 response_preview='{\n  "label_tree": {\n    "roots": [\n      {\n        "name": "分析模型",\n        "children": [\n          {\n            "name": "大国博弈圈层驱动模型",\n            "ch'
+2026-04-24T11:59:50.657601Z [info     ] [MONITOR] JSON parse SUCCESS on retry [chunks2skus.utils.llm_client] attempt=1 keys=['label_tree', 'glossary', 'relationships']
+2026-04-24T11:59:50.664458Z [info     ] Relational extraction complete [chunks2skus.extractors.relational_extractor] chunk_id=科技战略与投资策略10个建议与5大误区(1)_chunk_001 labels=8 relationships=66 terms=44
+2026-04-24T11:59:50.667090Z [info     ] Extracting procedural knowledge [chunks2skus.extractors.procedural_extractor] chunk_id=科技战略与投资策略10个建议与5大误区(1)_chunk_001
+2026-04-24T11:59:50.667090Z [info     ] [MONITOR] call_llm_json starting [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215
+2026-04-24T11:59:50.668122Z [info     ] [MONITOR] Starting LLM call    [chunks2skus.utils.llm_client] max_tokens=6000 model=doubao-seed-2-0-pro-260215 prompt_length=15317 temperature=0.3
+2026-04-24T12:00:57.980130Z [info     ] [MONITOR] LLM call SUCCESS     [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215 response_length=4210 response_preview='{\n  "procedures": [\n    {\n      "name": "tech-entrepreneur-magic-period-operation",\n      "description": "科技创业者在技术产业化魔幻时刻（期望膨胀泡沫期）使用，指导利用阶段优势穿越周期",\n  '
+2026-04-24T12:00:57.981148Z [info     ] [MONITOR] JSON parse SUCCESS   [chunks2skus.utils.llm_client] keys=['procedures']
+2026-04-24T12:00:58.033718Z [info     ] Procedural extraction complete [chunks2skus.extractors.procedural_extractor] chunk_id=科技战略与投资策略10个建议与5大误区(1)_chunk_001 skills_created=9
+2026-04-24T12:00:58.033718Z [info     ] Extracting meta knowledge      [chunks2skus.extractors.meta_extractor] chunk_id=科技战略与投资策略10个建议与5大误区(1)_chunk_001
+2026-04-24T12:00:58.034720Z [info     ] [MONITOR] call_llm_json starting [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215
+2026-04-24T12:00:58.035718Z [info     ] [MONITOR] Starting LLM call    [chunks2skus.utils.llm_client] max_tokens=8000 model=doubao-seed-2-0-pro-260215 prompt_length=10144 temperature=0.2
+2026-04-24T12:03:27.370285Z [info     ] [MONITOR] LLM call SUCCESS     [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215 response_length=5395 response_preview='{\n    "mapping_content": "# SKU 映射\\n\\n本文件将所有标准知识单元（SKU）映射到其使用场景。\\n\\n---\\n\\n## 一、术语与基础定义类 [relational]\\n| SKU路径 | 内容描述 | 适用场景 |\\n|--------|---------|--'
+2026-04-24T12:03:27.370285Z [info     ] [MONITOR] JSON parse SUCCESS   [chunks2skus.utils.llm_client] keys=['mapping_content']
+2026-04-24T12:03:27.372513Z [info     ] [MONITOR] call_llm_json starting [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215
+2026-04-24T12:03:27.373570Z [info     ] [MONITOR] Starting LLM call    [chunks2skus.utils.llm_client] max_tokens=3000 model=doubao-seed-2-0-pro-260215 prompt_length=10474 temperature=0.7
+2026-04-24T12:04:39.228708Z [info     ] [MONITOR] LLM call SUCCESS     [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215 response_length=2510 response_preview='{\n    "updated": true,\n    "eureka_content": "# 灵感笔记\\n知识提取过程中发现的跨领域洞察和创意。\\n---\\n## 新兴产业通用分析框架\\n可将任何战略新兴产业置于「大国博弈外圈约束+科技圈核心引擎+人口圈需求土壤+资本圈产业燃料」的圈层互动模型中，'
+2026-04-24T12:04:39.229792Z [info     ] [MONITOR] JSON parse SUCCESS   [chunks2skus.utils.llm_client] keys=['updated', 'eureka_content']
+2026-04-24T12:04:39.232854Z [info     ] Updated eureka.md              [chunks2skus.extractors.meta_extractor] chunk_id=科技战略与投资策略10个建议与5大误区(1)_chunk_001
+2026-04-24T12:04:39.235859Z [info     ] Meta extraction complete       [chunks2skus.extractors.meta_extractor] chunk_id=科技战略与投资策略10个建议与5大误区(1)_chunk_001 eureka_chars=2419 mapping_chars=5119
+2026-04-24T12:04:39.238367Z [info     ] Chunk processed                [chunks2skus.pipeline] chunk_id=科技战略与投资策略10个建议与5大误区(1)_chunk_001 new_skus=22 total_skus=152
+2026-04-24T12:04:39.239369Z [info     ] Processing chunk               [chunks2skus.pipeline] chunk_id=科技战略与投资策略10个建议与5大误区_chunk_001 progress=40/40
+2026-04-24T12:04:39.239369Z [info     ] Processing chunk               [chunks2skus.router] chunk_id=科技战略与投资策略10个建议与5大误区_chunk_001 title=科技战略与投资策略10个建议与5大误区 tokens=15653
+2026-04-24T12:04:39.255673Z [info     ] Extracting factual knowledge   [chunks2skus.extractors.factual_extractor] chunk_id=科技战略与投资策略10个建议与5大误区_chunk_001
+2026-04-24T12:04:39.255673Z [info     ] [MONITOR] call_llm_json starting [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215
+2026-04-24T12:04:39.256686Z [info     ] [MONITOR] Starting LLM call    [chunks2skus.utils.llm_client] max_tokens=4000 model=doubao-seed-2-0-pro-260215 prompt_length=15385 temperature=0.3
+2026-04-24T12:07:42.291596Z [info     ] [MONITOR] LLM call SUCCESS     [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215 response_length=5630 response_preview='{\n  "facts": [\n    {\n      "name": "技术产业化两个关键时刻及对应曲线说明",\n      "description": "介绍技术产业化的两个关键节点，以及技术进化S曲线、Gartner技术曲线的阶段构成与对应关系",\n      "content_type": '
+2026-04-24T12:07:42.292601Z [info     ] [MONITOR] JSON parse SUCCESS   [chunks2skus.utils.llm_client] keys=['facts']
+2026-04-24T12:07:42.292601Z [info     ] [MONITOR] Facts extracted      [chunks2skus.utils.llm_client] count=16 facts_preview="[{'name': '技术产业化两个关键时刻及对应曲线说明', 'description': '介绍技术产业化的两个关键节点，以及技术进化S曲线、Gartner技术曲线的阶段构成与对应关系', 'content_type': 'markdown', 'content': '1. 技术进化S曲线：包含起步阶段、加速阶段、成熟阶段、衰退阶段4个阶段。\\n2. Gartner技术曲线（G曲线）：每年由Gartner公布，包含技术萌芽期、期望膨胀期、泡沫幻灭期、爬升恢复期、稳步增长期5个阶段。\\n3. 两条曲线的前端、后端完全贴合，仅中间阶段存在差异。\\n4. 第一个关键时刻：魔幻时刻（泡沫时刻），对应G曲线波峰位置，此时媒体热捧新技术、资本大量涌入，但距离真正产业化仍有时间，存在大量泡沫；创业者应利用该阶段融够可穿越泡沫期的资金，控制商业化节奏与现金流。\\n5. 第二个关键时刻：黄金时刻，对应两条曲线再次重合的节点，此时天使市场成熟、行业基础设施完善、场景需求增多，资本回流，剩余的成熟团队进入真正的产业化增长期，剩者为王。'}, {'name': '科技创业初期两类竞争风险（两只黄雀）说明', 'description': '说明科技企业进入产业黄金时刻后面临的两类跨界竞争风险，以及对应的投资偏好', 'content_type': 'markdown', 'content': '科技企业进入产业黄金时刻后可能面临两类跨界竞争风险：\\n1. 第一类：大公司跨界摘取成熟果实，典型案例如苹果iPhone推出后对传统按键手机行业造成巨大冲击。\\n2. 第二类：拥有场景需求的产业方倒向整合产业链，典型案例如冷链运输、预制菜配送、消防车、救护车等场景方可基于自身需求整合新能源车产业链，推出场景化产品。\\n3. 投资方向上更偏好拥有场景需求、能快速整合新技术打造细分市场龙头产品的公司，而非纯极客团队。'}, {'name': '茅台布局科技基金的合理性及行业趋势', 'description': '阐述茅台设立100亿科技基金的战略合理性，以及未来行业龙头参与科技创新的趋势', 'content_type': 'markdown', 'content': '1. 茅台布局100亿科技基金是正确的战略选择：茅台具备稀缺性、金融属性与收藏属性，产能有限、涨价空间已到天花板，收购品牌会稀释主品牌价值，需要寻找第二增长曲线。\\n2. 茅台布局科技的两层意义：① 跨界的新材料、新工艺、新能源技术可能与茅台生产工艺结合产生新价值；② 茅台作为国有资本市场旗舰，可承担推动科技创新、新质生产力发展、带动就业与GDP增长的社会责任。\\n3. 未来会有更多中国各行业龙头企业发挥牵头能力，推动国内科技创新发展。'}, {'name': '摩方精密3D打印技术及商业模式创新案例', 'description': '介绍纳微级3D打印企业摩方精密的技术优势、原有瓶颈与商业模式创新路径', 'content_type': 'markdown', 'content': '1. 摩方精密是全球顶级纳微级3D打印公司，技术领先同行数年，可打印火柴头大小且内部复杂结构完整的鸟巢产品，是少有的在制造业领域实现技术领先的中国企业。\\n2. 原有客户为全球2000家高端工业公司、航天公司、科研机构，单客户设备需求量少，商业模式呈分散的“彗尾模式”，估值天花板约100亿元人民币。\\n3. 商业模式创新方向为拓展大规模定制场景，已打通的第一个场景为牙齿美白贴片：其超精密3D打印技术可制作最薄且坚固的牙齿贴片，使用寿命可达10年以上，解决了传统美白牙齿需要磨掉不可再生牙釉的行业痛点。\\n4. 该公司近年一级市场估值已实现多倍增长，未来将继续拓展更多应用场景，探索大规模定制商业模式。'}, {'name': '不同主体技术产业化入局时机建议', 'description': '分别给出初创公司、产业投资人、大公司三类主体在技术产业化不同阶段的入局时机建议', 'content_type': 'markdown', 'content': '1. 初创公司：适合在魔幻时刻入局，此时可获得媒体、资本的高关注度，需保持清醒，探索清楚商业模式，融够足量、合适的资金，为穿越泡沫期做准备。\\n2. 产业投资人：不适合在魔幻时刻入局，适合在泡沫破裂、大量创业者退出后再布局，经历过失败的创业者积累的经验是重要的发展资产。\\n3. 大公司：有两种入局选择，① 吸纳经历过失败的优质创业者，组建新事业部开展产品创新；② 在产业黄金时刻通过设立投资基金或直投的方式，投资行业内剩余的成熟创业者，抓住行业成熟期增长红利。'}, {'name': '产业方作为投资人的优势说明', 'description': '介绍当前创业者画像变化，以及产业方客户作为投资人的价值与优势', 'content_type': 'markdown', 'content': '1. 当前创业者画像已发生变化：不再是典型的互联网年轻创业者，多为科学家+企业家的组合，具备10-20年的产业经验，同时掌握新技术。\\n2. 产业方是当前重要的投资主体：相较于VC/PE，产业方懂场景需求，可验证技术的适配性，估值合理无泡沫，标杆客户作为企业股东对企业未来发展具备重要战略意义。'}, {'name': '一级市场投资偏好的团队特征', 'description': '说明一级市场及企业CVC投资偏好的创业团队特征', 'content_type': 'markdown', 'content': '1. 偏好历经淬火的团队：即经历过多次挫折、曾烧掉大量资金甚至破产过，已经找到清晰发展路径、即将进入快速增长期的团队。\\n2. 偏好能力互补的团队组合：科学家负责技术创新，具备商业资源、融资谈判能力的投资人/企业家负责商业运营的组合模式。'}, {'name': '成功创业者的核心特质', 'description': '总结创业成功人士普遍具备的核心性格与行为特征', 'content_type': 'markdown', 'content': '成功创业者普遍具备乐观特质，对自身产品、公司以及所在行业的未来机会充满宗教般的热情，对发展前景有充足信心，日常工作充满激情。'}, {'name': '三四线城市“游泳式呼吸”创业模式说明', 'description': '介绍适用于三四线城市创业者的“游泳式呼吸”创业模式的特征与案例', 'content_type': 'markdown', 'content': '1. “游泳式呼吸”创业模式特征：创业者既能抬头学习一二线城市的先进商业模式，学习能力强，又能低头深入本地市场，将模式结合本地实际场景落地。\\n2. 正面案例：餐饮品牌老乡鸡的创始人热爱学习，积极了解各行业新商业模式，同时能结合本地市场落地，实现企业快速发展。\\n3. 反面警示：需避免照搬欧美、华尔街等外部模式，无法与本地实际业务结合的创业路径。'}, {'name': '中美博弈背景下的重点投资方向判定逻辑', 'description': '说明当前重点投资方向的判定逻辑，列举核心赛道与政策支持', 'content_type': 'markdown', 'content': '1. 投资重点为两个圈的交集：① 中国发布的新兴产业规划（如中国制造2025、2035产业规划）；② 美国发布的对华技术出口禁止清单。\\n2. 交集内的典型赛道包括：先进材料、商业航天、合成生物、先进制造智能装备。\\n3. 中国证监会优先支持该领域的优秀企业上市，给予资本市场政策支持。'}, {'name': '专精特新企业发展目标误区说明', 'description': '说明专精特新企业不应以上市为唯一终局的核心理由与发展建议', 'content_type': 'markdown', 'content': '1. 国内专精特新企业数量已接近10万家，当前A股上市公司数量为5000多家，未来最大扩容规模约1万家，90%的专精特新企业无法实现上市。\\n2. 参考德国经验：92%的德国隐形冠军企业未上市，具备同行领先、规模较小、行事低调的特征，是优质企业的代表。\\n3. 专精特新企业不应以上市为唯一目标，否则会导致经营动作变形，应优先聚焦解决行业痛点，达成年营收5亿元、年净利润5000万元的经营指标，成为优质企业后，上市是后续可选择的战略方向。'}, {'name': '科学家任职董事长的误区说明', 'description': '说明科学家不适合普遍担任董事长的原因，以及推荐的团队组合模式', 'content_type': 'markdown', 'content': '1. 经验数据显示80%的科学家不适合担任董事长：科学家的核心能力要求是静心钻研技术，而董事长的核心能力要求是整合资源、组建团队、拓展客户、开展经营管理，二者底层能力要求差异极大，且中国职业经理人制度尚不成熟，多数情况下董事长与总经理职责合一，对经营管理能力要求更高。\\n2. 最优团队模式为科学家+企业家/董事长的组合，二者需具备深度信任基础（如多年好友、同学关系），已IPO的优质科技企业普遍符合该特征。\\n3. 要求所有科学家担任董事长是对科研人才的极大浪费。'}, {'name': '科技与消费分割的误区说明', 'description': '驳斥消费行业无科技属性的观点，说明科技与消费融合的合理性', 'content_type': 'markdown', 'content': '1. 发展硬科技、底层技术的核心目的是提升人民生活水平、拉动消费，不应将科技与消费进行人为切割。\\n2. 案例佐证：巴菲特将苹果公司归类为消费公司；扫地机器人、可口可乐的生产与物流体系、特医食品/功能性食品的原料配方都具备较高科技含量。\\n3. 应鼓励具备科技属性的消费行业企业获得更多资本市场支持。'}, {'name': '投资收益预期误区说明', 'description': '说明赚快钱时代已经结束，需建立赚慢钱长钱的投资心态', 'content_type': 'markdown', 'content': '1. 泰康人寿陈东升提出：赚快钱、赚大钱的时代已经过去，现在要习惯赚慢钱、赚长钱。\\n2. 过去房地产行业高速发展阶段可支撑10%-15%年化收益的理财产品，当前高收益产品已经消失，监管已明确不存在保本保息的金融产品。\\n3. 新质生产力相关的技术产业化周期长达3-10年，远长于过去的理财产品周期，投资人与企业都需要调整投资心态，适应长周期回报的特征。'}, {'name': '新质生产力相关投资骗局预警', 'description': '预警打着新质生产力旗号的理财骗局，给出投资提示', 'content_type': 'markdown', 'content': '1. 需警惕未来可能出现的打着“新质生产力”旗号、包装虚假项目、承诺1-2年短期高收益的理财骗局。\\n2. 投资提示：投资者需符合国家规定的合格投资人资质，通过具备正规金融牌照的合规机构购买投资产品。'}, {'name': '中美博弈的一明两暗牌及中国发展优势分析', 'description': '介绍中美博弈中美国打出的三张牌，以及中国发展新质生产力的禀赋优势', 'content_type': 'markdown', 'content': '1. 中美博弈中美国打出“一明两暗”三张牌：① 明牌：减少对华贸易订单，试图取消中国在WTO的优惠待遇，抬高中国出口成本；② 暗牌1：通过美元加息、带动其他国家加息抽走中国市场流动性，导致外资流入减少；③ 暗牌2：打击中国民营经济与金融领域的发展信心。\\n2. 美国的核心增长模式为“华尔街+硅谷”，通过金融资本将技术转化为新产业。\\n3. 中国当前推进脱虚向实，重点发展新质生产力，用新技术拉动传统产业升级，属于真正的实业方向，是金融应该流向的领域。\\n4. 中国具备两大核心禀赋：全球超大的消费市场、品类齐全的大规模制造业基础，对海外资本吸引力极强，未来1-2年有望迎来大量外资回流，对该趋势持乐观态度。'}]"
+2026-04-24T12:07:42.326987Z [info     ] Factual extraction complete    [chunks2skus.extractors.factual_extractor] chunk_id=科技战略与投资策略10个建议与5大误区_chunk_001 skus_created=16
+2026-04-24T12:07:42.328009Z [info     ] Extracting relational knowledge [chunks2skus.extractors.relational_extractor] chunk_id=科技战略与投资策略10个建议与5大误区_chunk_001
+2026-04-24T12:07:42.328009Z [info     ] [MONITOR] call_llm_json starting [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215
+2026-04-24T12:07:42.329024Z [info     ] [MONITOR] Starting LLM call    [chunks2skus.utils.llm_client] max_tokens=8000 model=doubao-seed-2-0-pro-260215 prompt_length=30327 temperature=0.3
+2026-04-24T12:10:06.858681Z [info     ] [MONITOR] LLM call SUCCESS     [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215 response_length=19732 response_preview='{\n    "label_tree": {\n        "roots": [\n            {\n                "name": "分析模型",\n                "children": [\n                    {\n           '
+2026-04-24T12:10:06.859278Z [info     ] [MONITOR] JSON parse SUCCESS   [chunks2skus.utils.llm_client] keys=['label_tree', 'glossary', 'relationships']
+2026-04-24T12:10:06.867865Z [info     ] Relational extraction complete [chunks2skus.extractors.relational_extractor] chunk_id=科技战略与投资策略10个建议与5大误区_chunk_001 labels=8 relationships=81 terms=53
+2026-04-24T12:10:06.869900Z [info     ] Extracting procedural knowledge [chunks2skus.extractors.procedural_extractor] chunk_id=科技战略与投资策略10个建议与5大误区_chunk_001
+2026-04-24T12:10:06.869900Z [info     ] [MONITOR] call_llm_json starting [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215
+2026-04-24T12:10:06.870902Z [info     ] [MONITOR] Starting LLM call    [chunks2skus.utils.llm_client] max_tokens=6000 model=doubao-seed-2-0-pro-260215 prompt_length=15317 temperature=0.3
+2026-04-24T12:11:15.878990Z [info     ] [MONITOR] LLM call SUCCESS     [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215 response_length=3798 response_preview='{\n  "procedures": [\n    {\n      "name": "tech-industrialization-magic-moment-utilization",\n      "description": "科技创业者在技术期望膨胀的魔幻时刻使用，保障企业穿越泡沫期存活",\n   '
+2026-04-24T12:11:15.881021Z [info     ] [MONITOR] JSON parse SUCCESS   [chunks2skus.utils.llm_client] keys=['procedures']
+2026-04-24T12:11:15.899416Z [info     ] Procedural extraction complete [chunks2skus.extractors.procedural_extractor] chunk_id=科技战略与投资策略10个建议与5大误区_chunk_001 skills_created=8
+2026-04-24T12:11:15.899416Z [info     ] Extracting meta knowledge      [chunks2skus.extractors.meta_extractor] chunk_id=科技战略与投资策略10个建议与5大误区_chunk_001
+2026-04-24T12:11:15.900420Z [info     ] [MONITOR] call_llm_json starting [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215
+2026-04-24T12:11:15.900420Z [info     ] [MONITOR] Starting LLM call    [chunks2skus.utils.llm_client] max_tokens=8000 model=doubao-seed-2-0-pro-260215 prompt_length=13969 temperature=0.2
+2026-04-24T12:12:49.444606Z [info     ] [MONITOR] LLM call SUCCESS     [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215 response_length=7748 response_preview='{\n    "mapping_content": "# SKU 映射\\n\\n本文件将所有标准知识单元（SKU）映射到其使用场景。\\n\\n---\\n\\n## 一、术语与基础定义类 [relational]\\n| SKU路径 | 内容描述 | 适用场景 |\\n|--------|---------|--'
+2026-04-24T12:12:49.445609Z [info     ] [MONITOR] JSON parse SUCCESS   [chunks2skus.utils.llm_client] keys=['mapping_content']
+2026-04-24T12:12:49.447113Z [info     ] [MONITOR] call_llm_json starting [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215
+2026-04-24T12:12:49.448184Z [info     ] [MONITOR] Starting LLM call    [chunks2skus.utils.llm_client] max_tokens=3000 model=doubao-seed-2-0-pro-260215 prompt_length=11092 temperature=0.7
+2026-04-24T12:15:34.113551Z [info     ] [MONITOR] LLM call SUCCESS     [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215 response_length=2672 response_preview='{\n    "updated": true,\n    "eureka_content": "# 灵感笔记\\n知识提取过程中发现的跨领域洞察和创意。\\n---\\n## 新兴产业通用分析框架\\n可将任何战略新兴产业置于「大国博弈外圈约束+科技圈核心引擎+人口圈需求土壤+资本圈产业燃料」的圈层互动模型中，'
+2026-04-24T12:15:34.114553Z [info     ] [MONITOR] JSON parse SUCCESS   [chunks2skus.utils.llm_client] keys=['updated', 'eureka_content']
+2026-04-24T12:15:34.114553Z [info     ] Updated eureka.md              [chunks2skus.extractors.meta_extractor] chunk_id=科技战略与投资策略10个建议与5大误区_chunk_001
+2026-04-24T12:15:34.117064Z [info     ] Meta extraction complete       [chunks2skus.extractors.meta_extractor] chunk_id=科技战略与投资策略10个建议与5大误区_chunk_001 eureka_chars=2581 mapping_chars=7372
+2026-04-24T12:15:34.120568Z [info     ] Chunk processed                [chunks2skus.pipeline] chunk_id=科技战略与投资策略10个建议与5大误区_chunk_001 new_skus=26 total_skus=178
+2026-04-24T12:15:34.120568Z [info     ] Extraction pipeline complete   [chunks2skus.pipeline] chunks_processed=40 duration_seconds=5611.0 total_characters=1004500 total_skus=178

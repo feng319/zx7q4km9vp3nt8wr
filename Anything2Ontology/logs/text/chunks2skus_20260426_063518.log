@@ -1,0 +1,4 @@
+2026-04-25T22:35:18.285824Z [info     ] Starting extraction pipeline   [chunks2skus.pipeline] chunks_dir='G:\\Program Files\\AI coding\\知识萃取\\新能源\\输出\\chunks' output_dir=output\skus
+2026-04-25T22:35:18.299307Z [info     ] Loaded chunks                  [chunks2skus.router] count=26
+2026-04-25T22:35:18.300304Z [info     ] Processing chunks              [chunks2skus.pipeline] total=26
+2026-04-25T22:35:18.300304Z [info     ] Extraction pipeline complete   [chunks2skus.pipeline] chunks_processed=66 duration_seconds=0.0 total_characters=4953824 total_skus=606

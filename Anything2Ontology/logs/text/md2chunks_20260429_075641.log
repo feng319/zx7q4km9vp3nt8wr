@@ -1,0 +1,11 @@
+2026-04-28T23:56:42.358845Z [info     ] Starting chunking pipeline     [markdown2chunks.pipeline] input_dir='G:\\Program Files\\AI coding\\知识萃取\\战略分析\\输出' output_dir='G:\\Program Files\\AI coding\\知识萃取\\战略分析\\输出\\chunks'
+2026-04-28T23:56:42.362018Z [info     ] Found files                    [markdown2chunks.pipeline] json=1 markdown=6
+2026-04-28T23:56:42.365686Z [info     ] Processing markdown            [markdown2chunks.pipeline] file=2026六大新兴产业发展形势展望.md
+2026-04-28T23:56:42.516549Z [info     ] Processed markdown             [markdown2chunks.pipeline] chunks=1 file=2026六大新兴产业发展形势展望.md
+2026-04-28T23:56:42.516549Z [info     ] Processing markdown            [markdown2chunks.pipeline] file=BSC七步法：设计企业的战略地图.md
+2026-04-28T23:56:42.521279Z [info     ] Processed markdown             [markdown2chunks.pipeline] chunks=1 file=BSC七步法：设计企业的战略地图.md
+2026-04-28T23:56:42.522275Z [info     ] Processing markdown            [markdown2chunks.pipeline] file=[OCR]玥堂主【投资&创新】200+思维套图合集.md
+2026-04-28T23:56:42.547522Z [info     ] Processed markdown             [markdown2chunks.pipeline] chunks=1 file=[OCR]玥堂主【投资&创新】200+思维套图合集.md
+2026-04-28T23:56:42.548519Z [info     ] Processing markdown            [markdown2chunks.pipeline] file=企业战略与财富增长创新蓝宝书.md
+2026-04-28T23:58:02.662954Z [warning  ] Could not find tokens_before in text [markdown2chunks.utils.levenshtein]
+2026-04-28T23:58:03.002885Z [info     ] Created chunk                  [markdown2chunks.chunkers.llm_chunker] chars=259691 index=1 remaining=1365467

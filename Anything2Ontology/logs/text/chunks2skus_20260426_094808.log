@@ -1,0 +1,842 @@
+2026-04-26T01:48:08.424159Z [info     ] Force reset: clearing existing index for full re-extraction [chunks2skus.pipeline]
+2026-04-26T01:48:08.425442Z [info     ] Starting extraction pipeline   [chunks2skus.pipeline] chunks_dir='G:\\Program Files\\AI coding\\知识萃取\\新能源\\输出\\chunks' force_reset=True output_dir=output\skus
+2026-04-26T01:48:08.428525Z [info     ] Deleted index file for force reset [chunks2skus.pipeline]
+2026-04-26T01:48:08.432033Z [info     ] Deleted state file for force reset [chunks2skus.pipeline] path=output\skus\relational\label_tree.json
+2026-04-26T01:48:08.433152Z [info     ] Deleted state file for force reset [chunks2skus.pipeline] path=output\skus\relational\glossary.json
+2026-04-26T01:48:08.434159Z [info     ] Deleted state file for force reset [chunks2skus.pipeline] path=output\skus\relational\relationships.json
+2026-04-26T01:48:08.435369Z [info     ] Deleted state file for force reset [chunks2skus.pipeline] path=output\skus\meta\mapping.md
+2026-04-26T01:48:08.436371Z [info     ] Deleted state file for force reset [chunks2skus.pipeline] path=output\skus\meta\eureka.md
+2026-04-26T01:48:08.437374Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_001
+2026-04-26T01:48:08.438382Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_002
+2026-04-26T01:48:08.441141Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_003
+2026-04-26T01:48:08.443151Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_004
+2026-04-26T01:48:08.444161Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_005
+2026-04-26T01:48:08.446184Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_006
+2026-04-26T01:48:08.447687Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_007
+2026-04-26T01:48:08.448712Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_008
+2026-04-26T01:48:08.450213Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_009
+2026-04-26T01:48:08.452216Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_010
+2026-04-26T01:48:08.453217Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_011
+2026-04-26T01:48:08.454217Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_012
+2026-04-26T01:48:08.458721Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_013
+2026-04-26T01:48:08.460791Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_014
+2026-04-26T01:48:08.463880Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_015
+2026-04-26T01:48:08.465704Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_016
+2026-04-26T01:48:08.466701Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_017
+2026-04-26T01:48:08.468635Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_018
+2026-04-26T01:48:08.469652Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_019
+2026-04-26T01:48:08.473162Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_020
+2026-04-26T01:48:08.475255Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_021
+2026-04-26T01:48:08.477286Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_022
+2026-04-26T01:48:08.478291Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_023
+2026-04-26T01:48:08.480811Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_024
+2026-04-26T01:48:08.481813Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_025
+2026-04-26T01:48:08.483815Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_026
+2026-04-26T01:48:08.484816Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_027
+2026-04-26T01:48:08.487040Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_028
+2026-04-26T01:48:08.489549Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_029
+2026-04-26T01:48:08.490563Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_030
+2026-04-26T01:48:08.491566Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_031
+2026-04-26T01:48:08.493569Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_032
+2026-04-26T01:48:08.495641Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_033
+2026-04-26T01:48:08.496644Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_034
+2026-04-26T01:48:08.499009Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_035
+2026-04-26T01:48:08.500524Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_036
+2026-04-26T01:48:08.501544Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_037
+2026-04-26T01:48:08.506139Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_038
+2026-04-26T01:48:08.508147Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_039
+2026-04-26T01:48:08.508147Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_040
+2026-04-26T01:48:08.510664Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_041
+2026-04-26T01:48:08.512679Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_042
+2026-04-26T01:48:08.513977Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_043
+2026-04-26T01:48:08.514980Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_044
+2026-04-26T01:48:08.518035Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_045
+2026-04-26T01:48:08.520553Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_046
+2026-04-26T01:48:08.521555Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_047
+2026-04-26T01:48:08.522991Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_048
+2026-04-26T01:48:08.524993Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_049
+2026-04-26T01:48:08.526009Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_050
+2026-04-26T01:48:08.527015Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_051
+2026-04-26T01:48:08.529524Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_052
+2026-04-26T01:48:08.530542Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_053
+2026-04-26T01:48:08.532544Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_054
+2026-04-26T01:48:08.535080Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_055
+2026-04-26T01:48:08.537509Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_056
+2026-04-26T01:48:08.538528Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_057
+2026-04-26T01:48:08.539524Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_058
+2026-04-26T01:48:08.542133Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_059
+2026-04-26T01:48:08.543150Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_060
+2026-04-26T01:48:08.545225Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_061
+2026-04-26T01:48:08.547933Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_062
+2026-04-26T01:48:08.553077Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_063
+2026-04-26T01:48:08.554697Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_064
+2026-04-26T01:48:08.556700Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_065
+2026-04-26T01:48:08.558694Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_066
+2026-04-26T01:48:08.560191Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_067
+2026-04-26T01:48:08.562234Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_068
+2026-04-26T01:48:08.564237Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_069
+2026-04-26T01:48:08.567411Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_070
+2026-04-26T01:48:08.568408Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_071
+2026-04-26T01:48:08.570924Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_072
+2026-04-26T01:48:08.572919Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_073
+2026-04-26T01:48:08.573916Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_074
+2026-04-26T01:48:08.575909Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_075
+2026-04-26T01:48:08.577902Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_076
+2026-04-26T01:48:08.581460Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_077
+2026-04-26T01:48:08.582599Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_078
+2026-04-26T01:48:08.584631Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_079
+2026-04-26T01:48:08.586667Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_080
+2026-04-26T01:48:08.588699Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_081
+2026-04-26T01:48:08.589696Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_082
+2026-04-26T01:48:08.591921Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_083
+2026-04-26T01:48:08.593972Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_084
+2026-04-26T01:48:08.598213Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_085
+2026-04-26T01:48:08.599716Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_086
+2026-04-26T01:48:08.601735Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_087
+2026-04-26T01:48:08.602736Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_088
+2026-04-26T01:48:08.604764Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_089
+2026-04-26T01:48:08.606800Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_090
+2026-04-26T01:48:08.607804Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_091
+2026-04-26T01:48:08.610591Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_092
+2026-04-26T01:48:08.612717Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_093
+2026-04-26T01:48:08.614768Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_094
+2026-04-26T01:48:08.616789Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_095
+2026-04-26T01:48:08.618104Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_096
+2026-04-26T01:48:08.619609Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_097
+2026-04-26T01:48:08.621695Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_098
+2026-04-26T01:48:08.622696Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_099
+2026-04-26T01:48:08.624773Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_100
+2026-04-26T01:48:08.628899Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_101
+2026-04-26T01:48:08.631404Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_102
+2026-04-26T01:48:08.632405Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_103
+2026-04-26T01:48:08.634412Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_104
+2026-04-26T01:48:08.636465Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_105
+2026-04-26T01:48:08.637535Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_106
+2026-04-26T01:48:08.639656Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_107
+2026-04-26T01:48:08.642173Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_108
+2026-04-26T01:48:08.644243Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_109
+2026-04-26T01:48:08.645254Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_110
+2026-04-26T01:48:08.647875Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_111
+2026-04-26T01:48:08.650393Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_112
+2026-04-26T01:48:08.652724Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\procedural\skill_001
+2026-04-26T01:48:08.654750Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\procedural\skill_002
+2026-04-26T01:48:08.658736Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\procedural\skill_003
+2026-04-26T01:48:08.660239Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\procedural\skill_004
+2026-04-26T01:48:08.662300Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\procedural\skill_005
+2026-04-26T01:48:08.665292Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\procedural\skill_006
+2026-04-26T01:48:08.666288Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\procedural\skill_007
+2026-04-26T01:48:08.668282Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\procedural\skill_008
+2026-04-26T01:48:08.669785Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\procedural\skill_009
+2026-04-26T01:48:08.672909Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\procedural\skill_010
+2026-04-26T01:48:08.673906Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\procedural\skill_011
+2026-04-26T01:48:08.675899Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\procedural\skill_012
+2026-04-26T01:48:08.677892Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\procedural\skill_013
+2026-04-26T01:48:08.679987Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\procedural\skill_014
+2026-04-26T01:48:08.682132Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\procedural\skill_015
+2026-04-26T01:48:08.684141Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\procedural\skill_016
+2026-04-26T01:48:08.686391Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\procedural\skill_017
+2026-04-26T01:48:08.688477Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\procedural\skill_018
+2026-04-26T01:48:08.690999Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\procedural\skill_019
+2026-04-26T01:48:08.692108Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\procedural\skill_020
+2026-04-26T01:48:08.694200Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\procedural\skill_021
+2026-04-26T01:48:08.696294Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\procedural\skill_022
+2026-04-26T01:48:08.697296Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\procedural\skill_023
+2026-04-26T01:48:08.699810Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\procedural\skill_024
+2026-04-26T01:48:08.700847Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\procedural\skill_025
+2026-04-26T01:48:08.704310Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\procedural\skill_026
+2026-04-26T01:48:08.706334Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\procedural\skill_027
+2026-04-26T01:48:08.708339Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\procedural\skill_028
+2026-04-26T01:48:08.709843Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\procedural\skill_029
+2026-04-26T01:48:08.711886Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\procedural\skill_030
+2026-04-26T01:48:08.713108Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\procedural\skill_031
+2026-04-26T01:48:08.715155Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\procedural\skill_032
+2026-04-26T01:48:08.717157Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\procedural\skill_033
+2026-04-26T01:48:08.719934Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\procedural\skill_034
+2026-04-26T01:48:08.723080Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\procedural\skill_035
+2026-04-26T01:48:08.724092Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\procedural\skill_036
+2026-04-26T01:48:08.726267Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\procedural\skill_037
+2026-04-26T01:48:08.728455Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\procedural\skill_038
+2026-04-26T01:48:08.729959Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\procedural\skill_039
+2026-04-26T01:48:08.732009Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\procedural\skill_040
+2026-04-26T01:48:08.735255Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\procedural\skill_041
+2026-04-26T01:48:08.738315Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\procedural\skill_042
+2026-04-26T01:48:08.739817Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\procedural\skill_043
+2026-04-26T01:48:08.740832Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\procedural\skill_044
+2026-04-26T01:48:08.743360Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\procedural\skill_045
+2026-04-26T01:48:08.746641Z [info     ] Loaded chunks                  [chunks2skus.router] count=26
+2026-04-26T01:48:08.749272Z [info     ] Processing chunks              [chunks2skus.pipeline] total=26
+2026-04-26T01:48:08.751781Z [info     ] Processing chunk               [chunks2skus.pipeline] chunk_id=报告-《关于优化集中式新能源发电企业市场报价的通知（试行）》深度解读与战略分析_chunk_001 progress=1/26
+2026-04-26T01:48:08.808163Z [info     ] Processing chunk               [chunks2skus.router] chunk_id=报告-《关于优化集中式新能源发电企业市场报价的通知（试行）》深度解读与战略分析_chunk_001 title=报告-《关于优化集中式新能源发电企业市场报价的通知（试行）》深度解读与战略分析 tokens=9493
+2026-04-26T01:48:08.862830Z [info     ] Extracting factual knowledge   [chunks2skus.extractors.factual_extractor] chunk_id=报告-《关于优化集中式新能源发电企业市场报价的通知（试行）》深度解读与战略分析_chunk_001
+2026-04-26T01:48:08.864823Z [info     ] Extracting relational knowledge [chunks2skus.extractors.relational_extractor] chunk_id=报告-《关于优化集中式新能源发电企业市场报价的通知（试行）》深度解读与战略分析_chunk_001
+2026-04-26T01:48:08.864823Z [info     ] [MONITOR] call_llm_json starting [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215
+2026-04-26T01:48:08.866817Z [info     ] Extracting procedural knowledge [chunks2skus.extractors.procedural_extractor] chunk_id=报告-《关于优化集中式新能源发电企业市场报价的通知（试行）》深度解读与战略分析_chunk_001
+2026-04-26T01:48:08.867814Z [info     ] Relational context size        [chunks2skus.extractors.relational_extractor] alias_map_chars=5 chunk_id=报告-《关于优化集中式新能源发电企业市场报价的通知（试行）》深度解读与战略分析_chunk_001 glossary_count=0 label_nodes_count=0 label_tree_chars=0 relevant_relations_chars=9 term_list_chars=0
+2026-04-26T01:48:08.870310Z [info     ] [MONITOR] Creating thread-local OpenAI client [chunks2skus.utils.llm_client] base_url=https://ark.cn-beijing.volces.com/api/v3 thread=ThreadPoolExecutor-0_0
+2026-04-26T01:48:08.874658Z [info     ] [MONITOR] call_llm_json starting [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215
+2026-04-26T01:48:08.883066Z [info     ] [MONITOR] call_llm_json starting [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215
+2026-04-26T01:48:08.884082Z [info     ] [MONITOR] Creating thread-local OpenAI client [chunks2skus.utils.llm_client] base_url=https://ark.cn-beijing.volces.com/api/v3 thread=ThreadPoolExecutor-0_2
+2026-04-26T01:48:08.886774Z [info     ] [MONITOR] Creating thread-local OpenAI client [chunks2skus.utils.llm_client] base_url=https://ark.cn-beijing.volces.com/api/v3 thread=ThreadPoolExecutor-0_1
+2026-04-26T01:48:10.330053Z [info     ] [MONITOR] Starting LLM call    [chunks2skus.utils.llm_client] attempt=0 max_tokens=128000 model=doubao-seed-2-0-pro-260215 prompt_length=10600 temperature=0.3
+2026-04-26T01:48:10.341569Z [info     ] [MONITOR] Starting LLM call    [chunks2skus.utils.llm_client] attempt=0 max_tokens=64000 model=doubao-seed-2-0-pro-260215 prompt_length=9798 temperature=0.3
+2026-04-26T01:48:10.360466Z [info     ] [MONITOR] Starting LLM call    [chunks2skus.utils.llm_client] attempt=0 max_tokens=64000 model=doubao-seed-2-0-pro-260215 prompt_length=9709 temperature=0.3
+2026-04-26T01:48:52.132624Z [info     ] [MONITOR] LLM call SUCCESS     [chunks2skus.utils.llm_client] attempt=0 finish_reason=stop model=doubao-seed-2-0-pro-260215 response_length=2215
+2026-04-26T01:48:52.140847Z [info     ] [MONITOR] JSON parse SUCCESS   [chunks2skus.utils.llm_client] keys=['procedures']
+2026-04-26T01:48:52.150887Z [info     ] Procedural extraction complete [chunks2skus.extractors.procedural_extractor] chunk_id=报告-《关于优化集中式新能源发电企业市场报价的通知（试行）》深度解读与战略分析_chunk_001 skills_created=4
+2026-04-26T01:49:50.623531Z [info     ] [MONITOR] LLM call SUCCESS     [chunks2skus.utils.llm_client] attempt=0 finish_reason=stop model=doubao-seed-2-0-pro-260215 response_length=5767
+2026-04-26T01:49:50.624571Z [info     ] [MONITOR] JSON parse SUCCESS   [chunks2skus.utils.llm_client] keys=['new_labels', 'new_glossary', 'updated_glossary', 'new_relationships']
+2026-04-26T01:49:50.625692Z [info     ] Added new labels               [chunks2skus.extractors.relational_extractor] chunk_id=报告-《关于优化集中式新能源发电企业市场报价的通知（试行）》深度解读与战略分析_chunk_001 count=16
+2026-04-26T01:49:50.626695Z [info     ] Merged new glossary entries    [chunks2skus.extractors.relational_extractor] chunk_id=报告-《关于优化集中式新能源发电企业市场报价的通知（试行）》深度解读与战略分析_chunk_001 count=15
+2026-04-26T01:49:50.628727Z [info     ] Updated existing glossary entries [chunks2skus.extractors.relational_extractor] chunk_id=报告-《关于优化集中式新能源发电企业市场报价的通知（试行）》深度解读与战略分析_chunk_001 fallback_count=0 total_in_response=0 updated_count=0
+2026-04-26T01:49:50.629723Z [info     ] Merged new relationships       [chunks2skus.extractors.relational_extractor] chunk_id=报告-《关于优化集中式新能源发电企业市场报价的通知（试行）》深度解读与战略分析_chunk_001 count=17
+2026-04-26T01:49:50.631007Z [info     ] Relationship predicate distribution [chunks2skus.extractors.relational_extractor] distribution={'regulates': 2, 'superset-of': 3, 'requires': 4, 'causes': 4, 'enables': 1, 'related-to': 3} total=17
+2026-04-26T01:49:50.636585Z [info     ] Relational extraction complete [chunks2skus.extractors.relational_extractor] chunk_id=报告-《关于优化集中式新能源发电企业市场报价的通知（试行）》深度解读与战略分析_chunk_001 labels=5 relationships=17 terms=15
+2026-04-26T01:49:50.919018Z [info     ] [MONITOR] LLM call SUCCESS     [chunks2skus.utils.llm_client] attempt=0 finish_reason=stop model=doubao-seed-2-0-pro-260215 response_length=5855
+2026-04-26T01:49:50.921076Z [info     ] [MONITOR] JSON parse SUCCESS   [chunks2skus.utils.llm_client] keys=['facts']
+2026-04-26T01:49:50.942974Z [info     ] Factual extraction complete    [chunks2skus.extractors.factual_extractor] chunk_id=报告-《关于优化集中式新能源发电企业市场报价的通知（试行）》深度解读与战略分析_chunk_001 skus_created=14
+2026-04-26T01:49:50.945581Z [info     ] Chunk processed                [chunks2skus.pipeline] chunk_id=报告-《关于优化集中式新能源发电企业市场报价的通知（试行）》深度解读与战略分析_chunk_001 new_skus=19 total_skus=19
+2026-04-26T01:49:50.948841Z [info     ] Processing chunk               [chunks2skus.pipeline] chunk_id=报告-三一硅能非洲调研报告：在非洲如何做矿山微电网？_chunk_001 progress=2/26
+2026-04-26T01:49:50.949837Z [info     ] Processing chunk               [chunks2skus.router] chunk_id=报告-三一硅能非洲调研报告：在非洲如何做矿山微电网？_chunk_001 title=报告-三一硅能非洲调研报告：在非洲如何做矿山微电网？ tokens=11402
+2026-04-26T01:49:50.951413Z [info     ] Extracting factual knowledge   [chunks2skus.extractors.factual_extractor] chunk_id=报告-三一硅能非洲调研报告：在非洲如何做矿山微电网？_chunk_001
+2026-04-26T01:49:50.952460Z [info     ] Extracting relational knowledge [chunks2skus.extractors.relational_extractor] chunk_id=报告-三一硅能非洲调研报告：在非洲如何做矿山微电网？_chunk_001
+2026-04-26T01:49:50.952460Z [info     ] [MONITOR] call_llm_json starting [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215
+2026-04-26T01:49:50.953461Z [info     ] Extracting procedural knowledge [chunks2skus.extractors.procedural_extractor] chunk_id=报告-三一硅能非洲调研报告：在非洲如何做矿山微电网？_chunk_001
+2026-04-26T01:49:50.953461Z [info     ] Relational context size        [chunks2skus.extractors.relational_extractor] alias_map_chars=252 chunk_id=报告-三一硅能非洲调研报告：在非洲如何做矿山微电网？_chunk_001 glossary_count=15 label_nodes_count=16 label_tree_chars=136 relevant_relations_chars=9 term_list_chars=116
+2026-04-26T01:49:50.953461Z [info     ] [MONITOR] Creating thread-local OpenAI client [chunks2skus.utils.llm_client] base_url=https://ark.cn-beijing.volces.com/api/v3 thread=ThreadPoolExecutor-1_0
+2026-04-26T01:49:50.954461Z [info     ] [MONITOR] call_llm_json starting [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215
+2026-04-26T01:49:50.955560Z [info     ] [MONITOR] call_llm_json starting [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215
+2026-04-26T01:49:50.955560Z [info     ] [MONITOR] Creating thread-local OpenAI client [chunks2skus.utils.llm_client] base_url=https://ark.cn-beijing.volces.com/api/v3 thread=ThreadPoolExecutor-1_2
+2026-04-26T01:49:50.956923Z [info     ] [MONITOR] Creating thread-local OpenAI client [chunks2skus.utils.llm_client] base_url=https://ark.cn-beijing.volces.com/api/v3 thread=ThreadPoolExecutor-1_1
+2026-04-26T01:49:52.579775Z [info     ] [MONITOR] Starting LLM call    [chunks2skus.utils.llm_client] attempt=0 max_tokens=64000 model=doubao-seed-2-0-pro-260215 prompt_length=10578 temperature=0.3
+2026-04-26T01:49:52.623372Z [info     ] [MONITOR] Starting LLM call    [chunks2skus.utils.llm_client] attempt=0 max_tokens=64000 model=doubao-seed-2-0-pro-260215 prompt_length=10489 temperature=0.3
+2026-04-26T01:49:52.666225Z [info     ] [MONITOR] Starting LLM call    [chunks2skus.utils.llm_client] attempt=0 max_tokens=128000 model=doubao-seed-2-0-pro-260215 prompt_length=11880 temperature=0.3
+2026-04-26T01:50:47.483855Z [info     ] [MONITOR] LLM call SUCCESS     [chunks2skus.utils.llm_client] attempt=0 finish_reason=stop model=doubao-seed-2-0-pro-260215 response_length=2946
+2026-04-26T01:50:47.486103Z [info     ] [MONITOR] JSON parse SUCCESS   [chunks2skus.utils.llm_client] keys=['procedures']
+2026-04-26T01:50:47.501926Z [info     ] Procedural extraction complete [chunks2skus.extractors.procedural_extractor] chunk_id=报告-三一硅能非洲调研报告：在非洲如何做矿山微电网？_chunk_001 skills_created=6
+2026-04-26T01:51:11.631080Z [info     ] [MONITOR] LLM call SUCCESS     [chunks2skus.utils.llm_client] attempt=0 finish_reason=stop model=doubao-seed-2-0-pro-260215 response_length=3148
+2026-04-26T01:51:11.633081Z [info     ] [MONITOR] JSON parse SUCCESS   [chunks2skus.utils.llm_client] keys=['new_labels', 'new_glossary', 'updated_glossary', 'new_relationships']
+2026-04-26T01:51:11.638065Z [info     ] Added new labels               [chunks2skus.extractors.relational_extractor] chunk_id=报告-三一硅能非洲调研报告：在非洲如何做矿山微电网？_chunk_001 count=3
+2026-04-26T01:51:11.640561Z [info     ] Merged new glossary entries    [chunks2skus.extractors.relational_extractor] chunk_id=报告-三一硅能非洲调研报告：在非洲如何做矿山微电网？_chunk_001 count=7
+2026-04-26T01:51:11.641560Z [info     ] Updated existing glossary entries [chunks2skus.extractors.relational_extractor] chunk_id=报告-三一硅能非洲调研报告：在非洲如何做矿山微电网？_chunk_001 fallback_count=0 total_in_response=0 updated_count=0
+2026-04-26T01:51:11.642559Z [info     ] Merged new relationships       [chunks2skus.extractors.relational_extractor] chunk_id=报告-三一硅能非洲调研报告：在非洲如何做矿山微电网？_chunk_001 count=11
+2026-04-26T01:51:11.643556Z [info     ] Relationship predicate distribution [chunks2skus.extractors.relational_extractor] distribution={'regulates': 3, 'superset-of': 6, 'requires': 5, 'causes': 5, 'enables': 2, 'related-to': 3, 'has-a': 1, 'is-a': 1, 'implements': 1, 'depends-on': 1} total=28
+2026-04-26T01:51:11.648540Z [info     ] Relational extraction complete [chunks2skus.extractors.relational_extractor] chunk_id=报告-三一硅能非洲调研报告：在非洲如何做矿山微电网？_chunk_001 labels=5 relationships=28 terms=22
+2026-04-26T01:51:28.676617Z [info     ] [MONITOR] LLM call SUCCESS     [chunks2skus.utils.llm_client] attempt=0 finish_reason=stop model=doubao-seed-2-0-pro-260215 response_length=5372
+2026-04-26T01:51:28.677624Z [info     ] [MONITOR] JSON parse SUCCESS   [chunks2skus.utils.llm_client] keys=['facts']
+2026-04-26T01:51:28.700035Z [info     ] Factual extraction complete    [chunks2skus.extractors.factual_extractor] chunk_id=报告-三一硅能非洲调研报告：在非洲如何做矿山微电网？_chunk_001 skus_created=12
+2026-04-26T01:51:28.727583Z [info     ] Chunk processed                [chunks2skus.pipeline] chunk_id=报告-三一硅能非洲调研报告：在非洲如何做矿山微电网？_chunk_001 new_skus=19 total_skus=37
+2026-04-26T01:51:28.729784Z [info     ] Processing chunk               [chunks2skus.pipeline] chunk_id=报告-乌克兰新能源市场机会调研报告_chunk_001 progress=3/26
+2026-04-26T01:51:28.731923Z [info     ] Processing chunk               [chunks2skus.router] chunk_id=报告-乌克兰新能源市场机会调研报告_chunk_001 title=报告-乌克兰新能源市场机会调研报告 tokens=8167
+2026-04-26T01:51:28.734998Z [info     ] Extracting factual knowledge   [chunks2skus.extractors.factual_extractor] chunk_id=报告-乌克兰新能源市场机会调研报告_chunk_001
+2026-04-26T01:51:28.737136Z [info     ] Extracting relational knowledge [chunks2skus.extractors.relational_extractor] chunk_id=报告-乌克兰新能源市场机会调研报告_chunk_001
+2026-04-26T01:51:28.737136Z [info     ] [MONITOR] call_llm_json starting [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215
+2026-04-26T01:51:28.738330Z [info     ] Extracting procedural knowledge [chunks2skus.extractors.procedural_extractor] chunk_id=报告-乌克兰新能源市场机会调研报告_chunk_001
+2026-04-26T01:51:28.738330Z [info     ] Relational context size        [chunks2skus.extractors.relational_extractor] alias_map_chars=323 chunk_id=报告-乌克兰新能源市场机会调研报告_chunk_001 glossary_count=22 label_nodes_count=19 label_tree_chars=165 relevant_relations_chars=9 term_list_chars=177
+2026-04-26T01:51:28.739834Z [info     ] [MONITOR] Creating thread-local OpenAI client [chunks2skus.utils.llm_client] base_url=https://ark.cn-beijing.volces.com/api/v3 thread=ThreadPoolExecutor-2_0
+2026-04-26T01:51:28.768411Z [info     ] [MONITOR] call_llm_json starting [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215
+2026-04-26T01:51:28.775737Z [info     ] [MONITOR] call_llm_json starting [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215
+2026-04-26T01:51:28.778874Z [info     ] [MONITOR] Creating thread-local OpenAI client [chunks2skus.utils.llm_client] base_url=https://ark.cn-beijing.volces.com/api/v3 thread=ThreadPoolExecutor-2_2
+2026-04-26T01:51:28.779869Z [info     ] [MONITOR] Creating thread-local OpenAI client [chunks2skus.utils.llm_client] base_url=https://ark.cn-beijing.volces.com/api/v3 thread=ThreadPoolExecutor-2_1
+2026-04-26T01:51:30.477422Z [info     ] [MONITOR] Starting LLM call    [chunks2skus.utils.llm_client] attempt=0 max_tokens=128000 model=doubao-seed-2-0-pro-260215 prompt_length=9295 temperature=0.3
+2026-04-26T01:51:30.504188Z [info     ] [MONITOR] Starting LLM call    [chunks2skus.utils.llm_client] attempt=0 max_tokens=64000 model=doubao-seed-2-0-pro-260215 prompt_length=7832 temperature=0.3
+2026-04-26T01:51:30.507178Z [info     ] [MONITOR] Starting LLM call    [chunks2skus.utils.llm_client] attempt=0 max_tokens=64000 model=doubao-seed-2-0-pro-260215 prompt_length=7743 temperature=0.3
+2026-04-26T01:52:34.512053Z [info     ] [MONITOR] LLM call SUCCESS     [chunks2skus.utils.llm_client] attempt=0 finish_reason=stop model=doubao-seed-2-0-pro-260215 response_length=2036
+2026-04-26T01:52:34.524879Z [info     ] [MONITOR] JSON parse SUCCESS   [chunks2skus.utils.llm_client] keys=['procedures']
+2026-04-26T01:52:34.542908Z [info     ] Procedural extraction complete [chunks2skus.extractors.procedural_extractor] chunk_id=报告-乌克兰新能源市场机会调研报告_chunk_001 skills_created=4
+2026-04-26T01:52:35.225877Z [info     ] [MONITOR] LLM call SUCCESS     [chunks2skus.utils.llm_client] attempt=0 finish_reason=stop model=doubao-seed-2-0-pro-260215 response_length=4145
+2026-04-26T01:52:35.227390Z [info     ] [MONITOR] JSON parse SUCCESS   [chunks2skus.utils.llm_client] keys=['facts']
+2026-04-26T01:52:35.251934Z [info     ] Factual extraction complete    [chunks2skus.extractors.factual_extractor] chunk_id=报告-乌克兰新能源市场机会调研报告_chunk_001 skus_created=11
+2026-04-26T01:52:58.240653Z [info     ] [MONITOR] LLM call SUCCESS     [chunks2skus.utils.llm_client] attempt=0 finish_reason=stop model=doubao-seed-2-0-pro-260215 response_length=3734
+2026-04-26T01:52:58.241660Z [info     ] [MONITOR] JSON parse SUCCESS   [chunks2skus.utils.llm_client] keys=['new_labels', 'new_glossary', 'updated_glossary', 'new_relationships']
+2026-04-26T01:52:58.249695Z [info     ] Added new labels               [chunks2skus.extractors.relational_extractor] chunk_id=报告-乌克兰新能源市场机会调研报告_chunk_001 count=2
+2026-04-26T01:52:58.250706Z [info     ] Merged new glossary entries    [chunks2skus.extractors.relational_extractor] chunk_id=报告-乌克兰新能源市场机会调研报告_chunk_001 count=10
+2026-04-26T01:52:58.251710Z [info     ] Updated existing glossary entries [chunks2skus.extractors.relational_extractor] chunk_id=报告-乌克兰新能源市场机会调研报告_chunk_001 fallback_count=0 total_in_response=0 updated_count=0
+2026-04-26T01:52:58.252710Z [info     ] Merged new relationships       [chunks2skus.extractors.relational_extractor] chunk_id=报告-乌克兰新能源市场机会调研报告_chunk_001 count=12
+2026-04-26T01:52:58.252710Z [info     ] Relationship predicate distribution [chunks2skus.extractors.relational_extractor] distribution={'regulates': 4, 'superset-of': 11, 'requires': 5, 'causes': 8, 'enables': 4, 'related-to': 4, 'has-a': 1, 'is-a': 1, 'implements': 1, 'depends-on': 1} total=40
+2026-04-26T01:52:58.258339Z [info     ] Relational extraction complete [chunks2skus.extractors.relational_extractor] chunk_id=报告-乌克兰新能源市场机会调研报告_chunk_001 labels=6 relationships=40 terms=32
+2026-04-26T01:52:58.261999Z [info     ] Chunk processed                [chunks2skus.pipeline] chunk_id=报告-乌克兰新能源市场机会调研报告_chunk_001 new_skus=16 total_skus=52
+2026-04-26T01:52:58.263005Z [info     ] Processing chunk               [chunks2skus.pipeline] chunk_id=报告-兆瓦云调研报告：虚拟电厂的下一城在哪里？_chunk_001 progress=4/26
+2026-04-26T01:52:58.264007Z [info     ] Processing chunk               [chunks2skus.router] chunk_id=报告-兆瓦云调研报告：虚拟电厂的下一城在哪里？_chunk_001 title=报告-兆瓦云调研报告：虚拟电厂的下一城在哪里？ tokens=9034
+2026-04-26T01:52:58.265009Z [info     ] Extracting factual knowledge   [chunks2skus.extractors.factual_extractor] chunk_id=报告-兆瓦云调研报告：虚拟电厂的下一城在哪里？_chunk_001
+2026-04-26T01:52:58.266008Z [info     ] Extracting relational knowledge [chunks2skus.extractors.relational_extractor] chunk_id=报告-兆瓦云调研报告：虚拟电厂的下一城在哪里？_chunk_001
+2026-04-26T01:52:58.266008Z [info     ] [MONITOR] call_llm_json starting [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215
+2026-04-26T01:52:58.266008Z [info     ] Extracting procedural knowledge [chunks2skus.extractors.procedural_extractor] chunk_id=报告-兆瓦云调研报告：虚拟电厂的下一城在哪里？_chunk_001
+2026-04-26T01:52:58.267010Z [info     ] Relational context size        [chunks2skus.extractors.relational_extractor] alias_map_chars=323 chunk_id=报告-兆瓦云调研报告：虚拟电厂的下一城在哪里？_chunk_001 glossary_count=32 label_nodes_count=21 label_tree_chars=182 relevant_relations_chars=28 term_list_chars=246
+2026-04-26T01:52:58.267010Z [info     ] [MONITOR] Creating thread-local OpenAI client [chunks2skus.utils.llm_client] base_url=https://ark.cn-beijing.volces.com/api/v3 thread=ThreadPoolExecutor-3_0
+2026-04-26T01:52:58.267010Z [info     ] [MONITOR] call_llm_json starting [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215
+2026-04-26T01:52:58.268513Z [info     ] [MONITOR] call_llm_json starting [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215
+2026-04-26T01:52:58.268513Z [info     ] [MONITOR] Creating thread-local OpenAI client [chunks2skus.utils.llm_client] base_url=https://ark.cn-beijing.volces.com/api/v3 thread=ThreadPoolExecutor-3_2
+2026-04-26T01:52:58.271293Z [info     ] [MONITOR] Creating thread-local OpenAI client [chunks2skus.utils.llm_client] base_url=https://ark.cn-beijing.volces.com/api/v3 thread=ThreadPoolExecutor-3_1
+2026-04-26T01:52:59.956690Z [info     ] [MONITOR] Starting LLM call    [chunks2skus.utils.llm_client] attempt=0 max_tokens=128000 model=doubao-seed-2-0-pro-260215 prompt_length=10318 temperature=0.3
+2026-04-26T01:52:59.984605Z [info     ] [MONITOR] Starting LLM call    [chunks2skus.utils.llm_client] attempt=0 max_tokens=64000 model=doubao-seed-2-0-pro-260215 prompt_length=8750 temperature=0.3
+2026-04-26T01:53:00.006980Z [info     ] [MONITOR] Starting LLM call    [chunks2skus.utils.llm_client] attempt=0 max_tokens=64000 model=doubao-seed-2-0-pro-260215 prompt_length=8661 temperature=0.3
+2026-04-26T01:54:00.259812Z [info     ] [MONITOR] LLM call SUCCESS     [chunks2skus.utils.llm_client] attempt=0 finish_reason=stop model=doubao-seed-2-0-pro-260215 response_length=3175
+2026-04-26T01:54:00.263860Z [info     ] [MONITOR] JSON parse SUCCESS   [chunks2skus.utils.llm_client] keys=['procedures']
+2026-04-26T01:54:00.285217Z [info     ] Procedural extraction complete [chunks2skus.extractors.procedural_extractor] chunk_id=报告-兆瓦云调研报告：虚拟电厂的下一城在哪里？_chunk_001 skills_created=5
+2026-04-26T01:54:27.000771Z [info     ] [MONITOR] LLM call SUCCESS     [chunks2skus.utils.llm_client] attempt=0 finish_reason=stop model=doubao-seed-2-0-pro-260215 response_length=3663
+2026-04-26T01:54:27.001781Z [info     ] [MONITOR] JSON parse SUCCESS   [chunks2skus.utils.llm_client] keys=['new_labels', 'new_glossary', 'updated_glossary', 'new_relationships']
+2026-04-26T01:54:27.019898Z [info     ] Added new labels               [chunks2skus.extractors.relational_extractor] chunk_id=报告-兆瓦云调研报告：虚拟电厂的下一城在哪里？_chunk_001 count=7
+2026-04-26T01:54:27.022350Z [info     ] Merged new glossary entries    [chunks2skus.extractors.relational_extractor] chunk_id=报告-兆瓦云调研报告：虚拟电厂的下一城在哪里？_chunk_001 count=8
+2026-04-26T01:54:27.023385Z [info     ] Updated existing glossary entries [chunks2skus.extractors.relational_extractor] chunk_id=报告-兆瓦云调研报告：虚拟电厂的下一城在哪里？_chunk_001 fallback_count=0 total_in_response=1 updated_count=1
+2026-04-26T01:54:27.025460Z [info     ] Merged new relationships       [chunks2skus.extractors.relational_extractor] chunk_id=报告-兆瓦云调研报告：虚拟电厂的下一城在哪里？_chunk_001 count=9
+2026-04-26T01:54:27.026466Z [info     ] Relationship predicate distribution [chunks2skus.extractors.relational_extractor] distribution={'regulates': 4, 'superset-of': 15, 'requires': 5, 'causes': 8, 'enables': 4, 'related-to': 5, 'has-a': 1, 'is-a': 2, 'implements': 3, 'depends-on': 2} total=49
+2026-04-26T01:54:27.027468Z [warning  ] Predicate ratio exceeds 30%    [chunks2skus.extractors.relational_extractor] count=15 predicate=superset-of ratio=30.6% total=49
+2026-04-26T01:54:27.030984Z [info     ] Relational extraction complete [chunks2skus.extractors.relational_extractor] chunk_id=报告-兆瓦云调研报告：虚拟电厂的下一城在哪里？_chunk_001 labels=6 relationships=49 terms=40
+2026-04-26T01:54:42.719055Z [info     ] [MONITOR] LLM call SUCCESS     [chunks2skus.utils.llm_client] attempt=0 finish_reason=stop model=doubao-seed-2-0-pro-260215 response_length=4252
+2026-04-26T01:54:42.725079Z [info     ] [MONITOR] JSON parse SUCCESS   [chunks2skus.utils.llm_client] keys=['facts']
+2026-04-26T01:54:42.743503Z [info     ] Factual extraction complete    [chunks2skus.extractors.factual_extractor] chunk_id=报告-兆瓦云调研报告：虚拟电厂的下一城在哪里？_chunk_001 skus_created=7
+2026-04-26T01:54:42.746147Z [info     ] Chunk processed                [chunks2skus.pipeline] chunk_id=报告-兆瓦云调研报告：虚拟电厂的下一城在哪里？_chunk_001 new_skus=13 total_skus=64
+2026-04-26T01:54:42.747151Z [info     ] Processing chunk               [chunks2skus.pipeline] chunk_id=报告-则鸣新能源调研报告：怎么样做好微电网？_chunk_001 progress=5/26
+2026-04-26T01:54:42.749828Z [info     ] Processing chunk               [chunks2skus.router] chunk_id=报告-则鸣新能源调研报告：怎么样做好微电网？_chunk_001 title=报告-则鸣新能源调研报告：怎么样做好微电网？ tokens=9946
+2026-04-26T01:54:42.756266Z [info     ] Extracting factual knowledge   [chunks2skus.extractors.factual_extractor] chunk_id=报告-则鸣新能源调研报告：怎么样做好微电网？_chunk_001
+2026-04-26T01:54:42.758296Z [info     ] [MONITOR] call_llm_json starting [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215
+2026-04-26T01:54:42.758296Z [info     ] Extracting relational knowledge [chunks2skus.extractors.relational_extractor] chunk_id=报告-则鸣新能源调研报告：怎么样做好微电网？_chunk_001
+2026-04-26T01:54:42.759800Z [info     ] Extracting procedural knowledge [chunks2skus.extractors.procedural_extractor] chunk_id=报告-则鸣新能源调研报告：怎么样做好微电网？_chunk_001
+2026-04-26T01:54:42.759800Z [info     ] [MONITOR] Creating thread-local OpenAI client [chunks2skus.utils.llm_client] base_url=https://ark.cn-beijing.volces.com/api/v3 thread=ThreadPoolExecutor-4_0
+2026-04-26T01:54:42.760815Z [info     ] Relational context size        [chunks2skus.extractors.relational_extractor] alias_map_chars=359 chunk_id=报告-则鸣新能源调研报告：怎么样做好微电网？_chunk_001 glossary_count=40 label_nodes_count=28 label_tree_chars=269 relevant_relations_chars=446 term_list_chars=309
+2026-04-26T01:54:42.760815Z [info     ] [MONITOR] call_llm_json starting [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215
+2026-04-26T01:54:42.764064Z [info     ] [MONITOR] call_llm_json starting [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215
+2026-04-26T01:54:42.764064Z [info     ] [MONITOR] Creating thread-local OpenAI client [chunks2skus.utils.llm_client] base_url=https://ark.cn-beijing.volces.com/api/v3 thread=ThreadPoolExecutor-4_2
+2026-04-26T01:54:42.766345Z [info     ] [MONITOR] Creating thread-local OpenAI client [chunks2skus.utils.llm_client] base_url=https://ark.cn-beijing.volces.com/api/v3 thread=ThreadPoolExecutor-4_1
+2026-04-26T01:54:44.364900Z [info     ] [MONITOR] Starting LLM call    [chunks2skus.utils.llm_client] attempt=0 max_tokens=64000 model=doubao-seed-2-0-pro-260215 prompt_length=9825 temperature=0.3
+2026-04-26T01:54:44.412453Z [info     ] [MONITOR] Starting LLM call    [chunks2skus.utils.llm_client] attempt=0 max_tokens=64000 model=doubao-seed-2-0-pro-260215 prompt_length=9914 temperature=0.3
+2026-04-26T01:54:44.453012Z [info     ] [MONITOR] Starting LLM call    [chunks2skus.utils.llm_client] attempt=0 max_tokens=128000 model=doubao-seed-2-0-pro-260215 prompt_length=12086 temperature=0.3
+2026-04-26T01:55:44.574779Z [info     ] [MONITOR] LLM call SUCCESS     [chunks2skus.utils.llm_client] attempt=0 finish_reason=stop model=doubao-seed-2-0-pro-260215 response_length=3420
+2026-04-26T01:55:44.576778Z [info     ] [MONITOR] JSON parse SUCCESS   [chunks2skus.utils.llm_client] keys=['procedures']
+2026-04-26T01:55:44.587248Z [info     ] Procedural extraction complete [chunks2skus.extractors.procedural_extractor] chunk_id=报告-则鸣新能源调研报告：怎么样做好微电网？_chunk_001 skills_created=7
+2026-04-26T01:56:21.942959Z [info     ] [MONITOR] LLM call SUCCESS     [chunks2skus.utils.llm_client] attempt=0 finish_reason=stop model=doubao-seed-2-0-pro-260215 response_length=4172
+2026-04-26T01:56:21.944975Z [info     ] [MONITOR] JSON parse SUCCESS   [chunks2skus.utils.llm_client] keys=['facts']
+2026-04-26T01:56:21.968458Z [info     ] Factual extraction complete    [chunks2skus.extractors.factual_extractor] chunk_id=报告-则鸣新能源调研报告：怎么样做好微电网？_chunk_001 skus_created=8
+2026-04-26T01:56:30.246890Z [info     ] [MONITOR] LLM call SUCCESS     [chunks2skus.utils.llm_client] attempt=0 finish_reason=stop model=doubao-seed-2-0-pro-260215 response_length=3480
+2026-04-26T01:56:30.248894Z [info     ] [MONITOR] JSON parse SUCCESS   [chunks2skus.utils.llm_client] keys=['new_labels', 'new_glossary', 'updated_glossary', 'new_relationships']
+2026-04-26T01:56:30.253384Z [info     ] Added new labels               [chunks2skus.extractors.relational_extractor] chunk_id=报告-则鸣新能源调研报告：怎么样做好微电网？_chunk_001 count=6
+2026-04-26T01:56:30.254381Z [info     ] Merged new glossary entries    [chunks2skus.extractors.relational_extractor] chunk_id=报告-则鸣新能源调研报告：怎么样做好微电网？_chunk_001 count=5
+2026-04-26T01:56:30.254381Z [info     ] Updated existing glossary entries [chunks2skus.extractors.relational_extractor] chunk_id=报告-则鸣新能源调研报告：怎么样做好微电网？_chunk_001 fallback_count=0 total_in_response=1 updated_count=1
+2026-04-26T01:56:30.255378Z [info     ] Merged new relationships       [chunks2skus.extractors.relational_extractor] chunk_id=报告-则鸣新能源调研报告：怎么样做好微电网？_chunk_001 count=16
+2026-04-26T01:56:30.256374Z [info     ] Relationship predicate distribution [chunks2skus.extractors.relational_extractor] distribution={'regulates': 4, 'superset-of': 19, 'requires': 6, 'causes': 9, 'enables': 6, 'related-to': 5, 'has-a': 2, 'is-a': 3, 'implements': 3, 'depends-on': 6, 'part-of': 2} total=65
+2026-04-26T01:56:30.260889Z [info     ] Relational extraction complete [chunks2skus.extractors.relational_extractor] chunk_id=报告-则鸣新能源调研报告：怎么样做好微电网？_chunk_001 labels=6 relationships=65 terms=45
+2026-04-26T01:56:30.264878Z [info     ] Running meta extraction batch  [chunks2skus.pipeline] chunks=5 new_skus=83 total_content_chars=30210
+2026-04-26T01:56:30.265875Z [info     ] Extracting meta knowledge      [chunks2skus.extractors.meta_extractor] chunk_id=报告-则鸣新能源调研报告：怎么样做好微电网？_chunk_001
+2026-04-26T01:56:30.267867Z [info     ] [MONITOR] Creating thread-local OpenAI client [chunks2skus.utils.llm_client] base_url=https://ark.cn-beijing.volces.com/api/v3 thread=ThreadPoolExecutor-5_0
+2026-04-26T01:56:30.267867Z [info     ] [MONITOR] Creating thread-local OpenAI client [chunks2skus.utils.llm_client] base_url=https://ark.cn-beijing.volces.com/api/v3 thread=ThreadPoolExecutor-5_1
+2026-04-26T01:56:31.764872Z [info     ] [MONITOR] Starting LLM call    [chunks2skus.utils.llm_client] attempt=0 max_tokens=32000 model=doubao-seed-2-0-pro-260215 prompt_length=11060 temperature=0.7
+2026-04-26T01:56:31.767917Z [info     ] [MONITOR] Starting LLM call    [chunks2skus.utils.llm_client] attempt=0 max_tokens=32000 model=doubao-seed-2-0-pro-260215 prompt_length=6519 temperature=0.2
+2026-04-26T01:57:05.302431Z [info     ] [MONITOR] LLM call SUCCESS     [chunks2skus.utils.llm_client] attempt=0 finish_reason=stop model=doubao-seed-2-0-pro-260215 response_length=667
+2026-04-26T01:57:05.308098Z [info     ] Updated eureka.md              [chunks2skus.extractors.meta_extractor] chunk_id=报告-则鸣新能源调研报告：怎么样做好微电网？_chunk_001 new_size=667 old_size=42
+2026-04-26T01:58:05.821053Z [info     ] [MONITOR] LLM call SUCCESS     [chunks2skus.utils.llm_client] attempt=0 finish_reason=stop model=doubao-seed-2-0-pro-260215 response_length=4514
+2026-04-26T01:58:05.823073Z [info     ] Updated mapping.md (diff merge) [chunks2skus.extractors.meta_extractor] chunk_id=报告-则鸣新能源调研报告：怎么样做好微电网？_chunk_001 diff_lines=92 new_size=4559 old_size=57
+2026-04-26T01:58:05.834211Z [info     ] Meta extraction complete       [chunks2skus.extractors.meta_extractor] chunk_id=报告-则鸣新能源调研报告：怎么样做好微电网？_chunk_001 eureka_chars=667 mapping_chars=4559
+2026-04-26T01:58:05.836232Z [info     ] Chunk processed                [chunks2skus.pipeline] chunk_id=报告-则鸣新能源调研报告：怎么样做好微电网？_chunk_001 new_skus=16 total_skus=80
+2026-04-26T01:58:05.837236Z [info     ] Processing chunk               [chunks2skus.pipeline] chunk_id=报告-协鑫能科调研报告：江苏最大虚拟电厂是怎么做成的？_chunk_001 progress=6/26
+2026-04-26T01:58:05.837236Z [info     ] Processing chunk               [chunks2skus.router] chunk_id=报告-协鑫能科调研报告：江苏最大虚拟电厂是怎么做成的？_chunk_001 title=报告-协鑫能科调研报告：江苏最大虚拟电厂是怎么做成的？ tokens=9322
+2026-04-26T01:58:05.838239Z [info     ] Extracting factual knowledge   [chunks2skus.extractors.factual_extractor] chunk_id=报告-协鑫能科调研报告：江苏最大虚拟电厂是怎么做成的？_chunk_001
+2026-04-26T01:58:05.838239Z [info     ] Extracting relational knowledge [chunks2skus.extractors.relational_extractor] chunk_id=报告-协鑫能科调研报告：江苏最大虚拟电厂是怎么做成的？_chunk_001
+2026-04-26T01:58:05.838239Z [info     ] [MONITOR] call_llm_json starting [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215
+2026-04-26T01:58:05.839741Z [info     ] Extracting procedural knowledge [chunks2skus.extractors.procedural_extractor] chunk_id=报告-协鑫能科调研报告：江苏最大虚拟电厂是怎么做成的？_chunk_001
+2026-04-26T01:58:05.839741Z [info     ] Relational context size        [chunks2skus.extractors.relational_extractor] alias_map_chars=359 chunk_id=报告-协鑫能科调研报告：江苏最大虚拟电厂是怎么做成的？_chunk_001 glossary_count=45 label_nodes_count=34 label_tree_chars=344 relevant_relations_chars=296 term_list_chars=347
+2026-04-26T01:58:05.839741Z [info     ] [MONITOR] Creating thread-local OpenAI client [chunks2skus.utils.llm_client] base_url=https://ark.cn-beijing.volces.com/api/v3 thread=ThreadPoolExecutor-6_0
+2026-04-26T01:58:05.840755Z [info     ] [MONITOR] call_llm_json starting [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215
+2026-04-26T01:58:05.841756Z [info     ] [MONITOR] call_llm_json starting [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215
+2026-04-26T01:58:05.842756Z [info     ] [MONITOR] Creating thread-local OpenAI client [chunks2skus.utils.llm_client] base_url=https://ark.cn-beijing.volces.com/api/v3 thread=ThreadPoolExecutor-6_2
+2026-04-26T01:58:05.842756Z [info     ] [MONITOR] Creating thread-local OpenAI client [chunks2skus.utils.llm_client] base_url=https://ark.cn-beijing.volces.com/api/v3 thread=ThreadPoolExecutor-6_1
+2026-04-26T01:58:07.233414Z [info     ] [MONITOR] Starting LLM call    [chunks2skus.utils.llm_client] attempt=0 max_tokens=64000 model=doubao-seed-2-0-pro-260215 prompt_length=9093 temperature=0.3
+2026-04-26T01:58:07.265619Z [info     ] [MONITOR] Starting LLM call    [chunks2skus.utils.llm_client] attempt=0 max_tokens=64000 model=doubao-seed-2-0-pro-260215 prompt_length=9004 temperature=0.3
+2026-04-26T01:58:07.274429Z [info     ] [MONITOR] Starting LLM call    [chunks2skus.utils.llm_client] attempt=0 max_tokens=128000 model=doubao-seed-2-0-pro-260215 prompt_length=11228 temperature=0.3
+2026-04-26T01:59:03.745042Z [info     ] [MONITOR] LLM call SUCCESS     [chunks2skus.utils.llm_client] attempt=0 finish_reason=stop model=doubao-seed-2-0-pro-260215 response_length=2521
+2026-04-26T01:59:03.750885Z [info     ] [MONITOR] JSON parse SUCCESS   [chunks2skus.utils.llm_client] keys=['procedures']
+2026-04-26T01:59:03.770424Z [info     ] Procedural extraction complete [chunks2skus.extractors.procedural_extractor] chunk_id=报告-协鑫能科调研报告：江苏最大虚拟电厂是怎么做成的？_chunk_001 skills_created=4
+2026-04-26T02:00:02.133691Z [info     ] [MONITOR] LLM call SUCCESS     [chunks2skus.utils.llm_client] attempt=0 finish_reason=stop model=doubao-seed-2-0-pro-260215 response_length=5381
+2026-04-26T02:00:02.138302Z [info     ] [MONITOR] JSON parse SUCCESS   [chunks2skus.utils.llm_client] keys=['facts']
+2026-04-26T02:00:02.156094Z [info     ] Factual extraction complete    [chunks2skus.extractors.factual_extractor] chunk_id=报告-协鑫能科调研报告：江苏最大虚拟电厂是怎么做成的？_chunk_001 skus_created=11
+2026-04-26T02:00:25.990062Z [info     ] [MONITOR] LLM call SUCCESS     [chunks2skus.utils.llm_client] attempt=0 finish_reason=stop model=doubao-seed-2-0-pro-260215 response_length=5768
+2026-04-26T02:00:25.992088Z [info     ] [MONITOR] JSON parse SUCCESS   [chunks2skus.utils.llm_client] keys=['new_labels', 'new_glossary', 'updated_glossary', 'new_relationships']
+2026-04-26T02:00:25.994309Z [info     ] Added new labels               [chunks2skus.extractors.relational_extractor] chunk_id=报告-协鑫能科调研报告：江苏最大虚拟电厂是怎么做成的？_chunk_001 count=6
+2026-04-26T02:00:25.995310Z [info     ] Merged new glossary entries    [chunks2skus.extractors.relational_extractor] chunk_id=报告-协鑫能科调研报告：江苏最大虚拟电厂是怎么做成的？_chunk_001 count=11
+2026-04-26T02:00:25.997416Z [info     ] Updated existing glossary entries [chunks2skus.extractors.relational_extractor] chunk_id=报告-协鑫能科调研报告：江苏最大虚拟电厂是怎么做成的？_chunk_001 fallback_count=0 total_in_response=3 updated_count=3
+2026-04-26T02:00:25.998419Z [info     ] Merged new relationships       [chunks2skus.extractors.relational_extractor] chunk_id=报告-协鑫能科调研报告：江苏最大虚拟电厂是怎么做成的？_chunk_001 count=15
+2026-04-26T02:00:25.998419Z [info     ] Relationship predicate distribution [chunks2skus.extractors.relational_extractor] distribution={'regulates': 4, 'superset-of': 24, 'requires': 6, 'causes': 9, 'enables': 6, 'related-to': 9, 'has-a': 2, 'is-a': 3, 'implements': 5, 'depends-on': 6, 'part-of': 5, 'example-of': 1} total=80
+2026-04-26T02:00:25.998419Z [info     ] Predicate count over 20        [chunks2skus.extractors.relational_extractor] predicates={'superset-of': 24}
+2026-04-26T02:00:26.004100Z [info     ] Relational extraction complete [chunks2skus.extractors.relational_extractor] chunk_id=报告-协鑫能科调研报告：江苏最大虚拟电厂是怎么做成的？_chunk_001 labels=6 relationships=80 terms=56
+2026-04-26T02:00:26.007143Z [info     ] Chunk processed                [chunks2skus.pipeline] chunk_id=报告-协鑫能科调研报告：江苏最大虚拟电厂是怎么做成的？_chunk_001 new_skus=16 total_skus=95
+2026-04-26T02:00:26.008159Z [info     ] Processing chunk               [chunks2skus.pipeline] chunk_id=报告-固德威一线调研报告：城市级虚拟电厂怎么做？_chunk_001 progress=7/26
+2026-04-26T02:00:26.008159Z [info     ] Processing chunk               [chunks2skus.router] chunk_id=报告-固德威一线调研报告：城市级虚拟电厂怎么做？_chunk_001 title=报告-固德威一线调研报告：城市级虚拟电厂怎么做？ tokens=9936
+2026-04-26T02:00:26.009661Z [info     ] Extracting factual knowledge   [chunks2skus.extractors.factual_extractor] chunk_id=报告-固德威一线调研报告：城市级虚拟电厂怎么做？_chunk_001
+2026-04-26T02:00:26.010674Z [info     ] Extracting relational knowledge [chunks2skus.extractors.relational_extractor] chunk_id=报告-固德威一线调研报告：城市级虚拟电厂怎么做？_chunk_001
+2026-04-26T02:00:26.010674Z [info     ] [MONITOR] call_llm_json starting [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215
+2026-04-26T02:00:26.010674Z [info     ] Extracting procedural knowledge [chunks2skus.extractors.procedural_extractor] chunk_id=报告-固德威一线调研报告：城市级虚拟电厂怎么做？_chunk_001
+2026-04-26T02:00:26.011741Z [info     ] Relational context size        [chunks2skus.extractors.relational_extractor] alias_map_chars=427 chunk_id=报告-固德威一线调研报告：城市级虚拟电厂怎么做？_chunk_001 glossary_count=56 label_nodes_count=40 label_tree_chars=424 relevant_relations_chars=1058 term_list_chars=439
+2026-04-26T02:00:26.011741Z [info     ] [MONITOR] Creating thread-local OpenAI client [chunks2skus.utils.llm_client] base_url=https://ark.cn-beijing.volces.com/api/v3 thread=ThreadPoolExecutor-7_0
+2026-04-26T02:00:26.014963Z [info     ] [MONITOR] call_llm_json starting [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215
+2026-04-26T02:00:26.015964Z [info     ] [MONITOR] call_llm_json starting [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215
+2026-04-26T02:00:26.017398Z [info     ] [MONITOR] Creating thread-local OpenAI client [chunks2skus.utils.llm_client] base_url=https://ark.cn-beijing.volces.com/api/v3 thread=ThreadPoolExecutor-7_2
+2026-04-26T02:00:26.018397Z [info     ] [MONITOR] Creating thread-local OpenAI client [chunks2skus.utils.llm_client] base_url=https://ark.cn-beijing.volces.com/api/v3 thread=ThreadPoolExecutor-7_1
+2026-04-26T02:00:27.738514Z [info     ] [MONITOR] Starting LLM call    [chunks2skus.utils.llm_client] attempt=0 max_tokens=128000 model=doubao-seed-2-0-pro-260215 prompt_length=12517 temperature=0.3
+2026-04-26T02:00:27.748044Z [info     ] [MONITOR] Starting LLM call    [chunks2skus.utils.llm_client] attempt=0 max_tokens=64000 model=doubao-seed-2-0-pro-260215 prompt_length=9380 temperature=0.3
+2026-04-26T02:00:27.749268Z [info     ] [MONITOR] Starting LLM call    [chunks2skus.utils.llm_client] attempt=0 max_tokens=64000 model=doubao-seed-2-0-pro-260215 prompt_length=9291 temperature=0.3
+2026-04-26T02:01:22.118498Z [info     ] [MONITOR] LLM call SUCCESS     [chunks2skus.utils.llm_client] attempt=0 finish_reason=stop model=doubao-seed-2-0-pro-260215 response_length=1921
+2026-04-26T02:01:22.122516Z [info     ] [MONITOR] JSON parse SUCCESS   [chunks2skus.utils.llm_client] keys=['procedures']
+2026-04-26T02:01:22.130898Z [info     ] Procedural extraction complete [chunks2skus.extractors.procedural_extractor] chunk_id=报告-固德威一线调研报告：城市级虚拟电厂怎么做？_chunk_001 skills_created=3
+2026-04-26T02:01:58.849608Z [info     ] [MONITOR] LLM call SUCCESS     [chunks2skus.utils.llm_client] attempt=0 finish_reason=stop model=doubao-seed-2-0-pro-260215 response_length=3977
+2026-04-26T02:01:58.850950Z [info     ] [MONITOR] JSON parse SUCCESS   [chunks2skus.utils.llm_client] keys=['facts']
+2026-04-26T02:01:58.870957Z [info     ] Factual extraction complete    [chunks2skus.extractors.factual_extractor] chunk_id=报告-固德威一线调研报告：城市级虚拟电厂怎么做？_chunk_001 skus_created=11
+2026-04-26T02:02:02.945765Z [info     ] [MONITOR] LLM call SUCCESS     [chunks2skus.utils.llm_client] attempt=0 finish_reason=stop model=doubao-seed-2-0-pro-260215 response_length=4577
+2026-04-26T02:02:02.947880Z [info     ] [MONITOR] JSON parse SUCCESS   [chunks2skus.utils.llm_client] keys=['new_labels', 'new_glossary', 'updated_glossary', 'new_relationships']
+2026-04-26T02:02:02.950464Z [info     ] Added new labels               [chunks2skus.extractors.relational_extractor] chunk_id=报告-固德威一线调研报告：城市级虚拟电厂怎么做？_chunk_001 count=2
+2026-04-26T02:02:02.951467Z [info     ] Merged new glossary entries    [chunks2skus.extractors.relational_extractor] chunk_id=报告-固德威一线调研报告：城市级虚拟电厂怎么做？_chunk_001 count=12
+2026-04-26T02:02:02.952489Z [info     ] Updated existing glossary entries [chunks2skus.extractors.relational_extractor] chunk_id=报告-固德威一线调研报告：城市级虚拟电厂怎么做？_chunk_001 fallback_count=0 total_in_response=3 updated_count=3
+2026-04-26T02:02:02.953492Z [info     ] Merged new relationships       [chunks2skus.extractors.relational_extractor] chunk_id=报告-固德威一线调研报告：城市级虚拟电厂怎么做？_chunk_001 count=14
+2026-04-26T02:02:02.954566Z [info     ] Relationship predicate distribution [chunks2skus.extractors.relational_extractor] distribution={'regulates': 4, 'superset-of': 26, 'requires': 8, 'causes': 10, 'enables': 8, 'related-to': 9, 'has-a': 3, 'is-a': 3, 'implements': 6, 'depends-on': 8, 'part-of': 5, 'example-of': 3, 'certifies': 1} total=94
+2026-04-26T02:02:02.955574Z [info     ] Predicate count over 20        [chunks2skus.extractors.relational_extractor] predicates={'superset-of': 26}
+2026-04-26T02:02:02.960238Z [info     ] Relational extraction complete [chunks2skus.extractors.relational_extractor] chunk_id=报告-固德威一线调研报告：城市级虚拟电厂怎么做？_chunk_001 labels=6 relationships=94 terms=68
+2026-04-26T02:02:02.965686Z [info     ] Chunk processed                [chunks2skus.pipeline] chunk_id=报告-固德威一线调研报告：城市级虚拟电厂怎么做？_chunk_001 new_skus=15 total_skus=109
+2026-04-26T02:02:02.966691Z [info     ] Processing chunk               [chunks2skus.pipeline] chunk_id=报告-固德威江西德安县调研报告：光储充一体化项目怎么做？_chunk_001 progress=8/26
+2026-04-26T02:02:02.966691Z [info     ] Processing chunk               [chunks2skus.router] chunk_id=报告-固德威江西德安县调研报告：光储充一体化项目怎么做？_chunk_001 title=报告-固德威江西德安县调研报告：光储充一体化项目怎么做？ tokens=8243
+2026-04-26T02:02:02.972723Z [info     ] Extracting factual knowledge   [chunks2skus.extractors.factual_extractor] chunk_id=报告-固德威江西德安县调研报告：光储充一体化项目怎么做？_chunk_001
+2026-04-26T02:02:02.975801Z [info     ] Extracting relational knowledge [chunks2skus.extractors.relational_extractor] chunk_id=报告-固德威江西德安县调研报告：光储充一体化项目怎么做？_chunk_001
+2026-04-26T02:02:02.975801Z [info     ] [MONITOR] call_llm_json starting [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215
+2026-04-26T02:02:02.978853Z [info     ] Relational context size        [chunks2skus.extractors.relational_extractor] alias_map_chars=485 chunk_id=报告-固德威江西德安县调研报告：光储充一体化项目怎么做？_chunk_001 glossary_count=68 label_nodes_count=42 label_tree_chars=460 relevant_relations_chars=1011 term_list_chars=534
+2026-04-26T02:02:02.978853Z [info     ] Extracting procedural knowledge [chunks2skus.extractors.procedural_extractor] chunk_id=报告-固德威江西德安县调研报告：光储充一体化项目怎么做？_chunk_001
+2026-04-26T02:02:02.978853Z [info     ] [MONITOR] Creating thread-local OpenAI client [chunks2skus.utils.llm_client] base_url=https://ark.cn-beijing.volces.com/api/v3 thread=ThreadPoolExecutor-8_0
+2026-04-26T02:02:02.980947Z [info     ] [MONITOR] call_llm_json starting [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215
+2026-04-26T02:02:02.980947Z [info     ] [MONITOR] call_llm_json starting [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215
+2026-04-26T02:02:02.981989Z [info     ] [MONITOR] Creating thread-local OpenAI client [chunks2skus.utils.llm_client] base_url=https://ark.cn-beijing.volces.com/api/v3 thread=ThreadPoolExecutor-8_1
+2026-04-26T02:02:02.983043Z [info     ] [MONITOR] Creating thread-local OpenAI client [chunks2skus.utils.llm_client] base_url=https://ark.cn-beijing.volces.com/api/v3 thread=ThreadPoolExecutor-8_2
+2026-04-26T02:02:04.636419Z [info     ] [MONITOR] Starting LLM call    [chunks2skus.utils.llm_client] attempt=0 max_tokens=64000 model=doubao-seed-2-0-pro-260215 prompt_length=8196 temperature=0.3
+2026-04-26T02:02:04.648039Z [info     ] [MONITOR] Starting LLM call    [chunks2skus.utils.llm_client] attempt=0 max_tokens=128000 model=doubao-seed-2-0-pro-260215 prompt_length=11475 temperature=0.3
+2026-04-26T02:02:04.663943Z [info     ] [MONITOR] Starting LLM call    [chunks2skus.utils.llm_client] attempt=0 max_tokens=64000 model=doubao-seed-2-0-pro-260215 prompt_length=8107 temperature=0.3
+2026-04-26T02:03:12.682621Z [info     ] [MONITOR] LLM call SUCCESS     [chunks2skus.utils.llm_client] attempt=0 finish_reason=stop model=doubao-seed-2-0-pro-260215 response_length=3087
+2026-04-26T02:03:12.683641Z [info     ] [MONITOR] JSON parse SUCCESS   [chunks2skus.utils.llm_client] keys=['procedures']
+2026-04-26T02:03:12.697290Z [info     ] Procedural extraction complete [chunks2skus.extractors.procedural_extractor] chunk_id=报告-固德威江西德安县调研报告：光储充一体化项目怎么做？_chunk_001 skills_created=5
+2026-04-26T02:03:23.985080Z [info     ] [MONITOR] LLM call SUCCESS     [chunks2skus.utils.llm_client] attempt=0 finish_reason=stop model=doubao-seed-2-0-pro-260215 response_length=4530
+2026-04-26T02:03:23.988153Z [info     ] [MONITOR] JSON parse SUCCESS   [chunks2skus.utils.llm_client] keys=['facts']
+2026-04-26T02:03:24.007732Z [info     ] Factual extraction complete    [chunks2skus.extractors.factual_extractor] chunk_id=报告-固德威江西德安县调研报告：光储充一体化项目怎么做？_chunk_001 skus_created=10
+2026-04-26T02:03:32.127730Z [info     ] [MONITOR] LLM call SUCCESS     [chunks2skus.utils.llm_client] attempt=0 finish_reason=stop model=doubao-seed-2-0-pro-260215 response_length=4463
+2026-04-26T02:03:32.129741Z [info     ] [MONITOR] JSON parse SUCCESS   [chunks2skus.utils.llm_client] keys=['new_labels', 'new_glossary', 'updated_glossary', 'new_relationships']
+2026-04-26T02:03:32.135547Z [info     ] Added new labels               [chunks2skus.extractors.relational_extractor] chunk_id=报告-固德威江西德安县调研报告：光储充一体化项目怎么做？_chunk_001 count=1
+2026-04-26T02:03:32.136699Z [info     ] Merged new glossary entries    [chunks2skus.extractors.relational_extractor] chunk_id=报告-固德威江西德安县调研报告：光储充一体化项目怎么做？_chunk_001 count=11
+2026-04-26T02:03:32.138702Z [info     ] Updated existing glossary entries [chunks2skus.extractors.relational_extractor] chunk_id=报告-固德威江西德安县调研报告：光储充一体化项目怎么做？_chunk_001 fallback_count=0 total_in_response=3 updated_count=3
+2026-04-26T02:03:32.139704Z [info     ] Merged new relationships       [chunks2skus.extractors.relational_extractor] chunk_id=报告-固德威江西德安县调研报告：光储充一体化项目怎么做？_chunk_001 count=18
+2026-04-26T02:03:32.140814Z [info     ] Relationship predicate distribution [chunks2skus.extractors.relational_extractor] distribution={'regulates': 4, 'superset-of': 26, 'requires': 8, 'causes': 12, 'enables': 9, 'related-to': 10, 'has-a': 5, 'is-a': 5, 'implements': 7, 'depends-on': 11, 'part-of': 8, 'example-of': 3, 'certifies': 1, 'caused-by': 3} total=112
+2026-04-26T02:03:32.142136Z [info     ] Predicate count over 20        [chunks2skus.extractors.relational_extractor] predicates={'superset-of': 26}
+2026-04-26T02:03:32.146143Z [info     ] Relational extraction complete [chunks2skus.extractors.relational_extractor] chunk_id=报告-固德威江西德安县调研报告：光储充一体化项目怎么做？_chunk_001 labels=6 relationships=112 terms=79
+2026-04-26T02:03:32.151814Z [info     ] Chunk processed                [chunks2skus.pipeline] chunk_id=报告-固德威江西德安县调研报告：光储充一体化项目怎么做？_chunk_001 new_skus=16 total_skus=124
+2026-04-26T02:03:32.152828Z [info     ] Processing chunk               [chunks2skus.pipeline] chunk_id=报告-国海绿能一线调研报告：重卡换电站怎么做？_chunk_001 progress=9/26
+2026-04-26T02:03:32.153840Z [info     ] Processing chunk               [chunks2skus.router] chunk_id=报告-国海绿能一线调研报告：重卡换电站怎么做？_chunk_001 title=报告-国海绿能一线调研报告：重卡换电站怎么做？ tokens=9565
+2026-04-26T02:03:32.154842Z [info     ] Extracting factual knowledge   [chunks2skus.extractors.factual_extractor] chunk_id=报告-国海绿能一线调研报告：重卡换电站怎么做？_chunk_001
+2026-04-26T02:03:32.155863Z [info     ] Extracting relational knowledge [chunks2skus.extractors.relational_extractor] chunk_id=报告-国海绿能一线调研报告：重卡换电站怎么做？_chunk_001
+2026-04-26T02:03:32.155863Z [info     ] [MONITOR] call_llm_json starting [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215
+2026-04-26T02:03:32.156872Z [info     ] Extracting procedural knowledge [chunks2skus.extractors.procedural_extractor] chunk_id=报告-国海绿能一线调研报告：重卡换电站怎么做？_chunk_001
+2026-04-26T02:03:32.158886Z [info     ] Relational context size        [chunks2skus.extractors.relational_extractor] alias_map_chars=485 chunk_id=报告-国海绿能一线调研报告：重卡换电站怎么做？_chunk_001 glossary_count=79 label_nodes_count=43 label_tree_chars=471 relevant_relations_chars=981 term_list_chars=644
+2026-04-26T02:03:32.158886Z [info     ] [MONITOR] Creating thread-local OpenAI client [chunks2skus.utils.llm_client] base_url=https://ark.cn-beijing.volces.com/api/v3 thread=ThreadPoolExecutor-9_0
+2026-04-26T02:03:32.159882Z [info     ] [MONITOR] call_llm_json starting [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215
+2026-04-26T02:03:32.160385Z [info     ] [MONITOR] call_llm_json starting [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215
+2026-04-26T02:03:32.162397Z [info     ] [MONITOR] Creating thread-local OpenAI client [chunks2skus.utils.llm_client] base_url=https://ark.cn-beijing.volces.com/api/v3 thread=ThreadPoolExecutor-9_2
+2026-04-26T02:03:32.168584Z [info     ] [MONITOR] Creating thread-local OpenAI client [chunks2skus.utils.llm_client] base_url=https://ark.cn-beijing.volces.com/api/v3 thread=ThreadPoolExecutor-9_1
+2026-04-26T02:03:33.823946Z [info     ] [MONITOR] Starting LLM call    [chunks2skus.utils.llm_client] attempt=0 max_tokens=64000 model=doubao-seed-2-0-pro-260215 prompt_length=9560 temperature=0.3
+2026-04-26T02:03:33.830760Z [info     ] [MONITOR] Starting LLM call    [chunks2skus.utils.llm_client] attempt=0 max_tokens=64000 model=doubao-seed-2-0-pro-260215 prompt_length=9649 temperature=0.3
+2026-04-26T02:03:33.856623Z [info     ] [MONITOR] Starting LLM call    [chunks2skus.utils.llm_client] attempt=0 max_tokens=128000 model=doubao-seed-2-0-pro-260215 prompt_length=13019 temperature=0.3
+2026-04-26T02:04:08.154149Z [info     ] [MONITOR] LLM call SUCCESS     [chunks2skus.utils.llm_client] attempt=0 finish_reason=stop model=doubao-seed-2-0-pro-260215 response_length=1825
+2026-04-26T02:04:08.155157Z [info     ] [MONITOR] JSON parse SUCCESS   [chunks2skus.utils.llm_client] keys=['procedures']
+2026-04-26T02:04:08.162780Z [info     ] Procedural extraction complete [chunks2skus.extractors.procedural_extractor] chunk_id=报告-国海绿能一线调研报告：重卡换电站怎么做？_chunk_001 skills_created=3
+2026-04-26T02:05:03.440761Z [info     ] [MONITOR] LLM call SUCCESS     [chunks2skus.utils.llm_client] attempt=0 finish_reason=stop model=doubao-seed-2-0-pro-260215 response_length=4279
+2026-04-26T02:05:03.441778Z [info     ] [MONITOR] JSON parse SUCCESS   [chunks2skus.utils.llm_client] keys=['facts']
+2026-04-26T02:05:03.459852Z [info     ] Factual extraction complete    [chunks2skus.extractors.factual_extractor] chunk_id=报告-国海绿能一线调研报告：重卡换电站怎么做？_chunk_001 skus_created=10
+2026-04-26T02:05:31.227291Z [info     ] [MONITOR] LLM call SUCCESS     [chunks2skus.utils.llm_client] attempt=0 finish_reason=stop model=doubao-seed-2-0-pro-260215 response_length=4992
+2026-04-26T02:05:31.228306Z [info     ] [MONITOR] JSON parse SUCCESS   [chunks2skus.utils.llm_client] keys=['new_labels', 'new_glossary', 'updated_glossary', 'new_relationships']
+2026-04-26T02:05:31.231833Z [info     ] Added new labels               [chunks2skus.extractors.relational_extractor] chunk_id=报告-国海绿能一线调研报告：重卡换电站怎么做？_chunk_001 count=2
+2026-04-26T02:05:31.237877Z [info     ] Merged new glossary entries    [chunks2skus.extractors.relational_extractor] chunk_id=报告-国海绿能一线调研报告：重卡换电站怎么做？_chunk_001 count=11
+2026-04-26T02:05:31.240384Z [info     ] Updated existing glossary entries [chunks2skus.extractors.relational_extractor] chunk_id=报告-国海绿能一线调研报告：重卡换电站怎么做？_chunk_001 fallback_count=0 total_in_response=4 updated_count=4
+2026-04-26T02:05:31.241386Z [info     ] Merged new relationships       [chunks2skus.extractors.relational_extractor] chunk_id=报告-国海绿能一线调研报告：重卡换电站怎么做？_chunk_001 count=14
+2026-04-26T02:05:31.242388Z [info     ] Relationship predicate distribution [chunks2skus.extractors.relational_extractor] distribution={'regulates': 4, 'superset-of': 28, 'requires': 9, 'causes': 12, 'enables': 9, 'related-to': 14, 'has-a': 7, 'is-a': 8, 'implements': 8, 'depends-on': 12, 'part-of': 8, 'example-of': 3, 'certifies': 1, 'caused-by': 3} total=126
+2026-04-26T02:05:31.243388Z [info     ] Predicate count over 20        [chunks2skus.extractors.relational_extractor] predicates={'superset-of': 28}
+2026-04-26T02:05:31.246401Z [info     ] Relational extraction complete [chunks2skus.extractors.relational_extractor] chunk_id=报告-国海绿能一线调研报告：重卡换电站怎么做？_chunk_001 labels=6 relationships=126 terms=90
+2026-04-26T02:05:31.248412Z [info     ] Chunk processed                [chunks2skus.pipeline] chunk_id=报告-国海绿能一线调研报告：重卡换电站怎么做？_chunk_001 new_skus=14 total_skus=137
+2026-04-26T02:05:31.251935Z [info     ] Processing chunk               [chunks2skus.pipeline] chunk_id=报告-奇峰聚能调研报告：飞轮储能怎么做？_chunk_001 progress=10/26
+2026-04-26T02:05:31.251935Z [info     ] Processing chunk               [chunks2skus.router] chunk_id=报告-奇峰聚能调研报告：飞轮储能怎么做？_chunk_001 title=报告-奇峰聚能调研报告：飞轮储能怎么做？ tokens=10469
+2026-04-26T02:05:31.253939Z [info     ] Extracting factual knowledge   [chunks2skus.extractors.factual_extractor] chunk_id=报告-奇峰聚能调研报告：飞轮储能怎么做？_chunk_001
+2026-04-26T02:05:31.253939Z [info     ] Extracting relational knowledge [chunks2skus.extractors.relational_extractor] chunk_id=报告-奇峰聚能调研报告：飞轮储能怎么做？_chunk_001
+2026-04-26T02:05:31.253939Z [info     ] [MONITOR] call_llm_json starting [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215
+2026-04-26T02:05:31.254946Z [info     ] Extracting procedural knowledge [chunks2skus.extractors.procedural_extractor] chunk_id=报告-奇峰聚能调研报告：飞轮储能怎么做？_chunk_001
+2026-04-26T02:05:31.255974Z [info     ] Relational context size        [chunks2skus.extractors.relational_extractor] alias_map_chars=507 chunk_id=报告-奇峰聚能调研报告：飞轮储能怎么做？_chunk_001 glossary_count=90 label_nodes_count=45 label_tree_chars=493 relevant_relations_chars=94 term_list_chars=739
+2026-04-26T02:05:31.256977Z [info     ] [MONITOR] Creating thread-local OpenAI client [chunks2skus.utils.llm_client] base_url=https://ark.cn-beijing.volces.com/api/v3 thread=ThreadPoolExecutor-10_0
+2026-04-26T02:05:31.256977Z [info     ] [MONITOR] call_llm_json starting [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215
+2026-04-26T02:05:31.257977Z [info     ] [MONITOR] call_llm_json starting [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215
+2026-04-26T02:05:31.258978Z [info     ] [MONITOR] Creating thread-local OpenAI client [chunks2skus.utils.llm_client] base_url=https://ark.cn-beijing.volces.com/api/v3 thread=ThreadPoolExecutor-10_2
+2026-04-26T02:05:31.258978Z [info     ] [MONITOR] Creating thread-local OpenAI client [chunks2skus.utils.llm_client] base_url=https://ark.cn-beijing.volces.com/api/v3 thread=ThreadPoolExecutor-10_1
+2026-04-26T02:05:32.888335Z [info     ] [MONITOR] Starting LLM call    [chunks2skus.utils.llm_client] attempt=0 max_tokens=64000 model=doubao-seed-2-0-pro-260215 prompt_length=10304 temperature=0.3
+2026-04-26T02:05:32.890849Z [info     ] [MONITOR] Starting LLM call    [chunks2skus.utils.llm_client] attempt=0 max_tokens=64000 model=doubao-seed-2-0-pro-260215 prompt_length=10393 temperature=0.3
+2026-04-26T02:05:32.908005Z [info     ] [MONITOR] Starting LLM call    [chunks2skus.utils.llm_client] attempt=0 max_tokens=128000 model=doubao-seed-2-0-pro-260215 prompt_length=13015 temperature=0.3
+2026-04-26T02:06:36.560388Z [info     ] [MONITOR] LLM call SUCCESS     [chunks2skus.utils.llm_client] attempt=0 finish_reason=stop model=doubao-seed-2-0-pro-260215 response_length=2093
+2026-04-26T02:06:36.562844Z [info     ] [MONITOR] JSON parse SUCCESS   [chunks2skus.utils.llm_client] keys=['procedures']
+2026-04-26T02:06:36.572928Z [info     ] Procedural extraction complete [chunks2skus.extractors.procedural_extractor] chunk_id=报告-奇峰聚能调研报告：飞轮储能怎么做？_chunk_001 skills_created=3
+2026-04-26T02:07:14.387161Z [info     ] [MONITOR] LLM call SUCCESS     [chunks2skus.utils.llm_client] attempt=0 finish_reason=stop model=doubao-seed-2-0-pro-260215 response_length=4832
+2026-04-26T02:07:14.388177Z [info     ] [MONITOR] JSON parse SUCCESS   [chunks2skus.utils.llm_client] keys=['facts']
+2026-04-26T02:07:14.403648Z [info     ] Factual extraction complete    [chunks2skus.extractors.factual_extractor] chunk_id=报告-奇峰聚能调研报告：飞轮储能怎么做？_chunk_001 skus_created=8
+2026-04-26T02:07:16.852954Z [info     ] [MONITOR] LLM call SUCCESS     [chunks2skus.utils.llm_client] attempt=0 finish_reason=stop model=doubao-seed-2-0-pro-260215 response_length=4602
+2026-04-26T02:07:16.854958Z [info     ] [MONITOR] JSON parse SUCCESS   [chunks2skus.utils.llm_client] keys=['new_labels', 'new_glossary', 'updated_glossary', 'new_relationships']
+2026-04-26T02:07:16.857231Z [info     ] Added new labels               [chunks2skus.extractors.relational_extractor] chunk_id=报告-奇峰聚能调研报告：飞轮储能怎么做？_chunk_001 count=4
+2026-04-26T02:07:16.858235Z [info     ] Merged new glossary entries    [chunks2skus.extractors.relational_extractor] chunk_id=报告-奇峰聚能调研报告：飞轮储能怎么做？_chunk_001 count=11
+2026-04-26T02:07:16.858235Z [info     ] Updated existing glossary entries [chunks2skus.extractors.relational_extractor] chunk_id=报告-奇峰聚能调研报告：飞轮储能怎么做？_chunk_001 fallback_count=0 total_in_response=0 updated_count=0
+2026-04-26T02:07:16.860748Z [info     ] Merged new relationships       [chunks2skus.extractors.relational_extractor] chunk_id=报告-奇峰聚能调研报告：飞轮储能怎么做？_chunk_001 count=13
+2026-04-26T02:07:16.861765Z [info     ] Relationship predicate distribution [chunks2skus.extractors.relational_extractor] distribution={'regulates': 5, 'superset-of': 33, 'requires': 9, 'causes': 13, 'enables': 11, 'related-to': 14, 'has-a': 7, 'is-a': 8, 'implements': 9, 'depends-on': 14, 'part-of': 9, 'example-of': 3, 'certifies': 1, 'caused-by': 3} total=139
+2026-04-26T02:07:16.862818Z [info     ] Predicate count over 20        [chunks2skus.extractors.relational_extractor] predicates={'superset-of': 33}
+2026-04-26T02:07:16.866847Z [info     ] Relational extraction complete [chunks2skus.extractors.relational_extractor] chunk_id=报告-奇峰聚能调研报告：飞轮储能怎么做？_chunk_001 labels=6 relationships=139 terms=101
+2026-04-26T02:07:16.870867Z [info     ] Running meta extraction batch  [chunks2skus.pipeline] chunks=5 new_skus=73 total_content_chars=30205
+2026-04-26T02:07:16.871892Z [info     ] Extracting meta knowledge      [chunks2skus.extractors.meta_extractor] chunk_id=报告-奇峰聚能调研报告：飞轮储能怎么做？_chunk_001
+2026-04-26T02:07:16.872913Z [info     ] [MONITOR] Creating thread-local OpenAI client [chunks2skus.utils.llm_client] base_url=https://ark.cn-beijing.volces.com/api/v3 thread=ThreadPoolExecutor-11_0
+2026-04-26T02:07:16.873917Z [info     ] [MONITOR] Creating thread-local OpenAI client [chunks2skus.utils.llm_client] base_url=https://ark.cn-beijing.volces.com/api/v3 thread=ThreadPoolExecutor-11_1
+2026-04-26T02:07:18.299927Z [info     ] [MONITOR] Starting LLM call    [chunks2skus.utils.llm_client] attempt=0 max_tokens=32000 model=doubao-seed-2-0-pro-260215 prompt_length=10500 temperature=0.2
+2026-04-26T02:07:18.305508Z [info     ] [MONITOR] Starting LLM call    [chunks2skus.utils.llm_client] attempt=0 max_tokens=32000 model=doubao-seed-2-0-pro-260215 prompt_length=11807 temperature=0.7
+2026-04-26T02:08:28.528387Z [info     ] [MONITOR] LLM call SUCCESS     [chunks2skus.utils.llm_client] attempt=0 finish_reason=stop model=doubao-seed-2-0-pro-260215 response_length=1042
+2026-04-26T02:08:28.530393Z [info     ] Updated eureka.md              [chunks2skus.extractors.meta_extractor] chunk_id=报告-奇峰聚能调研报告：飞轮储能怎么做？_chunk_001 new_size=1042 old_size=667
+2026-04-26T02:08:56.350045Z [info     ] [MONITOR] LLM call SUCCESS     [chunks2skus.utils.llm_client] attempt=0 finish_reason=stop model=doubao-seed-2-0-pro-260215 response_length=4252
+2026-04-26T02:08:56.352065Z [info     ] Updated mapping.md (diff merge) [chunks2skus.extractors.meta_extractor] chunk_id=报告-奇峰聚能调研报告：飞轮储能怎么做？_chunk_001 diff_lines=82 new_size=8813 old_size=4559
+2026-04-26T02:08:56.357105Z [info     ] Meta extraction complete       [chunks2skus.extractors.meta_extractor] chunk_id=报告-奇峰聚能调研报告：飞轮储能怎么做？_chunk_001 eureka_chars=1042 mapping_chars=8813
+2026-04-26T02:08:56.359615Z [info     ] Chunk processed                [chunks2skus.pipeline] chunk_id=报告-奇峰聚能调研报告：飞轮储能怎么做？_chunk_001 new_skus=12 total_skus=148
+2026-04-26T02:08:56.359615Z [info     ] Processing chunk               [chunks2skus.pipeline] chunk_id=报告-安悦节能调研报告：怎样做冷热电综合能源服务？_chunk_001 progress=11/26
+2026-04-26T02:08:56.360628Z [info     ] Processing chunk               [chunks2skus.router] chunk_id=报告-安悦节能调研报告：怎样做冷热电综合能源服务？_chunk_001 title=报告-安悦节能调研报告：怎样做冷热电综合能源服务？ tokens=11236
+2026-04-26T02:08:56.361646Z [info     ] Extracting factual knowledge   [chunks2skus.extractors.factual_extractor] chunk_id=报告-安悦节能调研报告：怎样做冷热电综合能源服务？_chunk_001
+2026-04-26T02:08:56.362652Z [info     ] Extracting relational knowledge [chunks2skus.extractors.relational_extractor] chunk_id=报告-安悦节能调研报告：怎样做冷热电综合能源服务？_chunk_001
+2026-04-26T02:08:56.362652Z [info     ] [MONITOR] call_llm_json starting [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215
+2026-04-26T02:08:56.362652Z [info     ] Extracting procedural knowledge [chunks2skus.extractors.procedural_extractor] chunk_id=报告-安悦节能调研报告：怎样做冷热电综合能源服务？_chunk_001
+2026-04-26T02:08:56.363653Z [info     ] Relational context size        [chunks2skus.extractors.relational_extractor] alias_map_chars=624 chunk_id=报告-安悦节能调研报告：怎样做冷热电综合能源服务？_chunk_001 glossary_count=101 label_nodes_count=49 label_tree_chars=527 relevant_relations_chars=1076 term_list_chars=819
+2026-04-26T02:08:56.366500Z [info     ] [MONITOR] Creating thread-local OpenAI client [chunks2skus.utils.llm_client] base_url=https://ark.cn-beijing.volces.com/api/v3 thread=ThreadPoolExecutor-12_0
+2026-04-26T02:08:56.368523Z [info     ] [MONITOR] call_llm_json starting [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215
+2026-04-26T02:08:56.370026Z [info     ] [MONITOR] call_llm_json starting [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215
+2026-04-26T02:08:56.371043Z [info     ] [MONITOR] Creating thread-local OpenAI client [chunks2skus.utils.llm_client] base_url=https://ark.cn-beijing.volces.com/api/v3 thread=ThreadPoolExecutor-12_2
+2026-04-26T02:08:56.372048Z [info     ] [MONITOR] Creating thread-local OpenAI client [chunks2skus.utils.llm_client] base_url=https://ark.cn-beijing.volces.com/api/v3 thread=ThreadPoolExecutor-12_1
+2026-04-26T02:08:58.011974Z [info     ] [MONITOR] Starting LLM call    [chunks2skus.utils.llm_client] attempt=0 max_tokens=64000 model=doubao-seed-2-0-pro-260215 prompt_length=10202 temperature=0.3
+2026-04-26T02:08:58.036472Z [info     ] [MONITOR] Starting LLM call    [chunks2skus.utils.llm_client] attempt=0 max_tokens=128000 model=doubao-seed-2-0-pro-260215 prompt_length=14038 temperature=0.3
+2026-04-26T02:08:58.066092Z [info     ] [MONITOR] Starting LLM call    [chunks2skus.utils.llm_client] attempt=0 max_tokens=64000 model=doubao-seed-2-0-pro-260215 prompt_length=10113 temperature=0.3
+2026-04-26T02:09:49.975540Z [info     ] [MONITOR] LLM call SUCCESS     [chunks2skus.utils.llm_client] attempt=0 finish_reason=stop model=doubao-seed-2-0-pro-260215 response_length=3878
+2026-04-26T02:09:49.977546Z [info     ] [MONITOR] JSON parse SUCCESS   [chunks2skus.utils.llm_client] keys=['facts']
+2026-04-26T02:09:49.995273Z [info     ] Factual extraction complete    [chunks2skus.extractors.factual_extractor] chunk_id=报告-安悦节能调研报告：怎样做冷热电综合能源服务？_chunk_001 skus_created=7
+2026-04-26T02:09:57.499001Z [info     ] [MONITOR] LLM call SUCCESS     [chunks2skus.utils.llm_client] attempt=0 finish_reason=stop model=doubao-seed-2-0-pro-260215 response_length=2692
+2026-04-26T02:09:57.504663Z [info     ] [MONITOR] JSON parse SUCCESS   [chunks2skus.utils.llm_client] keys=['procedures']
+2026-04-26T02:09:57.521456Z [info     ] Procedural extraction complete [chunks2skus.extractors.procedural_extractor] chunk_id=报告-安悦节能调研报告：怎样做冷热电综合能源服务？_chunk_001 skills_created=5
+2026-04-26T02:10:59.043650Z [info     ] [MONITOR] LLM call SUCCESS     [chunks2skus.utils.llm_client] attempt=0 finish_reason=stop model=doubao-seed-2-0-pro-260215 response_length=6400
+2026-04-26T02:10:59.045733Z [info     ] [MONITOR] JSON parse SUCCESS   [chunks2skus.utils.llm_client] keys=['new_labels', 'new_glossary', 'updated_glossary', 'new_relationships']
+2026-04-26T02:10:59.055283Z [info     ] Added new labels               [chunks2skus.extractors.relational_extractor] chunk_id=报告-安悦节能调研报告：怎样做冷热电综合能源服务？_chunk_001 count=1
+2026-04-26T02:10:59.057302Z [info     ] Merged new glossary entries    [chunks2skus.extractors.relational_extractor] chunk_id=报告-安悦节能调研报告：怎样做冷热电综合能源服务？_chunk_001 count=17
+2026-04-26T02:10:59.057302Z [info     ] Updated existing glossary entries [chunks2skus.extractors.relational_extractor] chunk_id=报告-安悦节能调研报告：怎样做冷热电综合能源服务？_chunk_001 fallback_count=1 total_in_response=3 updated_count=2
+2026-04-26T02:10:59.058303Z [info     ] Merged new relationships       [chunks2skus.extractors.relational_extractor] chunk_id=报告-安悦节能调研报告：怎样做冷热电综合能源服务？_chunk_001 count=14
+2026-04-26T02:10:59.059805Z [info     ] Relationship predicate distribution [chunks2skus.extractors.relational_extractor] distribution={'regulates': 5, 'superset-of': 38, 'requires': 9, 'causes': 13, 'enables': 13, 'related-to': 16, 'has-a': 7, 'is-a': 9, 'implements': 12, 'depends-on': 15, 'part-of': 9, 'example-of': 3, 'certifies': 1, 'caused-by': 3} total=153
+2026-04-26T02:10:59.059805Z [info     ] Predicate count over 20        [chunks2skus.extractors.relational_extractor] predicates={'superset-of': 38}
+2026-04-26T02:10:59.063831Z [info     ] Relational extraction complete [chunks2skus.extractors.relational_extractor] chunk_id=报告-安悦节能调研报告：怎样做冷热电综合能源服务？_chunk_001 labels=6 relationships=153 terms=119
+2026-04-26T02:10:59.066873Z [info     ] Chunk processed                [chunks2skus.pipeline] chunk_id=报告-安悦节能调研报告：怎样做冷热电综合能源服务？_chunk_001 new_skus=13 total_skus=160
+2026-04-26T02:10:59.070752Z [info     ] Processing chunk               [chunks2skus.pipeline] chunk_id=报告-广林汇智调研报告：在西北地区怎么做虚拟电厂？_chunk_001 progress=12/26
+2026-04-26T02:10:59.073771Z [info     ] Processing chunk               [chunks2skus.router] chunk_id=报告-广林汇智调研报告：在西北地区怎么做虚拟电厂？_chunk_001 title=报告-广林汇智调研报告：在西北地区怎么做虚拟电厂？ tokens=9561
+2026-04-26T02:10:59.074769Z [info     ] Extracting factual knowledge   [chunks2skus.extractors.factual_extractor] chunk_id=报告-广林汇智调研报告：在西北地区怎么做虚拟电厂？_chunk_001
+2026-04-26T02:10:59.075844Z [info     ] Extracting relational knowledge [chunks2skus.extractors.relational_extractor] chunk_id=报告-广林汇智调研报告：在西北地区怎么做虚拟电厂？_chunk_001
+2026-04-26T02:10:59.075844Z [info     ] [MONITOR] call_llm_json starting [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215
+2026-04-26T02:10:59.075844Z [info     ] Extracting procedural knowledge [chunks2skus.extractors.procedural_extractor] chunk_id=报告-广林汇智调研报告：在西北地区怎么做虚拟电厂？_chunk_001
+2026-04-26T02:10:59.077849Z [info     ] Relational context size        [chunks2skus.extractors.relational_extractor] alias_map_chars=687 chunk_id=报告-广林汇智调研报告：在西北地区怎么做虚拟电厂？_chunk_001 glossary_count=119 label_nodes_count=50 label_tree_chars=536 relevant_relations_chars=1094 term_list_chars=976
+2026-04-26T02:10:59.077849Z [info     ] [MONITOR] Creating thread-local OpenAI client [chunks2skus.utils.llm_client] base_url=https://ark.cn-beijing.volces.com/api/v3 thread=ThreadPoolExecutor-13_0
+2026-04-26T02:10:59.077849Z [info     ] [MONITOR] call_llm_json starting [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215
+2026-04-26T02:10:59.078854Z [info     ] [MONITOR] call_llm_json starting [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215
+2026-04-26T02:10:59.080353Z [info     ] [MONITOR] Creating thread-local OpenAI client [chunks2skus.utils.llm_client] base_url=https://ark.cn-beijing.volces.com/api/v3 thread=ThreadPoolExecutor-13_2
+2026-04-26T02:10:59.080353Z [info     ] [MONITOR] Creating thread-local OpenAI client [chunks2skus.utils.llm_client] base_url=https://ark.cn-beijing.volces.com/api/v3 thread=ThreadPoolExecutor-13_1
+2026-04-26T02:11:00.746111Z [info     ] [MONITOR] Starting LLM call    [chunks2skus.utils.llm_client] attempt=0 max_tokens=64000 model=doubao-seed-2-0-pro-260215 prompt_length=8991 temperature=0.3
+2026-04-26T02:11:00.748595Z [info     ] [MONITOR] Starting LLM call    [chunks2skus.utils.llm_client] attempt=0 max_tokens=128000 model=doubao-seed-2-0-pro-260215 prompt_length=13074 temperature=0.3
+2026-04-26T02:11:00.777906Z [info     ] [MONITOR] Starting LLM call    [chunks2skus.utils.llm_client] attempt=0 max_tokens=64000 model=doubao-seed-2-0-pro-260215 prompt_length=8902 temperature=0.3
+2026-04-26T02:11:38.009114Z [info     ] [MONITOR] LLM call SUCCESS     [chunks2skus.utils.llm_client] attempt=0 finish_reason=stop model=doubao-seed-2-0-pro-260215 response_length=1796
+2026-04-26T02:11:38.010640Z [info     ] [MONITOR] JSON parse SUCCESS   [chunks2skus.utils.llm_client] keys=['procedures']
+2026-04-26T02:11:38.018589Z [info     ] Procedural extraction complete [chunks2skus.extractors.procedural_extractor] chunk_id=报告-广林汇智调研报告：在西北地区怎么做虚拟电厂？_chunk_001 skills_created=3
+2026-04-26T02:13:04.225427Z [info     ] [MONITOR] LLM call SUCCESS     [chunks2skus.utils.llm_client] attempt=0 finish_reason=stop model=doubao-seed-2-0-pro-260215 response_length=5206
+2026-04-26T02:13:04.227457Z [info     ] [MONITOR] JSON parse SUCCESS   [chunks2skus.utils.llm_client] keys=['new_labels', 'new_glossary', 'updated_glossary', 'new_relationships']
+2026-04-26T02:13:04.234567Z [info     ] Added new labels               [chunks2skus.extractors.relational_extractor] chunk_id=报告-广林汇智调研报告：在西北地区怎么做虚拟电厂？_chunk_001 count=6
+2026-04-26T02:13:04.235572Z [info     ] Merged new glossary entries    [chunks2skus.extractors.relational_extractor] chunk_id=报告-广林汇智调研报告：在西北地区怎么做虚拟电厂？_chunk_001 count=7
+2026-04-26T02:13:04.236572Z [info     ] Updated existing glossary entries [chunks2skus.extractors.relational_extractor] chunk_id=报告-广林汇智调研报告：在西北地区怎么做虚拟电厂？_chunk_001 fallback_count=0 total_in_response=3 updated_count=3
+2026-04-26T02:13:04.241522Z [info     ] Merged new relationships       [chunks2skus.extractors.relational_extractor] chunk_id=报告-广林汇智调研报告：在西北地区怎么做虚拟电厂？_chunk_001 count=22
+2026-04-26T02:13:04.242540Z [info     ] Relationship predicate distribution [chunks2skus.extractors.relational_extractor] distribution={'regulates': 6, 'superset-of': 43, 'requires': 10, 'causes': 16, 'enables': 17, 'related-to': 16, 'has-a': 8, 'is-a': 11, 'implements': 15, 'depends-on': 16, 'part-of': 9, 'example-of': 4, 'certifies': 1, 'caused-by': 3} total=175
+2026-04-26T02:13:04.243541Z [info     ] Predicate count over 20        [chunks2skus.extractors.relational_extractor] predicates={'superset-of': 43}
+2026-04-26T02:13:04.247548Z [info     ] Relational extraction complete [chunks2skus.extractors.relational_extractor] chunk_id=报告-广林汇智调研报告：在西北地区怎么做虚拟电厂？_chunk_001 labels=6 relationships=175 terms=126
+2026-04-26T02:13:18.186100Z [info     ] [MONITOR] LLM call SUCCESS     [chunks2skus.utils.llm_client] attempt=0 finish_reason=stop model=doubao-seed-2-0-pro-260215 response_length=5266
+2026-04-26T02:13:18.187107Z [info     ] [MONITOR] JSON parse SUCCESS   [chunks2skus.utils.llm_client] keys=['facts']
+2026-04-26T02:13:18.216977Z [info     ] Factual extraction complete    [chunks2skus.extractors.factual_extractor] chunk_id=报告-广林汇智调研报告：在西北地区怎么做虚拟电厂？_chunk_001 skus_created=12
+2026-04-26T02:13:18.219629Z [info     ] Chunk processed                [chunks2skus.pipeline] chunk_id=报告-广林汇智调研报告：在西北地区怎么做虚拟电厂？_chunk_001 new_skus=16 total_skus=175
+2026-04-26T02:13:18.221778Z [info     ] Processing chunk               [chunks2skus.pipeline] chunk_id=报告-恒实盛景调研报告：怎样做空调虚拟电厂？_chunk_001 progress=13/26
+2026-04-26T02:13:18.222913Z [info     ] Processing chunk               [chunks2skus.router] chunk_id=报告-恒实盛景调研报告：怎样做空调虚拟电厂？_chunk_001 title=报告-恒实盛景调研报告：怎样做空调虚拟电厂？ tokens=9252
+2026-04-26T02:13:18.325901Z [info     ] Extracting factual knowledge   [chunks2skus.extractors.factual_extractor] chunk_id=报告-恒实盛景调研报告：怎样做空调虚拟电厂？_chunk_001
+2026-04-26T02:13:18.327929Z [info     ] [MONITOR] call_llm_json starting [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215
+2026-04-26T02:13:18.329933Z [info     ] Extracting relational knowledge [chunks2skus.extractors.relational_extractor] chunk_id=报告-恒实盛景调研报告：怎样做空调虚拟电厂？_chunk_001
+2026-04-26T02:13:18.336874Z [info     ] Extracting procedural knowledge [chunks2skus.extractors.procedural_extractor] chunk_id=报告-恒实盛景调研报告：怎样做空调虚拟电厂？_chunk_001
+2026-04-26T02:13:18.336874Z [info     ] [MONITOR] Creating thread-local OpenAI client [chunks2skus.utils.llm_client] base_url=https://ark.cn-beijing.volces.com/api/v3 thread=ThreadPoolExecutor-14_0
+2026-04-26T02:13:18.343025Z [info     ] Relational context size        [chunks2skus.extractors.relational_extractor] alias_map_chars=709 chunk_id=报告-恒实盛景调研报告：怎样做空调虚拟电厂？_chunk_001 glossary_count=126 label_nodes_count=56 label_tree_chars=626 relevant_relations_chars=1074 term_list_chars=1070
+2026-04-26T02:13:18.343025Z [info     ] [MONITOR] call_llm_json starting [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215
+2026-04-26T02:13:18.346384Z [info     ] [MONITOR] call_llm_json starting [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215
+2026-04-26T02:13:18.347385Z [info     ] [MONITOR] Creating thread-local OpenAI client [chunks2skus.utils.llm_client] base_url=https://ark.cn-beijing.volces.com/api/v3 thread=ThreadPoolExecutor-14_2
+2026-04-26T02:13:18.347385Z [info     ] [MONITOR] Creating thread-local OpenAI client [chunks2skus.utils.llm_client] base_url=https://ark.cn-beijing.volces.com/api/v3 thread=ThreadPoolExecutor-14_1
+2026-04-26T02:13:20.101645Z [info     ] [MONITOR] Starting LLM call    [chunks2skus.utils.llm_client] attempt=0 max_tokens=128000 model=doubao-seed-2-0-pro-260215 prompt_length=13053 temperature=0.3
+2026-04-26T02:13:20.133666Z [info     ] [MONITOR] Starting LLM call    [chunks2skus.utils.llm_client] attempt=0 max_tokens=64000 model=doubao-seed-2-0-pro-260215 prompt_length=8784 temperature=0.3
+2026-04-26T02:13:20.140495Z [info     ] [MONITOR] Starting LLM call    [chunks2skus.utils.llm_client] attempt=0 max_tokens=64000 model=doubao-seed-2-0-pro-260215 prompt_length=8695 temperature=0.3
+2026-04-26T02:14:15.643996Z [info     ] [MONITOR] LLM call SUCCESS     [chunks2skus.utils.llm_client] attempt=0 finish_reason=stop model=doubao-seed-2-0-pro-260215 response_length=2646
+2026-04-26T02:14:15.646007Z [info     ] [MONITOR] JSON parse SUCCESS   [chunks2skus.utils.llm_client] keys=['procedures']
+2026-04-26T02:14:15.653633Z [info     ] Procedural extraction complete [chunks2skus.extractors.procedural_extractor] chunk_id=报告-恒实盛景调研报告：怎样做空调虚拟电厂？_chunk_001 skills_created=4
+2026-04-26T02:14:39.840967Z [info     ] [MONITOR] LLM call SUCCESS     [chunks2skus.utils.llm_client] attempt=0 finish_reason=stop model=doubao-seed-2-0-pro-260215 response_length=5679
+2026-04-26T02:14:39.843007Z [info     ] [MONITOR] JSON parse SUCCESS   [chunks2skus.utils.llm_client] keys=['facts']
+2026-04-26T02:14:39.865035Z [info     ] Factual extraction complete    [chunks2skus.extractors.factual_extractor] chunk_id=报告-恒实盛景调研报告：怎样做空调虚拟电厂？_chunk_001 skus_created=11
+2026-04-26T02:14:53.649404Z [info     ] [MONITOR] LLM call SUCCESS     [chunks2skus.utils.llm_client] attempt=0 finish_reason=stop model=doubao-seed-2-0-pro-260215 response_length=3879
+2026-04-26T02:14:53.655243Z [info     ] [MONITOR] JSON parse SUCCESS   [chunks2skus.utils.llm_client] keys=['new_labels', 'new_glossary', 'updated_glossary', 'new_relationships']
+2026-04-26T02:14:53.660610Z [info     ] Added new labels               [chunks2skus.extractors.relational_extractor] chunk_id=报告-恒实盛景调研报告：怎样做空调虚拟电厂？_chunk_001 count=1
+2026-04-26T02:14:53.662620Z [info     ] Merged new glossary entries    [chunks2skus.extractors.relational_extractor] chunk_id=报告-恒实盛景调研报告：怎样做空调虚拟电厂？_chunk_001 count=7
+2026-04-26T02:14:53.663623Z [info     ] Updated existing glossary entries [chunks2skus.extractors.relational_extractor] chunk_id=报告-恒实盛景调研报告：怎样做空调虚拟电厂？_chunk_001 fallback_count=0 total_in_response=2 updated_count=2
+2026-04-26T02:14:53.664637Z [info     ] Merged new relationships       [chunks2skus.extractors.relational_extractor] chunk_id=报告-恒实盛景调研报告：怎样做空调虚拟电厂？_chunk_001 count=13
+2026-04-26T02:14:53.664637Z [info     ] Relationship predicate distribution [chunks2skus.extractors.relational_extractor] distribution={'regulates': 6, 'superset-of': 44, 'requires': 10, 'causes': 17, 'enables': 19, 'related-to': 17, 'has-a': 9, 'is-a': 12, 'implements': 17, 'depends-on': 18, 'part-of': 10, 'example-of': 5, 'certifies': 1, 'caused-by': 3} total=188
+2026-04-26T02:14:53.667897Z [info     ] Predicate count over 20        [chunks2skus.extractors.relational_extractor] predicates={'superset-of': 44}
+2026-04-26T02:14:53.675189Z [info     ] Relational extraction complete [chunks2skus.extractors.relational_extractor] chunk_id=报告-恒实盛景调研报告：怎样做空调虚拟电厂？_chunk_001 labels=6 relationships=188 terms=133
+2026-04-26T02:14:53.680014Z [info     ] Chunk processed                [chunks2skus.pipeline] chunk_id=报告-恒实盛景调研报告：怎样做空调虚拟电厂？_chunk_001 new_skus=16 total_skus=190
+2026-04-26T02:14:53.680014Z [info     ] Processing chunk               [chunks2skus.pipeline] chunk_id=报告-正泰安能光伏星调研报告：在非洲如何做户用光伏？_chunk_001 progress=14/26
+2026-04-26T02:14:53.688028Z [info     ] Processing chunk               [chunks2skus.router] chunk_id=报告-正泰安能光伏星调研报告：在非洲如何做户用光伏？_chunk_001 title=报告-正泰安能光伏星调研报告：在非洲如何做户用光伏？ tokens=10631
+2026-04-26T02:14:53.703485Z [info     ] Extracting factual knowledge   [chunks2skus.extractors.factual_extractor] chunk_id=报告-正泰安能光伏星调研报告：在非洲如何做户用光伏？_chunk_001
+2026-04-26T02:14:53.703485Z [info     ] Extracting relational knowledge [chunks2skus.extractors.relational_extractor] chunk_id=报告-正泰安能光伏星调研报告：在非洲如何做户用光伏？_chunk_001
+2026-04-26T02:14:53.704486Z [info     ] [MONITOR] call_llm_json starting [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215
+2026-04-26T02:14:53.704486Z [info     ] Extracting procedural knowledge [chunks2skus.extractors.procedural_extractor] chunk_id=报告-正泰安能光伏星调研报告：在非洲如何做户用光伏？_chunk_001
+2026-04-26T02:14:53.706495Z [info     ] Relational context size        [chunks2skus.extractors.relational_extractor] alias_map_chars=753 chunk_id=报告-正泰安能光伏星调研报告：在非洲如何做户用光伏？_chunk_001 glossary_count=133 label_nodes_count=57 label_tree_chars=643 relevant_relations_chars=1017 term_list_chars=1144
+2026-04-26T02:14:53.706495Z [info     ] [MONITOR] Creating thread-local OpenAI client [chunks2skus.utils.llm_client] base_url=https://ark.cn-beijing.volces.com/api/v3 thread=ThreadPoolExecutor-15_0
+2026-04-26T02:14:53.707508Z [info     ] [MONITOR] call_llm_json starting [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215
+2026-04-26T02:14:53.708513Z [info     ] [MONITOR] call_llm_json starting [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215
+2026-04-26T02:14:53.709510Z [info     ] [MONITOR] Creating thread-local OpenAI client [chunks2skus.utils.llm_client] base_url=https://ark.cn-beijing.volces.com/api/v3 thread=ThreadPoolExecutor-15_2
+2026-04-26T02:14:53.710596Z [info     ] [MONITOR] Creating thread-local OpenAI client [chunks2skus.utils.llm_client] base_url=https://ark.cn-beijing.volces.com/api/v3 thread=ThreadPoolExecutor-15_1
+2026-04-26T02:14:55.448873Z [info     ] [MONITOR] Starting LLM call    [chunks2skus.utils.llm_client] attempt=0 max_tokens=64000 model=doubao-seed-2-0-pro-260215 prompt_length=10735 temperature=0.3
+2026-04-26T02:14:55.484874Z [info     ] [MONITOR] Starting LLM call    [chunks2skus.utils.llm_client] attempt=0 max_tokens=128000 model=doubao-seed-2-0-pro-260215 prompt_length=15082 temperature=0.3
+2026-04-26T02:14:55.521034Z [info     ] [MONITOR] Starting LLM call    [chunks2skus.utils.llm_client] attempt=0 max_tokens=64000 model=doubao-seed-2-0-pro-260215 prompt_length=10646 temperature=0.3
+2026-04-26T02:15:59.100964Z [info     ] [MONITOR] LLM call SUCCESS     [chunks2skus.utils.llm_client] attempt=0 finish_reason=stop model=doubao-seed-2-0-pro-260215 response_length=3470
+2026-04-26T02:15:59.102953Z [info     ] [MONITOR] JSON parse SUCCESS   [chunks2skus.utils.llm_client] keys=['procedures']
+2026-04-26T02:15:59.124874Z [info     ] Procedural extraction complete [chunks2skus.extractors.procedural_extractor] chunk_id=报告-正泰安能光伏星调研报告：在非洲如何做户用光伏？_chunk_001 skills_created=7
+2026-04-26T02:16:20.458608Z [info     ] [MONITOR] LLM call SUCCESS     [chunks2skus.utils.llm_client] attempt=0 finish_reason=stop model=doubao-seed-2-0-pro-260215 response_length=4609
+2026-04-26T02:16:20.466988Z [info     ] [MONITOR] JSON parse SUCCESS   [chunks2skus.utils.llm_client] keys=['facts']
+2026-04-26T02:16:20.485388Z [info     ] Factual extraction complete    [chunks2skus.extractors.factual_extractor] chunk_id=报告-正泰安能光伏星调研报告：在非洲如何做户用光伏？_chunk_001 skus_created=7
+2026-04-26T02:16:44.541637Z [info     ] [MONITOR] LLM call SUCCESS     [chunks2skus.utils.llm_client] attempt=0 finish_reason=stop model=doubao-seed-2-0-pro-260215 response_length=4635
+2026-04-26T02:16:44.543643Z [info     ] [MONITOR] JSON parse SUCCESS   [chunks2skus.utils.llm_client] keys=['new_labels', 'new_glossary', 'updated_glossary', 'new_relationships']
+2026-04-26T02:16:44.548190Z [info     ] Added new labels               [chunks2skus.extractors.relational_extractor] chunk_id=报告-正泰安能光伏星调研报告：在非洲如何做户用光伏？_chunk_001 count=2
+2026-04-26T02:16:44.548190Z [info     ] Merged new glossary entries    [chunks2skus.extractors.relational_extractor] chunk_id=报告-正泰安能光伏星调研报告：在非洲如何做户用光伏？_chunk_001 count=8
+2026-04-26T02:16:44.549695Z [info     ] Updated existing glossary entries [chunks2skus.extractors.relational_extractor] chunk_id=报告-正泰安能光伏星调研报告：在非洲如何做户用光伏？_chunk_001 fallback_count=1 total_in_response=2 updated_count=1
+2026-04-26T02:16:44.550708Z [info     ] Merged new relationships       [chunks2skus.extractors.relational_extractor] chunk_id=报告-正泰安能光伏星调研报告：在非洲如何做户用光伏？_chunk_001 count=16
+2026-04-26T02:16:44.552558Z [info     ] Relationship predicate distribution [chunks2skus.extractors.relational_extractor] distribution={'regulates': 6, 'superset-of': 46, 'requires': 10, 'causes': 17, 'enables': 22, 'related-to': 17, 'has-a': 10, 'is-a': 12, 'implements': 21, 'depends-on': 22, 'part-of': 11, 'example-of': 5, 'certifies': 2, 'caused-by': 3} total=204
+2026-04-26T02:16:44.552558Z [info     ] Predicate count over 20        [chunks2skus.extractors.relational_extractor] predicates={'superset-of': 46, 'enables': 22, 'implements': 21, 'depends-on': 22}
+2026-04-26T02:16:44.557212Z [info     ] Relational extraction complete [chunks2skus.extractors.relational_extractor] chunk_id=报告-正泰安能光伏星调研报告：在非洲如何做户用光伏？_chunk_001 labels=6 relationships=204 terms=142
+2026-04-26T02:16:44.561951Z [info     ] Chunk processed                [chunks2skus.pipeline] chunk_id=报告-正泰安能光伏星调研报告：在非洲如何做户用光伏？_chunk_001 new_skus=15 total_skus=204
+2026-04-26T02:16:44.570755Z [info     ] Processing chunk               [chunks2skus.pipeline] chunk_id=报告-河钢集团一线调研报告：钢铁行业存在哪些双碳机会？_chunk_001 progress=15/26
+2026-04-26T02:16:44.571758Z [info     ] Processing chunk               [chunks2skus.router] chunk_id=报告-河钢集团一线调研报告：钢铁行业存在哪些双碳机会？_chunk_001 title=报告-河钢集团一线调研报告：钢铁行业存在哪些双碳机会？ tokens=13037
+2026-04-26T02:16:44.586081Z [info     ] Extracting factual knowledge   [chunks2skus.extractors.factual_extractor] chunk_id=报告-河钢集团一线调研报告：钢铁行业存在哪些双碳机会？_chunk_001
+2026-04-26T02:16:44.587082Z [info     ] Extracting relational knowledge [chunks2skus.extractors.relational_extractor] chunk_id=报告-河钢集团一线调研报告：钢铁行业存在哪些双碳机会？_chunk_001
+2026-04-26T02:16:44.587082Z [info     ] [MONITOR] call_llm_json starting [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215
+2026-04-26T02:16:44.595188Z [info     ] Relational context size        [chunks2skus.extractors.relational_extractor] alias_map_chars=874 chunk_id=报告-河钢集团一线调研报告：钢铁行业存在哪些双碳机会？_chunk_001 glossary_count=142 label_nodes_count=59 label_tree_chars=662 relevant_relations_chars=1119 term_list_chars=1235
+2026-04-26T02:16:44.595188Z [info     ] Extracting procedural knowledge [chunks2skus.extractors.procedural_extractor] chunk_id=报告-河钢集团一线调研报告：钢铁行业存在哪些双碳机会？_chunk_001
+2026-04-26T02:16:44.596201Z [info     ] [MONITOR] Creating thread-local OpenAI client [chunks2skus.utils.llm_client] base_url=https://ark.cn-beijing.volces.com/api/v3 thread=ThreadPoolExecutor-16_0
+2026-04-26T02:16:44.597326Z [info     ] [MONITOR] call_llm_json starting [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215
+2026-04-26T02:16:44.598691Z [info     ] [MONITOR] call_llm_json starting [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215
+2026-04-26T02:16:44.600189Z [info     ] [MONITOR] Creating thread-local OpenAI client [chunks2skus.utils.llm_client] base_url=https://ark.cn-beijing.volces.com/api/v3 thread=ThreadPoolExecutor-16_1
+2026-04-26T02:16:44.601192Z [info     ] [MONITOR] Creating thread-local OpenAI client [chunks2skus.utils.llm_client] base_url=https://ark.cn-beijing.volces.com/api/v3 thread=ThreadPoolExecutor-16_2
+2026-04-26T02:16:46.387911Z [info     ] [MONITOR] Starting LLM call    [chunks2skus.utils.llm_client] attempt=0 max_tokens=64000 model=doubao-seed-2-0-pro-260215 prompt_length=11623 temperature=0.3
+2026-04-26T02:16:46.392275Z [info     ] [MONITOR] Starting LLM call    [chunks2skus.utils.llm_client] attempt=0 max_tokens=64000 model=doubao-seed-2-0-pro-260215 prompt_length=11712 temperature=0.3
+2026-04-26T02:16:46.416887Z [info     ] [MONITOR] Starting LLM call    [chunks2skus.utils.llm_client] attempt=0 max_tokens=128000 model=doubao-seed-2-0-pro-260215 prompt_length=16392 temperature=0.3
+2026-04-26T02:17:48.187357Z [info     ] [MONITOR] LLM call SUCCESS     [chunks2skus.utils.llm_client] attempt=0 finish_reason=stop model=doubao-seed-2-0-pro-260215 response_length=2241
+2026-04-26T02:17:48.188366Z [info     ] [MONITOR] JSON parse SUCCESS   [chunks2skus.utils.llm_client] keys=['procedures']
+2026-04-26T02:17:48.199707Z [info     ] Procedural extraction complete [chunks2skus.extractors.procedural_extractor] chunk_id=报告-河钢集团一线调研报告：钢铁行业存在哪些双碳机会？_chunk_001 skills_created=4
+2026-04-26T02:18:14.523233Z [info     ] [MONITOR] LLM call SUCCESS     [chunks2skus.utils.llm_client] attempt=0 finish_reason=stop model=doubao-seed-2-0-pro-260215 response_length=4320
+2026-04-26T02:18:14.525291Z [info     ] [MONITOR] JSON parse SUCCESS   [chunks2skus.utils.llm_client] keys=['facts']
+2026-04-26T02:18:14.541698Z [info     ] Factual extraction complete    [chunks2skus.extractors.factual_extractor] chunk_id=报告-河钢集团一线调研报告：钢铁行业存在哪些双碳机会？_chunk_001 skus_created=9
+2026-04-26T02:18:51.782521Z [info     ] [MONITOR] LLM call SUCCESS     [chunks2skus.utils.llm_client] attempt=0 finish_reason=stop model=doubao-seed-2-0-pro-260215 response_length=4507
+2026-04-26T02:18:51.783535Z [info     ] [MONITOR] JSON parse SUCCESS   [chunks2skus.utils.llm_client] keys=['new_labels', 'new_glossary', 'updated_glossary', 'new_relationships']
+2026-04-26T02:18:51.789582Z [info     ] Added new labels               [chunks2skus.extractors.relational_extractor] chunk_id=报告-河钢集团一线调研报告：钢铁行业存在哪些双碳机会？_chunk_001 count=2
+2026-04-26T02:18:51.792625Z [info     ] Merged new glossary entries    [chunks2skus.extractors.relational_extractor] chunk_id=报告-河钢集团一线调研报告：钢铁行业存在哪些双碳机会？_chunk_001 count=11
+2026-04-26T02:18:51.793626Z [info     ] Updated existing glossary entries [chunks2skus.extractors.relational_extractor] chunk_id=报告-河钢集团一线调研报告：钢铁行业存在哪些双碳机会？_chunk_001 fallback_count=0 total_in_response=2 updated_count=2
+2026-04-26T02:18:51.794648Z [info     ] Merged new relationships       [chunks2skus.extractors.relational_extractor] chunk_id=报告-河钢集团一线调研报告：钢铁行业存在哪些双碳机会？_chunk_001 count=16
+2026-04-26T02:18:51.795652Z [info     ] Relationship predicate distribution [chunks2skus.extractors.relational_extractor] distribution={'regulates': 7, 'superset-of': 53, 'requires': 11, 'causes': 19, 'enables': 23, 'related-to': 17, 'has-a': 10, 'is-a': 12, 'implements': 22, 'depends-on': 23, 'part-of': 12, 'example-of': 6, 'certifies': 2, 'caused-by': 3} total=220
+2026-04-26T02:18:51.795652Z [info     ] Predicate count over 20        [chunks2skus.extractors.relational_extractor] predicates={'superset-of': 53, 'enables': 23, 'implements': 22, 'depends-on': 23}
+2026-04-26T02:18:51.801626Z [info     ] Relational extraction complete [chunks2skus.extractors.relational_extractor] chunk_id=报告-河钢集团一线调研报告：钢铁行业存在哪些双碳机会？_chunk_001 labels=7 relationships=220 terms=153
+2026-04-26T02:18:51.807473Z [info     ] Running meta extraction batch  [chunks2skus.pipeline] chunks=5 new_skus=74 total_content_chars=30208
+2026-04-26T02:18:51.808479Z [info     ] Extracting meta knowledge      [chunks2skus.extractors.meta_extractor] chunk_id=报告-河钢集团一线调研报告：钢铁行业存在哪些双碳机会？_chunk_001
+2026-04-26T02:18:51.809979Z [info     ] [MONITOR] Creating thread-local OpenAI client [chunks2skus.utils.llm_client] base_url=https://ark.cn-beijing.volces.com/api/v3 thread=ThreadPoolExecutor-17_0
+2026-04-26T02:18:51.809979Z [info     ] [MONITOR] Creating thread-local OpenAI client [chunks2skus.utils.llm_client] base_url=https://ark.cn-beijing.volces.com/api/v3 thread=ThreadPoolExecutor-17_1
+2026-04-26T02:18:53.430544Z [info     ] [MONITOR] Starting LLM call    [chunks2skus.utils.llm_client] attempt=0 max_tokens=32000 model=doubao-seed-2-0-pro-260215 prompt_length=14709 temperature=0.2
+2026-04-26T02:18:53.443486Z [info     ] [MONITOR] Starting LLM call    [chunks2skus.utils.llm_client] attempt=0 max_tokens=32000 model=doubao-seed-2-0-pro-260215 prompt_length=11875 temperature=0.7
+2026-04-26T02:19:49.071676Z [info     ] [MONITOR] LLM call SUCCESS     [chunks2skus.utils.llm_client] attempt=0 finish_reason=stop model=doubao-seed-2-0-pro-260215 response_length=1424
+2026-04-26T02:19:49.075899Z [info     ] Updated eureka.md              [chunks2skus.extractors.meta_extractor] chunk_id=报告-河钢集团一线调研报告：钢铁行业存在哪些双碳机会？_chunk_001 new_size=1424 old_size=1042
+2026-04-26T02:20:35.126121Z [info     ] [MONITOR] LLM call SUCCESS     [chunks2skus.utils.llm_client] attempt=0 finish_reason=stop model=doubao-seed-2-0-pro-260215 response_length=4185
+2026-04-26T02:20:35.128473Z [info     ] Updated mapping.md (diff merge) [chunks2skus.extractors.meta_extractor] chunk_id=报告-河钢集团一线调研报告：钢铁行业存在哪些双碳机会？_chunk_001 diff_lines=83 new_size=13000 old_size=8813
+2026-04-26T02:20:35.132616Z [info     ] Meta extraction complete       [chunks2skus.extractors.meta_extractor] chunk_id=报告-河钢集团一线调研报告：钢铁行业存在哪些双碳机会？_chunk_001 eureka_chars=1424 mapping_chars=13000
+2026-04-26T02:20:35.136692Z [info     ] Chunk processed                [chunks2skus.pipeline] chunk_id=报告-河钢集团一线调研报告：钢铁行业存在哪些双碳机会？_chunk_001 new_skus=14 total_skus=217
+2026-04-26T02:20:35.136692Z [info     ] Processing chunk               [chunks2skus.pipeline] chunk_id=报告-深石集团调研报告：房地产企业怎样做新能源？_chunk_001 progress=16/26
+2026-04-26T02:20:35.139821Z [info     ] Processing chunk               [chunks2skus.router] chunk_id=报告-深石集团调研报告：房地产企业怎样做新能源？_chunk_001 title=报告-深石集团调研报告：房地产企业怎样做新能源？ tokens=9320
+2026-04-26T02:20:35.162711Z [info     ] Extracting factual knowledge   [chunks2skus.extractors.factual_extractor] chunk_id=报告-深石集团调研报告：房地产企业怎样做新能源？_chunk_001
+2026-04-26T02:20:35.163714Z [info     ] Extracting relational knowledge [chunks2skus.extractors.relational_extractor] chunk_id=报告-深石集团调研报告：房地产企业怎样做新能源？_chunk_001
+2026-04-26T02:20:35.164716Z [info     ] [MONITOR] call_llm_json starting [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215
+2026-04-26T02:20:35.166852Z [info     ] Extracting procedural knowledge [chunks2skus.extractors.procedural_extractor] chunk_id=报告-深石集团调研报告：房地产企业怎样做新能源？_chunk_001
+2026-04-26T02:20:35.169648Z [info     ] Relational context size        [chunks2skus.extractors.relational_extractor] alias_map_chars=940 chunk_id=报告-深石集团调研报告：房地产企业怎样做新能源？_chunk_001 glossary_count=153 label_nodes_count=61 label_tree_chars=680 relevant_relations_chars=1003 term_list_chars=1328
+2026-04-26T02:20:35.169648Z [info     ] [MONITOR] Creating thread-local OpenAI client [chunks2skus.utils.llm_client] base_url=https://ark.cn-beijing.volces.com/api/v3 thread=ThreadPoolExecutor-18_0
+2026-04-26T02:20:35.170665Z [info     ] [MONITOR] call_llm_json starting [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215
+2026-04-26T02:20:35.171672Z [info     ] [MONITOR] call_llm_json starting [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215
+2026-04-26T02:20:35.172682Z [info     ] [MONITOR] Creating thread-local OpenAI client [chunks2skus.utils.llm_client] base_url=https://ark.cn-beijing.volces.com/api/v3 thread=ThreadPoolExecutor-18_2
+2026-04-26T02:20:35.172682Z [info     ] [MONITOR] Creating thread-local OpenAI client [chunks2skus.utils.llm_client] base_url=https://ark.cn-beijing.volces.com/api/v3 thread=ThreadPoolExecutor-18_1
+2026-04-26T02:20:36.905986Z [info     ] [MONITOR] Starting LLM call    [chunks2skus.utils.llm_client] attempt=0 max_tokens=64000 model=doubao-seed-2-0-pro-260215 prompt_length=8795 temperature=0.3
+2026-04-26T02:20:36.937026Z [info     ] [MONITOR] Starting LLM call    [chunks2skus.utils.llm_client] attempt=0 max_tokens=128000 model=doubao-seed-2-0-pro-260215 prompt_length=13536 temperature=0.3
+2026-04-26T02:20:36.947241Z [info     ] [MONITOR] Starting LLM call    [chunks2skus.utils.llm_client] attempt=0 max_tokens=64000 model=doubao-seed-2-0-pro-260215 prompt_length=8706 temperature=0.3
+2026-04-26T02:21:25.906136Z [info     ] [MONITOR] LLM call SUCCESS     [chunks2skus.utils.llm_client] attempt=0 finish_reason=stop model=doubao-seed-2-0-pro-260215 response_length=1747
+2026-04-26T02:21:25.910546Z [info     ] [MONITOR] JSON parse SUCCESS   [chunks2skus.utils.llm_client] keys=['procedures']
+2026-04-26T02:21:25.919528Z [info     ] Procedural extraction complete [chunks2skus.extractors.procedural_extractor] chunk_id=报告-深石集团调研报告：房地产企业怎样做新能源？_chunk_001 skills_created=3
+2026-04-26T02:21:57.678230Z [info     ] [MONITOR] LLM call SUCCESS     [chunks2skus.utils.llm_client] attempt=0 finish_reason=stop model=doubao-seed-2-0-pro-260215 response_length=3895
+2026-04-26T02:21:57.679740Z [info     ] [MONITOR] JSON parse SUCCESS   [chunks2skus.utils.llm_client] keys=['facts']
+2026-04-26T02:21:57.696316Z [info     ] Factual extraction complete    [chunks2skus.extractors.factual_extractor] chunk_id=报告-深石集团调研报告：房地产企业怎样做新能源？_chunk_001 skus_created=7
+2026-04-26T02:22:34.419832Z [info     ] [MONITOR] LLM call SUCCESS     [chunks2skus.utils.llm_client] attempt=0 finish_reason=stop model=doubao-seed-2-0-pro-260215 response_length=4847
+2026-04-26T02:22:34.421337Z [info     ] [MONITOR] JSON parse SUCCESS   [chunks2skus.utils.llm_client] keys=['new_labels', 'new_glossary', 'updated_glossary', 'new_relationships']
+2026-04-26T02:22:34.426905Z [info     ] Added new labels               [chunks2skus.extractors.relational_extractor] chunk_id=报告-深石集团调研报告：房地产企业怎样做新能源？_chunk_001 count=2
+2026-04-26T02:22:34.430460Z [info     ] Merged new glossary entries    [chunks2skus.extractors.relational_extractor] chunk_id=报告-深石集团调研报告：房地产企业怎样做新能源？_chunk_001 count=11
+2026-04-26T02:22:34.430460Z [info     ] Updated existing glossary entries [chunks2skus.extractors.relational_extractor] chunk_id=报告-深石集团调研报告：房地产企业怎样做新能源？_chunk_001 fallback_count=0 total_in_response=2 updated_count=2
+2026-04-26T02:22:34.432475Z [info     ] Merged new relationships       [chunks2skus.extractors.relational_extractor] chunk_id=报告-深石集团调研报告：房地产企业怎样做新能源？_chunk_001 count=15
+2026-04-26T02:22:34.433483Z [info     ] Relationship predicate distribution [chunks2skus.extractors.relational_extractor] distribution={'regulates': 7, 'superset-of': 53, 'requires': 14, 'causes': 21, 'enables': 27, 'related-to': 17, 'has-a': 10, 'is-a': 15, 'implements': 23, 'depends-on': 24, 'part-of': 12, 'example-of': 7, 'certifies': 2, 'caused-by': 3} total=235
+2026-04-26T02:22:34.433483Z [info     ] Predicate count over 20        [chunks2skus.extractors.relational_extractor] predicates={'superset-of': 53, 'causes': 21, 'enables': 27, 'implements': 23, 'depends-on': 24}
+2026-04-26T02:22:34.438921Z [info     ] Relational extraction complete [chunks2skus.extractors.relational_extractor] chunk_id=报告-深石集团调研报告：房地产企业怎样做新能源？_chunk_001 labels=7 relationships=235 terms=164
+2026-04-26T02:22:34.447399Z [info     ] Chunk processed                [chunks2skus.pipeline] chunk_id=报告-深石集团调研报告：房地产企业怎样做新能源？_chunk_001 new_skus=11 total_skus=227
+2026-04-26T02:22:34.448396Z [info     ] Processing chunk               [chunks2skus.pipeline] chunk_id=报告-特来电零碳大楼调研报告：怎样做车网互动？_chunk_001 progress=17/26
+2026-04-26T02:22:34.450915Z [info     ] Processing chunk               [chunks2skus.router] chunk_id=报告-特来电零碳大楼调研报告：怎样做车网互动？_chunk_001 title=报告-特来电零碳大楼调研报告：怎样做车网互动？ tokens=9534
+2026-04-26T02:22:34.466688Z [info     ] Extracting factual knowledge   [chunks2skus.extractors.factual_extractor] chunk_id=报告-特来电零碳大楼调研报告：怎样做车网互动？_chunk_001
+2026-04-26T02:22:34.468062Z [info     ] [MONITOR] call_llm_json starting [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215
+2026-04-26T02:22:34.470583Z [info     ] Extracting relational knowledge [chunks2skus.extractors.relational_extractor] chunk_id=报告-特来电零碳大楼调研报告：怎样做车网互动？_chunk_001
+2026-04-26T02:22:34.471593Z [info     ] [MONITOR] Creating thread-local OpenAI client [chunks2skus.utils.llm_client] base_url=https://ark.cn-beijing.volces.com/api/v3 thread=ThreadPoolExecutor-19_0
+2026-04-26T02:22:34.472591Z [info     ] Extracting procedural knowledge [chunks2skus.extractors.procedural_extractor] chunk_id=报告-特来电零碳大楼调研报告：怎样做车网互动？_chunk_001
+2026-04-26T02:22:34.474819Z [info     ] Relational context size        [chunks2skus.extractors.relational_extractor] alias_map_chars=940 chunk_id=报告-特来电零碳大楼调研报告：怎样做车网互动？_chunk_001 glossary_count=164 label_nodes_count=63 label_tree_chars=699 relevant_relations_chars=1079 term_list_chars=1408
+2026-04-26T02:22:34.476830Z [info     ] [MONITOR] call_llm_json starting [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215
+2026-04-26T02:22:34.479882Z [info     ] [MONITOR] call_llm_json starting [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215
+2026-04-26T02:22:34.479882Z [info     ] [MONITOR] Creating thread-local OpenAI client [chunks2skus.utils.llm_client] base_url=https://ark.cn-beijing.volces.com/api/v3 thread=ThreadPoolExecutor-19_2
+2026-04-26T02:22:34.481034Z [info     ] [MONITOR] Creating thread-local OpenAI client [chunks2skus.utils.llm_client] base_url=https://ark.cn-beijing.volces.com/api/v3 thread=ThreadPoolExecutor-19_1
+2026-04-26T02:22:36.204323Z [info     ] [MONITOR] Starting LLM call    [chunks2skus.utils.llm_client] attempt=0 max_tokens=64000 model=doubao-seed-2-0-pro-260215 prompt_length=9420 temperature=0.3
+2026-04-26T02:22:36.244812Z [info     ] [MONITOR] Starting LLM call    [chunks2skus.utils.llm_client] attempt=0 max_tokens=128000 model=doubao-seed-2-0-pro-260215 prompt_length=14336 temperature=0.3
+2026-04-26T02:22:36.314682Z [info     ] [MONITOR] Starting LLM call    [chunks2skus.utils.llm_client] attempt=0 max_tokens=64000 model=doubao-seed-2-0-pro-260215 prompt_length=9331 temperature=0.3
+2026-04-26T02:23:24.601899Z [info     ] [MONITOR] LLM call SUCCESS     [chunks2skus.utils.llm_client] attempt=0 finish_reason=stop model=doubao-seed-2-0-pro-260215 response_length=2186
+2026-04-26T02:23:24.606477Z [info     ] [MONITOR] JSON parse SUCCESS   [chunks2skus.utils.llm_client] keys=['procedures']
+2026-04-26T02:23:24.615844Z [info     ] Procedural extraction complete [chunks2skus.extractors.procedural_extractor] chunk_id=报告-特来电零碳大楼调研报告：怎样做车网互动？_chunk_001 skills_created=4
+2026-04-26T02:24:07.311504Z [info     ] [MONITOR] LLM call SUCCESS     [chunks2skus.utils.llm_client] attempt=0 finish_reason=stop model=doubao-seed-2-0-pro-260215 response_length=4849
+2026-04-26T02:24:07.314513Z [info     ] [MONITOR] JSON parse SUCCESS   [chunks2skus.utils.llm_client] keys=['facts']
+2026-04-26T02:24:07.355139Z [info     ] Factual extraction complete    [chunks2skus.extractors.factual_extractor] chunk_id=报告-特来电零碳大楼调研报告：怎样做车网互动？_chunk_001 skus_created=15
+2026-04-26T02:24:13.278703Z [info     ] [MONITOR] LLM call SUCCESS     [chunks2skus.utils.llm_client] attempt=0 finish_reason=stop model=doubao-seed-2-0-pro-260215 response_length=6452
+2026-04-26T02:24:13.281200Z [info     ] [MONITOR] JSON parse SUCCESS   [chunks2skus.utils.llm_client] keys=['new_labels', 'new_glossary', 'updated_glossary', 'new_relationships']
+2026-04-26T02:24:13.283292Z [info     ] Added new labels               [chunks2skus.extractors.relational_extractor] chunk_id=报告-特来电零碳大楼调研报告：怎样做车网互动？_chunk_001 count=3
+2026-04-26T02:24:13.287580Z [info     ] Merged new glossary entries    [chunks2skus.extractors.relational_extractor] chunk_id=报告-特来电零碳大楼调研报告：怎样做车网互动？_chunk_001 count=14
+2026-04-26T02:24:13.291177Z [info     ] Updated existing glossary entries [chunks2skus.extractors.relational_extractor] chunk_id=报告-特来电零碳大楼调研报告：怎样做车网互动？_chunk_001 fallback_count=0 total_in_response=1 updated_count=1
+2026-04-26T02:24:13.293283Z [info     ] Merged new relationships       [chunks2skus.extractors.relational_extractor] chunk_id=报告-特来电零碳大楼调研报告：怎样做车网互动？_chunk_001 count=22
+2026-04-26T02:24:13.294283Z [info     ] Relationship predicate distribution [chunks2skus.extractors.relational_extractor] distribution={'regulates': 10, 'superset-of': 55, 'requires': 15, 'causes': 27, 'enables': 29, 'related-to': 18, 'has-a': 13, 'is-a': 15, 'implements': 25, 'depends-on': 24, 'part-of': 13, 'example-of': 8, 'certifies': 2, 'caused-by': 3} total=257
+2026-04-26T02:24:13.296283Z [info     ] Predicate count over 20        [chunks2skus.extractors.relational_extractor] predicates={'superset-of': 55, 'causes': 27, 'enables': 29, 'implements': 25, 'depends-on': 24}
+2026-04-26T02:24:13.305039Z [info     ] Relational extraction complete [chunks2skus.extractors.relational_extractor] chunk_id=报告-特来电零碳大楼调研报告：怎样做车网互动？_chunk_001 labels=7 relationships=257 terms=178
+2026-04-26T02:24:13.311775Z [info     ] Chunk processed                [chunks2skus.pipeline] chunk_id=报告-特来电零碳大楼调研报告：怎样做车网互动？_chunk_001 new_skus=20 total_skus=246
+2026-04-26T02:24:13.312780Z [info     ] Processing chunk               [chunks2skus.pipeline] chunk_id=报告-电管家一线调研报告：微电网怎么赚钱？_chunk_001 progress=18/26
+2026-04-26T02:24:13.314012Z [info     ] Processing chunk               [chunks2skus.router] chunk_id=报告-电管家一线调研报告：微电网怎么赚钱？_chunk_001 title=报告-电管家一线调研报告：微电网怎么赚钱？ tokens=9897
+2026-04-26T02:24:13.325929Z [info     ] Extracting factual knowledge   [chunks2skus.extractors.factual_extractor] chunk_id=报告-电管家一线调研报告：微电网怎么赚钱？_chunk_001
+2026-04-26T02:24:13.326973Z [info     ] Extracting relational knowledge [chunks2skus.extractors.relational_extractor] chunk_id=报告-电管家一线调研报告：微电网怎么赚钱？_chunk_001
+2026-04-26T02:24:13.327989Z [info     ] [MONITOR] call_llm_json starting [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215
+2026-04-26T02:24:13.327989Z [info     ] Extracting procedural knowledge [chunks2skus.extractors.procedural_extractor] chunk_id=报告-电管家一线调研报告：微电网怎么赚钱？_chunk_001
+2026-04-26T02:24:13.331506Z [info     ] Relational context size        [chunks2skus.extractors.relational_extractor] alias_map_chars=994 chunk_id=报告-电管家一线调研报告：微电网怎么赚钱？_chunk_001 glossary_count=178 label_nodes_count=66 label_tree_chars=733 relevant_relations_chars=1059 term_list_chars=1587
+2026-04-26T02:24:13.331506Z [info     ] [MONITOR] Creating thread-local OpenAI client [chunks2skus.utils.llm_client] base_url=https://ark.cn-beijing.volces.com/api/v3 thread=ThreadPoolExecutor-20_0
+2026-04-26T02:24:13.332642Z [info     ] [MONITOR] call_llm_json starting [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215
+2026-04-26T02:24:13.338793Z [info     ] [MONITOR] call_llm_json starting [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215
+2026-04-26T02:24:13.342592Z [info     ] [MONITOR] Creating thread-local OpenAI client [chunks2skus.utils.llm_client] base_url=https://ark.cn-beijing.volces.com/api/v3 thread=ThreadPoolExecutor-20_2
+2026-04-26T02:24:13.343642Z [info     ] [MONITOR] Creating thread-local OpenAI client [chunks2skus.utils.llm_client] base_url=https://ark.cn-beijing.volces.com/api/v3 thread=ThreadPoolExecutor-20_1
+2026-04-26T02:24:16.376598Z [info     ] [MONITOR] Starting LLM call    [chunks2skus.utils.llm_client] attempt=0 max_tokens=64000 model=doubao-seed-2-0-pro-260215 prompt_length=9785 temperature=0.3
+2026-04-26T02:24:16.396484Z [info     ] [MONITOR] Starting LLM call    [chunks2skus.utils.llm_client] attempt=0 max_tokens=128000 model=doubao-seed-2-0-pro-260215 prompt_length=15037 temperature=0.3
+2026-04-26T02:24:16.415593Z [info     ] [MONITOR] Starting LLM call    [chunks2skus.utils.llm_client] attempt=0 max_tokens=64000 model=doubao-seed-2-0-pro-260215 prompt_length=9874 temperature=0.3
+2026-04-26T02:24:53.878663Z [info     ] [MONITOR] LLM call SUCCESS     [chunks2skus.utils.llm_client] attempt=0 finish_reason=stop model=doubao-seed-2-0-pro-260215 response_length=1775
+2026-04-26T02:24:53.881165Z [info     ] [MONITOR] JSON parse SUCCESS   [chunks2skus.utils.llm_client] keys=['procedures']
+2026-04-26T02:24:53.895826Z [info     ] Procedural extraction complete [chunks2skus.extractors.procedural_extractor] chunk_id=报告-电管家一线调研报告：微电网怎么赚钱？_chunk_001 skills_created=3
+2026-04-26T02:25:48.652119Z [info     ] [MONITOR] LLM call SUCCESS     [chunks2skus.utils.llm_client] attempt=0 finish_reason=stop model=doubao-seed-2-0-pro-260215 response_length=3036
+2026-04-26T02:25:48.654445Z [info     ] [MONITOR] JSON parse SUCCESS   [chunks2skus.utils.llm_client] keys=['new_labels', 'new_glossary', 'updated_glossary', 'new_relationships']
+2026-04-26T02:25:48.658464Z [info     ] Added new labels               [chunks2skus.extractors.relational_extractor] chunk_id=报告-电管家一线调研报告：微电网怎么赚钱？_chunk_001 count=2
+2026-04-26T02:25:48.659967Z [info     ] Merged new glossary entries    [chunks2skus.extractors.relational_extractor] chunk_id=报告-电管家一线调研报告：微电网怎么赚钱？_chunk_001 count=4
+2026-04-26T02:25:48.667201Z [info     ] Updated existing glossary entries [chunks2skus.extractors.relational_extractor] chunk_id=报告-电管家一线调研报告：微电网怎么赚钱？_chunk_001 fallback_count=1 total_in_response=3 updated_count=2
+2026-04-26T02:25:48.671704Z [info     ] Merged new relationships       [chunks2skus.extractors.relational_extractor] chunk_id=报告-电管家一线调研报告：微电网怎么赚钱？_chunk_001 count=13
+2026-04-26T02:25:48.672702Z [info     ] Relationship predicate distribution [chunks2skus.extractors.relational_extractor] distribution={'regulates': 10, 'superset-of': 55, 'requires': 16, 'causes': 30, 'enables': 29, 'related-to': 18, 'has-a': 15, 'is-a': 16, 'implements': 30, 'depends-on': 25, 'part-of': 13, 'example-of': 8, 'certifies': 2, 'caused-by': 3} total=270
+2026-04-26T02:25:48.673698Z [info     ] Predicate count over 20        [chunks2skus.extractors.relational_extractor] predicates={'superset-of': 55, 'causes': 30, 'enables': 29, 'implements': 30, 'depends-on': 25}
+2026-04-26T02:25:48.684393Z [info     ] Relational extraction complete [chunks2skus.extractors.relational_extractor] chunk_id=报告-电管家一线调研报告：微电网怎么赚钱？_chunk_001 labels=7 relationships=270 terms=183
+2026-04-26T02:25:55.530448Z [info     ] [MONITOR] LLM call SUCCESS     [chunks2skus.utils.llm_client] attempt=0 finish_reason=stop model=doubao-seed-2-0-pro-260215 response_length=4868
+2026-04-26T02:25:55.532446Z [info     ] [MONITOR] JSON parse SUCCESS   [chunks2skus.utils.llm_client] keys=['facts']
+2026-04-26T02:25:55.560988Z [info     ] Factual extraction complete    [chunks2skus.extractors.factual_extractor] chunk_id=报告-电管家一线调研报告：微电网怎么赚钱？_chunk_001 skus_created=9
+2026-04-26T02:25:55.565787Z [info     ] Chunk processed                [chunks2skus.pipeline] chunk_id=报告-电管家一线调研报告：微电网怎么赚钱？_chunk_001 new_skus=13 total_skus=258
+2026-04-26T02:25:55.567211Z [info     ] Processing chunk               [chunks2skus.pipeline] chunk_id=报告-紫电捷控调研报告：交直流微电网怎么做？_chunk_001 progress=19/26
+2026-04-26T02:25:55.573451Z [info     ] Processing chunk               [chunks2skus.router] chunk_id=报告-紫电捷控调研报告：交直流微电网怎么做？_chunk_001 title=报告-紫电捷控调研报告：交直流微电网怎么做？ tokens=8526
+2026-04-26T02:25:55.618006Z [info     ] Extracting factual knowledge   [chunks2skus.extractors.factual_extractor] chunk_id=报告-紫电捷控调研报告：交直流微电网怎么做？_chunk_001
+2026-04-26T02:25:55.620000Z [info     ] [MONITOR] call_llm_json starting [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215
+2026-04-26T02:25:55.620503Z [info     ] Extracting relational knowledge [chunks2skus.extractors.relational_extractor] chunk_id=报告-紫电捷控调研报告：交直流微电网怎么做？_chunk_001
+2026-04-26T02:25:55.621502Z [info     ] [MONITOR] Creating thread-local OpenAI client [chunks2skus.utils.llm_client] base_url=https://ark.cn-beijing.volces.com/api/v3 thread=ThreadPoolExecutor-21_0
+2026-04-26T02:25:55.621502Z [info     ] Extracting procedural knowledge [chunks2skus.extractors.procedural_extractor] chunk_id=报告-紫电捷控调研报告：交直流微电网怎么做？_chunk_001
+2026-04-26T02:25:55.628481Z [info     ] [MONITOR] call_llm_json starting [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215
+2026-04-26T02:25:55.625491Z [info     ] Relational context size        [chunks2skus.extractors.relational_extractor] alias_map_chars=1084 chunk_id=报告-紫电捷控调研报告：交直流微电网怎么做？_chunk_001 glossary_count=183 label_nodes_count=68 label_tree_chars=758 relevant_relations_chars=1059 term_list_chars=1654
+2026-04-26T02:25:55.632975Z [info     ] [MONITOR] Creating thread-local OpenAI client [chunks2skus.utils.llm_client] base_url=https://ark.cn-beijing.volces.com/api/v3 thread=ThreadPoolExecutor-21_2
+2026-04-26T02:25:55.637959Z [info     ] [MONITOR] call_llm_json starting [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215
+2026-04-26T02:25:55.639952Z [info     ] [MONITOR] Creating thread-local OpenAI client [chunks2skus.utils.llm_client] base_url=https://ark.cn-beijing.volces.com/api/v3 thread=ThreadPoolExecutor-21_1
+2026-04-26T02:25:59.681344Z [info     ] [MONITOR] Starting LLM call    [chunks2skus.utils.llm_client] attempt=0 max_tokens=64000 model=doubao-seed-2-0-pro-260215 prompt_length=8427 temperature=0.3
+2026-04-26T02:25:59.683339Z [info     ] [MONITOR] Starting LLM call    [chunks2skus.utils.llm_client] attempt=0 max_tokens=128000 model=doubao-seed-2-0-pro-260215 prompt_length=13861 temperature=0.3
+2026-04-26T02:25:59.696813Z [info     ] [MONITOR] Starting LLM call    [chunks2skus.utils.llm_client] attempt=0 max_tokens=64000 model=doubao-seed-2-0-pro-260215 prompt_length=8516 temperature=0.3
+2026-04-26T02:26:50.019931Z [info     ] [MONITOR] LLM call SUCCESS     [chunks2skus.utils.llm_client] attempt=0 finish_reason=stop model=doubao-seed-2-0-pro-260215 response_length=1789
+2026-04-26T02:26:50.027041Z [info     ] [MONITOR] JSON parse SUCCESS   [chunks2skus.utils.llm_client] keys=['procedures']
+2026-04-26T02:26:50.039531Z [info     ] Procedural extraction complete [chunks2skus.extractors.procedural_extractor] chunk_id=报告-紫电捷控调研报告：交直流微电网怎么做？_chunk_001 skills_created=3
+2026-04-26T02:27:13.916493Z [info     ] [MONITOR] LLM call SUCCESS     [chunks2skus.utils.llm_client] attempt=0 finish_reason=stop model=doubao-seed-2-0-pro-260215 response_length=4404
+2026-04-26T02:27:13.918494Z [info     ] [MONITOR] JSON parse SUCCESS   [chunks2skus.utils.llm_client] keys=['facts']
+2026-04-26T02:27:13.949523Z [info     ] Factual extraction complete    [chunks2skus.extractors.factual_extractor] chunk_id=报告-紫电捷控调研报告：交直流微电网怎么做？_chunk_001 skus_created=11
+2026-04-26T02:27:53.324254Z [info     ] [MONITOR] LLM call SUCCESS     [chunks2skus.utils.llm_client] attempt=0 finish_reason=stop model=doubao-seed-2-0-pro-260215 response_length=4645
+2026-04-26T02:27:53.327287Z [info     ] [MONITOR] JSON parse SUCCESS   [chunks2skus.utils.llm_client] keys=['new_labels', 'new_glossary', 'updated_glossary', 'new_relationships']
+2026-04-26T02:27:53.330811Z [info     ] Added new labels               [chunks2skus.extractors.relational_extractor] chunk_id=报告-紫电捷控调研报告：交直流微电网怎么做？_chunk_001 count=1
+2026-04-26T02:27:53.333881Z [info     ] Merged new glossary entries    [chunks2skus.extractors.relational_extractor] chunk_id=报告-紫电捷控调研报告：交直流微电网怎么做？_chunk_001 count=8
+2026-04-26T02:27:53.335972Z [info     ] Updated existing glossary entries [chunks2skus.extractors.relational_extractor] chunk_id=报告-紫电捷控调研报告：交直流微电网怎么做？_chunk_001 fallback_count=2 total_in_response=2 updated_count=0
+2026-04-26T02:27:53.337974Z [info     ] Merged new relationships       [chunks2skus.extractors.relational_extractor] chunk_id=报告-紫电捷控调研报告：交直流微电网怎么做？_chunk_001 count=17
+2026-04-26T02:27:53.339476Z [info     ] Relationship predicate distribution [chunks2skus.extractors.relational_extractor] distribution={'regulates': 10, 'superset-of': 56, 'requires': 22, 'causes': 35, 'enables': 29, 'related-to': 18, 'has-a': 15, 'is-a': 20, 'implements': 31, 'depends-on': 25, 'part-of': 13, 'example-of': 8, 'certifies': 2, 'caused-by': 3} total=287
+2026-04-26T02:27:53.341877Z [info     ] Predicate count over 20        [chunks2skus.extractors.relational_extractor] predicates={'superset-of': 56, 'requires': 22, 'causes': 35, 'enables': 29, 'implements': 31, 'depends-on': 25}
+2026-04-26T02:27:53.354013Z [info     ] Relational extraction complete [chunks2skus.extractors.relational_extractor] chunk_id=报告-紫电捷控调研报告：交直流微电网怎么做？_chunk_001 labels=7 relationships=287 terms=193
+2026-04-26T02:27:53.362241Z [info     ] Chunk processed                [chunks2skus.pipeline] chunk_id=报告-紫电捷控调研报告：交直流微电网怎么做？_chunk_001 new_skus=15 total_skus=272
+2026-04-26T02:27:53.363641Z [info     ] Processing chunk               [chunks2skus.pipeline] chunk_id=报告-纬景储能调研报告：液流电池为储能带来的机会_chunk_001 progress=20/26
+2026-04-26T02:27:53.364662Z [info     ] Processing chunk               [chunks2skus.router] chunk_id=报告-纬景储能调研报告：液流电池为储能带来的机会_chunk_001 title=报告-纬景储能调研报告：液流电池为储能带来的机会 tokens=11746
+2026-04-26T02:27:53.381473Z [info     ] Extracting factual knowledge   [chunks2skus.extractors.factual_extractor] chunk_id=报告-纬景储能调研报告：液流电池为储能带来的机会_chunk_001
+2026-04-26T02:27:53.383500Z [info     ] [MONITOR] call_llm_json starting [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215
+2026-04-26T02:27:53.383500Z [info     ] Extracting relational knowledge [chunks2skus.extractors.relational_extractor] chunk_id=报告-纬景储能调研报告：液流电池为储能带来的机会_chunk_001
+2026-04-26T02:27:53.384508Z [info     ] Extracting procedural knowledge [chunks2skus.extractors.procedural_extractor] chunk_id=报告-纬景储能调研报告：液流电池为储能带来的机会_chunk_001
+2026-04-26T02:27:53.384508Z [info     ] [MONITOR] Creating thread-local OpenAI client [chunks2skus.utils.llm_client] base_url=https://ark.cn-beijing.volces.com/api/v3 thread=ThreadPoolExecutor-22_0
+2026-04-26T02:27:53.391005Z [info     ] Relational context size        [chunks2skus.extractors.relational_extractor] alias_map_chars=1252 chunk_id=报告-纬景储能调研报告：液流电池为储能带来的机会_chunk_001 glossary_count=193 label_nodes_count=69 label_tree_chars=770 relevant_relations_chars=1009 term_list_chars=1761
+2026-04-26T02:27:53.392001Z [info     ] [MONITOR] call_llm_json starting [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215
+2026-04-26T02:27:53.394217Z [info     ] [MONITOR] call_llm_json starting [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215
+2026-04-26T02:27:53.399996Z [info     ] [MONITOR] Creating thread-local OpenAI client [chunks2skus.utils.llm_client] base_url=https://ark.cn-beijing.volces.com/api/v3 thread=ThreadPoolExecutor-22_1
+2026-04-26T02:27:53.397481Z [info     ] [MONITOR] Creating thread-local OpenAI client [chunks2skus.utils.llm_client] base_url=https://ark.cn-beijing.volces.com/api/v3 thread=ThreadPoolExecutor-22_2
+2026-04-26T02:27:56.680643Z [info     ] [MONITOR] Starting LLM call    [chunks2skus.utils.llm_client] attempt=0 max_tokens=64000 model=doubao-seed-2-0-pro-260215 prompt_length=11165 temperature=0.3
+2026-04-26T02:27:56.684631Z [info     ] [MONITOR] Starting LLM call    [chunks2skus.utils.llm_client] attempt=0 max_tokens=128000 model=doubao-seed-2-0-pro-260215 prompt_length=16836 temperature=0.3
+2026-04-26T02:27:56.694887Z [info     ] [MONITOR] Starting LLM call    [chunks2skus.utils.llm_client] attempt=0 max_tokens=64000 model=doubao-seed-2-0-pro-260215 prompt_length=11254 temperature=0.3
+2026-04-26T02:28:34.140953Z [info     ] [MONITOR] LLM call SUCCESS     [chunks2skus.utils.llm_client] attempt=0 finish_reason=stop model=doubao-seed-2-0-pro-260215 response_length=1454
+2026-04-26T02:28:34.143412Z [info     ] [MONITOR] JSON parse SUCCESS   [chunks2skus.utils.llm_client] keys=['procedures']
+2026-04-26T02:28:34.151155Z [info     ] Procedural extraction complete [chunks2skus.extractors.procedural_extractor] chunk_id=报告-纬景储能调研报告：液流电池为储能带来的机会_chunk_001 skills_created=2
+2026-04-26T02:29:19.592478Z [info     ] [MONITOR] LLM call SUCCESS     [chunks2skus.utils.llm_client] attempt=0 finish_reason=stop model=doubao-seed-2-0-pro-260215 response_length=4532
+2026-04-26T02:29:19.594567Z [info     ] [MONITOR] JSON parse SUCCESS   [chunks2skus.utils.llm_client] keys=['facts']
+2026-04-26T02:29:19.623977Z [info     ] Factual extraction complete    [chunks2skus.extractors.factual_extractor] chunk_id=报告-纬景储能调研报告：液流电池为储能带来的机会_chunk_001 skus_created=9
+2026-04-26T02:30:06.740122Z [info     ] [MONITOR] LLM call SUCCESS     [chunks2skus.utils.llm_client] attempt=0 finish_reason=stop model=doubao-seed-2-0-pro-260215 response_length=5958
+2026-04-26T02:30:06.741298Z [info     ] [MONITOR] JSON parse SUCCESS   [chunks2skus.utils.llm_client] keys=['new_labels', 'new_glossary', 'updated_glossary', 'new_relationships']
+2026-04-26T02:30:06.744964Z [info     ] Added new labels               [chunks2skus.extractors.relational_extractor] chunk_id=报告-纬景储能调研报告：液流电池为储能带来的机会_chunk_001 count=3
+2026-04-26T02:30:06.748276Z [info     ] Merged new glossary entries    [chunks2skus.extractors.relational_extractor] chunk_id=报告-纬景储能调研报告：液流电池为储能带来的机会_chunk_001 count=12
+2026-04-26T02:30:06.751835Z [info     ] Updated existing glossary entries [chunks2skus.extractors.relational_extractor] chunk_id=报告-纬景储能调研报告：液流电池为储能带来的机会_chunk_001 fallback_count=0 total_in_response=2 updated_count=2
+2026-04-26T02:30:06.756055Z [info     ] Merged new relationships       [chunks2skus.extractors.relational_extractor] chunk_id=报告-纬景储能调研报告：液流电池为储能带来的机会_chunk_001 count=22
+2026-04-26T02:30:06.757067Z [info     ] Relationship predicate distribution [chunks2skus.extractors.relational_extractor] distribution={'regulates': 11, 'superset-of': 59, 'requires': 22, 'causes': 38, 'enables': 32, 'related-to': 18, 'has-a': 19, 'is-a': 20, 'implements': 31, 'depends-on': 28, 'part-of': 18, 'example-of': 8, 'certifies': 2, 'caused-by': 3} total=309
+2026-04-26T02:30:06.758152Z [info     ] Predicate count over 20        [chunks2skus.extractors.relational_extractor] predicates={'superset-of': 59, 'requires': 22, 'causes': 38, 'enables': 32, 'implements': 31, 'depends-on': 28}
+2026-04-26T02:30:06.766741Z [info     ] Relational extraction complete [chunks2skus.extractors.relational_extractor] chunk_id=报告-纬景储能调研报告：液流电池为储能带来的机会_chunk_001 labels=7 relationships=309 terms=205
+2026-04-26T02:30:06.772002Z [info     ] Running meta extraction batch  [chunks2skus.pipeline] chunks=5 new_skus=71 total_content_chars=30197
+2026-04-26T02:30:06.773062Z [info     ] Extracting meta knowledge      [chunks2skus.extractors.meta_extractor] chunk_id=报告-纬景储能调研报告：液流电池为储能带来的机会_chunk_001
+2026-04-26T02:30:06.775359Z [info     ] [MONITOR] Creating thread-local OpenAI client [chunks2skus.utils.llm_client] base_url=https://ark.cn-beijing.volces.com/api/v3 thread=ThreadPoolExecutor-23_0
+2026-04-26T02:30:06.775359Z [info     ] [MONITOR] Creating thread-local OpenAI client [chunks2skus.utils.llm_client] base_url=https://ark.cn-beijing.volces.com/api/v3 thread=ThreadPoolExecutor-23_1
+2026-04-26T02:30:09.718438Z [info     ] [MONITOR] Starting LLM call    [chunks2skus.utils.llm_client] attempt=0 max_tokens=32000 model=doubao-seed-2-0-pro-260215 prompt_length=17707 temperature=0.2
+2026-04-26T02:30:09.725991Z [info     ] [MONITOR] Starting LLM call    [chunks2skus.utils.llm_client] attempt=0 max_tokens=32000 model=doubao-seed-2-0-pro-260215 prompt_length=12419 temperature=0.7
+2026-04-26T02:31:04.610443Z [info     ] [MONITOR] LLM call SUCCESS     [chunks2skus.utils.llm_client] attempt=0 finish_reason=stop model=doubao-seed-2-0-pro-260215 response_length=1940
+2026-04-26T02:31:04.611442Z [info     ] Updated eureka.md              [chunks2skus.extractors.meta_extractor] chunk_id=报告-纬景储能调研报告：液流电池为储能带来的机会_chunk_001 new_size=1940 old_size=1424
+2026-04-26T02:31:34.691646Z [info     ] [MONITOR] LLM call SUCCESS     [chunks2skus.utils.llm_client] attempt=0 finish_reason=stop model=doubao-seed-2-0-pro-260215 response_length=4018
+2026-04-26T02:31:34.700435Z [info     ] Updated mapping.md (diff merge) [chunks2skus.extractors.meta_extractor] chunk_id=报告-纬景储能调研报告：液流电池为储能带来的机会_chunk_001 diff_lines=80 new_size=17020 old_size=13000
+2026-04-26T02:31:34.708735Z [info     ] Meta extraction complete       [chunks2skus.extractors.meta_extractor] chunk_id=报告-纬景储能调研报告：液流电池为储能带来的机会_chunk_001 eureka_chars=1940 mapping_chars=17020
+2026-04-26T02:31:34.714640Z [info     ] Chunk processed                [chunks2skus.pipeline] chunk_id=报告-纬景储能调研报告：液流电池为储能带来的机会_chunk_001 new_skus=12 total_skus=283
+2026-04-26T02:31:34.714640Z [info     ] Processing chunk               [chunks2skus.pipeline] chunk_id=报告-良信电器调研报告：怎样建设零碳工厂？_chunk_001 progress=21/26
+2026-04-26T02:31:34.715639Z [info     ] Processing chunk               [chunks2skus.router] chunk_id=报告-良信电器调研报告：怎样建设零碳工厂？_chunk_001 title=报告-良信电器调研报告：怎样建设零碳工厂？ tokens=9460
+2026-04-26T02:31:34.732615Z [info     ] Extracting factual knowledge   [chunks2skus.extractors.factual_extractor] chunk_id=报告-良信电器调研报告：怎样建设零碳工厂？_chunk_001
+2026-04-26T02:31:34.733615Z [info     ] Extracting relational knowledge [chunks2skus.extractors.relational_extractor] chunk_id=报告-良信电器调研报告：怎样建设零碳工厂？_chunk_001
+2026-04-26T02:31:34.733615Z [info     ] [MONITOR] call_llm_json starting [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215
+2026-04-26T02:31:34.734616Z [info     ] Extracting procedural knowledge [chunks2skus.extractors.procedural_extractor] chunk_id=报告-良信电器调研报告：怎样建设零碳工厂？_chunk_001
+2026-04-26T02:31:34.737650Z [info     ] Relational context size        [chunks2skus.extractors.relational_extractor] alias_map_chars=1305 chunk_id=报告-良信电器调研报告：怎样建设零碳工厂？_chunk_001 glossary_count=205 label_nodes_count=72 label_tree_chars=801 relevant_relations_chars=1059 term_list_chars=1859
+2026-04-26T02:31:34.737650Z [info     ] [MONITOR] Creating thread-local OpenAI client [chunks2skus.utils.llm_client] base_url=https://ark.cn-beijing.volces.com/api/v3 thread=ThreadPoolExecutor-24_0
+2026-04-26T02:31:34.741722Z [info     ] [MONITOR] call_llm_json starting [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215
+2026-04-26T02:31:34.742732Z [info     ] [MONITOR] call_llm_json starting [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215
+2026-04-26T02:31:34.743743Z [info     ] [MONITOR] Creating thread-local OpenAI client [chunks2skus.utils.llm_client] base_url=https://ark.cn-beijing.volces.com/api/v3 thread=ThreadPoolExecutor-24_2
+2026-04-26T02:31:34.744743Z [info     ] [MONITOR] Creating thread-local OpenAI client [chunks2skus.utils.llm_client] base_url=https://ark.cn-beijing.volces.com/api/v3 thread=ThreadPoolExecutor-24_1
+2026-04-26T02:31:36.332820Z [info     ] [MONITOR] Starting LLM call    [chunks2skus.utils.llm_client] attempt=0 max_tokens=64000 model=doubao-seed-2-0-pro-260215 prompt_length=9031 temperature=0.3
+2026-04-26T02:31:36.486929Z [info     ] [MONITOR] Starting LLM call    [chunks2skus.utils.llm_client] attempt=0 max_tokens=128000 model=doubao-seed-2-0-pro-260215 prompt_length=14845 temperature=0.3
+2026-04-26T02:31:36.498066Z [info     ] [MONITOR] Starting LLM call    [chunks2skus.utils.llm_client] attempt=0 max_tokens=64000 model=doubao-seed-2-0-pro-260215 prompt_length=8942 temperature=0.3

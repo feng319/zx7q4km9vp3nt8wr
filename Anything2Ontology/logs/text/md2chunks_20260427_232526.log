@@ -1,0 +1,5 @@
+2026-04-27T15:25:28.034826Z [info     ] Starting chunking pipeline     [markdown2chunks.pipeline] input_dir='G:\\Program Files\\AI coding\\知识萃取\\商业模式\\输出' output_dir='G:\\Program Files\\AI coding\\知识萃取\\商业模式\\输出\\chunks'
+2026-04-27T15:25:28.037818Z [info     ] Found files                    [markdown2chunks.pipeline] json=1 markdown=1
+2026-04-27T15:25:28.038814Z [info     ] Processing markdown            [markdown2chunks.pipeline] file=新资本商业模式与盈利模式.md
+2026-04-27T15:25:28.160431Z [info     ] Processed markdown             [markdown2chunks.pipeline] chunks=1 file=新资本商业模式与盈利模式.md
+2026-04-27T15:25:28.166348Z [info     ] Chunking pipeline complete     [markdown2chunks.pipeline] duration_seconds=0.1 source_files=1 total_chunks=1 total_tokens=743

@@ -1,0 +1,50 @@
+{
+  "core_info": "2019年底科创板上市，市值突破1000亿元，核心产品WPS曾占据PC端90%以上市场份额，2011年全球首个推出安卓版办公软件，当前占据国内移动端90%以上市场，月活用户超3.1亿",
+  "business_structure": [
+    {
+      "business_type": "软件授权",
+      "operation_mode": "直销/代理（数量授权/场地授权）",
+      "customer_feature": "中央部委、省级政府、央企国企",
+      "development_trend": "营收占比持续下降"
+    },
+    {
+      "business_type": "订阅服务",
+      "operation_mode": "会员增值（文档漫游/云存储/皮肤）",
+      "customer_feature": "个人用户为主",
+      "development_trend": "三年复合增长率140%"
+    },
+    {
+      "business_type": "广告业务",
+      "operation_mode": "CPS/CPT/CPA/CPC多模式并行",
+      "customer_feature": "第三方平台+代理商",
+      "development_trend": "占比从30%提升至70%"
+    }
+  ],
+  "advertising_mode_comparison": [
+    {
+      "advertising_mode": "CPS",
+      "settlement_basis": "实际消费分成",
+      "typical_feature": "风险共担型",
+      "representative_platform": "电商平台合作"
+    },
+    {
+      "advertising_mode": "CPT",
+      "settlement_basis": "投放时长计费",
+      "typical_feature": "品牌曝光型",
+      "representative_platform": "年度框架协议"
+    },
+    {
+      "advertising_mode": "CPA",
+      "settlement_basis": "用户行为转化",
+      "typical_feature": "效果导向型",
+      "representative_platform": "会员注册场景"
+    },
+    {
+      "advertising_mode": "CPC",
+      "settlement_basis": "点击量计费",
+      "typical_feature": "精准投放型",
+      "representative_platform": "搜索引擎广告"
+    }
+  ],
+  "core_mode": "采用“免费基础功能+增值服务”的互联网模式，2018年付费会员480万，创收3.9亿元，免费模式构建的用户池成为主要变现基础"
+}

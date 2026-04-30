@@ -1,0 +1,33 @@
+{
+  "mode_basic_info": {
+    "zhouheiya_mode": "早期坚持直营模式，2019年开放加盟，毛利率更高但扩张速度慢",
+    "juewei_mode": "以加盟模式为主，扩张速度快，可收取加盟费、保证金及预付订货款，对下游话语权强"
+  },
+  "operation_parameter_comparison": [
+    {
+      "comparison_dimension": "加工厂数量（2019年）",
+      "zhouheiya": "仅3家，新厂在建",
+      "juewei_food": "全国20家"
+    },
+    {
+      "comparison_dimension": "物流覆盖能力",
+      "zhouheiya": "受限于加工厂分布",
+      "juewei_food": "全国性网络覆盖"
+    },
+    {
+      "comparison_dimension": "毛利率（2018年）",
+      "zhouheiya": "5.7%",
+      "juewei_food": "34%"
+    },
+    {
+      "comparison_dimension": "净利润率（2018年）",
+      "zhouheiya": "5.8%",
+      "juewei_food": "14%"
+    },
+    {
+      "comparison_dimension": "门店数量（2019年）",
+      "zhouheiya": "1250家",
+      "juewei_food": "10500家"
+    }
+  ]
+}

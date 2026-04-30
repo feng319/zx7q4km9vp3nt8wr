@@ -1,0 +1,55 @@
+2026-04-28T01:38:38.433649Z [info     ] Starting chunking pipeline     [markdown2chunks.pipeline] input_dir='G:\\Program Files\\AI coding\\知识萃取\\商业模式\\输出' output_dir='G:\\Program Files\\AI coding\\知识萃取\\商业模式\\输出\\chunks'
+2026-04-28T01:38:38.451822Z [info     ] Found files                    [markdown2chunks.pipeline] json=1 markdown=26
+2026-04-28T01:38:38.452931Z [info     ] Processing markdown            [markdown2chunks.pipeline] file=1.业务不变，营收秒变（X50）的商业模式_笔记.md
+2026-04-28T01:38:38.590122Z [info     ] Processed markdown             [markdown2chunks.pipeline] chunks=1 file=1.业务不变，营收秒变（X50）的商业模式_笔记.md
+2026-04-28T01:38:38.591118Z [info     ] Processing markdown            [markdown2chunks.pipeline] file='10.农村包围城市，“定位 并购”模式_笔记.md'
+2026-04-28T01:38:38.593111Z [info     ] Processed markdown             [markdown2chunks.pipeline] chunks=1 file='10.农村包围城市，“定位 并购”模式_笔记.md'
+2026-04-28T01:38:38.593111Z [info     ] Processing markdown            [markdown2chunks.pipeline] file=11.渠道模式分析_笔记.md
+2026-04-28T01:38:38.595104Z [info     ] Processed markdown             [markdown2chunks.pipeline] chunks=1 file=11.渠道模式分析_笔记.md
+2026-04-28T01:38:38.596607Z [info     ] Processing markdown            [markdown2chunks.pipeline] file='12.销地产 产地销，规模成王的模式_笔记.md'
+2026-04-28T01:38:38.599618Z [info     ] Processed markdown             [markdown2chunks.pipeline] chunks=1 file='12.销地产 产地销，规模成王的模式_笔记.md'
+2026-04-28T01:38:38.599618Z [info     ] Processing markdown            [markdown2chunks.pipeline] file=13.专注男装砍掉女装，类直营模式_笔记.md
+2026-04-28T01:38:38.602916Z [info     ] Processed markdown             [markdown2chunks.pipeline] chunks=1 file=13.专注男装砍掉女装，类直营模式_笔记.md
+2026-04-28T01:38:38.602916Z [info     ] Processing markdown            [markdown2chunks.pipeline] file=14.“师傅带徒弟，徒弟带徒孙”的机制_笔记.md
+2026-04-28T01:38:38.606432Z [info     ] Processed markdown             [markdown2chunks.pipeline] chunks=1 file=14.“师傅带徒弟，徒弟带徒孙”的机制_笔记.md
+2026-04-28T01:38:38.606432Z [info     ] Processing markdown            [markdown2chunks.pipeline] file=15.三阶段合伙人的模式_笔记.md
+2026-04-28T01:38:38.609441Z [info     ] Processed markdown             [markdown2chunks.pipeline] chunks=1 file=15.三阶段合伙人的模式_笔记.md
+2026-04-28T01:38:38.609441Z [info     ] Processing markdown            [markdown2chunks.pipeline] file=16.廉价航空，净利润超过10％的模式_笔记.md
+2026-04-28T01:38:38.612431Z [info     ] Processed markdown             [markdown2chunks.pipeline] chunks=1 file=16.廉价航空，净利润超过10％的模式_笔记.md
+2026-04-28T01:38:38.612431Z [info     ] Processing markdown            [markdown2chunks.pipeline] file=17.先掺后控，打造符合资本的商业模式_笔记.md
+2026-04-28T01:38:38.615421Z [info     ] Processed markdown             [markdown2chunks.pipeline] chunks=1 file=17.先掺后控，打造符合资本的商业模式_笔记.md
+2026-04-28T01:38:38.615421Z [info     ] Processing markdown            [markdown2chunks.pipeline] file='18.“连锁 并购基金”的模式_笔记.md'
+2026-04-28T01:38:38.618920Z [info     ] Processed markdown             [markdown2chunks.pipeline] chunks=1 file='18.“连锁 并购基金”的模式_笔记.md'
+2026-04-28T01:38:38.619916Z [info     ] Processing markdown            [markdown2chunks.pipeline] file=19.药明康德，G级代工，研发外包模式，打造医药行业“富士康”模式_笔记.md
+2026-04-28T01:38:38.622906Z [info     ] Processed markdown             [markdown2chunks.pipeline] chunks=1 file=19.药明康德，G级代工，研发外包模式，打造医药行业“富士康”模式_笔记.md
+2026-04-28T01:38:38.623904Z [info     ] Processing markdown            [markdown2chunks.pipeline] file='2.ODM OEM，超过耐K、A迪净利的商业模式_笔记.md'
+2026-04-28T01:38:38.624900Z [info     ] Processed markdown             [markdown2chunks.pipeline] chunks=1 file='2.ODM OEM，超过耐K、A迪净利的商业模式_笔记.md'
+2026-04-28T01:38:38.627480Z [info     ] Processing markdown            [markdown2chunks.pipeline] file=20.红星美凯龙，比轻资产更轻，委托管理模式_笔记.md
+2026-04-28T01:38:38.631469Z [info     ] Processed markdown             [markdown2chunks.pipeline] chunks=1 file=20.红星美凯龙，比轻资产更轻，委托管理模式_笔记.md
+2026-04-28T01:38:38.632465Z [info     ] Processing markdown            [markdown2chunks.pipeline] file='21.尚品宅配，柔性生产链，C2B O2O的模式分析_笔记.md'
+2026-04-28T01:38:38.635456Z [info     ] Processed markdown             [markdown2chunks.pipeline] chunks=1 file='21.尚品宅配，柔性生产链，C2B O2O的模式分析_笔记.md'
+2026-04-28T01:38:38.635456Z [info     ] Processing markdown            [markdown2chunks.pipeline] file='22.张江高科，房东 股东，科技投行的模式，率先开启中国产业园的模式_笔记.md'
+2026-04-28T01:38:38.637953Z [info     ] Processed markdown             [markdown2chunks.pipeline] chunks=1 file='22.张江高科，房东 股东，科技投行的模式，率先开启中国产业园的模式_笔记.md'
+2026-04-28T01:38:38.638953Z [info     ] Processing markdown            [markdown2chunks.pipeline] file='23.宋城演艺，蹭头部流量，做自己的演艺，“千古情 5A景区”模式_笔记.md'
+2026-04-28T01:38:38.640946Z [info     ] Processed markdown             [markdown2chunks.pipeline] chunks=1 file='23.宋城演艺，蹭头部流量，做自己的演艺，“千古情 5A景区”模式_笔记.md'
+2026-04-28T01:38:38.641943Z [info     ] Processing markdown            [markdown2chunks.pipeline] file=24.易居企业控股，甲方变乙方，客户变股东，上游房企变股东的模式_笔记.md
+2026-04-28T01:38:38.646435Z [info     ] Processed markdown             [markdown2chunks.pipeline] chunks=1 file=24.易居企业控股，甲方变乙方，客户变股东，上游房企变股东的模式_笔记.md
+2026-04-28T01:38:38.647467Z [info     ] Processing markdown            [markdown2chunks.pipeline] file=25.以润唇膏切入彩妆市场的模式_笔记.md
+2026-04-28T01:38:38.649505Z [info     ] Processed markdown             [markdown2chunks.pipeline] chunks=1 file=25.以润唇膏切入彩妆市场的模式_笔记.md
+2026-04-28T01:38:38.650502Z [info     ] Processing markdown            [markdown2chunks.pipeline] file=26.以猪肉为核心，不卖隔夜肉_笔记.md
+2026-04-28T01:38:38.652494Z [info     ] Processed markdown             [markdown2chunks.pipeline] chunks=1 file=26.以猪肉为核心，不卖隔夜肉_笔记.md
+2026-04-28T01:38:38.653491Z [info     ] Processing markdown            [markdown2chunks.pipeline] file=3.费用归边，流量占股的商业模式_笔记.md
+2026-04-28T01:38:38.654488Z [info     ] Processed markdown             [markdown2chunks.pipeline] chunks=1 file=3.费用归边，流量占股的商业模式_笔记.md
+2026-04-28T01:38:38.654488Z [info     ] Processing markdown            [markdown2chunks.pipeline] file=4.上下通吃，打通经销商合伙人激励的模式.md
+2026-04-28T01:38:38.656984Z [info     ] Processed markdown             [markdown2chunks.pipeline] chunks=1 file=4.上下通吃，打通经销商合伙人激励的模式.md
+2026-04-28T01:38:38.656984Z [info     ] Processing markdown            [markdown2chunks.pipeline] file=5.不做主机厂，专注整合商的模式_笔记.md
+2026-04-28T01:38:38.660880Z [info     ] Processed markdown             [markdown2chunks.pipeline] chunks=1 file=5.不做主机厂，专注整合商的模式_笔记.md
+2026-04-28T01:38:38.661897Z [info     ] Processing markdown            [markdown2chunks.pipeline] file=6.为经销商Dai款的模式_笔记.md
+2026-04-28T01:38:38.663890Z [info     ] Processed markdown             [markdown2chunks.pipeline] chunks=1 file=6.为经销商Dai款的模式_笔记.md
+2026-04-28T01:38:38.664886Z [info     ] Processing markdown            [markdown2chunks.pipeline] file=7.交钥匙不如先款后货的模式_笔记.md
+2026-04-28T01:38:38.667410Z [info     ] Processed markdown             [markdown2chunks.pipeline] chunks=1 file=7.交钥匙不如先款后货的模式_笔记.md
+2026-04-28T01:38:38.667410Z [info     ] Processing markdown            [markdown2chunks.pipeline] file=8.生产外包，先市场后工厂的模式_笔记.md
+2026-04-28T01:38:38.670863Z [info     ] Processed markdown             [markdown2chunks.pipeline] chunks=1 file=8.生产外包，先市场后工厂的模式_笔记.md
+2026-04-28T01:38:38.670863Z [info     ] Processing markdown            [markdown2chunks.pipeline] file=9.做品牌不做品类的商业模式_笔记.md
+2026-04-28T01:38:38.673898Z [info     ] Processed markdown             [markdown2chunks.pipeline] chunks=1 file=9.做品牌不做品类的商业模式_笔记.md
+2026-04-28T01:38:38.681401Z [info     ] Chunking pipeline complete     [markdown2chunks.pipeline] duration_seconds=0.2 source_files=26 total_chunks=26 total_tokens=45667

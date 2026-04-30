@@ -1,0 +1,3280 @@
+{
+  "created_at": "2026-04-28T22:19:03.436894",
+  "updated_at": "2026-04-28T23:06:13.710236",
+  "total_skus": 324,
+  "total_characters": 344031,
+  "chunks_processed": [
+    "报告-乌克兰新能源市场机会调研报告_chunk_001",
+    "报告-《关于优化集中式新能源发电企业市场报价的通知（试行）》深度解读与战略分析_chunk_001",
+    "报告-三一硅能非洲调研报告：在非洲如何做矿山微电网？_chunk_001",
+    "报告-兆瓦云调研报告：虚拟电厂的下一城在哪里？_chunk_001",
+    "报告-固德威一线调研报告：城市级虚拟电厂怎么做？_chunk_001",
+    "报告-则鸣新能源调研报告：怎么样做好微电网？_chunk_001",
+    "报告-协鑫能科调研报告：江苏最大虚拟电厂是怎么做成的？_chunk_001",
+    "报告-固德威江西德安县调研报告：光储充一体化项目怎么做？_chunk_001",
+    "报告-国海绿能一线调研报告：重卡换电站怎么做？_chunk_001",
+    "报告-奇峰聚能调研报告：飞轮储能怎么做？_chunk_001",
+    "报告-安悦节能调研报告：怎样做冷热电综合能源服务？_chunk_001",
+    "报告-广林汇智调研报告：在西北地区怎么做虚拟电厂？_chunk_001",
+    "报告-恒实盛景调研报告：怎样做空调虚拟电厂？_chunk_001",
+    "报告-正泰安能光伏星调研报告：在非洲如何做户用光伏？_chunk_001",
+    "报告-河钢集团一线调研报告：钢铁行业存在哪些双碳机会？_chunk_001",
+    "报告-深石集团调研报告：房地产企业怎样做新能源？_chunk_001",
+    "报告-特来电零碳大楼调研报告：怎样做车网互动？_chunk_001",
+    "报告-电管家一线调研报告：微电网怎么赚钱？_chunk_001",
+    "报告-紫电捷控调研报告：交直流微电网怎么做？_chunk_001",
+    "报告-纬景储能调研报告：液流电池为储能带来的机会_chunk_001",
+    "报告-良信电器调研报告：怎样建设零碳工厂？_chunk_001",
+    "报告-苏州工业园区的虚拟电厂调研报告：怎样做区域级虚拟电厂_chunk_001",
+    "报告-远景科技调研报告：如何把握储能 AIDC领域未来机会_chunk_001",
+    "报告-金风科技调研报告：我国首个碳中和园区是怎样建成的？_chunk_001",
+    "报告-非洲调研报告（一）：中国新能源企业在肯尼亚有什么机会？_chunk_001",
+    "报告-非洲调研报告（二）：中国新能源企业在赞比亚有什么机会？_chunk_001"
+  ],
+  "skus": [
+    {
+      "sku_id": "sku_001",
+      "name": "俄乌冲突前乌克兰新能源发展情况",
+      "classification": "factual",
+      "path": "output/skus/factual/sku_001",
+      "source_chunk": "报告-乌克兰新能源市场机会调研报告_chunk_001",
+      "character_count": 163,
+      "description": "俄乌冲突爆发前乌克兰新能源产业的发展基础、政策及中资布局情况说明",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_002",
+      "name": "乌克兰发展新能源的核心驱动因素",
+      "classification": "factual",
+      "path": "output/skus/factual/sku_002",
+      "source_chunk": "报告-乌克兰新能源市场机会调研报告_chunk_001",
+      "character_count": 156,
+      "description": "乌克兰不同阶段推动新能源产业发展的核心动因说明",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_003",
+      "name": "乌克兰新能源产业利好政策汇总",
+      "classification": "factual",
+      "path": "output/skus/factual/sku_003",
+      "source_chunk": "报告-乌克兰新能源市场机会调研报告_chunk_001",
+      "character_count": 144,
+      "description": "乌克兰当前针对新能源产业推出的全链条优惠政策说明",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_004",
+      "name": "乌克兰新能源细分品类当前发展现状",
+      "classification": "factual",
+      "path": "output/skus/factual/sku_004",
+      "source_chunk": "报告-乌克兰新能源市场机会调研报告_chunk_001",
+      "character_count": 146,
+      "description": "乌克兰现阶段新能源各核心赛道的发展情况及市场格局说明",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_005",
+      "name": "乌克兰分布式光储投资回报数据",
+      "classification": "factual",
+      "path": "output/skus/factual/sku_005",
+      "source_chunk": "报告-乌克兰新能源市场机会调研报告_chunk_001",
+      "character_count": 111,
+      "description": "乌克兰分布式光储项目的投资回报周期、电价等核心经营数据",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_006",
+      "name": "乌克兰新能源产品进口物流路径",
+      "classification": "factual",
+      "path": "output/skus/factual/sku_006",
+      "source_chunk": "报告-乌克兰新能源市场机会调研报告_chunk_001",
+      "character_count": 85,
+      "description": "冲突期间新能源产品进入乌克兰的常规流通路径说明",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_007",
+      "name": "乌克兰新能源市场长期核心机会点",
+      "classification": "factual",
+      "path": "output/skus/factual/sku_007",
+      "source_chunk": "报告-乌克兰新能源市场机会调研报告_chunk_001",
+      "character_count": 337,
+      "description": "乌克兰战后重建阶段新能源产业的核心增量领域说明",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_008",
+      "name": "中国新能源产品在乌克兰市场的优劣势",
+      "classification": "factual",
+      "path": "output/skus/factual/sku_008",
+      "source_chunk": "报告-乌克兰新能源市场机会调研报告_chunk_001",
+      "character_count": 138,
+      "description": "中国新能源产品在乌克兰市场的竞争优势、短板及面临的挑战说明",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_009",
+      "name": "开拓乌克兰新能源市场的实操建议",
+      "classification": "factual",
+      "path": "output/skus/factual/sku_009",
+      "source_chunk": "报告-乌克兰新能源市场机会调研报告_chunk_001",
+      "character_count": 220,
+      "description": "面向计划进入乌克兰新能源市场的中国企业提出的落地建议汇总",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_010",
+      "name": "乌克兰冲突进程参考预判",
+      "classification": "factual",
+      "path": "output/skus/factual/sku_010",
+      "source_chunk": "报告-乌克兰新能源市场机会调研报告_chunk_001",
+      "character_count": 86,
+      "description": "乌克兰本地资深新能源从业者对俄乌冲突进程的参考性判断",
+      "confidence": null
+    },
+    {
+      "sku_id": "skill_001",
+      "name": "ukraine-new-energy-market-entry-operation-guide",
+      "classification": "procedural",
+      "path": "output/skus/procedural/skill_001",
+      "source_chunk": "报告-乌克兰新能源市场机会调研报告_chunk_001",
+      "character_count": 667,
+      "description": "新能源企业计划进入乌克兰市场开展业务，评估机会、制定落地策略时使用",
+      "confidence": null
+    },
+    {
+      "sku_id": "skill_002",
+      "name": "ukraine-distributed-pv-storage-roi-calculation-method",
+      "classification": "procedural",
+      "path": "output/skus/procedural/skill_002",
+      "source_chunk": "报告-乌克兰新能源市场机会调研报告_chunk_001",
+      "character_count": 364,
+      "description": "评估乌克兰分布式光伏加储能项目的投资回报可行性时使用",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_021",
+      "name": "《关于优化集中式新能源发电企业市场报价的通知（试行）》核心观点",
+      "classification": "factual",
+      "path": "output/skus/factual/sku_021",
+      "source_chunk": "报告-《关于优化集中式新能源发电企业市场报价的通知（试行）》深度解读与战略分析_chunk_001",
+      "character_count": 287,
+      "description": "1476号文解读报告提炼的4项核心政策导向与影响判断",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_022",
+      "name": "1476号文集中报价适用范围限定",
+      "classification": "factual",
+      "path": "output/skus/factual/sku_022",
+      "source_chunk": "报告-《关于优化集中式新能源发电企业市场报价的通知（试行）》深度解读与战略分析_chunk_001",
+      "character_count": 216,
+      "description": "政策明确可参与集中报价的主体范围、排除类别及设计原因",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_023",
+      "name": "1476号文集中报价市场准入双重约束规则",
+      "classification": "factual",
+      "path": "output/skus/factual/sku_023",
+      "source_chunk": "报告-《关于优化集中式新能源发电企业市场报价的通知（试行）》深度解读与战略分析_chunk_001",
+      "character_count": 312,
+      "description": "政策为防范垄断设置的身份与规模两类准入限制条款及设计逻辑",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_024",
+      "name": "1476号文“四不改变”原则双层运行架构",
+      "classification": "factual",
+      "path": "output/skus/factual/sku_024",
+      "source_chunk": "报告-《关于优化集中式新能源发电企业市场报价的通知（试行）》深度解读与战略分析_chunk_001",
+      "character_count": 355,
+      "description": "政策明确的集中报价金融与物理解耦的四层运行规则",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_025",
+      "name": "1476号文集中报价投机防范监管规则",
+      "classification": "factual",
+      "path": "output/skus/factual/sku_025",
+      "source_chunk": "报告-《关于优化集中式新能源发电企业市场报价的通知（试行）》深度解读与战略分析_chunk_001",
+      "character_count": 113,
+      "description": "政策为防止企业短期投机套利设置的进出机制与信息披露要求",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_026",
+      "name": "集中报价前后省级电力市场结构对比",
+      "classification": "factual",
+      "path": "output/skus/factual/sku_026",
+      "source_chunk": "报告-《关于优化集中式新能源发电企业市场报价的通知（试行）》深度解读与战略分析_chunk_001",
+      "character_count": 485,
+      "description": "1476号文实施前后省级电力市场核心指标变化与经济学影响对比",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_027",
+      "name": "新能源发电入市原有散户模式结构性困境",
+      "classification": "factual",
+      "path": "output/skus/factual/sku_027",
+      "source_chunk": "报告-《关于优化集中式新能源发电企业市场报价的通知（试行）》深度解读与战略分析_chunk_001",
+      "character_count": 259,
+      "description": "1476号文出台前新能源场站独立参与电力市场面临的核心痛点",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_028",
+      "name": "1476号文集中报价落地三大技术运营挑战",
+      "classification": "factual",
+      "path": "output/skus/factual/sku_028",
+      "source_chunk": "报告-《关于优化集中式新能源发电企业市场报价的通知（试行）》深度解读与战略分析_chunk_001",
+      "character_count": 254,
+      "description": "政策落地过程中在计划分解、偏差结算、信息隔离层面面临的核心问题",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_029",
+      "name": "1476号文对新能源行业的战略影响",
+      "classification": "factual",
+      "path": "output/skus/factual/sku_029",
+      "source_chunk": "报告-《关于优化集中式新能源发电企业市场报价的通知（试行）》深度解读与战略分析_chunk_001",
+      "character_count": 282,
+      "description": "政策实施后对电力市场结构、新能源投资逻辑、市场竞争模式的核心影响",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_030",
+      "name": "中外电力市场新能源聚合模式对比",
+      "classification": "factual",
+      "path": "output/skus/factual/sku_030",
+      "source_chunk": "报告-《关于优化集中式新能源发电企业市场报价的通知（试行）》深度解读与战略分析_chunk_001",
+      "character_count": 164,
+      "description": "中国1476号文聚合规则与美国PJM、欧洲Nord Pool市场聚合模式的差异对比",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_031",
+      "name": "1476号文未来政策迭代可能路径",
+      "classification": "factual",
+      "path": "output/skus/factual/sku_031",
+      "source_chunk": "报告-《关于优化集中式新能源发电企业市场报价的通知（试行）》深度解读与战略分析_chunk_001",
+      "character_count": 127,
+      "description": "基于试行属性，政策后续可能的调整方向",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_032",
+      "name": "新能源企业应对集中报价的战略建议",
+      "classification": "factual",
+      "path": "output/skus/factual/sku_032",
+      "source_chunk": "报告-《关于优化集中式新能源发电企业市场报价的通知（试行）》深度解读与战略分析_chunk_001",
+      "character_count": 160,
+      "description": "1476号文实施背景下新能源企业适配新规则的三项核心行动建议",
+      "confidence": null
+    },
+    {
+      "sku_id": "skill_003",
+      "name": "new-energy-centralized-bidding-application-preparation",
+      "classification": "procedural",
+      "path": "output/skus/procedural/skill_003",
+      "source_chunk": "报告-《关于优化集中式新能源发电企业市场报价的通知（试行）》深度解读与战略分析_chunk_001",
+      "character_count": 582,
+      "description": "集中式新能源发电企业申请同一省份同集团场站集中报价前，用于完成合规准备工作时使用",
+      "confidence": null
+    },
+    {
+      "sku_id": "skill_004",
+      "name": "centralized-bidding-winning-plan-disaggregation",
+      "classification": "procedural",
+      "path": "output/skus/procedural/skill_004",
+      "source_chunk": "报告-《关于优化集中式新能源发电企业市场报价的通知（试行）》深度解读与战略分析_chunk_001",
+      "character_count": 417,
+      "description": "集中报价实体在现货市场中标后，将中标发电计划分解至下属物理场站时使用",
+      "confidence": null
+    },
+    {
+      "sku_id": "skill_005",
+      "name": "centralized-bidding-deviation-internal-settlement",
+      "classification": "procedural",
+      "path": "output/skus/procedural/skill_005",
+      "source_chunk": "报告-《关于优化集中式新能源发电企业市场报价的通知（试行）》深度解读与战略分析_chunk_001",
+      "character_count": 394,
+      "description": "集中报价实体结算阶段，处理场站间出力偏差内部清算时使用",
+      "confidence": null
+    },
+    {
+      "sku_id": "skill_006",
+      "name": "centralized-bidding-risk-control-system-construction",
+      "classification": "procedural",
+      "path": "output/skus/procedural/skill_006",
+      "source_chunk": "报告-《关于优化集中式新能源发电企业市场报价的通知（试行）》深度解读与战略分析_chunk_001",
+      "character_count": 444,
+      "description": "新能源发电集团搭建集中报价模式下的风控体系时使用",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_011",
+      "name": "非洲关键矿产资源储量占比情况",
+      "classification": "factual",
+      "path": "output/skus/factual/sku_011",
+      "source_chunk": "报告-三一硅能非洲调研报告：在非洲如何做矿山微电网？_chunk_001",
+      "character_count": 288,
+      "description": "非洲各类关键矿产资源在全球的储量占比数据，反映其矿产资源禀赋优势",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_012",
+      "name": "非洲矿山微电网市场发展基础",
+      "classification": "factual",
+      "path": "output/skus/factual/sku_012",
+      "source_chunk": "报告-三一硅能非洲调研报告：在非洲如何做矿山微电网？_chunk_001",
+      "character_count": 204,
+      "description": "支撑非洲矿山微电网市场发展的产业、资源、合作基础相关核心信息",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_013",
+      "name": "非洲铜矿开采工艺流程及能耗指标",
+      "classification": "factual",
+      "path": "output/skus/factual/sku_013",
+      "source_chunk": "报告-三一硅能非洲调研报告：在非洲如何做矿山微电网？_chunk_001",
+      "character_count": 323,
+      "description": "非洲铜矿开采的采矿、选矿两大环节的流程、核心设备及用电能耗参数",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_014",
+      "name": "非洲矿山生产用能核心挑战",
+      "classification": "factual",
+      "path": "output/skus/factual/sku_014",
+      "source_chunk": "报告-三一硅能非洲调研报告：在非洲如何做矿山微电网？_chunk_001",
+      "character_count": 204,
+      "description": "非洲矿山生产过程中遇到的电力供应、电网接入、传统供电成本等方面的痛点问题",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_015",
+      "name": "三一硅能赞比亚乔瓦矿山微电网项目参数",
+      "classification": "factual",
+      "path": "output/skus/factual/sku_015",
+      "source_chunk": "报告-三一硅能非洲调研报告：在非洲如何做矿山微电网？_chunk_001",
+      "character_count": 433,
+      "description": "三一硅能在赞比亚落地的乔瓦矿山光储柴微电网项目的建设、配置、运营模式及成效数据",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_016",
+      "name": "非洲矿山微电网投资回收周期及风控标准",
+      "classification": "factual",
+      "path": "output/skus/factual/sku_016",
+      "source_chunk": "报告-三一硅能非洲调研报告：在非洲如何做矿山微电网？_chunk_001",
+      "character_count": 174,
+      "description": "非洲不同地区微电网项目的投资回收周期区间及投资者普遍采用的风控规则",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_017",
+      "name": "非洲矿山微电网建设运营挑战及解决方案",
+      "classification": "factual",
+      "path": "output/skus/factual/sku_017",
+      "source_chunk": "报告-三一硅能非洲调研报告：在非洲如何做矿山微电网？_chunk_001",
+      "character_count": 256,
+      "description": "在非洲落地微电网项目面临的物流、施工、运维三类核心挑战及头部企业的应对方案",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_018",
+      "name": "派诺科技马里制药厂微电网项目参数",
+      "classification": "factual",
+      "path": "output/skus/factual/sku_018",
+      "source_chunk": "报告-三一硅能非洲调研报告：在非洲如何做矿山微电网？_chunk_001",
+      "character_count": 286,
+      "description": "派诺科技在西非马里落地的人福药业光储微电网项目的配置、投资、运营成效数据",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_019",
+      "name": "三一硅能非洲微电网业务合作方向",
+      "classification": "factual",
+      "path": "output/skus/factual/sku_019",
+      "source_chunk": "报告-三一硅能非洲调研报告：在非洲如何做矿山微电网？_chunk_001",
+      "character_count": 141,
+      "description": "中国企业可与三一硅能在非洲矿山微电网领域开展合作的三类核心方向",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_020",
+      "name": "三一硅能非洲微电网业务发展战略",
+      "classification": "factual",
+      "path": "output/skus/factual/sku_020",
+      "source_chunk": "报告-三一硅能非洲调研报告：在非洲如何做矿山微电网？_chunk_001",
+      "character_count": 175,
+      "description": "三一硅能布局非洲微电网业务的长期战略定位及延伸价值",
+      "confidence": null
+    },
+    {
+      "sku_id": "skill_007",
+      "name": "african-mine-photovoltaic-storage-diesel-microgrid-scheduling",
+      "classification": "procedural",
+      "path": "output/skus/procedural/skill_007",
+      "source_chunk": "报告-三一硅能非洲调研报告：在非洲如何做矿山微电网？_chunk_001",
+      "character_count": 404,
+      "description": "运营非洲矿山光储柴混合微电网时，用于优化电源调度、降低供电成本、保障供电可靠性",
+      "confidence": null
+    },
+    {
+      "sku_id": "skill_008",
+      "name": "african-mine-microgrid-logistics-risk-prevention",
+      "classification": "procedural",
+      "path": "output/skus/procedural/skill_008",
+      "source_chunk": "报告-三一硅能非洲调研报告：在非洲如何做矿山微电网？_chunk_001",
+      "character_count": 324,
+      "description": "非洲矿山微电网项目实施阶段，用于防控物流清关复杂、路况恶劣导致的项目延期风险",
+      "confidence": null
+    },
+    {
+      "sku_id": "skill_009",
+      "name": "african-mine-microgrid-local-construction-management",
+      "classification": "procedural",
+      "path": "output/skus/procedural/skill_009",
+      "source_chunk": "报告-三一硅能非洲调研报告：在非洲如何做矿山微电网？_chunk_001",
+      "character_count": 279,
+      "description": "非洲矿山微电网项目施工阶段，解决本地工人技能不足问题、保障工程质量时使用",
+      "confidence": null
+    },
+    {
+      "sku_id": "skill_010",
+      "name": "african-remote-mine-microgrid-operation-maintenance",
+      "classification": "procedural",
+      "path": "output/skus/procedural/skill_010",
+      "source_chunk": "报告-三一硅能非洲调研报告：在非洲如何做矿山微电网？_chunk_001",
+      "character_count": 386,
+      "description": "运维非洲偏远地区的矿山微电网，解决运维人员配置不足、故障响应不及时问题时使用",
+      "confidence": null
+    },
+    {
+      "sku_id": "skill_011",
+      "name": "african-mine-microgrid-project-risk-control",
+      "classification": "procedural",
+      "path": "output/skus/procedural/skill_011",
+      "source_chunk": "报告-三一硅能非洲调研报告：在非洲如何做矿山微电网？_chunk_001",
+      "character_count": 326,
+      "description": "投资非洲矿山微电网项目时，用于评估控制地缘、运营、客户履约等各类风险",
+      "confidence": null
+    },
+    {
+      "sku_id": "skill_012",
+      "name": "sany-silicon-energy-african-microgrid-cooperation-process",
+      "classification": "procedural",
+      "path": "output/skus/procedural/skill_012",
+      "source_chunk": "报告-三一硅能非洲调研报告：在非洲如何做矿山微电网？_chunk_001",
+      "character_count": 321,
+      "description": "中国企业寻求与三一硅能开展非洲矿山微电网相关业务合作时使用",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_033",
+      "name": "兆瓦云核心资质与主体背景",
+      "classification": "factual",
+      "path": "output/skus/factual/sku_033",
+      "source_chunk": "报告-兆瓦云调研报告：虚拟电厂的下一城在哪里？_chunk_001",
+      "character_count": 353,
+      "description": "国内头部虚拟电厂运营商北京兆瓦云数据科技有限公司的核心资质、业务规模及股权背景信息",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_034",
+      "name": "兆瓦云核心业务线与支撑平台",
+      "classification": "factual",
+      "path": "output/skus/factual/sku_034",
+      "source_chunk": "报告-兆瓦云调研报告：虚拟电厂的下一城在哪里？_chunk_001",
+      "character_count": 967,
+      "description": "兆瓦云开展虚拟电厂相关业务的两大核心业务线及对应的技术支撑平台功能详情",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_035",
+      "name": "虚拟电厂参与山西调峰辅助服务全流程",
+      "classification": "factual",
+      "path": "output/skus/factual/sku_035",
+      "source_chunk": "报告-兆瓦云调研报告：虚拟电厂的下一城在哪里？_chunk_001",
+      "character_count": 471,
+      "description": "虚拟电厂运营商参与山西省削峰填谷调峰辅助服务市场的完整操作流程与对应规则",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_036",
+      "name": "工业用户参与虚拟电厂调峰服务收益案例",
+      "classification": "factual",
+      "path": "output/skus/factual/sku_036",
+      "source_chunk": "报告-兆瓦云调研报告：虚拟电厂的下一城在哪里？_chunk_001",
+      "character_count": 450,
+      "description": "三家不同行业、规模的工业用户通过参与虚拟电厂调峰辅助服务获得收益的具体运营数据",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_037",
+      "name": "兆瓦云区域虚拟电厂运营成果数据",
+      "classification": "factual",
+      "path": "output/skus/factual/sku_037",
+      "source_chunk": "报告-兆瓦云调研报告：虚拟电厂的下一城在哪里？_chunk_001",
+      "character_count": 499,
+      "description": "兆瓦云在山西、重庆两地落地运营的虚拟电厂项目的核心运营指标与收益数据",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_038",
+      "name": "国内三类虚拟电厂形态特征对比",
+      "classification": "factual",
+      "path": "output/skus/factual/sku_038",
+      "source_chunk": "报告-兆瓦云调研报告：虚拟电厂的下一城在哪里？_chunk_001",
+      "character_count": 580,
+      "description": "国内当前存在的三类不同定位的虚拟电厂的核心业务、发展阶段、市场特点及未来趋势",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_039",
+      "name": "虚拟电厂运营核心挑战",
+      "classification": "factual",
+      "path": "output/skus/factual/sku_039",
+      "source_chunk": "报告-兆瓦云调研报告：虚拟电厂的下一城在哪里？_chunk_001",
+      "character_count": 92,
+      "description": "虚拟电厂业务开展的核心难点相关结论",
+      "confidence": null
+    },
+    {
+      "sku_id": "skill_013",
+      "name": "virtual-power-plant-peaking-service-participation-flow",
+      "classification": "procedural",
+      "path": "output/skus/procedural/skill_013",
+      "source_chunk": "报告-兆瓦云调研报告：虚拟电厂的下一城在哪里？_chunk_001",
+      "character_count": 688,
+      "description": "当虚拟电厂运营商需要参与电网调峰辅助服务市场、组织聚合负荷响应获取收益时使用",
+      "confidence": null
+    },
+    {
+      "sku_id": "skill_014",
+      "name": "vpp-power-regulation-capability-testing-flow",
+      "classification": "procedural",
+      "path": "output/skus/procedural/skill_014",
+      "source_chunk": "报告-兆瓦云调研报告：虚拟电厂的下一城在哪里？_chunk_001",
+      "character_count": 387,
+      "description": "当需要对虚拟电厂运营商的市场准入能力进行验证测试时使用",
+      "confidence": null
+    },
+    {
+      "sku_id": "skill_015",
+      "name": "industrial-user-vpp-demand-response-participation-flow",
+      "classification": "procedural",
+      "path": "output/skus/procedural/skill_015",
+      "source_chunk": "报告-兆瓦云调研报告：虚拟电厂的下一城在哪里？_chunk_001",
+      "character_count": 469,
+      "description": "当工业用户想要接入虚拟电厂参与调峰填谷服务获取收益时使用",
+      "confidence": null
+    },
+    {
+      "sku_id": "skill_016",
+      "name": "power-sales-vpp-spot-market-arbitrage-flow",
+      "classification": "procedural",
+      "path": "output/skus/procedural/skill_016",
+      "source_chunk": "报告-兆瓦云调研报告：虚拟电厂的下一城在哪里？_chunk_001",
+      "character_count": 411,
+      "description": "当售电型虚拟电厂需要利用偏差规则进行现货交易套利、提升收益时使用",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_048",
+      "name": "固德威企业基本情况",
+      "classification": "factual",
+      "path": "output/skus/factual/sku_048",
+      "source_chunk": "报告-固德威一线调研报告：城市级虚拟电厂怎么做？_chunk_001",
+      "character_count": 305,
+      "description": "固德威技术股份有限公司的成立时间、总部位置、行业地位、主营业务及产能布局等核心信息",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_049",
+      "name": "虚拟电厂核心定义与分类",
+      "classification": "factual",
+      "path": "output/skus/factual/sku_049",
+      "source_chunk": "报告-固德威一线调研报告：城市级虚拟电厂怎么做？_chunk_001",
+      "character_count": 300,
+      "description": "虚拟电厂的作用、原理、分类及城市级虚拟电厂的定位与价值",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_050",
+      "name": "广德市能源供需核心数据",
+      "classification": "factual",
+      "path": "output/skus/factual/sku_050",
+      "source_chunk": "报告-固德威一线调研报告：城市级虚拟电厂怎么做？_chunk_001",
+      "character_count": 137,
+      "description": "广德市用电负荷、绿电供需等相关统计数据及特征",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_051",
+      "name": "固德威广德电源型虚拟电厂运作模式",
+      "classification": "factual",
+      "path": "output/skus/factual/sku_051",
+      "source_chunk": "报告-固德威一线调研报告：城市级虚拟电厂怎么做？_chunk_001",
+      "character_count": 417,
+      "description": "固德威与广德地方平台合作打造的电源型虚拟电厂的参与主体、运作流程、盈利逻辑及拓展路径",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_052",
+      "name": "广德市城市级虚拟电厂建设四步规划",
+      "classification": "factual",
+      "path": "output/skus/factual/sku_052",
+      "source_chunk": "报告-固德威一线调研报告：城市级虚拟电厂怎么做？_chunk_001",
+      "character_count": 229,
+      "description": "广德市推进城市级虚拟电厂落地的明确实施步骤",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_053",
+      "name": "地方平台公司建设城市级虚拟电厂的要求与分工",
+      "classification": "factual",
+      "path": "output/skus/factual/sku_053",
+      "source_chunk": "报告-固德威一线调研报告：城市级虚拟电厂怎么做？_chunk_001",
+      "character_count": 222,
+      "description": "地方平台公司推进城市级虚拟电厂建设的难点、优势及与专业合作伙伴的分工模式",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_054",
+      "name": "城市级虚拟电厂行业发展现状",
+      "classification": "factual",
+      "path": "output/skus/factual/sku_054",
+      "source_chunk": "报告-固德威一线调研报告：城市级虚拟电厂怎么做？_chunk_001",
+      "character_count": 224,
+      "description": "国内城市级虚拟电厂的发展阶段、定位及已布局城市范围",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_055",
+      "name": "虚拟电厂未来商业模式发展趋势",
+      "classification": "factual",
+      "path": "output/skus/factual/sku_055",
+      "source_chunk": "报告-固德威一线调研报告：城市级虚拟电厂怎么做？_chunk_001",
+      "character_count": 240,
+      "description": "城市级虚拟电厂未来的运营模式及盈利逻辑发展方向",
+      "confidence": null
+    },
+    {
+      "sku_id": "skill_017",
+      "name": "local-platform-city-level-vpp-construction-workflow",
+      "classification": "procedural",
+      "path": "output/skus/procedural/skill_017",
+      "source_chunk": "报告-固德威一线调研报告：城市级虚拟电厂怎么做？_chunk_001",
+      "character_count": 415,
+      "description": "地方平台公司主导规划建设城市级虚拟电厂时使用",
+      "confidence": null
+    },
+    {
+      "sku_id": "skill_018",
+      "name": "power-source-type-vpp-operation-workflow",
+      "classification": "procedural",
+      "path": "output/skus/procedural/skill_018",
+      "source_chunk": "报告-固德威一线调研报告：城市级虚拟电厂怎么做？_chunk_001",
+      "character_count": 387,
+      "description": "聚合分布式发电资源开展电源型虚拟电厂运营时使用",
+      "confidence": null
+    },
+    {
+      "sku_id": "skill_019",
+      "name": "load-type-vpp-expansion-workflow",
+      "classification": "procedural",
+      "path": "output/skus/procedural/skill_019",
+      "source_chunk": "报告-固德威一线调研报告：城市级虚拟电厂怎么做？_chunk_001",
+      "character_count": 303,
+      "description": "电源型虚拟电厂标杆项目跑通后拓展负荷侧虚拟电厂时使用",
+      "confidence": null
+    },
+    {
+      "sku_id": "skill_020",
+      "name": "cooperation-with-local-energy-platform-workflow",
+      "classification": "procedural",
+      "path": "output/skus/procedural/skill_020",
+      "source_chunk": "报告-固德威一线调研报告：城市级虚拟电厂怎么做？_chunk_001",
+      "character_count": 386,
+      "description": "企业寻求与地方能源平台公司合作开展虚拟电厂相关业务时使用",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_040",
+      "name": "微电网基本概念、分类及核心功能",
+      "classification": "factual",
+      "path": "output/skus/factual/sku_040",
+      "source_chunk": "报告-则鸣新能源调研报告：怎么样做好微电网？_chunk_001",
+      "character_count": 230,
+      "description": "微电网的定义、分类类型及不同类型对应的核心应用场景与价值",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_041",
+      "name": "则鸣新能源基本概况及业务布局",
+      "classification": "factual",
+      "path": "output/skus/factual/sku_041",
+      "source_chunk": "报告-则鸣新能源调研报告：怎么样做好微电网？_chunk_001",
+      "character_count": 344,
+      "description": "则鸣新能源的企业属性、发展历程、核心产品及服务覆盖情况",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_042",
+      "name": "微电网核心技术点及云边协同控制逻辑",
+      "classification": "factual",
+      "path": "output/skus/factual/sku_042",
+      "source_chunk": "报告-则鸣新能源调研报告：怎么样做好微电网？_chunk_001",
+      "character_count": 246,
+      "description": "微电网建设运营的核心技术环节及云边协同的运行控制规则",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_043",
+      "name": "园区交直流混合微电网项目参数",
+      "classification": "factual",
+      "path": "output/skus/factual/sku_043",
+      "source_chunk": "报告-则鸣新能源调研报告：怎么样做好微电网？_chunk_001",
+      "character_count": 848,
+      "description": "则鸣新能源服务的园区光储直柔微电网项目的建设目标、硬件配置、设计规则及运行效果数据",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_044",
+      "name": "莫桑比克离网微电网项目参数",
+      "classification": "factual",
+      "path": "output/skus/factual/sku_044",
+      "source_chunk": "报告-则鸣新能源调研报告：怎么样做好微电网？_chunk_001",
+      "character_count": 372,
+      "description": "则鸣新能源提供方案设计的非洲莫桑比克矿区离网微电网项目的建设背景、参与方、系统配置及运行规则",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_045",
+      "name": "离网微电网项目投入收益对比数据",
+      "classification": "factual",
+      "path": "output/skus/factual/sku_045",
+      "source_chunk": "报告-则鸣新能源调研报告：怎么样做好微电网？_chunk_001",
+      "character_count": 344,
+      "description": "莫桑比克离网微电网项目投运前后，矿区业主用能成本及开发商收益的全周期对比数据",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_046",
+      "name": "微电网建设运营核心挑战及能力要求",
+      "classification": "factual",
+      "path": "output/skus/factual/sku_046",
+      "source_chunk": "报告-则鸣新能源调研报告：怎么样做好微电网？_chunk_001",
+      "character_count": 221,
+      "description": "微电网建设运营的常见误区、核心挑战及所需核心能力",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_047",
+      "name": "则鸣新能源微电网差异化竞争策略",
+      "classification": "factual",
+      "path": "output/skus/factual/sku_047",
+      "source_chunk": "报告-则鸣新能源调研报告：怎么样做好微电网？_chunk_001",
+      "character_count": 204,
+      "description": "则鸣新能源针对微电网市场同质化竞争采取的精细化运营策略及核心竞争壁垒",
+      "confidence": null
+    },
+    {
+      "sku_id": "skill_021",
+      "name": "dc-supply-voltage-level-design-procedure",
+      "classification": "procedural",
+      "path": "output/skus/procedural/skill_021",
+      "source_chunk": "报告-则鸣新能源调研报告：怎么样做好微电网？_chunk_001",
+      "character_count": 337,
+      "description": "适用于微电网项目设计阶段，确定直流供电电压等级时使用",
+      "confidence": null
+    },
+    {
+      "sku_id": "skill_022",
+      "name": "microgrid-main-line-structure-selection-procedure",
+      "classification": "procedural",
+      "path": "output/skus/procedural/skill_022",
+      "source_chunk": "报告-则鸣新能源调研报告：怎么样做好微电网？_chunk_001",
+      "character_count": 304,
+      "description": "适用于直流微电网设计阶段，选择能量传输主线结构时使用",
+      "confidence": null
+    },
+    {
+      "sku_id": "skill_023",
+      "name": "microgrid-networking-structure-selection-procedure",
+      "classification": "procedural",
+      "path": "output/skus/procedural/skill_023",
+      "source_chunk": "报告-则鸣新能源调研报告：怎么样做好微电网？_chunk_001",
+      "character_count": 331,
+      "description": "适用于微电网设计阶段，确定微电网单元组网连接方式时使用",
+      "confidence": null
+    },
+    {
+      "sku_id": "skill_024",
+      "name": "off-grid-microgrid-storage-operation-strategy-formulation",
+      "classification": "procedural",
+      "path": "output/skus/procedural/skill_024",
+      "source_chunk": "报告-则鸣新能源调研报告：怎么样做好微电网？_chunk_001",
+      "character_count": 362,
+      "description": "适用于需连续稳定供电的离网型微电网，制定储能运行策略时使用",
+      "confidence": null
+    },
+    {
+      "sku_id": "skill_025",
+      "name": "microgrid-differentiated-refined-service-implementation",
+      "classification": "procedural",
+      "path": "output/skus/procedural/skill_025",
+      "source_chunk": "报告-则鸣新能源调研报告：怎么样做好微电网？_chunk_001",
+      "character_count": 354,
+      "description": "适用于微电网服务商打造差异化竞争力，服务个性化需求场景时使用",
+      "confidence": null
+    },
+    {
+      "sku_id": "skill_026",
+      "name": "low-efficiency-microgrid-optimization-reconstruction-procedure",
+      "classification": "procedural",
+      "path": "output/skus/procedural/skill_026",
+      "source_chunk": "报告-则鸣新能源调研报告：怎么样做好微电网？_chunk_001",
+      "character_count": 384,
+      "description": "适用于已建成但运行效率低、资源浪费的微电网的优化改造工作",
+      "confidence": null
+    },
+    {
+      "sku_id": "skill_027",
+      "name": "ac-dc-hybrid-microgrid-design-procedure",
+      "classification": "procedural",
+      "path": "output/skus/procedural/skill_027",
+      "source_chunk": "报告-则鸣新能源调研报告：怎么样做好微电网？_chunk_001",
+      "character_count": 415,
+      "description": "适用于有绿电消纳、降本减碳需求的园区、建筑的微电网方案设计",
+      "confidence": null
+    },
+    {
+      "sku_id": "skill_028",
+      "name": "remote-industrial-off-grid-microgrid-planning-procedure",
+      "classification": "procedural",
+      "path": "output/skus/procedural/skill_028",
+      "source_chunk": "报告-则鸣新能源调研报告：怎么样做好微电网？_chunk_001",
+      "character_count": 351,
+      "description": "适用于无大电网覆盖的偏远工矿区的离网型微电网规划设计",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_056",
+      "name": "协鑫虚拟电厂基本概况",
+      "classification": "factual",
+      "path": "output/skus/factual/sku_056",
+      "source_chunk": "报告-协鑫能科调研报告：江苏最大虚拟电厂是怎么做成的？_chunk_001",
+      "character_count": 384,
+      "description": "协鑫能科运营的江苏最大规模虚拟电厂的核心参数、发展历程、业务类型等基础信息",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_057",
+      "name": "虚拟电厂填谷辅助服务定义及价值",
+      "classification": "factual",
+      "path": "output/skus/factual/sku_057",
+      "source_chunk": "报告-协鑫能科调研报告：江苏最大虚拟电厂是怎么做成的？_chunk_001",
+      "character_count": 172,
+      "description": "虚拟电厂填谷辅助服务的定义、应用场景及核心价值",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_058",
+      "name": "虚拟电厂基线负荷定义及计算规则",
+      "classification": "factual",
+      "path": "output/skus/factual/sku_058",
+      "source_chunk": "报告-协鑫能科调研报告：江苏最大虚拟电厂是怎么做成的？_chunk_001",
+      "character_count": 162,
+      "description": "虚拟电厂响应调节量核算核心依据基线负荷的定义及常见计算规则",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_059",
+      "name": "协鑫虚拟电厂填谷辅助服务典型运营流程",
+      "classification": "factual",
+      "path": "output/skus/factual/sku_059",
+      "source_chunk": "报告-协鑫能科调研报告：江苏最大虚拟电厂是怎么做成的？_chunk_001",
+      "character_count": 256,
+      "description": "协鑫虚拟电厂组织负荷资源参与电网填谷辅助服务的全流程操作步骤",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_060",
+      "name": "协鑫虚拟电厂用户识别编码规则",
+      "classification": "factual",
+      "path": "output/skus/factual/sku_060",
+      "source_chunk": "报告-协鑫能科调研报告：江苏最大虚拟电厂是怎么做成的？_chunk_001",
+      "character_count": 584,
+      "description": "协鑫虚拟电厂为接入平台的用户设置的19位唯一识别码的编码规则及各字段含义",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_061",
+      "name": "协鑫虚拟电厂设备识别编码规则",
+      "classification": "factual",
+      "path": "output/skus/factual/sku_061",
+      "source_chunk": "报告-协鑫能科调研报告：江苏最大虚拟电厂是怎么做成的？_chunk_001",
+      "character_count": 572,
+      "description": "协鑫虚拟电厂为接入平台的可调资源设备设置的12位唯一识别码的编码规则及各字段含义",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_062",
+      "name": "协鑫虚拟电厂核心建设支撑能力",
+      "classification": "factual",
+      "path": "output/skus/factual/sku_062",
+      "source_chunk": "报告-协鑫能科调研报告：江苏最大虚拟电厂是怎么做成的？_chunk_001",
+      "character_count": 281,
+      "description": "协鑫虚拟电厂实现规模领先的核心技术平台及能力基础",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_063",
+      "name": "协鑫虚拟电厂盈利模式及典型收益案例",
+      "classification": "factual",
+      "path": "output/skus/factual/sku_063",
+      "source_chunk": "报告-协鑫能科调研报告：江苏最大虚拟电厂是怎么做成的？_chunk_001",
+      "character_count": 765,
+      "description": "协鑫虚拟电厂的收入来源、盈利逻辑及典型项目的收益测算数据",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_064",
+      "name": "江苏虚拟电厂发展相关基础数据",
+      "classification": "factual",
+      "path": "output/skus/factual/sku_064",
+      "source_chunk": "报告-协鑫能科调研报告：江苏最大虚拟电厂是怎么做成的？_chunk_001",
+      "character_count": 189,
+      "description": "江苏省虚拟电厂发展的行业背景、电力系统相关核心参数",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_065",
+      "name": "协鑫能科核心业务基础数据",
+      "classification": "factual",
+      "path": "output/skus/factual/sku_065",
+      "source_chunk": "报告-协鑫能科调研报告：江苏最大虚拟电厂是怎么做成的？_chunk_001",
+      "character_count": 249,
+      "description": "协鑫能科支撑虚拟电厂业务发展的原有业务布局及规模参数",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_066",
+      "name": "虚拟电厂行业核心挑战及发展建议",
+      "classification": "factual",
+      "path": "output/skus/factual/sku_066",
+      "source_chunk": "报告-协鑫能科调研报告：江苏最大虚拟电厂是怎么做成的？_chunk_001",
+      "character_count": 319,
+      "description": "当前虚拟电厂行业发展面临的核心挑战及落地发展的参考方向",
+      "confidence": null
+    },
+    {
+      "sku_id": "skill_029",
+      "name": "load-enterprise-access-virtual-power-plant-process",
+      "classification": "procedural",
+      "path": "output/skus/procedural/skill_029",
+      "source_chunk": "报告-协鑫能科调研报告：江苏最大虚拟电厂是怎么做成的？_chunk_001",
+      "character_count": 398,
+      "description": "当需要将用电企业的可调负荷资源接入虚拟电厂平台时使用",
+      "confidence": null
+    },
+    {
+      "sku_id": "skill_030",
+      "name": "virtual-power-plant-participate-in-valley-filling-service-proces",
+      "classification": "procedural",
+      "path": "output/skus/procedural/skill_030",
+      "source_chunk": "报告-协鑫能科调研报告：江苏最大虚拟电厂是怎么做成的？_chunk_001",
+      "character_count": 624,
+      "description": "当收到电网调度机构发布的填谷需求时，组织负荷资源参与服务的全流程",
+      "confidence": null
+    },
+    {
+      "sku_id": "skill_031",
+      "name": "virtual-power-plant-resource-coding-system-construction-process",
+      "classification": "procedural",
+      "path": "output/skus/procedural/skill_031",
+      "source_chunk": "报告-协鑫能科调研报告：江苏最大虚拟电厂是怎么做成的？_chunk_001",
+      "character_count": 714,
+      "description": "当需要对接入虚拟电厂的用户、可调设备进行标准化分类管理时使用",
+      "confidence": null
+    },
+    {
+      "sku_id": "skill_032",
+      "name": "industrial-enterprise-participate-vpp-profit-operation-process",
+      "classification": "procedural",
+      "path": "output/skus/procedural/skill_032",
+      "source_chunk": "报告-协鑫能科调研报告：江苏最大虚拟电厂是怎么做成的？_chunk_001",
+      "character_count": 498,
+      "description": "当已部署光储充系统的工业企业希望通过参与虚拟电厂获得额外收益时使用",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_067",
+      "name": "德安重卡光储充示范项目基本参数",
+      "classification": "factual",
+      "path": "output/skus/factual/sku_067",
+      "source_chunk": "报告-固德威江西德安县调研报告：光储充一体化项目怎么做？_chunk_001",
+      "character_count": 433,
+      "description": "由江西六能新能源集团投资、固德威提供整体解决方案的江西省德安县零碳产业园重卡光储充一体化标杆项目的核心配置信息",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_068",
+      "name": "重卡光储充项目基础用能策略",
+      "classification": "factual",
+      "path": "output/skus/factual/sku_068",
+      "source_chunk": "报告-固德威江西德安县调研报告：光储充一体化项目怎么做？_chunk_001",
+      "character_count": 107,
+      "description": "德安重卡光储充项目采用的优先用能规则及储能附加功能设定",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_069",
+      "name": "光储充项目智慧能源管理系统架构",
+      "classification": "factual",
+      "path": "output/skus/factual/sku_069",
+      "source_chunk": "报告-固德威江西德安县调研报告：光储充一体化项目怎么做？_chunk_001",
+      "character_count": 199,
+      "description": "德安重卡光储充项目用于实现光储协同的智慧能源管理系统的软硬件组成及各模块功能定位",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_070",
+      "name": "光储充项目柔性防逆流实现机制",
+      "classification": "factual",
+      "path": "output/skus/factual/sku_070",
+      "source_chunk": "报告-固德威江西德安县调研报告：光储充一体化项目怎么做？_chunk_001",
+      "character_count": 343,
+      "description": "位于光伏红区的德安光储充项目采用的余电不上网柔性防逆流技术的实现流程、风险应对方案及相对传统方案的优势",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_071",
+      "name": "德安光储充项目分时段运营策略",
+      "classification": "factual",
+      "path": "output/skus/factual/sku_071",
+      "source_chunk": "报告-固德威江西德安县调研报告：光储充一体化项目怎么做？_chunk_001",
+      "character_count": 431,
+      "description": "德安重卡光储充项目结合江西电网峰谷平电价制定的分时段充放电运营策略，及后续光伏扩容后的调整方案",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_072",
+      "name": "光储充项目度电盈亏平衡点计算方法及案例数据",
+      "classification": "factual",
+      "path": "output/skus/factual/sku_072",
+      "source_chunk": "报告-固德威江西德安县调研报告：光储充一体化项目怎么做？_chunk_001",
+      "character_count": 315,
+      "description": "重卡光储充项目度电盈亏平衡点的计算逻辑，及基于德安项目7天运营数据的测算结果",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_073",
+      "name": "光储充一体化项目实施核心门槛",
+      "classification": "factual",
+      "path": "output/skus/factual/sku_073",
+      "source_chunk": "报告-固德威江西德安县调研报告：光储充一体化项目怎么做？_chunk_001",
+      "character_count": 113,
+      "description": "重卡光储充一体化项目落地过程中对解决方案服务商的核心能力要求",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_074",
+      "name": "地方平台公司新能源业务转型方向",
+      "classification": "factual",
+      "path": "output/skus/factual/sku_074",
+      "source_chunk": "报告-固德威江西德安县调研报告：光储充一体化项目怎么做？_chunk_001",
+      "character_count": 215,
+      "description": "电力市场化背景下地方平台公司开展新能源业务的核心转型路径及价值提升方法",
+      "confidence": null
+    },
+    {
+      "sku_id": "skill_033",
+      "name": "flexible-anti-backflow-implementation-process",
+      "classification": "procedural",
+      "path": "output/skus/procedural/skill_033",
+      "source_chunk": "报告-固德威江西德安县调研报告：光储充一体化项目怎么做？_chunk_001",
+      "character_count": 458,
+      "description": "零碳园区光储充项目需要实现光伏余电不上网、防止电力反送电网时使用",
+      "confidence": null
+    },
+    {
+      "sku_id": "skill_034",
+      "name": "smart-energy-system-for-optical-storage-collaboration",
+      "classification": "procedural",
+      "path": "output/skus/procedural/skill_034",
+      "source_chunk": "报告-固德威江西德安县调研报告：光储充一体化项目怎么做？_chunk_001",
+      "character_count": 401,
+      "description": "光储充项目需要实现光储设备协同运行、全环节数据统一监测时使用",
+      "confidence": null
+    },
+    {
+      "sku_id": "skill_035",
+      "name": "optical-storage-charging-station-operation-strategy-formulation",
+      "classification": "procedural",
+      "path": "output/skus/procedural/skill_035",
+      "source_chunk": "报告-固德威江西德安县调研报告：光储充一体化项目怎么做？_chunk_001",
+      "character_count": 496,
+      "description": "重卡光储充项目建成后制定充放电运营策略、提升项目收益时使用",
+      "confidence": null
+    },
+    {
+      "sku_id": "skill_036",
+      "name": "optical-storage-charging-station-break-even-point-calculation",
+      "classification": "procedural",
+      "path": "output/skus/procedural/skill_036",
+      "source_chunk": "报告-固德威江西德安县调研报告：光储充一体化项目怎么做？_chunk_001",
+      "character_count": 369,
+      "description": "光储充项目制定与用能企业的结算电价、评估盈利空间时使用",
+      "confidence": null
+    },
+    {
+      "sku_id": "skill_037",
+      "name": "multi-stakeholder-optical-storage-charging-project-implementatio",
+      "classification": "procedural",
+      "path": "output/skus/procedural/skill_037",
+      "source_chunk": "报告-固德威江西德安县调研报告：光储充一体化项目怎么做？_chunk_001",
+      "character_count": 381,
+      "description": "多参与方、多设备供应商的光储充一体化项目落地实施时使用",
+      "confidence": null
+    },
+    {
+      "sku_id": "skill_038",
+      "name": "local-platform-company-new-energy-operation-optimization",
+      "classification": "procedural",
+      "path": "output/skus/procedural/skill_038",
+      "source_chunk": "报告-固德威江西德安县调研报告：光储充一体化项目怎么做？_chunk_001",
+      "character_count": 360,
+      "description": "地方平台公司开展新能源投资、应对电力市场化发展挑战时使用",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_075",
+      "name": "国海绿能企业基本信息",
+      "classification": "factual",
+      "path": "output/skus/factual/sku_075",
+      "source_chunk": "报告-国海绿能一线调研报告：重卡换电站怎么做？_chunk_001",
+      "character_count": 470,
+      "description": "国海绿能的成立时间、业务范围、技术能力、产业布局、合作伙伴及交付情况等核心属性",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_076",
+      "name": "重卡换电站核心参数及型号说明",
+      "classification": "factual",
+      "path": "output/skus/factual/sku_076",
+      "source_chunk": "报告-国海绿能一线调研报告：重卡换电站怎么做？_chunk_001",
+      "character_count": 482,
+      "description": "不同配置重卡换电站的结构、运营能力、技术参数等指标",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_077",
+      "name": "电动重卡与柴油重卡经济性对比",
+      "classification": "factual",
+      "path": "output/skus/factual/sku_077",
+      "source_chunk": "报告-国海绿能一线调研报告：重卡换电站怎么做？_chunk_001",
+      "character_count": 257,
+      "description": "相同运营场景下电动重卡与传统柴油重卡的成本、收益及投资回收周期对比",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_078",
+      "name": "重卡换电站投资收益测算标准",
+      "classification": "factual",
+      "path": "output/skus/factual/sku_078",
+      "source_chunk": "报告-国海绿能一线调研报告：重卡换电站怎么做？_chunk_001",
+      "character_count": 318,
+      "description": "重卡换电站的初始投资构成、运营成本、盈利模式及投资回收周期测算规则",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_079",
+      "name": "重卡换电领域四类合作模式",
+      "classification": "factual",
+      "path": "output/skus/factual/sku_079",
+      "source_chunk": "报告-国海绿能一线调研报告：重卡换电站怎么做？_chunk_001",
+      "character_count": 265,
+      "description": "国海绿能推出的四类重卡换电站合作模式及对应适用场景",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_080",
+      "name": "2024年中国重卡市场销量结构数据",
+      "classification": "factual",
+      "path": "output/skus/factual/sku_080",
+      "source_chunk": "报告-国海绿能一线调研报告：重卡换电站怎么做？_chunk_001",
+      "character_count": 157,
+      "description": "2024年中国重卡整体、新能源、电动、换电重卡的销量及同比增速情况",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_081",
+      "name": "重卡换电行业发展特征及前景",
+      "classification": "factual",
+      "path": "output/skus/factual/sku_081",
+      "source_chunk": "报告-国海绿能一线调研报告：重卡换电站怎么做？_chunk_001",
+      "character_count": 268,
+      "description": "重卡换电行业的驱动因素、适用场景、未来发展方向及产业价值",
+      "confidence": null
+    },
+    {
+      "sku_id": "skill_039",
+      "name": "heavy-duty-truck-swap-station-feasibility-analysis",
+      "classification": "procedural",
+      "path": "output/skus/procedural/skill_039",
+      "source_chunk": "报告-国海绿能一线调研报告：重卡换电站怎么做？_chunk_001",
+      "character_count": 388,
+      "description": "当需要判断目标客户车队是否适合投资建设重卡换电站时使用",
+      "confidence": null
+    },
+    {
+      "sku_id": "skill_040",
+      "name": "heavy-duty-truck-swap-station-return-calculation",
+      "classification": "procedural",
+      "path": "output/skus/procedural/skill_040",
+      "source_chunk": "报告-国海绿能一线调研报告：重卡换电站怎么做？_chunk_001",
+      "character_count": 448,
+      "description": "当需要测算重卡换电站的投资收益、回本周期，评估项目盈利性时使用",
+      "confidence": null
+    },
+    {
+      "sku_id": "skill_041",
+      "name": "heavy-duty-truck-swap-business-cooperation-selection",
+      "classification": "procedural",
+      "path": "output/skus/procedural/skill_041",
+      "source_chunk": "报告-国海绿能一线调研报告：重卡换电站怎么做？_chunk_001",
+      "character_count": 406,
+      "description": "当需要选择适配的重卡换电业务合作模式入局该领域时使用",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_082",
+      "name": "北京奇峰聚能科技有限公司基本信息",
+      "classification": "factual",
+      "path": "output/skus/factual/sku_082",
+      "source_chunk": "报告-奇峰聚能调研报告：飞轮储能怎么做？_chunk_001",
+      "character_count": 425,
+      "description": "专注于飞轮储能业务的高科技企业的核心资质、产能、技术能力等基础信息",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_083",
+      "name": "飞轮储能技术核心定义与性能参数",
+      "classification": "factual",
+      "path": "output/skus/factual/sku_083",
+      "source_chunk": "报告-奇峰聚能调研报告：飞轮储能怎么做？_chunk_001",
+      "character_count": 286,
+      "description": "飞轮储能的技术来源、工作原理、核心部件及核心性能参数指标",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_084",
+      "name": "飞轮储能与其他技术性能对比及适用场景",
+      "classification": "factual",
+      "path": "output/skus/factual/sku_084",
+      "source_chunk": "报告-奇峰聚能调研报告：飞轮储能怎么做？_chunk_001",
+      "character_count": 299,
+      "description": "飞轮储能相比其他储能、火电调频技术的性能差异，以及适配的应用场景",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_085",
+      "name": "电网调频分类及核心特征",
+      "classification": "factual",
+      "path": "output/skus/factual/sku_085",
+      "source_chunk": "报告-奇峰聚能调研报告：飞轮储能怎么做？_chunk_001",
+      "character_count": 197,
+      "description": "电网调频的作用、分类标准，以及一次调频、二次调频的核心特征差异",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_086",
+      "name": "火电厂配套飞轮储能一次调频项目收益测算",
+      "classification": "factual",
+      "path": "output/skus/factual/sku_086",
+      "source_chunk": "报告-奇峰聚能调研报告：飞轮储能怎么做？_chunk_001",
+      "character_count": 363,
+      "description": "百万千瓦火电机组配套飞轮储能开展一次调频的投资、改造效果及收益情况",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_087",
+      "name": "山西省独立储能电站参与一次调频市场交易流程",
+      "classification": "factual",
+      "path": "output/skus/factual/sku_087",
+      "source_chunk": "报告-奇峰聚能调研报告：飞轮储能怎么做？_chunk_001",
+      "character_count": 308,
+      "description": "山西省出台的独立储能电站参与一次调频市场的全流程规则要求",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_088",
+      "name": "山西省100MW飞轮锂电混合储能调频电站收益测算",
+      "classification": "factual",
+      "path": "output/skus/factual/sku_088",
+      "source_chunk": "报告-奇峰聚能调研报告：飞轮储能怎么做？_chunk_001",
+      "character_count": 349,
+      "description": "包含50MW飞轮、50MW锂电的山西独立储能调频电站的总投资、收益构成及投资回收情况",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_089",
+      "name": "飞轮储能行业发展限制因素与市场前景",
+      "classification": "factual",
+      "path": "output/skus/factual/sku_089",
+      "source_chunk": "报告-奇峰聚能调研报告：飞轮储能怎么做？_chunk_001",
+      "character_count": 295,
+      "description": "当前飞轮储能商业化推广的限制因素，以及未来市场增长的核心驱动逻辑",
+      "confidence": null
+    },
+    {
+      "sku_id": "skill_042",
+      "name": "independent-energy-station-primary-frequency-regulation-particip",
+      "classification": "procedural",
+      "path": "output/skus/procedural/skill_042",
+      "source_chunk": "报告-奇峰聚能调研报告：飞轮储能怎么做？_chunk_001",
+      "character_count": 560,
+      "description": "当独立储能电站需要参与山西电网一次调频市场交易获取收益时使用",
+      "confidence": null
+    },
+    {
+      "sku_id": "skill_043",
+      "name": "flywheel-energy-storage-investment-opportunity-screening",
+      "classification": "procedural",
+      "path": "output/skus/procedural/skill_043",
+      "source_chunk": "报告-奇峰聚能调研报告：飞轮储能怎么做？_chunk_001",
+      "character_count": 493,
+      "description": "当需要筛选飞轮储能项目投资落地机会时使用",
+      "confidence": null
+    },
+    {
+      "sku_id": "skill_044",
+      "name": "thermal-power-plant-flywheel-freq-regulation-benefit-calculation",
+      "classification": "procedural",
+      "path": "output/skus/procedural/skill_044",
+      "source_chunk": "报告-奇峰聚能调研报告：飞轮储能怎么做？_chunk_001",
+      "character_count": 493,
+      "description": "当需要测算火电厂部署飞轮储能参与调频的投资收益时使用",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_090",
+      "name": "综合能源服务核心定义与特征",
+      "classification": "factual",
+      "path": "output/skus/factual/sku_090",
+      "source_chunk": "报告-安悦节能调研报告：怎样做冷热电综合能源服务？_chunk_001",
+      "character_count": 221,
+      "description": "明确综合能源服务与传统能源服务的差异、内涵范围及核心目标",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_091",
+      "name": "山东安悦节能技术有限公司基本信息",
+      "classification": "factual",
+      "path": "output/skus/factual/sku_091",
+      "source_chunk": "报告-安悦节能调研报告：怎样做冷热电综合能源服务？_chunk_001",
+      "character_count": 243,
+      "description": "介绍山东安悦节能的发展背景、业务范围及核心竞争优势",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_092",
+      "name": "主流节能降碳技术方案",
+      "classification": "factual",
+      "path": "output/skus/factual/sku_092",
+      "source_chunk": "报告-安悦节能调研报告：怎样做冷热电综合能源服务？_chunk_001",
+      "character_count": 789,
+      "description": "汇总光伏、风电之外的通用节能降碳技术的原理、效率及应用场景",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_093",
+      "name": "济南制造外企综合能源服务项目数据",
+      "classification": "factual",
+      "path": "output/skus/factual/sku_093",
+      "source_chunk": "报告-安悦节能调研报告：怎样做冷热电综合能源服务？_chunk_001",
+      "character_count": 1177,
+      "description": "安悦节能为济南某净零排放目标制造外企落地的综合能源服务项目的配置、参数及运行效果数据",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_094",
+      "name": "综合能源服务企业运营核心原则",
+      "classification": "factual",
+      "path": "output/skus/factual/sku_094",
+      "source_chunk": "报告-安悦节能调研报告：怎样做冷热电综合能源服务？_chunk_001",
+      "character_count": 418,
+      "description": "总结综合能源服务企业实现盈利、长期发展的三大核心原则",
+      "confidence": null
+    },
+    {
+      "sku_id": "skill_045",
+      "name": "industrial-waste-heat-technology-selection-process",
+      "classification": "procedural",
+      "path": "output/skus/procedural/skill_045",
+      "source_chunk": "报告-安悦节能调研报告：怎样做冷热电综合能源服务？_chunk_001",
+      "character_count": 501,
+      "description": "当需要对工业企业排放的余热资源进行回收利用时，根据余热温度等级匹配适配技术时使用",
+      "confidence": null
+    },
+    {
+      "sku_id": "skill_046",
+      "name": "solar-thermal-storage-coperative-operation-process",
+      "classification": "procedural",
+      "path": "output/skus/procedural/skill_046",
+      "source_chunk": "报告-安悦节能调研报告：怎样做冷热电综合能源服务？_chunk_001",
+      "character_count": 534,
+      "description": "当采用太阳能制热、谷电加热、固体储热组合方案为工业生产提供热源时使用",
+      "confidence": null
+    },
+    {
+      "sku_id": "skill_047",
+      "name": "industrial-integrated-energy-solution-design-process",
+      "classification": "procedural",
+      "path": "output/skus/procedural/skill_047",
+      "source_chunk": "报告-安悦节能调研报告：怎样做冷热电综合能源服务？_chunk_001",
+      "character_count": 376,
+      "description": "当为工业企业设计冷热电一体化综合能源服务整体解决方案时使用",
+      "confidence": null
+    },
+    {
+      "sku_id": "skill_048",
+      "name": "office-building-ground-source-heat-pump-scheme-design",
+      "classification": "procedural",
+      "path": "output/skus/procedural/skill_048",
+      "source_chunk": "报告-安悦节能调研报告：怎样做冷热电综合能源服务？_chunk_001",
+      "character_count": 348,
+      "description": "当为厂区/园区办公楼设计供冷供热替代方案，降低传统供能碳排放时使用",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_095",
+      "name": "西安广林汇智能源科技有限公司基本信息",
+      "classification": "factual",
+      "path": "output/skus/factual/sku_095",
+      "source_chunk": "报告-广林汇智调研报告：在西北地区怎么做虚拟电厂？_chunk_001",
+      "character_count": 589,
+      "description": "我国虚拟电厂领域核心企业广林汇智的发展历程、核心资源、业务规模及特色信息",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_096",
+      "name": "西北地区发展负荷型虚拟电厂的核心基础条件",
+      "classification": "factual",
+      "path": "output/skus/factual/sku_096",
+      "source_chunk": "报告-广林汇智调研报告：在西北地区怎么做虚拟电厂？_chunk_001",
+      "character_count": 324,
+      "description": "支撑西北地区落地发展负荷型虚拟电厂的两大核心前提及背后逻辑说明",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_097",
+      "name": "虚拟电厂代际划分及盈利模式",
+      "classification": "factual",
+      "path": "output/skus/factual/sku_097",
+      "source_chunk": "报告-广林汇智调研报告：在西北地区怎么做虚拟电厂？_chunk_001",
+      "character_count": 112,
+      "description": "行业通用的三代虚拟电厂划分标准、各代核心特征及盈利模式差异",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_098",
+      "name": "邀约型虚拟电厂调峰辅助服务参与流程",
+      "classification": "factual",
+      "path": "output/skus/factual/sku_098",
+      "source_chunk": "报告-广林汇智调研报告：在西北地区怎么做虚拟电厂？_chunk_001",
+      "character_count": 229,
+      "description": "负荷型邀约虚拟电厂参与电网调峰辅助服务的完整操作步骤",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_099",
+      "name": "调峰辅助服务收益测算规则",
+      "classification": "factual",
+      "path": "output/skus/factual/sku_099",
+      "source_chunk": "报告-广林汇智调研报告：在西北地区怎么做虚拟电厂？_chunk_001",
+      "character_count": 484,
+      "description": "虚拟电厂及参与调峰的负荷企业参与调峰辅助服务的收益计算方法、参考水平及案例",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_100",
+      "name": "调峰辅助服务与需求侧响应的核心差异",
+      "classification": "factual",
+      "path": "output/skus/factual/sku_100",
+      "source_chunk": "报告-广林汇智调研报告：在西北地区怎么做虚拟电厂？_chunk_001",
+      "character_count": 279,
+      "description": "邀约型虚拟电厂两种核心盈利模式的管理主体、核心目标、覆盖范围等维度的差异对比",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_101",
+      "name": "第二代市场型虚拟电厂运行逻辑及发展政策背景",
+      "classification": "factual",
+      "path": "output/skus/factual/sku_101",
+      "source_chunk": "报告-广林汇智调研报告：在西北地区怎么做虚拟电厂？_chunk_001",
+      "character_count": 273,
+      "description": "第二代虚拟电厂参与电力现货市场的盈利逻辑、成本优势及推动其转型的政策要求",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_102",
+      "name": "负荷型虚拟电厂聚合高耗能企业的核心实施要点",
+      "classification": "factual",
+      "path": "output/skus/factual/sku_102",
+      "source_chunk": "报告-广林汇智调研报告：在西北地区怎么做虚拟电厂？_chunk_001",
+      "character_count": 222,
+      "description": "广林汇智聚合800余家高耗能负荷企业的核心落地经验总结",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_103",
+      "name": "虚拟电厂的行业价值及长期发展趋势",
+      "classification": "factual",
+      "path": "output/skus/factual/sku_103",
+      "source_chunk": "报告-广林汇智调研报告：在西北地区怎么做虚拟电厂？_chunk_001",
+      "character_count": 202,
+      "description": "虚拟电厂对能源产业的核心价值及未来发展定位判断",
+      "confidence": null
+    },
+    {
+      "sku_id": "skill_049",
+      "name": "virtual-power-plant-peak-regulation-participation-workflow",
+      "classification": "procedural",
+      "path": "output/skus/procedural/skill_049",
+      "source_chunk": "报告-广林汇智调研报告：在西北地区怎么做虚拟电厂？_chunk_001",
+      "character_count": 572,
+      "description": "当作为负荷型虚拟电厂运营商，需要参与电网调峰辅助服务获取收益时使用",
+      "confidence": null
+    },
+    {
+      "sku_id": "skill_050",
+      "name": "second-gen-vpp-day-ahead-spot-market-trading-workflow",
+      "classification": "procedural",
+      "path": "output/skus/procedural/skill_050",
+      "source_chunk": "报告-广林汇智调研报告：在西北地区怎么做虚拟电厂？_chunk_001",
+      "character_count": 423,
+      "description": "当运营第二代市场型虚拟电厂，需要参与电力现货交易降低用电成本获取收益时使用",
+      "confidence": null
+    },
+    {
+      "sku_id": "skill_051",
+      "name": "load-type-vpp-high-energy-enterprise-aggregation-workflow",
+      "classification": "procedural",
+      "path": "output/skus/procedural/skill_051",
+      "source_chunk": "报告-广林汇智调研报告：在西北地区怎么做虚拟电厂？_chunk_001",
+      "character_count": 418,
+      "description": "当负荷型虚拟电厂需要拓展聚合的高耗能企业资源，扩大调节规模时使用",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_104",
+      "name": "空调虚拟电厂核心资源特征",
+      "classification": "factual",
+      "path": "output/skus/factual/sku_104",
+      "source_chunk": "报告-恒实盛景调研报告：怎样做空调虚拟电厂？_chunk_001",
+      "character_count": 328,
+      "description": "明确空调负荷可作为虚拟电厂理想建设资源的两大核心特征及对应支撑依据",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_105",
+      "name": "恒实盛景空调虚拟电厂运营模式",
+      "classification": "factual",
+      "path": "output/skus/factual/sku_105",
+      "source_chunk": "报告-恒实盛景调研报告：怎样做空调虚拟电厂？_chunk_001",
+      "character_count": 235,
+      "description": "深圳恒实盛景作为空调负荷聚合商的四重身份及对应业务范围",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_106",
+      "name": "深圳虚拟电厂需求侧响应收益规则",
+      "classification": "factual",
+      "path": "output/skus/factual/sku_106",
+      "source_chunk": "报告-恒实盛景调研报告：怎样做空调虚拟电厂？_chunk_001",
+      "character_count": 320,
+      "description": "深圳地区虚拟电厂参与电力需求侧响应的市场分类、计费标准及收益分配规则",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_107",
+      "name": "深圳空调负荷可调节规模",
+      "classification": "factual",
+      "path": "output/skus/factual/sku_107",
+      "source_chunk": "报告-恒实盛景调研报告：怎样做空调虚拟电厂？_chunk_001",
+      "character_count": 158,
+      "description": "2025年深圳全市空调负荷的可调节资源总量及等效参考规模",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_108",
+      "name": "恒实盛景空调虚拟电厂运营规模",
+      "classification": "factual",
+      "path": "output/skus/factual/sku_108",
+      "source_chunk": "报告-恒实盛景调研报告：怎样做空调虚拟电厂？_chunk_001",
+      "character_count": 123,
+      "description": "恒实盛景运营的空调虚拟电厂的核心规模参数及行业地位",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_109",
+      "name": "空调用户参与虚拟电厂收益情况",
+      "classification": "factual",
+      "path": "output/skus/factual/sku_109",
+      "source_chunk": "报告-恒实盛景调研报告：怎样做空调虚拟电厂？_chunk_001",
+      "character_count": 217,
+      "description": "空调用户参与虚拟电厂可获得的收益构成及典型场景的收益规模",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_110",
+      "name": "空调虚拟电厂调控核心原则与影响变量",
+      "classification": "factual",
+      "path": "output/skus/factual/sku_110",
+      "source_chunk": "报告-恒实盛景调研报告：怎样做空调虚拟电厂？_chunk_001",
+      "character_count": 267,
+      "description": "空调虚拟电厂调控需遵循的核心原则及需考量的多维度影响变量",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_111",
+      "name": "恒实盛景AI驱动空调虚拟电厂调控流程",
+      "classification": "factual",
+      "path": "output/skus/factual/sku_111",
+      "source_chunk": "报告-恒实盛景调研报告：怎样做空调虚拟电厂？_chunk_001",
+      "character_count": 316,
+      "description": "恒实盛景2024年启用的AI驱动空调虚拟电厂精细化调控的四步标准流程",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_112",
+      "name": "虚拟电厂行业发展趋势",
+      "classification": "factual",
+      "path": "output/skus/factual/sku_112",
+      "source_chunk": "报告-恒实盛景调研报告：怎样做空调虚拟电厂？_chunk_001",
+      "character_count": 254,
+      "description": "虚拟电厂赛道的核心发展模式与未来竞争核心要素",
+      "confidence": null
+    },
+    {
+      "sku_id": "skill_052",
+      "name": "air-condition-vpp-demand-response-participation-flow",
+      "classification": "procedural",
+      "path": "output/skus/procedural/skill_052",
+      "source_chunk": "报告-恒实盛景调研报告：怎样做空调虚拟电厂？_chunk_001",
+      "character_count": 414,
+      "description": "当电网虚拟电厂管理平台发布需求侧响应通知，空调虚拟电厂运营商需组织聚合资源参与响应获取收益时使用",
+      "confidence": null
+    },
+    {
+      "sku_id": "skill_053",
+      "name": "ai-driven-ac-vpp-precision-control-process",
+      "classification": "procedural",
+      "path": "output/skus/procedural/skill_053",
+      "source_chunk": "报告-恒实盛景调研报告：怎样做空调虚拟电厂？_chunk_001",
+      "character_count": 475,
+      "description": "需要对空调虚拟电厂聚合的负荷进行精准调控，兼顾用户体感舒适度和调节量最大化时使用",
+      "confidence": null
+    },
+    {
+      "sku_id": "skill_054",
+      "name": "scenario-customized-ac-vpp-regulation-scheme-development-process",
+      "classification": "procedural",
+      "path": "output/skus/procedural/skill_054",
+      "source_chunk": "报告-恒实盛景调研报告：怎样做空调虚拟电厂？_chunk_001",
+      "character_count": 530,
+      "description": "接入新的不同场景的空调用户（如写字楼、医院、商场等），需要定制专属调控方案时使用",
+      "confidence": null
+    },
+    {
+      "sku_id": "skill_055",
+      "name": "zero-cost-ac-user-vpp-access-cooperation-process",
+      "classification": "procedural",
+      "path": "output/skus/procedural/skill_055",
+      "source_chunk": "报告-恒实盛景调研报告：怎样做空调虚拟电厂？_chunk_001",
+      "character_count": 369,
+      "description": "空调用户意向接入虚拟电厂，采用运营商全投资模式开展合作时使用",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_113",
+      "name": "非洲户用光伏市场基础数据",
+      "classification": "factual",
+      "path": "output/skus/factual/sku_113",
+      "source_chunk": "报告-正泰安能光伏星调研报告：在非洲如何做户用光伏？_chunk_001",
+      "character_count": 658,
+      "description": "非洲户用光伏市场的无电人口规模、自然禀赋、政策支持、发展阶段等核心基础信息",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_114",
+      "name": "非洲离网户用光伏市场竞争格局",
+      "classification": "factual",
+      "path": "output/skus/factual/sku_114",
+      "source_chunk": "报告-正泰安能光伏星调研报告：在非洲如何做户用光伏？_chunk_001",
+      "character_count": 595,
+      "description": "非洲离网户用光伏市场的参与主体梯队划分、核心竞争维度信息",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_115",
+      "name": "正泰安能非洲户用光伏运营模式",
+      "classification": "factual",
+      "path": "output/skus/factual/sku_115",
+      "source_chunk": "报告-正泰安能光伏星调研报告：在非洲如何做户用光伏？_chunk_001",
+      "character_count": 786,
+      "description": "正泰集团旗下户用光伏子公司正泰安能以PVSTAR（光伏星）品牌在非洲开展业务的产品、收费、推广、合作模式详情",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_116",
+      "name": "BBOXX非洲户用光伏运营模式",
+      "classification": "factual",
+      "path": "output/skus/factual/sku_116",
+      "source_chunk": "报告-正泰安能光伏星调研报告：在非洲如何做户用光伏？_chunk_001",
+      "character_count": 594,
+      "description": "英国起源的离网光伏企业BBOXX在非洲的发展历程、风控体系、售后网络、合作需求详情",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_117",
+      "name": "非洲户用光伏行业通用商业规则",
+      "classification": "factual",
+      "path": "output/skus/factual/sku_117",
+      "source_chunk": "报告-正泰安能光伏星调研报告：在非洲如何做户用光伏？_chunk_001",
+      "character_count": 463,
+      "description": "非洲户用光伏行业通用的用户特征、基础设施、付费逻辑、渠道要求等共性规则",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_118",
+      "name": "中国新能源企业非洲出海模式转变",
+      "classification": "factual",
+      "path": "output/skus/factual/sku_118",
+      "source_chunk": "报告-正泰安能光伏星调研报告：在非洲如何做户用光伏？_chunk_001",
+      "character_count": 260,
+      "description": "中国新能源企业出海非洲从传统产品出海向能源服务出海的模式转变趋势与差异",
+      "confidence": null
+    },
+    {
+      "sku_id": "skill_056",
+      "name": "payg-payment-unlock-workflow",
+      "classification": "procedural",
+      "path": "output/skus/procedural/skill_056",
+      "source_chunk": "报告-正泰安能光伏星调研报告：在非洲如何做户用光伏？_chunk_001",
+      "character_count": 363,
+      "description": "在非洲户用光伏业务中处理用户按使用付费解锁系统时使用",
+      "confidence": null
+    },
+    {
+      "sku_id": "skill_057",
+      "name": "kenya-solar-market-development-workflow",
+      "classification": "procedural",
+      "path": "output/skus/procedural/skill_057",
+      "source_chunk": "报告-正泰安能光伏星调研报告：在非洲如何做户用光伏？_chunk_001",
+      "character_count": 362,
+      "description": "在肯尼亚拓展离网户用光伏市场时使用",
+      "confidence": null
+    },
+    {
+      "sku_id": "skill_058",
+      "name": "m-pesa-based-user-credit-assessment-workflow",
+      "classification": "procedural",
+      "path": "output/skus/procedural/skill_058",
+      "source_chunk": "报告-正泰安能光伏星调研报告：在非洲如何做户用光伏？_chunk_001",
+      "character_count": 350,
+      "description": "评估非洲户用光伏用户还款能力、匹配对应产品套餐时使用",
+      "confidence": null
+    },
+    {
+      "sku_id": "skill_059",
+      "name": "solar-after-sales-service-network-construction-workflow",
+      "classification": "procedural",
+      "path": "output/skus/procedural/skill_059",
+      "source_chunk": "报告-正泰安能光伏星调研报告：在非洲如何做户用光伏？_chunk_001",
+      "character_count": 324,
+      "description": "在非洲搭建户用光伏售后服务网络时使用",
+      "confidence": null
+    },
+    {
+      "sku_id": "skill_060",
+      "name": "zhengtai-africa-solar-dealer-cooperation-workflow",
+      "classification": "procedural",
+      "path": "output/skus/procedural/skill_060",
+      "source_chunk": "报告-正泰安能光伏星调研报告：在非洲如何做户用光伏？_chunk_001",
+      "character_count": 314,
+      "description": "中国企业与正泰安能在非洲开展户用光伏经销合作时使用",
+      "confidence": null
+    },
+    {
+      "sku_id": "skill_061",
+      "name": "bboxx-africa-solar-cooperation-workflow",
+      "classification": "procedural",
+      "path": "output/skus/procedural/skill_061",
+      "source_chunk": "报告-正泰安能光伏星调研报告：在非洲如何做户用光伏？_chunk_001",
+      "character_count": 436,
+      "description": "中国企业与BBOXX在非洲开展户用光伏业务合作时使用",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_119",
+      "name": "钢铁行业碳排放基本情况",
+      "classification": "factual",
+      "path": "output/skus/factual/sku_119",
+      "source_chunk": "报告-河钢集团一线调研报告：钢铁行业存在哪些双碳机会？_chunk_001",
+      "character_count": 248,
+      "description": "钢铁行业在我国碳排放结构中的地位、排放规模及区域产能特征",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_120",
+      "name": "河钢集团核心经营及绿色转型实践数据",
+      "classification": "factual",
+      "path": "output/skus/factual/sku_120",
+      "source_chunk": "报告-河钢集团一线调研报告：钢铁行业存在哪些双碳机会？_chunk_001",
+      "character_count": 318,
+      "description": "河钢集团的基本经营情况、行业荣誉及已落地的绿色低碳项目信息",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_121",
+      "name": "钢铁长流程炼钢工序说明",
+      "classification": "factual",
+      "path": "output/skus/factual/sku_121",
+      "source_chunk": "报告-河钢集团一线调研报告：钢铁行业存在哪些双碳机会？_chunk_001",
+      "character_count": 456,
+      "description": "传统长流程炼钢的全工序组成、各环节核心工艺及作用",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_122",
+      "name": "钢铁短流程炼钢工艺说明",
+      "classification": "factual",
+      "path": "output/skus/factual/sku_122",
+      "source_chunk": "报告-河钢集团一线调研报告：钢铁行业存在哪些双碳机会？_chunk_001",
+      "character_count": 142,
+      "description": "短流程炼钢的原料、核心工艺及与长流程的核心差异",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_123",
+      "name": "长短流程炼钢吨钢能耗及碳排放对比",
+      "classification": "factual",
+      "path": "output/skus/factual/sku_123",
+      "source_chunk": "报告-河钢集团一线调研报告：钢铁行业存在哪些双碳机会？_chunk_001",
+      "character_count": 263,
+      "description": "长流程与短流程炼钢生产1吨钢材的标准煤能耗及二氧化碳排放量化对比数据",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_124",
+      "name": "钢铁行业节能降碳核心路径",
+      "classification": "factual",
+      "path": "output/skus/factual/sku_124",
+      "source_chunk": "报告-河钢集团一线调研报告：钢铁行业存在哪些双碳机会？_chunk_001",
+      "character_count": 413,
+      "description": "钢铁行业当前已落地实践的五大节能降碳路径及各路径核心特征、发展现状",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_125",
+      "name": "钢铁企业综合能碳管理方案制定流程",
+      "classification": "factual",
+      "path": "output/skus/factual/sku_125",
+      "source_chunk": "报告-河钢集团一线调研报告：钢铁行业存在哪些双碳机会？_chunk_001",
+      "character_count": 326,
+      "description": "钢铁企业制定系统性降碳方案的标准四步流程及各环节核心要求",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_126",
+      "name": "钢铁行业绿色转型核心政策汇总",
+      "classification": "factual",
+      "path": "output/skus/factual/sku_126",
+      "source_chunk": "报告-河钢集团一线调研报告：钢铁行业存在哪些双碳机会？_chunk_001",
+      "character_count": 1201,
+      "description": "2024-2025年我国发布的推动钢铁行业低碳转型的核心政策及核心要求",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_127",
+      "name": "钢铁行业绿钢市场发展现状",
+      "classification": "factual",
+      "path": "output/skus/factual/sku_127",
+      "source_chunk": "报告-河钢集团一线调研报告：钢铁行业存在哪些双碳机会？_chunk_001",
+      "character_count": 159,
+      "description": "绿钢的市场需求变化及商业化进展情况",
+      "confidence": null
+    },
+    {
+      "sku_id": "skill_062",
+      "name": "long-process-steelmaking-workflow",
+      "classification": "procedural",
+      "path": "output/skus/procedural/skill_062",
+      "source_chunk": "报告-河钢集团一线调研报告：钢铁行业存在哪些双碳机会？_chunk_001",
+      "character_count": 627,
+      "description": "当需要了解传统以铁矿石、煤炭为原料的长流程炼钢全工序，挖掘对应双碳降碳机会时使用",
+      "confidence": null
+    },
+    {
+      "sku_id": "skill_063",
+      "name": "short-process-steelmaking-workflow",
+      "classification": "procedural",
+      "path": "output/skus/procedural/skill_063",
+      "source_chunk": "报告-河钢集团一线调研报告：钢铁行业存在哪些双碳机会？_chunk_001",
+      "character_count": 355,
+      "description": "当需要了解低排放短流程炼钢工序，推进钢铁行业工艺结构降碳改造时使用",
+      "confidence": null
+    },
+    {
+      "sku_id": "skill_064",
+      "name": "steel-enterprise-energy-carbon-management-scheme-formulation",
+      "classification": "procedural",
+      "path": "output/skus/procedural/skill_064",
+      "source_chunk": "报告-河钢集团一线调研报告：钢铁行业存在哪些双碳机会？_chunk_001",
+      "character_count": 528,
+      "description": "当钢铁企业需要系统性制定综合降碳方案，兼顾降碳目标与生产经济性时使用",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_128",
+      "name": "生物圈系列概念定义",
+      "classification": "factual",
+      "path": "output/skus/factual/sku_128",
+      "source_chunk": "报告-深石集团调研报告：房地产企业怎样做新能源？_chunk_001",
+      "character_count": 206,
+      "description": "生物圈一号、生物圈二号、生物圈三号三个核心概念的定义、发展背景与实验结果相关信息",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_129",
+      "name": "深石集团基本信息",
+      "classification": "factual",
+      "path": "output/skus/factual/sku_129",
+      "source_chunk": "报告-深石集团调研报告：房地产企业怎样做新能源？_chunk_001",
+      "character_count": 120,
+      "description": "深石集团的成立背景、主营业务、核心属性相关基础信息",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_130",
+      "name": "生物圈三号项目基本信息",
+      "classification": "factual",
+      "path": "output/skus/factual/sku_130",
+      "source_chunk": "报告-深石集团调研报告：房地产企业怎样做新能源？_chunk_001",
+      "character_count": 209,
+      "description": "深石集团打造的碳中和示范项目生物圈三号的落地范围、规划目标、建设节奏相关信息",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_131",
+      "name": "万科中心基本信息",
+      "classification": "factual",
+      "path": "output/skus/factual/sku_131",
+      "source_chunk": "报告-深石集团调研报告：房地产企业怎样做新能源？_chunk_001",
+      "character_count": 109,
+      "description": "生物圈三号首个试点载体万科中心的建筑属性、改造背景相关信息",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_132",
+      "name": "万科中心光伏系统改造前后性能对比",
+      "classification": "factual",
+      "path": "output/skus/factual/sku_132",
+      "source_chunk": "报告-深石集团调研报告：房地产企业怎样做新能源？_chunk_001",
+      "character_count": 140,
+      "description": "生物圈三号试点万科中心光伏组件升级改造前后的发电量、占建筑总能耗比例的对比数据",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_133",
+      "name": "万科中心低碳改造核心技术措施",
+      "classification": "factual",
+      "path": "output/skus/factual/sku_133",
+      "source_chunk": "报告-深石集团调研报告：房地产企业怎样做新能源？_chunk_001",
+      "character_count": 556,
+      "description": "生物圈三号试点万科中心采用的清洁能源建设、建筑节能改造、资源循环利用三类核心低碳技术明细",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_134",
+      "name": "四零麦当劳餐厅核心信息",
+      "classification": "factual",
+      "path": "output/skus/factual/sku_134",
+      "source_chunk": "报告-深石集团调研报告：房地产企业怎样做新能源？_chunk_001",
+      "character_count": 176,
+      "description": "全国首个落地万科中心的四零麦当劳餐厅的定义、落地时间与支撑条件相关信息",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_135",
+      "name": "深石集团碳中和社区商业化运营战略",
+      "classification": "factual",
+      "path": "output/skus/factual/sku_135",
+      "source_chunk": "报告-深石集团调研报告：房地产企业怎样做新能源？_chunk_001",
+      "character_count": 407,
+      "description": "深石集团提出的「加减绿碳金」碳中和社区商业化战略的核心定义与盈利逻辑",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_136",
+      "name": "生物圈三号项目商业化预期",
+      "classification": "factual",
+      "path": "output/skus/factual/sku_136",
+      "source_chunk": "报告-深石集团调研报告：房地产企业怎样做新能源？_chunk_001",
+      "character_count": 85,
+      "description": "深石集团生物圈三号碳中和社区项目的运营原则与成本回收预期相关信息",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_137",
+      "name": "新能源行业跨界布局核心趋势",
+      "classification": "factual",
+      "path": "output/skus/factual/sku_137",
+      "source_chunk": "报告-深石集团调研报告：房地产企业怎样做新能源？_chunk_001",
+      "character_count": 257,
+      "description": "新能源行业下一阶段发展中跨界企业的价值、典型案例与投资能力要求相关结论",
+      "confidence": null
+    },
+    {
+      "sku_id": "skill_065",
+      "name": "carbon-neutral-community-construction-workflow",
+      "classification": "procedural",
+      "path": "output/skus/procedural/skill_065",
+      "source_chunk": "报告-深石集团调研报告：房地产企业怎样做新能源？_chunk_001",
+      "character_count": 557,
+      "description": "用于存量社区/闲置资产的碳中和改造建设，实现社区能耗降低、绿电占比提升、资源循环利用目标时使用。",
+      "confidence": null
+    },
+    {
+      "sku_id": "skill_066",
+      "name": "carbon-neutral-community-commercial-operation-workflow",
+      "classification": "procedural",
+      "path": "output/skus/procedural/skill_066",
+      "source_chunk": "报告-深石集团调研报告：房地产企业怎样做新能源？_chunk_001",
+      "character_count": 472,
+      "description": "用于为已建成的碳中和社区设计盈利模式，实现无补贴下的成本回收与可持续商业化运营时使用。",
+      "confidence": null
+    },
+    {
+      "sku_id": "skill_067",
+      "name": "traditional-enterprise-new-energy-cross-border-layout-strategy",
+      "classification": "procedural",
+      "path": "output/skus/procedural/skill_067",
+      "source_chunk": "报告-深石集团调研报告：房地产企业怎样做新能源？_chunk_001",
+      "character_count": 434,
+      "description": "用于非能源领域传统企业计划跨界布局新能源业务，依托自身原有资源构建差异化竞争优势时使用。",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_138",
+      "name": "车网互动定义及核心特征",
+      "classification": "factual",
+      "path": "output/skus/factual/sku_138",
+      "source_chunk": "报告-特来电零碳大楼调研报告：怎样做车网互动？_chunk_001",
+      "character_count": 341,
+      "description": "车网互动的基本定义、两层核心含义、与传统充电模式的差异及发展必要性",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_139",
+      "name": "中国新能源汽车储电能力统计及测算数据",
+      "classification": "factual",
+      "path": "output/skus/factual/sku_139",
+      "source_chunk": "报告-特来电零碳大楼调研报告：怎样做车网互动？_chunk_001",
+      "character_count": 251,
+      "description": "中国新能源汽车保有量、储电规模及对应电力价值的官方统计与测算数据",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_140",
+      "name": "车网互动车主参与激励及收益标准",
+      "classification": "factual",
+      "path": "output/skus/factual/sku_140",
+      "source_chunk": "报告-特来电零碳大楼调研报告：怎样做车网互动？_chunk_001",
+      "character_count": 325,
+      "description": "国内车网互动项目对车主的激励方式、不同场景下的收益水平及电池寿命适配性说明",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_141",
+      "name": "特来电企业核心运营参数",
+      "classification": "factual",
+      "path": "output/skus/factual/sku_141",
+      "source_chunk": "报告-特来电零碳大楼调研报告：怎样做车网互动？_chunk_001",
+      "character_count": 119,
+      "description": "特来电作为国内头部充电网运营商的核心运营数据及行业地位",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_142",
+      "name": "特来电超阶零碳大楼基础参数",
+      "classification": "factual",
+      "path": "output/skus/factual/sku_142",
+      "source_chunk": "报告-特来电零碳大楼调研报告：怎样做车网互动？_chunk_001",
+      "character_count": 158,
+      "description": "特来电位于青岛崂山的超阶零碳大楼的核心建设及运营参数",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_143",
+      "name": "特来电超阶零碳大楼低碳技术配置及效能",
+      "classification": "factual",
+      "path": "output/skus/factual/sku_143",
+      "source_chunk": "报告-特来电零碳大楼调研报告：怎样做车网互动？_chunk_001",
+      "character_count": 419,
+      "description": "特来电超阶零碳大楼采用的各类低碳技术的配置及对应的效能数据",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_144",
+      "name": "特来电超阶零碳大楼多能协同运营策略",
+      "classification": "factual",
+      "path": "output/skus/factual/sku_144",
+      "source_chunk": "报告-特来电零碳大楼调研报告：怎样做车网互动？_chunk_001",
+      "character_count": 274,
+      "description": "特来电超阶零碳大楼结合光伏发电、梯次储能、车网互动的协同运营方法及效果",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_145",
+      "name": "特来电AI极速立体泊车系统配置及功能",
+      "classification": "factual",
+      "path": "output/skus/factual/sku_145",
+      "source_chunk": "报告-特来电零碳大楼调研报告：怎样做车网互动？_chunk_001",
+      "character_count": 357,
+      "description": "特来电零碳大楼配套的AI极速立体泊车系统的核心参数、功能及安全保障措施",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_146",
+      "name": "中国车网互动行业政策及发展目标",
+      "classification": "factual",
+      "path": "output/skus/factual/sku_146",
+      "source_chunk": "报告-特来电零碳大楼调研报告：怎样做车网互动？_chunk_001",
+      "character_count": 465,
+      "description": "2025年中国发布的车网互动相关支持政策及2027年行业发展量化目标",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_147",
+      "name": "车网互动商业化落地路径及行业前景判断",
+      "classification": "factual",
+      "path": "output/skus/factual/sku_147",
+      "source_chunk": "报告-特来电零碳大楼调研报告：怎样做车网互动？_chunk_001",
+      "character_count": 264,
+      "description": "基于特来电零碳大楼案例得出的车网互动落地路径及行业长期发展前景分析",
+      "confidence": null
+    },
+    {
+      "sku_id": "skill_068",
+      "name": "office-park-v2g-implementation-workflow",
+      "classification": "procedural",
+      "path": "output/skus/procedural/skill_068",
+      "source_chunk": "报告-特来电零碳大楼调研报告：怎样做车网互动？_chunk_001",
+      "character_count": 666,
+      "description": "当需要在办公楼、产业园区等固定停车场景落地车网互动项目，降低用能成本、提升绿电占比时使用",
+      "confidence": null
+    },
+    {
+      "sku_id": "skill_069",
+      "name": "office-v2g-owner-participation-process",
+      "classification": "procedural",
+      "path": "output/skus/procedural/skill_069",
+      "source_chunk": "报告-特来电零碳大楼调研报告：怎样做车网互动？_chunk_001",
+      "character_count": 352,
+      "description": "当电动汽车车主在配备V2G设施的办公楼/园区停车，想要参与车网互动获得收益时使用",
+      "confidence": null
+    },
+    {
+      "sku_id": "skill_070",
+      "name": "v2g-commercial-scaling-path",
+      "classification": "procedural",
+      "path": "output/skus/procedural/skill_070",
+      "source_chunk": "报告-特来电零碳大楼调研报告：怎样做车网互动？_chunk_001",
+      "character_count": 439,
+      "description": "当规划车网互动业务商业化推广、拓展落地场景时使用",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_148",
+      "name": "电管家集团基本概况与业务板块",
+      "classification": "factual",
+      "path": "output/skus/factual/sku_148",
+      "source_chunk": "报告-电管家一线调研报告：微电网怎么赚钱？_chunk_001",
+      "character_count": 710,
+      "description": "电管家集团的成立时间、发展历程、业务规模、融资情况及五大核心业务板块的详细内容",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_149",
+      "name": "电管家「1+N」多元化能源业务模式",
+      "classification": "factual",
+      "path": "output/skus/factual/sku_149",
+      "source_chunk": "报告-电管家一线调研报告：微电网怎么赚钱？_chunk_001",
+      "character_count": 307,
+      "description": "电管家开拓新能源业务的核心「1+N」模式的定义、运营逻辑、盈利特点及典型应用案例",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_150",
+      "name": "电管家电力物业服务核心竞争壁垒",
+      "classification": "factual",
+      "path": "output/skus/factual/sku_150",
+      "source_chunk": "报告-电管家一线调研报告：微电网怎么赚钱？_chunk_001",
+      "character_count": 167,
+      "description": "电管家核心底座业务电力物业服务的竞争优势及难以模仿的核心原因",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_151",
+      "name": "上海张江金科中心微电网项目基础信息",
+      "classification": "factual",
+      "path": "output/skus/factual/sku_151",
+      "source_chunk": "报告-电管家一线调研报告：微电网怎么赚钱？_chunk_001",
+      "character_count": 417,
+      "description": "张江金科中心园区的基本属性、项目运营主体及前期改造落地情况",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_152",
+      "name": "张江金科中心微电网项目盈利模式",
+      "classification": "factual",
+      "path": "output/skus/factual/sku_152",
+      "source_chunk": "报告-电管家一线调研报告：微电网怎么赚钱？_chunk_001",
+      "character_count": 397,
+      "description": "张江金科中心创新微电网项目的多元盈利来源、核心收益点及投资回报情况",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_153",
+      "name": "园区级微电网项目核心成功要素",
+      "classification": "factual",
+      "path": "output/skus/factual/sku_153",
+      "source_chunk": "报告-电管家一线调研报告：微电网怎么赚钱？_chunk_001",
+      "character_count": 274,
+      "description": "可复制的国资背景园区微电网项目落地运营的核心前提与关键要素",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_154",
+      "name": "新能源行业发展阶段核心逻辑变化",
+      "classification": "factual",
+      "path": "output/skus/factual/sku_154",
+      "source_chunk": "报告-电管家一线调研报告：微电网怎么赚钱？_chunk_001",
+      "character_count": 169,
+      "description": "国内新能源行业不同发展阶段的核心竞争逻辑的变迁情况",
+      "confidence": null
+    },
+    {
+      "sku_id": "skill_071",
+      "name": "1-plus-n-new-energy-business-expansion-methodology",
+      "classification": "procedural",
+      "path": "output/skus/procedural/skill_071",
+      "source_chunk": "报告-电管家一线调研报告：微电网怎么赚钱？_chunk_001",
+      "character_count": 462,
+      "description": "当新能源企业需要拓展业务、提升用户粘性、丰富盈利渠道、应对单一业务盈利难问题时使用",
+      "confidence": null
+    },
+    {
+      "sku_id": "skill_072",
+      "name": "park-level-microgrid-project-implementation-workflow",
+      "classification": "procedural",
+      "path": "output/skus/procedural/skill_072",
+      "source_chunk": "报告-电管家一线调研报告：微电网怎么赚钱？_chunk_001",
+      "character_count": 577,
+      "description": "当需要落地运营园区级微电网项目、构建多元盈利结构、实现项目可复制时使用",
+      "confidence": null
+    },
+    {
+      "sku_id": "skill_073",
+      "name": "new-energy-project-differentiated-competition-strategy",
+      "classification": "procedural",
+      "path": "output/skus/procedural/skill_073",
+      "source_chunk": "报告-电管家一线调研报告：微电网怎么赚钱？_chunk_001",
+      "character_count": 414,
+      "description": "当新能源项目面临同质化价格竞争、需要获取独家开发权时使用",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_155",
+      "name": "北京紫电捷控电气有限公司基本信息",
+      "classification": "factual",
+      "path": "output/skus/factual/sku_155",
+      "source_chunk": "报告-紫电捷控调研报告：交直流微电网怎么做？_chunk_001",
+      "character_count": 381,
+      "description": "国家级高新技术企业北京紫电捷控的成立时间、主营业务、服务案例、标准制定参与情况等核心经营信息",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_156",
+      "name": "交直流微电网定义与发展动因",
+      "classification": "factual",
+      "path": "output/skus/factual/sku_156",
+      "source_chunk": "报告-紫电捷控调研报告：交直流微电网怎么做？_chunk_001",
+      "character_count": 244,
+      "description": "交直流微电网的架构定义、核心连接方式及行业发展的核心驱动因素",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_157",
+      "name": "交直流微电网主流应用场景",
+      "classification": "factual",
+      "path": "output/skus/factual/sku_157",
+      "source_chunk": "报告-紫电捷控调研报告：交直流微电网怎么做？_chunk_001",
+      "character_count": 214,
+      "description": "当前交直流微电网落地的四类主流应用场景及对应适用范围",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_158",
+      "name": "双台区柔直互联技术说明",
+      "classification": "factual",
+      "path": "output/skus/factual/sku_158",
+      "source_chunk": "报告-紫电捷控调研报告：交直流微电网怎么做？_chunk_001",
+      "character_count": 337,
+      "description": "双台区柔直互联的定义、核心作用、适用场景及技术必要性",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_159",
+      "name": "交直流微电网核心设备及功能",
+      "classification": "factual",
+      "path": "output/skus/factual/sku_159",
+      "source_chunk": "报告-紫电捷控调研报告：交直流微电网怎么做？_chunk_001",
+      "character_count": 466,
+      "description": "交直流微电网建设所需的四类核心设备的名称、别名及核心功能",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_160",
+      "name": "交直流微电网运行模式规则",
+      "classification": "factual",
+      "path": "output/skus/factual/sku_160",
+      "source_chunk": "报告-紫电捷控调研报告：交直流微电网怎么做？_chunk_001",
+      "character_count": 503,
+      "description": "交直流微电网四类运行模式的触发条件、运行逻辑及切换规则",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_161",
+      "name": "北京通州双台区柔直互联微电网示范项目参数",
+      "classification": "factual",
+      "path": "output/skus/factual/sku_161",
+      "source_chunk": "报告-紫电捷控调研报告：交直流微电网怎么做？_chunk_001",
+      "character_count": 535,
+      "description": "北京通州某企业落地的双台区柔直互联微电网项目的基本配置、建设目标及性能指标",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_162",
+      "name": "新能源行业发展趋势判断",
+      "classification": "factual",
+      "path": "output/skus/factual/sku_162",
+      "source_chunk": "报告-紫电捷控调研报告：交直流微电网怎么做？_chunk_001",
+      "character_count": 131,
+      "description": "基于交直流微电网等技术应用实践得出的新能源行业发展方向与企业竞争力核心要素判断",
+      "confidence": null
+    },
+    {
+      "sku_id": "skill_074",
+      "name": "ac-dc-microgrid-operation-mode-switching",
+      "classification": "procedural",
+      "path": "output/skus/procedural/skill_074",
+      "source_chunk": "报告-紫电捷控调研报告：交直流微电网怎么做？_chunk_001",
+      "character_count": 860,
+      "description": "当需要对交直流微电网进行并网、离网运行控制及模式自动切换，保障供电稳定性时使用",
+      "confidence": null
+    },
+    {
+      "sku_id": "skill_075",
+      "name": "dual-district-flexible-interconnection-solution-design",
+      "classification": "procedural",
+      "path": "output/skus/procedural/skill_075",
+      "source_chunk": "报告-紫电捷控调研报告：交直流微电网怎么做？_chunk_001",
+      "character_count": 626,
+      "description": "当需要解决相邻配电台区负载不平衡、光伏上网难、新增负荷供电不足，降低变压器扩容成本时使用",
+      "confidence": null
+    },
+    {
+      "sku_id": "skill_076",
+      "name": "building-ac-dc-microgrid-photovoltaic-consumption-strategy-formu",
+      "classification": "procedural",
+      "path": "output/skus/procedural/skill_076",
+      "source_chunk": "报告-紫电捷控调研报告：交直流微电网怎么做？_chunk_001",
+      "character_count": 350,
+      "description": "当需要制定建筑类交直流微电网的光伏消纳策略，提升绿电使用率、降低建筑碳排放时使用",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_163",
+      "name": "纬景储能企业概况",
+      "classification": "factual",
+      "path": "output/skus/factual/sku_163",
+      "source_chunk": "报告-纬景储能调研报告：液流电池为储能带来的机会_chunk_001",
+      "character_count": 503,
+      "description": "纬景储能的成立时间、业务方向、核心团队背景、行业地位及核心技术成果与资质情况",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_164",
+      "name": "锌铁液流电池定义及工作原理",
+      "classification": "factual",
+      "path": "output/skus/factual/sku_164",
+      "source_chunk": "报告-纬景储能调研报告：液流电池为储能带来的机会_chunk_001",
+      "character_count": 534,
+      "description": "液流电池的研发历史、核心结构、充放电原理、技术路线分类，以及锌铁液流电池的成分与原材料优势",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_165",
+      "name": "液流电池核心技术板块",
+      "classification": "factual",
+      "path": "output/skus/factual/sku_165",
+      "source_chunk": "报告-纬景储能调研报告：液流电池为储能带来的机会_chunk_001",
+      "character_count": 314,
+      "description": "液流电池四大核心技术板块的功能、成本占比及行业攻关方向",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_166",
+      "name": "液流电池与锂电池性能及成本对比",
+      "classification": "factual",
+      "path": "output/skus/factual/sku_166",
+      "source_chunk": "报告-纬景储能调研报告：液流电池为储能带来的机会_chunk_001",
+      "character_count": 456,
+      "description": "液流电池与锂电池在投资成本、寿命、安全、结构特性等维度的对比数据",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_167",
+      "name": "液流电池平准化储能成本（LCOS）计算方法",
+      "classification": "factual",
+      "path": "output/skus/factual/sku_167",
+      "source_chunk": "报告-纬景储能调研报告：液流电池为储能带来的机会_chunk_001",
+      "character_count": 462,
+      "description": "主流的液流电池LCOS的构成逻辑、计算方式及典型项目测算结果",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_168",
+      "name": "液流电池核心适用场景",
+      "classification": "factual",
+      "path": "output/skus/factual/sku_168",
+      "source_chunk": "报告-纬景储能调研报告：液流电池为储能带来的机会_chunk_001",
+      "character_count": 361,
+      "description": "液流电池适配的核心场景及适配逻辑",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_169",
+      "name": "液流电池及长时储能支持政策汇总",
+      "classification": "factual",
+      "path": "output/skus/factual/sku_169",
+      "source_chunk": "报告-纬景储能调研报告：液流电池为储能带来的机会_chunk_001",
+      "character_count": 2228,
+      "description": "国家及地方层面支持液流电池、长时储能发展的相关政策及专项补贴措施",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_170",
+      "name": "锌铁液流电池技术瓶颈及突破情况",
+      "classification": "factual",
+      "path": "output/skus/factual/sku_170",
+      "source_chunk": "报告-纬景储能调研报告：液流电池为储能带来的机会_chunk_001",
+      "character_count": 140,
+      "description": "锌铁液流电池原有核心技术难点及当前的解决方案",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_171",
+      "name": "液流电池降本潜力及产业价值",
+      "classification": "factual",
+      "path": "output/skus/factual/sku_171",
+      "source_chunk": "报告-纬景储能调研报告：液流电池为储能带来的机会_chunk_001",
+      "character_count": 343,
+      "description": "液流电池的降本空间、进展及对新能源产业的战略价值",
+      "confidence": null
+    },
+    {
+      "sku_id": "skill_077",
+      "name": "liquid-flow-battery-lcos-calculation",
+      "classification": "procedural",
+      "path": "output/skus/procedural/skill_077",
+      "source_chunk": "报告-纬景储能调研报告：液流电池为储能带来的机会_chunk_001",
+      "character_count": 689,
+      "description": "需要评估液流电池储能项目经济性、对比不同储能路线成本差异时使用",
+      "confidence": null
+    },
+    {
+      "sku_id": "skill_078",
+      "name": "liquid-flow-battery-scenario-assessment",
+      "classification": "procedural",
+      "path": "output/skus/procedural/skill_078",
+      "source_chunk": "报告-纬景储能调研报告：液流电池为储能带来的机会_chunk_001",
+      "character_count": 483,
+      "description": "评估液流电池储能适配性、进行储能技术路线选型决策时使用",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_172",
+      "name": "良信股份企业基本概况",
+      "classification": "factual",
+      "path": "output/skus/factual/sku_172",
+      "source_chunk": "报告-良信电器调研报告：怎样建设零碳工厂？_chunk_001",
+      "character_count": 216,
+      "description": "我国领先低压电器制造商良信股份的基本经营、业务布局及战略转型相关事实信息",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_173",
+      "name": "低压电器定义及应用场景",
+      "classification": "factual",
+      "path": "output/skus/factual/sku_173",
+      "source_chunk": "报告-良信电器调研报告：怎样建设零碳工厂？_chunk_001",
+      "character_count": 167,
+      "description": "低压电器的技术定义、核心功能及常见应用场景说明",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_174",
+      "name": "良信海盐零碳工厂基本参数",
+      "classification": "factual",
+      "path": "output/skus/factual/sku_174",
+      "source_chunk": "报告-良信电器调研报告：怎样建设零碳工厂？_chunk_001",
+      "character_count": 258,
+      "description": "良信在浙江嘉兴海盐建设的零碳工厂（杭州湾超级工厂）的规模、用能、认证及投资收益相关核心参数",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_175",
+      "name": "海盐零碳工厂源网荷储零碳方案构成",
+      "classification": "factual",
+      "path": "output/skus/factual/sku_175",
+      "source_chunk": "报告-良信电器调研报告：怎样建设零碳工厂？_chunk_001",
+      "character_count": 442,
+      "description": "海盐零碳工厂采用的源、网、荷、储四模块零碳解决方案的具体配置信息",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_176",
+      "name": "海盐零碳工厂光储直柔微电网方案",
+      "classification": "factual",
+      "path": "output/skus/factual/sku_176",
+      "source_chunk": "报告-良信电器调研报告：怎样建设零碳工厂？_chunk_001",
+      "character_count": 241,
+      "description": "海盐零碳工厂部分办公楼采用的光储直柔微电网的配置、运行逻辑及能效数据",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_177",
+      "name": "MX微网专家软件功能与运行机制",
+      "classification": "factual",
+      "path": "output/skus/factual/sku_177",
+      "source_chunk": "报告-良信电器调研报告：怎样建设零碳工厂？_chunk_001",
+      "character_count": 315,
+      "description": "良信开发的零碳工厂源网荷储系统统一运营管理软件MX微网专家的定位、调度策略、运行逻辑及应用效果",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_178",
+      "name": "良信智能配电软硬件一体化解决方案",
+      "classification": "factual",
+      "path": "output/skus/factual/sku_178",
+      "source_chunk": "报告-良信电器调研报告：怎样建设零碳工厂？_chunk_001",
+      "character_count": 300,
+      "description": "良信基于智能低压电器打造的零碳工厂能源神经系统解决方案的架构及核心优势",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_179",
+      "name": "零碳园区建设核心挑战及应对建议",
+      "classification": "factual",
+      "path": "output/skus/factual/sku_179",
+      "source_chunk": "报告-良信电器调研报告：怎样建设零碳工厂？_chunk_001",
+      "character_count": 579,
+      "description": "良信基于海盐零碳工厂建设实践总结的五大建设挑战及对应优化建议",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_180",
+      "name": "零碳园区合格总包方核心能力要求",
+      "classification": "factual",
+      "path": "output/skus/factual/sku_180",
+      "source_chunk": "报告-良信电器调研报告：怎样建设零碳工厂？_chunk_001",
+      "character_count": 103,
+      "description": "基于良信实践总结的零碳园区建设总包方需具备的核心能力",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_181",
+      "name": "零碳园区生态合作模式",
+      "classification": "factual",
+      "path": "output/skus/factual/sku_181",
+      "source_chunk": "报告-良信电器调研报告：怎样建设零碳工厂？_chunk_001",
+      "character_count": 151,
+      "description": "零碳园区建设的生态合作要求及协作方向",
+      "confidence": null
+    },
+    {
+      "sku_id": "skill_079",
+      "name": "zero-carbon-factory-source-grid-load-storage-construction",
+      "classification": "procedural",
+      "path": "output/skus/procedural/skill_079",
+      "source_chunk": "报告-良信电器调研报告：怎样建设零碳工厂？_chunk_001",
+      "character_count": 455,
+      "description": "当需要搭建零碳工厂底层能源基础设施，实现高比例绿电消纳时使用",
+      "confidence": null
+    },
+    {
+      "sku_id": "skill_080",
+      "name": "microgrid-intelligent-dispatch-operation-workflow",
+      "classification": "procedural",
+      "path": "output/skus/procedural/skill_080",
+      "source_chunk": "报告-良信电器调研报告：怎样建设零碳工厂？_chunk_001",
+      "character_count": 594,
+      "description": "当需要对零碳工厂/园区源网荷储系统进行智能调度，实现节能降本目标时使用",
+      "confidence": null
+    },
+    {
+      "sku_id": "skill_081",
+      "name": "zero-carbon-park-general-contractor-selection",
+      "classification": "procedural",
+      "path": "output/skus/procedural/skill_081",
+      "source_chunk": "报告-良信电器调研报告：怎样建设零碳工厂？_chunk_001",
+      "character_count": 351,
+      "description": "当需要遴选零碳园区/工厂建设总包服务商，保障项目落地质量时使用",
+      "confidence": null
+    },
+    {
+      "sku_id": "skill_082",
+      "name": "zero-carbon-park-construction-risk-response",
+      "classification": "procedural",
+      "path": "output/skus/procedural/skill_082",
+      "source_chunk": "报告-良信电器调研报告：怎样建设零碳工厂？_chunk_001",
+      "character_count": 420,
+      "description": "当开展零碳园区/工厂建设前期规划时使用，提前规避常见落地风险",
+      "confidence": null
+    },
+    {
+      "sku_id": "skill_083",
+      "name": "zero-carbon-ecosystem-partnership-building",
+      "classification": "procedural",
+      "path": "output/skus/procedural/skill_083",
+      "source_chunk": "报告-良信电器调研报告：怎样建设零碳工厂？_chunk_001",
+      "character_count": 322,
+      "description": "当需要搭建零碳园区建设跨企业合作生态，提升项目落地效率时使用",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_182",
+      "name": "苏州工业园区核心基础属性",
+      "classification": "factual",
+      "path": "output/skus/factual/sku_182",
+      "source_chunk": "报告-苏州工业园区的虚拟电厂调研报告：怎样做区域级虚拟电厂_chunk_001",
+      "character_count": 495,
+      "description": "苏州工业园区的成立背景、经济规模、产业定位、能源禀赋等核心基础数据，是其建设区域级虚拟电厂的前提背景。",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_183",
+      "name": "苏州工业园区虚拟电厂建设目标",
+      "classification": "factual",
+      "path": "output/skus/factual/sku_183",
+      "source_chunk": "报告-苏州工业园区的虚拟电厂调研报告：怎样做区域级虚拟电厂_chunk_001",
+      "character_count": 94,
+      "description": "苏州工业园区2025年发布的《虚拟电厂建设实施方案（2025-2027年）》明确的分阶段建设量化目标。",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_184",
+      "name": "苏州工业园区虚拟电厂运营核心规则",
+      "classification": "factual",
+      "path": "output/skus/factual/sku_184",
+      "source_chunk": "报告-苏州工业园区的虚拟电厂调研报告：怎样做区域级虚拟电厂_chunk_001",
+      "character_count": 362,
+      "description": "苏州工业园区区域级虚拟电厂的架构、可调节资源类型、盈利模式、调度优先级等核心运营规则。",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_185",
+      "name": "苏州工业园区虚拟电厂削峰响应运营案例",
+      "classification": "factual",
+      "path": "output/skus/factual/sku_185",
+      "source_chunk": "报告-苏州工业园区的虚拟电厂调研报告：怎样做区域级虚拟电厂_chunk_001",
+      "character_count": 361,
+      "description": "苏州工业园区虚拟电厂开展高峰削峰需求响应的实际运营数据及收益测算参考。",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_186",
+      "name": "苏州工业园区虚拟电厂专项补贴政策",
+      "classification": "factual",
+      "path": "output/skus/factual/sku_186",
+      "source_chunk": "报告-苏州工业园区的虚拟电厂调研报告：怎样做区域级虚拟电厂_chunk_001",
+      "character_count": 386,
+      "description": "苏州工业园区作为江苏省首个推出虚拟电厂专项补贴的地区，实行的三层补贴规则明细。",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_187",
+      "name": "区域级虚拟电厂对工业园区的核心价值",
+      "classification": "factual",
+      "path": "output/skus/factual/sku_187",
+      "source_chunk": "报告-苏州工业园区的虚拟电厂调研报告：怎样做区域级虚拟电厂_chunk_001",
+      "character_count": 205,
+      "description": "区域级虚拟电厂为工业园区带来的三层可量化、可落地的核心价值。",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_188",
+      "name": "区域级虚拟电厂建设可复制经验",
+      "classification": "factual",
+      "path": "output/skus/factual/sku_188",
+      "source_chunk": "报告-苏州工业园区的虚拟电厂调研报告：怎样做区域级虚拟电厂_chunk_001",
+      "character_count": 319,
+      "description": "苏州工业园区建设区域级虚拟电厂的4项创新做法，可供其他园区参考借鉴。",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_189",
+      "name": "虚拟电厂行业发展趋势判断",
+      "classification": "factual",
+      "path": "output/skus/factual/sku_189",
+      "source_chunk": "报告-苏州工业园区的虚拟电厂调研报告：怎样做区域级虚拟电厂_chunk_001",
+      "character_count": 268,
+      "description": "基于最新政策及市场变化的虚拟电厂行业未来发展方向及定位判断。",
+      "confidence": null
+    },
+    {
+      "sku_id": "skill_084",
+      "name": "park-level-virtual-power-plant-construction-workflow",
+      "classification": "procedural",
+      "path": "output/skus/procedural/skill_084",
+      "source_chunk": "报告-苏州工业园区的虚拟电厂调研报告：怎样做区域级虚拟电厂_chunk_001",
+      "character_count": 625,
+      "description": "当园区规划建设区域级虚拟电厂时使用，参考苏州工业园区成熟实践方案落地项目",
+      "confidence": null
+    },
+    {
+      "sku_id": "skill_085",
+      "name": "park-level-virtual-power-plant-demand-response-workflow",
+      "classification": "procedural",
+      "path": "output/skus/procedural/skill_085",
+      "source_chunk": "报告-苏州工业园区的虚拟电厂调研报告：怎样做区域级虚拟电厂_chunk_001",
+      "character_count": 609,
+      "description": "当园区需要发起削峰填谷、新能源消纳等需求响应调度时使用，保障调度效率与准确率",
+      "confidence": null
+    },
+    {
+      "sku_id": "skill_086",
+      "name": "enterprise-participate-in-virtual-power-plant-workflow",
+      "classification": "procedural",
+      "path": "output/skus/procedural/skill_086",
+      "source_chunk": "报告-苏州工业园区的虚拟电厂调研报告：怎样做区域级虚拟电厂_chunk_001",
+      "character_count": 427,
+      "description": "当园区内企业想要参与虚拟电厂获取收益、满足绿电/碳减排要求时使用",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_190",
+      "name": "远景科技集团核心业务布局",
+      "classification": "factual",
+      "path": "output/skus/factual/sku_190",
+      "source_chunk": "报告-远景科技调研报告：如何把握储能 AIDC领域未来机会_chunk_001",
+      "character_count": 279,
+      "description": "远景科技集团的发展基础、行业排名、业务板块及标杆项目信息",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_191",
+      "name": "江苏射阳电网侧储能电站核心参数与收益数据",
+      "classification": "factual",
+      "path": "output/skus/factual/sku_191",
+      "source_chunk": "报告-远景科技调研报告：如何把握储能 AIDC领域未来机会_chunk_001",
+      "character_count": 365,
+      "description": "远景投建的江苏射阳电网侧储能电站的核心参数、不同运营场景下的收益及回本周期测算数据",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_192",
+      "name": "电网侧储能项目核心运营要求",
+      "classification": "factual",
+      "path": "output/skus/factual/sku_192",
+      "source_chunk": "报告-远景科技调研报告：如何把握储能 AIDC领域未来机会_chunk_001",
+      "character_count": 176,
+      "description": "电网侧储能项目区别于传统电源侧强制配储的核心运营要求",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_193",
+      "name": "网侧储能参与电力现货市场交易流程",
+      "classification": "factual",
+      "path": "output/skus/factual/sku_193",
+      "source_chunk": "报告-远景科技调研报告：如何把握储能 AIDC领域未来机会_chunk_001",
+      "character_count": 245,
+      "description": "电网侧储能电站参与日前电力现货市场交易的标准操作步骤",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_194",
+      "name": "远景储能精细化运营核心技术能力",
+      "classification": "factual",
+      "path": "output/skus/factual/sku_194",
+      "source_chunk": "报告-远景科技调研报告：如何把握储能 AIDC领域未来机会_chunk_001",
+      "character_count": 182,
+      "description": "远景为支撑储能项目市场化盈利布局的核心技术体系",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_195",
+      "name": "AIDC（智算中心）能耗核心指标与行业发展数据",
+      "classification": "factual",
+      "path": "output/skus/factual/sku_195",
+      "source_chunk": "报告-远景科技调研报告：如何把握储能 AIDC领域未来机会_chunk_001",
+      "character_count": 535,
+      "description": "智算中心的能耗构成、核心效率指标、行业能耗规模及增长预测数据",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_196",
+      "name": "新能源企业参与AIDC市场的核心路径与要求",
+      "classification": "factual",
+      "path": "output/skus/factual/sku_196",
+      "source_chunk": "报告-远景科技调研报告：如何把握储能 AIDC领域未来机会_chunk_001",
+      "character_count": 273,
+      "description": "新能源企业切入AIDC赛道的核心机会区域、运营模式及技术要求",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_197",
+      "name": "136号文后新能源行业发展趋势",
+      "classification": "factual",
+      "path": "output/skus/factual/sku_197",
+      "source_chunk": "报告-远景科技调研报告：如何把握储能 AIDC领域未来机会_chunk_001",
+      "character_count": 185,
+      "description": "2025年新能源136号文发布后行业的核心发展方向与竞争逻辑变化",
+      "confidence": null
+    },
+    {
+      "sku_id": "skill_087",
+      "name": "grid-side-energy-storage-spot-market-trading-process",
+      "classification": "procedural",
+      "path": "output/skus/procedural/skill_087",
+      "source_chunk": "报告-远景科技调研报告：如何把握储能 AIDC领域未来机会_chunk_001",
+      "character_count": 585,
+      "description": "当电网侧储能电站需要参与电力现货市场交易，提升市场化运营收益时使用。",
+      "confidence": null
+    },
+    {
+      "sku_id": "skill_088",
+      "name": "grid-side-energy-storage-project-feasibility-assessment",
+      "classification": "procedural",
+      "path": "output/skus/procedural/skill_088",
+      "source_chunk": "报告-远景科技调研报告：如何把握储能 AIDC领域未来机会_chunk_001",
+      "character_count": 436,
+      "description": "当计划投资、建设、运营电网侧储能项目，评估项目盈利可行性时使用。",
+      "confidence": null
+    },
+    {
+      "sku_id": "skill_089",
+      "name": "new-energy-enterprise-aidc-business-development-process",
+      "classification": "procedural",
+      "path": "output/skus/procedural/skill_089",
+      "source_chunk": "报告-远景科技调研报告：如何把握储能 AIDC领域未来机会_chunk_001",
+      "character_count": 512,
+      "description": "当新能源企业计划开拓AIDC（智算中心）领域的绿电配套业务，挖掘新的市场机会时使用。",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_198",
+      "name": "零碳园区主流定义",
+      "classification": "factual",
+      "path": "output/skus/factual/sku_198",
+      "source_chunk": "报告-金风科技调研报告：我国首个碳中和园区是怎样建成的？_chunk_001",
+      "character_count": 120,
+      "description": "当前国内各地政策中普遍采用的零碳园区定义内容",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_199",
+      "name": "零碳园区建设服务商能力要求",
+      "classification": "factual",
+      "path": "output/skus/factual/sku_199",
+      "source_chunk": "报告-金风科技调研报告：我国首个碳中和园区是怎样建成的？_chunk_001",
+      "character_count": 84,
+      "description": "零碳园区建设服务行业的核心准入能力要求",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_200",
+      "name": "金风科技零碳园区建设方法论",
+      "classification": "factual",
+      "path": "output/skus/factual/sku_200",
+      "source_chunk": "报告-金风科技调研报告：我国首个碳中和园区是怎样建成的？_chunk_001",
+      "character_count": 304,
+      "description": "金风科技总结的零碳园区建设的阶段划分、核心覆盖板块及标准化建设流程",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_201",
+      "name": "金风科技绿洲零碳操作系统功能架构",
+      "classification": "factual",
+      "path": "output/skus/factual/sku_201",
+      "source_chunk": "报告-金风科技调研报告：我国首个碳中和园区是怎样建成的？_chunk_001",
+      "character_count": 159,
+      "description": "金风科技自研的零碳园区核心支撑系统绿洲零碳操作系统的底层逻辑及核心应用功能",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_202",
+      "name": "金风科技零碳业务布局情况",
+      "classification": "factual",
+      "path": "output/skus/factual/sku_202",
+      "source_chunk": "报告-金风科技调研报告：我国首个碳中和园区是怎样建成的？_chunk_001",
+      "character_count": 151,
+      "description": "金风科技在零碳领域的业务布局及项目落地情况",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_203",
+      "name": "金风科技亦庄碳中和智慧园区基础属性",
+      "classification": "factual",
+      "path": "output/skus/factual/sku_203",
+      "source_chunk": "报告-金风科技调研报告：我国首个碳中和园区是怎样建成的？_chunk_001",
+      "character_count": 229,
+      "description": "我国首个获得认证的可再生能源碳中和智慧园区金风科技亦庄园区的基础属性参数",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_204",
+      "name": "金风科技亦庄碳中和园区减排路径",
+      "classification": "factual",
+      "path": "output/skus/factual/sku_204",
+      "source_chunk": "报告-金风科技调研报告：我国首个碳中和园区是怎样建成的？_chunk_001",
+      "character_count": 291,
+      "description": "亦庄碳中和园区的碳排放来源结构及实现零碳的核心技术路径",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_205",
+      "name": "金风科技亦庄碳中和园区2024年用电负荷参数",
+      "classification": "factual",
+      "path": "output/skus/factual/sku_205",
+      "source_chunk": "报告-金风科技调研报告：我国首个碳中和园区是怎样建成的？_chunk_001",
+      "character_count": 234,
+      "description": "亦庄碳中和园区2024年用电负荷的核心统计数据",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_206",
+      "name": "金风科技亦庄碳中和园区零碳运营调度策略",
+      "classification": "factual",
+      "path": "output/skus/factual/sku_206",
+      "source_chunk": "报告-金风科技调研报告：我国首个碳中和园区是怎样建成的？_chunk_001",
+      "character_count": 239,
+      "description": "亦庄碳中和园区在无法配置储能电池的前提下采用的风光匹配调度策略及效果",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_207",
+      "name": "碳排放范围国际划分标准",
+      "classification": "factual",
+      "path": "output/skus/factual/sku_207",
+      "source_chunk": "报告-金风科技调研报告：我国首个碳中和园区是怎样建成的？_chunk_001",
+      "character_count": 166,
+      "description": "国际通用的三类碳排放来源的定义划分",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_208",
+      "name": "金风科技亦庄碳中和园区2024年用电成本对比",
+      "classification": "factual",
+      "path": "output/skus/factual/sku_208",
+      "source_chunk": "报告-金风科技调研报告：我国首个碳中和园区是怎样建成的？_chunk_001",
+      "character_count": 194,
+      "description": "亦庄碳中和园区采用零碳微电网前后的用电成本对比数据",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_209",
+      "name": "金风科技绿电区块链溯源方案",
+      "classification": "factual",
+      "path": "output/skus/factual/sku_209",
+      "source_chunk": "报告-金风科技调研报告：我国首个碳中和园区是怎样建成的？_chunk_001",
+      "character_count": 127,
+      "description": "金风科技研发的无需修建绿电专线的绿电来源溯源技术方案",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_210",
+      "name": "零碳园区行业发展趋势",
+      "classification": "factual",
+      "path": "output/skus/factual/sku_210",
+      "source_chunk": "报告-金风科技调研报告：我国首个碳中和园区是怎样建成的？_chunk_001",
+      "character_count": 132,
+      "description": "当前零碳园区行业的核心发展趋势及核心建设目标",
+      "confidence": null
+    },
+    {
+      "sku_id": "skill_090",
+      "name": "zero-carbon-park-construction-five-step-workflow",
+      "classification": "procedural",
+      "path": "output/skus/procedural/skill_090",
+      "source_chunk": "报告-金风科技调研报告：我国首个碳中和园区是怎样建成的？_chunk_001",
+      "character_count": 405,
+      "description": "从零启动零碳园区规划、建设、运营全流程项目时使用，适用于园区业主或零碳服务商开展相关业务",
+      "confidence": null
+    },
+    {
+      "sku_id": "skill_091",
+      "name": "zero-carbon-park-load-sorting-process",
+      "classification": "procedural",
+      "path": "output/skus/procedural/skill_091",
+      "source_chunk": "报告-金风科技调研报告：我国首个碳中和园区是怎样建成的？_chunk_001",
+      "character_count": 327,
+      "description": "零碳园区设计规划或运营阶段，开展负荷侧管理前梳理用能负荷时使用",
+      "confidence": null
+    },
+    {
+      "sku_id": "skill_092",
+      "name": "zero-carbon-park-green-power-consumption-scheduling",
+      "classification": "procedural",
+      "path": "output/skus/procedural/skill_092",
+      "source_chunk": "报告-金风科技调研报告：我国首个碳中和园区是怎样建成的？_chunk_001",
+      "character_count": 367,
+      "description": "零碳园区运营阶段，最大化本地消纳可再生能源发电、降低碳排放时使用",
+      "confidence": null
+    },
+    {
+      "sku_id": "skill_093",
+      "name": "zero-carbon-park-carbon-neutralization-offset-process",
+      "classification": "procedural",
+      "path": "output/skus/procedural/skill_093",
+      "source_chunk": "报告-金风科技调研报告：我国首个碳中和园区是怎样建成的？_chunk_001",
+      "character_count": 299,
+      "description": "零碳园区完成减排措施后，抵消剩余碳排放实现碳中和目标时使用",
+      "confidence": null
+    },
+    {
+      "sku_id": "skill_094",
+      "name": "green-power-blockchain-traceability-process",
+      "classification": "procedural",
+      "path": "output/skus/procedural/skill_094",
+      "source_chunk": "报告-金风科技调研报告：我国首个碳中和园区是怎样建成的？_chunk_001",
+      "character_count": 280,
+      "description": "用电方需要证明外购电力为绿电，无需建设专属绿电输电线路时使用",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_211",
+      "name": "肯尼亚核心基础属性及能源结构参数",
+      "classification": "factual",
+      "path": "output/skus/factual/sku_211",
+      "source_chunk": "报告-非洲调研报告（一）：中国新能源企业在肯尼亚有什么机会？_chunk_001",
+      "character_count": 794,
+      "description": "包含肯尼亚人口、经济、基础设施、能源结构等维度的核心量化参数，反映其新能源市场发展的基础条件",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_212",
+      "name": "肯尼亚能源领域核心机构职能",
+      "classification": "factual",
+      "path": "output/skus/factual/sku_212",
+      "source_chunk": "报告-非洲调研报告（一）：中国新能源企业在肯尼亚有什么机会？_chunk_001",
+      "character_count": 739,
+      "description": "肯尼亚能源监管、发电、输配电领域核心机构的定位及职能说明，为中国企业对接当地主体提供参考",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_213",
+      "name": "肯尼亚新能源政策规则及电价情况",
+      "classification": "factual",
+      "path": "output/skus/factual/sku_213",
+      "source_chunk": "报告-非洲调研报告（一）：中国新能源企业在肯尼亚有什么机会？_chunk_001",
+      "character_count": 885,
+      "description": "肯尼亚新能源行业的政策演变、电价水平、不同类型新能源项目的准入规则说明",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_214",
+      "name": "肯尼亚新能源市场中国企业出海建议",
+      "classification": "factual",
+      "path": "output/skus/factual/sku_214",
+      "source_chunk": "报告-非洲调研报告（一）：中国新能源企业在肯尼亚有什么机会？_chunk_001",
+      "character_count": 556,
+      "description": "基于当地市场特征、印度企业成功经验总结的中国新能源企业出海肯尼亚的核心建议",
+      "confidence": null
+    },
+    {
+      "sku_id": "skill_095",
+      "name": "china-new-energy-enterprise-kenya-entry-assessment",
+      "classification": "procedural",
+      "path": "output/skus/procedural/skill_095",
+      "source_chunk": "报告-非洲调研报告（一）：中国新能源企业在肯尼亚有什么机会？_chunk_001",
+      "character_count": 365,
+      "description": "中国新能源企业规划进入肯尼亚新能源市场前做市场适配评估时使用",
+      "confidence": null
+    },
+    {
+      "sku_id": "skill_096",
+      "name": "kenya-distributed-pv-project-development-process",
+      "classification": "procedural",
+      "path": "output/skus/procedural/skill_096",
+      "source_chunk": "报告-非洲调研报告（一）：中国新能源企业在肯尼亚有什么机会？_chunk_001",
+      "character_count": 408,
+      "description": "企业在肯尼亚开发分布式光伏（工商业/户用）项目时使用",
+      "confidence": null
+    },
+    {
+      "sku_id": "skill_097",
+      "name": "kenya-state-owned-energy-enterprise-cooperation-workflow",
+      "classification": "procedural",
+      "path": "output/skus/procedural/skill_097",
+      "source_chunk": "报告-非洲调研报告（一）：中国新能源企业在肯尼亚有什么机会？_chunk_001",
+      "character_count": 395,
+      "description": "中国企业计划与肯尼亚国有能源企业开展项目合作时使用",
+      "confidence": null
+    },
+    {
+      "sku_id": "skill_098",
+      "name": "kenya-new-energy-project-risk-mitigation-guide",
+      "classification": "procedural",
+      "path": "output/skus/procedural/skill_098",
+      "source_chunk": "报告-非洲调研报告（一）：中国新能源企业在肯尼亚有什么机会？_chunk_001",
+      "character_count": 377,
+      "description": "中国新能源企业在肯尼亚运营项目需要规避各类风险时使用",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_215",
+      "name": "赞比亚基本国情与能源危机现状",
+      "classification": "factual",
+      "path": "output/skus/factual/sku_215",
+      "source_chunk": "报告-非洲调研报告（二）：中国新能源企业在赞比亚有什么机会？_chunk_001",
+      "character_count": 404,
+      "description": "涵盖赞比亚的地理定位、外交关系、社会稳定性、经济支柱及当前面临的电力短缺现状与成因",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_216",
+      "name": "赞比亚新能源发展核心驱动力",
+      "classification": "factual",
+      "path": "output/skus/factual/sku_216",
+      "source_chunk": "报告-非洲调研报告（二）：中国新能源企业在赞比亚有什么机会？_chunk_001",
+      "character_count": 287,
+      "description": "介绍推动赞比亚新能源装机长期增长的三大核心因素及相关量化目标",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_217",
+      "name": "赞比亚新能源领域核心对接主体权责",
+      "classification": "factual",
+      "path": "output/skus/factual/sku_217",
+      "source_chunk": "报告-非洲调研报告（二）：中国新能源企业在赞比亚有什么机会？_chunk_001",
+      "character_count": 533,
+      "description": "列明中国企业赴赞比亚开展新能源业务需对接的核心政府部门、协会、国企的名称及核心职能",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_218",
+      "name": "赞比亚新能源投资支持政策",
+      "classification": "factual",
+      "path": "output/skus/factual/sku_218",
+      "source_chunk": "报告-非洲调研报告（二）：中国新能源企业在赞比亚有什么机会？_chunk_001",
+      "character_count": 496,
+      "description": "介绍赞比亚政府为吸引新能源外资推出的核心支持政策、激励门槛及权益保障措施",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_219",
+      "name": "赞比亚新能源项目投资审批流程",
+      "classification": "factual",
+      "path": "output/skus/factual/sku_219",
+      "source_chunk": "报告-非洲调研报告（二）：中国新能源企业在赞比亚有什么机会？_chunk_001",
+      "character_count": 231,
+      "description": "列明中国企业在赞比亚开发新能源项目需遵循的标准化审批步骤及要求",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_220",
+      "name": "赞比亚新能源市场核心机会点",
+      "classification": "factual",
+      "path": "output/skus/factual/sku_220",
+      "source_chunk": "报告-非洲调研报告（二）：中国新能源企业在赞比亚有什么机会？_chunk_001",
+      "character_count": 542,
+      "description": "介绍当前赞比亚新能源领域六大可落地的市场机会方向及各自优劣势、适配场景",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_221",
+      "name": "中国新能源企业赴赞比亚投资发展建议",
+      "classification": "factual",
+      "path": "output/skus/factual/sku_221",
+      "source_chunk": "报告-非洲调研报告（二）：中国新能源企业在赞比亚有什么机会？_chunk_001",
+      "character_count": 260,
+      "description": "总结在赞中资企业实战经验，给出的投资、运营、市场竞争相关建议",
+      "confidence": null
+    },
+    {
+      "sku_id": "skill_099",
+      "name": "zambia-new-energy-investment-approval-workflow",
+      "classification": "procedural",
+      "path": "output/skus/procedural/skill_099",
+      "source_chunk": "报告-非洲调研报告（二）：中国新能源企业在赞比亚有什么机会？_chunk_001",
+      "character_count": 555,
+      "description": "中国新能源企业在赞比亚申请投资新能源项目时使用，完成合规审批全流程",
+      "confidence": null
+    },
+    {
+      "sku_id": "skill_100",
+      "name": "zambia-new-energy-market-entry-strategy-workflow",
+      "classification": "procedural",
+      "path": "output/skus/procedural/skill_100",
+      "source_chunk": "报告-非洲调研报告（二）：中国新能源企业在赞比亚有什么机会？_chunk_001",
+      "character_count": 454,
+      "description": "中国新能源企业计划进入赞比亚市场时使用，制定低风险的进入与发展策略",
+      "confidence": null
+    },
+    {
+      "sku_id": "skill_101",
+      "name": "zambia-new-energy-ppa-risk-avoidance-workflow",
+      "classification": "procedural",
+      "path": "output/skus/procedural/skill_101",
+      "source_chunk": "报告-非洲调研报告（二）：中国新能源企业在赞比亚有什么机会？_chunk_001",
+      "character_count": 397,
+      "description": "中国新能源企业在赞比亚签署购电协议时使用，有效降低回款风险",
+      "confidence": null
+    },
+    {
+      "sku_id": "relational-knowledge-base",
+      "name": "relational-knowledge-base",
+      "classification": "relational",
+      "path": "output/skus/relational",
+      "source_chunk": "aggregated",
+      "character_count": 203976,
+      "description": "Domain label hierarchy and terminology glossary",
+      "confidence": null
+    },
+    {
+      "sku_id": "meta-knowledge",
+      "name": "meta-knowledge",
+      "classification": "meta",
+      "path": "output/skus/meta",
+      "source_chunk": "aggregated",
+      "character_count": 23052,
+      "description": "SKU routing (mapping.md) and creative insights (eureka.md)",
+      "confidence": null
+    }
+  ],
+  "factual_count": 221,
+  "relational_count": 1,
+  "procedural_count": 101,
+  "meta_count": 1
+}

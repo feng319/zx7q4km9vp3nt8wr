@@ -1,0 +1,12 @@
+2026-04-25T16:27:32.720720Z [info     ] Starting ontology pipeline     [skus2ontology.pipeline] ontology_dir='G:\\Program Files\\AI coding\\知识萃取\\新能源\\输出\\ontology' skip_chatbot=True skus_dir=output\skus
+2026-04-25T16:27:32.722196Z [info     ] Starting ontology assembly     [skus2ontology.assembler] ontology_dir='G:\\Program Files\\AI coding\\知识萃取\\新能源\\输出\\ontology' skus_dir=C:\Users\56839\.claude\skills\Anything2Ontology\output\skus
+2026-04-25T16:27:33.612023Z [info     ] Copied directory               [skus2ontology.assembler] files=784 subdir=factual
+2026-04-25T16:27:34.048259Z [info     ] Copied directory               [skus2ontology.assembler] files=302 subdir=procedural
+2026-04-25T16:27:34.054118Z [info     ] Copied directory               [skus2ontology.assembler] files=4 subdir=relational
+2026-04-25T16:27:34.066960Z [info     ] Copied and rewrote skus_index.json [skus2ontology.assembler] paths_rewritten=0
+2026-04-25T16:27:34.069315Z [info     ] Copied eureka.md to ontology root [skus2ontology.assembler]
+2026-04-25T16:27:34.072374Z [info     ] Rewrote mapping.md             [skus2ontology.assembler] paths_rewritten=0
+2026-04-25T16:27:34.072374Z [info     ] Assembly complete              [skus2ontology.assembler] factual=392 paths_rewritten=0 procedural=151 total_files=1093
+2026-04-25T16:27:34.074378Z [info     ] Generated README.md            [skus2ontology.readme_generator] path='G:\\Program Files\\AI coding\\知识萃取\\新能源\\输出\\ontology\\README.md'
+2026-04-25T16:27:34.075487Z [info     ] Saved ontology manifest        [skus2ontology.pipeline] path='G:\\Program Files\\AI coding\\知识萃取\\新能源\\输出\\ontology\\ontology_manifest.json'
+2026-04-25T16:27:34.075487Z [info     ] Ontology pipeline complete     [skus2ontology.pipeline] duration_seconds=1.4 has_readme=True has_spec=False total_files=1093

@@ -1,0 +1,24 @@
+2026-04-29T01:12:06.254739Z [info     ] Starting Anything2Markdown pipeline [anything2markdown.cli]
+2026-04-29T01:12:06.256241Z [info     ] Input directory                [anything2markdown.cli] path='G:\\Program Files\\AI coding\\知识萃取\\战略分析\\输入'
+2026-04-29T01:12:06.256241Z [info     ] Output directory               [anything2markdown.cli] path='G:\\Program Files\\AI coding\\知识萃取\\战略分析\\输出'
+2026-04-29T01:12:06.258402Z [info     ] Starting Anything2Markdown pipeline [anything2markdown.pipeline] input_dir='G:\\Program Files\\AI coding\\知识萃取\\战略分析\\输入' output_dir='G:\\Program Files\\AI coding\\知识萃取\\战略分析\\输出'
+2026-04-29T01:12:06.258402Z [info     ] Processing items in parallel   [anything2markdown.pipeline] count=5 max_workers=8 task_type=api
+2026-04-29T01:12:06.258402Z [info     ] Processing file                [anything2markdown.pipeline] file=2026六大新兴产业发展形势展望.pdf
+2026-04-29T01:12:06.259815Z [info     ] Processing file                [anything2markdown.pipeline] file=BSC七步法：设计企业的战略地图.pdf
+2026-04-29T01:12:06.260868Z [info     ] MarkItDown parsing             [anything2markdown.parsers.markitdown_parser] file=2026六大新兴产业发展形势展望.pdf
+2026-04-29T01:12:06.260868Z [info     ] Processing file                [anything2markdown.pipeline] file=企业战略与财富增长创新蓝宝书.pdf
+2026-04-29T01:12:06.260868Z [info     ] Processing file                [anything2markdown.pipeline] file=玥堂主【投资&创新】200+思维套图合集.pdf
+2026-04-29T01:12:06.261872Z [info     ] MarkItDown parsing             [anything2markdown.parsers.markitdown_parser] file=BSC七步法：设计企业的战略地图.pdf
+2026-04-29T01:12:06.261872Z [info     ] Processing file                [anything2markdown.pipeline] file=科技战略与投资策略10个建议与5大误区.pdf
+2026-04-29T01:12:06.261872Z [info     ] MarkItDown parsing             [anything2markdown.parsers.markitdown_parser] file=企业战略与财富增长创新蓝宝书.pdf
+2026-04-29T01:12:06.262895Z [info     ] MarkItDown parsing             [anything2markdown.parsers.markitdown_parser] file=玥堂主【投资&创新】200+思维套图合集.pdf
+2026-04-29T01:12:06.263895Z [info     ] MarkItDown parsing             [anything2markdown.parsers.markitdown_parser] file=科技战略与投资策略10个建议与5大误区.pdf
+2026-04-29T01:12:07.604385Z [info     ] MarkItDown success             [anything2markdown.parsers.markitdown_parser] chars=3667 file=BSC七步法：设计企业的战略地图.pdf output=BSC七步法：设计企业的战略地图.md
+2026-04-29T01:12:27.145944Z [info     ] MarkItDown success             [anything2markdown.parsers.markitdown_parser] chars=14642 file=科技战略与投资策略10个建议与5大误区.pdf output=科技战略与投资策略10个建议与5大误区.md
+2026-04-29T01:12:57.137282Z [info     ] MarkItDown success             [anything2markdown.parsers.markitdown_parser] chars=33866 file=玥堂主【投资&创新】200+思维套图合集.pdf output=玥堂主【投资&创新】200+思维套图合集.md
+2026-04-29T01:13:21.633838Z [info     ] MarkItDown success             [anything2markdown.parsers.markitdown_parser] chars=62049 file=2026六大新兴产业发展形势展望.pdf output=2026六大新兴产业发展形势展望.md
+2026-04-29T01:15:44.966771Z [info     ] MarkItDown success             [anything2markdown.parsers.markitdown_parser] chars=2189984 file=企业战略与财富增长创新蓝宝书.pdf output=企业战略与财富增长创新蓝宝书.md
+2026-04-29T01:15:45.167389Z [info     ] File processing complete       [anything2markdown.pipeline] files_processed=5
+2026-04-29T01:15:45.168835Z [info     ] URL processing complete        [anything2markdown.pipeline] urls_processed=0
+2026-04-29T01:15:45.168835Z [info     ] Pipeline completed             [anything2markdown.pipeline] duration_seconds=218.91 failed=0 skipped=0 success=5 total_processed=5
+2026-04-29T01:15:45.170982Z [info     ] Saved parse results index      [anything2markdown.pipeline] path='G:\\Program Files\\AI coding\\知识萃取\\战略分析\\输出\\parse_results_index.json'

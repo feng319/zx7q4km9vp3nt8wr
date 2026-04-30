@@ -1,0 +1,15 @@
+2026-04-29T01:45:36.968951Z [info     ] Starting chunking pipeline     [markdown2chunks.pipeline] input_dir='G:\\Program Files\\AI coding\\知识萃取\\战略分析\\输出' output_dir='G:\\Program Files\\AI coding\\知识萃取\\战略分析\\输出\\chunks'
+2026-04-29T01:45:36.981326Z [info     ] Found files                    [markdown2chunks.pipeline] json=1 markdown=5
+2026-04-29T01:45:36.982830Z [info     ] Processing markdown            [markdown2chunks.pipeline] file=2026六大新兴产业发展形势展望.md
+2026-04-29T01:45:37.122877Z [info     ] Processed markdown             [markdown2chunks.pipeline] chunks=1 file=2026六大新兴产业发展形势展望.md
+2026-04-29T01:45:37.123899Z [info     ] Processing markdown            [markdown2chunks.pipeline] file=BSC七步法：设计企业的战略地图.md
+2026-04-29T01:45:37.127051Z [info     ] Processed markdown             [markdown2chunks.pipeline] chunks=1 file=BSC七步法：设计企业的战略地图.md
+2026-04-29T01:45:37.128151Z [info     ] Processing markdown            [markdown2chunks.pipeline] file=企业战略与财富增长创新蓝宝书.md
+2026-04-29T01:46:43.964374Z [info     ] Created chunk                  [markdown2chunks.chunkers.llm_chunker] chars=29152 index=1 remaining=77127
+2026-04-29T01:46:44.002893Z [info     ] LLM chunking complete          [markdown2chunks.chunkers.llm_chunker] chunks=2 input_tokens=118566
+2026-04-29T01:46:44.005979Z [info     ] Processed markdown             [markdown2chunks.pipeline] chunks=2 file=企业战略与财富增长创新蓝宝书.md
+2026-04-29T01:46:44.007223Z [info     ] Processing markdown            [markdown2chunks.pipeline] file=玥堂主【投资&创新】200+思维套图合集.md
+2026-04-29T01:46:44.026314Z [info     ] Processed markdown             [markdown2chunks.pipeline] chunks=1 file=玥堂主【投资&创新】200+思维套图合集.md
+2026-04-29T01:46:44.027317Z [info     ] Processing markdown            [markdown2chunks.pipeline] file=科技战略与投资策略10个建议与5大误区.md
+2026-04-29T01:46:44.037627Z [info     ] Processed markdown             [markdown2chunks.pipeline] chunks=1 file=科技战略与投资策略10个建议与5大误区.md
+2026-04-29T01:46:44.040135Z [info     ] Chunking pipeline complete     [markdown2chunks.pipeline] duration_seconds=67.1 source_files=5 total_chunks=6 total_tokens=251155

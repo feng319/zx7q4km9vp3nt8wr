@@ -1,0 +1,13 @@
+2026-04-27T14:48:44.259237Z [info     ] Starting chunking pipeline     [markdown2chunks.pipeline] input_dir='G:\\Program Files\\AI coding\\知识萃取\\商业模式\\输出' output_dir='G:\\Program Files\\AI coding\\知识萃取\\商业模式\\输出\\chunks'
+2026-04-27T14:48:44.262753Z [info     ] Found files                    [markdown2chunks.pipeline] json=1 markdown=5
+2026-04-27T14:48:44.265418Z [info     ] Processing markdown            [markdown2chunks.pipeline] file=1.业务不变，营收秒变（X50）的商业模式_笔记.md
+2026-04-27T14:48:44.371362Z [info     ] Processed markdown             [markdown2chunks.pipeline] chunks=1 file=1.业务不变，营收秒变（X50）的商业模式_笔记.md
+2026-04-27T14:48:44.371362Z [info     ] Processing markdown            [markdown2chunks.pipeline] file='2.ODM OEM，超过耐K、A迪净利的商业模式_笔记.md'
+2026-04-27T14:48:44.375352Z [info     ] Processed markdown             [markdown2chunks.pipeline] chunks=1 file='2.ODM OEM，超过耐K、A迪净利的商业模式_笔记.md'
+2026-04-27T14:48:44.376348Z [info     ] Processing markdown            [markdown2chunks.pipeline] file=3.费用归边，流量占股的商业模式_笔记.md
+2026-04-27T14:48:44.378341Z [info     ] Processed markdown             [markdown2chunks.pipeline] chunks=1 file=3.费用归边，流量占股的商业模式_笔记.md
+2026-04-27T14:48:44.378341Z [info     ] Processing markdown            [markdown2chunks.pipeline] file=4.上下通吃，打通经销商合伙人激励的模式.md
+2026-04-27T14:48:44.380837Z [info     ] Processed markdown             [markdown2chunks.pipeline] chunks=1 file=4.上下通吃，打通经销商合伙人激励的模式.md
+2026-04-27T14:48:44.381836Z [info     ] Processing markdown            [markdown2chunks.pipeline] file=5.不做主机厂，专注整合商的模式_笔记.md
+2026-04-27T14:48:44.384829Z [info     ] Processed markdown             [markdown2chunks.pipeline] chunks=1 file=5.不做主机厂，专注整合商的模式_笔记.md
+2026-04-27T14:48:44.387820Z [info     ] Chunking pipeline complete     [markdown2chunks.pipeline] duration_seconds=0.1 source_files=5 total_chunks=5 total_tokens=7413

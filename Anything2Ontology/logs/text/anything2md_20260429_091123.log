@@ -1,0 +1,17 @@
+2026-04-29T01:11:23.332447Z [info     ] Starting Anything2Markdown pipeline [anything2markdown.cli]
+2026-04-29T01:11:23.333545Z [info     ] Input directory                [anything2markdown.cli] path='G:\\Program Files\\AI coding\\知识萃取\\战略分析\\输入'
+2026-04-29T01:11:23.333545Z [info     ] Output directory               [anything2markdown.cli] path='G:\\Program Files\\AI coding\\知识萃取\\战略分析\\输出'
+2026-04-29T01:11:23.335868Z [info     ] Starting Anything2Markdown pipeline [anything2markdown.pipeline] input_dir='G:\\Program Files\\AI coding\\知识萃取\\战略分析\\输入' output_dir='G:\\Program Files\\AI coding\\知识萃取\\战略分析\\输出'
+2026-04-29T01:11:23.335868Z [info     ] Processing items in parallel   [anything2markdown.pipeline] count=4 max_workers=8 task_type=api
+2026-04-29T01:11:23.337188Z [info     ] Processing file                [anything2markdown.pipeline] file=2026六大新兴产业发展形势展望.pdf
+2026-04-29T01:11:23.337188Z [info     ] Processing file                [anything2markdown.pipeline] file=BSC七步法：设计企业的战略地图.pdf
+2026-04-29T01:11:23.337188Z [info     ] Skipping already-processed file [anything2markdown.pipeline] file=2026六大新兴产业发展形势展望.pdf output=2026六大新兴产业发展形势展望.md
+2026-04-29T01:11:23.338690Z [info     ] Processing file                [anything2markdown.pipeline] file=玥堂主【投资&创新】200+思维套图合集.pdf
+2026-04-29T01:11:23.338690Z [info     ] Processing file                [anything2markdown.pipeline] file=科技战略与投资策略10个建议与5大误区.pdf
+2026-04-29T01:11:23.338690Z [info     ] Skipping already-processed file [anything2markdown.pipeline] file=BSC七步法：设计企业的战略地图.pdf output=BSC七步法：设计企业的战略地图.md
+2026-04-29T01:11:23.339759Z [info     ] Skipping already-processed file [anything2markdown.pipeline] file=科技战略与投资策略10个建议与5大误区.pdf output=科技战略与投资策略10个建议与5大误区.md
+2026-04-29T01:11:23.339759Z [info     ] Skipping already-processed file [anything2markdown.pipeline] file=玥堂主【投资&创新】200+思维套图合集.pdf output=玥堂主【投资&创新】200+思维套图合集.md
+2026-04-29T01:11:23.340876Z [info     ] File processing complete       [anything2markdown.pipeline] files_processed=4
+2026-04-29T01:11:23.341878Z [info     ] URL processing complete        [anything2markdown.pipeline] urls_processed=0
+2026-04-29T01:11:23.341878Z [info     ] Pipeline completed             [anything2markdown.pipeline] duration_seconds=0.01 failed=0 skipped=0 success=4 total_processed=4
+2026-04-29T01:11:23.342930Z [info     ] Saved parse results index      [anything2markdown.pipeline] path='G:\\Program Files\\AI coding\\知识萃取\\战略分析\\输出\\parse_results_index.json'

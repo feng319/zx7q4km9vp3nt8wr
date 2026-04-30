@@ -1,0 +1,60 @@
+2026-04-24T03:06:57.851477Z [info     ] Starting chunking pipeline     [markdown2chunks.pipeline] input_dir='G:\\Program Files\\AI coding\\知识萃取\\输出' output_dir='G:\\Program Files\\AI coding\\知识萃取\\输出\\chunks'
+2026-04-24T03:06:57.854467Z [info     ] Found files                    [markdown2chunks.pipeline] json=1 markdown=6
+2026-04-24T03:06:57.857986Z [info     ] Processing markdown            [markdown2chunks.pipeline] file=2026六大新兴产业发展形势展望.md
+2026-04-24T03:07:02.355167Z [info     ] Processed markdown             [markdown2chunks.pipeline] chunks=1 file=2026六大新兴产业发展形势展望.md
+2026-04-24T03:07:02.356669Z [info     ] Processing markdown            [markdown2chunks.pipeline] file=BSC七步法：设计企业的战略地图.md
+2026-04-24T03:07:02.430996Z [info     ] Processed markdown             [markdown2chunks.pipeline] chunks=1 file=BSC七步法：设计企业的战略地图.md
+2026-04-24T03:07:02.432009Z [info     ] Processing markdown            [markdown2chunks.pipeline] file=企业战略与财富增长创新蓝宝书.md
+2026-04-24T03:08:10.168423Z [warning  ] tokens_after not found at expected position [markdown2chunks.utils.levenshtein] after_pos=None expected_pos=797
+2026-04-24T03:08:10.171413Z [info     ] Created chunk                  [markdown2chunks.chunkers.llm_chunker] chars=795 index=1 remaining=1273360
+2026-04-24T03:09:02.550846Z [warning  ] tokens_after not found at expected position [markdown2chunks.utils.levenshtein] after_pos=96 expected_pos=5641
+2026-04-24T03:09:02.555149Z [info     ] Created chunk                  [markdown2chunks.chunkers.llm_chunker] chars=5641 index=2 remaining=1267714
+2026-04-24T03:09:46.766333Z [info     ] Created chunk                  [markdown2chunks.chunkers.llm_chunker] chars=9481 index=3 remaining=1258231
+2026-04-24T03:10:46.730625Z [info     ] Created chunk                  [markdown2chunks.chunkers.llm_chunker] chars=15925 index=4 remaining=1242304
+2026-04-24T03:11:37.947603Z [info     ] Created chunk                  [markdown2chunks.chunkers.llm_chunker] chars=15925 index=5 remaining=1226377
+2026-04-24T03:12:42.428148Z [info     ] Created chunk                  [markdown2chunks.chunkers.llm_chunker] chars=15925 index=6 remaining=1210450
+2026-04-24T03:14:17.474148Z [info     ] Created chunk                  [markdown2chunks.chunkers.llm_chunker] chars=15925 index=7 remaining=1194523
+2026-04-24T03:14:58.494058Z [info     ] Created chunk                  [markdown2chunks.chunkers.llm_chunker] chars=15925 index=8 remaining=1178596
+2026-04-24T03:16:16.605877Z [warning  ] tokens_after not found at expected position [markdown2chunks.utils.levenshtein] after_pos=100 expected_pos=15763
+2026-04-24T03:16:16.610084Z [info     ] Created chunk                  [markdown2chunks.chunkers.llm_chunker] chars=15759 index=9 remaining=1162832
+2026-04-24T03:17:54.248941Z [warning  ] tokens_after not found at expected position [markdown2chunks.utils.levenshtein] after_pos=100 expected_pos=15926
+2026-04-24T03:17:54.254703Z [info     ] Created chunk                  [markdown2chunks.chunkers.llm_chunker] chars=15922 index=10 remaining=1146905
+2026-04-24T03:23:34.186197Z [warning  ] tokens_after not found at expected position [markdown2chunks.utils.levenshtein] after_pos=None expected_pos=3278
+2026-04-24T03:23:34.189225Z [info     ] Created chunk                  [markdown2chunks.chunkers.llm_chunker] chars=3278 index=11 remaining=1143626
+2026-04-24T03:25:32.197809Z [warning  ] Failed to extract cut points from LLM response [markdown2chunks.chunkers.llm_chunker]
+2026-04-24T03:25:32.475708Z [info     ] Created chunk                  [markdown2chunks.chunkers.llm_chunker] chars=267643 index=12 remaining=875983
+2026-04-24T03:26:25.970211Z [info     ] Created chunk                  [markdown2chunks.chunkers.llm_chunker] chars=15925 index=13 remaining=860056
+2026-04-24T03:27:12.600849Z [info     ] Created chunk                  [markdown2chunks.chunkers.llm_chunker] chars=15925 index=14 remaining=844129
+2026-04-24T03:27:50.261672Z [info     ] Created chunk                  [markdown2chunks.chunkers.llm_chunker] chars=15925 index=15 remaining=828202
+2026-04-24T03:29:43.977749Z [warning  ] Failed to extract cut points from LLM response [markdown2chunks.chunkers.llm_chunker]
+2026-04-24T03:29:44.182140Z [info     ] Created chunk                  [markdown2chunks.chunkers.llm_chunker] chars=270759 index=16 remaining=557443
+2026-04-24T03:41:29.266746Z [warning  ] tokens_after not found at expected position [markdown2chunks.utils.levenshtein] after_pos=54 expected_pos=15927
+2026-04-24T03:41:29.270767Z [info     ] Created chunk                  [markdown2chunks.chunkers.llm_chunker] chars=15925 index=17 remaining=541516
+2026-04-24T03:42:27.355416Z [info     ] Created chunk                  [markdown2chunks.chunkers.llm_chunker] chars=15925 index=18 remaining=525589
+2026-04-24T03:43:16.274928Z [info     ] Created chunk                  [markdown2chunks.chunkers.llm_chunker] chars=15925 index=19 remaining=509662
+2026-04-24T03:44:16.190770Z [warning  ] tokens_after not found at expected position [markdown2chunks.utils.levenshtein] after_pos=54 expected_pos=15925
+2026-04-24T03:44:16.194276Z [info     ] Created chunk                  [markdown2chunks.chunkers.llm_chunker] chars=15925 index=20 remaining=493735
+2026-04-24T03:45:02.491865Z [info     ] Created chunk                  [markdown2chunks.chunkers.llm_chunker] chars=15925 index=21 remaining=477808
+2026-04-24T03:45:41.997483Z [info     ] Created chunk                  [markdown2chunks.chunkers.llm_chunker] chars=15925 index=22 remaining=461881
+2026-04-24T03:46:20.457454Z [info     ] Created chunk                  [markdown2chunks.chunkers.llm_chunker] chars=15925 index=23 remaining=445954
+2026-04-24T03:47:40.286051Z [info     ] Created chunk                  [markdown2chunks.chunkers.llm_chunker] chars=15925 index=24 remaining=430027
+2026-04-24T03:48:28.500140Z [warning  ] tokens_after not found at expected position [markdown2chunks.utils.levenshtein] after_pos=62 expected_pos=15925
+2026-04-24T03:48:28.503156Z [info     ] Created chunk                  [markdown2chunks.chunkers.llm_chunker] chars=15925 index=25 remaining=414100
+2026-04-24T03:49:39.020107Z [info     ] Created chunk                  [markdown2chunks.chunkers.llm_chunker] chars=15925 index=26 remaining=398173
+2026-04-24T03:50:30.318522Z [info     ] Created chunk                  [markdown2chunks.chunkers.llm_chunker] chars=15925 index=27 remaining=382246
+2026-04-24T03:51:10.421296Z [info     ] Created chunk                  [markdown2chunks.chunkers.llm_chunker] chars=15925 index=28 remaining=366319
+2026-04-24T06:04:05.731401Z [info     ] Created chunk                  [markdown2chunks.chunkers.llm_chunker] chars=15925 index=29 remaining=350392
+2026-04-24T06:04:44.551961Z [info     ] Created chunk                  [markdown2chunks.chunkers.llm_chunker] chars=15925 index=30 remaining=334465
+2026-04-24T06:05:38.277784Z [info     ] Created chunk                  [markdown2chunks.chunkers.llm_chunker] chars=15925 index=31 remaining=318538
+2026-04-24T06:06:04.879253Z [info     ] Created chunk                  [markdown2chunks.chunkers.llm_chunker] chars=15925 index=32 remaining=302611
+2026-04-24T06:06:44.273769Z [info     ] Created chunk                  [markdown2chunks.chunkers.llm_chunker] chars=15925 index=33 remaining=286684
+2026-04-24T06:07:19.369221Z [info     ] Created chunk                  [markdown2chunks.chunkers.llm_chunker] chars=15925 index=34 remaining=270757
+2026-04-24T06:07:19.516599Z [info     ] LLM chunking complete          [markdown2chunks.chunkers.llm_chunker] chunks=35 input_tokens=462879
+2026-04-24T06:07:19.550217Z [info     ] Processed markdown             [markdown2chunks.pipeline] chunks=35 file=企业战略与财富增长创新蓝宝书.md
+2026-04-24T06:07:19.552265Z [info     ] Processing markdown            [markdown2chunks.pipeline] file=玥堂主【投资&创新】200+思维套图合集.md
+2026-04-24T06:07:19.595299Z [info     ] Processed markdown             [markdown2chunks.pipeline] chunks=1 file=玥堂主【投资&创新】200+思维套图合集.md
+2026-04-24T06:07:19.596670Z [info     ] Processing markdown            [markdown2chunks.pipeline] file=科技战略与投资策略10个建议与5大误区(1).md
+2026-04-24T06:07:19.617738Z [info     ] Processed markdown             [markdown2chunks.pipeline] chunks=1 file=科技战略与投资策略10个建议与5大误区(1).md
+2026-04-24T06:07:19.618753Z [info     ] Processing markdown            [markdown2chunks.pipeline] file=科技战略与投资策略10个建议与5大误区.md
+2026-04-24T06:07:19.640185Z [info     ] Processed markdown             [markdown2chunks.pipeline] chunks=1 file=科技战略与投资策略10个建议与5大误区.md
+2026-04-24T06:07:19.662242Z [info     ] Chunking pipeline complete     [markdown2chunks.pipeline] duration_seconds=10821.8 source_files=6 total_chunks=40 total_tokens=611090

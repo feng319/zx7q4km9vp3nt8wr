@@ -1,0 +1,17 @@
+2026-04-28T13:42:17.888422Z [info     ] Starting ontology pipeline     [skus2ontology.pipeline] ontology_dir='G:\\Program Files\\AI coding\\知识萃取\\新能源\\输出\\ontology' skip_chatbot=False skus_dir=output\skus
+2026-04-28T13:42:17.893405Z [info     ] Starting ontology assembly     [skus2ontology.assembler] ontology_dir='G:\\Program Files\\AI coding\\知识萃取\\新能源\\输出\\ontology' skus_dir=C:\Users\56839\.claude\skills\Anything2Ontology\output\skus
+2026-04-28T13:42:19.691940Z [info     ] Copied directory               [skus2ontology.assembler] files=1232 subdir=factual
+2026-04-28T13:42:21.634930Z [info     ] Copied directory               [skus2ontology.assembler] files=688 subdir=procedural
+2026-04-28T13:42:21.644254Z [info     ] Copied directory               [skus2ontology.assembler] files=4 subdir=relational
+2026-04-28T13:42:21.660711Z [info     ] Copied and rewrote skus_index.json [skus2ontology.assembler] paths_rewritten=962
+2026-04-28T13:42:21.661708Z [info     ] Copied eureka.md to ontology root [skus2ontology.assembler]
+2026-04-28T13:42:21.666220Z [info     ] Rewrote mapping.md             [skus2ontology.assembler] paths_rewritten=0
+2026-04-28T13:42:21.668214Z [info     ] Assembly complete              [skus2ontology.assembler] factual=616 paths_rewritten=962 procedural=344 total_files=1927
+2026-04-28T13:42:21.669210Z [info     ] Starting spec chatbot          [skus2ontology.chatbot] max_rounds=5
+2026-04-28T13:42:21.670571Z [info     ] Loaded mapping.md              [skus2ontology.chatbot] compressed_chars=382 original_chars=49322
+2026-04-28T13:42:21.671642Z [info     ] Loaded eureka.md               [skus2ontology.chatbot] chars=5016
+2026-04-28T13:54:30.455622Z [info     ] Saved spec.md                  [skus2ontology.chatbot] chars=3984 path='G:\\Program Files\\AI coding\\知识萃取\\新能源\\输出\\ontology\\spec.md'
+2026-04-28T13:54:30.463602Z [info     ] Saved chat log                 [skus2ontology.pipeline] confirmed=False path='G:\\Program Files\\AI coding\\知识萃取\\新能源\\输出\\ontology\\chat_log.json' rounds=5
+2026-04-28T13:54:30.465102Z [info     ] Generated README.md            [skus2ontology.readme_generator] path='G:\\Program Files\\AI coding\\知识萃取\\新能源\\输出\\ontology\\README.md'
+2026-04-28T13:54:30.467097Z [info     ] Saved ontology manifest        [skus2ontology.pipeline] path='G:\\Program Files\\AI coding\\知识萃取\\新能源\\输出\\ontology\\ontology_manifest.json'
+2026-04-28T13:54:30.468094Z [info     ] Ontology pipeline complete     [skus2ontology.pipeline] duration_seconds=732.6 has_readme=True has_spec=True total_files=1927

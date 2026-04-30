@@ -1,0 +1,10 @@
+2026-04-29T10:15:48.819964Z [info     ] Starting spec chatbot          [skus2ontology.chatbot] max_rounds=5
+2026-04-29T10:15:48.820961Z [info     ] Loaded mapping.md titles       [skus2ontology.chatbot] original_chars=49322 title_chars=378
+2026-04-29T10:15:48.837938Z [info     ] Loaded eureka.md               [skus2ontology.chatbot] chars=16728
+2026-04-29T10:53:32.884826Z [warning  ] SKU index summary truncated    [skus2ontology.chatbot] limit=18000 original_chars=65604
+2026-04-29T10:53:32.885822Z [info     ] Built SKU index summary        [skus2ontology.chatbot] chars=18013 sku_count=962
+2026-04-29T10:54:54.973208Z [info     ] Phase 2 anchor replacement complete [skus2ontology.chatbot] draft_chars=3085 final_chars=3088
+2026-04-29T10:54:54.977198Z [info     ] Remaining anchors              [skus2ontology.chatbot] count=29 sample=['【锚点：利益共同体长效激励原则】', '【锚点：高客单价产品打包引流机制】', '【锚点：类金融预收款扩张机制】', '【锚点：数据资产估值溢价规律】', '【锚点：轻资产模式抗周期适配规则】', '【锚点：营收增长三维优化机制】', '【锚点：分散行业整合双轮驱动规则】', '【锚点：全域短内容矩阵品牌成型公式】', '【锚点：短内容爆款结构化创作模板】', '【锚点：公域内容分层运营框架】']
+2026-04-29T10:54:54.980188Z [info     ] Backed up existing spec.md     [skus2ontology.chatbot] backup='G:\\Program Files\\AI coding\\知识萃取\\商业模式资本\\输出\\ontology\\spec.md.bak.20260429_185454'
+2026-04-29T10:54:54.986677Z [info     ] Saved spec.md                  [skus2ontology.chatbot] chars=3088 path='G:\\Program Files\\AI coding\\知识萃取\\商业模式资本\\输出\\ontology\\spec.md'
+2026-04-29T10:54:54.992625Z [info     ] Saved chat log                 [skus2ontology.pipeline] confirmed=False path='G:\\Program Files\\AI coding\\知识萃取\\商业模式资本\\输出\\ontology\\chat_log.json' rounds=5

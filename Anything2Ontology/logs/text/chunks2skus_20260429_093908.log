@@ -1,0 +1,6 @@
+2026-04-29T01:39:08.720385Z [info     ] Force reset: clearing existing index for full re-extraction [chunks2skus.pipeline]
+2026-04-29T01:39:08.720385Z [info     ] Starting extraction pipeline   [chunks2skus.pipeline] chunks_dir='G:\\Program Files\\AI coding\\知识萃取\\战略分析\\输出\\chunks' force_reset=True output_dir='G:\\Program Files\\AI coding\\知识萃取\\战略分析\\输出\\skus'
+2026-04-29T01:39:08.722556Z [info     ] Deleted state file for force reset [chunks2skus.pipeline] path='G:\\Program Files\\AI coding\\知识萃取\\战略分析\\输出\\skus\\meta\\mapping.md'
+2026-04-29T01:39:08.723745Z [info     ] Deleted state file for force reset [chunks2skus.pipeline] path='G:\\Program Files\\AI coding\\知识萃取\\战略分析\\输出\\skus\\meta\\eureka.md'
+2026-04-29T01:39:08.726310Z [error    ] chunks_index.json not found    [chunks2skus.router] path='G:\\Program Files\\AI coding\\知识萃取\\战略分析\\输出\\chunks\\chunks_index.json'
+2026-04-29T01:39:08.727749Z [warning  ] No chunks found to process     [chunks2skus.pipeline]

@@ -1,0 +1,13 @@
+2026-04-29T15:17:36.500650Z [info     ] Starting spec chatbot          [skus2ontology.chatbot] max_rounds=5
+2026-04-29T15:17:36.517628Z [info     ] Built name_to_path lookup      [skus2ontology.chatbot] entries=958
+2026-04-29T15:17:36.521003Z [info     ] slug→path inline resolution    [skus2ontology.chatbot] matched=944 total_lines=971
+2026-04-29T15:17:36.521003Z [info     ] Loaded mapping.md (compressed) [skus2ontology.chatbot] compressed_chars=29995 original_chars=49322
+2026-04-29T15:17:36.530921Z [info     ] Loaded eureka.md               [skus2ontology.chatbot] chars=16728
+2026-04-29T15:30:54.063440Z [warning  ] SKU index summary truncated    [skus2ontology.chatbot] limit=25000 original_chars=65604
+2026-04-29T15:30:54.063440Z [info     ] Built SKU index summary        [skus2ontology.chatbot] chars=25004 sku_count=962
+2026-04-29T15:32:32.509791Z [info     ] Phase 2 anchor replacement complete [skus2ontology.chatbot] draft_chars=5432 final_chars=5527
+2026-04-29T15:32:32.509791Z [info     ] unwrap_resolved_anchors        [skus2ontology.chatbot] after=53 before=53 unwrapped=0
+2026-04-29T15:32:32.511293Z [info     ] Remaining anchors              [skus2ontology.chatbot] count=53 sample=['【锚点：chunk: 商业模式创新案例大全_chunk_001】', '【锚点：全参与方收益分配机制设计规则】', '【锚点：chunk: 商业模式创新案例大全_chunk_001】', '【锚点：chunk: 商业模式创新案例大全_chunk_001】', '【锚点：chunk: 商业模式创新案例大全_chunk_001】', '【锚点：chunk: 定位战略塑造产品卖点_chunk_001】', '【锚点：chunk: 商业模式创新案例大全_chunk_001】', '【锚点：星火并购模式核心规则】', '【锚点：chunk: 新资本商业模式与盈利模式_chunk_007】', '【锚点：平台模式风险控制与落地规则】']
+2026-04-29T15:32:32.512302Z [info     ] Backed up existing spec.md     [skus2ontology.chatbot] backup='G:\\Program Files\\AI coding\\知识萃取\\商业模式资本\\输出\\ontology\\spec.md.bak.20260429_233232'
+2026-04-29T15:32:32.513299Z [info     ] Saved spec.md                  [skus2ontology.chatbot] chars=5527 path='G:\\Program Files\\AI coding\\知识萃取\\商业模式资本\\输出\\ontology\\spec.md'
+2026-04-29T15:32:32.515296Z [info     ] Saved chat log                 [skus2ontology.pipeline] confirmed=True path='G:\\Program Files\\AI coding\\知识萃取\\商业模式资本\\输出\\ontology\\chat_log.json' rounds=4

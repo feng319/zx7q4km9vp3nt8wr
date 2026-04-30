@@ -1,0 +1,18 @@
+2026-04-29T08:58:23.279599Z [info     ] Starting ontology pipeline     [skus2ontology.pipeline] ontology_dir='G:\\Program Files\\AI coding\\知识萃取\\战略分析\\输出\\ontology' skip_chatbot=False skus_dir='G:\\Program Files\\AI coding\\知识萃取\\战略分析\\输出\\skus'
+2026-04-29T08:58:23.280596Z [info     ] Starting ontology assembly     [skus2ontology.assembler] ontology_dir='G:\\Program Files\\AI coding\\知识萃取\\战略分析\\输出\\ontology' skus_dir='G:\\Program Files\\AI coding\\知识萃取\\战略分析\\输出\\skus'
+2026-04-29T08:58:23.764157Z [info     ] Copied directory               [skus2ontology.assembler] files=258 subdir=factual
+2026-04-29T08:58:23.951284Z [info     ] Copied directory               [skus2ontology.assembler] files=92 subdir=procedural
+2026-04-29T08:58:23.968075Z [info     ] Copied directory               [skus2ontology.assembler] files=4 subdir=relational
+2026-04-29T08:58:23.973139Z [info     ] Copied and rewrote skus_index.json [skus2ontology.assembler] paths_rewritten=175
+2026-04-29T08:58:23.974307Z [info     ] Copied eureka.md to ontology root [skus2ontology.assembler]
+2026-04-29T08:58:23.976383Z [info     ] Rewrote mapping.md             [skus2ontology.assembler] paths_rewritten=0
+2026-04-29T08:58:23.976383Z [info     ] Assembly complete              [skus2ontology.assembler] factual=129 paths_rewritten=175 procedural=46 total_files=357
+2026-04-29T08:58:23.976383Z [info     ] Starting spec chatbot          [skus2ontology.chatbot] max_rounds=5
+2026-04-29T08:58:23.977669Z [info     ] Loaded mapping.md titles       [skus2ontology.chatbot] original_chars=9125 title_chars=237
+2026-04-29T08:58:23.977669Z [info     ] Loaded eureka.md               [skus2ontology.chatbot] chars=1781
+2026-04-29T09:10:07.433181Z [error    ] LLM chat call failed           [skus2ontology.utils.llm_client] error="Error code: 429 - {'error': {'code': 'RequestBurstTooFast', 'message': 'System protection triggered by request burst. Please slow down traffic growth and increase requests gradually before retrying. Request id: 02177745380753985c9a7acb047d6dabbfa02bbf3a2b67b4d18c4', 'param': '', 'type': 'TooManyRequests'}}" model=doubao-seed-2-0-pro-260215
+2026-04-29T09:10:07.433181Z [error    ] Failed to get final spec from LLM [skus2ontology.chatbot]
+2026-04-29T09:10:07.437906Z [info     ] Saved chat log                 [skus2ontology.pipeline] confirmed=True path='G:\\Program Files\\AI coding\\知识萃取\\战略分析\\输出\\ontology\\chat_log.json' rounds=3
+2026-04-29T09:10:07.439333Z [info     ] Generated README.md            [skus2ontology.readme_generator] path='G:\\Program Files\\AI coding\\知识萃取\\战略分析\\输出\\ontology\\README.md'
+2026-04-29T09:10:07.440747Z [info     ] Saved ontology manifest        [skus2ontology.pipeline] path='G:\\Program Files\\AI coding\\知识萃取\\战略分析\\输出\\ontology\\ontology_manifest.json'
+2026-04-29T09:10:07.440747Z [info     ] Ontology pipeline complete     [skus2ontology.pipeline] duration_seconds=704.2 has_readme=True has_spec=False total_files=357

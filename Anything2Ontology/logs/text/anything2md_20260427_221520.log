@@ -1,0 +1,13 @@
+2026-04-27T14:15:20.203048Z [info     ] Starting Anything2Markdown pipeline [anything2markdown.cli]
+2026-04-27T14:15:20.204045Z [info     ] Input directory                [anything2markdown.cli] path='G:\\Program Files\\AI coding\\知识萃取\\商业模式\\输入'
+2026-04-27T14:15:20.206542Z [info     ] Output directory               [anything2markdown.cli] path='G:\\Program Files\\AI coding\\知识萃取\\商业模式\\输出'
+2026-04-27T14:15:20.209539Z [warning  ] Repomix not found. Install with: npm install -g repomix [anything2markdown.url_parsers.repomix_parser]
+2026-04-27T14:15:20.211532Z [info     ] Starting Anything2Markdown pipeline [anything2markdown.pipeline] input_dir='G:\\Program Files\\AI coding\\知识萃取\\商业模式\\输入' output_dir='G:\\Program Files\\AI coding\\知识萃取\\商业模式\\输出'
+2026-04-27T14:15:20.212529Z [info     ] Processing items in parallel   [anything2markdown.pipeline] count=1 max_workers=4 task_type=cpu
+2026-04-27T14:15:20.213525Z [info     ] Processing file                [anything2markdown.pipeline] file=连锁企业的商业模式和股权模式.docx
+2026-04-27T14:15:20.214522Z [info     ] MarkItDown parsing             [anything2markdown.parsers.markitdown_parser] file=连锁企业的商业模式和股权模式.docx
+2026-04-27T14:15:22.900291Z [info     ] MarkItDown success             [anything2markdown.parsers.markitdown_parser] chars=41867 file=连锁企业的商业模式和股权模式.docx output=连锁企业的商业模式和股权模式.md
+2026-04-27T14:15:22.901381Z [info     ] File processing complete       [anything2markdown.pipeline] files_processed=1
+2026-04-27T14:15:22.910020Z [info     ] URL processing complete        [anything2markdown.pipeline] urls_processed=0
+2026-04-27T14:15:22.910020Z [info     ] Pipeline completed             [anything2markdown.pipeline] duration_seconds=2.70 failed=0 skipped=0 success=1 total_processed=1
+2026-04-27T14:15:22.912012Z [info     ] Saved parse results index      [anything2markdown.pipeline] path='G:\\Program Files\\AI coding\\知识萃取\\商业模式\\输出\\parse_results_index.json'

@@ -1,0 +1,13 @@
+2026-04-29T14:47:52.604628Z [info     ] Starting spec chatbot          [skus2ontology.chatbot] max_rounds=5
+2026-04-29T14:47:52.608615Z [info     ] Built name_to_path lookup      [skus2ontology.chatbot] entries=958
+2026-04-29T14:47:52.611165Z [info     ] slug→path inline resolution    [skus2ontology.chatbot] matched=944 total_lines=971
+2026-04-29T14:47:52.612162Z [info     ] Loaded mapping.md (compressed) [skus2ontology.chatbot] compressed_chars=29995 original_chars=49322
+2026-04-29T14:47:52.612162Z [info     ] Loaded eureka.md               [skus2ontology.chatbot] chars=16728
+2026-04-29T15:01:33.823825Z [warning  ] SKU index summary truncated    [skus2ontology.chatbot] limit=25000 original_chars=65604
+2026-04-29T15:01:33.823825Z [info     ] Built SKU index summary        [skus2ontology.chatbot] chars=25004 sku_count=962
+2026-04-29T15:03:32.109460Z [info     ] Phase 2 anchor replacement complete [skus2ontology.chatbot] draft_chars=7398 final_chars=7150
+2026-04-29T15:03:32.110471Z [info     ] unwrap_resolved_anchors        [skus2ontology.chatbot] after=38 before=105 unwrapped=67
+2026-04-29T15:03:32.138987Z [info     ] Remaining anchors              [skus2ontology.chatbot] count=38 sample=['【锚点：chunk:商业模式创新案例大全_chunk_001（多层加码盈利机制）】', '【锚点：chunk:商业模式创新案例大全_chunk_001（利益共同体激励原则）】', '【锚点：chunk:商业模式创新案例大全_chunk_001（消费者-股东双身份扩张机制）】', '【锚点：chunk:新资本商业模式与盈利模式_chunk_005（城投持股重资产杠杆机制）】', '【锚点：chunk:定位战略塑造产品卖点_chunk_001（定位转型估值杠杆效应）】', '【锚点：chunk:商业模式创新案例大全_chunk_001（拟上市企业聚焦估值提升规则）】', '【锚点：chunk:连锁企业的商业模式和股权模式_chunk_001（实业双轨价值提升原则）】', '【锚点：chunk:连锁企业的商业模式和股权模式_chunk_001（细分领域心智占位溢价规律）】', '【锚点：chunk:新资本商业模式与盈利模式_chunk_006（分散行业整合双轮驱动规则）】', '【锚点：chunk:连锁企业的商业模式和股权模式_chunk_001（类金融预收款扩张机制）】']
+2026-04-29T15:03:32.179066Z [info     ] Backed up existing spec.md     [skus2ontology.chatbot] backup='G:\\Program Files\\AI coding\\知识萃取\\商业模式资本\\输出\\ontology\\spec.md.bak.20260429_230332'
+2026-04-29T15:03:32.193132Z [info     ] Saved spec.md                  [skus2ontology.chatbot] chars=6815 path='G:\\Program Files\\AI coding\\知识萃取\\商业模式资本\\输出\\ontology\\spec.md'
+2026-04-29T15:03:32.237567Z [info     ] Saved chat log                 [skus2ontology.pipeline] confirmed=False path='G:\\Program Files\\AI coding\\知识萃取\\商业模式资本\\输出\\ontology\\chat_log.json' rounds=5

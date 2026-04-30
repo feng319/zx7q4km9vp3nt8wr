@@ -1,0 +1,346 @@
+2026-04-26T03:21:28.037597Z [info     ] Processing chunk               [chunks2skus.router] chunk_id=报告-奇峰聚能调研报告：飞轮储能怎么做？_chunk_001 title=报告-奇峰聚能调研报告：飞轮储能怎么做？_chunk_001 tokens=0
+2026-04-26T03:21:28.051566Z [info     ] Extracting factual knowledge   [chunks2skus.extractors.factual_extractor] chunk_id=报告-奇峰聚能调研报告：飞轮储能怎么做？_chunk_001
+2026-04-26T03:21:28.052562Z [info     ] Extracting relational knowledge [chunks2skus.extractors.relational_extractor] chunk_id=报告-奇峰聚能调研报告：飞轮储能怎么做？_chunk_001
+2026-04-26T03:21:28.052562Z [info     ] [MONITOR] call_llm_json starting [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215
+2026-04-26T03:21:28.052562Z [info     ] Extracting procedural knowledge [chunks2skus.extractors.procedural_extractor] chunk_id=报告-奇峰聚能调研报告：飞轮储能怎么做？_chunk_001
+2026-04-26T03:21:28.056946Z [info     ] Relational context size        [chunks2skus.extractors.relational_extractor] alias_map_chars=1305 chunk_id=报告-奇峰聚能调研报告：飞轮储能怎么做？_chunk_001 glossary_count=205 label_nodes_count=72 label_tree_chars=801 relevant_relations_chars=830 term_list_chars=1859
+2026-04-26T03:21:28.056946Z [info     ] [MONITOR] Creating thread-local OpenAI client [chunks2skus.utils.llm_client] base_url=https://ark.cn-beijing.volces.com/api/v3 thread=ThreadPoolExecutor-0_0
+2026-04-26T03:21:28.057957Z [info     ] [MONITOR] call_llm_json starting [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215
+2026-04-26T03:21:28.057957Z [info     ] [MONITOR] call_llm_json starting [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215
+2026-04-26T03:21:28.059461Z [info     ] [MONITOR] Creating thread-local OpenAI client [chunks2skus.utils.llm_client] base_url=https://ark.cn-beijing.volces.com/api/v3 thread=ThreadPoolExecutor-0_2
+2026-04-26T03:21:28.059461Z [info     ] [MONITOR] Creating thread-local OpenAI client [chunks2skus.utils.llm_client] base_url=https://ark.cn-beijing.volces.com/api/v3 thread=ThreadPoolExecutor-0_1
+2026-04-26T03:21:29.607770Z [info     ] [MONITOR] Starting LLM call    [chunks2skus.utils.llm_client] attempt=0 max_tokens=128000 model=doubao-seed-2-0-pro-260215 prompt_length=16261 temperature=0.3
+2026-04-26T03:21:29.628915Z [info     ] [MONITOR] Starting LLM call    [chunks2skus.utils.llm_client] attempt=0 max_tokens=64000 model=doubao-seed-2-0-pro-260215 prompt_length=10304 temperature=0.3
+2026-04-26T03:21:29.631540Z [info     ] [MONITOR] Starting LLM call    [chunks2skus.utils.llm_client] attempt=0 max_tokens=64000 model=doubao-seed-2-0-pro-260215 prompt_length=10668 temperature=0.3
+2026-04-26T03:22:27.145735Z [info     ] [MONITOR] LLM call SUCCESS     [chunks2skus.utils.llm_client] attempt=0 finish_reason=stop model=doubao-seed-2-0-pro-260215 response_length=1996
+2026-04-26T03:22:27.153220Z [debug    ] [MONITOR] Received response from LLM [chunks2skus.utils.llm_client] is_truncated=False length=1996 preview='{\n  "procedures": [\n    {\n      "name": "independent-energy-storage-participate-in-shanxi-primary-frequency-regulation-trading",\n      "description": "用于指导独立储能电站参与山西省一次调频市场交易，获取调频服务收益时使用",\n      "body'
+2026-04-26T03:22:27.155227Z [debug    ] [MONITOR] Starting JSON parse  [chunks2skus.utils.llm_client] text_length=1996
+2026-04-26T03:22:27.156223Z [debug    ] [MONITOR] JSON parse success: standard parsing [chunks2skus.utils.llm_client]
+2026-04-26T03:22:27.157220Z [info     ] [MONITOR] JSON parse SUCCESS   [chunks2skus.utils.llm_client] keys=['procedures']
+2026-04-26T03:22:27.161724Z [debug    ] Created procedural SKU         [chunks2skus.extractors.procedural_extractor] name=independent-energy-storage-participate-in-shanxi-primary-frequen skill_id=skill_083
+2026-04-26T03:22:27.170056Z [debug    ] Created procedural SKU         [chunks2skus.extractors.procedural_extractor] name=independent-energy-station-primary-frequency-regulation-revenue- skill_id=skill_084
+2026-04-26T03:22:27.176161Z [debug    ] Created procedural SKU         [chunks2skus.extractors.procedural_extractor] name=flywheel-energy-storage-application-scenario-selection skill_id=skill_085
+2026-04-26T03:22:27.178181Z [info     ] Procedural extraction complete [chunks2skus.extractors.procedural_extractor] chunk_id=报告-奇峰聚能调研报告：飞轮储能怎么做？_chunk_001 skills_created=3
+2026-04-26T03:22:27.188658Z [debug    ] Parallel extractor completed   [chunks2skus.router] chunk_id=报告-奇峰聚能调研报告：飞轮储能怎么做？_chunk_001 extractor=procedural skus=3
+2026-04-26T03:23:29.884069Z [info     ] [MONITOR] LLM call SUCCESS     [chunks2skus.utils.llm_client] attempt=0 finish_reason=stop model=doubao-seed-2-0-pro-260215 response_length=4560
+2026-04-26T03:23:29.884574Z [debug    ] [MONITOR] Received response from LLM [chunks2skus.utils.llm_client] is_truncated=False length=4560 preview='{\n  "facts": [\n    {\n      "name": "北京奇峰聚能科技有限公司基本信息",\n      "description": "国内飞轮储能头部企业北京奇峰聚能科技有限公司的成立背景、业务范围、产能、技术实力等核心信息",\n      "content_type": "json",\n      "content": {\n        "成立时间": "2009年",\n '
+2026-04-26T03:23:29.886694Z [debug    ] [MONITOR] Starting JSON parse  [chunks2skus.utils.llm_client] text_length=4560
+2026-04-26T03:23:29.886694Z [debug    ] [MONITOR] JSON parse success: standard parsing [chunks2skus.utils.llm_client]
+2026-04-26T03:23:29.886694Z [info     ] [MONITOR] JSON parse SUCCESS   [chunks2skus.utils.llm_client] keys=['facts']
+2026-04-26T03:23:29.889226Z [debug    ] Created factual SKU            [chunks2skus.extractors.factual_extractor] name=北京奇峰聚能科技有限公司基本信息 sku_id=sku_200
+2026-04-26T03:23:29.894126Z [debug    ] Created factual SKU            [chunks2skus.extractors.factual_extractor] name=飞轮储能基础定义与核心参数 sku_id=sku_201
+2026-04-26T03:23:29.897174Z [debug    ] Created factual SKU            [chunks2skus.extractors.factual_extractor] name=飞轮储能与电化学储能性能对比 sku_id=sku_202
+2026-04-26T03:23:29.899673Z [debug    ] Created factual SKU            [chunks2skus.extractors.factual_extractor] name=飞轮储能核心应用场景 sku_id=sku_203
+2026-04-26T03:23:29.901669Z [debug    ] Created factual SKU            [chunks2skus.extractors.factual_extractor] name=我国火电厂调频规则 sku_id=sku_204
+2026-04-26T03:23:29.904660Z [debug    ] Created factual SKU            [chunks2skus.extractors.factual_extractor] name=火电厂飞轮储能联合调频项目收益 sku_id=sku_205
+2026-04-26T03:23:29.912626Z [debug    ] Created factual SKU            [chunks2skus.extractors.factual_extractor] name=山西省独立储能电站一次调频交易流程 sku_id=sku_206
+2026-04-26T03:23:29.915678Z [debug    ] Created factual SKU            [chunks2skus.extractors.factual_extractor] name=山西省100MW混合独立储能电站收益测算 sku_id=sku_207
+2026-04-26T03:23:29.918178Z [debug    ] Created factual SKU            [chunks2skus.extractors.factual_extractor] name=飞轮储能行业发展现状与前景 sku_id=sku_208
+2026-04-26T03:23:29.918178Z [info     ] Factual extraction complete    [chunks2skus.extractors.factual_extractor] chunk_id=报告-奇峰聚能调研报告：飞轮储能怎么做？_chunk_001 skus_created=9
+2026-04-26T03:23:29.919193Z [debug    ] Parallel extractor completed   [chunks2skus.router] chunk_id=报告-奇峰聚能调研报告：飞轮储能怎么做？_chunk_001 extractor=factual skus=9
+2026-04-26T03:23:35.402896Z [info     ] [MONITOR] LLM call SUCCESS     [chunks2skus.utils.llm_client] attempt=0 finish_reason=stop model=doubao-seed-2-0-pro-260215 response_length=4772
+2026-04-26T03:23:35.402896Z [debug    ] [MONITOR] Received response from LLM [chunks2skus.utils.llm_client] is_truncated=False length=4772 preview='{\n  "new_labels": [\n    {"name": "功率型储能", "parent_path": "新能源应用 > 新型储能"}\n  ],\n  "new_glossary": [\n    {\n      "term": "功率型储能",\n      "definition": "一种以短时间内快速释放大功率为核心特征，不追求长时间储存电量的储能类型，适合高频次、瞬时大功率需求的应用'
+2026-04-26T03:23:35.414407Z [debug    ] [MONITOR] Starting JSON parse  [chunks2skus.utils.llm_client] text_length=4772
+2026-04-26T03:23:35.415404Z [debug    ] [MONITOR] JSON parse success: standard parsing [chunks2skus.utils.llm_client]
+2026-04-26T03:23:35.415404Z [info     ] [MONITOR] JSON parse SUCCESS   [chunks2skus.utils.llm_client] keys=['new_labels', 'new_glossary', 'updated_glossary', 'new_relationships']
+2026-04-26T03:23:35.415404Z [info     ] Added new labels               [chunks2skus.extractors.relational_extractor] chunk_id=报告-奇峰聚能调研报告：飞轮储能怎么做？_chunk_001 count=1
+2026-04-26T03:23:35.416401Z [info     ] Merged new glossary entries    [chunks2skus.extractors.relational_extractor] chunk_id=报告-奇峰聚能调研报告：飞轮储能怎么做？_chunk_001 count=8
+2026-04-26T03:23:35.417398Z [info     ] Updated existing glossary entries [chunks2skus.extractors.relational_extractor] chunk_id=报告-奇峰聚能调研报告：飞轮储能怎么做？_chunk_001 fallback_count=0 total_in_response=5 updated_count=5
+2026-04-26T03:23:35.418395Z [info     ] Merged new relationships       [chunks2skus.extractors.relational_extractor] chunk_id=报告-奇峰聚能调研报告：飞轮储能怎么做？_chunk_001 count=21
+2026-04-26T03:23:35.420894Z [info     ] Relationship predicate distribution [chunks2skus.extractors.relational_extractor] distribution={'regulates': 13, 'superset-of': 59, 'requires': 22, 'causes': 42, 'enables': 36, 'related-to': 18, 'has-a': 19, 'is-a': 21, 'implements': 31, 'depends-on': 36, 'part-of': 18, 'example-of': 8, 'certifies': 2, 'caused-by': 3} total=328
+2026-04-26T03:23:35.422891Z [info     ] Predicate count over 20        [chunks2skus.extractors.relational_extractor] predicates={'superset-of': 59, 'requires': 22, 'causes': 42, 'enables': 36, 'is-a': 21, 'implements': 31, 'depends-on': 36}
+2026-04-26T03:23:35.426878Z [info     ] Relational extraction complete [chunks2skus.extractors.relational_extractor] chunk_id=报告-奇峰聚能调研报告：飞轮储能怎么做？_chunk_001 labels=7 relationships=328 terms=213
+2026-04-26T03:23:35.429378Z [debug    ] Parallel extractor completed   [chunks2skus.router] chunk_id=报告-奇峰聚能调研报告：飞轮储能怎么做？_chunk_001 extractor=relational skus=1
+2026-04-26T03:23:35.429378Z [info     ] Extracting meta knowledge      [chunks2skus.extractors.meta_extractor] chunk_ids=报告-奇峰聚能调研报告：飞轮储能怎么做？_chunk_001
+2026-04-26T03:23:35.430392Z [debug    ] Updating mapping.md (diff mode) [chunks2skus.extractors.meta_extractor] chunk_id=报告-奇峰聚能调研报告：飞轮储能怎么做？_chunk_001
+2026-04-26T03:23:35.431389Z [debug    ] Evaluating eureka update       [chunks2skus.extractors.meta_extractor] chunk_ids=报告-奇峰聚能调研报告：飞轮储能怎么做？_chunk_001
+2026-04-26T03:23:35.432388Z [info     ] [MONITOR] Creating thread-local OpenAI client [chunks2skus.utils.llm_client] base_url=https://ark.cn-beijing.volces.com/api/v3 thread=ThreadPoolExecutor-1_0
+2026-04-26T03:23:35.432388Z [info     ] [MONITOR] Creating thread-local OpenAI client [chunks2skus.utils.llm_client] base_url=https://ark.cn-beijing.volces.com/api/v3 thread=ThreadPoolExecutor-1_1
+2026-04-26T03:23:36.723406Z [info     ] [MONITOR] Starting LLM call    [chunks2skus.utils.llm_client] attempt=0 max_tokens=32000 model=doubao-seed-2-0-pro-260215 prompt_length=34076 temperature=0.2
+2026-04-26T03:23:36.728390Z [info     ] [MONITOR] Starting LLM call    [chunks2skus.utils.llm_client] attempt=0 max_tokens=32000 model=doubao-seed-2-0-pro-260215 prompt_length=20421 temperature=0.7
+2026-04-26T03:24:52.522400Z [info     ] [MONITOR] LLM call SUCCESS     [chunks2skus.utils.llm_client] attempt=0 finish_reason=stop model=doubao-seed-2-0-pro-260215 response_length=2315
+2026-04-26T03:24:52.523404Z [info     ] Updated eureka.md              [chunks2skus.extractors.meta_extractor] chunk_ids=报告-奇峰聚能调研报告：飞轮储能怎么做？_chunk_001 new_size=2315 old_size=1940
+2026-04-26T03:28:49.595593Z [info     ] [MONITOR] LLM call SUCCESS     [chunks2skus.utils.llm_client] attempt=0 finish_reason=stop model=doubao-seed-2-0-pro-260215 response_length=17775
+2026-04-26T03:28:49.596606Z [debug    ] Skipping duplicate SKU path in mapping diff [chunks2skus.extractors.meta_extractor] path=factual/sku_001
+2026-04-26T03:28:49.609099Z [debug    ] Skipping duplicate SKU path in mapping diff [chunks2skus.extractors.meta_extractor] path=factual/sku_002
+2026-04-26T03:28:49.609099Z [debug    ] Skipping duplicate SKU path in mapping diff [chunks2skus.extractors.meta_extractor] path=factual/sku_003
+2026-04-26T03:28:49.609099Z [debug    ] Skipping duplicate SKU path in mapping diff [chunks2skus.extractors.meta_extractor] path=factual/sku_004
+2026-04-26T03:28:49.610096Z [debug    ] Skipping duplicate SKU path in mapping diff [chunks2skus.extractors.meta_extractor] path=factual/sku_005
+2026-04-26T03:28:49.610096Z [debug    ] Skipping duplicate SKU path in mapping diff [chunks2skus.extractors.meta_extractor] path=factual/sku_006
+2026-04-26T03:28:49.611093Z [debug    ] Skipping duplicate SKU path in mapping diff [chunks2skus.extractors.meta_extractor] path=factual/sku_007
+2026-04-26T03:28:49.611093Z [debug    ] Skipping duplicate SKU path in mapping diff [chunks2skus.extractors.meta_extractor] path=factual/sku_008
+2026-04-26T03:28:49.612090Z [debug    ] Skipping duplicate SKU path in mapping diff [chunks2skus.extractors.meta_extractor] path=factual/sku_009
+2026-04-26T03:28:49.612090Z [debug    ] Skipping duplicate SKU path in mapping diff [chunks2skus.extractors.meta_extractor] path=factual/sku_010
+2026-04-26T03:28:49.613086Z [debug    ] Skipping duplicate SKU path in mapping diff [chunks2skus.extractors.meta_extractor] path=factual/sku_011
+2026-04-26T03:28:49.613086Z [debug    ] Skipping duplicate SKU path in mapping diff [chunks2skus.extractors.meta_extractor] path=factual/sku_012
+2026-04-26T03:28:49.614083Z [debug    ] Skipping duplicate SKU path in mapping diff [chunks2skus.extractors.meta_extractor] path=factual/sku_013
+2026-04-26T03:28:49.614586Z [debug    ] Skipping duplicate SKU path in mapping diff [chunks2skus.extractors.meta_extractor] path=factual/sku_014
+2026-04-26T03:28:49.614586Z [debug    ] Skipping duplicate SKU path in mapping diff [chunks2skus.extractors.meta_extractor] path=procedural/skill_001
+2026-04-26T03:28:49.615586Z [debug    ] Skipping duplicate SKU path in mapping diff [chunks2skus.extractors.meta_extractor] path=procedural/skill_002
+2026-04-26T03:28:49.615586Z [debug    ] Skipping duplicate SKU path in mapping diff [chunks2skus.extractors.meta_extractor] path=procedural/skill_003
+2026-04-26T03:28:49.616586Z [debug    ] Skipping duplicate SKU path in mapping diff [chunks2skus.extractors.meta_extractor] path=procedural/skill_004
+2026-04-26T03:28:49.617583Z [debug    ] Skipping duplicate SKU path in mapping diff [chunks2skus.extractors.meta_extractor] path=factual/sku_015
+2026-04-26T03:28:49.621571Z [debug    ] Skipping duplicate SKU path in mapping diff [chunks2skus.extractors.meta_extractor] path=factual/sku_016
+2026-04-26T03:28:49.622568Z [debug    ] Skipping duplicate SKU path in mapping diff [chunks2skus.extractors.meta_extractor] path=factual/sku_017
+2026-04-26T03:28:49.622568Z [debug    ] Skipping duplicate SKU path in mapping diff [chunks2skus.extractors.meta_extractor] path=factual/sku_018
+2026-04-26T03:28:49.622568Z [debug    ] Skipping duplicate SKU path in mapping diff [chunks2skus.extractors.meta_extractor] path=factual/sku_019
+2026-04-26T03:28:49.624073Z [debug    ] Skipping duplicate SKU path in mapping diff [chunks2skus.extractors.meta_extractor] path=factual/sku_020
+2026-04-26T03:28:49.624073Z [debug    ] Skipping duplicate SKU path in mapping diff [chunks2skus.extractors.meta_extractor] path=factual/sku_021
+2026-04-26T03:28:49.625091Z [debug    ] Skipping duplicate SKU path in mapping diff [chunks2skus.extractors.meta_extractor] path=factual/sku_022
+2026-04-26T03:28:49.625091Z [debug    ] Skipping duplicate SKU path in mapping diff [chunks2skus.extractors.meta_extractor] path=factual/sku_023
+2026-04-26T03:28:49.626089Z [debug    ] Skipping duplicate SKU path in mapping diff [chunks2skus.extractors.meta_extractor] path=factual/sku_024
+2026-04-26T03:28:49.626089Z [debug    ] Skipping duplicate SKU path in mapping diff [chunks2skus.extractors.meta_extractor] path=factual/sku_025
+2026-04-26T03:28:49.627090Z [debug    ] Skipping duplicate SKU path in mapping diff [chunks2skus.extractors.meta_extractor] path=factual/sku_026
+2026-04-26T03:28:49.627090Z [debug    ] Skipping duplicate SKU path in mapping diff [chunks2skus.extractors.meta_extractor] path=procedural/skill_005
+2026-04-26T03:28:49.628087Z [debug    ] Skipping duplicate SKU path in mapping diff [chunks2skus.extractors.meta_extractor] path=procedural/skill_006
+2026-04-26T03:28:49.628087Z [debug    ] Skipping duplicate SKU path in mapping diff [chunks2skus.extractors.meta_extractor] path=procedural/skill_007
+2026-04-26T03:28:49.629083Z [debug    ] Skipping duplicate SKU path in mapping diff [chunks2skus.extractors.meta_extractor] path=procedural/skill_008
+2026-04-26T03:28:49.629083Z [debug    ] Skipping duplicate SKU path in mapping diff [chunks2skus.extractors.meta_extractor] path=procedural/skill_009
+2026-04-26T03:28:49.630080Z [debug    ] Skipping duplicate SKU path in mapping diff [chunks2skus.extractors.meta_extractor] path=procedural/skill_010
+2026-04-26T03:28:49.630080Z [debug    ] Skipping duplicate SKU path in mapping diff [chunks2skus.extractors.meta_extractor] path=factual/sku_027
+2026-04-26T03:28:49.631077Z [debug    ] Skipping duplicate SKU path in mapping diff [chunks2skus.extractors.meta_extractor] path=factual/sku_028
+2026-04-26T03:28:49.631077Z [debug    ] Skipping duplicate SKU path in mapping diff [chunks2skus.extractors.meta_extractor] path=factual/sku_029
+2026-04-26T03:28:49.632074Z [debug    ] Skipping duplicate SKU path in mapping diff [chunks2skus.extractors.meta_extractor] path=factual/sku_030
+2026-04-26T03:28:49.632074Z [debug    ] Skipping duplicate SKU path in mapping diff [chunks2skus.extractors.meta_extractor] path=factual/sku_031
+2026-04-26T03:28:49.634571Z [debug    ] Skipping duplicate SKU path in mapping diff [chunks2skus.extractors.meta_extractor] path=factual/sku_032
+2026-04-26T03:28:49.639077Z [debug    ] Skipping duplicate SKU path in mapping diff [chunks2skus.extractors.meta_extractor] path=factual/sku_033
+2026-04-26T03:28:49.640075Z [debug    ] Skipping duplicate SKU path in mapping diff [chunks2skus.extractors.meta_extractor] path=factual/sku_034
+2026-04-26T03:28:49.640075Z [debug    ] Skipping duplicate SKU path in mapping diff [chunks2skus.extractors.meta_extractor] path=factual/sku_035
+2026-04-26T03:28:49.641071Z [debug    ] Skipping duplicate SKU path in mapping diff [chunks2skus.extractors.meta_extractor] path=factual/sku_036
+2026-04-26T03:28:49.641071Z [debug    ] Skipping duplicate SKU path in mapping diff [chunks2skus.extractors.meta_extractor] path=factual/sku_037
+2026-04-26T03:28:49.642069Z [debug    ] Skipping duplicate SKU path in mapping diff [chunks2skus.extractors.meta_extractor] path=procedural/skill_011
+2026-04-26T03:28:49.642069Z [debug    ] Skipping duplicate SKU path in mapping diff [chunks2skus.extractors.meta_extractor] path=procedural/skill_012
+2026-04-26T03:28:49.643066Z [debug    ] Skipping duplicate SKU path in mapping diff [chunks2skus.extractors.meta_extractor] path=procedural/skill_013
+2026-04-26T03:28:49.644063Z [debug    ] Skipping duplicate SKU path in mapping diff [chunks2skus.extractors.meta_extractor] path=procedural/skill_014
+2026-04-26T03:28:49.644565Z [debug    ] Skipping duplicate SKU path in mapping diff [chunks2skus.extractors.meta_extractor] path=factual/sku_038
+2026-04-26T03:28:49.644565Z [debug    ] Skipping duplicate SKU path in mapping diff [chunks2skus.extractors.meta_extractor] path=factual/sku_039
+2026-04-26T03:28:49.645565Z [debug    ] Skipping duplicate SKU path in mapping diff [chunks2skus.extractors.meta_extractor] path=factual/sku_040
+2026-04-26T03:28:49.645565Z [debug    ] Skipping duplicate SKU path in mapping diff [chunks2skus.extractors.meta_extractor] path=factual/sku_041
+2026-04-26T03:28:49.645565Z [debug    ] Skipping duplicate SKU path in mapping diff [chunks2skus.extractors.meta_extractor] path=factual/sku_042
+2026-04-26T03:28:49.646565Z [debug    ] Skipping duplicate SKU path in mapping diff [chunks2skus.extractors.meta_extractor] path=factual/sku_043
+2026-04-26T03:28:49.646565Z [debug    ] Skipping duplicate SKU path in mapping diff [chunks2skus.extractors.meta_extractor] path=factual/sku_044
+2026-04-26T03:28:49.647561Z [debug    ] Skipping duplicate SKU path in mapping diff [chunks2skus.extractors.meta_extractor] path=procedural/skill_015
+2026-04-26T03:28:49.647561Z [debug    ] Skipping duplicate SKU path in mapping diff [chunks2skus.extractors.meta_extractor] path=procedural/skill_016
+2026-04-26T03:28:49.650552Z [debug    ] Skipping duplicate SKU path in mapping diff [chunks2skus.extractors.meta_extractor] path=procedural/skill_017
+2026-04-26T03:28:49.654050Z [debug    ] Skipping duplicate SKU path in mapping diff [chunks2skus.extractors.meta_extractor] path=procedural/skill_018
+2026-04-26T03:28:49.655068Z [debug    ] Skipping duplicate SKU path in mapping diff [chunks2skus.extractors.meta_extractor] path=procedural/skill_019
+2026-04-26T03:28:49.655068Z [debug    ] Skipping duplicate SKU path in mapping diff [chunks2skus.extractors.meta_extractor] path=factual/sku_045
+2026-04-26T03:28:49.656065Z [debug    ] Skipping duplicate SKU path in mapping diff [chunks2skus.extractors.meta_extractor] path=factual/sku_046
+2026-04-26T03:28:49.656065Z [debug    ] Skipping duplicate SKU path in mapping diff [chunks2skus.extractors.meta_extractor] path=factual/sku_047
+2026-04-26T03:28:49.657065Z [debug    ] Skipping duplicate SKU path in mapping diff [chunks2skus.extractors.meta_extractor] path=factual/sku_048
+2026-04-26T03:28:49.657065Z [debug    ] Skipping duplicate SKU path in mapping diff [chunks2skus.extractors.meta_extractor] path=factual/sku_049
+2026-04-26T03:28:49.658062Z [debug    ] Skipping duplicate SKU path in mapping diff [chunks2skus.extractors.meta_extractor] path=factual/sku_050
+2026-04-26T03:28:49.658062Z [debug    ] Skipping duplicate SKU path in mapping diff [chunks2skus.extractors.meta_extractor] path=factual/sku_051
+2026-04-26T03:28:49.659058Z [debug    ] Skipping duplicate SKU path in mapping diff [chunks2skus.extractors.meta_extractor] path=factual/sku_052
+2026-04-26T03:28:49.659058Z [debug    ] Skipping duplicate SKU path in mapping diff [chunks2skus.extractors.meta_extractor] path=procedural/skill_020
+2026-04-26T03:28:49.660055Z [debug    ] Skipping duplicate SKU path in mapping diff [chunks2skus.extractors.meta_extractor] path=procedural/skill_021
+2026-04-26T03:28:49.660055Z [debug    ] Skipping duplicate SKU path in mapping diff [chunks2skus.extractors.meta_extractor] path=procedural/skill_022
+2026-04-26T03:28:49.661052Z [debug    ] Skipping duplicate SKU path in mapping diff [chunks2skus.extractors.meta_extractor] path=procedural/skill_023
+2026-04-26T03:28:49.661052Z [debug    ] Skipping duplicate SKU path in mapping diff [chunks2skus.extractors.meta_extractor] path=procedural/skill_024
+2026-04-26T03:28:49.662049Z [debug    ] Skipping duplicate SKU path in mapping diff [chunks2skus.extractors.meta_extractor] path=procedural/skill_025
+2026-04-26T03:28:49.662049Z [debug    ] Skipping duplicate SKU path in mapping diff [chunks2skus.extractors.meta_extractor] path=procedural/skill_026
+2026-04-26T03:28:49.663046Z [debug    ] Skipping duplicate SKU path in mapping diff [chunks2skus.extractors.meta_extractor] path=factual/sku_053
+2026-04-26T03:28:49.663046Z [debug    ] Skipping duplicate SKU path in mapping diff [chunks2skus.extractors.meta_extractor] path=factual/sku_054
+2026-04-26T03:28:49.665546Z [debug    ] Skipping duplicate SKU path in mapping diff [chunks2skus.extractors.meta_extractor] path=factual/sku_055
+2026-04-26T03:28:49.669536Z [debug    ] Skipping duplicate SKU path in mapping diff [chunks2skus.extractors.meta_extractor] path=factual/sku_056
+2026-04-26T03:28:49.670533Z [debug    ] Skipping duplicate SKU path in mapping diff [chunks2skus.extractors.meta_extractor] path=factual/sku_057
+2026-04-26T03:28:49.670533Z [debug    ] Skipping duplicate SKU path in mapping diff [chunks2skus.extractors.meta_extractor] path=factual/sku_058
+2026-04-26T03:28:49.671530Z [debug    ] Skipping duplicate SKU path in mapping diff [chunks2skus.extractors.meta_extractor] path=factual/sku_059
+2026-04-26T03:28:49.671530Z [debug    ] Skipping duplicate SKU path in mapping diff [chunks2skus.extractors.meta_extractor] path=factual/sku_060
+2026-04-26T03:28:49.672527Z [debug    ] Skipping duplicate SKU path in mapping diff [chunks2skus.extractors.meta_extractor] path=factual/sku_061
+2026-04-26T03:28:49.672527Z [debug    ] Skipping duplicate SKU path in mapping diff [chunks2skus.extractors.meta_extractor] path=factual/sku_062
+2026-04-26T03:28:49.672527Z [debug    ] Skipping duplicate SKU path in mapping diff [chunks2skus.extractors.meta_extractor] path=factual/sku_063
+2026-04-26T03:28:49.674030Z [debug    ] Skipping duplicate SKU path in mapping diff [chunks2skus.extractors.meta_extractor] path=procedural/skill_027
+2026-04-26T03:28:49.674030Z [debug    ] Skipping duplicate SKU path in mapping diff [chunks2skus.extractors.meta_extractor] path=procedural/skill_028
+2026-04-26T03:28:49.675046Z [debug    ] Skipping duplicate SKU path in mapping diff [chunks2skus.extractors.meta_extractor] path=procedural/skill_029
+2026-04-26T03:28:49.675046Z [debug    ] Skipping duplicate SKU path in mapping diff [chunks2skus.extractors.meta_extractor] path=procedural/skill_030
+2026-04-26T03:28:49.675046Z [debug    ] Skipping duplicate SKU path in mapping diff [chunks2skus.extractors.meta_extractor] path=factual/sku_064
+2026-04-26T03:28:49.676042Z [debug    ] Skipping duplicate SKU path in mapping diff [chunks2skus.extractors.meta_extractor] path=factual/sku_065
+2026-04-26T03:28:49.677042Z [debug    ] Skipping duplicate SKU path in mapping diff [chunks2skus.extractors.meta_extractor] path=factual/sku_066
+2026-04-26T03:28:49.677042Z [debug    ] Skipping duplicate SKU path in mapping diff [chunks2skus.extractors.meta_extractor] path=factual/sku_067
+2026-04-26T03:28:49.678039Z [debug    ] Skipping duplicate SKU path in mapping diff [chunks2skus.extractors.meta_extractor] path=factual/sku_068
+2026-04-26T03:28:49.678039Z [debug    ] Skipping duplicate SKU path in mapping diff [chunks2skus.extractors.meta_extractor] path=factual/sku_069
+2026-04-26T03:28:49.679037Z [debug    ] Skipping duplicate SKU path in mapping diff [chunks2skus.extractors.meta_extractor] path=factual/sku_070
+2026-04-26T03:28:49.679037Z [debug    ] Skipping duplicate SKU path in mapping diff [chunks2skus.extractors.meta_extractor] path=factual/sku_071
+2026-04-26T03:28:49.680033Z [debug    ] Skipping duplicate SKU path in mapping diff [chunks2skus.extractors.meta_extractor] path=factual/sku_072
+2026-04-26T03:28:49.684525Z [debug    ] Skipping duplicate SKU path in mapping diff [chunks2skus.extractors.meta_extractor] path=factual/sku_073
+2026-04-26T03:28:49.685525Z [debug    ] Skipping duplicate SKU path in mapping diff [chunks2skus.extractors.meta_extractor] path=factual/sku_074
+2026-04-26T03:28:49.685525Z [debug    ] Skipping duplicate SKU path in mapping diff [chunks2skus.extractors.meta_extractor] path=procedural/skill_031
+2026-04-26T03:28:49.686525Z [debug    ] Skipping duplicate SKU path in mapping diff [chunks2skus.extractors.meta_extractor] path=procedural/skill_032
+2026-04-26T03:28:49.686525Z [debug    ] Skipping duplicate SKU path in mapping diff [chunks2skus.extractors.meta_extractor] path=procedural/skill_033
+2026-04-26T03:28:49.686525Z [debug    ] Skipping duplicate SKU path in mapping diff [chunks2skus.extractors.meta_extractor] path=factual/sku_075
+2026-04-26T03:28:49.687522Z [debug    ] Skipping duplicate SKU path in mapping diff [chunks2skus.extractors.meta_extractor] path=factual/sku_076
+2026-04-26T03:28:49.687522Z [debug    ] Skipping duplicate SKU path in mapping diff [chunks2skus.extractors.meta_extractor] path=factual/sku_077
+2026-04-26T03:28:49.688519Z [debug    ] Skipping duplicate SKU path in mapping diff [chunks2skus.extractors.meta_extractor] path=factual/sku_078
+2026-04-26T03:28:49.688519Z [debug    ] Skipping duplicate SKU path in mapping diff [chunks2skus.extractors.meta_extractor] path=factual/sku_079
+2026-04-26T03:28:49.688519Z [debug    ] Skipping duplicate SKU path in mapping diff [chunks2skus.extractors.meta_extractor] path=factual/sku_080
+2026-04-26T03:28:49.689515Z [debug    ] Skipping duplicate SKU path in mapping diff [chunks2skus.extractors.meta_extractor] path=factual/sku_081
+2026-04-26T03:28:49.689515Z [debug    ] Skipping duplicate SKU path in mapping diff [chunks2skus.extractors.meta_extractor] path=factual/sku_082
+2026-04-26T03:28:49.690513Z [debug    ] Skipping duplicate SKU path in mapping diff [chunks2skus.extractors.meta_extractor] path=factual/sku_083
+2026-04-26T03:28:49.690513Z [debug    ] Skipping duplicate SKU path in mapping diff [chunks2skus.extractors.meta_extractor] path=factual/sku_084
+2026-04-26T03:28:49.691509Z [debug    ] Skipping duplicate SKU path in mapping diff [chunks2skus.extractors.meta_extractor] path=procedural/skill_034
+2026-04-26T03:28:49.691509Z [debug    ] Skipping duplicate SKU path in mapping diff [chunks2skus.extractors.meta_extractor] path=procedural/skill_035
+2026-04-26T03:28:49.692506Z [debug    ] Skipping duplicate SKU path in mapping diff [chunks2skus.extractors.meta_extractor] path=procedural/skill_036
+2026-04-26T03:28:49.692506Z [debug    ] Skipping duplicate SKU path in mapping diff [chunks2skus.extractors.meta_extractor] path=procedural/skill_037
+2026-04-26T03:28:49.692506Z [debug    ] Skipping duplicate SKU path in mapping diff [chunks2skus.extractors.meta_extractor] path=procedural/skill_038
+2026-04-26T03:28:49.694010Z [debug    ] Skipping duplicate SKU path in mapping diff [chunks2skus.extractors.meta_extractor] path=factual/sku_085
+2026-04-26T03:28:49.694010Z [debug    ] Skipping duplicate SKU path in mapping diff [chunks2skus.extractors.meta_extractor] path=factual/sku_086
+2026-04-26T03:28:49.695027Z [debug    ] Skipping duplicate SKU path in mapping diff [chunks2skus.extractors.meta_extractor] path=factual/sku_087
+2026-04-26T03:28:49.695027Z [debug    ] Skipping duplicate SKU path in mapping diff [chunks2skus.extractors.meta_extractor] path=factual/sku_088
+2026-04-26T03:28:49.696024Z [debug    ] Skipping duplicate SKU path in mapping diff [chunks2skus.extractors.meta_extractor] path=factual/sku_089
+2026-04-26T03:28:49.698021Z [debug    ] Skipping duplicate SKU path in mapping diff [chunks2skus.extractors.meta_extractor] path=factual/sku_090
+2026-04-26T03:28:49.702008Z [debug    ] Skipping duplicate SKU path in mapping diff [chunks2skus.extractors.meta_extractor] path=factual/sku_091
+2026-04-26T03:28:49.703005Z [debug    ] Skipping duplicate SKU path in mapping diff [chunks2skus.extractors.meta_extractor] path=factual/sku_092
+2026-04-26T03:28:49.704002Z [debug    ] Skipping duplicate SKU path in mapping diff [chunks2skus.extractors.meta_extractor] path=factual/sku_093
+2026-04-26T03:28:49.704505Z [debug    ] Skipping duplicate SKU path in mapping diff [chunks2skus.extractors.meta_extractor] path=factual/sku_094
+2026-04-26T03:28:49.704505Z [debug    ] Skipping duplicate SKU path in mapping diff [chunks2skus.extractors.meta_extractor] path=procedural/skill_039
+2026-04-26T03:28:49.704505Z [debug    ] Skipping duplicate SKU path in mapping diff [chunks2skus.extractors.meta_extractor] path=procedural/skill_040
+2026-04-26T03:28:49.705505Z [debug    ] Skipping duplicate SKU path in mapping diff [chunks2skus.extractors.meta_extractor] path=procedural/skill_041
+2026-04-26T03:28:49.705505Z [debug    ] Skipping duplicate SKU path in mapping diff [chunks2skus.extractors.meta_extractor] path=factual/sku_095
+2026-04-26T03:28:49.706502Z [debug    ] Skipping duplicate SKU path in mapping diff [chunks2skus.extractors.meta_extractor] path=factual/sku_096
+2026-04-26T03:28:49.706502Z [debug    ] Skipping duplicate SKU path in mapping diff [chunks2skus.extractors.meta_extractor] path=factual/sku_097
+2026-04-26T03:28:49.707501Z [debug    ] Skipping duplicate SKU path in mapping diff [chunks2skus.extractors.meta_extractor] path=factual/sku_098
+2026-04-26T03:28:49.707501Z [debug    ] Skipping duplicate SKU path in mapping diff [chunks2skus.extractors.meta_extractor] path=factual/sku_099
+2026-04-26T03:28:49.708499Z [debug    ] Skipping duplicate SKU path in mapping diff [chunks2skus.extractors.meta_extractor] path=factual/sku_100
+2026-04-26T03:28:49.708499Z [debug    ] Skipping duplicate SKU path in mapping diff [chunks2skus.extractors.meta_extractor] path=factual/sku_101
+2026-04-26T03:28:49.708499Z [debug    ] Skipping duplicate SKU path in mapping diff [chunks2skus.extractors.meta_extractor] path=factual/sku_102
+2026-04-26T03:28:49.709496Z [debug    ] Skipping duplicate SKU path in mapping diff [chunks2skus.extractors.meta_extractor] path=procedural/skill_042
+2026-04-26T03:28:49.709496Z [debug    ] Skipping duplicate SKU path in mapping diff [chunks2skus.extractors.meta_extractor] path=procedural/skill_043
+2026-04-26T03:28:49.710492Z [debug    ] Skipping duplicate SKU path in mapping diff [chunks2skus.extractors.meta_extractor] path=procedural/skill_044
+2026-04-26T03:28:49.710492Z [debug    ] Skipping duplicate SKU path in mapping diff [chunks2skus.extractors.meta_extractor] path=factual/sku_103
+2026-04-26T03:28:49.712487Z [debug    ] Skipping duplicate SKU path in mapping diff [chunks2skus.extractors.meta_extractor] path=factual/sku_104
+2026-04-26T03:28:49.716984Z [debug    ] Skipping duplicate SKU path in mapping diff [chunks2skus.extractors.meta_extractor] path=factual/sku_105
+2026-04-26T03:28:49.717982Z [debug    ] Skipping duplicate SKU path in mapping diff [chunks2skus.extractors.meta_extractor] path=factual/sku_106
+2026-04-26T03:28:49.717982Z [debug    ] Skipping duplicate SKU path in mapping diff [chunks2skus.extractors.meta_extractor] path=factual/sku_107
+2026-04-26T03:28:49.718979Z [debug    ] Skipping duplicate SKU path in mapping diff [chunks2skus.extractors.meta_extractor] path=factual/sku_108
+2026-04-26T03:28:49.718979Z [debug    ] Skipping duplicate SKU path in mapping diff [chunks2skus.extractors.meta_extractor] path=factual/sku_109
+2026-04-26T03:28:49.719976Z [debug    ] Skipping duplicate SKU path in mapping diff [chunks2skus.extractors.meta_extractor] path=procedural/skill_045
+2026-04-26T03:28:49.719976Z [debug    ] Skipping duplicate SKU path in mapping diff [chunks2skus.extractors.meta_extractor] path=procedural/skill_046
+2026-04-26T03:28:49.720972Z [debug    ] Skipping duplicate SKU path in mapping diff [chunks2skus.extractors.meta_extractor] path=procedural/skill_047
+2026-04-26T03:28:49.720972Z [debug    ] Skipping duplicate SKU path in mapping diff [chunks2skus.extractors.meta_extractor] path=procedural/skill_048
+2026-04-26T03:28:49.720972Z [debug    ] Skipping duplicate SKU path in mapping diff [chunks2skus.extractors.meta_extractor] path=procedural/skill_049
+2026-04-26T03:28:49.721969Z [debug    ] Skipping duplicate SKU path in mapping diff [chunks2skus.extractors.meta_extractor] path=factual/sku_110
+2026-04-26T03:28:49.721969Z [debug    ] Skipping duplicate SKU path in mapping diff [chunks2skus.extractors.meta_extractor] path=factual/sku_111
+2026-04-26T03:28:49.722966Z [debug    ] Skipping duplicate SKU path in mapping diff [chunks2skus.extractors.meta_extractor] path=factual/sku_112
+2026-04-26T03:28:49.722966Z [debug    ] Skipping duplicate SKU path in mapping diff [chunks2skus.extractors.meta_extractor] path=factual/sku_113
+2026-04-26T03:28:49.722966Z [debug    ] Skipping duplicate SKU path in mapping diff [chunks2skus.extractors.meta_extractor] path=factual/sku_114
+2026-04-26T03:28:49.724469Z [debug    ] Skipping duplicate SKU path in mapping diff [chunks2skus.extractors.meta_extractor] path=factual/sku_115
+2026-04-26T03:28:49.724469Z [debug    ] Skipping duplicate SKU path in mapping diff [chunks2skus.extractors.meta_extractor] path=factual/sku_116
+2026-04-26T03:28:49.725483Z [debug    ] Skipping duplicate SKU path in mapping diff [chunks2skus.extractors.meta_extractor] path=factual/sku_117
+2026-04-26T03:28:49.725483Z [debug    ] Skipping duplicate SKU path in mapping diff [chunks2skus.extractors.meta_extractor] path=factual/sku_118
+2026-04-26T03:28:49.725483Z [debug    ] Skipping duplicate SKU path in mapping diff [chunks2skus.extractors.meta_extractor] path=factual/sku_119
+2026-04-26T03:28:49.726482Z [debug    ] Skipping duplicate SKU path in mapping diff [chunks2skus.extractors.meta_extractor] path=factual/sku_120
+2026-04-26T03:28:49.726482Z [debug    ] Skipping duplicate SKU path in mapping diff [chunks2skus.extractors.meta_extractor] path=factual/sku_121
+2026-04-26T03:28:49.727480Z [debug    ] Skipping duplicate SKU path in mapping diff [chunks2skus.extractors.meta_extractor] path=procedural/skill_050
+2026-04-26T03:28:49.729473Z [debug    ] Skipping duplicate SKU path in mapping diff [chunks2skus.extractors.meta_extractor] path=procedural/skill_051
+2026-04-26T03:28:49.733461Z [debug    ] Skipping duplicate SKU path in mapping diff [chunks2skus.extractors.meta_extractor] path=procedural/skill_052
+2026-04-26T03:28:49.734458Z [debug    ] Skipping duplicate SKU path in mapping diff [chunks2skus.extractors.meta_extractor] path=factual/sku_122
+2026-04-26T03:28:49.734961Z [debug    ] Skipping duplicate SKU path in mapping diff [chunks2skus.extractors.meta_extractor] path=factual/sku_123
+2026-04-26T03:28:49.734961Z [debug    ] Skipping duplicate SKU path in mapping diff [chunks2skus.extractors.meta_extractor] path=factual/sku_124
+2026-04-26T03:28:49.735972Z [debug    ] Skipping duplicate SKU path in mapping diff [chunks2skus.extractors.meta_extractor] path=factual/sku_125
+2026-04-26T03:28:49.735972Z [debug    ] Skipping duplicate SKU path in mapping diff [chunks2skus.extractors.meta_extractor] path=factual/sku_126
+2026-04-26T03:28:49.736973Z [debug    ] Skipping duplicate SKU path in mapping diff [chunks2skus.extractors.meta_extractor] path=factual/sku_127
+2026-04-26T03:28:49.736973Z [debug    ] Skipping duplicate SKU path in mapping diff [chunks2skus.extractors.meta_extractor] path=factual/sku_128
+2026-04-26T03:28:49.737969Z [debug    ] Skipping duplicate SKU path in mapping diff [chunks2skus.extractors.meta_extractor] path=factual/sku_129
+2026-04-26T03:28:49.737969Z [debug    ] Skipping duplicate SKU path in mapping diff [chunks2skus.extractors.meta_extractor] path=factual/sku_130
+2026-04-26T03:28:49.737969Z [debug    ] Skipping duplicate SKU path in mapping diff [chunks2skus.extractors.meta_extractor] path=factual/sku_131
+2026-04-26T03:28:49.738967Z [debug    ] Skipping duplicate SKU path in mapping diff [chunks2skus.extractors.meta_extractor] path=factual/sku_132
+2026-04-26T03:28:49.738967Z [debug    ] Skipping duplicate SKU path in mapping diff [chunks2skus.extractors.meta_extractor] path=procedural/skill_053
+2026-04-26T03:28:49.739964Z [debug    ] Skipping duplicate SKU path in mapping diff [chunks2skus.extractors.meta_extractor] path=procedural/skill_054
+2026-04-26T03:28:49.739964Z [debug    ] Skipping duplicate SKU path in mapping diff [chunks2skus.extractors.meta_extractor] path=procedural/skill_055
+2026-04-26T03:28:49.740960Z [debug    ] Skipping duplicate SKU path in mapping diff [chunks2skus.extractors.meta_extractor] path=procedural/skill_056
+2026-04-26T03:28:49.740960Z [debug    ] Skipping duplicate SKU path in mapping diff [chunks2skus.extractors.meta_extractor] path=factual/sku_133
+2026-04-26T03:28:49.741957Z [debug    ] Skipping duplicate SKU path in mapping diff [chunks2skus.extractors.meta_extractor] path=factual/sku_134
+2026-04-26T03:28:49.741957Z [debug    ] Skipping duplicate SKU path in mapping diff [chunks2skus.extractors.meta_extractor] path=factual/sku_135
+2026-04-26T03:28:49.742954Z [debug    ] Skipping duplicate SKU path in mapping diff [chunks2skus.extractors.meta_extractor] path=factual/sku_136
+2026-04-26T03:28:49.747474Z [debug    ] Skipping duplicate SKU path in mapping diff [chunks2skus.extractors.meta_extractor] path=factual/sku_137
+2026-04-26T03:28:49.747474Z [debug    ] Skipping duplicate SKU path in mapping diff [chunks2skus.extractors.meta_extractor] path=factual/sku_138
+2026-04-26T03:28:49.748471Z [debug    ] Skipping duplicate SKU path in mapping diff [chunks2skus.extractors.meta_extractor] path=factual/sku_139
+2026-04-26T03:28:49.748471Z [debug    ] Skipping duplicate SKU path in mapping diff [chunks2skus.extractors.meta_extractor] path=procedural/skill_057
+2026-04-26T03:28:49.749473Z [debug    ] Skipping duplicate SKU path in mapping diff [chunks2skus.extractors.meta_extractor] path=procedural/skill_058
+2026-04-26T03:28:49.749473Z [debug    ] Skipping duplicate SKU path in mapping diff [chunks2skus.extractors.meta_extractor] path=procedural/skill_059
+2026-04-26T03:28:49.750465Z [debug    ] Skipping duplicate SKU path in mapping diff [chunks2skus.extractors.meta_extractor] path=procedural/skill_060
+2026-04-26T03:28:49.750465Z [debug    ] Skipping duplicate SKU path in mapping diff [chunks2skus.extractors.meta_extractor] path=procedural/skill_061
+2026-04-26T03:28:49.751462Z [debug    ] Skipping duplicate SKU path in mapping diff [chunks2skus.extractors.meta_extractor] path=procedural/skill_062
+2026-04-26T03:28:49.752458Z [debug    ] Skipping duplicate SKU path in mapping diff [chunks2skus.extractors.meta_extractor] path=procedural/skill_063
+2026-04-26T03:28:49.752458Z [debug    ] Skipping duplicate SKU path in mapping diff [chunks2skus.extractors.meta_extractor] path=factual/sku_140
+2026-04-26T03:28:49.752458Z [debug    ] Skipping duplicate SKU path in mapping diff [chunks2skus.extractors.meta_extractor] path=factual/sku_141
+2026-04-26T03:28:49.753455Z [debug    ] Skipping duplicate SKU path in mapping diff [chunks2skus.extractors.meta_extractor] path=factual/sku_142
+2026-04-26T03:28:49.753455Z [debug    ] Skipping duplicate SKU path in mapping diff [chunks2skus.extractors.meta_extractor] path=factual/sku_143
+2026-04-26T03:28:49.754452Z [debug    ] Skipping duplicate SKU path in mapping diff [chunks2skus.extractors.meta_extractor] path=factual/sku_144
+2026-04-26T03:28:49.754954Z [debug    ] Skipping duplicate SKU path in mapping diff [chunks2skus.extractors.meta_extractor] path=factual/sku_145
+2026-04-26T03:28:49.755955Z [debug    ] Skipping duplicate SKU path in mapping diff [chunks2skus.extractors.meta_extractor] path=factual/sku_146
+2026-04-26T03:28:49.756954Z [debug    ] Skipping duplicate SKU path in mapping diff [chunks2skus.extractors.meta_extractor] path=factual/sku_147
+2026-04-26T03:28:49.756954Z [debug    ] Skipping duplicate SKU path in mapping diff [chunks2skus.extractors.meta_extractor] path=factual/sku_148
+2026-04-26T03:28:49.757952Z [debug    ] Skipping duplicate SKU path in mapping diff [chunks2skus.extractors.meta_extractor] path=procedural/skill_064
+2026-04-26T03:28:49.757952Z [debug    ] Skipping duplicate SKU path in mapping diff [chunks2skus.extractors.meta_extractor] path=procedural/skill_065
+2026-04-26T03:28:49.758948Z [debug    ] Skipping duplicate SKU path in mapping diff [chunks2skus.extractors.meta_extractor] path=procedural/skill_066
+2026-04-26T03:28:49.762936Z [debug    ] Skipping duplicate SKU path in mapping diff [chunks2skus.extractors.meta_extractor] path=procedural/skill_067
+2026-04-26T03:28:49.762936Z [debug    ] Skipping duplicate SKU path in mapping diff [chunks2skus.extractors.meta_extractor] path=factual/sku_149
+2026-04-26T03:28:49.764440Z [debug    ] Skipping duplicate SKU path in mapping diff [chunks2skus.extractors.meta_extractor] path=factual/sku_150
+2026-04-26T03:28:49.764440Z [debug    ] Skipping duplicate SKU path in mapping diff [chunks2skus.extractors.meta_extractor] path=factual/sku_151
+2026-04-26T03:28:49.765455Z [debug    ] Skipping duplicate SKU path in mapping diff [chunks2skus.extractors.meta_extractor] path=factual/sku_152
+2026-04-26T03:28:49.765455Z [debug    ] Skipping duplicate SKU path in mapping diff [chunks2skus.extractors.meta_extractor] path=factual/sku_153
+2026-04-26T03:28:49.766455Z [debug    ] Skipping duplicate SKU path in mapping diff [chunks2skus.extractors.meta_extractor] path=factual/sku_154
+2026-04-26T03:28:49.766455Z [debug    ] Skipping duplicate SKU path in mapping diff [chunks2skus.extractors.meta_extractor] path=factual/sku_155
+2026-04-26T03:28:49.767452Z [debug    ] Skipping duplicate SKU path in mapping diff [chunks2skus.extractors.meta_extractor] path=procedural/skill_068
+2026-04-26T03:28:49.767452Z [debug    ] Skipping duplicate SKU path in mapping diff [chunks2skus.extractors.meta_extractor] path=procedural/skill_069
+2026-04-26T03:28:49.767452Z [debug    ] Skipping duplicate SKU path in mapping diff [chunks2skus.extractors.meta_extractor] path=procedural/skill_070
+2026-04-26T03:28:49.768449Z [debug    ] Skipping duplicate SKU path in mapping diff [chunks2skus.extractors.meta_extractor] path=factual/sku_156
+2026-04-26T03:28:49.768449Z [debug    ] Skipping duplicate SKU path in mapping diff [chunks2skus.extractors.meta_extractor] path=factual/sku_157
+2026-04-26T03:28:49.769446Z [debug    ] Skipping duplicate SKU path in mapping diff [chunks2skus.extractors.meta_extractor] path=factual/sku_158
+2026-04-26T03:28:49.769446Z [debug    ] Skipping duplicate SKU path in mapping diff [chunks2skus.extractors.meta_extractor] path=factual/sku_159
+2026-04-26T03:28:49.770442Z [debug    ] Skipping duplicate SKU path in mapping diff [chunks2skus.extractors.meta_extractor] path=factual/sku_160
+2026-04-26T03:28:49.770442Z [debug    ] Skipping duplicate SKU path in mapping diff [chunks2skus.extractors.meta_extractor] path=factual/sku_161
+2026-04-26T03:28:49.770442Z [debug    ] Skipping duplicate SKU path in mapping diff [chunks2skus.extractors.meta_extractor] path=factual/sku_162
+2026-04-26T03:28:49.771439Z [debug    ] Skipping duplicate SKU path in mapping diff [chunks2skus.extractors.meta_extractor] path=factual/sku_163
+2026-04-26T03:28:49.771439Z [debug    ] Skipping duplicate SKU path in mapping diff [chunks2skus.extractors.meta_extractor] path=factual/sku_164
+2026-04-26T03:28:49.772436Z [debug    ] Skipping duplicate SKU path in mapping diff [chunks2skus.extractors.meta_extractor] path=factual/sku_165
+2026-04-26T03:28:49.772436Z [debug    ] Skipping duplicate SKU path in mapping diff [chunks2skus.extractors.meta_extractor] path=factual/sku_166
+2026-04-26T03:28:49.773433Z [debug    ] Skipping duplicate SKU path in mapping diff [chunks2skus.extractors.meta_extractor] path=factual/sku_167
+2026-04-26T03:28:49.773433Z [debug    ] Skipping duplicate SKU path in mapping diff [chunks2skus.extractors.meta_extractor] path=factual/sku_168
+2026-04-26T03:28:49.773433Z [debug    ] Skipping duplicate SKU path in mapping diff [chunks2skus.extractors.meta_extractor] path=factual/sku_169
+2026-04-26T03:28:49.778926Z [debug    ] Skipping duplicate SKU path in mapping diff [chunks2skus.extractors.meta_extractor] path=factual/sku_170
+2026-04-26T03:28:49.778926Z [debug    ] Skipping duplicate SKU path in mapping diff [chunks2skus.extractors.meta_extractor] path=procedural/skill_071
+2026-04-26T03:28:49.779923Z [debug    ] Skipping duplicate SKU path in mapping diff [chunks2skus.extractors.meta_extractor] path=procedural/skill_072
+2026-04-26T03:28:49.779923Z [debug    ] Skipping duplicate SKU path in mapping diff [chunks2skus.extractors.meta_extractor] path=procedural/skill_073
+2026-04-26T03:28:49.780920Z [debug    ] Skipping duplicate SKU path in mapping diff [chunks2skus.extractors.meta_extractor] path=procedural/skill_074
+2026-04-26T03:28:49.780920Z [debug    ] Skipping duplicate SKU path in mapping diff [chunks2skus.extractors.meta_extractor] path=factual/sku_171
+2026-04-26T03:28:49.781917Z [debug    ] Skipping duplicate SKU path in mapping diff [chunks2skus.extractors.meta_extractor] path=factual/sku_172
+2026-04-26T03:28:49.781917Z [debug    ] Skipping duplicate SKU path in mapping diff [chunks2skus.extractors.meta_extractor] path=factual/sku_173
+2026-04-26T03:28:49.782914Z [debug    ] Skipping duplicate SKU path in mapping diff [chunks2skus.extractors.meta_extractor] path=factual/sku_174
+2026-04-26T03:28:49.782914Z [debug    ] Skipping duplicate SKU path in mapping diff [chunks2skus.extractors.meta_extractor] path=factual/sku_175
+2026-04-26T03:28:49.782914Z [debug    ] Skipping duplicate SKU path in mapping diff [chunks2skus.extractors.meta_extractor] path=factual/sku_176
+2026-04-26T03:28:49.784418Z [debug    ] Skipping duplicate SKU path in mapping diff [chunks2skus.extractors.meta_extractor] path=factual/sku_177
+2026-04-26T03:28:49.784418Z [debug    ] Skipping duplicate SKU path in mapping diff [chunks2skus.extractors.meta_extractor] path=factual/sku_178
+2026-04-26T03:28:49.785432Z [debug    ] Skipping duplicate SKU path in mapping diff [chunks2skus.extractors.meta_extractor] path=factual/sku_179
+2026-04-26T03:28:49.785432Z [debug    ] Skipping duplicate SKU path in mapping diff [chunks2skus.extractors.meta_extractor] path=procedural/skill_075
+2026-04-26T03:28:49.786429Z [debug    ] Skipping duplicate SKU path in mapping diff [chunks2skus.extractors.meta_extractor] path=procedural/skill_076
+2026-04-26T03:28:49.786429Z [debug    ] Skipping duplicate SKU path in mapping diff [chunks2skus.extractors.meta_extractor] path=procedural/skill_077
+2026-04-26T03:28:49.786429Z [debug    ] Skipping duplicate SKU path in mapping diff [chunks2skus.extractors.meta_extractor] path=factual/sku_180
+2026-04-26T03:28:49.787429Z [debug    ] Skipping duplicate SKU path in mapping diff [chunks2skus.extractors.meta_extractor] path=factual/sku_181
+2026-04-26T03:28:49.787429Z [debug    ] Skipping duplicate SKU path in mapping diff [chunks2skus.extractors.meta_extractor] path=factual/sku_182
+2026-04-26T03:28:49.788425Z [debug    ] Skipping duplicate SKU path in mapping diff [chunks2skus.extractors.meta_extractor] path=factual/sku_183
+2026-04-26T03:28:49.788425Z [debug    ] Skipping duplicate SKU path in mapping diff [chunks2skus.extractors.meta_extractor] path=factual/sku_184
+2026-04-26T03:28:49.788425Z [debug    ] Skipping duplicate SKU path in mapping diff [chunks2skus.extractors.meta_extractor] path=factual/sku_185
+2026-04-26T03:28:49.789423Z [debug    ] Skipping duplicate SKU path in mapping diff [chunks2skus.extractors.meta_extractor] path=factual/sku_186
+2026-04-26T03:28:49.789423Z [debug    ] Skipping duplicate SKU path in mapping diff [chunks2skus.extractors.meta_extractor] path=factual/sku_187
+2026-04-26T03:28:49.791416Z [debug    ] Skipping duplicate SKU path in mapping diff [chunks2skus.extractors.meta_extractor] path=factual/sku_188
+2026-04-26T03:28:49.795911Z [debug    ] Skipping duplicate SKU path in mapping diff [chunks2skus.extractors.meta_extractor] path=factual/sku_189
+2026-04-26T03:28:49.796911Z [debug    ] Skipping duplicate SKU path in mapping diff [chunks2skus.extractors.meta_extractor] path=factual/sku_190
+2026-04-26T03:28:49.796911Z [debug    ] Skipping duplicate SKU path in mapping diff [chunks2skus.extractors.meta_extractor] path=procedural/skill_078
+2026-04-26T03:28:49.796911Z [debug    ] Skipping duplicate SKU path in mapping diff [chunks2skus.extractors.meta_extractor] path=procedural/skill_079
+2026-04-26T03:28:49.797908Z [debug    ] Skipping duplicate SKU path in mapping diff [chunks2skus.extractors.meta_extractor] path=procedural/skill_080
+2026-04-26T03:28:49.797908Z [debug    ] Skipping duplicate SKU path in mapping diff [chunks2skus.extractors.meta_extractor] path=factual/sku_191
+2026-04-26T03:28:49.798906Z [debug    ] Skipping duplicate SKU path in mapping diff [chunks2skus.extractors.meta_extractor] path=factual/sku_192
+2026-04-26T03:28:49.799902Z [debug    ] Skipping duplicate SKU path in mapping diff [chunks2skus.extractors.meta_extractor] path=factual/sku_193
+2026-04-26T03:28:49.799902Z [debug    ] Skipping duplicate SKU path in mapping diff [chunks2skus.extractors.meta_extractor] path=factual/sku_194
+2026-04-26T03:28:49.800899Z [debug    ] Skipping duplicate SKU path in mapping diff [chunks2skus.extractors.meta_extractor] path=factual/sku_195
+2026-04-26T03:28:49.800899Z [debug    ] Skipping duplicate SKU path in mapping diff [chunks2skus.extractors.meta_extractor] path=factual/sku_196
+2026-04-26T03:28:49.801895Z [debug    ] Skipping duplicate SKU path in mapping diff [chunks2skus.extractors.meta_extractor] path=factual/sku_197
+2026-04-26T03:28:49.801895Z [debug    ] Skipping duplicate SKU path in mapping diff [chunks2skus.extractors.meta_extractor] path=factual/sku_198
+2026-04-26T03:28:49.801895Z [debug    ] Skipping duplicate SKU path in mapping diff [chunks2skus.extractors.meta_extractor] path=factual/sku_199
+2026-04-26T03:28:49.802893Z [debug    ] Skipping duplicate SKU path in mapping diff [chunks2skus.extractors.meta_extractor] path=procedural/skill_081
+2026-04-26T03:28:49.802893Z [debug    ] Skipping duplicate SKU path in mapping diff [chunks2skus.extractors.meta_extractor] path=procedural/skill_082
+2026-04-26T03:28:49.804396Z [info     ] Updated mapping.md (diff merge) [chunks2skus.extractors.meta_extractor] chunk_id=报告-奇峰聚能调研报告：飞轮储能怎么做？_chunk_001 diff_lines=355 new_size=18553 old_size=17020
+2026-04-26T03:28:49.807410Z [info     ] Meta extraction complete       [chunks2skus.extractors.meta_extractor] chunk_ids=报告-奇峰聚能调研报告：飞轮储能怎么做？_chunk_001 eureka_chars=2315 mapping_chars=18553

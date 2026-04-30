@@ -1,0 +1,493 @@
+2026-04-27T12:10:25.330573Z [info     ] Force reset: clearing existing index for full re-extraction [chunks2skus.pipeline]
+2026-04-27T12:10:25.330573Z [info     ] Starting extraction pipeline   [chunks2skus.pipeline] chunks_dir='G:\\Program Files\\AI coding\\知识萃取\\商业模式\\输出\\chunks' force_reset=True output_dir=output\skus
+2026-04-27T12:10:25.338070Z [info     ] Deleted index file for force reset [chunks2skus.pipeline]
+2026-04-27T12:10:25.340066Z [info     ] Deleted state file for force reset [chunks2skus.pipeline] path=output\skus\relational\label_tree.json
+2026-04-27T12:10:25.343056Z [info     ] Deleted state file for force reset [chunks2skus.pipeline] path=output\skus\relational\glossary.json
+2026-04-27T12:10:25.345050Z [info     ] Deleted state file for force reset [chunks2skus.pipeline] path=output\skus\relational\relationships.json
+2026-04-27T12:10:25.346046Z [info     ] Deleted state file for force reset [chunks2skus.pipeline] path=output\skus\meta\mapping.md
+2026-04-27T12:10:25.346046Z [info     ] Deleted state file for force reset [chunks2skus.pipeline] path=output\skus\meta\eureka.md
+2026-04-27T12:10:25.347545Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_001
+2026-04-27T12:10:25.350057Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_002
+2026-04-27T12:10:25.351053Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_003
+2026-04-27T12:10:25.353046Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_004
+2026-04-27T12:10:25.354043Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_005
+2026-04-27T12:10:25.356038Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_006
+2026-04-27T12:10:25.357541Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_007
+2026-04-27T12:10:25.362235Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_008
+2026-04-27T12:10:25.364363Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_009
+2026-04-27T12:10:25.365360Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_010
+2026-04-27T12:10:25.367353Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_011
+2026-04-27T12:10:25.368856Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_012
+2026-04-27T12:10:25.369852Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_013
+2026-04-27T12:10:25.371845Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_014
+2026-04-27T12:10:25.373933Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_015
+2026-04-27T12:10:25.376316Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_016
+2026-04-27T12:10:25.378439Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_017
+2026-04-27T12:10:25.379465Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_018
+2026-04-27T12:10:25.381540Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_019
+2026-04-27T12:10:25.382596Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_020
+2026-04-27T12:10:25.384704Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_021
+2026-04-27T12:10:25.385713Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_022
+2026-04-27T12:10:25.387216Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_023
+2026-04-27T12:10:25.389253Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_024
+2026-04-27T12:10:25.393346Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_025
+2026-04-27T12:10:25.394342Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_026
+2026-04-27T12:10:25.396336Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_027
+2026-04-27T12:10:25.397836Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_028
+2026-04-27T12:10:25.398835Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_029
+2026-04-27T12:10:25.400260Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_030
+2026-04-27T12:10:25.402651Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_031
+2026-04-27T12:10:25.404664Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_032
+2026-04-27T12:10:25.409291Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_033
+2026-04-27T12:10:25.411287Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_034
+2026-04-27T12:10:25.413281Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_035
+2026-04-27T12:10:25.415274Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_036
+2026-04-27T12:10:25.417791Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_037
+2026-04-27T12:10:25.418790Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_038
+2026-04-27T12:10:25.422780Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_039
+2026-04-27T12:10:25.425769Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_040
+2026-04-27T12:10:25.427273Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_041
+2026-04-27T12:10:25.429371Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_042
+2026-04-27T12:10:25.431364Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_043
+2026-04-27T12:10:25.433358Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_044
+2026-04-27T12:10:25.435350Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_045
+2026-04-27T12:10:25.440843Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_046
+2026-04-27T12:10:25.442837Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_047
+2026-04-27T12:10:25.444830Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_048
+2026-04-27T12:10:25.447684Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_049
+2026-04-27T12:10:25.449188Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_050
+2026-04-27T12:10:25.452195Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_051
+2026-04-27T12:10:25.456181Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_052
+2026-04-27T12:10:25.458680Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_053
+2026-04-27T12:10:25.460676Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_054
+2026-04-27T12:10:25.461673Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_055
+2026-04-27T12:10:25.463666Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_056
+2026-04-27T12:10:25.465660Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_057
+2026-04-27T12:10:25.468244Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_058
+2026-04-27T12:10:25.474102Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_059
+2026-04-27T12:10:25.475099Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_060
+2026-04-27T12:10:25.477460Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_061
+2026-04-27T12:10:25.479471Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_062
+2026-04-27T12:10:25.481465Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_063
+2026-04-27T12:10:25.484456Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_064
+2026-04-27T12:10:25.486448Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_065
+2026-04-27T12:10:25.487948Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_066
+2026-04-27T12:10:25.491026Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_067
+2026-04-27T12:10:25.493018Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_068
+2026-04-27T12:10:25.495012Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_069
+2026-04-27T12:10:25.496009Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_070
+2026-04-27T12:10:25.498594Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_071
+2026-04-27T12:10:25.500590Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_072
+2026-04-27T12:10:25.502584Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_073
+2026-04-27T12:10:25.504577Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_074
+2026-04-27T12:10:25.505574Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_075
+2026-04-27T12:10:25.508090Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_076
+2026-04-27T12:10:25.510445Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_077
+2026-04-27T12:10:25.511445Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_078
+2026-04-27T12:10:25.514435Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_079
+2026-04-27T12:10:25.517425Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_080
+2026-04-27T12:10:25.519783Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_081
+2026-04-27T12:10:25.521291Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_082
+2026-04-27T12:10:25.523085Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_083
+2026-04-27T12:10:25.526199Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_084
+2026-04-27T12:10:25.527699Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_085
+2026-04-27T12:10:25.528991Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_086
+2026-04-27T12:10:25.534970Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_087
+2026-04-27T12:10:25.538489Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_088
+2026-04-27T12:10:25.542479Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_089
+2026-04-27T12:10:25.545470Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_090
+2026-04-27T12:10:25.549471Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_091
+2026-04-27T12:10:25.552686Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_092
+2026-04-27T12:10:25.555676Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_093
+2026-04-27T12:10:25.559199Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_094
+2026-04-27T12:10:25.564187Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_095
+2026-04-27T12:10:25.566180Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_096
+2026-04-27T12:10:25.567679Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_097
+2026-04-27T12:10:25.569678Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_098
+2026-04-27T12:10:25.571672Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_099
+2026-04-27T12:10:25.574663Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_100
+2026-04-27T12:10:25.579176Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_101
+2026-04-27T12:10:25.581173Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_102
+2026-04-27T12:10:25.583165Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_103
+2026-04-27T12:10:25.585159Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_104
+2026-04-27T12:10:25.587152Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_105
+2026-04-27T12:10:25.589651Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_106
+2026-04-27T12:10:25.592645Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_107
+2026-04-27T12:10:25.596115Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_108
+2026-04-27T12:10:25.598405Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_109
+2026-04-27T12:10:25.600472Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_110
+2026-04-27T12:10:25.602589Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_111
+2026-04-27T12:10:25.604609Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_112
+2026-04-27T12:10:25.607134Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_113
+2026-04-27T12:10:25.610144Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_114
+2026-04-27T12:10:25.615127Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_115
+2026-04-27T12:10:25.617624Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_116
+2026-04-27T12:10:25.619622Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_117
+2026-04-27T12:10:25.622613Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_118
+2026-04-27T12:10:25.625602Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_119
+2026-04-27T12:10:25.630118Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_120
+2026-04-27T12:10:25.632111Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_121
+2026-04-27T12:10:25.635139Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_122
+2026-04-27T12:10:25.637324Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_123
+2026-04-27T12:10:25.644617Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_124
+2026-04-27T12:10:25.645614Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_125
+2026-04-27T12:10:25.648130Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_126
+2026-04-27T12:10:25.650644Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_127
+2026-04-27T12:10:25.651641Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_128
+2026-04-27T12:10:25.653634Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_129
+2026-04-27T12:10:25.657131Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_130
+2026-04-27T12:10:25.659189Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_131
+2026-04-27T12:10:25.661182Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_132
+2026-04-27T12:10:25.663176Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_133
+2026-04-27T12:10:25.664173Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_134
+2026-04-27T12:10:25.666374Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_135
+2026-04-27T12:10:25.668873Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_136
+2026-04-27T12:10:25.670871Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_137
+2026-04-27T12:10:25.675417Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_138
+2026-04-27T12:10:25.678924Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_139
+2026-04-27T12:10:25.681918Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_140
+2026-04-27T12:10:25.684907Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_141
+2026-04-27T12:10:25.688425Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_142
+2026-04-27T12:10:25.691581Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_143
+2026-04-27T12:10:25.693574Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_144
+2026-04-27T12:10:25.695653Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_145
+2026-04-27T12:10:25.698172Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_146
+2026-04-27T12:10:25.700168Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_147
+2026-04-27T12:10:25.702162Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_148
+2026-04-27T12:10:25.704155Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_149
+2026-04-27T12:10:25.707318Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_150
+2026-04-27T12:10:25.709326Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_151
+2026-04-27T12:10:25.711323Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_152
+2026-04-27T12:10:25.714313Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_153
+2026-04-27T12:10:25.717806Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_154
+2026-04-27T12:10:25.720801Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_155
+2026-04-27T12:10:25.722795Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_156
+2026-04-27T12:10:25.725785Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_157
+2026-04-27T12:10:25.727288Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_158
+2026-04-27T12:10:25.729300Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_159
+2026-04-27T12:10:25.732290Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_160
+2026-04-27T12:10:25.734284Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_161
+2026-04-27T12:10:25.736277Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_162
+2026-04-27T12:10:25.738776Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_163
+2026-04-27T12:10:25.740773Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_164
+2026-04-27T12:10:25.742976Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_165
+2026-04-27T12:10:25.745029Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_166
+2026-04-27T12:10:25.747530Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_167
+2026-04-27T12:10:25.749539Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_168
+2026-04-27T12:10:25.751794Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_169
+2026-04-27T12:10:25.753015Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_170
+2026-04-27T12:10:25.755035Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_171
+2026-04-27T12:10:25.757535Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_172
+2026-04-27T12:10:25.758547Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_173
+2026-04-27T12:10:25.760539Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_174
+2026-04-27T12:10:25.763649Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_175
+2026-04-27T12:10:25.765652Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_176
+2026-04-27T12:10:25.767157Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_177
+2026-04-27T12:10:25.769169Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_178
+2026-04-27T12:10:25.770168Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_179
+2026-04-27T12:10:25.772162Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_180
+2026-04-27T12:10:25.774156Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_181
+2026-04-27T12:10:25.776150Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_182
+2026-04-27T12:10:25.779649Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_183
+2026-04-27T12:10:25.781642Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_184
+2026-04-27T12:10:25.783635Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_185
+2026-04-27T12:10:25.785629Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_186
+2026-04-27T12:10:25.787132Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_187
+2026-04-27T12:10:25.789142Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_188
+2026-04-27T12:10:25.791139Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_189
+2026-04-27T12:10:25.793133Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_190
+2026-04-27T12:10:25.796123Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_191
+2026-04-27T12:10:25.797622Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_192
+2026-04-27T12:10:25.798621Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_193
+2026-04-27T12:10:25.800616Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_194
+2026-04-27T12:10:25.801613Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_195
+2026-04-27T12:10:25.803647Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_196
+2026-04-27T12:10:25.805640Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_197
+2026-04-27T12:10:25.807143Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_198
+2026-04-27T12:10:25.810155Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_199
+2026-04-27T12:10:25.812149Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_200
+2026-04-27T12:10:25.813145Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_201
+2026-04-27T12:10:25.815139Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_202
+2026-04-27T12:10:25.817133Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_203
+2026-04-27T12:10:25.818636Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_204
+2026-04-27T12:10:25.819632Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_205
+2026-04-27T12:10:25.821629Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_206
+2026-04-27T12:10:25.823622Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_207
+2026-04-27T12:10:25.827119Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_208
+2026-04-27T12:10:25.828132Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_209
+2026-04-27T12:10:25.830128Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_210
+2026-04-27T12:10:25.832122Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_211
+2026-04-27T12:10:25.833118Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_212
+2026-04-27T12:10:25.835112Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_213
+2026-04-27T12:10:25.836109Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_214
+2026-04-27T12:10:25.837607Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_215
+2026-04-27T12:10:25.839606Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_216
+2026-04-27T12:10:25.842596Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_217
+2026-04-27T12:10:25.844670Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_218
+2026-04-27T12:10:25.849688Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_219
+2026-04-27T12:10:25.851697Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\procedural\skill_001
+2026-04-27T12:10:25.853690Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\procedural\skill_002
+2026-04-27T12:10:25.857188Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\procedural\skill_003
+2026-04-27T12:10:25.859200Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\procedural\skill_004
+2026-04-27T12:10:25.861196Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\procedural\skill_005
+2026-04-27T12:10:25.862193Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\procedural\skill_006
+2026-04-27T12:10:25.864186Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\procedural\skill_007
+2026-04-27T12:10:25.865182Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\procedural\skill_008
+2026-04-27T12:10:25.867175Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\procedural\skill_009
+2026-04-27T12:10:25.868676Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\procedural\skill_010
+2026-04-27T12:10:25.870673Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\procedural\skill_011
+2026-04-27T12:10:25.872666Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\procedural\skill_012
+2026-04-27T12:10:25.875656Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\procedural\skill_013
+2026-04-27T12:10:25.877159Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\procedural\skill_014
+2026-04-27T12:10:25.878169Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\procedural\skill_015
+2026-04-27T12:10:25.880165Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\procedural\skill_016
+2026-04-27T12:10:25.881162Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\procedural\skill_017
+2026-04-27T12:10:25.883156Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\procedural\skill_018
+2026-04-27T12:10:25.885149Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\procedural\skill_019
+2026-04-27T12:10:25.888645Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\procedural\skill_020
+2026-04-27T12:10:25.890641Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\procedural\skill_021
+2026-04-27T12:10:25.892635Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\procedural\skill_022
+2026-04-27T12:10:25.894629Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\procedural\skill_023
+2026-04-27T12:10:25.895624Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\procedural\skill_024
+2026-04-27T12:10:25.898138Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\procedural\skill_025
+2026-04-27T12:10:25.900134Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\procedural\skill_026
+2026-04-27T12:10:25.902127Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\procedural\skill_027
+2026-04-27T12:10:25.905117Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\procedural\skill_028
+2026-04-27T12:10:25.909148Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\procedural\skill_029
+2026-04-27T12:10:25.911145Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\procedural\skill_030
+2026-04-27T12:10:25.913138Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\procedural\skill_031
+2026-04-27T12:10:25.914134Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\procedural\skill_032
+2026-04-27T12:10:25.916128Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\procedural\skill_033
+2026-04-27T12:10:25.917628Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\procedural\skill_034
+2026-04-27T12:10:25.919624Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\procedural\skill_035
+2026-04-27T12:10:25.921620Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\procedural\skill_036
+2026-04-27T12:10:25.923697Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\procedural\skill_037
+2026-04-27T12:10:25.925699Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\procedural\skill_038
+2026-04-27T12:10:25.928217Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\procedural\skill_039
+2026-04-27T12:10:25.931212Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\procedural\skill_040
+2026-04-27T12:10:25.933204Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\procedural\skill_041
+2026-04-27T12:10:25.936194Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\procedural\skill_042
+2026-04-27T12:10:25.938696Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\procedural\skill_043
+2026-04-27T12:10:25.941693Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\procedural\skill_044
+2026-04-27T12:10:25.944680Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\procedural\skill_045
+2026-04-27T12:10:25.945676Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\procedural\skill_046
+2026-04-27T12:10:25.948194Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\procedural\skill_047
+2026-04-27T12:10:25.950824Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\procedural\skill_048
+2026-04-27T12:10:25.953815Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\procedural\skill_049
+2026-04-27T12:10:25.955807Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\procedural\skill_050
+2026-04-27T12:10:25.958326Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\procedural\skill_051
+2026-04-27T12:10:25.960324Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\procedural\skill_052
+2026-04-27T12:10:25.962316Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\procedural\skill_053
+2026-04-27T12:10:25.965307Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\procedural\skill_054
+2026-04-27T12:10:25.968805Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\procedural\skill_055
+2026-04-27T12:10:25.970801Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\procedural\skill_056
+2026-04-27T12:10:25.973792Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\procedural\skill_057
+2026-04-27T12:10:25.975785Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\procedural\skill_058
+2026-04-27T12:10:25.978303Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\procedural\skill_059
+2026-04-27T12:10:25.980299Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\procedural\skill_060
+2026-04-27T12:10:25.983290Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\procedural\skill_061
+2026-04-27T12:10:25.985282Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\procedural\skill_062
+2026-04-27T12:10:25.987780Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\procedural\skill_063
+2026-04-27T12:10:25.990777Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\procedural\skill_064
+2026-04-27T12:10:25.992770Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\procedural\skill_065
+2026-04-27T12:10:25.994763Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\procedural\skill_066
+2026-04-27T12:10:25.997261Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\procedural\skill_067
+2026-04-27T12:10:26.000336Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\procedural\skill_068
+2026-04-27T12:10:26.002329Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\procedural\skill_069
+2026-04-27T12:10:26.004323Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\procedural\skill_070
+2026-04-27T12:10:26.006317Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\procedural\skill_071
+2026-04-27T12:10:26.007816Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\procedural\skill_072
+2026-04-27T12:10:26.010812Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\procedural\skill_073
+2026-04-27T12:10:26.012681Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\procedural\skill_074
+2026-04-27T12:10:26.017176Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\procedural\skill_075
+2026-04-27T12:10:26.019193Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\procedural\skill_076
+2026-04-27T12:10:26.021185Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\procedural\skill_077
+2026-04-27T12:10:26.024175Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\procedural\skill_078
+2026-04-27T12:10:26.026168Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\procedural\skill_079
+2026-04-27T12:10:26.027667Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\procedural\skill_080
+2026-04-27T12:10:26.029667Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\procedural\skill_081
+2026-04-27T12:10:26.031659Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\procedural\skill_082
+2026-04-27T12:10:26.034650Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\procedural\skill_083
+2026-04-27T12:10:26.035646Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\procedural\skill_084
+2026-04-27T12:10:26.040159Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\procedural\skill_085
+2026-04-27T12:10:26.042152Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\procedural\skill_086
+2026-04-27T12:10:26.045143Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\procedural\skill_087
+2026-04-27T12:10:26.047374Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\procedural\skill_088
+2026-04-27T12:10:26.049874Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\procedural\skill_089
+2026-04-27T12:10:26.051375Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\procedural\skill_090
+2026-04-27T12:10:26.054366Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\procedural\skill_091
+2026-04-27T12:10:26.057356Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\procedural\skill_092
+2026-04-27T12:10:26.059858Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\procedural\skill_093
+2026-04-27T12:10:26.062847Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\procedural\skill_094
+2026-04-27T12:10:26.064840Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\procedural\skill_095
+2026-04-27T12:10:26.067340Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\procedural\skill_096
+2026-04-27T12:10:26.071342Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\procedural\skill_097
+2026-04-27T12:10:26.075330Z [info     ] Loaded chunks                  [chunks2skus.router] count=5
+2026-04-27T12:10:26.077323Z [info     ] Processing chunks              [chunks2skus.pipeline] total=5
+2026-04-27T12:10:26.077826Z [info     ] Submitting chunk for Factual/Procedural [chunks2skus.pipeline] chunk_id=1.业务不变，营收秒变（X50）的商业模式_笔记_chunk_001
+2026-04-27T12:10:26.078827Z [info     ] Submitting chunk for Factual/Procedural [chunks2skus.pipeline] chunk_id='2.ODM OEM，超过耐K、A迪净利的商业模式_笔记_chunk_001'
+2026-04-27T12:10:26.079827Z [info     ] Extracting factual knowledge   [chunks2skus.extractors.factual_extractor] chunk_id=1.业务不变，营收秒变（X50）的商业模式_笔记_chunk_001
+2026-04-27T12:10:26.079827Z [info     ] Submitting chunk for Factual/Procedural [chunks2skus.pipeline] chunk_id=3.费用归边，流量占股的商业模式_笔记_chunk_001
+2026-04-27T12:10:26.080824Z [info     ] [MONITOR] call_llm_json starting [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215
+2026-04-27T12:10:26.080824Z [info     ] Submitting chunk for Factual/Procedural [chunks2skus.pipeline] chunk_id=4.上下通吃，打通经销商合伙人激励的模式_chunk_001
+2026-04-27T12:10:26.080824Z [info     ] [MONITOR] Creating thread-local OpenAI client [chunks2skus.utils.llm_client] base_url=https://ark.cn-beijing.volces.com/api/v3 thread=ThreadPoolExecutor-0_0
+2026-04-27T12:10:26.081821Z [info     ] Submitting chunk for Factual/Procedural [chunks2skus.pipeline] chunk_id=5.不做主机厂，专注整合商的模式_笔记_chunk_001
+2026-04-27T12:10:27.155690Z [info     ] [MONITOR] Starting LLM call    [chunks2skus.utils.llm_client] attempt=0 max_tokens=64000 model=doubao-seed-2-0-pro-260215 prompt_length=2952 temperature=0.3
+2026-04-27T12:12:26.660080Z [info     ] [MONITOR] LLM call SUCCESS     [chunks2skus.utils.llm_client] attempt=0 finish_reason=stop model=doubao-seed-2-0-pro-260215 response_length=2824
+2026-04-27T12:12:26.661581Z [info     ] [MONITOR] JSON parse SUCCESS   [chunks2skus.utils.llm_client] keys=['facts']
+2026-04-27T12:12:26.692704Z [info     ] Factual extraction complete    [chunks2skus.extractors.factual_extractor] chunk_id=1.业务不变，营收秒变（X50）的商业模式_笔记_chunk_001 skus_created=8
+2026-04-27T12:12:26.693703Z [info     ] Extracting procedural knowledge [chunks2skus.extractors.procedural_extractor] chunk_id=1.业务不变，营收秒变（X50）的商业模式_笔记_chunk_001
+2026-04-27T12:12:26.694701Z [info     ] [MONITOR] call_llm_json starting [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215
+2026-04-27T12:12:26.694701Z [info     ] [MONITOR] Starting LLM call    [chunks2skus.utils.llm_client] attempt=0 max_tokens=64000 model=doubao-seed-2-0-pro-260215 prompt_length=2313 temperature=0.3
+2026-04-27T12:13:38.548026Z [info     ] [MONITOR] LLM call SUCCESS     [chunks2skus.utils.llm_client] attempt=0 finish_reason=stop model=doubao-seed-2-0-pro-260215 response_length=1483
+2026-04-27T12:13:38.549038Z [info     ] [MONITOR] JSON parse SUCCESS   [chunks2skus.utils.llm_client] keys=['procedures']
+2026-04-27T12:13:38.565634Z [info     ] Procedural extraction complete [chunks2skus.extractors.procedural_extractor] chunk_id=1.业务不变，营收秒变（X50）的商业模式_笔记_chunk_001 skills_created=3
+2026-04-27T12:13:38.566149Z [info     ] Extracting relational knowledge [chunks2skus.extractors.relational_extractor] chunk_id=1.业务不变，营收秒变（X50）的商业模式_笔记_chunk_001
+2026-04-27T12:13:38.566741Z [info     ] Extracting factual knowledge   [chunks2skus.extractors.factual_extractor] chunk_id='2.ODM OEM，超过耐K、A迪净利的商业模式_笔记_chunk_001'
+2026-04-27T12:13:38.567289Z [info     ] Relational context size        [chunks2skus.extractors.relational_extractor] alias_map_chars=5 chunk_id=1.业务不变，营收秒变（X50）的商业模式_笔记_chunk_001 glossary_count=0 label_nodes_count=0 label_tree_chars=0 relevant_relations_chars=9 term_list_chars=0
+2026-04-27T12:13:38.567802Z [info     ] [MONITOR] call_llm_json starting [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215
+2026-04-27T12:13:38.568423Z [info     ] [MONITOR] call_llm_json starting [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215
+2026-04-27T12:13:38.568971Z [info     ] [MONITOR] Starting LLM call    [chunks2skus.utils.llm_client] attempt=0 max_tokens=64000 model=doubao-seed-2-0-pro-260215 prompt_length=3299 temperature=0.3
+2026-04-27T12:13:38.568971Z [info     ] [MONITOR] Creating thread-local OpenAI client [chunks2skus.utils.llm_client] base_url=https://ark.cn-beijing.volces.com/api/v3 thread='Thread-1 (relational_consumer)'
+2026-04-27T12:13:39.747883Z [info     ] [MONITOR] Starting LLM call    [chunks2skus.utils.llm_client] attempt=0 max_tokens=128000 model=doubao-seed-2-0-pro-260215 prompt_length=3491 temperature=0.3
+2026-04-27T12:14:48.141237Z [info     ] [MONITOR] LLM call SUCCESS     [chunks2skus.utils.llm_client] attempt=0 finish_reason=stop model=doubao-seed-2-0-pro-260215 response_length=2523
+2026-04-27T12:14:48.142241Z [info     ] [MONITOR] JSON parse SUCCESS   [chunks2skus.utils.llm_client] keys=['facts']
+2026-04-27T12:14:48.155235Z [warning  ] Markdown SKU lacks structure markers [chunks2skus.extractors.factual_extractor] chars=72 name=深州国际一站式代工核心竞争优势
+2026-04-27T12:14:48.155235Z [info     ] Skipping trivially short SKU   [chunks2skus.extractors.factual_extractor] chars=72 name=深州国际一站式代工核心竞争优势
+2026-04-27T12:14:48.162425Z [info     ] Factual extraction complete    [chunks2skus.extractors.factual_extractor] chunk_id='2.ODM OEM，超过耐K、A迪净利的商业模式_笔记_chunk_001' skus_created=5
+2026-04-27T12:14:48.163421Z [info     ] Extracting procedural knowledge [chunks2skus.extractors.procedural_extractor] chunk_id='2.ODM OEM，超过耐K、A迪净利的商业模式_笔记_chunk_001'
+2026-04-27T12:14:48.164418Z [info     ] [MONITOR] call_llm_json starting [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215
+2026-04-27T12:14:48.164418Z [info     ] [MONITOR] Starting LLM call    [chunks2skus.utils.llm_client] attempt=0 max_tokens=64000 model=doubao-seed-2-0-pro-260215 prompt_length=2660 temperature=0.3
+2026-04-27T12:14:50.287629Z [info     ] [MONITOR] LLM call SUCCESS     [chunks2skus.utils.llm_client] attempt=0 finish_reason=stop model=doubao-seed-2-0-pro-260215 response_length=3227
+2026-04-27T12:14:50.288633Z [info     ] [MONITOR] JSON parse SUCCESS   [chunks2skus.utils.llm_client] keys=['new_labels', 'new_glossary', 'updated_glossary', 'new_relationships']
+2026-04-27T12:14:50.291624Z [info     ] Added new labels               [chunks2skus.extractors.relational_extractor] chunk_id=1.业务不变，营收秒变（X50）的商业模式_笔记_chunk_001 count=10
+2026-04-27T12:14:50.291624Z [info     ] Merged new glossary entries    [chunks2skus.extractors.relational_extractor] chunk_id=1.业务不变，营收秒变（X50）的商业模式_笔记_chunk_001 count=7
+2026-04-27T12:14:50.292620Z [info     ] Updated existing glossary entries [chunks2skus.extractors.relational_extractor] chunk_id=1.业务不变，营收秒变（X50）的商业模式_笔记_chunk_001 fallback_count=0 total_in_response=0 updated_count=0
+2026-04-27T12:14:50.292620Z [info     ] Merged new relationships       [chunks2skus.extractors.relational_extractor] chunk_id=1.业务不变，营收秒变（X50）的商业模式_笔记_chunk_001 count=10
+2026-04-27T12:14:50.293617Z [info     ] Relationship predicate distribution [chunks2skus.extractors.relational_extractor] distribution={'superset-of': 2, 'causes': 2, 'enables': 3, 'has-a': 1, 'related-to': 1, 'regulates': 1} total=10
+2026-04-27T12:14:50.299110Z [info     ] Relational extraction complete [chunks2skus.extractors.relational_extractor] chunk_id=1.业务不变，营收秒变（X50）的商业模式_笔记_chunk_001 labels=5 relationships=10 terms=7
+2026-04-27T12:14:50.301103Z [info     ] Chunk processed                [chunks2skus.pipeline] chunk_id=1.业务不变，营收秒变（X50）的商业模式_笔记_chunk_001 new_skus=12 total_skus=12
+2026-04-27T12:15:55.176732Z [info     ] [MONITOR] LLM call SUCCESS     [chunks2skus.utils.llm_client] attempt=0 finish_reason=stop model=doubao-seed-2-0-pro-260215 response_length=2746
+2026-04-27T12:15:55.177240Z [info     ] [MONITOR] JSON parse SUCCESS   [chunks2skus.utils.llm_client] keys=['procedures']
+2026-04-27T12:15:55.197279Z [info     ] Procedural extraction complete [chunks2skus.extractors.procedural_extractor] chunk_id='2.ODM OEM，超过耐K、A迪净利的商业模式_笔记_chunk_001' skills_created=6
+2026-04-27T12:15:55.197279Z [info     ] Extracting relational knowledge [chunks2skus.extractors.relational_extractor] chunk_id='2.ODM OEM，超过耐K、A迪净利的商业模式_笔记_chunk_001'
+2026-04-27T12:15:55.198295Z [info     ] Extracting factual knowledge   [chunks2skus.extractors.factual_extractor] chunk_id=3.费用归边，流量占股的商业模式_笔记_chunk_001
+2026-04-27T12:15:55.198295Z [info     ] Relational context size        [chunks2skus.extractors.relational_extractor] alias_map_chars=61 chunk_id='2.ODM OEM，超过耐K、A迪净利的商业模式_笔记_chunk_001' glossary_count=7 label_nodes_count=10 label_tree_chars=56 relevant_relations_chars=9 term_list_chars=53
+2026-04-27T12:15:55.198295Z [info     ] [MONITOR] call_llm_json starting [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215
+2026-04-27T12:15:55.199291Z [info     ] [MONITOR] call_llm_json starting [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215
+2026-04-27T12:15:55.199291Z [info     ] [MONITOR] Starting LLM call    [chunks2skus.utils.llm_client] attempt=0 max_tokens=64000 model=doubao-seed-2-0-pro-260215 prompt_length=1473 temperature=0.3
+2026-04-27T12:15:55.200290Z [info     ] [MONITOR] Starting LLM call    [chunks2skus.utils.llm_client] attempt=0 max_tokens=128000 model=doubao-seed-2-0-pro-260215 prompt_length=4003 temperature=0.3
+2026-04-27T12:15:58.701560Z [info     ] [MONITOR] LLM call SUCCESS     [chunks2skus.utils.llm_client] attempt=0 finish_reason=stop model=doubao-seed-2-0-pro-260215 response_length=13
+2026-04-27T12:15:58.702605Z [info     ] [MONITOR] JSON parse SUCCESS   [chunks2skus.utils.llm_client] keys=['facts']
+2026-04-27T12:15:58.705887Z [info     ] No factual knowledge found in chunk [chunks2skus.extractors.factual_extractor] chunk_id=3.费用归边，流量占股的商业模式_笔记_chunk_001
+2026-04-27T12:15:58.705887Z [info     ] Extracting procedural knowledge [chunks2skus.extractors.procedural_extractor] chunk_id=3.费用归边，流量占股的商业模式_笔记_chunk_001
+2026-04-27T12:15:58.707390Z [info     ] [MONITOR] call_llm_json starting [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215
+2026-04-27T12:15:58.707390Z [info     ] [MONITOR] Starting LLM call    [chunks2skus.utils.llm_client] attempt=0 max_tokens=64000 model=doubao-seed-2-0-pro-260215 prompt_length=834 temperature=0.3
+2026-04-27T12:16:02.046805Z [info     ] [MONITOR] LLM call SUCCESS     [chunks2skus.utils.llm_client] attempt=0 finish_reason=stop model=doubao-seed-2-0-pro-260215 response_length=18
+2026-04-27T12:16:02.047343Z [info     ] [MONITOR] JSON parse SUCCESS   [chunks2skus.utils.llm_client] keys=['procedures']
+2026-04-27T12:16:02.058887Z [info     ] No procedural knowledge found in chunk [chunks2skus.extractors.procedural_extractor] chunk_id=3.费用归边，流量占股的商业模式_笔记_chunk_001
+2026-04-27T12:16:02.059886Z [info     ] Extracting factual knowledge   [chunks2skus.extractors.factual_extractor] chunk_id=4.上下通吃，打通经销商合伙人激励的模式_chunk_001
+2026-04-27T12:16:02.059886Z [info     ] [MONITOR] call_llm_json starting [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215
+2026-04-27T12:16:02.060883Z [info     ] [MONITOR] Starting LLM call    [chunks2skus.utils.llm_client] attempt=0 max_tokens=64000 model=doubao-seed-2-0-pro-260215 prompt_length=2655 temperature=0.3
+2026-04-27T12:17:25.017901Z [info     ] [MONITOR] LLM call SUCCESS     [chunks2skus.utils.llm_client] attempt=0 finish_reason=stop model=doubao-seed-2-0-pro-260215 response_length=2812
+2026-04-27T12:17:25.018404Z [info     ] [MONITOR] JSON parse SUCCESS   [chunks2skus.utils.llm_client] keys=['new_labels', 'new_glossary', 'updated_glossary', 'new_relationships']
+2026-04-27T12:17:25.028965Z [info     ] Added new labels               [chunks2skus.extractors.relational_extractor] chunk_id='2.ODM OEM，超过耐K、A迪净利的商业模式_笔记_chunk_001' count=1
+2026-04-27T12:17:25.028965Z [info     ] Merged new glossary entries    [chunks2skus.extractors.relational_extractor] chunk_id='2.ODM OEM，超过耐K、A迪净利的商业模式_笔记_chunk_001' count=6
+2026-04-27T12:17:25.029961Z [info     ] Updated existing glossary entries [chunks2skus.extractors.relational_extractor] chunk_id='2.ODM OEM，超过耐K、A迪净利的商业模式_笔记_chunk_001' fallback_count=0 total_in_response=2 updated_count=2
+2026-04-27T12:17:25.030464Z [info     ] Merged new relationships       [chunks2skus.extractors.relational_extractor] chunk_id='2.ODM OEM，超过耐K、A迪净利的商业模式_笔记_chunk_001' count=9
+2026-04-27T12:17:25.031463Z [info     ] Relationship predicate distribution [chunks2skus.extractors.relational_extractor] distribution={'superset-of': 3, 'causes': 4, 'enables': 5, 'has-a': 1, 'related-to': 1, 'regulates': 1, 'is-a': 1, 'example-of': 3} total=19
+2026-04-27T12:17:25.034456Z [info     ] Relational extraction complete [chunks2skus.extractors.relational_extractor] chunk_id='2.ODM OEM，超过耐K、A迪净利的商业模式_笔记_chunk_001' labels=5 relationships=19 terms=13
+2026-04-27T12:17:25.035452Z [info     ] Chunk processed                [chunks2skus.pipeline] chunk_id='2.ODM OEM，超过耐K、A迪净利的商业模式_笔记_chunk_001' new_skus=12 total_skus=23
+2026-04-27T12:17:25.036449Z [info     ] Extracting relational knowledge [chunks2skus.extractors.relational_extractor] chunk_id=3.费用归边，流量占股的商业模式_笔记_chunk_001
+2026-04-27T12:17:25.036449Z [info     ] Relational context size        [chunks2skus.extractors.relational_extractor] alias_map_chars=77 chunk_id=3.费用归边，流量占股的商业模式_笔记_chunk_001 glossary_count=13 label_nodes_count=11 label_tree_chars=65 relevant_relations_chars=9 term_list_chars=108
+2026-04-27T12:17:25.037446Z [info     ] [MONITOR] call_llm_json starting [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215
+2026-04-27T12:17:25.037446Z [info     ] [MONITOR] Starting LLM call    [chunks2skus.utils.llm_client] attempt=0 max_tokens=128000 model=doubao-seed-2-0-pro-260215 prompt_length=2258 temperature=0.3
+2026-04-27T12:17:30.160209Z [info     ] [MONITOR] LLM call SUCCESS     [chunks2skus.utils.llm_client] attempt=0 finish_reason=stop model=doubao-seed-2-0-pro-260215 response_length=97
+2026-04-27T12:17:30.160712Z [info     ] [MONITOR] JSON parse SUCCESS   [chunks2skus.utils.llm_client] keys=['new_labels', 'new_glossary', 'updated_glossary', 'new_relationships']
+2026-04-27T12:17:30.163961Z [info     ] Added new labels               [chunks2skus.extractors.relational_extractor] chunk_id=3.费用归边，流量占股的商业模式_笔记_chunk_001 count=0
+2026-04-27T12:17:30.164958Z [info     ] Merged new glossary entries    [chunks2skus.extractors.relational_extractor] chunk_id=3.费用归边，流量占股的商业模式_笔记_chunk_001 count=0
+2026-04-27T12:17:30.164958Z [info     ] Updated existing glossary entries [chunks2skus.extractors.relational_extractor] chunk_id=3.费用归边，流量占股的商业模式_笔记_chunk_001 fallback_count=0 total_in_response=0 updated_count=0
+2026-04-27T12:17:30.164958Z [info     ] Merged new relationships       [chunks2skus.extractors.relational_extractor] chunk_id=3.费用归边，流量占股的商业模式_笔记_chunk_001 count=0
+2026-04-27T12:17:30.166135Z [info     ] Relationship predicate distribution [chunks2skus.extractors.relational_extractor] distribution={'superset-of': 3, 'causes': 4, 'enables': 5, 'has-a': 1, 'related-to': 1, 'regulates': 1, 'is-a': 1, 'example-of': 3} total=19
+2026-04-27T12:17:30.169196Z [info     ] Relational extraction complete [chunks2skus.extractors.relational_extractor] chunk_id=3.费用归边，流量占股的商业模式_笔记_chunk_001 labels=5 relationships=19 terms=13
+2026-04-27T12:17:30.171357Z [info     ] Chunk processed                [chunks2skus.pipeline] chunk_id=3.费用归边，流量占股的商业模式_笔记_chunk_001 new_skus=1 total_skus=23
+2026-04-27T12:17:30.799425Z [info     ] [MONITOR] LLM call SUCCESS     [chunks2skus.utils.llm_client] attempt=0 finish_reason=stop model=doubao-seed-2-0-pro-260215 response_length=2727
+2026-04-27T12:17:30.800422Z [info     ] [MONITOR] JSON parse SUCCESS   [chunks2skus.utils.llm_client] keys=['facts']
+2026-04-27T12:17:30.804024Z [info     ] Skipping trivially short SKU   [chunks2skus.extractors.factual_extractor] chars=56 name=上市公司经销商转股东典型案例
+2026-04-27T12:17:30.812507Z [info     ] Factual extraction complete    [chunks2skus.extractors.factual_extractor] chunk_id=4.上下通吃，打通经销商合伙人激励的模式_chunk_001 skus_created=6
+2026-04-27T12:17:30.813503Z [info     ] Extracting procedural knowledge [chunks2skus.extractors.procedural_extractor] chunk_id=4.上下通吃，打通经销商合伙人激励的模式_chunk_001
+2026-04-27T12:17:30.813503Z [info     ] [MONITOR] call_llm_json starting [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215
+2026-04-27T12:17:30.814500Z [info     ] [MONITOR] Starting LLM call    [chunks2skus.utils.llm_client] attempt=0 max_tokens=64000 model=doubao-seed-2-0-pro-260215 prompt_length=2016 temperature=0.3
+2026-04-27T12:18:44.289743Z [info     ] [MONITOR] LLM call SUCCESS     [chunks2skus.utils.llm_client] attempt=0 finish_reason=stop model=doubao-seed-2-0-pro-260215 response_length=1890
+2026-04-27T12:18:44.290751Z [info     ] [MONITOR] JSON parse SUCCESS   [chunks2skus.utils.llm_client] keys=['procedures']
+2026-04-27T12:18:44.299251Z [info     ] Procedural extraction complete [chunks2skus.extractors.procedural_extractor] chunk_id=4.上下通吃，打通经销商合伙人激励的模式_chunk_001 skills_created=4
+2026-04-27T12:18:44.301727Z [info     ] Extracting relational knowledge [chunks2skus.extractors.relational_extractor] chunk_id=4.上下通吃，打通经销商合伙人激励的模式_chunk_001
+2026-04-27T12:18:44.301727Z [info     ] Extracting factual knowledge   [chunks2skus.extractors.factual_extractor] chunk_id=5.不做主机厂，专注整合商的模式_笔记_chunk_001
+2026-04-27T12:18:44.302230Z [info     ] Relational context size        [chunks2skus.extractors.relational_extractor] alias_map_chars=77 chunk_id=4.上下通吃，打通经销商合伙人激励的模式_chunk_001 glossary_count=13 label_nodes_count=11 label_tree_chars=65 relevant_relations_chars=9 term_list_chars=108
+2026-04-27T12:18:44.302230Z [info     ] [MONITOR] call_llm_json starting [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215
+2026-04-27T12:18:44.303239Z [info     ] [MONITOR] call_llm_json starting [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215
+2026-04-27T12:18:44.303239Z [info     ] [MONITOR] Starting LLM call    [chunks2skus.utils.llm_client] attempt=0 max_tokens=64000 model=doubao-seed-2-0-pro-260215 prompt_length=3988 temperature=0.3
+2026-04-27T12:18:44.304238Z [info     ] [MONITOR] Starting LLM call    [chunks2skus.utils.llm_client] attempt=0 max_tokens=128000 model=doubao-seed-2-0-pro-260215 prompt_length=3440 temperature=0.3
+2026-04-27T12:19:46.802920Z [info     ] [MONITOR] LLM call SUCCESS     [chunks2skus.utils.llm_client] attempt=0 finish_reason=stop model=doubao-seed-2-0-pro-260215 response_length=2626
+2026-04-27T12:19:46.802920Z [info     ] [MONITOR] JSON parse SUCCESS   [chunks2skus.utils.llm_client] keys=['new_labels', 'new_glossary', 'updated_glossary', 'new_relationships']
+2026-04-27T12:19:46.812756Z [info     ] Added new labels               [chunks2skus.extractors.relational_extractor] chunk_id=4.上下通吃，打通经销商合伙人激励的模式_chunk_001 count=4
+2026-04-27T12:19:46.814259Z [info     ] Merged new glossary entries    [chunks2skus.extractors.relational_extractor] chunk_id=4.上下通吃，打通经销商合伙人激励的模式_chunk_001 count=7
+2026-04-27T12:19:46.814259Z [info     ] Updated existing glossary entries [chunks2skus.extractors.relational_extractor] chunk_id=4.上下通吃，打通经销商合伙人激励的模式_chunk_001 fallback_count=0 total_in_response=0 updated_count=0
+2026-04-27T12:19:46.815269Z [info     ] Merged new relationships       [chunks2skus.extractors.relational_extractor] chunk_id=4.上下通吃，打通经销商合伙人激励的模式_chunk_001 count=7
+2026-04-27T12:19:46.815269Z [info     ] Relationship predicate distribution [chunks2skus.extractors.relational_extractor] distribution={'superset-of': 3, 'causes': 5, 'enables': 8, 'has-a': 1, 'related-to': 1, 'regulates': 1, 'is-a': 1, 'example-of': 6} total=26
+2026-04-27T12:19:46.816267Z [warning  ] Predicate ratio exceeds 30%    [chunks2skus.extractors.relational_extractor] count=8 predicate=enables ratio=30.8% total=26
+2026-04-27T12:19:46.818261Z [info     ] Relational extraction complete [chunks2skus.extractors.relational_extractor] chunk_id=4.上下通吃，打通经销商合伙人激励的模式_chunk_001 labels=5 relationships=26 terms=20
+2026-04-27T12:19:46.820679Z [info     ] Chunk processed                [chunks2skus.pipeline] chunk_id=4.上下通吃，打通经销商合伙人激励的模式_chunk_001 new_skus=11 total_skus=33
+2026-04-27T12:20:30.149076Z [info     ] [MONITOR] LLM call SUCCESS     [chunks2skus.utils.llm_client] attempt=0 finish_reason=stop model=doubao-seed-2-0-pro-260215 response_length=3691
+2026-04-27T12:20:30.150080Z [info     ] [MONITOR] JSON parse SUCCESS   [chunks2skus.utils.llm_client] keys=['facts']
+2026-04-27T12:20:30.167060Z [info     ] Factual extraction complete    [chunks2skus.extractors.factual_extractor] chunk_id=5.不做主机厂，专注整合商的模式_笔记_chunk_001 skus_created=6
+2026-04-27T12:20:30.168057Z [info     ] Extracting procedural knowledge [chunks2skus.extractors.procedural_extractor] chunk_id=5.不做主机厂，专注整合商的模式_笔记_chunk_001
+2026-04-27T12:20:30.168057Z [info     ] [MONITOR] call_llm_json starting [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215
+2026-04-27T12:20:30.169054Z [info     ] [MONITOR] Starting LLM call    [chunks2skus.utils.llm_client] attempt=0 max_tokens=64000 model=doubao-seed-2-0-pro-260215 prompt_length=3349 temperature=0.3
+2026-04-27T12:21:30.408105Z [info     ] [MONITOR] LLM call SUCCESS     [chunks2skus.utils.llm_client] attempt=0 finish_reason=stop model=doubao-seed-2-0-pro-260215 response_length=2554
+2026-04-27T12:21:30.409132Z [info     ] [MONITOR] JSON parse SUCCESS   [chunks2skus.utils.llm_client] keys=['procedures']
+2026-04-27T12:21:30.418661Z [info     ] Procedural extraction complete [chunks2skus.extractors.procedural_extractor] chunk_id=5.不做主机厂，专注整合商的模式_笔记_chunk_001 skills_created=5
+2026-04-27T12:21:30.420657Z [info     ] Extracting relational knowledge [chunks2skus.extractors.relational_extractor] chunk_id=5.不做主机厂，专注整合商的模式_笔记_chunk_001
+2026-04-27T12:21:30.420657Z [info     ] Factual/Procedural phase complete [chunks2skus.pipeline] chunks=5 concurrency=1 duration_seconds=664.3
+2026-04-27T12:21:30.422798Z [info     ] Relational context size        [chunks2skus.extractors.relational_extractor] alias_map_chars=90 chunk_id=5.不做主机厂，专注整合商的模式_笔记_chunk_001 glossary_count=20 label_nodes_count=15 label_tree_chars=100 relevant_relations_chars=9 term_list_chars=171
+2026-04-27T12:21:30.423812Z [info     ] [MONITOR] call_llm_json starting [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215
+2026-04-27T12:21:30.425043Z [info     ] [MONITOR] Starting LLM call    [chunks2skus.utils.llm_client] attempt=0 max_tokens=128000 model=doubao-seed-2-0-pro-260215 prompt_length=4884 temperature=0.3
+2026-04-27T12:23:05.087884Z [info     ] [MONITOR] LLM call SUCCESS     [chunks2skus.utils.llm_client] attempt=0 finish_reason=stop model=doubao-seed-2-0-pro-260215 response_length=2553
+2026-04-27T12:23:05.088428Z [info     ] [MONITOR] JSON parse SUCCESS   [chunks2skus.utils.llm_client] keys=['new_labels', 'new_glossary', 'updated_glossary', 'new_relationships']
+2026-04-27T12:23:05.091945Z [info     ] Added new labels               [chunks2skus.extractors.relational_extractor] chunk_id=5.不做主机厂，专注整合商的模式_笔记_chunk_001 count=0
+2026-04-27T12:23:05.092944Z [info     ] Merged new glossary entries    [chunks2skus.extractors.relational_extractor] chunk_id=5.不做主机厂，专注整合商的模式_笔记_chunk_001 count=8
+2026-04-27T12:23:05.092944Z [info     ] Updated existing glossary entries [chunks2skus.extractors.relational_extractor] chunk_id=5.不做主机厂，专注整合商的模式_笔记_chunk_001 fallback_count=0 total_in_response=0 updated_count=0
+2026-04-27T12:23:05.093941Z [info     ] Merged new relationships       [chunks2skus.extractors.relational_extractor] chunk_id=5.不做主机厂，专注整合商的模式_笔记_chunk_001 count=11
+2026-04-27T12:23:05.093941Z [info     ] Relationship predicate distribution [chunks2skus.extractors.relational_extractor] distribution={'superset-of': 3, 'causes': 6, 'enables': 10, 'has-a': 1, 'related-to': 1, 'regulates': 1, 'is-a': 1, 'example-of': 10, 'contradicts': 1, 'implements': 2, 'requires': 1} total=37
+2026-04-27T12:23:05.096931Z [info     ] Relational extraction complete [chunks2skus.extractors.relational_extractor] chunk_id=5.不做主机厂，专注整合商的模式_笔记_chunk_001 labels=5 relationships=37 terms=28
+2026-04-27T12:23:05.098924Z [info     ] Running meta extraction batch  [chunks2skus.pipeline] chunks=5 new_skus=48 total_content_chars=7329
+2026-04-27T12:23:05.099921Z [info     ] Extracting meta knowledge      [chunks2skus.extractors.meta_extractor] chunk_ids='1.业务不变，营收秒变（X50）的商业模式_笔记_chunk_001, 2.ODM OEM，超过耐K、A迪净利的商业模式_笔记_chunk_001, 3.费用归边，流量占股的商业模式_笔记_chunk_001, 4.上下通吃，打通经销商合伙人激励的模式_chunk_001, 5.不做主机厂，专注整合商的模式_笔记_chunk_001'
+2026-04-27T12:23:05.101422Z [info     ] [MONITOR] Creating thread-local OpenAI client [chunks2skus.utils.llm_client] base_url=https://ark.cn-beijing.volces.com/api/v3 thread=ThreadPoolExecutor-1_0
+2026-04-27T12:23:05.101422Z [info     ] [MONITOR] Creating thread-local OpenAI client [chunks2skus.utils.llm_client] base_url=https://ark.cn-beijing.volces.com/api/v3 thread=ThreadPoolExecutor-1_1
+2026-04-27T12:23:06.371243Z [info     ] [MONITOR] Starting LLM call    [chunks2skus.utils.llm_client] attempt=0 max_tokens=32000 model=doubao-seed-2-0-pro-260215 prompt_length=5484 temperature=0.2
+2026-04-27T12:23:06.376579Z [info     ] [MONITOR] Starting LLM call    [chunks2skus.utils.llm_client] attempt=0 max_tokens=32000 model=doubao-seed-2-0-pro-260215 prompt_length=9642 temperature=0.7
+2026-04-27T12:23:58.462923Z [info     ] [MONITOR] LLM call SUCCESS     [chunks2skus.utils.llm_client] attempt=0 finish_reason=stop model=doubao-seed-2-0-pro-260215 response_length=834
+2026-04-27T12:23:58.463945Z [info     ] Updated eureka.md              [chunks2skus.extractors.meta_extractor] chunk_ids='1.业务不变，营收秒变（X50）的商业模式_笔记_chunk_001, 2.ODM OEM，超过耐K、A迪净利的商业模式_笔记_chunk_001, 3.费用归边，流量占股的商业模式_笔记_chunk_001, 4.上下通吃，打通经销商合伙人激励的模式_chunk_001, 5.不做主机厂，专注整合商的模式_笔记_chunk_001' new_size=834 old_size=42
+2026-04-27T12:25:01.691686Z [info     ] [MONITOR] LLM call SUCCESS     [chunks2skus.utils.llm_client] attempt=0 finish_reason=stop model=doubao-seed-2-0-pro-260215 response_length=2576
+2026-04-27T12:25:01.694802Z [warning  ] Header-mapping title mismatch  [chunks2skus.extractors.meta_extractor] header_title=oem-bs-business-model-implementation-wor mapping_line='- `procedural/skill_001`: 当OEM代工企业计划升级传统代工模式，提升营收规模与资本认可度时查阅' sku_path=skill_001
+2026-04-27T12:25:01.695799Z [warning  ] Header-mapping title mismatch  [chunks2skus.extractors.meta_extractor] header_title=oem-enterprise-valuation-upgrade-workflo mapping_line='- `procedural/skill_002`: 当传统代工企业想要提升股价与估值水平，向科技类企业估值体系靠拢时查阅' sku_path=skill_002
+2026-04-27T12:25:01.697796Z [warning  ] Header-mapping title mismatch  [chunks2skus.extractors.meta_extractor] header_title=bs-mode-oem-enterprise-financial-analysi mapping_line='- `procedural/skill_003`: 当分析采用BS模式的代工企业的经营状况、商业模式合理性与潜在风险时查阅' sku_path=skill_003
+2026-04-27T12:25:01.699970Z [warning  ] Header-mapping title mismatch  [chunks2skus.extractors.meta_extractor] header_title=foundry-full-industry-chain-construction mapping_line='- `procedural/skill_004`: 当代工企业计划构建全产业链模式提升资本价值、获得更高上市估值时查阅' sku_path=skill_004
+2026-04-27T12:25:01.704625Z [warning  ] Header-mapping title mismatch  [chunks2skus.extractors.meta_extractor] header_title=foundry-customer-discourse-balance-strat mapping_line='- `procedural/skill_005`: 当代工企业需要平衡与核心品牌客户的合作关系、保障自身话语权时查阅' sku_path=skill_005
+2026-04-27T12:25:01.706719Z [warning  ] Header-mapping title mismatch  [chunks2skus.extractors.meta_extractor] header_title=foundry-accounts-receivable-risk-assessm mapping_line='- `procedural/skill_006`: 当需要评估代工企业应收账款回款风险、判断其客户合作地位时查阅' sku_path=skill_006
+2026-04-27T12:25:01.707810Z [warning  ] Header-mapping title mismatch  [chunks2skus.extractors.meta_extractor] header_title=foundry-rnd-dominance-building-method mapping_line='- `procedural/skill_007`: 当代工企业希望掌握行业研发主导权、反向影响客户决策时查阅' sku_path=skill_007
+2026-04-27T12:25:01.708840Z [warning  ] Header-mapping title mismatch  [chunks2skus.extractors.meta_extractor] header_title=foundry-global-capacity-layout-strategy mapping_line='- `procedural/skill_008`: 当代工企业需要应对劳动力成本上升、国际贸易摩擦风险时查阅' sku_path=skill_008
+2026-04-27T12:25:01.709990Z [warning  ] Header-mapping title mismatch  [chunks2skus.extractors.meta_extractor] header_title=foundry-listing-valuation-comparison-met mapping_line='- `procedural/skill_009`: 当需要评估代工企业上市估值水平、开展行业对标时查阅' sku_path=skill_009
+2026-04-27T12:25:01.712239Z [warning  ] Header-mapping title mismatch  [chunks2skus.extractors.meta_extractor] header_title=distributor-to-shareholder-channel-refor mapping_line='- `procedural/skill_010`: 传统制造业企业需强化渠道掌控力、降低经销商内耗、稳定销售网络时查阅' sku_path=skill_010
+2026-04-27T12:25:01.712239Z [warning  ] Header-mapping title mismatch  [chunks2skus.extractors.meta_extractor] header_title=off-season-rebate-policy-design mapping_line='- `procedural/skill_011`: 制造业企业需填平淡季生产成本缺口、储备运营资金、提升经销商淡季合作意愿时查阅' sku_path=skill_011
+2026-04-27T12:25:01.714814Z [warning  ] Header-mapping title mismatch  [chunks2skus.extractors.meta_extractor] header_title=upstream-supply-chain-integration-workfl mapping_line='- `procedural/skill_012`: 制造业企业需提升核心零部件自主权、保障供应链稳定、提升产品毛利率时查阅' sku_path=skill_012
+2026-04-27T12:25:01.715850Z [warning  ] Header-mapping title mismatch  [chunks2skus.extractors.meta_extractor] header_title=light-asset-manufacturing-enterprise-tra mapping_line='- `procedural/skill_014`: 当传统重资产制造企业计划向轻资产模式转型，降低运营成本、聚焦高附加值环节时查阅' sku_path=skill_014
+2026-04-27T12:25:01.723630Z [warning  ] Header-mapping title mismatch  [chunks2skus.extractors.meta_extractor] header_title=after-sales-differentiated-competitivene mapping_line='- `procedural/skill_015`: 当轻资产消费品类企业想要构建差异化竞争壁垒、提升用户品牌认可度时查阅' sku_path=skill_015
+2026-04-27T12:25:01.724642Z [warning  ] Header-mapping title mismatch  [chunks2skus.extractors.meta_extractor] header_title=home-appliance-light-asset-enterprise-ip mapping_line='- `procedural/skill_016`: 当轻资产家电类企业计划申报IPO、应对资本对科技属性的审核要求时查阅' sku_path=skill_016
+2026-04-27T12:25:01.725639Z [warning  ] Header-mapping title mismatch  [chunks2skus.extractors.meta_extractor] header_title=spac-reverse-merger-us-listing-operation mapping_line='- `procedural/skill_017`: 当国内轻资产企业想要快速实现海外上市、完成资本退出及融资时查阅' sku_path=skill_017
+2026-04-27T12:25:01.726639Z [warning  ] Header-mapping title mismatch  [chunks2skus.extractors.meta_extractor] header_title=b2b-hardware-product-scaled-expansion-wo mapping_line='- `procedural/skill_018`: 当企业推广To B类硬件产品想要快速实现规模化落地、提升商业可行性时查阅' sku_path=skill_018
+2026-04-27T12:25:01.727635Z [info     ] Updated mapping.md (diff merge) [chunks2skus.extractors.meta_extractor] chunk_id=5.不做主机厂，专注整合商的模式_笔记_chunk_001 diff_lines=55 new_size=2457 old_size=57
+2026-04-27T12:25:01.729629Z [info     ] Meta extraction complete       [chunks2skus.extractors.meta_extractor] chunk_ids='1.业务不变，营收秒变（X50）的商业模式_笔记_chunk_001, 2.ODM OEM，超过耐K、A迪净利的商业模式_笔记_chunk_001, 3.费用归边，流量占股的商业模式_笔记_chunk_001, 4.上下通吃，打通经销商合伙人激励的模式_chunk_001, 5.不做主机厂，专注整合商的模式_笔记_chunk_001' eureka_chars=834 mapping_chars=2457
+2026-04-27T12:25:01.731623Z [info     ] Chunk processed                [chunks2skus.pipeline] chunk_id=5.不做主机厂，专注整合商的模式_笔记_chunk_001 new_skus=12 total_skus=45
+2026-04-27T12:25:01.733616Z [info     ] Relational consumer phase complete [chunks2skus.pipeline] duration_seconds=211.3 note='overlaps with FP phase in pipeline wall-clock'
+2026-04-27T12:25:01.737009Z [info     ] Extraction pipeline complete   [chunks2skus.pipeline] chunks_processed=5 duration_seconds=876.4 total_characters=33575 total_skus=45

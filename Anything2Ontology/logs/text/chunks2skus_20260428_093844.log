@@ -1,0 +1,903 @@
+2026-04-28T01:38:44.326444Z [info     ] Force reset: clearing existing index for full re-extraction [chunks2skus.pipeline]
+2026-04-28T01:38:44.327443Z [info     ] Starting extraction pipeline   [chunks2skus.pipeline] chunks_dir='G:\\Program Files\\AI coding\\知识萃取\\商业模式\\输出\\chunks' force_reset=True output_dir=output\skus
+2026-04-28T01:38:44.331433Z [info     ] Deleted index file for force reset [chunks2skus.pipeline]
+2026-04-28T01:38:44.336035Z [info     ] Deleted state file for force reset [chunks2skus.pipeline] path=output\skus\relational\label_tree.json
+2026-04-28T01:38:44.338047Z [info     ] Deleted state file for force reset [chunks2skus.pipeline] path=output\skus\relational\glossary.json
+2026-04-28T01:38:44.339047Z [info     ] Deleted state file for force reset [chunks2skus.pipeline] path=output\skus\relational\relationships.json
+2026-04-28T01:38:44.340043Z [info     ] Deleted state file for force reset [chunks2skus.pipeline] path=output\skus\meta\mapping.md
+2026-04-28T01:38:44.341040Z [info     ] Deleted state file for force reset [chunks2skus.pipeline] path=output\skus\meta\eureka.md
+2026-04-28T01:38:44.343259Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_001
+2026-04-28T01:38:44.344265Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_002
+2026-04-28T01:38:44.346763Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_003
+2026-04-28T01:38:44.348539Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_004
+2026-04-28T01:38:44.350550Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_005
+2026-04-28T01:38:44.351545Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_006
+2026-04-28T01:38:44.354537Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_007
+2026-04-28T01:38:44.357057Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_008
+2026-04-28T01:38:44.358053Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_009
+2026-04-28T01:38:44.360049Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_010
+2026-04-28T01:38:44.361467Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_011
+2026-04-28T01:38:44.362045Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_012
+2026-04-28T01:38:44.364572Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_013
+2026-04-28T01:38:44.366076Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_014
+2026-04-28T01:38:44.367097Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_015
+2026-04-28T01:38:44.369317Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_016
+2026-04-28T01:38:44.371310Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_017
+2026-04-28T01:38:44.372306Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_018
+2026-04-28T01:38:44.373824Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_019
+2026-04-28T01:38:44.376330Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_020
+2026-04-28T01:38:44.378382Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_021
+2026-04-28T01:38:44.379995Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_022
+2026-04-28T01:38:44.381645Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\factual\sku_023
+2026-04-28T01:38:44.383639Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\procedural\skill_001
+2026-04-28T01:38:44.386138Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\procedural\skill_002
+2026-04-28T01:38:44.388159Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\procedural\skill_003
+2026-04-28T01:38:44.389156Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\procedural\skill_004
+2026-04-28T01:38:44.391149Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\procedural\skill_005
+2026-04-28T01:38:44.393143Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\procedural\skill_006
+2026-04-28T01:38:44.394139Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\procedural\skill_007
+2026-04-28T01:38:44.396132Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\procedural\skill_008
+2026-04-28T01:38:44.397634Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\procedural\skill_009
+2026-04-28T01:38:44.399864Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\procedural\skill_010
+2026-04-28T01:38:44.403129Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\procedural\skill_011
+2026-04-28T01:38:44.405137Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\procedural\skill_012
+2026-04-28T01:38:44.406637Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\procedural\skill_013
+2026-04-28T01:38:44.408637Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\procedural\skill_014
+2026-04-28T01:38:44.409634Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\procedural\skill_015
+2026-04-28T01:38:44.412184Z [info     ] Deleted SKU directory for force reset [chunks2skus.pipeline] path=output\skus\procedural\skill_016
+2026-04-28T01:38:44.415175Z [info     ] Loaded chunks                  [chunks2skus.router] count=26
+2026-04-28T01:38:44.416675Z [info     ] Processing chunks              [chunks2skus.pipeline] total=26
+2026-04-28T01:38:44.417755Z [info     ] Submitting chunk for Factual/Procedural [chunks2skus.pipeline] chunk_id=1.业务不变，营收秒变（X50）的商业模式_笔记_chunk_001
+2026-04-28T01:38:44.418762Z [info     ] Submitting chunk for Factual/Procedural [chunks2skus.pipeline] chunk_id='10.农村包围城市，“定位 并购”模式_笔记_chunk_001'
+2026-04-28T01:38:44.418762Z [info     ] Extracting factual knowledge   [chunks2skus.extractors.factual_extractor] chunk_id=1.业务不变，营收秒变（X50）的商业模式_笔记_chunk_001
+2026-04-28T01:38:44.418762Z [info     ] [MONITOR] call_llm_json starting [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215
+2026-04-28T01:38:44.419758Z [info     ] Submitting chunk for Factual/Procedural [chunks2skus.pipeline] chunk_id=11.渠道模式分析_笔记_chunk_001
+2026-04-28T01:38:44.419758Z [info     ] Extracting factual knowledge   [chunks2skus.extractors.factual_extractor] chunk_id='10.农村包围城市，“定位 并购”模式_笔记_chunk_001'
+2026-04-28T01:38:44.419758Z [info     ] [MONITOR] Creating thread-local OpenAI client [chunks2skus.utils.llm_client] base_url=https://ark.cn-beijing.volces.com/api/v3 thread=ThreadPoolExecutor-1_0
+2026-04-28T01:38:44.421167Z [info     ] [MONITOR] call_llm_json starting [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215
+2026-04-28T01:38:44.421167Z [info     ] Submitting chunk for Factual/Procedural [chunks2skus.pipeline] chunk_id='12.销地产 产地销，规模成王的模式_笔记_chunk_001'
+2026-04-28T01:38:44.421167Z [info     ] Extracting factual knowledge   [chunks2skus.extractors.factual_extractor] chunk_id=11.渠道模式分析_笔记_chunk_001
+2026-04-28T01:38:44.422178Z [info     ] [MONITOR] Creating thread-local OpenAI client [chunks2skus.utils.llm_client] base_url=https://ark.cn-beijing.volces.com/api/v3 thread=ThreadPoolExecutor-1_1
+2026-04-28T01:38:44.423175Z [info     ] [MONITOR] call_llm_json starting [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215
+2026-04-28T01:38:44.423175Z [info     ] Submitting chunk for Factual/Procedural [chunks2skus.pipeline] chunk_id=13.专注男装砍掉女装，类直营模式_笔记_chunk_001
+2026-04-28T01:38:44.424172Z [info     ] [MONITOR] Creating thread-local OpenAI client [chunks2skus.utils.llm_client] base_url=https://ark.cn-beijing.volces.com/api/v3 thread=ThreadPoolExecutor-1_2
+2026-04-28T01:38:44.424172Z [info     ] Extracting factual knowledge   [chunks2skus.extractors.factual_extractor] chunk_id='12.销地产 产地销，规模成王的模式_笔记_chunk_001'
+2026-04-28T01:38:44.425169Z [info     ] Submitting chunk for Factual/Procedural [chunks2skus.pipeline] chunk_id=14.“师傅带徒弟，徒弟带徒孙”的机制_笔记_chunk_001
+2026-04-28T01:38:44.426669Z [info     ] [MONITOR] call_llm_json starting [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215
+2026-04-28T01:38:44.426669Z [info     ] Submitting chunk for Factual/Procedural [chunks2skus.pipeline] chunk_id=15.三阶段合伙人的模式_笔记_chunk_001
+2026-04-28T01:38:44.426669Z [info     ] [MONITOR] Creating thread-local OpenAI client [chunks2skus.utils.llm_client] base_url=https://ark.cn-beijing.volces.com/api/v3 thread=ThreadPoolExecutor-1_3
+2026-04-28T01:38:44.427669Z [info     ] Submitting chunk for Factual/Procedural [chunks2skus.pipeline] chunk_id=16.廉价航空，净利润超过10％的模式_笔记_chunk_001
+2026-04-28T01:38:44.428669Z [info     ] Submitting chunk for Factual/Procedural [chunks2skus.pipeline] chunk_id=17.先掺后控，打造符合资本的商业模式_笔记_chunk_001
+2026-04-28T01:38:44.428669Z [info     ] Submitting chunk for Factual/Procedural [chunks2skus.pipeline] chunk_id='18.“连锁 并购基金”的模式_笔记_chunk_001'
+2026-04-28T01:38:44.430457Z [info     ] Submitting chunk for Factual/Procedural [chunks2skus.pipeline] chunk_id=19.药明康德，G级代工，研发外包模式，打造医药行业“富士康”模式_笔记_chunk_001
+2026-04-28T01:38:44.435888Z [info     ] Submitting chunk for Factual/Procedural [chunks2skus.pipeline] chunk_id='2.ODM OEM，超过耐K、A迪净利的商业模式_笔记_chunk_001'
+2026-04-28T01:38:44.435888Z [info     ] Submitting chunk for Factual/Procedural [chunks2skus.pipeline] chunk_id=20.红星美凯龙，比轻资产更轻，委托管理模式_笔记_chunk_001
+2026-04-28T01:38:44.436906Z [info     ] Submitting chunk for Factual/Procedural [chunks2skus.pipeline] chunk_id='21.尚品宅配，柔性生产链，C2B O2O的模式分析_笔记_chunk_001'
+2026-04-28T01:38:44.436906Z [info     ] Submitting chunk for Factual/Procedural [chunks2skus.pipeline] chunk_id='22.张江高科，房东 股东，科技投行的模式，率先开启中国产业园的模式_笔记_chunk_001'
+2026-04-28T01:38:44.437902Z [info     ] Submitting chunk for Factual/Procedural [chunks2skus.pipeline] chunk_id='23.宋城演艺，蹭头部流量，做自己的演艺，“千古情 5A景区”模式_笔记_chunk_001'
+2026-04-28T01:38:44.441443Z [info     ] Submitting chunk for Factual/Procedural [chunks2skus.pipeline] chunk_id=24.易居企业控股，甲方变乙方，客户变股东，上游房企变股东的模式_笔记_chunk_001
+2026-04-28T01:38:44.442478Z [info     ] Submitting chunk for Factual/Procedural [chunks2skus.pipeline] chunk_id=25.以润唇膏切入彩妆市场的模式_笔记_chunk_001
+2026-04-28T01:38:44.442478Z [info     ] Submitting chunk for Factual/Procedural [chunks2skus.pipeline] chunk_id=26.以猪肉为核心，不卖隔夜肉_笔记_chunk_001
+2026-04-28T01:38:44.444591Z [info     ] Submitting chunk for Factual/Procedural [chunks2skus.pipeline] chunk_id=3.费用归边，流量占股的商业模式_笔记_chunk_001
+2026-04-28T01:38:44.447173Z [info     ] Submitting chunk for Factual/Procedural [chunks2skus.pipeline] chunk_id=4.上下通吃，打通经销商合伙人激励的模式_chunk_001
+2026-04-28T01:38:44.447173Z [info     ] Submitting chunk for Factual/Procedural [chunks2skus.pipeline] chunk_id=5.不做主机厂，专注整合商的模式_笔记_chunk_001
+2026-04-28T01:38:44.448174Z [info     ] Submitting chunk for Factual/Procedural [chunks2skus.pipeline] chunk_id=6.为经销商Dai款的模式_笔记_chunk_001
+2026-04-28T01:38:44.448174Z [info     ] Submitting chunk for Factual/Procedural [chunks2skus.pipeline] chunk_id=7.交钥匙不如先款后货的模式_笔记_chunk_001
+2026-04-28T01:38:44.449170Z [info     ] Submitting chunk for Factual/Procedural [chunks2skus.pipeline] chunk_id=8.生产外包，先市场后工厂的模式_笔记_chunk_001
+2026-04-28T01:38:44.450167Z [info     ] Submitting chunk for Factual/Procedural [chunks2skus.pipeline] chunk_id=9.做品牌不做品类的商业模式_笔记_chunk_001
+2026-04-28T01:38:45.969850Z [info     ] [MONITOR] Starting LLM call    [chunks2skus.utils.llm_client] attempt=0 max_tokens=64000 model=doubao-seed-2-0-pro-260215 prompt_length=3769 temperature=0.3
+2026-04-28T01:38:45.972840Z [info     ] [MONITOR] Starting LLM call    [chunks2skus.utils.llm_client] attempt=0 max_tokens=64000 model=doubao-seed-2-0-pro-260215 prompt_length=1473 temperature=0.3
+2026-04-28T01:38:45.977332Z [info     ] [MONITOR] Starting LLM call    [chunks2skus.utils.llm_client] attempt=0 max_tokens=64000 model=doubao-seed-2-0-pro-260215 prompt_length=3268 temperature=0.3
+2026-04-28T01:38:45.986839Z [info     ] [MONITOR] Starting LLM call    [chunks2skus.utils.llm_client] attempt=0 max_tokens=64000 model=doubao-seed-2-0-pro-260215 prompt_length=2952 temperature=0.3
+2026-04-28T01:38:49.953697Z [info     ] [MONITOR] LLM call SUCCESS     [chunks2skus.utils.llm_client] attempt=0 finish_reason=stop model=doubao-seed-2-0-pro-260215 response_length=13
+2026-04-28T01:38:49.954693Z [info     ] [MONITOR] JSON parse SUCCESS   [chunks2skus.utils.llm_client] keys=['facts']
+2026-04-28T01:38:49.959395Z [info     ] No factual knowledge found in chunk [chunks2skus.extractors.factual_extractor] chunk_id='10.农村包围城市，“定位 并购”模式_笔记_chunk_001'
+2026-04-28T01:38:49.960392Z [info     ] Extracting procedural knowledge [chunks2skus.extractors.procedural_extractor] chunk_id='10.农村包围城市，“定位 并购”模式_笔记_chunk_001'
+2026-04-28T01:38:49.960392Z [info     ] [MONITOR] call_llm_json starting [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215
+2026-04-28T01:38:49.961388Z [info     ] [MONITOR] Starting LLM call    [chunks2skus.utils.llm_client] attempt=0 max_tokens=64000 model=doubao-seed-2-0-pro-260215 prompt_length=834 temperature=0.3
+2026-04-28T01:38:51.963436Z [info     ] [MONITOR] LLM call SUCCESS     [chunks2skus.utils.llm_client] attempt=0 finish_reason=stop model=doubao-seed-2-0-pro-260215 response_length=18
+2026-04-28T01:38:51.964441Z [info     ] [MONITOR] JSON parse SUCCESS   [chunks2skus.utils.llm_client] keys=['procedures']
+2026-04-28T01:38:51.970454Z [info     ] No procedural knowledge found in chunk [chunks2skus.extractors.procedural_extractor] chunk_id='10.农村包围城市，“定位 并购”模式_笔记_chunk_001'
+2026-04-28T01:38:51.971449Z [info     ] Extracting relational knowledge [chunks2skus.extractors.relational_extractor] chunk_id='10.农村包围城市，“定位 并购”模式_笔记_chunk_001'
+2026-04-28T01:38:51.972446Z [info     ] Extracting factual knowledge   [chunks2skus.extractors.factual_extractor] chunk_id=13.专注男装砍掉女装，类直营模式_笔记_chunk_001
+2026-04-28T01:38:51.972446Z [info     ] Relational context size        [chunks2skus.extractors.relational_extractor] alias_map_chars=5 chunk_id='10.农村包围城市，“定位 并购”模式_笔记_chunk_001' glossary_count=0 label_nodes_count=0 label_tree_chars=0 relevant_relations_chars=9 term_list_chars=0
+2026-04-28T01:38:51.973444Z [info     ] [MONITOR] call_llm_json starting [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215
+2026-04-28T01:38:51.973444Z [info     ] [MONITOR] call_llm_json starting [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215
+2026-04-28T01:38:51.974440Z [info     ] [MONITOR] Starting LLM call    [chunks2skus.utils.llm_client] attempt=0 max_tokens=64000 model=doubao-seed-2-0-pro-260215 prompt_length=3511 temperature=0.3
+2026-04-28T01:38:51.974440Z [info     ] [MONITOR] Creating thread-local OpenAI client [chunks2skus.utils.llm_client] base_url=https://ark.cn-beijing.volces.com/api/v3 thread='Thread-1 (relational_consumer)'
+2026-04-28T01:38:53.031376Z [info     ] [MONITOR] Starting LLM call    [chunks2skus.utils.llm_client] attempt=0 max_tokens=128000 model=doubao-seed-2-0-pro-260215 prompt_length=2012 temperature=0.3
+2026-04-28T01:38:56.544657Z [info     ] [MONITOR] LLM call SUCCESS     [chunks2skus.utils.llm_client] attempt=0 finish_reason=stop model=doubao-seed-2-0-pro-260215 response_length=97
+2026-04-28T01:38:56.545170Z [info     ] [MONITOR] JSON parse SUCCESS   [chunks2skus.utils.llm_client] keys=['new_labels', 'new_glossary', 'updated_glossary', 'new_relationships']
+2026-04-28T01:38:56.550168Z [info     ] Added new labels               [chunks2skus.extractors.relational_extractor] chunk_id='10.农村包围城市，“定位 并购”模式_笔记_chunk_001' count=0
+2026-04-28T01:38:56.551165Z [info     ] Merged new glossary entries    [chunks2skus.extractors.relational_extractor] chunk_id='10.农村包围城市，“定位 并购”模式_笔记_chunk_001' count=0
+2026-04-28T01:38:56.552161Z [info     ] Updated existing glossary entries [chunks2skus.extractors.relational_extractor] chunk_id='10.农村包围城市，“定位 并购”模式_笔记_chunk_001' fallback_count=0 total_in_response=0 updated_count=0
+2026-04-28T01:38:56.553157Z [info     ] Merged new relationships       [chunks2skus.extractors.relational_extractor] chunk_id='10.农村包围城市，“定位 并购”模式_笔记_chunk_001' count=0
+2026-04-28T01:38:56.556544Z [info     ] Relational extraction complete [chunks2skus.extractors.relational_extractor] chunk_id='10.农村包围城市，“定位 并购”模式_笔记_chunk_001' labels=0 relationships=0 terms=0
+2026-04-28T01:38:56.558540Z [info     ] Chunk processed                [chunks2skus.pipeline] chunk_id='10.农村包围城市，“定位 并购”模式_笔记_chunk_001' new_skus=1 total_skus=1
+2026-04-28T01:40:04.707653Z [info     ] [MONITOR] LLM call SUCCESS     [chunks2skus.utils.llm_client] attempt=0 finish_reason=stop model=doubao-seed-2-0-pro-260215 response_length=2813
+2026-04-28T01:40:04.708660Z [info     ] [MONITOR] JSON parse SUCCESS   [chunks2skus.utils.llm_client] keys=['facts']
+2026-04-28T01:40:04.718679Z [info     ] Skipping trivially short SKU   [chunks2skus.extractors.factual_extractor] chars=73 name=BS模式代工企业成本结构
+2026-04-28T01:40:04.725169Z [info     ] Factual extraction complete    [chunks2skus.extractors.factual_extractor] chunk_id=1.业务不变，营收秒变（X50）的商业模式_笔记_chunk_001 skus_created=6
+2026-04-28T01:40:04.726166Z [info     ] Extracting procedural knowledge [chunks2skus.extractors.procedural_extractor] chunk_id=1.业务不变，营收秒变（X50）的商业模式_笔记_chunk_001
+2026-04-28T01:40:04.727163Z [info     ] [MONITOR] call_llm_json starting [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215
+2026-04-28T01:40:04.727163Z [info     ] [MONITOR] Starting LLM call    [chunks2skus.utils.llm_client] attempt=0 max_tokens=64000 model=doubao-seed-2-0-pro-260215 prompt_length=2313 temperature=0.3
+2026-04-28T01:40:05.040087Z [info     ] [MONITOR] LLM call SUCCESS     [chunks2skus.utils.llm_client] attempt=0 finish_reason=stop model=doubao-seed-2-0-pro-260215 response_length=1788
+2026-04-28T01:40:05.041591Z [info     ] [MONITOR] JSON parse SUCCESS   [chunks2skus.utils.llm_client] keys=['facts']
+2026-04-28T01:40:05.049588Z [info     ] Factual extraction complete    [chunks2skus.extractors.factual_extractor] chunk_id=11.渠道模式分析_笔记_chunk_001 skus_created=3
+2026-04-28T01:40:05.051696Z [info     ] Extracting procedural knowledge [chunks2skus.extractors.procedural_extractor] chunk_id=11.渠道模式分析_笔记_chunk_001
+2026-04-28T01:40:05.052706Z [info     ] [MONITOR] call_llm_json starting [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215
+2026-04-28T01:40:05.052706Z [info     ] [MONITOR] Starting LLM call    [chunks2skus.utils.llm_client] attempt=0 max_tokens=64000 model=doubao-seed-2-0-pro-260215 prompt_length=2629 temperature=0.3
+2026-04-28T01:40:17.398111Z [info     ] [MONITOR] LLM call SUCCESS     [chunks2skus.utils.llm_client] attempt=0 finish_reason=stop model=doubao-seed-2-0-pro-260215 response_length=3537
+2026-04-28T01:40:17.399116Z [info     ] [MONITOR] JSON parse SUCCESS   [chunks2skus.utils.llm_client] keys=['facts']
+2026-04-28T01:40:17.413111Z [info     ] Factual extraction complete    [chunks2skus.extractors.factual_extractor] chunk_id=13.专注男装砍掉女装，类直营模式_笔记_chunk_001 skus_created=8
+2026-04-28T01:40:17.414489Z [info     ] Extracting procedural knowledge [chunks2skus.extractors.procedural_extractor] chunk_id=13.专注男装砍掉女装，类直营模式_笔记_chunk_001
+2026-04-28T01:40:17.415492Z [info     ] [MONITOR] call_llm_json starting [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215
+2026-04-28T01:40:17.415492Z [info     ] [MONITOR] Starting LLM call    [chunks2skus.utils.llm_client] attempt=0 max_tokens=64000 model=doubao-seed-2-0-pro-260215 prompt_length=2872 temperature=0.3
+2026-04-28T01:40:24.870456Z [info     ] [MONITOR] LLM call SUCCESS     [chunks2skus.utils.llm_client] attempt=0 finish_reason=stop model=doubao-seed-2-0-pro-260215 response_length=3881
+2026-04-28T01:40:24.871959Z [info     ] [MONITOR] JSON parse SUCCESS   [chunks2skus.utils.llm_client] keys=['facts']
+2026-04-28T01:40:24.887436Z [info     ] Factual extraction complete    [chunks2skus.extractors.factual_extractor] chunk_id='12.销地产 产地销，规模成王的模式_笔记_chunk_001' skus_created=8
+2026-04-28T01:40:24.887436Z [info     ] Extracting procedural knowledge [chunks2skus.extractors.procedural_extractor] chunk_id='12.销地产 产地销，规模成王的模式_笔记_chunk_001'
+2026-04-28T01:40:24.889430Z [info     ] [MONITOR] call_llm_json starting [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215
+2026-04-28T01:40:24.889430Z [info     ] [MONITOR] Starting LLM call    [chunks2skus.utils.llm_client] attempt=0 max_tokens=64000 model=doubao-seed-2-0-pro-260215 prompt_length=3130 temperature=0.3
+2026-04-28T01:40:35.580543Z [info     ] [MONITOR] LLM call SUCCESS     [chunks2skus.utils.llm_client] attempt=0 finish_reason=stop model=doubao-seed-2-0-pro-260215 response_length=1817
+2026-04-28T01:40:35.581615Z [info     ] [MONITOR] JSON parse SUCCESS   [chunks2skus.utils.llm_client] keys=['procedures']
+2026-04-28T01:40:35.592057Z [info     ] Procedural extraction complete [chunks2skus.extractors.procedural_extractor] chunk_id=1.业务不变，营收秒变（X50）的商业模式_笔记_chunk_001 skills_created=4
+2026-04-28T01:40:35.597039Z [info     ] Extracting relational knowledge [chunks2skus.extractors.relational_extractor] chunk_id=1.业务不变，营收秒变（X50）的商业模式_笔记_chunk_001
+2026-04-28T01:40:35.597039Z [info     ] Extracting factual knowledge   [chunks2skus.extractors.factual_extractor] chunk_id=14.“师傅带徒弟，徒弟带徒孙”的机制_笔记_chunk_001
+2026-04-28T01:40:35.598037Z [info     ] Relational context size        [chunks2skus.extractors.relational_extractor] alias_map_chars=5 chunk_id=1.业务不变，营收秒变（X50）的商业模式_笔记_chunk_001 glossary_count=0 label_nodes_count=0 label_tree_chars=0 relevant_relations_chars=9 term_list_chars=0
+2026-04-28T01:40:35.600030Z [info     ] [MONITOR] call_llm_json starting [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215
+2026-04-28T01:40:35.600533Z [info     ] [MONITOR] call_llm_json starting [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215
+2026-04-28T01:40:35.601532Z [info     ] [MONITOR] Starting LLM call    [chunks2skus.utils.llm_client] attempt=0 max_tokens=64000 model=doubao-seed-2-0-pro-260215 prompt_length=3523 temperature=0.3
+2026-04-28T01:40:35.601532Z [info     ] [MONITOR] Starting LLM call    [chunks2skus.utils.llm_client] attempt=0 max_tokens=128000 model=doubao-seed-2-0-pro-260215 prompt_length=3491 temperature=0.3
+2026-04-28T01:41:07.676668Z [info     ] [MONITOR] LLM call SUCCESS     [chunks2skus.utils.llm_client] attempt=0 finish_reason=stop model=doubao-seed-2-0-pro-260215 response_length=2762
+2026-04-28T01:41:07.677171Z [info     ] [MONITOR] JSON parse SUCCESS   [chunks2skus.utils.llm_client] keys=['procedures']
+2026-04-28T01:41:07.695146Z [info     ] Procedural extraction complete [chunks2skus.extractors.procedural_extractor] chunk_id='12.销地产 产地销，规模成王的模式_笔记_chunk_001' skills_created=6
+2026-04-28T01:41:07.696196Z [info     ] Extracting factual knowledge   [chunks2skus.extractors.factual_extractor] chunk_id=15.三阶段合伙人的模式_笔记_chunk_001
+2026-04-28T01:41:07.696196Z [info     ] [MONITOR] call_llm_json starting [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215
+2026-04-28T01:41:07.697192Z [info     ] [MONITOR] Starting LLM call    [chunks2skus.utils.llm_client] attempt=0 max_tokens=64000 model=doubao-seed-2-0-pro-260215 prompt_length=3724 temperature=0.3
+2026-04-28T01:41:08.852772Z [info     ] [MONITOR] LLM call SUCCESS     [chunks2skus.utils.llm_client] attempt=0 finish_reason=stop model=doubao-seed-2-0-pro-260215 response_length=1908
+2026-04-28T01:41:08.853776Z [info     ] [MONITOR] JSON parse SUCCESS   [chunks2skus.utils.llm_client] keys=['procedures']
+2026-04-28T01:41:08.868765Z [info     ] Procedural extraction complete [chunks2skus.extractors.procedural_extractor] chunk_id=11.渠道模式分析_笔记_chunk_001 skills_created=4
+2026-04-28T01:41:08.869762Z [info     ] Extracting factual knowledge   [chunks2skus.extractors.factual_extractor] chunk_id=16.廉价航空，净利润超过10％的模式_笔记_chunk_001
+2026-04-28T01:41:08.870761Z [info     ] [MONITOR] call_llm_json starting [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215
+2026-04-28T01:41:08.870761Z [info     ] [MONITOR] Starting LLM call    [chunks2skus.utils.llm_client] attempt=0 max_tokens=64000 model=doubao-seed-2-0-pro-260215 prompt_length=3488 temperature=0.3
+2026-04-28T01:41:12.204202Z [info     ] [MONITOR] LLM call SUCCESS     [chunks2skus.utils.llm_client] attempt=0 finish_reason=stop model=doubao-seed-2-0-pro-260215 response_length=2891
+2026-04-28T01:41:12.205789Z [info     ] [MONITOR] JSON parse SUCCESS   [chunks2skus.utils.llm_client] keys=['procedures']
+2026-04-28T01:41:12.217854Z [info     ] Procedural extraction complete [chunks2skus.extractors.procedural_extractor] chunk_id=13.专注男装砍掉女装，类直营模式_笔记_chunk_001 skills_created=6
+2026-04-28T01:41:12.219358Z [info     ] Extracting factual knowledge   [chunks2skus.extractors.factual_extractor] chunk_id=17.先掺后控，打造符合资本的商业模式_笔记_chunk_001
+2026-04-28T01:41:12.220357Z [info     ] [MONITOR] call_llm_json starting [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215
+2026-04-28T01:41:12.221465Z [info     ] [MONITOR] Starting LLM call    [chunks2skus.utils.llm_client] attempt=0 max_tokens=64000 model=doubao-seed-2-0-pro-260215 prompt_length=3394 temperature=0.3
+2026-04-28T01:41:33.347269Z [info     ] [MONITOR] LLM call SUCCESS     [chunks2skus.utils.llm_client] attempt=0 finish_reason=stop model=doubao-seed-2-0-pro-260215 response_length=2243
+2026-04-28T01:41:33.348278Z [info     ] [MONITOR] JSON parse SUCCESS   [chunks2skus.utils.llm_client] keys=['new_labels', 'new_glossary', 'updated_glossary', 'new_relationships']
+2026-04-28T01:41:33.350273Z [info     ] Added new labels               [chunks2skus.extractors.relational_extractor] chunk_id=1.业务不变，营收秒变（X50）的商业模式_笔记_chunk_001 count=6
+2026-04-28T01:41:33.352267Z [info     ] Merged new glossary entries    [chunks2skus.extractors.relational_extractor] chunk_id=1.业务不变，营收秒变（X50）的商业模式_笔记_chunk_001 count=5
+2026-04-28T01:41:33.353263Z [info     ] Updated existing glossary entries [chunks2skus.extractors.relational_extractor] chunk_id=1.业务不变，营收秒变（X50）的商业模式_笔记_chunk_001 fallback_count=0 total_in_response=0 updated_count=0
+2026-04-28T01:41:33.354314Z [info     ] Merged new relationships       [chunks2skus.extractors.relational_extractor] chunk_id=1.业务不变，营收秒变（X50）的商业模式_笔记_chunk_001 count=9
+2026-04-28T01:41:33.354314Z [info     ] Relationship predicate distribution [chunks2skus.extractors.relational_extractor] distribution={'superset-of': 2, 'contradicts': 1, 'enables': 3, 'caused-by': 1, 'depends-on': 1, 'causes': 1} total=9
+2026-04-28T01:41:33.355313Z [warning  ] Predicate ratio exceeds 30%    [chunks2skus.extractors.relational_extractor] count=3 predicate=enables ratio=33.3% total=9
+2026-04-28T01:41:33.358842Z [info     ] Relational extraction complete [chunks2skus.extractors.relational_extractor] chunk_id=1.业务不变，营收秒变（X50）的商业模式_笔记_chunk_001 labels=2 relationships=9 terms=5
+2026-04-28T01:41:33.360835Z [info     ] Chunk processed                [chunks2skus.pipeline] chunk_id=1.业务不变，营收秒变（X50）的商业模式_笔记_chunk_001 new_skus=11 total_skus=11
+2026-04-28T01:41:33.360835Z [info     ] Extracting relational knowledge [chunks2skus.extractors.relational_extractor] chunk_id='12.销地产 产地销，规模成王的模式_笔记_chunk_001'
+2026-04-28T01:41:33.361831Z [info     ] Relational context size        [chunks2skus.extractors.relational_extractor] alias_map_chars=61 chunk_id='12.销地产 产地销，规模成王的模式_笔记_chunk_001' glossary_count=5 label_nodes_count=6 label_tree_chars=35 relevant_relations_chars=9 term_list_chars=37
+2026-04-28T01:41:33.362828Z [info     ] [MONITOR] call_llm_json starting [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215
+2026-04-28T01:41:33.362828Z [info     ] [MONITOR] Starting LLM call    [chunks2skus.utils.llm_client] attempt=0 max_tokens=128000 model=doubao-seed-2-0-pro-260215 prompt_length=4436 temperature=0.3
+2026-04-28T01:41:59.698295Z [info     ] [MONITOR] LLM call SUCCESS     [chunks2skus.utils.llm_client] attempt=0 finish_reason=stop model=doubao-seed-2-0-pro-260215 response_length=4154
+2026-04-28T01:41:59.699874Z [info     ] [MONITOR] JSON parse SUCCESS   [chunks2skus.utils.llm_client] keys=['facts']
+2026-04-28T01:41:59.710349Z [info     ] Factual extraction complete    [chunks2skus.extractors.factual_extractor] chunk_id=14.“师傅带徒弟，徒弟带徒孙”的机制_笔记_chunk_001 skus_created=5
+2026-04-28T01:41:59.711346Z [info     ] Extracting procedural knowledge [chunks2skus.extractors.procedural_extractor] chunk_id=14.“师傅带徒弟，徒弟带徒孙”的机制_笔记_chunk_001
+2026-04-28T01:41:59.712343Z [info     ] [MONITOR] call_llm_json starting [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215
+2026-04-28T01:41:59.712343Z [info     ] [MONITOR] Starting LLM call    [chunks2skus.utils.llm_client] attempt=0 max_tokens=64000 model=doubao-seed-2-0-pro-260215 prompt_length=2884 temperature=0.3
+2026-04-28T01:42:28.787782Z [info     ] [MONITOR] LLM call SUCCESS     [chunks2skus.utils.llm_client] attempt=0 finish_reason=stop model=doubao-seed-2-0-pro-260215 response_length=3590
+2026-04-28T01:42:28.789775Z [info     ] [MONITOR] JSON parse SUCCESS   [chunks2skus.utils.llm_client] keys=['facts']
+2026-04-28T01:42:28.807918Z [info     ] Factual extraction complete    [chunks2skus.extractors.factual_extractor] chunk_id=16.廉价航空，净利润超过10％的模式_笔记_chunk_001 skus_created=6
+2026-04-28T01:42:28.809912Z [info     ] Extracting procedural knowledge [chunks2skus.extractors.procedural_extractor] chunk_id=16.廉价航空，净利润超过10％的模式_笔记_chunk_001
+2026-04-28T01:42:28.814434Z [info     ] [MONITOR] call_llm_json starting [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215
+2026-04-28T01:42:28.815431Z [info     ] [MONITOR] Starting LLM call    [chunks2skus.utils.llm_client] attempt=0 max_tokens=64000 model=doubao-seed-2-0-pro-260215 prompt_length=2849 temperature=0.3
+2026-04-28T01:42:36.640247Z [info     ] [MONITOR] LLM call SUCCESS     [chunks2skus.utils.llm_client] attempt=0 finish_reason=stop model=doubao-seed-2-0-pro-260215 response_length=3059
+2026-04-28T01:42:36.641254Z [info     ] [MONITOR] JSON parse SUCCESS   [chunks2skus.utils.llm_client] keys=['facts']
+2026-04-28T01:42:36.657026Z [info     ] Factual extraction complete    [chunks2skus.extractors.factual_extractor] chunk_id=17.先掺后控，打造符合资本的商业模式_笔记_chunk_001 skus_created=7
+2026-04-28T01:42:36.659156Z [info     ] Extracting procedural knowledge [chunks2skus.extractors.procedural_extractor] chunk_id=17.先掺后控，打造符合资本的商业模式_笔记_chunk_001
+2026-04-28T01:42:36.660183Z [info     ] [MONITOR] call_llm_json starting [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215
+2026-04-28T01:42:36.661180Z [info     ] [MONITOR] Starting LLM call    [chunks2skus.utils.llm_client] attempt=0 max_tokens=64000 model=doubao-seed-2-0-pro-260215 prompt_length=2755 temperature=0.3
+2026-04-28T01:42:38.359826Z [info     ] [MONITOR] LLM call SUCCESS     [chunks2skus.utils.llm_client] attempt=0 finish_reason=stop model=doubao-seed-2-0-pro-260215 response_length=2563
+2026-04-28T01:42:38.360831Z [info     ] [MONITOR] JSON parse SUCCESS   [chunks2skus.utils.llm_client] keys=['facts']
+2026-04-28T01:42:38.371777Z [info     ] Factual extraction complete    [chunks2skus.extractors.factual_extractor] chunk_id=15.三阶段合伙人的模式_笔记_chunk_001 skus_created=5
+2026-04-28T01:42:38.371777Z [info     ] Extracting procedural knowledge [chunks2skus.extractors.procedural_extractor] chunk_id=15.三阶段合伙人的模式_笔记_chunk_001
+2026-04-28T01:42:38.372774Z [info     ] [MONITOR] call_llm_json starting [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215
+2026-04-28T01:42:38.373277Z [info     ] [MONITOR] Starting LLM call    [chunks2skus.utils.llm_client] attempt=0 max_tokens=64000 model=doubao-seed-2-0-pro-260215 prompt_length=3085 temperature=0.3
+2026-04-28T01:42:44.816790Z [info     ] [MONITOR] LLM call SUCCESS     [chunks2skus.utils.llm_client] attempt=0 finish_reason=stop model=doubao-seed-2-0-pro-260215 response_length=2293
+2026-04-28T01:42:44.817795Z [info     ] [MONITOR] JSON parse SUCCESS   [chunks2skus.utils.llm_client] keys=['procedures']
+2026-04-28T01:42:44.827858Z [info     ] Procedural extraction complete [chunks2skus.extractors.procedural_extractor] chunk_id=14.“师傅带徒弟，徒弟带徒孙”的机制_笔记_chunk_001 skills_created=5
+2026-04-28T01:42:44.828855Z [info     ] Extracting factual knowledge   [chunks2skus.extractors.factual_extractor] chunk_id='18.“连锁 并购基金”的模式_笔记_chunk_001'
+2026-04-28T01:42:44.828855Z [info     ] [MONITOR] call_llm_json starting [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215
+2026-04-28T01:42:44.829852Z [info     ] [MONITOR] Starting LLM call    [chunks2skus.utils.llm_client] attempt=0 max_tokens=64000 model=doubao-seed-2-0-pro-260215 prompt_length=3532 temperature=0.3
+2026-04-28T01:43:18.055221Z [info     ] [MONITOR] LLM call SUCCESS     [chunks2skus.utils.llm_client] attempt=0 finish_reason=stop model=doubao-seed-2-0-pro-260215 response_length=3205
+2026-04-28T01:43:18.057728Z [info     ] [MONITOR] JSON parse SUCCESS   [chunks2skus.utils.llm_client] keys=['new_labels', 'new_glossary', 'updated_glossary', 'new_relationships']
+2026-04-28T01:43:18.061220Z [info     ] Added new labels               [chunks2skus.extractors.relational_extractor] chunk_id='12.销地产 产地销，规模成王的模式_笔记_chunk_001' count=3
+2026-04-28T01:43:18.061220Z [info     ] Merged new glossary entries    [chunks2skus.extractors.relational_extractor] chunk_id='12.销地产 产地销，规模成王的模式_笔记_chunk_001' count=6
+2026-04-28T01:43:18.062220Z [info     ] Updated existing glossary entries [chunks2skus.extractors.relational_extractor] chunk_id='12.销地产 产地销，规模成王的模式_笔记_chunk_001' fallback_count=0 total_in_response=0 updated_count=0
+2026-04-28T01:43:18.063219Z [info     ] Merged new relationships       [chunks2skus.extractors.relational_extractor] chunk_id='12.销地产 产地销，规模成王的模式_笔记_chunk_001' count=20
+2026-04-28T01:43:18.063219Z [info     ] Relationship predicate distribution [chunks2skus.extractors.relational_extractor] distribution={'superset-of': 11, 'contradicts': 1, 'enables': 3, 'caused-by': 1, 'depends-on': 1, 'causes': 4, 'implements': 8} total=29
+2026-04-28T01:43:18.064320Z [warning  ] Predicate ratio exceeds 30%    [chunks2skus.extractors.relational_extractor] count=11 predicate=superset-of ratio=37.9% total=29
+2026-04-28T01:43:18.068306Z [info     ] Relational extraction complete [chunks2skus.extractors.relational_extractor] chunk_id='12.销地产 产地销，规模成王的模式_笔记_chunk_001' labels=2 relationships=29 terms=11
+2026-04-28T01:43:18.069303Z [info     ] Chunk processed                [chunks2skus.pipeline] chunk_id='12.销地产 产地销，规模成王的模式_笔记_chunk_001' new_skus=15 total_skus=25
+2026-04-28T01:43:18.070806Z [info     ] Extracting relational knowledge [chunks2skus.extractors.relational_extractor] chunk_id=11.渠道模式分析_笔记_chunk_001
+2026-04-28T01:43:18.073888Z [info     ] Relational context size        [chunks2skus.extractors.relational_extractor] alias_map_chars=61 chunk_id=11.渠道模式分析_笔记_chunk_001 glossary_count=11 label_nodes_count=9 label_tree_chars=60 relevant_relations_chars=9 term_list_chars=95
+2026-04-28T01:43:18.075881Z [info     ] [MONITOR] call_llm_json starting [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215
+2026-04-28T01:43:18.075881Z [info     ] [MONITOR] Starting LLM call    [chunks2skus.utils.llm_client] attempt=0 max_tokens=128000 model=doubao-seed-2-0-pro-260215 prompt_length=4019 temperature=0.3
+2026-04-28T01:43:44.125983Z [info     ] [MONITOR] LLM call SUCCESS     [chunks2skus.utils.llm_client] attempt=0 finish_reason=stop model=doubao-seed-2-0-pro-260215 response_length=1857
+2026-04-28T01:43:44.126998Z [info     ] [MONITOR] JSON parse SUCCESS   [chunks2skus.utils.llm_client] keys=['procedures']
+2026-04-28T01:43:44.139994Z [info     ] Procedural extraction complete [chunks2skus.extractors.procedural_extractor] chunk_id=16.廉价航空，净利润超过10％的模式_笔记_chunk_001 skills_created=3
+2026-04-28T01:43:44.141990Z [info     ] Extracting factual knowledge   [chunks2skus.extractors.factual_extractor] chunk_id=19.药明康德，G级代工，研发外包模式，打造医药行业“富士康”模式_笔记_chunk_001
+2026-04-28T01:43:44.142987Z [info     ] [MONITOR] call_llm_json starting [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215
+2026-04-28T01:43:44.142987Z [info     ] [MONITOR] Starting LLM call    [chunks2skus.utils.llm_client] attempt=0 max_tokens=64000 model=doubao-seed-2-0-pro-260215 prompt_length=4124 temperature=0.3
+2026-04-28T01:43:51.689412Z [info     ] [MONITOR] LLM call SUCCESS     [chunks2skus.utils.llm_client] attempt=0 finish_reason=stop model=doubao-seed-2-0-pro-260215 response_length=1949
+2026-04-28T01:43:51.690416Z [info     ] [MONITOR] JSON parse SUCCESS   [chunks2skus.utils.llm_client] keys=['procedures']
+2026-04-28T01:43:51.700951Z [info     ] Procedural extraction complete [chunks2skus.extractors.procedural_extractor] chunk_id=15.三阶段合伙人的模式_笔记_chunk_001 skills_created=3
+2026-04-28T01:43:51.700951Z [info     ] Extracting factual knowledge   [chunks2skus.extractors.factual_extractor] chunk_id='2.ODM OEM，超过耐K、A迪净利的商业模式_笔记_chunk_001'
+2026-04-28T01:43:51.702089Z [info     ] [MONITOR] call_llm_json starting [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215
+2026-04-28T01:43:51.703119Z [info     ] [MONITOR] Starting LLM call    [chunks2skus.utils.llm_client] attempt=0 max_tokens=64000 model=doubao-seed-2-0-pro-260215 prompt_length=3299 temperature=0.3
+2026-04-28T01:43:57.232356Z [info     ] [MONITOR] LLM call SUCCESS     [chunks2skus.utils.llm_client] attempt=0 finish_reason=stop model=doubao-seed-2-0-pro-260215 response_length=2816
+2026-04-28T01:43:57.234359Z [info     ] [MONITOR] JSON parse SUCCESS   [chunks2skus.utils.llm_client] keys=['facts']
+2026-04-28T01:43:57.246827Z [info     ] Factual extraction complete    [chunks2skus.extractors.factual_extractor] chunk_id='18.“连锁 并购基金”的模式_笔记_chunk_001' skus_created=6
+2026-04-28T01:43:57.246827Z [info     ] Extracting procedural knowledge [chunks2skus.extractors.procedural_extractor] chunk_id='18.“连锁 并购基金”的模式_笔记_chunk_001'
+2026-04-28T01:43:57.246827Z [info     ] [MONITOR] call_llm_json starting [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215
+2026-04-28T01:43:57.249359Z [info     ] [MONITOR] Starting LLM call    [chunks2skus.utils.llm_client] attempt=0 max_tokens=64000 model=doubao-seed-2-0-pro-260215 prompt_length=2893 temperature=0.3
+2026-04-28T01:44:07.105457Z [info     ] [MONITOR] LLM call SUCCESS     [chunks2skus.utils.llm_client] attempt=0 finish_reason=stop model=doubao-seed-2-0-pro-260215 response_length=2271
+2026-04-28T01:44:07.106970Z [info     ] [MONITOR] JSON parse SUCCESS   [chunks2skus.utils.llm_client] keys=['procedures']
+2026-04-28T01:44:07.118123Z [info     ] Procedural extraction complete [chunks2skus.extractors.procedural_extractor] chunk_id=17.先掺后控，打造符合资本的商业模式_笔记_chunk_001 skills_created=4
+2026-04-28T01:44:07.119649Z [info     ] Extracting factual knowledge   [chunks2skus.extractors.factual_extractor] chunk_id=20.红星美凯龙，比轻资产更轻，委托管理模式_笔记_chunk_001
+2026-04-28T01:44:07.120663Z [info     ] [MONITOR] call_llm_json starting [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215
+2026-04-28T01:44:07.121663Z [info     ] [MONITOR] Starting LLM call    [chunks2skus.utils.llm_client] attempt=0 max_tokens=64000 model=doubao-seed-2-0-pro-260215 prompt_length=3304 temperature=0.3
+2026-04-28T01:44:45.019546Z [info     ] [MONITOR] LLM call SUCCESS     [chunks2skus.utils.llm_client] attempt=0 finish_reason=stop model=doubao-seed-2-0-pro-260215 response_length=1980
+2026-04-28T01:44:45.020734Z [info     ] [MONITOR] JSON parse SUCCESS   [chunks2skus.utils.llm_client] keys=['facts']
+2026-04-28T01:44:45.031696Z [info     ] Factual extraction complete    [chunks2skus.extractors.factual_extractor] chunk_id='2.ODM OEM，超过耐K、A迪净利的商业模式_笔记_chunk_001' skus_created=4
+2026-04-28T01:44:45.032714Z [info     ] Extracting procedural knowledge [chunks2skus.extractors.procedural_extractor] chunk_id='2.ODM OEM，超过耐K、A迪净利的商业模式_笔记_chunk_001'
+2026-04-28T01:44:45.033733Z [info     ] [MONITOR] call_llm_json starting [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215
+2026-04-28T01:44:45.036972Z [info     ] [MONITOR] Starting LLM call    [chunks2skus.utils.llm_client] attempt=0 max_tokens=64000 model=doubao-seed-2-0-pro-260215 prompt_length=2660 temperature=0.3
+2026-04-28T01:44:58.942107Z [info     ] [MONITOR] LLM call SUCCESS     [chunks2skus.utils.llm_client] attempt=0 finish_reason=stop model=doubao-seed-2-0-pro-260215 response_length=2450
+2026-04-28T01:44:58.943113Z [info     ] [MONITOR] JSON parse SUCCESS   [chunks2skus.utils.llm_client] keys=['procedures']
+2026-04-28T01:44:58.953650Z [info     ] Procedural extraction complete [chunks2skus.extractors.procedural_extractor] chunk_id='18.“连锁 并购基金”的模式_笔记_chunk_001' skills_created=4
+2026-04-28T01:44:58.955153Z [info     ] Extracting factual knowledge   [chunks2skus.extractors.factual_extractor] chunk_id='21.尚品宅配，柔性生产链，C2B O2O的模式分析_笔记_chunk_001'
+2026-04-28T01:44:58.956222Z [info     ] [MONITOR] call_llm_json starting [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215
+2026-04-28T01:44:58.956222Z [info     ] [MONITOR] Starting LLM call    [chunks2skus.utils.llm_client] attempt=0 max_tokens=64000 model=doubao-seed-2-0-pro-260215 prompt_length=3713 temperature=0.3
+2026-04-28T01:45:02.808516Z [info     ] [MONITOR] LLM call SUCCESS     [chunks2skus.utils.llm_client] attempt=0 finish_reason=stop model=doubao-seed-2-0-pro-260215 response_length=3031
+2026-04-28T01:45:02.810027Z [info     ] [MONITOR] JSON parse SUCCESS   [chunks2skus.utils.llm_client] keys=['facts']
+2026-04-28T01:45:02.820877Z [info     ] Skipping trivially short SKU   [chunks2skus.extractors.factual_extractor] chars=53 name=药明康德资本运作历程
+2026-04-28T01:45:02.824865Z [info     ] Skipping trivially short SKU   [chunks2skus.extractors.factual_extractor] chars=62 name=药明康德话语权核心财务指标
+2026-04-28T01:45:02.830040Z [info     ] Factual extraction complete    [chunks2skus.extractors.factual_extractor] chunk_id=19.药明康德，G级代工，研发外包模式，打造医药行业“富士康”模式_笔记_chunk_001 skus_created=8
+2026-04-28T01:45:02.832034Z [info     ] Extracting procedural knowledge [chunks2skus.extractors.procedural_extractor] chunk_id=19.药明康德，G级代工，研发外包模式，打造医药行业“富士康”模式_笔记_chunk_001
+2026-04-28T01:45:02.833533Z [info     ] [MONITOR] call_llm_json starting [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215
+2026-04-28T01:45:02.833533Z [info     ] [MONITOR] Starting LLM call    [chunks2skus.utils.llm_client] attempt=0 max_tokens=64000 model=doubao-seed-2-0-pro-260215 prompt_length=3485 temperature=0.3
+2026-04-28T01:45:04.340529Z [info     ] [MONITOR] LLM call SUCCESS     [chunks2skus.utils.llm_client] attempt=0 finish_reason=stop model=doubao-seed-2-0-pro-260215 response_length=2361
+2026-04-28T01:45:04.340529Z [info     ] [MONITOR] JSON parse SUCCESS   [chunks2skus.utils.llm_client] keys=['new_labels', 'new_glossary', 'updated_glossary', 'new_relationships']
+2026-04-28T01:45:04.345028Z [info     ] Added new labels               [chunks2skus.extractors.relational_extractor] chunk_id=11.渠道模式分析_笔记_chunk_001 count=1
+2026-04-28T01:45:04.346028Z [info     ] Merged new glossary entries    [chunks2skus.extractors.relational_extractor] chunk_id=11.渠道模式分析_笔记_chunk_001 count=4
+2026-04-28T01:45:04.346028Z [info     ] Updated existing glossary entries [chunks2skus.extractors.relational_extractor] chunk_id=11.渠道模式分析_笔记_chunk_001 fallback_count=0 total_in_response=0 updated_count=0
+2026-04-28T01:45:04.347027Z [info     ] Merged new relationships       [chunks2skus.extractors.relational_extractor] chunk_id=11.渠道模式分析_笔记_chunk_001 count=14
+2026-04-28T01:45:04.347027Z [info     ] Relationship predicate distribution [chunks2skus.extractors.relational_extractor] distribution={'superset-of': 15, 'contradicts': 2, 'enables': 4, 'caused-by': 1, 'depends-on': 2, 'causes': 7, 'implements': 8, 'requires': 1, 'example-of': 3} total=43
+2026-04-28T01:45:04.347027Z [warning  ] Predicate ratio exceeds 30%    [chunks2skus.extractors.relational_extractor] count=15 predicate=superset-of ratio=34.9% total=43
+2026-04-28T01:45:04.351013Z [info     ] Relational extraction complete [chunks2skus.extractors.relational_extractor] chunk_id=11.渠道模式分析_笔记_chunk_001 labels=2 relationships=43 terms=15
+2026-04-28T01:45:04.352010Z [info     ] Chunk processed                [chunks2skus.pipeline] chunk_id=11.渠道模式分析_笔记_chunk_001 new_skus=8 total_skus=32
+2026-04-28T01:45:04.353007Z [info     ] Extracting relational knowledge [chunks2skus.extractors.relational_extractor] chunk_id=13.专注男装砍掉女装，类直营模式_笔记_chunk_001
+2026-04-28T01:45:04.353007Z [info     ] Relational context size        [chunks2skus.extractors.relational_extractor] alias_map_chars=74 chunk_id=13.专注男装砍掉女装，类直营模式_笔记_chunk_001 glossary_count=15 label_nodes_count=10 label_tree_chars=67 relevant_relations_chars=9 term_list_chars=122
+2026-04-28T01:45:04.354510Z [info     ] [MONITOR] call_llm_json starting [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215
+2026-04-28T01:45:04.354510Z [info     ] [MONITOR] Starting LLM call    [chunks2skus.utils.llm_client] attempt=0 max_tokens=128000 model=doubao-seed-2-0-pro-260215 prompt_length=4309 temperature=0.3
+2026-04-28T01:45:33.948154Z [info     ] [MONITOR] LLM call SUCCESS     [chunks2skus.utils.llm_client] attempt=0 finish_reason=stop model=doubao-seed-2-0-pro-260215 response_length=4109
+2026-04-28T01:45:33.949167Z [info     ] [MONITOR] JSON parse SUCCESS   [chunks2skus.utils.llm_client] keys=['facts']
+2026-04-28T01:45:33.952156Z [info     ] Skipping trivially short SKU   [chunks2skus.extractors.factual_extractor] chars=64 name=全国四大家居大卖场品牌清单
+2026-04-28T01:45:33.963137Z [info     ] Factual extraction complete    [chunks2skus.extractors.factual_extractor] chunk_id=20.红星美凯龙，比轻资产更轻，委托管理模式_笔记_chunk_001 skus_created=8
+2026-04-28T01:45:33.964148Z [info     ] Extracting procedural knowledge [chunks2skus.extractors.procedural_extractor] chunk_id=20.红星美凯龙，比轻资产更轻，委托管理模式_笔记_chunk_001
+2026-04-28T01:45:33.965147Z [info     ] [MONITOR] call_llm_json starting [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215
+2026-04-28T01:45:33.966226Z [info     ] [MONITOR] Starting LLM call    [chunks2skus.utils.llm_client] attempt=0 max_tokens=64000 model=doubao-seed-2-0-pro-260215 prompt_length=2665 temperature=0.3
+2026-04-28T01:45:38.771790Z [info     ] [MONITOR] LLM call SUCCESS     [chunks2skus.utils.llm_client] attempt=0 finish_reason=stop model=doubao-seed-2-0-pro-260215 response_length=1945
+2026-04-28T01:45:38.772821Z [info     ] [MONITOR] JSON parse SUCCESS   [chunks2skus.utils.llm_client] keys=['procedures']
+2026-04-28T01:45:38.783310Z [info     ] Procedural extraction complete [chunks2skus.extractors.procedural_extractor] chunk_id='2.ODM OEM，超过耐K、A迪净利的商业模式_笔记_chunk_001' skills_created=4
+2026-04-28T01:45:38.784309Z [info     ] Extracting factual knowledge   [chunks2skus.extractors.factual_extractor] chunk_id='22.张江高科，房东 股东，科技投行的模式，率先开启中国产业园的模式_笔记_chunk_001'
+2026-04-28T01:45:38.784309Z [info     ] [MONITOR] call_llm_json starting [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215
+2026-04-28T01:45:38.785308Z [info     ] [MONITOR] Starting LLM call    [chunks2skus.utils.llm_client] attempt=0 max_tokens=64000 model=doubao-seed-2-0-pro-260215 prompt_length=3282 temperature=0.3
+2026-04-28T01:46:00.076379Z [info     ] [MONITOR] LLM call SUCCESS     [chunks2skus.utils.llm_client] attempt=0 finish_reason=stop model=doubao-seed-2-0-pro-260215 response_length=2816
+2026-04-28T01:46:00.077394Z [info     ] [MONITOR] JSON parse SUCCESS   [chunks2skus.utils.llm_client] keys=['facts']
+2026-04-28T01:46:00.084879Z [info     ] Factual extraction complete    [chunks2skus.extractors.factual_extractor] chunk_id='21.尚品宅配，柔性生产链，C2B O2O的模式分析_笔记_chunk_001' skus_created=4
+2026-04-28T01:46:00.085875Z [info     ] Extracting procedural knowledge [chunks2skus.extractors.procedural_extractor] chunk_id='21.尚品宅配，柔性生产链，C2B O2O的模式分析_笔记_chunk_001'
+2026-04-28T01:46:00.085875Z [info     ] [MONITOR] call_llm_json starting [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215
+2026-04-28T01:46:00.086872Z [info     ] [MONITOR] Starting LLM call    [chunks2skus.utils.llm_client] attempt=0 max_tokens=64000 model=doubao-seed-2-0-pro-260215 prompt_length=3074 temperature=0.3
+2026-04-28T01:46:08.098831Z [info     ] [MONITOR] LLM call SUCCESS     [chunks2skus.utils.llm_client] attempt=0 finish_reason=stop model=doubao-seed-2-0-pro-260215 response_length=2162
+2026-04-28T01:46:08.100339Z [info     ] [MONITOR] JSON parse SUCCESS   [chunks2skus.utils.llm_client] keys=['procedures']
+2026-04-28T01:46:08.108820Z [info     ] Procedural extraction complete [chunks2skus.extractors.procedural_extractor] chunk_id=19.药明康德，G级代工，研发外包模式，打造医药行业“富士康”模式_笔记_chunk_001 skills_created=4
+2026-04-28T01:46:08.111320Z [info     ] Extracting factual knowledge   [chunks2skus.extractors.factual_extractor] chunk_id='23.宋城演艺，蹭头部流量，做自己的演艺，“千古情 5A景区”模式_笔记_chunk_001'
+2026-04-28T01:46:08.112347Z [info     ] [MONITOR] call_llm_json starting [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215
+2026-04-28T01:46:08.113345Z [info     ] [MONITOR] Starting LLM call    [chunks2skus.utils.llm_client] attempt=0 max_tokens=64000 model=doubao-seed-2-0-pro-260215 prompt_length=3680 temperature=0.3
+2026-04-28T01:46:42.370561Z [info     ] [MONITOR] LLM call SUCCESS     [chunks2skus.utils.llm_client] attempt=0 finish_reason=stop model=doubao-seed-2-0-pro-260215 response_length=2034
+2026-04-28T01:46:42.372071Z [info     ] [MONITOR] JSON parse SUCCESS   [chunks2skus.utils.llm_client] keys=['procedures']
+2026-04-28T01:46:42.383542Z [info     ] Procedural extraction complete [chunks2skus.extractors.procedural_extractor] chunk_id=20.红星美凯龙，比轻资产更轻，委托管理模式_笔记_chunk_001 skills_created=4
+2026-04-28T01:46:42.384887Z [info     ] Extracting factual knowledge   [chunks2skus.extractors.factual_extractor] chunk_id=24.易居企业控股，甲方变乙方，客户变股东，上游房企变股东的模式_笔记_chunk_001
+2026-04-28T01:46:42.384887Z [info     ] [MONITOR] call_llm_json starting [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215
+2026-04-28T01:46:42.385894Z [info     ] [MONITOR] Starting LLM call    [chunks2skus.utils.llm_client] attempt=0 max_tokens=64000 model=doubao-seed-2-0-pro-260215 prompt_length=3680 temperature=0.3
+2026-04-28T01:46:53.883881Z [info     ] [MONITOR] LLM call SUCCESS     [chunks2skus.utils.llm_client] attempt=0 finish_reason=stop model=doubao-seed-2-0-pro-260215 response_length=1837
+2026-04-28T01:46:53.884930Z [info     ] [MONITOR] JSON parse SUCCESS   [chunks2skus.utils.llm_client] keys=['procedures']
+2026-04-28T01:46:53.897140Z [info     ] Procedural extraction complete [chunks2skus.extractors.procedural_extractor] chunk_id='21.尚品宅配，柔性生产链，C2B O2O的模式分析_笔记_chunk_001' skills_created=4
+2026-04-28T01:46:53.898644Z [info     ] Extracting factual knowledge   [chunks2skus.extractors.factual_extractor] chunk_id=25.以润唇膏切入彩妆市场的模式_笔记_chunk_001
+2026-04-28T01:46:53.898644Z [info     ] [MONITOR] call_llm_json starting [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215
+2026-04-28T01:46:53.898644Z [info     ] [MONITOR] Starting LLM call    [chunks2skus.utils.llm_client] attempt=0 max_tokens=64000 model=doubao-seed-2-0-pro-260215 prompt_length=2839 temperature=0.3
+2026-04-28T01:46:56.127959Z [info     ] [MONITOR] LLM call SUCCESS     [chunks2skus.utils.llm_client] attempt=0 finish_reason=stop model=doubao-seed-2-0-pro-260215 response_length=3523
+2026-04-28T01:46:56.128467Z [info     ] [MONITOR] JSON parse SUCCESS   [chunks2skus.utils.llm_client] keys=['new_labels', 'new_glossary', 'updated_glossary', 'new_relationships']
+2026-04-28T01:46:56.129474Z [info     ] Added new labels               [chunks2skus.extractors.relational_extractor] chunk_id=13.专注男装砍掉女装，类直营模式_笔记_chunk_001 count=1
+2026-04-28T01:46:56.129474Z [info     ] Merged new glossary entries    [chunks2skus.extractors.relational_extractor] chunk_id=13.专注男装砍掉女装，类直营模式_笔记_chunk_001 count=8
+2026-04-28T01:46:56.130473Z [info     ] Updated existing glossary entries [chunks2skus.extractors.relational_extractor] chunk_id=13.专注男装砍掉女装，类直营模式_笔记_chunk_001 fallback_count=0 total_in_response=3 updated_count=3
+2026-04-28T01:46:56.131470Z [info     ] Merged new relationships       [chunks2skus.extractors.relational_extractor] chunk_id=13.专注男装砍掉女装，类直营模式_笔记_chunk_001 count=10
+2026-04-28T01:46:56.131470Z [info     ] Relationship predicate distribution [chunks2skus.extractors.relational_extractor] distribution={'superset-of': 15, 'contradicts': 2, 'enables': 5, 'caused-by': 1, 'depends-on': 3, 'causes': 7, 'implements': 10, 'requires': 2, 'example-of': 4, 'related-to': 3, 'has-a': 1} total=53
+2026-04-28T01:46:56.134460Z [info     ] Relational extraction complete [chunks2skus.extractors.relational_extractor] chunk_id=13.专注男装砍掉女装，类直营模式_笔记_chunk_001 labels=2 relationships=53 terms=23
+2026-04-28T01:46:56.143937Z [info     ] Running meta extraction batch  [chunks2skus.pipeline] chunks=5 new_skus=50 total_content_chars=7925
+2026-04-28T01:46:56.143937Z [info     ] Chunk processed                [chunks2skus.pipeline] chunk_id=13.专注男装砍掉女装，类直营模式_笔记_chunk_001 new_skus=15 total_skus=46
+2026-04-28T01:46:56.143937Z [info     ] Extracting meta knowledge      [chunks2skus.extractors.meta_extractor] chunk_ids='10.农村包围城市，“定位 并购”模式_笔记_chunk_001, 1.业务不变，营收秒变（X50）的商业模式_笔记_chunk_001, 12.销地产 产地销，规模成王的模式_笔记_chunk_001, 11.渠道模式分析_笔记_chunk_001, 13.专注男装砍掉女装，类直营模式_笔记_chunk_001'
+2026-04-28T01:46:56.144935Z [info     ] Extracting relational knowledge [chunks2skus.extractors.relational_extractor] chunk_id=14.“师傅带徒弟，徒弟带徒孙”的机制_笔记_chunk_001
+2026-04-28T01:46:56.145437Z [info     ] Relational context size        [chunks2skus.extractors.relational_extractor] alias_map_chars=87 chunk_id=14.“师傅带徒弟，徒弟带徒孙”的机制_笔记_chunk_001 glossary_count=23 label_nodes_count=11 label_tree_chars=74 relevant_relations_chars=9 term_list_chars=175
+2026-04-28T01:46:56.145437Z [info     ] [MONITOR] Creating thread-local OpenAI client [chunks2skus.utils.llm_client] base_url=https://ark.cn-beijing.volces.com/api/v3 thread=ThreadPoolExecutor-2_0
+2026-04-28T01:46:56.146436Z [info     ] [MONITOR] call_llm_json starting [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215
+2026-04-28T01:46:56.146436Z [info     ] [MONITOR] Creating thread-local OpenAI client [chunks2skus.utils.llm_client] base_url=https://ark.cn-beijing.volces.com/api/v3 thread=ThreadPoolExecutor-2_1
+2026-04-28T01:46:56.147433Z [info     ] [MONITOR] Starting LLM call    [chunks2skus.utils.llm_client] attempt=0 max_tokens=128000 model=doubao-seed-2-0-pro-260215 prompt_length=4394 temperature=0.3
+2026-04-28T01:46:57.387547Z [info     ] [MONITOR] Starting LLM call    [chunks2skus.utils.llm_client] attempt=0 max_tokens=32000 model=doubao-seed-2-0-pro-260215 prompt_length=5684 temperature=0.2
+2026-04-28T01:46:57.404626Z [info     ] [MONITOR] Starting LLM call    [chunks2skus.utils.llm_client] attempt=0 max_tokens=32000 model=doubao-seed-2-0-pro-260215 prompt_length=10346 temperature=0.7
+2026-04-28T01:46:58.621928Z [info     ] [MONITOR] LLM call SUCCESS     [chunks2skus.utils.llm_client] attempt=0 finish_reason=stop model=doubao-seed-2-0-pro-260215 response_length=2381
+2026-04-28T01:46:58.623616Z [info     ] [MONITOR] JSON parse SUCCESS   [chunks2skus.utils.llm_client] keys=['facts']
+2026-04-28T01:46:58.638779Z [info     ] Factual extraction complete    [chunks2skus.extractors.factual_extractor] chunk_id='23.宋城演艺，蹭头部流量，做自己的演艺，“千古情 5A景区”模式_笔记_chunk_001' skus_created=6
+2026-04-28T01:46:58.638779Z [info     ] Extracting procedural knowledge [chunks2skus.extractors.procedural_extractor] chunk_id='23.宋城演艺，蹭头部流量，做自己的演艺，“千古情 5A景区”模式_笔记_chunk_001'
+2026-04-28T01:46:58.640282Z [info     ] [MONITOR] call_llm_json starting [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215
+2026-04-28T01:46:58.640983Z [info     ] [MONITOR] Starting LLM call    [chunks2skus.utils.llm_client] attempt=0 max_tokens=64000 model=doubao-seed-2-0-pro-260215 prompt_length=3041 temperature=0.3
+2026-04-28T01:47:05.772279Z [info     ] [MONITOR] LLM call SUCCESS     [chunks2skus.utils.llm_client] attempt=0 finish_reason=stop model=doubao-seed-2-0-pro-260215 response_length=1728
+2026-04-28T01:47:05.772781Z [info     ] [MONITOR] JSON parse SUCCESS   [chunks2skus.utils.llm_client] keys=['facts']
+2026-04-28T01:47:05.785473Z [info     ] Factual extraction complete    [chunks2skus.extractors.factual_extractor] chunk_id='22.张江高科，房东 股东，科技投行的模式，率先开启中国产业园的模式_笔记_chunk_001' skus_created=2
+2026-04-28T01:47:05.785473Z [info     ] Extracting procedural knowledge [chunks2skus.extractors.procedural_extractor] chunk_id='22.张江高科，房东 股东，科技投行的模式，率先开启中国产业园的模式_笔记_chunk_001'
+2026-04-28T01:47:05.786469Z [info     ] [MONITOR] call_llm_json starting [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215
+2026-04-28T01:47:05.786469Z [info     ] [MONITOR] Starting LLM call    [chunks2skus.utils.llm_client] attempt=0 max_tokens=64000 model=doubao-seed-2-0-pro-260215 prompt_length=2643 temperature=0.3
+2026-04-28T01:47:34.983819Z [info     ] [MONITOR] LLM call SUCCESS     [chunks2skus.utils.llm_client] attempt=0 finish_reason=stop model=doubao-seed-2-0-pro-260215 response_length=1002
+2026-04-28T01:47:34.985406Z [info     ] Updated eureka.md              [chunks2skus.extractors.meta_extractor] chunk_ids='10.农村包围城市，“定位 并购”模式_笔记_chunk_001, 1.业务不变，营收秒变（X50）的商业模式_笔记_chunk_001, 12.销地产 产地销，规模成王的模式_笔记_chunk_001, 11.渠道模式分析_笔记_chunk_001, 13.专注男装砍掉女装，类直营模式_笔记_chunk_001' new_size=1002 old_size=42
+2026-04-28T01:47:36.958862Z [info     ] [MONITOR] LLM call SUCCESS     [chunks2skus.utils.llm_client] attempt=0 finish_reason=stop model=doubao-seed-2-0-pro-260215 response_length=1910
+2026-04-28T01:47:36.959366Z [info     ] [MONITOR] JSON parse SUCCESS   [chunks2skus.utils.llm_client] keys=['procedures']
+2026-04-28T01:47:36.968643Z [info     ] Procedural extraction complete [chunks2skus.extractors.procedural_extractor] chunk_id='23.宋城演艺，蹭头部流量，做自己的演艺，“千古情 5A景区”模式_笔记_chunk_001' skills_created=4
+2026-04-28T01:47:36.969638Z [info     ] Extracting factual knowledge   [chunks2skus.extractors.factual_extractor] chunk_id=26.以猪肉为核心，不卖隔夜肉_笔记_chunk_001
+2026-04-28T01:47:36.969638Z [info     ] [MONITOR] call_llm_json starting [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215
+2026-04-28T01:47:36.970635Z [info     ] [MONITOR] Starting LLM call    [chunks2skus.utils.llm_client] attempt=0 max_tokens=64000 model=doubao-seed-2-0-pro-260215 prompt_length=2884 temperature=0.3
+2026-04-28T01:47:39.914972Z [info     ] [MONITOR] LLM call SUCCESS     [chunks2skus.utils.llm_client] attempt=0 finish_reason=stop model=doubao-seed-2-0-pro-260215 response_length=2200
+2026-04-28T01:47:39.915971Z [info     ] [MONITOR] JSON parse SUCCESS   [chunks2skus.utils.llm_client] keys=['facts']
+2026-04-28T01:47:39.923606Z [info     ] Factual extraction complete    [chunks2skus.extractors.factual_extractor] chunk_id=24.易居企业控股，甲方变乙方，客户变股东，上游房企变股东的模式_笔记_chunk_001 skus_created=4
+2026-04-28T01:47:39.923606Z [info     ] Extracting procedural knowledge [chunks2skus.extractors.procedural_extractor] chunk_id=24.易居企业控股，甲方变乙方，客户变股东，上游房企变股东的模式_笔记_chunk_001
+2026-04-28T01:47:39.925109Z [info     ] [MONITOR] call_llm_json starting [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215
+2026-04-28T01:47:39.925109Z [info     ] [MONITOR] Starting LLM call    [chunks2skus.utils.llm_client] attempt=0 max_tokens=64000 model=doubao-seed-2-0-pro-260215 prompt_length=3041 temperature=0.3
+2026-04-28T01:47:45.731807Z [info     ] [MONITOR] LLM call SUCCESS     [chunks2skus.utils.llm_client] attempt=0 finish_reason=stop model=doubao-seed-2-0-pro-260215 response_length=2586
+2026-04-28T01:47:45.732813Z [info     ] [MONITOR] JSON parse SUCCESS   [chunks2skus.utils.llm_client] keys=['facts']
+2026-04-28T01:47:45.738306Z [info     ] Skipping trivially short SKU   [chunks2skus.extractors.factual_extractor] chars=54 name=中国唇部彩妆行业核心数据
+2026-04-28T01:47:45.741296Z [info     ] Factual extraction complete    [chunks2skus.extractors.factual_extractor] chunk_id=25.以润唇膏切入彩妆市场的模式_笔记_chunk_001 skus_created=4
+2026-04-28T01:47:45.742292Z [info     ] Extracting procedural knowledge [chunks2skus.extractors.procedural_extractor] chunk_id=25.以润唇膏切入彩妆市场的模式_笔记_chunk_001
+2026-04-28T01:47:45.742292Z [info     ] [MONITOR] call_llm_json starting [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215
+2026-04-28T01:47:45.743289Z [info     ] [MONITOR] Starting LLM call    [chunks2skus.utils.llm_client] attempt=0 max_tokens=64000 model=doubao-seed-2-0-pro-260215 prompt_length=2200 temperature=0.3
+2026-04-28T01:48:10.438756Z [info     ] [MONITOR] LLM call SUCCESS     [chunks2skus.utils.llm_client] attempt=0 finish_reason=stop model=doubao-seed-2-0-pro-260215 response_length=1803
+2026-04-28T01:48:10.440298Z [info     ] [MONITOR] JSON parse SUCCESS   [chunks2skus.utils.llm_client] keys=['procedures']
+2026-04-28T01:48:10.446785Z [info     ] Procedural extraction complete [chunks2skus.extractors.procedural_extractor] chunk_id='22.张江高科，房东 股东，科技投行的模式，率先开启中国产业园的模式_笔记_chunk_001' skills_created=3
+2026-04-28T01:48:10.447781Z [info     ] Extracting factual knowledge   [chunks2skus.extractors.factual_extractor] chunk_id=3.费用归边，流量占股的商业模式_笔记_chunk_001
+2026-04-28T01:48:10.448778Z [info     ] [MONITOR] call_llm_json starting [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215
+2026-04-28T01:48:10.449775Z [info     ] [MONITOR] Starting LLM call    [chunks2skus.utils.llm_client] attempt=0 max_tokens=64000 model=doubao-seed-2-0-pro-260215 prompt_length=1473 temperature=0.3
+2026-04-28T01:48:11.512440Z [info     ] [MONITOR] LLM call SUCCESS     [chunks2skus.utils.llm_client] attempt=0 finish_reason=stop model=doubao-seed-2-0-pro-260215 response_length=2891
+2026-04-28T01:48:11.513943Z [info     ] [MONITOR] JSON parse SUCCESS   [chunks2skus.utils.llm_client] keys=['new_labels', 'new_glossary', 'updated_glossary', 'new_relationships']
+2026-04-28T01:48:11.518954Z [info     ] Added new labels               [chunks2skus.extractors.relational_extractor] chunk_id=14.“师傅带徒弟，徒弟带徒孙”的机制_笔记_chunk_001 count=8
+2026-04-28T01:48:11.520948Z [info     ] Merged new glossary entries    [chunks2skus.extractors.relational_extractor] chunk_id=14.“师傅带徒弟，徒弟带徒孙”的机制_笔记_chunk_001 count=7
+2026-04-28T01:48:11.521945Z [info     ] Updated existing glossary entries [chunks2skus.extractors.relational_extractor] chunk_id=14.“师傅带徒弟，徒弟带徒孙”的机制_笔记_chunk_001 fallback_count=0 total_in_response=0 updated_count=0
+2026-04-28T01:48:11.522941Z [info     ] Merged new relationships       [chunks2skus.extractors.relational_extractor] chunk_id=14.“师傅带徒弟，徒弟带徒孙”的机制_笔记_chunk_001 count=10
+2026-04-28T01:48:11.522941Z [info     ] Relationship predicate distribution [chunks2skus.extractors.relational_extractor] distribution={'superset-of': 15, 'contradicts': 5, 'enables': 7, 'caused-by': 1, 'depends-on': 3, 'causes': 10, 'implements': 11, 'requires': 3, 'example-of': 4, 'related-to': 3, 'has-a': 1} total=63
+2026-04-28T01:48:11.526440Z [info     ] Relational extraction complete [chunks2skus.extractors.relational_extractor] chunk_id=14.“师傅带徒弟，徒弟带徒孙”的机制_笔记_chunk_001 labels=2 relationships=63 terms=30
+2026-04-28T01:48:11.529431Z [info     ] Chunk processed                [chunks2skus.pipeline] chunk_id=14.“师傅带徒弟，徒弟带徒孙”的机制_笔记_chunk_001 new_skus=11 total_skus=56
+2026-04-28T01:48:11.530427Z [info     ] Extracting relational knowledge [chunks2skus.extractors.relational_extractor] chunk_id=16.廉价航空，净利润超过10％的模式_笔记_chunk_001
+2026-04-28T01:48:11.531424Z [info     ] Relational context size        [chunks2skus.extractors.relational_extractor] alias_map_chars=87 chunk_id=16.廉价航空，净利润超过10％的模式_笔记_chunk_001 glossary_count=30 label_nodes_count=19 label_tree_chars=146 relevant_relations_chars=9 term_list_chars=242
+2026-04-28T01:48:11.533417Z [info     ] [MONITOR] call_llm_json starting [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215
+2026-04-28T01:48:11.533417Z [info     ] [MONITOR] Starting LLM call    [chunks2skus.utils.llm_client] attempt=0 max_tokens=128000 model=doubao-seed-2-0-pro-260215 prompt_length=4498 temperature=0.3
+2026-04-28T01:48:14.603795Z [info     ] [MONITOR] LLM call SUCCESS     [chunks2skus.utils.llm_client] attempt=0 finish_reason=stop model=doubao-seed-2-0-pro-260215 response_length=13
+2026-04-28T01:48:14.604806Z [info     ] [MONITOR] JSON parse SUCCESS   [chunks2skus.utils.llm_client] keys=['facts']
+2026-04-28T01:48:14.606803Z [info     ] No factual knowledge found in chunk [chunks2skus.extractors.factual_extractor] chunk_id=3.费用归边，流量占股的商业模式_笔记_chunk_001
+2026-04-28T01:48:14.607800Z [info     ] Extracting procedural knowledge [chunks2skus.extractors.procedural_extractor] chunk_id=3.费用归边，流量占股的商业模式_笔记_chunk_001
+2026-04-28T01:48:14.607800Z [info     ] [MONITOR] call_llm_json starting [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215
+2026-04-28T01:48:14.607800Z [info     ] [MONITOR] Starting LLM call    [chunks2skus.utils.llm_client] attempt=0 max_tokens=64000 model=doubao-seed-2-0-pro-260215 prompt_length=834 temperature=0.3
+2026-04-28T01:48:18.572535Z [info     ] [MONITOR] LLM call SUCCESS     [chunks2skus.utils.llm_client] attempt=0 finish_reason=stop model=doubao-seed-2-0-pro-260215 response_length=18
+2026-04-28T01:48:18.574043Z [info     ] [MONITOR] JSON parse SUCCESS   [chunks2skus.utils.llm_client] keys=['procedures']
+2026-04-28T01:48:18.579393Z [info     ] No procedural knowledge found in chunk [chunks2skus.extractors.procedural_extractor] chunk_id=3.费用归边，流量占股的商业模式_笔记_chunk_001
+2026-04-28T01:48:18.579393Z [info     ] Extracting factual knowledge   [chunks2skus.extractors.factual_extractor] chunk_id=4.上下通吃，打通经销商合伙人激励的模式_chunk_001
+2026-04-28T01:48:18.580389Z [info     ] [MONITOR] call_llm_json starting [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215
+2026-04-28T01:48:18.580389Z [info     ] [MONITOR] Starting LLM call    [chunks2skus.utils.llm_client] attempt=0 max_tokens=64000 model=doubao-seed-2-0-pro-260215 prompt_length=2655 temperature=0.3
+2026-04-28T01:48:19.566151Z [info     ] [MONITOR] LLM call SUCCESS     [chunks2skus.utils.llm_client] attempt=0 finish_reason=stop model=doubao-seed-2-0-pro-260215 response_length=2290
+2026-04-28T01:48:19.567157Z [info     ] [MONITOR] JSON parse SUCCESS   [chunks2skus.utils.llm_client] keys=['procedures']
+2026-04-28T01:48:19.575815Z [info     ] Procedural extraction complete [chunks2skus.extractors.procedural_extractor] chunk_id=24.易居企业控股，甲方变乙方，客户变股东，上游房企变股东的模式_笔记_chunk_001 skills_created=5
+2026-04-28T01:48:19.577808Z [info     ] Extracting factual knowledge   [chunks2skus.extractors.factual_extractor] chunk_id=5.不做主机厂，专注整合商的模式_笔记_chunk_001
+2026-04-28T01:48:19.577808Z [info     ] [MONITOR] call_llm_json starting [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215
+2026-04-28T01:48:19.578805Z [info     ] [MONITOR] Starting LLM call    [chunks2skus.utils.llm_client] attempt=0 max_tokens=64000 model=doubao-seed-2-0-pro-260215 prompt_length=3988 temperature=0.3
+2026-04-28T01:48:33.271732Z [info     ] [MONITOR] LLM call SUCCESS     [chunks2skus.utils.llm_client] attempt=0 finish_reason=stop model=doubao-seed-2-0-pro-260215 response_length=2748
+2026-04-28T01:48:33.338140Z [warning  ] Header-mapping title mismatch  [chunks2skus.extractors.meta_extractor] header_title='BS（Buy and Sell）代工模式说明' mapping_line='- `factual/sku_003`: 需要了解代工行业BS模式本质、与传统进料加工模式的对比、操作流程及价值提升效果时查阅' sku_path=sku_003
+2026-04-28T01:48:33.340546Z [warning  ] Header-mapping title mismatch  [chunks2skus.extractors.meta_extractor] header_title=bs-contract-manufacturing-operation-work mapping_line='- `procedural/skill_001`: 代工企业需要升级传统代工模式、突破低资本价值困境时查阅' sku_path=skill_001
+2026-04-28T01:48:33.341541Z [warning  ] Header-mapping title mismatch  [chunks2skus.extractors.meta_extractor] header_title=oem-enterprise-valuation-assessment-meth mapping_line='- `procedural/skill_002`: 需要评估不同业务模式代工企业的合理资本价值时查阅' sku_path=skill_002
+2026-04-28T01:48:33.344055Z [warning  ] Header-mapping title mismatch  [chunks2skus.extractors.meta_extractor] header_title=frozen-food-segment-selection-strategy mapping_line='- `procedural/skill_005`: 速冻食品企业需要制定业务战略、选择核心赛道、确定业务结构时查阅' sku_path=skill_005
+2026-04-28T01:48:33.345054Z [warning  ] Header-mapping title mismatch  [chunks2skus.extractors.meta_extractor] header_title=frozen-food-differentiated-channel-layou mapping_line='- `procedural/skill_006`: 速冻食品企业需要规划渠道体系、搭建渠道竞争壁垒时查阅' sku_path=skill_006
+2026-04-28T01:48:33.346051Z [warning  ] Header-mapping title mismatch  [chunks2skus.extractors.meta_extractor] header_title=frozen-food-revenue-recognition-model-se mapping_line='- `procedural/skill_007`: 速冻食品企业需要选择收入确认模式、优化经销商合作关系时查阅' sku_path=skill_007
+2026-04-28T01:48:33.347047Z [warning  ] Header-mapping title mismatch  [chunks2skus.extractors.meta_extractor] header_title=fmcg-origin-sales-mode-implementation mapping_line='- `procedural/skill_008`: 快消品企业需要落地产地销模式、降低运营成本时查阅' sku_path=skill_008
+2026-04-28T01:48:33.348045Z [warning  ] Header-mapping title mismatch  [chunks2skus.extractors.meta_extractor] header_title=consumer-enterprise-investment-value-jud mapping_line='- `procedural/skill_010`: 投资者需要判断消费类上市企业投资价值时查阅' sku_path=skill_010
+2026-04-28T01:48:33.349041Z [warning  ] Low overlap mapping entry      [chunks2skus.extractors.meta_extractor] description_anchor=对比同为鸭制品连锁品 mapping_line='- `factual/sku_007`: 需要了解周黑鸭与绝味在渠道模式、扩张规模、财务表现、供应链布局、合规要求等维度的核心差异及相关数据时查阅' sku_path=sku_007
+2026-04-28T01:48:33.352953Z [warning  ] Header-mapping title mismatch  [chunks2skus.extractors.meta_extractor] header_title=chain-enterprise-channel-model-selection mapping_line='- `procedural/skill_011`: 连锁消费类企业需要选择直营或加盟模式进行业务扩张时查阅' sku_path=skill_011
+2026-04-28T01:48:33.353969Z [warning  ] Header-mapping title mismatch  [chunks2skus.extractors.meta_extractor] header_title=franchise-private-order-risk-prevention mapping_line='- `procedural/skill_012`: 采用加盟扩张的连锁企业需要防范加盟商走私单违规问题时查阅' sku_path=skill_012
+2026-04-28T01:48:33.354995Z [warning  ] Header-mapping title mismatch  [chunks2skus.extractors.meta_extractor] header_title=franchise-business-financial-accounting mapping_line='- `procedural/skill_013`: 采用加盟模式的企业需要核算不同类型收入、规范财务处理时查阅' sku_path=skill_013
+2026-04-28T01:48:33.356020Z [warning  ] Header-mapping title mismatch  [chunks2skus.extractors.meta_extractor] header_title=direct-chain-store-tax-compliance-proces mapping_line='- `procedural/skill_014`: 运营直营连锁门店需要完成收入确认、满足税务及上市合规要求时查阅' sku_path=skill_014
+2026-04-28T01:48:33.358022Z [warning  ] Header-mapping title mismatch  [chunks2skus.extractors.meta_extractor] header_title=chain-store-mode-identification-method mapping_line='- `procedural/skill_015`: 需要识别不同连锁门店运营模式、区分直营/加盟/托管模式差异时查阅' sku_path=skill_015
+2026-04-28T01:48:33.359018Z [warning  ] Header-mapping title mismatch  [chunks2skus.extractors.meta_extractor] header_title=apparel-track-selection-decision-method mapping_line='- `procedural/skill_016`: 服装行业创业或业务扩张需要选择细分赛道时查阅' sku_path=skill_016
+2026-04-28T01:48:33.360015Z [warning  ] Header-mapping title mismatch  [chunks2skus.extractors.meta_extractor] header_title=chain-enterprise-operating-leverage-cons mapping_line='- `procedural/skill_018`: 连锁企业需要搭建低风险经营性财务杠杆、提升ROE时查阅' sku_path=skill_018
+2026-04-28T01:48:33.361012Z [warning  ] Header-mapping title mismatch  [chunks2skus.extractors.meta_extractor] header_title=offline-chain-local-online-expansion-met mapping_line='- `procedural/skill_019`: 实体连锁品牌需要布局线上渠道为线下门店引流时查阅' sku_path=skill_019
+2026-04-28T01:48:33.362009Z [warning  ] Header-mapping title mismatch  [chunks2skus.extractors.meta_extractor] header_title=service-industry-hosted-mode-listing-pat mapping_line='- `procedural/skill_020`: 未上市的服务类企业需要通过托管模式实现上市时查阅' sku_path=skill_020
+2026-04-28T01:48:33.363509Z [info     ] Updated mapping.md (diff merge) [chunks2skus.extractors.meta_extractor] chunk_id=13.专注男装砍掉女装，类直营模式_笔记_chunk_001 diff_lines=55 new_size=2793 old_size=57
+2026-04-28T01:48:33.367501Z [info     ] Meta extraction complete       [chunks2skus.extractors.meta_extractor] chunk_ids='10.农村包围城市，“定位 并购”模式_笔记_chunk_001, 1.业务不变，营收秒变（X50）的商业模式_笔记_chunk_001, 12.销地产 产地销，规模成王的模式_笔记_chunk_001, 11.渠道模式分析_笔记_chunk_001, 13.专注男装砍掉女装，类直营模式_笔记_chunk_001' eureka_chars=1002 mapping_chars=2793
+2026-04-28T01:48:40.298856Z [info     ] [MONITOR] LLM call SUCCESS     [chunks2skus.utils.llm_client] attempt=0 finish_reason=stop model=doubao-seed-2-0-pro-260215 response_length=1348
+2026-04-28T01:48:40.300390Z [info     ] [MONITOR] JSON parse SUCCESS   [chunks2skus.utils.llm_client] keys=['procedures']
+2026-04-28T01:48:40.305895Z [info     ] Procedural extraction complete [chunks2skus.extractors.procedural_extractor] chunk_id=25.以润唇膏切入彩妆市场的模式_笔记_chunk_001 skills_created=2
+2026-04-28T01:48:40.306892Z [info     ] Extracting factual knowledge   [chunks2skus.extractors.factual_extractor] chunk_id=6.为经销商Dai款的模式_笔记_chunk_001
+2026-04-28T01:48:40.308641Z [info     ] [MONITOR] call_llm_json starting [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215
+2026-04-28T01:48:40.309646Z [info     ] [MONITOR] Starting LLM call    [chunks2skus.utils.llm_client] attempt=0 max_tokens=64000 model=doubao-seed-2-0-pro-260215 prompt_length=2963 temperature=0.3
+2026-04-28T01:48:44.701878Z [info     ] [MONITOR] LLM call SUCCESS     [chunks2skus.utils.llm_client] attempt=0 finish_reason=stop model=doubao-seed-2-0-pro-260215 response_length=2434
+2026-04-28T01:48:44.702398Z [info     ] [MONITOR] JSON parse SUCCESS   [chunks2skus.utils.llm_client] keys=['facts']
+2026-04-28T01:48:44.715883Z [info     ] Factual extraction complete    [chunks2skus.extractors.factual_extractor] chunk_id=26.以猪肉为核心，不卖隔夜肉_笔记_chunk_001 skus_created=6
+2026-04-28T01:48:44.716879Z [info     ] Extracting procedural knowledge [chunks2skus.extractors.procedural_extractor] chunk_id=26.以猪肉为核心，不卖隔夜肉_笔记_chunk_001
+2026-04-28T01:48:44.716879Z [info     ] [MONITOR] call_llm_json starting [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215
+2026-04-28T01:48:44.717876Z [info     ] [MONITOR] Starting LLM call    [chunks2skus.utils.llm_client] attempt=0 max_tokens=64000 model=doubao-seed-2-0-pro-260215 prompt_length=2245 temperature=0.3
+2026-04-28T01:49:17.199373Z [info     ] [MONITOR] LLM call SUCCESS     [chunks2skus.utils.llm_client] attempt=0 finish_reason=stop model=doubao-seed-2-0-pro-260215 response_length=2183
+2026-04-28T01:49:17.203303Z [info     ] [MONITOR] JSON parse SUCCESS   [chunks2skus.utils.llm_client] keys=['new_labels', 'new_glossary', 'updated_glossary', 'new_relationships']
+2026-04-28T01:49:17.211784Z [info     ] Added new labels               [chunks2skus.extractors.relational_extractor] chunk_id=16.廉价航空，净利润超过10％的模式_笔记_chunk_001 count=0
+2026-04-28T01:49:17.211784Z [info     ] Merged new glossary entries    [chunks2skus.extractors.relational_extractor] chunk_id=16.廉价航空，净利润超过10％的模式_笔记_chunk_001 count=5
+2026-04-28T01:49:17.211784Z [info     ] Updated existing glossary entries [chunks2skus.extractors.relational_extractor] chunk_id=16.廉价航空，净利润超过10％的模式_笔记_chunk_001 fallback_count=0 total_in_response=0 updated_count=0
+2026-04-28T01:49:17.213248Z [info     ] Merged new relationships       [chunks2skus.extractors.relational_extractor] chunk_id=16.廉价航空，净利润超过10％的模式_笔记_chunk_001 count=13
+2026-04-28T01:49:17.214272Z [info     ] Relationship predicate distribution [chunks2skus.extractors.relational_extractor] distribution={'superset-of': 15, 'contradicts': 5, 'enables': 7, 'caused-by': 1, 'depends-on': 3, 'causes': 13, 'implements': 11, 'requires': 3, 'example-of': 8, 'related-to': 4, 'has-a': 1, 'part-of': 5} total=76
+2026-04-28T01:49:17.216789Z [info     ] Relational extraction complete [chunks2skus.extractors.relational_extractor] chunk_id=16.廉价航空，净利润超过10％的模式_笔记_chunk_001 labels=2 relationships=76 terms=35
+2026-04-28T01:49:17.218863Z [info     ] Chunk processed                [chunks2skus.pipeline] chunk_id=16.廉价航空，净利润超过10％的模式_笔记_chunk_001 new_skus=10 total_skus=66
+2026-04-28T01:49:17.218863Z [info     ] Extracting relational knowledge [chunks2skus.extractors.relational_extractor] chunk_id=15.三阶段合伙人的模式_笔记_chunk_001
+2026-04-28T01:49:17.220366Z [info     ] Relational context size        [chunks2skus.extractors.relational_extractor] alias_map_chars=108 chunk_id=15.三阶段合伙人的模式_笔记_chunk_001 glossary_count=35 label_nodes_count=19 label_tree_chars=146 relevant_relations_chars=9 term_list_chars=280
+2026-04-28T01:49:17.221379Z [info     ] [MONITOR] call_llm_json starting [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215
+2026-04-28T01:49:17.221379Z [info     ] [MONITOR] Starting LLM call    [chunks2skus.utils.llm_client] attempt=0 max_tokens=128000 model=doubao-seed-2-0-pro-260215 prompt_length=4793 temperature=0.3
+2026-04-28T01:49:20.472686Z [info     ] [MONITOR] LLM call SUCCESS     [chunks2skus.utils.llm_client] attempt=0 finish_reason=stop model=doubao-seed-2-0-pro-260215 response_length=2019
+2026-04-28T01:49:20.473190Z [info     ] [MONITOR] JSON parse SUCCESS   [chunks2skus.utils.llm_client] keys=['procedures']
+2026-04-28T01:49:20.488152Z [info     ] Procedural extraction complete [chunks2skus.extractors.procedural_extractor] chunk_id=26.以猪肉为核心，不卖隔夜肉_笔记_chunk_001 skills_created=4
+2026-04-28T01:49:20.489150Z [info     ] Extracting factual knowledge   [chunks2skus.extractors.factual_extractor] chunk_id=7.交钥匙不如先款后货的模式_笔记_chunk_001
+2026-04-28T01:49:20.490146Z [info     ] [MONITOR] call_llm_json starting [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215
+2026-04-28T01:49:20.490648Z [info     ] [MONITOR] Starting LLM call    [chunks2skus.utils.llm_client] attempt=0 max_tokens=64000 model=doubao-seed-2-0-pro-260215 prompt_length=3238 temperature=0.3
+2026-04-28T01:49:40.176975Z [info     ] [MONITOR] LLM call SUCCESS     [chunks2skus.utils.llm_client] attempt=0 finish_reason=stop model=doubao-seed-2-0-pro-260215 response_length=2878
+2026-04-28T01:49:40.177855Z [info     ] [MONITOR] JSON parse SUCCESS   [chunks2skus.utils.llm_client] keys=['facts']
+2026-04-28T01:49:40.199458Z [info     ] Factual extraction complete    [chunks2skus.extractors.factual_extractor] chunk_id=4.上下通吃，打通经销商合伙人激励的模式_chunk_001 skus_created=7
+2026-04-28T01:49:40.200471Z [info     ] Extracting procedural knowledge [chunks2skus.extractors.procedural_extractor] chunk_id=4.上下通吃，打通经销商合伙人激励的模式_chunk_001
+2026-04-28T01:49:40.200471Z [info     ] [MONITOR] call_llm_json starting [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215
+2026-04-28T01:49:40.201470Z [info     ] [MONITOR] Starting LLM call    [chunks2skus.utils.llm_client] attempt=0 max_tokens=64000 model=doubao-seed-2-0-pro-260215 prompt_length=2016 temperature=0.3
+2026-04-28T01:49:52.154128Z [info     ] [MONITOR] LLM call SUCCESS     [chunks2skus.utils.llm_client] attempt=0 finish_reason=stop model=doubao-seed-2-0-pro-260215 response_length=3779
+2026-04-28T01:49:52.155133Z [info     ] [MONITOR] JSON parse SUCCESS   [chunks2skus.utils.llm_client] keys=['facts']
+2026-04-28T01:49:52.169552Z [info     ] Factual extraction complete    [chunks2skus.extractors.factual_extractor] chunk_id=5.不做主机厂，专注整合商的模式_笔记_chunk_001 skus_created=8
+2026-04-28T01:49:52.170548Z [info     ] Extracting procedural knowledge [chunks2skus.extractors.procedural_extractor] chunk_id=5.不做主机厂，专注整合商的模式_笔记_chunk_001
+2026-04-28T01:49:52.171548Z [info     ] [MONITOR] call_llm_json starting [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215
+2026-04-28T01:49:52.171548Z [info     ] [MONITOR] Starting LLM call    [chunks2skus.utils.llm_client] attempt=0 max_tokens=64000 model=doubao-seed-2-0-pro-260215 prompt_length=3349 temperature=0.3
+2026-04-28T01:50:01.462144Z [info     ] [MONITOR] LLM call SUCCESS     [chunks2skus.utils.llm_client] attempt=0 finish_reason=stop model=doubao-seed-2-0-pro-260215 response_length=3073
+2026-04-28T01:50:01.463149Z [info     ] [MONITOR] JSON parse SUCCESS   [chunks2skus.utils.llm_client] keys=['facts']
+2026-04-28T01:50:01.474621Z [info     ] Factual extraction complete    [chunks2skus.extractors.factual_extractor] chunk_id=6.为经销商Dai款的模式_笔记_chunk_001 skus_created=4
+2026-04-28T01:50:01.475617Z [info     ] Extracting procedural knowledge [chunks2skus.extractors.procedural_extractor] chunk_id=6.为经销商Dai款的模式_笔记_chunk_001
+2026-04-28T01:50:01.476690Z [info     ] [MONITOR] call_llm_json starting [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215
+2026-04-28T01:50:01.476690Z [info     ] [MONITOR] Starting LLM call    [chunks2skus.utils.llm_client] attempt=0 max_tokens=64000 model=doubao-seed-2-0-pro-260215 prompt_length=2324 temperature=0.3
+2026-04-28T01:50:36.382673Z [info     ] [MONITOR] LLM call SUCCESS     [chunks2skus.utils.llm_client] attempt=0 finish_reason=stop model=doubao-seed-2-0-pro-260215 response_length=3192
+2026-04-28T01:50:36.383679Z [info     ] [MONITOR] JSON parse SUCCESS   [chunks2skus.utils.llm_client] keys=['facts']
+2026-04-28T01:50:36.401657Z [info     ] Factual extraction complete    [chunks2skus.extractors.factual_extractor] chunk_id=7.交钥匙不如先款后货的模式_笔记_chunk_001 skus_created=6
+2026-04-28T01:50:36.401657Z [info     ] Extracting procedural knowledge [chunks2skus.extractors.procedural_extractor] chunk_id=7.交钥匙不如先款后货的模式_笔记_chunk_001
+2026-04-28T01:50:36.402653Z [info     ] [MONITOR] call_llm_json starting [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215
+2026-04-28T01:50:36.402653Z [info     ] [MONITOR] Starting LLM call    [chunks2skus.utils.llm_client] attempt=0 max_tokens=64000 model=doubao-seed-2-0-pro-260215 prompt_length=2599 temperature=0.3
+2026-04-28T01:50:36.670612Z [info     ] [MONITOR] LLM call SUCCESS     [chunks2skus.utils.llm_client] attempt=0 finish_reason=stop model=doubao-seed-2-0-pro-260215 response_length=1391
+2026-04-28T01:50:36.672618Z [info     ] [MONITOR] JSON parse SUCCESS   [chunks2skus.utils.llm_client] keys=['new_labels', 'new_glossary', 'updated_glossary', 'new_relationships']
+2026-04-28T01:50:36.676115Z [info     ] Added new labels               [chunks2skus.extractors.relational_extractor] chunk_id=15.三阶段合伙人的模式_笔记_chunk_001 count=0
+2026-04-28T01:50:36.678133Z [info     ] Merged new glossary entries    [chunks2skus.extractors.relational_extractor] chunk_id=15.三阶段合伙人的模式_笔记_chunk_001 count=4
+2026-04-28T01:50:36.679129Z [info     ] Updated existing glossary entries [chunks2skus.extractors.relational_extractor] chunk_id=15.三阶段合伙人的模式_笔记_chunk_001 fallback_count=0 total_in_response=0 updated_count=0
+2026-04-28T01:50:36.680126Z [info     ] Merged new relationships       [chunks2skus.extractors.relational_extractor] chunk_id=15.三阶段合伙人的模式_笔记_chunk_001 count=5
+2026-04-28T01:50:36.681123Z [info     ] Relationship predicate distribution [chunks2skus.extractors.relational_extractor] distribution={'superset-of': 15, 'contradicts': 5, 'enables': 7, 'caused-by': 1, 'depends-on': 3, 'causes': 14, 'implements': 11, 'requires': 3, 'example-of': 9, 'related-to': 7, 'has-a': 1, 'part-of': 5} total=81
+2026-04-28T01:50:36.684530Z [info     ] Relational extraction complete [chunks2skus.extractors.relational_extractor] chunk_id=15.三阶段合伙人的模式_笔记_chunk_001 labels=2 relationships=81 terms=39
+2026-04-28T01:50:36.687126Z [info     ] Chunk processed                [chunks2skus.pipeline] chunk_id=15.三阶段合伙人的模式_笔记_chunk_001 new_skus=9 total_skus=74
+2026-04-28T01:50:36.688126Z [info     ] Extracting relational knowledge [chunks2skus.extractors.relational_extractor] chunk_id=17.先掺后控，打造符合资本的商业模式_笔记_chunk_001
+2026-04-28T01:50:36.689122Z [info     ] Relational context size        [chunks2skus.extractors.relational_extractor] alias_map_chars=132 chunk_id=17.先掺后控，打造符合资本的商业模式_笔记_chunk_001 glossary_count=39 label_nodes_count=19 label_tree_chars=146 relevant_relations_chars=9 term_list_chars=329
+2026-04-28T01:50:36.691115Z [info     ] [MONITOR] call_llm_json starting [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215
+2026-04-28T01:50:36.692112Z [info     ] [MONITOR] Starting LLM call    [chunks2skus.utils.llm_client] attempt=0 max_tokens=128000 model=doubao-seed-2-0-pro-260215 prompt_length=4536 temperature=0.3
+2026-04-28T01:50:37.828092Z [info     ] [MONITOR] LLM call SUCCESS     [chunks2skus.utils.llm_client] attempt=0 finish_reason=stop model=doubao-seed-2-0-pro-260215 response_length=1492
+2026-04-28T01:50:37.828594Z [info     ] [MONITOR] JSON parse SUCCESS   [chunks2skus.utils.llm_client] keys=['procedures']
+2026-04-28T01:50:37.841268Z [info     ] Procedural extraction complete [chunks2skus.extractors.procedural_extractor] chunk_id=6.为经销商Dai款的模式_笔记_chunk_001 skills_created=3
+2026-04-28T01:50:37.843430Z [info     ] Extracting factual knowledge   [chunks2skus.extractors.factual_extractor] chunk_id=8.生产外包，先市场后工厂的模式_笔记_chunk_001
+2026-04-28T01:50:37.843430Z [info     ] [MONITOR] call_llm_json starting [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215
+2026-04-28T01:50:37.843430Z [info     ] [MONITOR] Starting LLM call    [chunks2skus.utils.llm_client] attempt=0 max_tokens=64000 model=doubao-seed-2-0-pro-260215 prompt_length=3821 temperature=0.3
+2026-04-28T01:50:46.900980Z [info     ] [MONITOR] LLM call SUCCESS     [chunks2skus.utils.llm_client] attempt=0 finish_reason=stop model=doubao-seed-2-0-pro-260215 response_length=2408
+2026-04-28T01:50:46.901483Z [info     ] [MONITOR] JSON parse SUCCESS   [chunks2skus.utils.llm_client] keys=['procedures']
+2026-04-28T01:50:46.918477Z [info     ] Procedural extraction complete [chunks2skus.extractors.procedural_extractor] chunk_id=4.上下通吃，打通经销商合伙人激励的模式_chunk_001 skills_created=5
+2026-04-28T01:50:46.919475Z [info     ] Extracting factual knowledge   [chunks2skus.extractors.factual_extractor] chunk_id=9.做品牌不做品类的商业模式_笔记_chunk_001
+2026-04-28T01:50:46.919475Z [info     ] [MONITOR] call_llm_json starting [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215
+2026-04-28T01:50:46.920470Z [info     ] [MONITOR] Starting LLM call    [chunks2skus.utils.llm_client] attempt=0 max_tokens=64000 model=doubao-seed-2-0-pro-260215 prompt_length=3893 temperature=0.3
+2026-04-28T01:50:56.340445Z [info     ] [MONITOR] LLM call SUCCESS     [chunks2skus.utils.llm_client] attempt=0 finish_reason=stop model=doubao-seed-2-0-pro-260215 response_length=2115
+2026-04-28T01:50:56.342954Z [info     ] [MONITOR] JSON parse SUCCESS   [chunks2skus.utils.llm_client] keys=['procedures']
+2026-04-28T01:50:56.357973Z [info     ] Procedural extraction complete [chunks2skus.extractors.procedural_extractor] chunk_id=5.不做主机厂，专注整合商的模式_笔记_chunk_001 skills_created=4
+2026-04-28T01:51:25.766165Z [info     ] [MONITOR] LLM call SUCCESS     [chunks2skus.utils.llm_client] attempt=0 finish_reason=stop model=doubao-seed-2-0-pro-260215 response_length=1252
+2026-04-28T01:51:25.767171Z [info     ] [MONITOR] JSON parse SUCCESS   [chunks2skus.utils.llm_client] keys=['procedures']
+2026-04-28T01:51:25.786662Z [info     ] Procedural extraction complete [chunks2skus.extractors.procedural_extractor] chunk_id=7.交钥匙不如先款后货的模式_笔记_chunk_001 skills_created=2
+2026-04-28T01:51:30.290535Z [info     ] [MONITOR] LLM call SUCCESS     [chunks2skus.utils.llm_client] attempt=0 finish_reason=stop model=doubao-seed-2-0-pro-260215 response_length=3208
+2026-04-28T01:51:30.291532Z [info     ] [MONITOR] JSON parse SUCCESS   [chunks2skus.utils.llm_client] keys=['facts']
+2026-04-28T01:51:30.308015Z [info     ] Factual extraction complete    [chunks2skus.extractors.factual_extractor] chunk_id=8.生产外包，先市场后工厂的模式_笔记_chunk_001 skus_created=7
+2026-04-28T01:51:30.309012Z [info     ] Extracting procedural knowledge [chunks2skus.extractors.procedural_extractor] chunk_id=8.生产外包，先市场后工厂的模式_笔记_chunk_001
+2026-04-28T01:51:30.309012Z [info     ] [MONITOR] call_llm_json starting [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215
+2026-04-28T01:51:30.310008Z [info     ] [MONITOR] Starting LLM call    [chunks2skus.utils.llm_client] attempt=0 max_tokens=64000 model=doubao-seed-2-0-pro-260215 prompt_length=3182 temperature=0.3
+2026-04-28T01:52:02.912143Z [info     ] [MONITOR] LLM call SUCCESS     [chunks2skus.utils.llm_client] attempt=0 finish_reason=stop model=doubao-seed-2-0-pro-260215 response_length=2317
+2026-04-28T01:52:02.913148Z [info     ] [MONITOR] JSON parse SUCCESS   [chunks2skus.utils.llm_client] keys=['new_labels', 'new_glossary', 'updated_glossary', 'new_relationships']
+2026-04-28T01:52:02.922770Z [info     ] Added new labels               [chunks2skus.extractors.relational_extractor] chunk_id=17.先掺后控，打造符合资本的商业模式_笔记_chunk_001 count=0
+2026-04-28T01:52:02.923771Z [info     ] Merged new glossary entries    [chunks2skus.extractors.relational_extractor] chunk_id=17.先掺后控，打造符合资本的商业模式_笔记_chunk_001 count=7
+2026-04-28T01:52:02.924767Z [info     ] Updated existing glossary entries [chunks2skus.extractors.relational_extractor] chunk_id=17.先掺后控，打造符合资本的商业模式_笔记_chunk_001 fallback_count=0 total_in_response=0 updated_count=0
+2026-04-28T01:52:02.925764Z [info     ] Merged new relationships       [chunks2skus.extractors.relational_extractor] chunk_id=17.先掺后控，打造符合资本的商业模式_笔记_chunk_001 count=8
+2026-04-28T01:52:02.925764Z [info     ] Relationship predicate distribution [chunks2skus.extractors.relational_extractor] distribution={'superset-of': 18, 'contradicts': 5, 'enables': 7, 'caused-by': 2, 'depends-on': 3, 'causes': 14, 'implements': 12, 'requires': 4, 'example-of': 11, 'related-to': 7, 'has-a': 1, 'part-of': 5} total=89
+2026-04-28T01:52:02.929766Z [info     ] Relational extraction complete [chunks2skus.extractors.relational_extractor] chunk_id=17.先掺后控，打造符合资本的商业模式_笔记_chunk_001 labels=2 relationships=89 terms=46
+2026-04-28T01:52:02.932286Z [info     ] Chunk processed                [chunks2skus.pipeline] chunk_id=17.先掺后控，打造符合资本的商业模式_笔记_chunk_001 new_skus=12 total_skus=85
+2026-04-28T01:52:02.932286Z [info     ] Extracting relational knowledge [chunks2skus.extractors.relational_extractor] chunk_id='18.“连锁 并购基金”的模式_笔记_chunk_001'
+2026-04-28T01:52:02.933285Z [info     ] Relational context size        [chunks2skus.extractors.relational_extractor] alias_map_chars=132 chunk_id='18.“连锁 并购基金”的模式_笔记_chunk_001' glossary_count=46 label_nodes_count=19 label_tree_chars=146 relevant_relations_chars=200 term_list_chars=388
+2026-04-28T01:52:02.934282Z [info     ] [MONITOR] call_llm_json starting [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215
+2026-04-28T01:52:02.934282Z [info     ] [MONITOR] Starting LLM call    [chunks2skus.utils.llm_client] attempt=0 max_tokens=128000 model=doubao-seed-2-0-pro-260215 prompt_length=4924 temperature=0.3
+2026-04-28T01:52:08.635144Z [info     ] [MONITOR] LLM call SUCCESS     [chunks2skus.utils.llm_client] attempt=0 finish_reason=stop model=doubao-seed-2-0-pro-260215 response_length=4390
+2026-04-28T01:52:08.639118Z [info     ] [MONITOR] JSON parse SUCCESS   [chunks2skus.utils.llm_client] keys=['facts']
+2026-04-28T01:52:08.683562Z [info     ] Factual extraction complete    [chunks2skus.extractors.factual_extractor] chunk_id=9.做品牌不做品类的商业模式_笔记_chunk_001 skus_created=9
+2026-04-28T01:52:08.683562Z [info     ] Extracting procedural knowledge [chunks2skus.extractors.procedural_extractor] chunk_id=9.做品牌不做品类的商业模式_笔记_chunk_001
+2026-04-28T01:52:08.686011Z [info     ] [MONITOR] call_llm_json starting [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215
+2026-04-28T01:52:08.686011Z [info     ] [MONITOR] Starting LLM call    [chunks2skus.utils.llm_client] attempt=0 max_tokens=64000 model=doubao-seed-2-0-pro-260215 prompt_length=3254 temperature=0.3
+2026-04-28T01:52:20.588443Z [info     ] [MONITOR] LLM call SUCCESS     [chunks2skus.utils.llm_client] attempt=0 finish_reason=stop model=doubao-seed-2-0-pro-260215 response_length=1742
+2026-04-28T01:52:20.589450Z [info     ] [MONITOR] JSON parse SUCCESS   [chunks2skus.utils.llm_client] keys=['procedures']
+2026-04-28T01:52:20.596105Z [info     ] Procedural extraction complete [chunks2skus.extractors.procedural_extractor] chunk_id=8.生产外包，先市场后工厂的模式_笔记_chunk_001 skills_created=4
+2026-04-28T01:53:07.983557Z [info     ] [MONITOR] LLM call SUCCESS     [chunks2skus.utils.llm_client] attempt=0 finish_reason=stop model=doubao-seed-2-0-pro-260215 response_length=1968
+2026-04-28T01:53:07.984275Z [info     ] [MONITOR] JSON parse SUCCESS   [chunks2skus.utils.llm_client] keys=['procedures']
+2026-04-28T01:53:08.000273Z [info     ] Procedural extraction complete [chunks2skus.extractors.procedural_extractor] chunk_id=9.做品牌不做品类的商业模式_笔记_chunk_001 skills_created=4
+2026-04-28T01:53:08.001270Z [info     ] Factual/Procedural phase complete [chunks2skus.pipeline] chunks=26 concurrency=4 duration_seconds=863.6
+2026-04-28T01:53:15.785343Z [info     ] [MONITOR] LLM call SUCCESS     [chunks2skus.utils.llm_client] attempt=0 finish_reason=stop model=doubao-seed-2-0-pro-260215 response_length=2057
+2026-04-28T01:53:15.785846Z [info     ] [MONITOR] JSON parse SUCCESS   [chunks2skus.utils.llm_client] keys=['new_labels', 'new_glossary', 'updated_glossary', 'new_relationships']
+2026-04-28T01:53:15.792356Z [info     ] Added new labels               [chunks2skus.extractors.relational_extractor] chunk_id='18.“连锁 并购基金”的模式_笔记_chunk_001' count=0
+2026-04-28T01:53:15.793353Z [info     ] Merged new glossary entries    [chunks2skus.extractors.relational_extractor] chunk_id='18.“连锁 并购基金”的模式_笔记_chunk_001' count=4
+2026-04-28T01:53:15.793353Z [info     ] Updated existing glossary entries [chunks2skus.extractors.relational_extractor] chunk_id='18.“连锁 并购基金”的模式_笔记_chunk_001' fallback_count=0 total_in_response=0 updated_count=0
+2026-04-28T01:53:15.794350Z [info     ] Merged new relationships       [chunks2skus.extractors.relational_extractor] chunk_id='18.“连锁 并购基金”的模式_笔记_chunk_001' count=10
+2026-04-28T01:53:15.794350Z [info     ] Relationship predicate distribution [chunks2skus.extractors.relational_extractor] distribution={'superset-of': 18, 'contradicts': 5, 'enables': 10, 'caused-by': 2, 'depends-on': 3, 'causes': 16, 'implements': 12, 'requires': 4, 'example-of': 14, 'related-to': 7, 'has-a': 2, 'part-of': 6} total=99
+2026-04-28T01:53:15.798841Z [info     ] Relational extraction complete [chunks2skus.extractors.relational_extractor] chunk_id='18.“连锁 并购基金”的模式_笔记_chunk_001' labels=2 relationships=99 terms=50
+2026-04-28T01:53:15.800837Z [info     ] Chunk processed                [chunks2skus.pipeline] chunk_id='18.“连锁 并购基金”的模式_笔记_chunk_001' new_skus=11 total_skus=95
+2026-04-28T01:53:15.801834Z [info     ] Running meta extraction batch  [chunks2skus.pipeline] chunks=5 new_skus=53 total_content_chars=10613
+2026-04-28T01:53:15.801834Z [info     ] Extracting relational knowledge [chunks2skus.extractors.relational_extractor] chunk_id='2.ODM OEM，超过耐K、A迪净利的商业模式_笔记_chunk_001'
+2026-04-28T01:53:15.801834Z [info     ] Extracting meta knowledge      [chunks2skus.extractors.meta_extractor] chunk_ids='14.“师傅带徒弟，徒弟带徒孙”的机制_笔记_chunk_001, 16.廉价航空，净利润超过10％的模式_笔记_chunk_001, 15.三阶段合伙人的模式_笔记_chunk_001, 17.先掺后控，打造符合资本的商业模式_笔记_chunk_001, 18.“连锁 并购基金”的模式_笔记_chunk_001'
+2026-04-28T01:53:15.802831Z [info     ] Relational context size        [chunks2skus.extractors.relational_extractor] alias_map_chars=145 chunk_id='2.ODM OEM，超过耐K、A迪净利的商业模式_笔记_chunk_001' glossary_count=50 label_nodes_count=19 label_tree_chars=146 relevant_relations_chars=9 term_list_chars=426
+2026-04-28T01:53:15.803827Z [info     ] [MONITOR] call_llm_json starting [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215
+2026-04-28T01:53:15.803827Z [info     ] [MONITOR] Starting LLM call    [chunks2skus.utils.llm_client] attempt=0 max_tokens=128000 model=doubao-seed-2-0-pro-260215 prompt_length=4551 temperature=0.3
+2026-04-28T01:53:15.803827Z [info     ] [MONITOR] Creating thread-local OpenAI client [chunks2skus.utils.llm_client] base_url=https://ark.cn-beijing.volces.com/api/v3 thread=ThreadPoolExecutor-3_0
+2026-04-28T01:53:15.804824Z [info     ] [MONITOR] Creating thread-local OpenAI client [chunks2skus.utils.llm_client] base_url=https://ark.cn-beijing.volces.com/api/v3 thread=ThreadPoolExecutor-3_1
+2026-04-28T01:53:17.098173Z [info     ] [MONITOR] Starting LLM call    [chunks2skus.utils.llm_client] attempt=0 max_tokens=32000 model=doubao-seed-2-0-pro-260215 prompt_length=8649 temperature=0.2
+2026-04-28T01:53:17.102424Z [info     ] [MONITOR] Starting LLM call    [chunks2skus.utils.llm_client] attempt=0 max_tokens=32000 model=doubao-seed-2-0-pro-260215 prompt_length=11455 temperature=0.7
+2026-04-28T01:54:02.705967Z [info     ] [MONITOR] LLM call SUCCESS     [chunks2skus.utils.llm_client] attempt=0 finish_reason=stop model=doubao-seed-2-0-pro-260215 response_length=1501
+2026-04-28T01:54:02.708960Z [info     ] Updated eureka.md              [chunks2skus.extractors.meta_extractor] chunk_ids='14.“师傅带徒弟，徒弟带徒孙”的机制_笔记_chunk_001, 16.廉价航空，净利润超过10％的模式_笔记_chunk_001, 15.三阶段合伙人的模式_笔记_chunk_001, 17.先掺后控，打造符合资本的商业模式_笔记_chunk_001, 18.“连锁 并购基金”的模式_笔记_chunk_001' new_size=1501 old_size=1002
+2026-04-28T01:54:29.204761Z [info     ] [MONITOR] LLM call SUCCESS     [chunks2skus.utils.llm_client] attempt=0 finish_reason=stop model=doubao-seed-2-0-pro-260215 response_length=1967
+2026-04-28T01:54:29.206779Z [info     ] [MONITOR] JSON parse SUCCESS   [chunks2skus.utils.llm_client] keys=['new_labels', 'new_glossary', 'updated_glossary', 'new_relationships']
+2026-04-28T01:54:29.211762Z [info     ] Added new labels               [chunks2skus.extractors.relational_extractor] chunk_id='2.ODM OEM，超过耐K、A迪净利的商业模式_笔记_chunk_001' count=2
+2026-04-28T01:54:29.213262Z [info     ] Merged new glossary entries    [chunks2skus.extractors.relational_extractor] chunk_id='2.ODM OEM，超过耐K、A迪净利的商业模式_笔记_chunk_001' count=5
+2026-04-28T01:54:29.215261Z [info     ] Updated existing glossary entries [chunks2skus.extractors.relational_extractor] chunk_id='2.ODM OEM，超过耐K、A迪净利的商业模式_笔记_chunk_001' fallback_count=0 total_in_response=1 updated_count=1
+2026-04-28T01:54:29.217361Z [info     ] Merged new relationships       [chunks2skus.extractors.relational_extractor] chunk_id='2.ODM OEM，超过耐K、A迪净利的商业模式_笔记_chunk_001' count=6
+2026-04-28T01:54:29.219354Z [info     ] Relationship predicate distribution [chunks2skus.extractors.relational_extractor] distribution={'superset-of': 18, 'contradicts': 5, 'enables': 12, 'caused-by': 2, 'depends-on': 3, 'causes': 18, 'implements': 12, 'requires': 4, 'example-of': 15, 'related-to': 7, 'has-a': 2, 'part-of': 6, 'certifies': 1} total=105
+2026-04-28T01:54:29.226925Z [info     ] Relational extraction complete [chunks2skus.extractors.relational_extractor] chunk_id='2.ODM OEM，超过耐K、A迪净利的商业模式_笔记_chunk_001' labels=2 relationships=105 terms=55
+2026-04-28T01:54:29.232905Z [info     ] Chunk processed                [chunks2skus.pipeline] chunk_id='2.ODM OEM，超过耐K、A迪净利的商业模式_笔记_chunk_001' new_skus=9 total_skus=103
+2026-04-28T01:54:29.234409Z [info     ] Extracting relational knowledge [chunks2skus.extractors.relational_extractor] chunk_id=19.药明康德，G级代工，研发外包模式，打造医药行业“富士康”模式_笔记_chunk_001
+2026-04-28T01:54:29.235879Z [info     ] Relational context size        [chunks2skus.extractors.relational_extractor] alias_map_chars=193 chunk_id=19.药明康德，G级代工，研发外包模式，打造医药行业“富士康”模式_笔记_chunk_001 glossary_count=55 label_nodes_count=21 label_tree_chars=166 relevant_relations_chars=9 term_list_chars=464
+2026-04-28T01:54:29.242104Z [info     ] [MONITOR] call_llm_json starting [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215
+2026-04-28T01:54:29.244604Z [info     ] [MONITOR] Starting LLM call    [chunks2skus.utils.llm_client] attempt=0 max_tokens=128000 model=doubao-seed-2-0-pro-260215 prompt_length=5482 temperature=0.3
+2026-04-28T01:54:51.026285Z [info     ] [MONITOR] LLM call SUCCESS     [chunks2skus.utils.llm_client] attempt=0 finish_reason=stop model=doubao-seed-2-0-pro-260215 response_length=3059
+2026-04-28T01:54:51.030271Z [warning  ] Header-mapping title mismatch  [chunks2skus.extractors.meta_extractor] header_title=海底捞人才培养与晋升体系 mapping_line='- `factual/sku_029`: 需要了解海底捞基层员工到管理层的晋升路径、内部培养及新店长选拔规则时查阅' sku_path=sku_029
+2026-04-28T01:54:51.035024Z [warning  ] Header-mapping title mismatch  [chunks2skus.extractors.meta_extractor] header_title=store-dynamic-assessment-mechanism mapping_line='- `procedural/skill_022`: 餐饮/服务类企业需要开展门店绩效考核、提升客户满意度时查阅' sku_path=skill_022
+2026-04-28T01:54:51.037018Z [warning  ] Header-mapping title mismatch  [chunks2skus.extractors.meta_extractor] header_title=grassroot-employee-promotion-system mapping_line='- `procedural/skill_023`: 服务型企业需要搭建透明的基层员工晋升路径、保障内部人才供给时查阅' sku_path=skill_023
+2026-04-28T01:54:51.042861Z [warning  ] Header-mapping title mismatch  [chunks2skus.extractors.meta_extractor] header_title=low-cost-airline-cost-control-strategy-f mapping_line='- `procedural/skill_026`: 需要为低成本航空公司制定可落地的降本策略、提升整体利润率时查阅' sku_path=skill_026
+2026-04-28T01:54:51.045854Z [warning  ] Header-mapping title mismatch  [chunks2skus.extractors.meta_extractor] header_title=low-cost-airline-differentiated-business mapping_line='- `procedural/skill_027`: 需要搭建低成本航空公司的差异化商业模式、提升市场竞争力与抗周期能力时查阅' sku_path=skill_027
+2026-04-28T01:54:51.050408Z [warning  ] Header-mapping title mismatch  [chunks2skus.extractors.meta_extractor] header_title=low-cost-airline-profit-quality-analysis mapping_line='- `procedural/skill_028`: 需要分析低成本航空公司的净利润真实性、判断其盈利可持续性时查阅' sku_path=skill_028
+2026-04-28T01:54:51.055917Z [warning  ] Header-mapping title mismatch  [chunks2skus.extractors.meta_extractor] header_title=yonghui-style-op-partner-bonus-calculati mapping_line='- `procedural/skill_029`: 零售企业需要设计面向一线员工的增量利润分红激励机制、核算合伙人奖金时查阅' sku_path=skill_029
+2026-04-28T01:54:51.062402Z [warning  ] Header-mapping title mismatch  [chunks2skus.extractors.meta_extractor] header_title=pre-participation-then-control-merger-wo mapping_line='- `procedural/skill_032`: 企业开展线下连锁业态（如体检中心）并购扩张、需降低前期亏损风险、绑定当地资源时查阅' sku_path=skill_032
+2026-04-28T01:54:51.067391Z [warning  ] Header-mapping title mismatch  [chunks2skus.extractors.meta_extractor] header_title=pe-plus-listed-company-merger-workflow mapping_line='- `procedural/skill_033`: 上市公司开展大规模产业并购、需降低并购风险、提升资金使用效率时查阅' sku_path=skill_033
+2026-04-28T01:54:51.068762Z [warning  ] Header-mapping title mismatch  [chunks2skus.extractors.meta_extractor] header_title=merger-goodwill-risk-management-workflow mapping_line='- `procedural/skill_035`: 上市公司开展溢价并购、需管控商誉减值风险时查阅' sku_path=skill_035
+2026-04-28T01:54:51.074193Z [warning  ] Header-mapping title mismatch  [chunks2skus.extractors.meta_extractor] header_title=chain-enterprise-profit-path-planning mapping_line='- `procedural/skill_036`: 连锁企业需要制定不同发展阶段的盈利策略、规划利润来源及市值增长路径时查阅' sku_path=skill_036
+2026-04-28T01:54:51.080595Z [warning  ] Header-mapping title mismatch  [chunks2skus.extractors.meta_extractor] header_title=ophthalmic-chain-four-level-diagnosis-ne mapping_line='- `procedural/skill_037`: 眼科类连锁医疗企业需要搭建全国层级化诊疗服务网络、优化医疗资源配置时查阅' sku_path=skill_037
+2026-04-28T01:54:51.085090Z [warning  ] Header-mapping title mismatch  [chunks2skus.extractors.meta_extractor] header_title=franchise-mode-market-value-increase-cal mapping_line='- `procedural/skill_039`: 连锁企业需要开展加盟扩张、测算加盟费带来的利润及市值增长空间时查阅' sku_path=skill_039
+2026-04-28T01:54:51.088104Z [info     ] Updated mapping.md (diff merge) [chunks2skus.extractors.meta_extractor] chunk_id='18.“连锁 并购基金”的模式_笔记_chunk_001' diff_lines=62 new_size=5800 old_size=2793
+2026-04-28T01:54:51.091600Z [info     ] Meta extraction complete       [chunks2skus.extractors.meta_extractor] chunk_ids='14.“师傅带徒弟，徒弟带徒孙”的机制_笔记_chunk_001, 16.廉价航空，净利润超过10％的模式_笔记_chunk_001, 15.三阶段合伙人的模式_笔记_chunk_001, 17.先掺后控，打造符合资本的商业模式_笔记_chunk_001, 18.“连锁 并购基金”的模式_笔记_chunk_001' eureka_chars=1501 mapping_chars=5800
+2026-04-28T01:55:36.869824Z [info     ] [MONITOR] LLM call SUCCESS     [chunks2skus.utils.llm_client] attempt=0 finish_reason=stop model=doubao-seed-2-0-pro-260215 response_length=3170
+2026-04-28T01:55:36.876779Z [info     ] [MONITOR] JSON parse SUCCESS   [chunks2skus.utils.llm_client] keys=['new_labels', 'new_glossary', 'updated_glossary', 'new_relationships']
+2026-04-28T01:55:36.882345Z [info     ] Added new labels               [chunks2skus.extractors.relational_extractor] chunk_id=19.药明康德，G级代工，研发外包模式，打造医药行业“富士康”模式_笔记_chunk_001 count=1
+2026-04-28T01:55:36.889322Z [info     ] Merged new glossary entries    [chunks2skus.extractors.relational_extractor] chunk_id=19.药明康德，G级代工，研发外包模式，打造医药行业“富士康”模式_笔记_chunk_001 count=8
+2026-04-28T01:55:36.904799Z [info     ] Updated existing glossary entries [chunks2skus.extractors.relational_extractor] chunk_id=19.药明康德，G级代工，研发外包模式，打造医药行业“富士康”模式_笔记_chunk_001 fallback_count=0 total_in_response=1 updated_count=1
+2026-04-28T01:55:36.920797Z [info     ] Merged new relationships       [chunks2skus.extractors.relational_extractor] chunk_id=19.药明康德，G级代工，研发外包模式，打造医药行业“富士康”模式_笔记_chunk_001 count=10
+2026-04-28T01:55:36.930299Z [info     ] Relationship predicate distribution [chunks2skus.extractors.relational_extractor] distribution={'superset-of': 19, 'contradicts': 6, 'enables': 15, 'caused-by': 2, 'depends-on': 3, 'causes': 19, 'implements': 12, 'requires': 4, 'example-of': 19, 'related-to': 7, 'has-a': 2, 'part-of': 6, 'certifies': 1} total=115
+2026-04-28T01:55:36.949261Z [info     ] Relational extraction complete [chunks2skus.extractors.relational_extractor] chunk_id=19.药明康德，G级代工，研发外包模式，打造医药行业“富士康”模式_笔记_chunk_001 labels=2 relationships=115 terms=63
+2026-04-28T01:55:36.956261Z [info     ] Chunk processed                [chunks2skus.pipeline] chunk_id=19.药明康德，G级代工，研发外包模式，打造医药行业“富士康”模式_笔记_chunk_001 new_skus=13 total_skus=115
+2026-04-28T01:55:36.959755Z [info     ] Extracting relational knowledge [chunks2skus.extractors.relational_extractor] chunk_id=20.红星美凯龙，比轻资产更轻，委托管理模式_笔记_chunk_001
+2026-04-28T01:55:36.962752Z [info     ] Relational context size        [chunks2skus.extractors.relational_extractor] alias_map_chars=299 chunk_id=20.红星美凯龙，比轻资产更轻，委托管理模式_笔记_chunk_001 glossary_count=63 label_nodes_count=22 label_tree_chars=173 relevant_relations_chars=9 term_list_chars=518
+2026-04-28T01:55:36.966739Z [info     ] [MONITOR] call_llm_json starting [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215
+2026-04-28T01:55:36.969238Z [info     ] [MONITOR] Starting LLM call    [chunks2skus.utils.llm_client] attempt=0 max_tokens=128000 model=doubao-seed-2-0-pro-260215 prompt_length=4829 temperature=0.3
+2026-04-28T01:56:54.417152Z [info     ] [MONITOR] LLM call SUCCESS     [chunks2skus.utils.llm_client] attempt=0 finish_reason=stop model=doubao-seed-2-0-pro-260215 response_length=2029
+2026-04-28T01:56:54.419158Z [info     ] [MONITOR] JSON parse SUCCESS   [chunks2skus.utils.llm_client] keys=['new_labels', 'new_glossary', 'updated_glossary', 'new_relationships']
+2026-04-28T01:56:54.421151Z [info     ] Added new labels               [chunks2skus.extractors.relational_extractor] chunk_id=20.红星美凯龙，比轻资产更轻，委托管理模式_笔记_chunk_001 count=0
+2026-04-28T01:56:54.423144Z [info     ] Merged new glossary entries    [chunks2skus.extractors.relational_extractor] chunk_id=20.红星美凯龙，比轻资产更轻，委托管理模式_笔记_chunk_001 count=4
+2026-04-28T01:56:54.425665Z [info     ] Updated existing glossary entries [chunks2skus.extractors.relational_extractor] chunk_id=20.红星美凯龙，比轻资产更轻，委托管理模式_笔记_chunk_001 fallback_count=0 total_in_response=2 updated_count=2
+2026-04-28T01:56:54.427165Z [info     ] Merged new relationships       [chunks2skus.extractors.relational_extractor] chunk_id=20.红星美凯龙，比轻资产更轻，委托管理模式_笔记_chunk_001 count=8
+2026-04-28T01:56:54.429161Z [info     ] Relationship predicate distribution [chunks2skus.extractors.relational_extractor] distribution={'superset-of': 23, 'contradicts': 6, 'enables': 15, 'caused-by': 2, 'depends-on': 3, 'causes': 20, 'implements': 12, 'requires': 4, 'example-of': 20, 'related-to': 9, 'has-a': 2, 'part-of': 6, 'certifies': 1} total=123
+2026-04-28T01:56:54.431154Z [info     ] Predicate count over 20        [chunks2skus.extractors.relational_extractor] predicates={'superset-of': 23}
+2026-04-28T01:56:54.441030Z [info     ] Relational extraction complete [chunks2skus.extractors.relational_extractor] chunk_id=20.红星美凯龙，比轻资产更轻，委托管理模式_笔记_chunk_001 labels=2 relationships=123 terms=67
+2026-04-28T01:56:54.446522Z [info     ] Chunk processed                [chunks2skus.pipeline] chunk_id=20.红星美凯龙，比轻资产更轻，委托管理模式_笔记_chunk_001 new_skus=13 total_skus=127
+2026-04-28T01:56:54.450511Z [info     ] Extracting relational knowledge [chunks2skus.extractors.relational_extractor] chunk_id='21.尚品宅配，柔性生产链，C2B O2O的模式分析_笔记_chunk_001'
+2026-04-28T01:56:54.452505Z [info     ] Relational context size        [chunks2skus.extractors.relational_extractor] alias_map_chars=334 chunk_id='21.尚品宅配，柔性生产链，C2B O2O的模式分析_笔记_chunk_001' glossary_count=67 label_nodes_count=22 label_tree_chars=173 relevant_relations_chars=9 term_list_chars=551
+2026-04-28T01:56:54.456073Z [info     ] [MONITOR] call_llm_json starting [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215
+2026-04-28T01:56:54.460063Z [info     ] [MONITOR] Starting LLM call    [chunks2skus.utils.llm_client] attempt=0 max_tokens=128000 model=doubao-seed-2-0-pro-260215 prompt_length=5306 temperature=0.3
+2026-04-28T01:58:02.592596Z [info     ] [MONITOR] LLM call SUCCESS     [chunks2skus.utils.llm_client] attempt=0 finish_reason=stop model=doubao-seed-2-0-pro-260215 response_length=2077
+2026-04-28T01:58:02.593100Z [info     ] [MONITOR] JSON parse SUCCESS   [chunks2skus.utils.llm_client] keys=['new_labels', 'new_glossary', 'updated_glossary', 'new_relationships']
+2026-04-28T01:58:02.595101Z [info     ] Added new labels               [chunks2skus.extractors.relational_extractor] chunk_id='21.尚品宅配，柔性生产链，C2B O2O的模式分析_笔记_chunk_001' count=2
+2026-04-28T01:58:02.596097Z [info     ] Merged new glossary entries    [chunks2skus.extractors.relational_extractor] chunk_id='21.尚品宅配，柔性生产链，C2B O2O的模式分析_笔记_chunk_001' count=6
+2026-04-28T01:58:02.597094Z [info     ] Updated existing glossary entries [chunks2skus.extractors.relational_extractor] chunk_id='21.尚品宅配，柔性生产链，C2B O2O的模式分析_笔记_chunk_001' fallback_count=0 total_in_response=1 updated_count=1
+2026-04-28T01:58:02.599088Z [info     ] Merged new relationships       [chunks2skus.extractors.relational_extractor] chunk_id='21.尚品宅配，柔性生产链，C2B O2O的模式分析_笔记_chunk_001' count=6
+2026-04-28T01:58:02.600084Z [info     ] Relationship predicate distribution [chunks2skus.extractors.relational_extractor] distribution={'superset-of': 24, 'contradicts': 6, 'enables': 16, 'caused-by': 2, 'depends-on': 3, 'causes': 21, 'implements': 12, 'requires': 5, 'example-of': 20, 'related-to': 11, 'has-a': 2, 'part-of': 6, 'certifies': 1} total=129
+2026-04-28T01:58:02.601081Z [info     ] Predicate count over 20        [chunks2skus.extractors.relational_extractor] predicates={'superset-of': 24, 'causes': 21}
+2026-04-28T01:58:02.604578Z [info     ] Relational extraction complete [chunks2skus.extractors.relational_extractor] chunk_id='21.尚品宅配，柔性生产链，C2B O2O的模式分析_笔记_chunk_001' labels=2 relationships=129 terms=73
+2026-04-28T01:58:02.606572Z [info     ] Chunk processed                [chunks2skus.pipeline] chunk_id='21.尚品宅配，柔性生产链，C2B O2O的模式分析_笔记_chunk_001' new_skus=9 total_skus=135
+2026-04-28T01:58:02.607569Z [info     ] Extracting relational knowledge [chunks2skus.extractors.relational_extractor] chunk_id='23.宋城演艺，蹭头部流量，做自己的演艺，“千古情 5A景区”模式_笔记_chunk_001'
+2026-04-28T01:58:02.608565Z [info     ] Relational context size        [chunks2skus.extractors.relational_extractor] alias_map_chars=399 chunk_id='23.宋城演艺，蹭头部流量，做自己的演艺，“千古情 5A景区”模式_笔记_chunk_001' glossary_count=73 label_nodes_count=24 label_tree_chars=191 relevant_relations_chars=160 term_list_chars=598
+2026-04-28T01:58:02.609562Z [info     ] [MONITOR] call_llm_json starting [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215
+2026-04-28T01:58:02.609562Z [info     ] [MONITOR] Starting LLM call    [chunks2skus.utils.llm_client] attempt=0 max_tokens=128000 model=doubao-seed-2-0-pro-260215 prompt_length=5554 temperature=0.3
+2026-04-28T01:59:34.344033Z [info     ] [MONITOR] LLM call SUCCESS     [chunks2skus.utils.llm_client] attempt=0 finish_reason=stop model=doubao-seed-2-0-pro-260215 response_length=2740
+2026-04-28T01:59:34.344536Z [info     ] [MONITOR] JSON parse SUCCESS   [chunks2skus.utils.llm_client] keys=['new_labels', 'new_glossary', 'updated_glossary', 'new_relationships']
+2026-04-28T01:59:34.347054Z [info     ] Added new labels               [chunks2skus.extractors.relational_extractor] chunk_id='23.宋城演艺，蹭头部流量，做自己的演艺，“千古情 5A景区”模式_笔记_chunk_001' count=1
+2026-04-28T01:59:34.348053Z [info     ] Merged new glossary entries    [chunks2skus.extractors.relational_extractor] chunk_id='23.宋城演艺，蹭头部流量，做自己的演艺，“千古情 5A景区”模式_笔记_chunk_001' count=6
+2026-04-28T01:59:34.349050Z [info     ] Updated existing glossary entries [chunks2skus.extractors.relational_extractor] chunk_id='23.宋城演艺，蹭头部流量，做自己的演艺，“千古情 5A景区”模式_笔记_chunk_001' fallback_count=0 total_in_response=2 updated_count=2
+2026-04-28T01:59:34.350046Z [info     ] Merged new relationships       [chunks2skus.extractors.relational_extractor] chunk_id='23.宋城演艺，蹭头部流量，做自己的演艺，“千古情 5A景区”模式_笔记_chunk_001' count=12
+2026-04-28T01:59:34.350046Z [info     ] Relationship predicate distribution [chunks2skus.extractors.relational_extractor] distribution={'superset-of': 24, 'contradicts': 6, 'enables': 16, 'caused-by': 2, 'depends-on': 3, 'causes': 26, 'implements': 12, 'requires': 5, 'example-of': 20, 'related-to': 12, 'has-a': 2, 'part-of': 12, 'certifies': 1} total=141
+2026-04-28T01:59:34.351044Z [info     ] Predicate count over 20        [chunks2skus.extractors.relational_extractor] predicates={'superset-of': 24, 'causes': 26}
+2026-04-28T01:59:34.354034Z [info     ] Relational extraction complete [chunks2skus.extractors.relational_extractor] chunk_id='23.宋城演艺，蹭头部流量，做自己的演艺，“千古情 5A景区”模式_笔记_chunk_001' labels=2 relationships=141 terms=79
+2026-04-28T01:59:34.357527Z [info     ] Chunk processed                [chunks2skus.pipeline] chunk_id='23.宋城演艺，蹭头部流量，做自己的演艺，“千古情 5A景区”模式_笔记_chunk_001' new_skus=11 total_skus=145
+2026-04-28T01:59:34.357527Z [info     ] Running meta extraction batch  [chunks2skus.pipeline] chunks=5 new_skus=55 total_content_chars=11126
+2026-04-28T01:59:34.358527Z [info     ] Extracting relational knowledge [chunks2skus.extractors.relational_extractor] chunk_id='22.张江高科，房东 股东，科技投行的模式，率先开启中国产业园的模式_笔记_chunk_001'
+2026-04-28T01:59:34.358527Z [info     ] Extracting meta knowledge      [chunks2skus.extractors.meta_extractor] chunk_ids='2.ODM OEM，超过耐K、A迪净利的商业模式_笔记_chunk_001, 19.药明康德，G级代工，研发外包模式，打造医药行业“富士康”模式_笔记_chunk_001, 20.红星美凯龙，比轻资产更轻，委托管理模式_笔记_chunk_001, 21.尚品宅配，柔性生产链，C2B O2O的模式分析_笔记_chunk_001, 23.宋城演艺，蹭头部流量，做自己的演艺，“千古情 5A景区”模式_笔记_chunk_001'
+2026-04-28T01:59:34.359524Z [info     ] Relational context size        [chunks2skus.extractors.relational_extractor] alias_map_chars=489 chunk_id='22.张江高科，房东 股东，科技投行的模式，率先开启中国产业园的模式_笔记_chunk_001' glossary_count=79 label_nodes_count=25 label_tree_chars=202 relevant_relations_chars=9 term_list_chars=644
+2026-04-28T01:59:34.360520Z [info     ] [MONITOR] call_llm_json starting [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215
+2026-04-28T01:59:34.361517Z [info     ] [MONITOR] Creating thread-local OpenAI client [chunks2skus.utils.llm_client] base_url=https://ark.cn-beijing.volces.com/api/v3 thread=ThreadPoolExecutor-4_0
+2026-04-28T01:59:34.361517Z [info     ] [MONITOR] Starting LLM call    [chunks2skus.utils.llm_client] attempt=0 max_tokens=128000 model=doubao-seed-2-0-pro-260215 prompt_length=5152 temperature=0.3
+2026-04-28T01:59:34.361517Z [info     ] [MONITOR] Creating thread-local OpenAI client [chunks2skus.utils.llm_client] base_url=https://ark.cn-beijing.volces.com/api/v3 thread=ThreadPoolExecutor-4_1
+2026-04-28T01:59:35.852020Z [info     ] [MONITOR] Starting LLM call    [chunks2skus.utils.llm_client] attempt=0 max_tokens=32000 model=doubao-seed-2-0-pro-260215 prompt_length=11847 temperature=0.2
+2026-04-28T01:59:35.855009Z [info     ] [MONITOR] Starting LLM call    [chunks2skus.utils.llm_client] attempt=0 max_tokens=32000 model=doubao-seed-2-0-pro-260215 prompt_length=12008 temperature=0.7
+2026-04-28T02:00:36.698903Z [info     ] [MONITOR] LLM call SUCCESS     [chunks2skus.utils.llm_client] attempt=0 finish_reason=stop model=doubao-seed-2-0-pro-260215 response_length=2283
+2026-04-28T02:00:36.700412Z [info     ] Updated eureka.md              [chunks2skus.extractors.meta_extractor] chunk_ids='2.ODM OEM，超过耐K、A迪净利的商业模式_笔记_chunk_001, 19.药明康德，G级代工，研发外包模式，打造医药行业“富士康”模式_笔记_chunk_001, 20.红星美凯龙，比轻资产更轻，委托管理模式_笔记_chunk_001, 21.尚品宅配，柔性生产链，C2B O2O的模式分析_笔记_chunk_001, 23.宋城演艺，蹭头部流量，做自己的演艺，“千古情 5A景区”模式_笔记_chunk_001' new_size=2283 old_size=1501
+2026-04-28T02:00:48.617613Z [info     ] [MONITOR] LLM call SUCCESS     [chunks2skus.utils.llm_client] attempt=0 finish_reason=stop model=doubao-seed-2-0-pro-260215 response_length=3324
+2026-04-28T02:00:48.619619Z [info     ] [MONITOR] JSON parse SUCCESS   [chunks2skus.utils.llm_client] keys=['new_labels', 'new_glossary', 'updated_glossary', 'new_relationships']
+2026-04-28T02:00:48.620616Z [info     ] Added new labels               [chunks2skus.extractors.relational_extractor] chunk_id='22.张江高科，房东 股东，科技投行的模式，率先开启中国产业园的模式_笔记_chunk_001' count=1
+2026-04-28T02:00:48.622115Z [info     ] Merged new glossary entries    [chunks2skus.extractors.relational_extractor] chunk_id='22.张江高科，房东 股东，科技投行的模式，率先开启中国产业园的模式_笔记_chunk_001' count=6
+2026-04-28T02:00:48.623115Z [info     ] Updated existing glossary entries [chunks2skus.extractors.relational_extractor] chunk_id='22.张江高科，房东 股东，科技投行的模式，率先开启中国产业园的模式_笔记_chunk_001' fallback_count=0 total_in_response=4 updated_count=4
+2026-04-28T02:00:48.624114Z [info     ] Merged new relationships       [chunks2skus.extractors.relational_extractor] chunk_id='22.张江高科，房东 股东，科技投行的模式，率先开启中国产业园的模式_笔记_chunk_001' count=9
+2026-04-28T02:00:48.625111Z [info     ] Relationship predicate distribution [chunks2skus.extractors.relational_extractor] distribution={'superset-of': 25, 'contradicts': 6, 'enables': 18, 'caused-by': 2, 'depends-on': 3, 'causes': 26, 'implements': 12, 'requires': 5, 'example-of': 26, 'related-to': 12, 'has-a': 2, 'part-of': 12, 'certifies': 1} total=150
+2026-04-28T02:00:48.627104Z [info     ] Predicate count over 20        [chunks2skus.extractors.relational_extractor] predicates={'superset-of': 25, 'causes': 26, 'example-of': 26}
+2026-04-28T02:00:48.632099Z [info     ] Relational extraction complete [chunks2skus.extractors.relational_extractor] chunk_id='22.张江高科，房东 股东，科技投行的模式，率先开启中国产业园的模式_笔记_chunk_001' labels=2 relationships=150 terms=85
+2026-04-28T02:00:48.636515Z [info     ] Chunk processed                [chunks2skus.pipeline] chunk_id='22.张江高科，房东 股东，科技投行的模式，率先开启中国产业园的模式_笔记_chunk_001' new_skus=6 total_skus=150
+2026-04-28T02:00:48.637522Z [info     ] Extracting relational knowledge [chunks2skus.extractors.relational_extractor] chunk_id=3.费用归边，流量占股的商业模式_笔记_chunk_001
+2026-04-28T02:00:48.638892Z [info     ] Relational context size        [chunks2skus.extractors.relational_extractor] alias_map_chars=568 chunk_id=3.费用归边，流量占股的商业模式_笔记_chunk_001 glossary_count=85 label_nodes_count=26 label_tree_chars=211 relevant_relations_chars=9 term_list_chars=701
+2026-04-28T02:00:48.638892Z [info     ] [MONITOR] call_llm_json starting [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215
+2026-04-28T02:00:48.640321Z [info     ] [MONITOR] Starting LLM call    [chunks2skus.utils.llm_client] attempt=0 max_tokens=128000 model=doubao-seed-2-0-pro-260215 prompt_length=3488 temperature=0.3
+2026-04-28T02:00:52.013065Z [info     ] [MONITOR] LLM call SUCCESS     [chunks2skus.utils.llm_client] attempt=0 finish_reason=stop model=doubao-seed-2-0-pro-260215 response_length=97
+2026-04-28T02:00:52.014158Z [info     ] [MONITOR] JSON parse SUCCESS   [chunks2skus.utils.llm_client] keys=['new_labels', 'new_glossary', 'updated_glossary', 'new_relationships']
+2026-04-28T02:00:52.017383Z [info     ] Added new labels               [chunks2skus.extractors.relational_extractor] chunk_id=3.费用归边，流量占股的商业模式_笔记_chunk_001 count=0
+2026-04-28T02:00:52.017383Z [info     ] Merged new glossary entries    [chunks2skus.extractors.relational_extractor] chunk_id=3.费用归边，流量占股的商业模式_笔记_chunk_001 count=0
+2026-04-28T02:00:52.018405Z [info     ] Updated existing glossary entries [chunks2skus.extractors.relational_extractor] chunk_id=3.费用归边，流量占股的商业模式_笔记_chunk_001 fallback_count=0 total_in_response=0 updated_count=0
+2026-04-28T02:00:52.018405Z [info     ] Merged new relationships       [chunks2skus.extractors.relational_extractor] chunk_id=3.费用归边，流量占股的商业模式_笔记_chunk_001 count=0
+2026-04-28T02:00:52.019593Z [info     ] Relationship predicate distribution [chunks2skus.extractors.relational_extractor] distribution={'superset-of': 25, 'contradicts': 6, 'enables': 18, 'caused-by': 2, 'depends-on': 3, 'causes': 26, 'implements': 12, 'requires': 5, 'example-of': 26, 'related-to': 12, 'has-a': 2, 'part-of': 12, 'certifies': 1} total=150
+2026-04-28T02:00:52.019593Z [info     ] Predicate count over 20        [chunks2skus.extractors.relational_extractor] predicates={'superset-of': 25, 'causes': 26, 'example-of': 26}
+2026-04-28T02:00:52.024230Z [info     ] Relational extraction complete [chunks2skus.extractors.relational_extractor] chunk_id=3.费用归边，流量占股的商业模式_笔记_chunk_001 labels=2 relationships=150 terms=85
+2026-04-28T02:00:52.026568Z [info     ] Chunk processed                [chunks2skus.pipeline] chunk_id=3.费用归边，流量占股的商业模式_笔记_chunk_001 new_skus=1 total_skus=150
+2026-04-28T02:00:52.027629Z [info     ] Extracting relational knowledge [chunks2skus.extractors.relational_extractor] chunk_id=24.易居企业控股，甲方变乙方，客户变股东，上游房企变股东的模式_笔记_chunk_001
+2026-04-28T02:00:52.029133Z [info     ] Relational context size        [chunks2skus.extractors.relational_extractor] alias_map_chars=568 chunk_id=24.易居企业控股，甲方变乙方，客户变股东，上游房企变股东的模式_笔记_chunk_001 glossary_count=85 label_nodes_count=26 label_tree_chars=211 relevant_relations_chars=9 term_list_chars=701
+2026-04-28T02:00:52.032739Z [info     ] [MONITOR] call_llm_json starting [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215
+2026-04-28T02:00:52.032739Z [info     ] [MONITOR] Starting LLM call    [chunks2skus.utils.llm_client] attempt=0 max_tokens=128000 model=doubao-seed-2-0-pro-260215 prompt_length=5695 temperature=0.3
+2026-04-28T02:01:31.318586Z [info     ] [MONITOR] LLM call SUCCESS     [chunks2skus.utils.llm_client] attempt=0 finish_reason=stop model=doubao-seed-2-0-pro-260215 response_length=3085
+2026-04-28T02:01:31.321104Z [warning  ] Header-mapping title mismatch  [chunks2skus.extractors.meta_extractor] header_title=oem-enterprise-capital-value-reconstruct mapping_line='- `procedural/skill_040`: 当代工企业需要提升资本价值、筹备上市或提高市场估值时查阅' sku_path=skill_040
+2026-04-28T02:01:31.328254Z [warning  ] Header-mapping title mismatch  [chunks2skus.extractors.meta_extractor] header_title=oem-enterprise-customer-bargaining-power mapping_line='- `procedural/skill_041`: 当代工企业需要平衡与核心客户的合作关系、保障自身话语权时查阅' sku_path=skill_041
+2026-04-28T02:01:31.329250Z [warning  ] Header-mapping title mismatch  [chunks2skus.extractors.meta_extractor] header_title=oem-enterprise-global-capacity-layout-im mapping_line='- `procedural/skill_042`: 当代工企业需要应对劳动力成本上升、国际贸易摩擦风险时查阅' sku_path=skill_042
+2026-04-28T02:01:31.329752Z [warning  ] Header-mapping title mismatch  [chunks2skus.extractors.meta_extractor] header_title=oem-enterprise-rd-driven-growth-implemen mapping_line='- `procedural/skill_043`: 当代工企业需要掌握行业话语权、实现长期稳定营收增长时查阅' sku_path=skill_043
+2026-04-28T02:01:31.332748Z [warning  ] Header-mapping title mismatch  [chunks2skus.extractors.meta_extractor] header_title=cro-enterprise-bargaining-power-assessme mapping_line='- `procedural/skill_044`: 需要评估CRO/CDMO类医药研发服务企业的市场话语权、议价能力及抗风险水平时查阅' sku_path=skill_044
+2026-04-28T02:01:31.333744Z [warning  ] Header-mapping title mismatch  [chunks2skus.extractors.meta_extractor] header_title=pharmaceutical-rnd-outsourcing-delivery- mapping_line='- `procedural/skill_045`: 需要为CRO/CDMO企业不同规模、不同需求的客户选择适配的研发外包交付合作模式时查阅' sku_path=skill_045
+2026-04-28T02:01:31.334741Z [warning  ] Header-mapping title mismatch  [chunks2skus.extractors.meta_extractor] header_title=oem-obm-value-comparison-analysis mapping_line='- `procedural/skill_046`: 需要分析不同行业代工模式（OEM）与自有品牌模式（OBM）的价值差异，避免固化认知偏差时查阅' sku_path=skill_046
+2026-04-28T02:01:31.335737Z [warning  ] Header-mapping title mismatch  [chunks2skus.extractors.meta_extractor] header_title=pharmaceutical-outsourcing-business-type mapping_line='- `procedural/skill_047`: 需要识别医药研发生产外包企业的业务类型，分析其营收结构及增长潜力时查阅' sku_path=skill_047
+2026-04-28T02:01:31.337906Z [warning  ] Header-mapping title mismatch  [chunks2skus.extractors.meta_extractor] header_title=home-furnishing-mall-short-video-marketi mapping_line='- `procedural/skill_048`: 线下家居卖场面临客流量不足，需要拓展线上流量、提升到店转化时查阅' sku_path=skill_048
+2026-04-28T02:01:31.339409Z [warning  ] Header-mapping title mismatch  [chunks2skus.extractors.meta_extractor] header_title=commercial-real-estate-light-heavy-asset mapping_line='- `procedural/skill_049`: 商业地产运营企业制定全国扩张策略、优化资产结构、平衡收益与扩张速度时查阅' sku_path=skill_049
+2026-04-28T02:01:31.340424Z [warning  ] Header-mapping title mismatch  [chunks2skus.extractors.meta_extractor] header_title=home-furnishing-industry-profit-analysis mapping_line='- `procedural/skill_050`: 开展家居行业研究、投资分析、商业模式设计，判断行业话语权归属时查阅' sku_path=skill_050
+2026-04-28T02:01:31.341423Z [warning  ] Header-mapping title mismatch  [chunks2skus.extractors.meta_extractor] header_title=asset-mode-based-enterprise-valuation-me mapping_line='- `procedural/skill_051`: 对比不同资产运营模式企业的估值水平，开展股权投资估值分析时查阅' sku_path=skill_051
+2026-04-28T02:01:31.342420Z [warning  ] Header-mapping title mismatch  [chunks2skus.extractors.meta_extractor] header_title=家居行业核心经营模式差异 mapping_line='- `factual/sku_075`: 需要明确家居卖场与家居品牌商的本质商业模式区别，以及办公家居与家庭家居的细分差异维度时查阅' sku_path=sku_075
+2026-04-28T02:01:31.344413Z [warning  ] Header-mapping title mismatch  [chunks2skus.extractors.meta_extractor] header_title=flexible-production-for-custom-home-furn mapping_line='- `procedural/skill_052`: 需要解决非标个性化定制家居生产效率低、成本高的行业痛点时查阅' sku_path=skill_052
+2026-04-28T02:01:31.345410Z [warning  ] Header-mapping title mismatch  [chunks2skus.extractors.meta_extractor] header_title=c2b-o2o-home-customization-operation-pro mapping_line='- `procedural/skill_053`: 家居企业落地以用户为中心的定制业务模式、提升转化效率时查阅' sku_path=skill_053
+2026-04-28T02:01:31.346406Z [warning  ] Header-mapping title mismatch  [chunks2skus.extractors.meta_extractor] header_title=home-retail-omnichannel-traffic-operatio mapping_line='- `procedural/skill_054`: 家居零售门店/卖场优化流量结构、提升单店营收能力时查阅' sku_path=skill_054
+2026-04-28T02:01:31.347403Z [warning  ] Header-mapping title mismatch  [chunks2skus.extractors.meta_extractor] header_title=home-industry-supply-chain-finance-setup mapping_line='- `procedural/skill_055`: 家居平台企业布局产业金融服务、构建生态壁垒时查阅' sku_path=skill_055
+2026-04-28T02:01:31.356644Z [info     ] Updated mapping.md (diff merge) [chunks2skus.extractors.meta_extractor] chunk_id='23.宋城演艺，蹭头部流量，做自己的演艺，“千古情 5A景区”模式_笔记_chunk_001' diff_lines=62 new_size=8804 old_size=5800
+2026-04-28T02:01:31.359220Z [info     ] Meta extraction complete       [chunks2skus.extractors.meta_extractor] chunk_ids='2.ODM OEM，超过耐K、A迪净利的商业模式_笔记_chunk_001, 19.药明康德，G级代工，研发外包模式，打造医药行业“富士康”模式_笔记_chunk_001, 20.红星美凯龙，比轻资产更轻，委托管理模式_笔记_chunk_001, 21.尚品宅配，柔性生产链，C2B O2O的模式分析_笔记_chunk_001, 23.宋城演艺，蹭头部流量，做自己的演艺，“千古情 5A景区”模式_笔记_chunk_001' eureka_chars=2283 mapping_chars=8804
+2026-04-28T02:02:12.866193Z [info     ] [MONITOR] LLM call SUCCESS     [chunks2skus.utils.llm_client] attempt=0 finish_reason=stop model=doubao-seed-2-0-pro-260215 response_length=2677
+2026-04-28T02:02:12.882696Z [info     ] [MONITOR] JSON parse SUCCESS   [chunks2skus.utils.llm_client] keys=['new_labels', 'new_glossary', 'updated_glossary', 'new_relationships']
+2026-04-28T02:02:12.887189Z [info     ] Added new labels               [chunks2skus.extractors.relational_extractor] chunk_id=24.易居企业控股，甲方变乙方，客户变股东，上游房企变股东的模式_笔记_chunk_001 count=0
+2026-04-28T02:02:12.889202Z [info     ] Merged new glossary entries    [chunks2skus.extractors.relational_extractor] chunk_id=24.易居企业控股，甲方变乙方，客户变股东，上游房企变股东的模式_笔记_chunk_001 count=6
+2026-04-28T02:02:12.890198Z [info     ] Updated existing glossary entries [chunks2skus.extractors.relational_extractor] chunk_id=24.易居企业控股，甲方变乙方，客户变股东，上游房企变股东的模式_笔记_chunk_001 fallback_count=0 total_in_response=2 updated_count=2
+2026-04-28T02:02:12.892192Z [info     ] Merged new relationships       [chunks2skus.extractors.relational_extractor] chunk_id=24.易居企业控股，甲方变乙方，客户变股东，上游房企变股东的模式_笔记_chunk_001 count=7
+2026-04-28T02:02:12.894184Z [info     ] Relationship predicate distribution [chunks2skus.extractors.relational_extractor] distribution={'superset-of': 27, 'contradicts': 6, 'enables': 18, 'caused-by': 2, 'depends-on': 3, 'causes': 27, 'implements': 12, 'requires': 5, 'example-of': 30, 'related-to': 12, 'has-a': 2, 'part-of': 12, 'certifies': 1} total=157
+2026-04-28T02:02:12.895181Z [info     ] Predicate count over 20        [chunks2skus.extractors.relational_extractor] predicates={'superset-of': 27, 'causes': 27, 'example-of': 30}
+2026-04-28T02:02:12.903960Z [info     ] Relational extraction complete [chunks2skus.extractors.relational_extractor] chunk_id=24.易居企业控股，甲方变乙方，客户变股东，上游房企变股东的模式_笔记_chunk_001 labels=2 relationships=157 terms=91
+2026-04-28T02:02:12.906950Z [info     ] Chunk processed                [chunks2skus.pipeline] chunk_id=24.易居企业控股，甲方变乙方，客户变股东，上游房企变股东的模式_笔记_chunk_001 new_skus=10 total_skus=159
+2026-04-28T02:02:12.931417Z [info     ] Extracting relational knowledge [chunks2skus.extractors.relational_extractor] chunk_id=25.以润唇膏切入彩妆市场的模式_笔记_chunk_001
+2026-04-28T02:02:12.934406Z [info     ] Relational context size        [chunks2skus.extractors.relational_extractor] alias_map_chars=577 chunk_id=25.以润唇膏切入彩妆市场的模式_笔记_chunk_001 glossary_count=91 label_nodes_count=26 label_tree_chars=211 relevant_relations_chars=9 term_list_chars=756
+2026-04-28T02:02:12.935403Z [info     ] [MONITOR] call_llm_json starting [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215
+2026-04-28T02:02:12.936906Z [info     ] [MONITOR] Starting LLM call    [chunks2skus.utils.llm_client] attempt=0 max_tokens=128000 model=doubao-seed-2-0-pro-260215 prompt_length=4918 temperature=0.3
+2026-04-28T02:03:01.687330Z [info     ] [MONITOR] LLM call SUCCESS     [chunks2skus.utils.llm_client] attempt=0 finish_reason=stop model=doubao-seed-2-0-pro-260215 response_length=1448
+2026-04-28T02:03:01.688100Z [info     ] [MONITOR] JSON parse SUCCESS   [chunks2skus.utils.llm_client] keys=['new_labels', 'new_glossary', 'updated_glossary', 'new_relationships']
+2026-04-28T02:03:01.696196Z [info     ] Added new labels               [chunks2skus.extractors.relational_extractor] chunk_id=25.以润唇膏切入彩妆市场的模式_笔记_chunk_001 count=1
+2026-04-28T02:03:01.697196Z [info     ] Merged new glossary entries    [chunks2skus.extractors.relational_extractor] chunk_id=25.以润唇膏切入彩妆市场的模式_笔记_chunk_001 count=3
+2026-04-28T02:03:01.698385Z [info     ] Updated existing glossary entries [chunks2skus.extractors.relational_extractor] chunk_id=25.以润唇膏切入彩妆市场的模式_笔记_chunk_001 fallback_count=0 total_in_response=0 updated_count=0
+2026-04-28T02:03:01.698385Z [info     ] Merged new relationships       [chunks2skus.extractors.relational_extractor] chunk_id=25.以润唇膏切入彩妆市场的模式_笔记_chunk_001 count=8
+2026-04-28T02:03:01.699869Z [info     ] Relationship predicate distribution [chunks2skus.extractors.relational_extractor] distribution={'superset-of': 31, 'contradicts': 7, 'enables': 18, 'caused-by': 2, 'depends-on': 5, 'causes': 27, 'implements': 12, 'requires': 5, 'example-of': 31, 'related-to': 12, 'has-a': 2, 'part-of': 12, 'certifies': 1} total=165
+2026-04-28T02:03:01.699869Z [info     ] Predicate count over 20        [chunks2skus.extractors.relational_extractor] predicates={'superset-of': 31, 'causes': 27, 'example-of': 31}
+2026-04-28T02:03:01.705518Z [info     ] Relational extraction complete [chunks2skus.extractors.relational_extractor] chunk_id=25.以润唇膏切入彩妆市场的模式_笔记_chunk_001 labels=2 relationships=165 terms=94
+2026-04-28T02:03:01.708512Z [info     ] Chunk processed                [chunks2skus.pipeline] chunk_id=25.以润唇膏切入彩妆市场的模式_笔记_chunk_001 new_skus=7 total_skus=165
+2026-04-28T02:03:01.708512Z [info     ] Extracting relational knowledge [chunks2skus.extractors.relational_extractor] chunk_id=26.以猪肉为核心，不卖隔夜肉_笔记_chunk_001
+2026-04-28T02:03:01.710505Z [info     ] Relational context size        [chunks2skus.extractors.relational_extractor] alias_map_chars=577 chunk_id=26.以猪肉为核心，不卖隔夜肉_笔记_chunk_001 glossary_count=94 label_nodes_count=27 label_tree_chars=222 relevant_relations_chars=157 term_list_chars=785
+2026-04-28T02:03:01.713495Z [info     ] [MONITOR] call_llm_json starting [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215
+2026-04-28T02:03:01.713495Z [info     ] [MONITOR] Starting LLM call    [chunks2skus.utils.llm_client] attempt=0 max_tokens=128000 model=doubao-seed-2-0-pro-260215 prompt_length=5151 temperature=0.3
+2026-04-28T02:04:45.015686Z [info     ] [MONITOR] LLM call SUCCESS     [chunks2skus.utils.llm_client] attempt=0 finish_reason=stop model=doubao-seed-2-0-pro-260215 response_length=3521
+2026-04-28T02:04:45.016693Z [info     ] [MONITOR] JSON parse SUCCESS   [chunks2skus.utils.llm_client] keys=['new_labels', 'new_glossary', 'updated_glossary', 'new_relationships']
+2026-04-28T02:04:45.023181Z [info     ] Added new labels               [chunks2skus.extractors.relational_extractor] chunk_id=26.以猪肉为核心，不卖隔夜肉_笔记_chunk_001 count=0
+2026-04-28T02:04:45.024180Z [info     ] Merged new glossary entries    [chunks2skus.extractors.relational_extractor] chunk_id=26.以猪肉为核心，不卖隔夜肉_笔记_chunk_001 count=7
+2026-04-28T02:04:45.024180Z [info     ] Updated existing glossary entries [chunks2skus.extractors.relational_extractor] chunk_id=26.以猪肉为核心，不卖隔夜肉_笔记_chunk_001 fallback_count=0 total_in_response=3 updated_count=3
+2026-04-28T02:04:45.025175Z [info     ] Merged new relationships       [chunks2skus.extractors.relational_extractor] chunk_id=26.以猪肉为核心，不卖隔夜肉_笔记_chunk_001 count=17
+2026-04-28T02:04:45.025175Z [info     ] Relationship predicate distribution [chunks2skus.extractors.relational_extractor] distribution={'superset-of': 38, 'contradicts': 7, 'enables': 18, 'caused-by': 2, 'depends-on': 5, 'causes': 27, 'implements': 17, 'requires': 5, 'example-of': 33, 'related-to': 13, 'has-a': 4, 'part-of': 12, 'certifies': 1} total=182
+2026-04-28T02:04:45.026671Z [info     ] Predicate count over 20        [chunks2skus.extractors.relational_extractor] predicates={'superset-of': 38, 'causes': 27, 'example-of': 33}
+2026-04-28T02:04:45.029711Z [info     ] Relational extraction complete [chunks2skus.extractors.relational_extractor] chunk_id=26.以猪肉为核心，不卖隔夜肉_笔记_chunk_001 labels=2 relationships=182 terms=101
+2026-04-28T02:04:45.031707Z [info     ] Chunk processed                [chunks2skus.pipeline] chunk_id=26.以猪肉为核心，不卖隔夜肉_笔记_chunk_001 new_skus=11 total_skus=175
+2026-04-28T02:04:45.032704Z [info     ] Running meta extraction batch  [chunks2skus.pipeline] chunks=5 new_skus=35 total_content_chars=7139
+2026-04-28T02:04:45.032704Z [info     ] Extracting relational knowledge [chunks2skus.extractors.relational_extractor] chunk_id=6.为经销商Dai款的模式_笔记_chunk_001
+2026-04-28T02:04:45.032704Z [info     ] Extracting meta knowledge      [chunks2skus.extractors.meta_extractor] chunk_ids='22.张江高科，房东 股东，科技投行的模式，率先开启中国产业园的模式_笔记_chunk_001, 3.费用归边，流量占股的商业模式_笔记_chunk_001, 24.易居企业控股，甲方变乙方，客户变股东，上游房企变股东的模式_笔记_chunk_001, 25.以润唇膏切入彩妆市场的模式_笔记_chunk_001, 26.以猪肉为核心，不卖隔夜肉_笔记_chunk_001'
+2026-04-28T02:04:45.034698Z [info     ] Relational context size        [chunks2skus.extractors.relational_extractor] alias_map_chars=589 chunk_id=6.为经销商Dai款的模式_笔记_chunk_001 glossary_count=101 label_nodes_count=27 label_tree_chars=222 relevant_relations_chars=125 term_list_chars=837
+2026-04-28T02:04:45.037687Z [info     ] [MONITOR] call_llm_json starting [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215
+2026-04-28T02:04:45.040185Z [info     ] [MONITOR] Creating thread-local OpenAI client [chunks2skus.utils.llm_client] base_url=https://ark.cn-beijing.volces.com/api/v3 thread=ThreadPoolExecutor-5_0
+2026-04-28T02:04:45.040185Z [info     ] [MONITOR] Starting LLM call    [chunks2skus.utils.llm_client] attempt=0 max_tokens=128000 model=doubao-seed-2-0-pro-260215 prompt_length=5263 temperature=0.3
+2026-04-28T02:04:45.040185Z [info     ] [MONITOR] Creating thread-local OpenAI client [chunks2skus.utils.llm_client] base_url=https://ark.cn-beijing.volces.com/api/v3 thread=ThreadPoolExecutor-5_1
+2026-04-28T02:04:46.314932Z [info     ] [MONITOR] Starting LLM call    [chunks2skus.utils.llm_client] attempt=0 max_tokens=32000 model=doubao-seed-2-0-pro-260215 prompt_length=11297 temperature=0.7
+2026-04-28T02:04:46.322570Z [info     ] [MONITOR] Starting LLM call    [chunks2skus.utils.llm_client] attempt=0 max_tokens=32000 model=doubao-seed-2-0-pro-260215 prompt_length=12995 temperature=0.2
+2026-04-28T02:06:07.398478Z [info     ] [MONITOR] LLM call SUCCESS     [chunks2skus.utils.llm_client] attempt=0 finish_reason=stop model=doubao-seed-2-0-pro-260215 response_length=1935
+2026-04-28T02:06:07.406403Z [warning  ] Header-mapping title mismatch  [chunks2skus.extractors.meta_extractor] header_title=capital-investment-attraction-workflow mapping_line='- `procedural/skill_061`: 地方政府或产业园运营方需要开展资本招商，撬动产业落地提升长期税收时查阅' sku_path=skill_061
+2026-04-28T02:06:07.420886Z [warning  ] Header-mapping title mismatch  [chunks2skus.extractors.meta_extractor] header_title=equity-investment-park-enterprise-financ mapping_line='- `procedural/skill_062`: 需要分析含股权投资业务的产业园类企业的财务状况、盈利可持续性及估值时查阅' sku_path=skill_062
+2026-04-28T02:06:07.452470Z [warning  ] Header-mapping title mismatch  [chunks2skus.extractors.meta_extractor] header_title=customer-dealer-to-shareholder-binding-w mapping_line='- `procedural/skill_063`: 当需要建立企业与客户、经销商长期共赢合作关系，规避传统单次交易风险时查阅' sku_path=skill_063
+2026-04-28T02:06:07.476966Z [warning  ] Header-mapping title mismatch  [chunks2skus.extractors.meta_extractor] header_title=related-party-transaction-risk-control-p mapping_line='- `procedural/skill_064`: 当企业存在关联股东合作产生关联交易，需要满足监管合规要求时查阅' sku_path=skill_064
+2026-04-28T02:06:07.485445Z [warning  ] Header-mapping title mismatch  [chunks2skus.extractors.meta_extractor] header_title=agent-to-partner-binding-workflow mapping_line='- `procedural/skill_066`: 当需要绑定优质代理商资源，扩大销售网络、提升市场占有率时查阅' sku_path=skill_066
+2026-04-28T02:06:07.500930Z [warning  ] Header-mapping title mismatch  [chunks2skus.extractors.meta_extractor] header_title=opinion-leader-co-sales-strategy-workflo mapping_line='- `procedural/skill_067`: 当需要提升高端房产项目销售效能，扩大客户影响力、搭建销售投资闭环时查阅' sku_path=skill_067
+2026-04-28T02:06:07.512401Z [warning  ] Header-mapping title mismatch  [chunks2skus.extractors.meta_extractor] header_title=小蜜坊企业基本信息 mapping_line='- `factual/sku_091`: 需要了解小蜜坊成立时间、业务发展、市场表现及创始团队背景等核心基础信息时查阅' sku_path=sku_091
+2026-04-28T02:06:07.532381Z [warning  ] Header-mapping title mismatch  [chunks2skus.extractors.meta_extractor] header_title=小蜜坊市场定位与产品策略 mapping_line='- `factual/sku_092`: 需要了解小蜜坊面向目标用户的定价定位、产品拓展逻辑及品质标准相关信息时查阅' sku_path=sku_092
+2026-04-28T02:06:07.545996Z [warning  ] Header-mapping title mismatch  [chunks2skus.extractors.meta_extractor] header_title=小蜜坊细分群体战略要点及风险 mapping_line='- `factual/sku_093`: 需要了解小蜜坊专注服务15-20岁少女群体的战略核心、潜在风险、竞争壁垒及执行要求时查阅' sku_path=sku_093
+2026-04-28T02:06:07.567812Z [warning  ] Header-mapping title mismatch  [chunks2skus.extractors.meta_extractor] header_title=niche-category-cosmetics-market-entry-st mapping_line='- `procedural/skill_068`: 当新品牌计划切入彩妆市场，需要制定低风险增长路径时查阅' sku_path=skill_068
+2026-04-28T02:06:07.578287Z [warning  ] Header-mapping title mismatch  [chunks2skus.extractors.meta_extractor] header_title=startup-consumer-brand-capital-team-inte mapping_line='- `procedural/skill_069`: 当初创消费品牌需要整合团队经验和资本资源实现快速突围时查阅' sku_path=skill_069
+2026-04-28T02:06:07.594266Z [warning  ] Header-mapping title mismatch  [chunks2skus.extractors.meta_extractor] header_title=钱大妈企业发展阶段要求及面临挑战 mapping_line='- `factual/sku_098`: 需要了解钱大妈不同发展规模对应的核心建设要求、发展面临的挑战及应对方向信息时查阅' sku_path=sku_098
+2026-04-28T02:06:07.609766Z [warning  ] Header-mapping title mismatch  [chunks2skus.extractors.meta_extractor] header_title=community-fresh-brand-positioning-implem mapping_line='- `procedural/skill_070`: 当需要打造社区生鲜零售品牌、构建差异化定位及落地路径时查阅' sku_path=skill_070
+2026-04-28T02:06:07.619244Z [warning  ] Header-mapping title mismatch  [chunks2skus.extractors.meta_extractor] header_title=fresh-retail-full-supply-chain-construct mapping_line='- `procedural/skill_071`: 当需要搭建生鲜零售全链路供应链体系、降低损耗提升运营效率时查阅' sku_path=skill_071
+2026-04-28T02:06:07.640746Z [warning  ] Header-mapping title mismatch  [chunks2skus.extractors.meta_extractor] header_title=fresh-retail-franchise-system-constructi mapping_line='- `procedural/skill_072`: 当需要搭建生鲜连锁加盟体系、保障品牌方与加盟方双方收益时查阅' sku_path=skill_072
+2026-04-28T02:06:07.651221Z [warning  ] Header-mapping title mismatch  [chunks2skus.extractors.meta_extractor] header_title=chain-retail-enterprise-stage-developmen mapping_line='- `procedural/skill_073`: 当连锁零售企业处于不同发展阶段、需要匹配对应运营策略时查阅' sku_path=skill_073
+2026-04-28T02:06:07.664217Z [info     ] Updated mapping.md (diff merge) [chunks2skus.extractors.meta_extractor] chunk_id=26.以猪肉为核心，不卖隔夜肉_笔记_chunk_001 diff_lines=40 new_size=10687 old_size=8804
+2026-04-28T02:06:17.140809Z [info     ] [MONITOR] LLM call SUCCESS     [chunks2skus.utils.llm_client] attempt=0 finish_reason=stop model=doubao-seed-2-0-pro-260215 response_length=3127
+2026-04-28T02:06:17.144396Z [info     ] Updated eureka.md              [chunks2skus.extractors.meta_extractor] chunk_ids='22.张江高科，房东 股东，科技投行的模式，率先开启中国产业园的模式_笔记_chunk_001, 3.费用归边，流量占股的商业模式_笔记_chunk_001, 24.易居企业控股，甲方变乙方，客户变股东，上游房企变股东的模式_笔记_chunk_001, 25.以润唇膏切入彩妆市场的模式_笔记_chunk_001, 26.以猪肉为核心，不卖隔夜肉_笔记_chunk_001' new_size=3127 old_size=2283
+2026-04-28T02:06:17.153872Z [info     ] Meta extraction complete       [chunks2skus.extractors.meta_extractor] chunk_ids='22.张江高科，房东 股东，科技投行的模式，率先开启中国产业园的模式_笔记_chunk_001, 3.费用归边，流量占股的商业模式_笔记_chunk_001, 24.易居企业控股，甲方变乙方，客户变股东，上游房企变股东的模式_笔记_chunk_001, 25.以润唇膏切入彩妆市场的模式_笔记_chunk_001, 26.以猪肉为核心，不卖隔夜肉_笔记_chunk_001' eureka_chars=3127 mapping_chars=10687
+2026-04-28T02:06:23.736295Z [info     ] [MONITOR] LLM call SUCCESS     [chunks2skus.utils.llm_client] attempt=0 finish_reason=stop model=doubao-seed-2-0-pro-260215 response_length=2410
+2026-04-28T02:06:23.737299Z [info     ] [MONITOR] JSON parse SUCCESS   [chunks2skus.utils.llm_client] keys=['new_labels', 'new_glossary', 'updated_glossary', 'new_relationships']
+2026-04-28T02:06:23.738296Z [info     ] Added new labels               [chunks2skus.extractors.relational_extractor] chunk_id=6.为经销商Dai款的模式_笔记_chunk_001 count=0
+2026-04-28T02:06:23.739292Z [info     ] Merged new glossary entries    [chunks2skus.extractors.relational_extractor] chunk_id=6.为经销商Dai款的模式_笔记_chunk_001 count=7
+2026-04-28T02:06:23.739292Z [info     ] Updated existing glossary entries [chunks2skus.extractors.relational_extractor] chunk_id=6.为经销商Dai款的模式_笔记_chunk_001 fallback_count=0 total_in_response=1 updated_count=1
+2026-04-28T02:06:23.740575Z [info     ] Merged new relationships       [chunks2skus.extractors.relational_extractor] chunk_id=6.为经销商Dai款的模式_笔记_chunk_001 count=6
+2026-04-28T02:06:23.741575Z [info     ] Relationship predicate distribution [chunks2skus.extractors.relational_extractor] distribution={'superset-of': 38, 'contradicts': 7, 'enables': 19, 'caused-by': 2, 'depends-on': 5, 'causes': 32, 'implements': 17, 'requires': 5, 'example-of': 33, 'related-to': 13, 'has-a': 4, 'part-of': 12, 'certifies': 1} total=188
+2026-04-28T02:06:23.741575Z [info     ] Predicate count over 20        [chunks2skus.extractors.relational_extractor] predicates={'superset-of': 38, 'causes': 32, 'example-of': 33}
+2026-04-28T02:06:23.745592Z [info     ] Relational extraction complete [chunks2skus.extractors.relational_extractor] chunk_id=6.为经销商Dai款的模式_笔记_chunk_001 labels=2 relationships=188 terms=108
+2026-04-28T02:06:23.748585Z [info     ] Chunk processed                [chunks2skus.pipeline] chunk_id=6.为经销商Dai款的模式_笔记_chunk_001 new_skus=8 total_skus=182
+2026-04-28T02:06:23.749582Z [info     ] Extracting relational knowledge [chunks2skus.extractors.relational_extractor] chunk_id=4.上下通吃，打通经销商合伙人激励的模式_chunk_001
+2026-04-28T02:06:23.750578Z [info     ] Relational context size        [chunks2skus.extractors.relational_extractor] alias_map_chars=589 chunk_id=4.上下通吃，打通经销商合伙人激励的模式_chunk_001 glossary_count=108 label_nodes_count=27 label_tree_chars=222 relevant_relations_chars=297 term_list_chars=885
+2026-04-28T02:06:23.750578Z [info     ] [MONITOR] call_llm_json starting [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215
+2026-04-28T02:06:23.751575Z [info     ] [MONITOR] Starting LLM call    [chunks2skus.utils.llm_client] attempt=0 max_tokens=128000 model=doubao-seed-2-0-pro-260215 prompt_length=5175 temperature=0.3
+2026-04-28T02:08:07.474083Z [info     ] [MONITOR] LLM call SUCCESS     [chunks2skus.utils.llm_client] attempt=0 finish_reason=stop model=doubao-seed-2-0-pro-260215 response_length=2335
+2026-04-28T02:08:07.474586Z [info     ] [MONITOR] JSON parse SUCCESS   [chunks2skus.utils.llm_client] keys=['new_labels', 'new_glossary', 'updated_glossary', 'new_relationships']
+2026-04-28T02:08:07.475592Z [info     ] Added new labels               [chunks2skus.extractors.relational_extractor] chunk_id=4.上下通吃，打通经销商合伙人激励的模式_chunk_001 count=0
+2026-04-28T02:08:07.475592Z [info     ] Merged new glossary entries    [chunks2skus.extractors.relational_extractor] chunk_id=4.上下通吃，打通经销商合伙人激励的模式_chunk_001 count=4
+2026-04-28T02:08:07.477095Z [info     ] Updated existing glossary entries [chunks2skus.extractors.relational_extractor] chunk_id=4.上下通吃，打通经销商合伙人激励的模式_chunk_001 fallback_count=0 total_in_response=1 updated_count=1
+2026-04-28T02:08:07.478111Z [info     ] Merged new relationships       [chunks2skus.extractors.relational_extractor] chunk_id=4.上下通吃，打通经销商合伙人激励的模式_chunk_001 count=11
+2026-04-28T02:08:07.478111Z [info     ] Relationship predicate distribution [chunks2skus.extractors.relational_extractor] distribution={'superset-of': 43, 'contradicts': 7, 'enables': 20, 'caused-by': 2, 'depends-on': 6, 'causes': 34, 'implements': 17, 'requires': 5, 'example-of': 35, 'related-to': 13, 'has-a': 4, 'part-of': 12, 'certifies': 1} total=199
+2026-04-28T02:08:07.479108Z [info     ] Predicate count over 20        [chunks2skus.extractors.relational_extractor] predicates={'superset-of': 43, 'causes': 34, 'example-of': 35}
+2026-04-28T02:08:07.482124Z [info     ] Relational extraction complete [chunks2skus.extractors.relational_extractor] chunk_id=4.上下通吃，打通经销商合伙人激励的模式_chunk_001 labels=2 relationships=199 terms=112
+2026-04-28T02:08:07.485115Z [info     ] Chunk processed                [chunks2skus.pipeline] chunk_id=4.上下通吃，打通经销商合伙人激励的模式_chunk_001 new_skus=13 total_skus=194
+2026-04-28T02:08:07.485115Z [info     ] Extracting relational knowledge [chunks2skus.extractors.relational_extractor] chunk_id=5.不做主机厂，专注整合商的模式_笔记_chunk_001
+2026-04-28T02:08:07.486111Z [info     ] Relational context size        [chunks2skus.extractors.relational_extractor] alias_map_chars=617 chunk_id=5.不做主机厂，专注整合商的模式_笔记_chunk_001 glossary_count=112 label_nodes_count=27 label_tree_chars=222 relevant_relations_chars=157 term_list_chars=925
+2026-04-28T02:08:07.488610Z [info     ] [MONITOR] call_llm_json starting [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215
+2026-04-28T02:08:07.495590Z [info     ] [MONITOR] Starting LLM call    [chunks2skus.utils.llm_client] attempt=0 max_tokens=128000 model=doubao-seed-2-0-pro-260215 prompt_length=6436 temperature=0.3
+2026-04-28T02:09:54.765911Z [info     ] [MONITOR] LLM call SUCCESS     [chunks2skus.utils.llm_client] attempt=0 finish_reason=stop model=doubao-seed-2-0-pro-260215 response_length=2993
+2026-04-28T02:09:54.766907Z [info     ] [MONITOR] JSON parse SUCCESS   [chunks2skus.utils.llm_client] keys=['new_labels', 'new_glossary', 'updated_glossary', 'new_relationships']
+2026-04-28T02:09:54.768890Z [info     ] Added new labels               [chunks2skus.extractors.relational_extractor] chunk_id=5.不做主机厂，专注整合商的模式_笔记_chunk_001 count=0
+2026-04-28T02:09:54.768890Z [info     ] Merged new glossary entries    [chunks2skus.extractors.relational_extractor] chunk_id=5.不做主机厂，专注整合商的模式_笔记_chunk_001 count=5
+2026-04-28T02:09:54.769898Z [info     ] Updated existing glossary entries [chunks2skus.extractors.relational_extractor] chunk_id=5.不做主机厂，专注整合商的模式_笔记_chunk_001 fallback_count=0 total_in_response=3 updated_count=3
+2026-04-28T02:09:54.771398Z [info     ] Merged new relationships       [chunks2skus.extractors.relational_extractor] chunk_id=5.不做主机厂，专注整合商的模式_笔记_chunk_001 count=12
+2026-04-28T02:09:54.771398Z [info     ] Relationship predicate distribution [chunks2skus.extractors.relational_extractor] distribution={'superset-of': 48, 'contradicts': 7, 'enables': 20, 'caused-by': 2, 'depends-on': 6, 'causes': 36, 'implements': 20, 'requires': 5, 'example-of': 35, 'related-to': 15, 'has-a': 4, 'part-of': 12, 'certifies': 1} total=211
+2026-04-28T02:09:54.772397Z [info     ] Predicate count over 20        [chunks2skus.extractors.relational_extractor] predicates={'superset-of': 48, 'causes': 36, 'example-of': 35}
+2026-04-28T02:09:54.776386Z [info     ] Relational extraction complete [chunks2skus.extractors.relational_extractor] chunk_id=5.不做主机厂，专注整合商的模式_笔记_chunk_001 labels=2 relationships=211 terms=117
+2026-04-28T02:09:54.779377Z [info     ] Chunk processed                [chunks2skus.pipeline] chunk_id=5.不做主机厂，专注整合商的模式_笔记_chunk_001 new_skus=13 total_skus=206
+2026-04-28T02:09:54.779377Z [info     ] Extracting relational knowledge [chunks2skus.extractors.relational_extractor] chunk_id=7.交钥匙不如先款后货的模式_笔记_chunk_001
+2026-04-28T02:09:54.780880Z [info     ] Relational context size        [chunks2skus.extractors.relational_extractor] alias_map_chars=617 chunk_id=7.交钥匙不如先款后货的模式_笔记_chunk_001 glossary_count=117 label_nodes_count=27 label_tree_chars=222 relevant_relations_chars=275 term_list_chars=968
+2026-04-28T02:09:54.781900Z [info     ] [MONITOR] call_llm_json starting [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215
+2026-04-28T02:09:54.781900Z [info     ] [MONITOR] Starting LLM call    [chunks2skus.utils.llm_client] attempt=0 max_tokens=128000 model=doubao-seed-2-0-pro-260215 prompt_length=5847 temperature=0.3
+2026-04-28T02:11:01.712710Z [info     ] [MONITOR] LLM call SUCCESS     [chunks2skus.utils.llm_client] attempt=0 finish_reason=stop model=doubao-seed-2-0-pro-260215 response_length=2360
+2026-04-28T02:11:01.713214Z [info     ] [MONITOR] JSON parse SUCCESS   [chunks2skus.utils.llm_client] keys=['new_labels', 'new_glossary', 'updated_glossary', 'new_relationships']
+2026-04-28T02:11:01.715214Z [info     ] Added new labels               [chunks2skus.extractors.relational_extractor] chunk_id=7.交钥匙不如先款后货的模式_笔记_chunk_001 count=1
+2026-04-28T02:11:01.716211Z [info     ] Merged new glossary entries    [chunks2skus.extractors.relational_extractor] chunk_id=7.交钥匙不如先款后货的模式_笔记_chunk_001 count=6
+2026-04-28T02:11:01.717710Z [info     ] Updated existing glossary entries [chunks2skus.extractors.relational_extractor] chunk_id=7.交钥匙不如先款后货的模式_笔记_chunk_001 fallback_count=2 total_in_response=2 updated_count=0
+2026-04-28T02:11:01.720706Z [info     ] Merged new relationships       [chunks2skus.extractors.relational_extractor] chunk_id=7.交钥匙不如先款后货的模式_笔记_chunk_001 count=8
+2026-04-28T02:11:01.721702Z [info     ] Relationship predicate distribution [chunks2skus.extractors.relational_extractor] distribution={'superset-of': 49, 'contradicts': 7, 'enables': 20, 'caused-by': 2, 'depends-on': 6, 'causes': 43, 'implements': 20, 'requires': 5, 'example-of': 35, 'related-to': 15, 'has-a': 4, 'part-of': 12, 'certifies': 1} total=219
+2026-04-28T02:11:01.721702Z [info     ] Predicate count over 20        [chunks2skus.extractors.relational_extractor] predicates={'superset-of': 49, 'causes': 43, 'example-of': 35}
+2026-04-28T02:11:01.725689Z [info     ] Relational extraction complete [chunks2skus.extractors.relational_extractor] chunk_id=7.交钥匙不如先款后货的模式_笔记_chunk_001 labels=2 relationships=219 terms=125
+2026-04-28T02:11:01.727191Z [info     ] Chunk processed                [chunks2skus.pipeline] chunk_id=7.交钥匙不如先款后货的模式_笔记_chunk_001 new_skus=9 total_skus=214
+2026-04-28T02:11:01.728202Z [info     ] Extracting relational knowledge [chunks2skus.extractors.relational_extractor] chunk_id=8.生产外包，先市场后工厂的模式_笔记_chunk_001
+2026-04-28T02:11:01.729198Z [info     ] Relational context size        [chunks2skus.extractors.relational_extractor] alias_map_chars=674 chunk_id=8.生产外包，先市场后工厂的模式_笔记_chunk_001 glossary_count=125 label_nodes_count=28 label_tree_chars=231 relevant_relations_chars=75 term_list_chars=1016
+2026-04-28T02:11:01.730197Z [info     ] [MONITOR] call_llm_json starting [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215
+2026-04-28T02:11:01.730197Z [info     ] [MONITOR] Starting LLM call    [chunks2skus.utils.llm_client] attempt=0 max_tokens=128000 model=doubao-seed-2-0-pro-260215 prompt_length=6344 temperature=0.3
+2026-04-28T02:12:19.545469Z [info     ] [MONITOR] LLM call SUCCESS     [chunks2skus.utils.llm_client] attempt=0 finish_reason=stop model=doubao-seed-2-0-pro-260215 response_length=2185
+2026-04-28T02:12:19.545972Z [info     ] [MONITOR] JSON parse SUCCESS   [chunks2skus.utils.llm_client] keys=['new_labels', 'new_glossary', 'updated_glossary', 'new_relationships']
+2026-04-28T02:12:19.548970Z [info     ] Added new labels               [chunks2skus.extractors.relational_extractor] chunk_id=8.生产外包，先市场后工厂的模式_笔记_chunk_001 count=2
+2026-04-28T02:12:19.549967Z [info     ] Merged new glossary entries    [chunks2skus.extractors.relational_extractor] chunk_id=8.生产外包，先市场后工厂的模式_笔记_chunk_001 count=5
+2026-04-28T02:12:19.549967Z [info     ] Updated existing glossary entries [chunks2skus.extractors.relational_extractor] chunk_id=8.生产外包，先市场后工厂的模式_笔记_chunk_001 fallback_count=0 total_in_response=2 updated_count=2
+2026-04-28T02:12:19.550964Z [info     ] Merged new relationships       [chunks2skus.extractors.relational_extractor] chunk_id=8.生产外包，先市场后工厂的模式_笔记_chunk_001 count=7
+2026-04-28T02:12:19.551960Z [info     ] Relationship predicate distribution [chunks2skus.extractors.relational_extractor] distribution={'superset-of': 51, 'contradicts': 7, 'enables': 21, 'caused-by': 2, 'depends-on': 6, 'causes': 44, 'implements': 23, 'requires': 5, 'example-of': 35, 'related-to': 15, 'has-a': 4, 'part-of': 12, 'certifies': 1} total=226
+2026-04-28T02:12:19.551960Z [info     ] Predicate count over 20        [chunks2skus.extractors.relational_extractor] predicates={'superset-of': 51, 'enables': 21, 'causes': 44, 'implements': 23, 'example-of': 35}
+2026-04-28T02:12:19.556541Z [info     ] Relational extraction complete [chunks2skus.extractors.relational_extractor] chunk_id=8.生产外包，先市场后工厂的模式_笔记_chunk_001 labels=2 relationships=226 terms=130
+2026-04-28T02:12:19.558535Z [info     ] Chunk processed                [chunks2skus.pipeline] chunk_id=8.生产外包，先市场后工厂的模式_笔记_chunk_001 new_skus=12 total_skus=225
+2026-04-28T02:12:19.558535Z [info     ] Running meta extraction batch  [chunks2skus.pipeline] chunks=5 new_skus=55 total_content_chars=9609
+2026-04-28T02:12:19.559532Z [info     ] Extracting relational knowledge [chunks2skus.extractors.relational_extractor] chunk_id=9.做品牌不做品类的商业模式_笔记_chunk_001
+2026-04-28T02:12:19.559532Z [info     ] Extracting meta knowledge      [chunks2skus.extractors.meta_extractor] chunk_ids='6.为经销商Dai款的模式_笔记_chunk_001, 4.上下通吃，打通经销商合伙人激励的模式_chunk_001, 5.不做主机厂，专注整合商的模式_笔记_chunk_001, 7.交钥匙不如先款后货的模式_笔记_chunk_001, 8.生产外包，先市场后工厂的模式_笔记_chunk_001'
+2026-04-28T02:12:19.560528Z [info     ] Relational context size        [chunks2skus.extractors.relational_extractor] alias_map_chars=701 chunk_id=9.做品牌不做品类的商业模式_笔记_chunk_001 glossary_count=130 label_nodes_count=30 label_tree_chars=250 relevant_relations_chars=244 term_list_chars=1064
+2026-04-28T02:12:19.561525Z [info     ] [MONITOR] call_llm_json starting [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215
+2026-04-28T02:12:19.561525Z [info     ] [MONITOR] Starting LLM call    [chunks2skus.utils.llm_client] attempt=0 max_tokens=128000 model=doubao-seed-2-0-pro-260215 prompt_length=6679 temperature=0.3
+2026-04-28T02:12:19.561525Z [info     ] [MONITOR] Creating thread-local OpenAI client [chunks2skus.utils.llm_client] base_url=https://ark.cn-beijing.volces.com/api/v3 thread=ThreadPoolExecutor-6_0
+2026-04-28T02:12:19.561525Z [info     ] [MONITOR] Creating thread-local OpenAI client [chunks2skus.utils.llm_client] base_url=https://ark.cn-beijing.volces.com/api/v3 thread=ThreadPoolExecutor-6_1
+2026-04-28T02:12:20.831490Z [info     ] [MONITOR] Starting LLM call    [chunks2skus.utils.llm_client] attempt=0 max_tokens=32000 model=doubao-seed-2-0-pro-260215 prompt_length=16793 temperature=0.2
+2026-04-28T02:12:20.838361Z [info     ] [MONITOR] Starting LLM call    [chunks2skus.utils.llm_client] attempt=0 max_tokens=32000 model=doubao-seed-2-0-pro-260215 prompt_length=13847 temperature=0.7
+2026-04-28T02:13:53.827355Z [info     ] [MONITOR] LLM call SUCCESS     [chunks2skus.utils.llm_client] attempt=0 finish_reason=stop model=doubao-seed-2-0-pro-260215 response_length=3701
+2026-04-28T02:13:53.827867Z [info     ] [MONITOR] JSON parse SUCCESS   [chunks2skus.utils.llm_client] keys=['new_labels', 'new_glossary', 'updated_glossary', 'new_relationships']
+2026-04-28T02:13:53.829884Z [info     ] Added new labels               [chunks2skus.extractors.relational_extractor] chunk_id=9.做品牌不做品类的商业模式_笔记_chunk_001 count=0
+2026-04-28T02:13:53.830891Z [info     ] Merged new glossary entries    [chunks2skus.extractors.relational_extractor] chunk_id=9.做品牌不做品类的商业模式_笔记_chunk_001 count=9
+2026-04-28T02:13:53.830891Z [info     ] Updated existing glossary entries [chunks2skus.extractors.relational_extractor] chunk_id=9.做品牌不做品类的商业模式_笔记_chunk_001 fallback_count=0 total_in_response=2 updated_count=2
+2026-04-28T02:13:53.832033Z [info     ] Merged new relationships       [chunks2skus.extractors.relational_extractor] chunk_id=9.做品牌不做品类的商业模式_笔记_chunk_001 count=11
+2026-04-28T02:13:53.833037Z [info     ] Relationship predicate distribution [chunks2skus.extractors.relational_extractor] distribution={'superset-of': 59, 'contradicts': 7, 'enables': 21, 'caused-by': 2, 'depends-on': 6, 'causes': 47, 'implements': 23, 'requires': 5, 'example-of': 35, 'related-to': 15, 'has-a': 4, 'part-of': 12, 'certifies': 1} total=237
+2026-04-28T02:13:53.833037Z [info     ] Predicate count over 20        [chunks2skus.extractors.relational_extractor] predicates={'superset-of': 59, 'enables': 21, 'causes': 47, 'implements': 23, 'example-of': 35}
+2026-04-28T02:13:53.836038Z [info     ] Relational extraction complete [chunks2skus.extractors.relational_extractor] chunk_id=9.做品牌不做品类的商业模式_笔记_chunk_001 labels=2 relationships=237 terms=139
+2026-04-28T02:13:53.840881Z [info     ] Chunk processed                [chunks2skus.pipeline] chunk_id=9.做品牌不做品类的商业模式_笔记_chunk_001 new_skus=14 total_skus=238
+2026-04-28T02:13:53.841878Z [info     ] Relational consumer phase complete [chunks2skus.pipeline] duration_seconds=1245.8 note='overlaps with FP phase in pipeline wall-clock'
+2026-04-28T02:14:29.761190Z [info     ] [MONITOR] LLM call SUCCESS     [chunks2skus.utils.llm_client] attempt=0 finish_reason=stop model=doubao-seed-2-0-pro-260215 response_length=4065
+2026-04-28T02:14:29.763191Z [info     ] Updated eureka.md              [chunks2skus.extractors.meta_extractor] chunk_ids='6.为经销商Dai款的模式_笔记_chunk_001, 4.上下通吃，打通经销商合伙人激励的模式_chunk_001, 5.不做主机厂，专注整合商的模式_笔记_chunk_001, 7.交钥匙不如先款后货的模式_笔记_chunk_001, 8.生产外包，先市场后工厂的模式_笔记_chunk_001' new_size=4065 old_size=3127
+2026-04-28T02:14:36.001922Z [info     ] [MONITOR] LLM call SUCCESS     [chunks2skus.utils.llm_client] attempt=0 finish_reason=stop model=doubao-seed-2-0-pro-260215 response_length=3253
+2026-04-28T02:14:36.003928Z [warning  ] Header-mapping title mismatch  [chunks2skus.extractors.meta_extractor] header_title=brand-category-positioning-method mapping_line='- `procedural/skill_074`: 需要打造差异化品牌认知、建立品类独占性优势时查阅' sku_path=skill_074
+2026-04-28T02:14:36.006444Z [warning  ] Header-mapping title mismatch  [chunks2skus.extractors.meta_extractor] header_title=home-appliance-off-season-rebate-policy- mapping_line='- `procedural/skill_078`: 家电制造企业需要填平淡季生产成本缺口、储备经营资金、锁定经销商合作、巩固行业地位时查阅' sku_path=skill_078
+2026-04-28T02:14:36.007444Z [warning  ] Header-mapping title mismatch  [chunks2skus.extractors.meta_extractor] header_title=manufacturing-upstream-industry-chain-in mapping_line='- `procedural/skill_079`: 制造企业需要实现核心零部件自主可控、降低供应链风险、提升产品毛利率时查阅' sku_path=skill_079
+2026-04-28T02:14:36.009437Z [warning  ] Header-mapping title mismatch  [chunks2skus.extractors.meta_extractor] header_title=soe-mixed-ownership-reform-anti-takeover mapping_line='- `procedural/skill_080`: 国有企业管理团队需要巩固企业控制权、推进混合所有制改革、激发企业经营活力时查阅' sku_path=skill_080
+2026-04-28T02:14:36.010434Z [warning  ] Header-mapping title mismatch  [chunks2skus.extractors.meta_extractor] header_title=home-appliance-global-expansion-strategy mapping_line='- `procedural/skill_081`: 家电企业需要规划全球化业务扩张、选择进入海外市场路径时查阅' sku_path=skill_081
+2026-04-28T02:14:36.012427Z [warning  ] Header-mapping title mismatch  [chunks2skus.extractors.meta_extractor] header_title=light-asset-business-model-transformatio mapping_line='- `procedural/skill_082`: 传统制造企业想要转型轻资产模式、降低运营成本、聚焦核心业务时查阅' sku_path=skill_082
+2026-04-28T02:14:36.013423Z [warning  ] Header-mapping title mismatch  [chunks2skus.extractors.meta_extractor] header_title=light-asset-enterprise-core-competitiven mapping_line='- `procedural/skill_083`: 轻资产运营企业需要构建差异化竞争壁垒、提升用户粘性和品牌认可度时查阅' sku_path=skill_083
+2026-04-28T02:14:36.014420Z [warning  ] Header-mapping title mismatch  [chunks2skus.extractors.meta_extractor] header_title=light-asset-home-appliance-ipo-preparati mapping_line='- `procedural/skill_084`: 轻资产家电类企业准备IPO、应对资本审核、规划上市路径时查阅' sku_path=skill_084
+2026-04-28T02:14:36.015417Z [warning  ] Header-mapping title mismatch  [chunks2skus.extractors.meta_extractor] header_title=b2b-smart-hardware-commercialization-ope mapping_line='- `procedural/skill_085`: 企业推出TO B类智能硬件产品、想要快速规模化扩张、提升商业化成功率时查阅' sku_path=skill_085
+2026-04-28T02:14:36.016918Z [warning  ] Header-mapping title mismatch  [chunks2skus.extractors.meta_extractor] header_title=high-end-product-premium-pricing-risk-co mapping_line='- `procedural/skill_086`: 需要为高端稀缺类产品制定提价策略、防控价格体系崩塌风险时查阅' sku_path=skill_086
+2026-04-28T02:14:36.018915Z [warning  ] Header-mapping title mismatch  [chunks2skus.extractors.meta_extractor] header_title=food-enterprise-listing-board-selection mapping_line='- `procedural/skill_088`: 食品企业选择上市板块，需要对比不同板块市盈率及准入要求确定最优选择时查阅' sku_path=skill_088
+2026-04-28T02:14:36.019911Z [warning  ] Header-mapping title mismatch  [chunks2skus.extractors.meta_extractor] header_title=light-asset-leisure-food-brand-building mapping_line='- `procedural/skill_089`: 休闲食品企业打造轻资产模式品牌，需要借鉴三只松鼠成功经验落地时查阅' sku_path=skill_089
+2026-04-28T02:14:36.020927Z [warning  ] Header-mapping title mismatch  [chunks2skus.extractors.meta_extractor] header_title=light-asset-food-supply-chain-quality-co mapping_line='- `procedural/skill_090`: 轻资产食品企业管控供应链食品安全问题，需要解决生产环节掌控力弱痛点时查阅' sku_path=skill_090
+2026-04-28T02:14:36.020927Z [warning  ] Header-mapping title mismatch  [chunks2skus.extractors.meta_extractor] header_title=supplier-corruption-prevention-and-contr mapping_line='- `procedural/skill_091`: 企业管控采购及供应商合作环节腐败问题，需要降低供应链合规风险时查阅' sku_path=skill_091
+2026-04-28T02:14:36.022920Z [info     ] Updated mapping.md (diff merge) [chunks2skus.extractors.meta_extractor] chunk_id=8.生产外包，先市场后工厂的模式_笔记_chunk_001 diff_lines=60 new_size=13864 old_size=10687
+2026-04-28T02:14:36.023917Z [info     ] Meta extraction complete       [chunks2skus.extractors.meta_extractor] chunk_ids='6.为经销商Dai款的模式_笔记_chunk_001, 4.上下通吃，打通经销商合伙人激励的模式_chunk_001, 5.不做主机厂，专注整合商的模式_笔记_chunk_001, 7.交钥匙不如先款后货的模式_笔记_chunk_001, 8.生产外包，先市场后工厂的模式_笔记_chunk_001' eureka_chars=4065 mapping_chars=13864
+2026-04-28T02:14:36.028492Z [info     ] Running meta extraction batch  [chunks2skus.pipeline] chunks=1 new_skus=14 total_content_chars=2479
+2026-04-28T02:14:36.033475Z [info     ] Extracting meta knowledge      [chunks2skus.extractors.meta_extractor] chunk_ids=9.做品牌不做品类的商业模式_笔记_chunk_001
+2026-04-28T02:14:36.034472Z [info     ] [MONITOR] Creating thread-local OpenAI client [chunks2skus.utils.llm_client] base_url=https://ark.cn-beijing.volces.com/api/v3 thread=ThreadPoolExecutor-7_0
+2026-04-28T02:14:36.034472Z [info     ] [MONITOR] Creating thread-local OpenAI client [chunks2skus.utils.llm_client] base_url=https://ark.cn-beijing.volces.com/api/v3 thread=ThreadPoolExecutor-7_1
+2026-04-28T02:14:37.273576Z [info     ] [MONITOR] Starting LLM call    [chunks2skus.utils.llm_client] attempt=0 max_tokens=32000 model=doubao-seed-2-0-pro-260215 prompt_length=13942 temperature=0.2
+2026-04-28T02:14:37.291651Z [info     ] [MONITOR] Starting LLM call    [chunks2skus.utils.llm_client] attempt=0 max_tokens=32000 model=doubao-seed-2-0-pro-260215 prompt_length=7844 temperature=0.7
+2026-04-28T02:15:27.805477Z [info     ] [MONITOR] LLM call SUCCESS     [chunks2skus.utils.llm_client] attempt=0 finish_reason=stop model=doubao-seed-2-0-pro-260215 response_length=816
+2026-04-28T02:15:27.807479Z [warning  ] Header-mapping title mismatch  [chunks2skus.extractors.meta_extractor] header_title=食品行业扩品类路径及相关案例 mapping_line='- `factual/sku_140`: 需要了解食品企业突破单品瓶颈进行品类扩张的可行路径、成功模式及失败案例时查阅' sku_path=sku_140
+2026-04-28T02:15:27.812965Z [warning  ] Header-mapping title mismatch  [chunks2skus.extractors.meta_extractor] header_title=fmcg-hit-product-business-model-construc mapping_line='- `procedural/skill_092`: 快消品企业计划通过单一核心产品打开大众消费市场时查阅' sku_path=skill_092
+2026-04-28T02:15:27.813964Z [warning  ] Header-mapping title mismatch  [chunks2skus.extractors.meta_extractor] header_title=fmcg-channel-network-construction-invest mapping_line='- `procedural/skill_093`: 快消企业搭建全国终端渠道网络、招募区域代理商时查阅' sku_path=skill_093
+2026-04-28T02:15:27.814963Z [warning  ] Header-mapping title mismatch  [chunks2skus.extractors.meta_extractor] header_title=business-operation-stage-quadrant-judgme mapping_line='- `procedural/skill_094`: 判断企业主营业务所处发展阶段、制定对应运营策略时查阅' sku_path=skill_094
+2026-04-28T02:15:27.814963Z [warning  ] Header-mapping title mismatch  [chunks2skus.extractors.meta_extractor] header_title=food-enterprise-category-expansion-strat mapping_line='- `procedural/skill_095`: 食品饮料企业遭遇单品增长瓶颈，需要拓展新品类时查阅' sku_path=skill_095
+2026-04-28T02:15:27.816956Z [info     ] Updated mapping.md (diff merge) [chunks2skus.extractors.meta_extractor] chunk_id=9.做品牌不做品类的商业模式_笔记_chunk_001 diff_lines=17 new_size=14628 old_size=13864
+2026-04-28T02:16:38.028660Z [info     ] [MONITOR] LLM call SUCCESS     [chunks2skus.utils.llm_client] attempt=0 finish_reason=stop model=doubao-seed-2-0-pro-260215 response_length=4817
+2026-04-28T02:16:38.029666Z [info     ] Updated eureka.md              [chunks2skus.extractors.meta_extractor] chunk_ids=9.做品牌不做品类的商业模式_笔记_chunk_001 new_size=4817 old_size=4065
+2026-04-28T02:16:38.038148Z [info     ] Meta extraction complete       [chunks2skus.extractors.meta_extractor] chunk_ids=9.做品牌不做品类的商业模式_笔记_chunk_001 eureka_chars=4817 mapping_chars=14628
+2026-04-28T02:16:38.040157Z [info     ] Extraction pipeline complete   [chunks2skus.pipeline] chunks_processed=26 duration_seconds=2273.7 total_characters=193050 total_skus=238

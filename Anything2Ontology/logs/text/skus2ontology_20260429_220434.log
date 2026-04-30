@@ -1,0 +1,4 @@
+2026-04-29T14:04:34.389116Z [info     ] Starting spec chatbot          [skus2ontology.chatbot] max_rounds=5
+2026-04-29T14:04:34.391111Z [info     ] slug→path inline resolution    [skus2ontology.chatbot] matched=175 total_lines=198
+2026-04-29T14:04:34.391111Z [info     ] Loaded mapping.md (compressed) [skus2ontology.chatbot] compressed_chars=9948 original_chars=9125
+2026-04-29T14:04:34.392107Z [info     ] Loaded eureka.md               [skus2ontology.chatbot] chars=1781

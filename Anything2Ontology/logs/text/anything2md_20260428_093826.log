@@ -1,0 +1,102 @@
+2026-04-28T01:38:26.701554Z [info     ] Starting Anything2Markdown pipeline [anything2markdown.cli]
+2026-04-28T01:38:26.702551Z [info     ] Input directory                [anything2markdown.cli] path='G:\\Program Files\\AI coding\\知识萃取\\商业模式\\输入'
+2026-04-28T01:38:26.711059Z [info     ] Output directory               [anything2markdown.cli] path='G:\\Program Files\\AI coding\\知识萃取\\商业模式\\输出'
+2026-04-28T01:38:26.715047Z [warning  ] Repomix not found. Install with: npm install -g repomix [anything2markdown.url_parsers.repomix_parser]
+2026-04-28T01:38:26.716043Z [info     ] Starting Anything2Markdown pipeline [anything2markdown.pipeline] input_dir='G:\\Program Files\\AI coding\\知识萃取\\商业模式\\输入' output_dir='G:\\Program Files\\AI coding\\知识萃取\\商业模式\\输出'
+2026-04-28T01:38:26.717040Z [info     ] Processing items in parallel   [anything2markdown.pipeline] count=26 max_workers=8 task_type=api
+2026-04-28T01:38:26.717542Z [info     ] Processing file                [anything2markdown.pipeline] file=1.业务不变，营收秒变（X50）的商业模式_笔记.pdf
+2026-04-28T01:38:26.718542Z [info     ] Processing file                [anything2markdown.pipeline] file='10.农村包围城市，“定位 并购”模式_笔记.pdf'
+2026-04-28T01:38:26.719541Z [info     ] MarkItDown parsing             [anything2markdown.parsers.markitdown_parser] file=1.业务不变，营收秒变（X50）的商业模式_笔记.pdf
+2026-04-28T01:38:26.719541Z [info     ] Processing file                [anything2markdown.pipeline] file=11.渠道模式分析_笔记.pdf
+2026-04-28T01:38:26.720538Z [info     ] MarkItDown parsing             [anything2markdown.parsers.markitdown_parser] file='10.农村包围城市，“定位 并购”模式_笔记.pdf'
+2026-04-28T01:38:26.721534Z [info     ] Processing file                [anything2markdown.pipeline] file='12.销地产 产地销，规模成王的模式_笔记.pdf'
+2026-04-28T01:38:26.722531Z [info     ] Processing file                [anything2markdown.pipeline] file=13.专注男装砍掉女装，类直营模式_笔记.pdf
+2026-04-28T01:38:26.722531Z [info     ] Processing file                [anything2markdown.pipeline] file=14.“师傅带徒弟，徒弟带徒孙”的机制_笔记.pdf
+2026-04-28T01:38:26.723528Z [info     ] MarkItDown parsing             [anything2markdown.parsers.markitdown_parser] file=11.渠道模式分析_笔记.pdf
+2026-04-28T01:38:26.723528Z [info     ] Processing file                [anything2markdown.pipeline] file=15.三阶段合伙人的模式_笔记.pdf
+2026-04-28T01:38:26.724524Z [info     ] Processing file                [anything2markdown.pipeline] file=16.廉价航空，净利润超过10％的模式_笔记.pdf
+2026-04-28T01:38:26.724524Z [info     ] MarkItDown parsing             [anything2markdown.parsers.markitdown_parser] file='12.销地产 产地销，规模成王的模式_笔记.pdf'
+2026-04-28T01:38:26.725523Z [info     ] MarkItDown parsing             [anything2markdown.parsers.markitdown_parser] file=13.专注男装砍掉女装，类直营模式_笔记.pdf
+2026-04-28T01:38:26.855143Z [info     ] MarkItDown parsing             [anything2markdown.parsers.markitdown_parser] file=14.“师傅带徒弟，徒弟带徒孙”的机制_笔记.pdf
+2026-04-28T01:38:26.874617Z [info     ] MarkItDown parsing             [anything2markdown.parsers.markitdown_parser] file=15.三阶段合伙人的模式_笔记.pdf
+2026-04-28T01:38:26.875613Z [info     ] MarkItDown parsing             [anything2markdown.parsers.markitdown_parser] file=16.廉价航空，净利润超过10％的模式_笔记.pdf
+2026-04-28T01:38:27.855760Z [info     ] MarkItDown success             [anything2markdown.parsers.markitdown_parser] chars=1822 file=11.渠道模式分析_笔记.pdf output=11.渠道模式分析_笔记.md
+2026-04-28T01:38:27.889866Z [info     ] MarkItDown success             [anything2markdown.parsers.markitdown_parser] chars=2278 file=15.三阶段合伙人的模式_笔记.pdf output=15.三阶段合伙人的模式_笔记.md
+2026-04-28T01:38:27.970772Z [info     ] MarkItDown success             [anything2markdown.parsers.markitdown_parser] chars=437 file='10.农村包围城市，“定位 并购”模式_笔记.pdf' output='10.农村包围城市，“定位 并购”模式_笔记.md'
+2026-04-28T01:38:27.999485Z [info     ] MarkItDown success             [anything2markdown.parsers.markitdown_parser] chars=2042 file=16.廉价航空，净利润超过10％的模式_笔记.pdf output=16.廉价航空，净利润超过10％的模式_笔记.md
+2026-04-28T01:38:28.173442Z [info     ] Processing file                [anything2markdown.pipeline] file=17.先掺后控，打造符合资本的商业模式_笔记.pdf
+2026-04-28T01:38:28.184929Z [info     ] MarkItDown success             [anything2markdown.parsers.markitdown_parser] chars=1508 file=1.业务不变，营收秒变（X50）的商业模式_笔记.pdf output=1.业务不变，营收秒变（X50）的商业模式_笔记.md
+2026-04-28T01:38:28.189136Z [info     ] Processing file                [anything2markdown.pipeline] file='18.“连锁 并购基金”的模式_笔记.pdf'
+2026-04-28T01:38:28.193122Z [info     ] MarkItDown parsing             [anything2markdown.parsers.markitdown_parser] file=17.先掺后控，打造符合资本的商业模式_笔记.pdf
+2026-04-28T01:38:28.198611Z [info     ] MarkItDown success             [anything2markdown.parsers.markitdown_parser] chars=2079 file=14.“师傅带徒弟，徒弟带徒孙”的机制_笔记.pdf output=14.“师傅带徒弟，徒弟带徒孙”的机制_笔记.md
+2026-04-28T01:38:28.198611Z [info     ] MarkItDown success             [anything2markdown.parsers.markitdown_parser] chars=2067 file=13.专注男装砍掉女装，类直营模式_笔记.pdf output=13.专注男装砍掉女装，类直营模式_笔记.md
+2026-04-28T01:38:28.226956Z [info     ] Low valid chars for short PDF, fallback to OCR [anything2markdown.router] threshold=500 valid_chars=404
+2026-04-28T01:38:28.238948Z [info     ] MarkItDown parsing             [anything2markdown.parsers.markitdown_parser] file='18.“连锁 并购基金”的模式_笔记.pdf'
+2026-04-28T01:38:28.273282Z [info     ] Processing file                [anything2markdown.pipeline] file=19.药明康德，G级代工，研发外包模式，打造医药行业“富士康”模式_笔记.pdf
+2026-04-28T01:38:28.274320Z [info     ] Falling back to PaddleOCR-VL   [anything2markdown.pipeline] file='10.农村包围城市，“定位 并购”模式_笔记.pdf'
+2026-04-28T01:38:28.276820Z [info     ] Processing file                [anything2markdown.pipeline] file='2.ODM OEM，超过耐K、A迪净利的商业模式_笔记.pdf'
+2026-04-28T01:38:28.280832Z [info     ] Processing file                [anything2markdown.pipeline] file=20.红星美凯龙，比轻资产更轻，委托管理模式_笔记.pdf
+2026-04-28T01:38:28.281830Z [info     ] MarkItDown parsing             [anything2markdown.parsers.markitdown_parser] file='2.ODM OEM，超过耐K、A迪净利的商业模式_笔记.pdf'
+2026-04-28T01:38:28.308354Z [info     ] MarkItDown success             [anything2markdown.parsers.markitdown_parser] chars=2325 file='12.销地产 产地销，规模成王的模式_笔记.pdf' output='12.销地产 产地销，规模成王的模式_笔记.md'
+2026-04-28T01:38:28.328325Z [info     ] MarkItDown parsing             [anything2markdown.parsers.markitdown_parser] file=19.药明康德，G级代工，研发外包模式，打造医药行业“富士康”模式_笔记.pdf
+2026-04-28T01:38:28.338815Z [info     ] Processing file                [anything2markdown.pipeline] file='21.尚品宅配，柔性生产链，C2B O2O的模式分析_笔记.pdf'
+2026-04-28T01:38:28.344798Z [info     ] MarkItDown parsing             [anything2markdown.parsers.markitdown_parser] file=20.红星美凯龙，比轻资产更轻，委托管理模式_笔记.pdf
+2026-04-28T01:38:28.495190Z [info     ] MarkItDown parsing             [anything2markdown.parsers.markitdown_parser] file='21.尚品宅配，柔性生产链，C2B O2O的模式分析_笔记.pdf'
+2026-04-28T01:38:28.557978Z [info     ] Processing file                [anything2markdown.pipeline] file='22.张江高科，房东 股东，科技投行的模式，率先开启中国产业园的模式_笔记.pdf'
+2026-04-28T01:38:28.634304Z [info     ] MarkItDown parsing             [anything2markdown.parsers.markitdown_parser] file='22.张江高科，房东 股东，科技投行的模式，率先开启中国产业园的模式_笔记.pdf'
+2026-04-28T01:38:28.661766Z [info     ] MarkItDown success             [anything2markdown.parsers.markitdown_parser] chars=2086 file='18.“连锁 并购基金”的模式_笔记.pdf' output='18.“连锁 并购基金”的模式_笔记.md'
+2026-04-28T01:38:28.803297Z [info     ] Processing file                [anything2markdown.pipeline] file='23.宋城演艺，蹭头部流量，做自己的演艺，“千古情 5A景区”模式_笔记.pdf'
+2026-04-28T01:38:28.904136Z [info     ] MarkItDown success             [anything2markdown.parsers.markitdown_parser] chars=1950 file=17.先掺后控，打造符合资本的商业模式_笔记.pdf output=17.先掺后控，打造符合资本的商业模式_笔记.md
+2026-04-28T01:38:28.965800Z [info     ] MarkItDown parsing             [anything2markdown.parsers.markitdown_parser] file='23.宋城演艺，蹭头部流量，做自己的演艺，“千古情 5A景区”模式_笔记.pdf'
+2026-04-28T01:38:29.125467Z [info     ] MarkItDown success             [anything2markdown.parsers.markitdown_parser] chars=2678 file=19.药明康德，G级代工，研发外包模式，打造医药行业“富士康”模式_笔记.pdf output=19.药明康德，G级代工，研发外包模式，打造医药行业“富士康”模式_笔记.md
+2026-04-28T01:38:29.186796Z [info     ] MarkItDown success             [anything2markdown.parsers.markitdown_parser] chars=2267 file='21.尚品宅配，柔性生产链，C2B O2O的模式分析_笔记.pdf' output='21.尚品宅配，柔性生产链，C2B O2O的模式分析_笔记.md'
+2026-04-28T01:38:29.187867Z [info     ] Processing file                [anything2markdown.pipeline] file=24.易居企业控股，甲方变乙方，客户变股东，上游房企变股东的模式_笔记.pdf
+2026-04-28T01:38:29.217899Z [info     ] MarkItDown success             [anything2markdown.parsers.markitdown_parser] chars=1855 file='2.ODM OEM，超过耐K、A迪净利的商业模式_笔记.pdf' output='2.ODM OEM，超过耐K、A迪净利的商业模式_笔记.md'
+2026-04-28T01:38:29.233363Z [info     ] MarkItDown success             [anything2markdown.parsers.markitdown_parser] chars=1836 file='22.张江高科，房东 股东，科技投行的模式，率先开启中国产业园的模式_笔记.pdf' output='22.张江高科，房东 股东，科技投行的模式，率先开启中国产业园的模式_笔记.md'
+2026-04-28T01:38:29.235357Z [info     ] Processing file                [anything2markdown.pipeline] file=25.以润唇膏切入彩妆市场的模式_笔记.pdf
+2026-04-28T01:38:29.268864Z [info     ] MarkItDown parsing             [anything2markdown.parsers.markitdown_parser] file=24.易居企业控股，甲方变乙方，客户变股东，上游房企变股东的模式_笔记.pdf
+2026-04-28T01:38:29.274846Z [info     ] Processing file                [anything2markdown.pipeline] file=26.以猪肉为核心，不卖隔夜肉_笔记.pdf
+2026-04-28T01:38:29.312296Z [info     ] MarkItDown parsing             [anything2markdown.parsers.markitdown_parser] file=25.以润唇膏切入彩妆市场的模式_笔记.pdf
+2026-04-28T01:38:29.320078Z [info     ] MarkItDown success             [anything2markdown.parsers.markitdown_parser] chars=1860 file=20.红星美凯龙，比轻资产更轻，委托管理模式_笔记.pdf output=20.红星美凯龙，比轻资产更轻，委托管理模式_笔记.md
+2026-04-28T01:38:29.327557Z [info     ] MarkItDown parsing             [anything2markdown.parsers.markitdown_parser] file=26.以猪肉为核心，不卖隔夜肉_笔记.pdf
+2026-04-28T01:38:29.337054Z [info     ] Processing file                [anything2markdown.pipeline] file=3.费用归边，流量占股的商业模式_笔记.pdf
+2026-04-28T01:38:29.339064Z [info     ] Processing file                [anything2markdown.pipeline] file=4.上下通吃，打通经销商合伙人激励的模式.pdf
+2026-04-28T01:38:29.389982Z [info     ] MarkItDown success             [anything2markdown.parsers.markitdown_parser] chars=2234 file='23.宋城演艺，蹭头部流量，做自己的演艺，“千古情 5A景区”模式_笔记.pdf' output='23.宋城演艺，蹭头部流量，做自己的演艺，“千古情 5A景区”模式_笔记.md'
+2026-04-28T01:38:29.473151Z [info     ] MarkItDown parsing             [anything2markdown.parsers.markitdown_parser] file=4.上下通吃，打通经销商合伙人激励的模式.pdf
+2026-04-28T01:38:29.531670Z [info     ] Processing file                [anything2markdown.pipeline] file=5.不做主机厂，专注整合商的模式_笔记.pdf
+2026-04-28T01:38:29.543141Z [info     ] MarkItDown parsing             [anything2markdown.parsers.markitdown_parser] file=3.费用归边，流量占股的商业模式_笔记.pdf
+2026-04-28T01:38:29.579163Z [info     ] MarkItDown parsing             [anything2markdown.parsers.markitdown_parser] file=5.不做主机厂，专注整合商的模式_笔记.pdf
+2026-04-28T01:38:29.581157Z [info     ] Processing file                [anything2markdown.pipeline] file=6.为经销商Dai款的模式_笔记.pdf
+2026-04-28T01:38:29.582153Z [info     ] MarkItDown success             [anything2markdown.parsers.markitdown_parser] chars=2234 file=24.易居企业控股，甲方变乙方，客户变股东，上游房企变股东的模式_笔记.pdf output=24.易居企业控股，甲方变乙方，客户变股东，上游房企变股东的模式_笔记.md
+2026-04-28T01:38:29.606696Z [info     ] MarkItDown success             [anything2markdown.parsers.markitdown_parser] chars=1393 file=25.以润唇膏切入彩妆市场的模式_笔记.pdf output=25.以润唇膏切入彩妆市场的模式_笔记.md
+2026-04-28T01:38:29.640179Z [info     ] MarkItDown parsing             [anything2markdown.parsers.markitdown_parser] file=6.为经销商Dai款的模式_笔记.pdf
+2026-04-28T01:38:29.678768Z [info     ] Processing file                [anything2markdown.pipeline] file=7.交钥匙不如先款后货的模式_笔记.pdf
+2026-04-28T01:38:29.683754Z [info     ] Processing file                [anything2markdown.pipeline] file=8.生产外包，先市场后工厂的模式_笔记.pdf
+2026-04-28T01:38:29.822212Z [info     ] MarkItDown parsing             [anything2markdown.parsers.markitdown_parser] file=7.交钥匙不如先款后货的模式_笔记.pdf
+2026-04-28T01:38:29.841479Z [info     ] MarkItDown parsing             [anything2markdown.parsers.markitdown_parser] file=8.生产外包，先市场后工厂的模式_笔记.pdf
+2026-04-28T01:38:29.921157Z [info     ] MarkItDown success             [anything2markdown.parsers.markitdown_parser] chars=1440 file=26.以猪肉为核心，不卖隔夜肉_笔记.pdf output=26.以猪肉为核心，不卖隔夜肉_笔记.md
+2026-04-28T01:38:30.050121Z [info     ] MarkItDown success             [anything2markdown.parsers.markitdown_parser] chars=307 file=3.费用归边，流量占股的商业模式_笔记.pdf output=3.费用归边，流量占股的商业模式_笔记.md
+2026-04-28T01:38:30.090682Z [info     ] Processing file                [anything2markdown.pipeline] file=9.做品牌不做品类的商业模式_笔记.pdf
+2026-04-28T01:38:30.211912Z [info     ] MarkItDown parsing             [anything2markdown.parsers.markitdown_parser] file=9.做品牌不做品类的商业模式_笔记.pdf
+2026-04-28T01:38:30.311801Z [info     ] Low valid chars for short PDF, fallback to OCR [anything2markdown.router] threshold=500 valid_chars=284
+2026-04-28T01:38:30.312806Z [info     ] MarkItDown success             [anything2markdown.parsers.markitdown_parser] chars=1211 file=4.上下通吃，打通经销商合伙人激励的模式.pdf output=4.上下通吃，打通经销商合伙人激励的模式.md
+2026-04-28T01:38:30.353960Z [info     ] Falling back to PaddleOCR-VL   [anything2markdown.pipeline] file=3.费用归边，流量占股的商业模式_笔记.pdf
+2026-04-28T01:38:30.358455Z [info     ] MarkItDown success             [anything2markdown.parsers.markitdown_parser] chars=1519 file=6.为经销商Dai款的模式_笔记.pdf output=6.为经销商Dai款的模式_笔记.md
+2026-04-28T01:38:30.459178Z [info     ] MarkItDown success             [anything2markdown.parsers.markitdown_parser] chars=2544 file=5.不做主机厂，专注整合商的模式_笔记.pdf output=5.不做主机厂，专注整合商的模式_笔记.md
+2026-04-28T01:38:30.483141Z [info     ] MarkItDown success             [anything2markdown.parsers.markitdown_parser] chars=2375 file=8.生产外包，先市场后工厂的模式_笔记.pdf output=8.生产外包，先市场后工厂的模式_笔记.md
+2026-04-28T01:38:30.714276Z [info     ] MarkItDown success             [anything2markdown.parsers.markitdown_parser] chars=1794 file=7.交钥匙不如先款后货的模式_笔记.pdf output=7.交钥匙不如先款后货的模式_笔记.md
+2026-04-28T01:38:30.797505Z [info     ] MarkItDown success             [anything2markdown.parsers.markitdown_parser] chars=2449 file=9.做品牌不做品类的商业模式_笔记.pdf output=9.做品牌不做品类的商业模式_笔记.md
+2026-04-28T01:38:32.282708Z [info     ] PaddleOCR-VL parsing           [anything2markdown.parsers.paddleocr_vl_parser] file='10.农村包围城市，“定位 并购”模式_笔记.pdf'
+2026-04-28T01:38:32.284701Z [info     ] PaddleOCR-VL parsing           [anything2markdown.parsers.paddleocr_vl_parser] file=3.费用归边，流量占股的商业模式_笔记.pdf
+2026-04-28T01:38:32.285438Z [info     ] PaddleOCR-VL starting OCR      [anything2markdown.parsers.paddleocr_vl_parser] dpi=150 file='10.农村包围城市，“定位 并购”模式_笔记.pdf' model=PaddlePaddle/PaddleOCR-VL-1.5 pages=1 start_page=1
+2026-04-28T01:38:32.292011Z [info     ] PaddleOCR-VL starting OCR      [anything2markdown.parsers.paddleocr_vl_parser] dpi=150 file=3.费用归边，流量占股的商业模式_笔记.pdf model=PaddlePaddle/PaddleOCR-VL-1.5 pages=1 start_page=1
+2026-04-28T01:38:33.025716Z [warning  ] PaddleOCR-VL: API call failed  [anything2markdown.parsers.paddleocr_vl_parser] attempt=1 error="Error code: 404 - {'error': {'code': 'InvalidEndpointOrModel.NotFound', 'message': 'The model or endpoint PaddlePaddle/PaddleOCR-VL-1.5 does not exist or you do not have access to it. Request id: 0217773403134206c6143abc371ddf801f23c2797c48bf4afe321', 'param': '', 'type': 'Not Found'}}" page=1
+2026-04-28T01:38:33.034519Z [warning  ] PaddleOCR-VL: API call failed  [anything2markdown.parsers.paddleocr_vl_parser] attempt=1 error="Error code: 404 - {'error': {'code': 'InvalidEndpointOrModel.NotFound', 'message': 'The model or endpoint PaddlePaddle/PaddleOCR-VL-1.5 does not exist or you do not have access to it. Request id: 0217773403134223dba4463efaee3235a05765424283b9b62248a', 'param': '', 'type': 'Not Found'}}" page=1
+2026-04-28T01:38:33.184559Z [warning  ] PaddleOCR-VL: API call failed  [anything2markdown.parsers.paddleocr_vl_parser] attempt=2 error="Error code: 404 - {'error': {'code': 'InvalidEndpointOrModel.NotFound', 'message': 'The model or endpoint PaddlePaddle/PaddleOCR-VL-1.5 does not exist or you do not have access to it. Request id: 0217773403135956c6143abc371ddf801f23c2797c48bf41a3e83', 'param': '', 'type': 'Not Found'}}" page=1
+2026-04-28T01:38:33.187063Z [info     ] PaddleOCR-VL complete          [anything2markdown.parsers.paddleocr_vl_parser] chars=27 duration=2.7s file=3.费用归边，流量占股的商业模式_笔记.pdf pages=1 pages_failed=1
+2026-04-28T01:38:33.204275Z [warning  ] PaddleOCR-VL: API call failed  [anything2markdown.parsers.paddleocr_vl_parser] attempt=2 error="Error code: 404 - {'error': {'code': 'InvalidEndpointOrModel.NotFound', 'message': 'The model or endpoint PaddlePaddle/PaddleOCR-VL-1.5 does not exist or you do not have access to it. Request id: 0217773403136093dba4463efaee3235a05765424283b9beb89a2', 'param': '', 'type': 'Not Found'}}" page=1
+2026-04-28T01:38:33.206783Z [info     ] PaddleOCR-VL complete          [anything2markdown.parsers.paddleocr_vl_parser] chars=27 duration=4.9s file='10.农村包围城市，“定位 并购”模式_笔记.pdf' pages=1 pages_failed=1
+2026-04-28T01:38:33.208798Z [info     ] File processing complete       [anything2markdown.pipeline] files_processed=26
+2026-04-28T01:38:33.210791Z [info     ] URL processing complete        [anything2markdown.pipeline] urls_processed=0
+2026-04-28T01:38:33.211788Z [info     ] Pipeline completed             [anything2markdown.pipeline] duration_seconds=6.50 failed=0 skipped=0 success=26 total_processed=26
+2026-04-28T01:38:33.213781Z [info     ] Saved parse results index      [anything2markdown.pipeline] path='G:\\Program Files\\AI coding\\知识萃取\\商业模式\\输出\\parse_results_index.json'

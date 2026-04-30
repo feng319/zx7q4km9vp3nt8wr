@@ -1,0 +1,4 @@
+{"chunks_dir": "G:\\Program Files\\AI coding\\\u77e5\u8bc6\u8403\u53d6\\\u65b0\u80fd\u6e90\\\u8f93\u51fa\\chunks", "output_dir": "output\\skus", "event": "Starting extraction pipeline", "logger": "chunks2skus.pipeline", "level": "info", "timestamp": "2026-04-25T22:36:02.058727Z"}
+{"count": 26, "event": "Loaded chunks", "logger": "chunks2skus.router", "level": "info", "timestamp": "2026-04-25T22:36:02.061243Z"}
+{"total": 26, "event": "Processing chunks", "logger": "chunks2skus.pipeline", "level": "info", "timestamp": "2026-04-25T22:36:02.063252Z"}
+{"total_skus": 606, "total_characters": 4953824, "chunks_processed": 66, "duration_seconds": "0.0", "event": "Extraction pipeline complete", "logger": "chunks2skus.pipeline", "level": "info", "timestamp": "2026-04-25T22:36:02.063252Z"}

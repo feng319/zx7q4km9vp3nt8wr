@@ -1,0 +1,194 @@
+2026-04-25T15:36:02.767843Z [info     ] Starting extraction pipeline   [chunks2skus.pipeline] chunks_dir='G:\\Program Files\\AI coding\\知识萃取\\新能源\\输出\\chunks' output_dir=output\skus
+2026-04-25T15:36:02.770850Z [info     ] Loaded chunks                  [chunks2skus.router] count=26
+2026-04-25T15:36:02.773281Z [info     ] Processing chunks              [chunks2skus.pipeline] total=26
+2026-04-25T15:36:02.774277Z [info     ] Processing chunk               [chunks2skus.pipeline] chunk_id=报告-苏州工业园区的虚拟电厂调研报告：怎样做区域级虚拟电厂_chunk_001 progress=22/26
+2026-04-25T15:36:02.776544Z [info     ] Processing chunk               [chunks2skus.router] chunk_id=报告-苏州工业园区的虚拟电厂调研报告：怎样做区域级虚拟电厂_chunk_001 title=报告-苏州工业园区的虚拟电厂调研报告：怎样做区域级虚拟电厂 tokens=9432
+2026-04-25T15:36:02.777559Z [info     ] Extracting factual knowledge   [chunks2skus.extractors.factual_extractor] chunk_id=报告-苏州工业园区的虚拟电厂调研报告：怎样做区域级虚拟电厂_chunk_001
+2026-04-25T15:36:02.780855Z [info     ] [MONITOR] call_llm_json starting [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215
+2026-04-25T15:36:02.780855Z [info     ] Extracting relational knowledge [chunks2skus.extractors.relational_extractor] chunk_id=报告-苏州工业园区的虚拟电厂调研报告：怎样做区域级虚拟电厂_chunk_001
+2026-04-25T15:36:02.781913Z [info     ] Extracting procedural knowledge [chunks2skus.extractors.procedural_extractor] chunk_id=报告-苏州工业园区的虚拟电厂调研报告：怎样做区域级虚拟电厂_chunk_001
+2026-04-25T15:36:02.781913Z [info     ] [MONITOR] Creating thread-local OpenAI client [chunks2skus.utils.llm_client] base_url=https://ark.cn-beijing.volces.com/api/v3 thread=ThreadPoolExecutor-0_0
+2026-04-25T15:36:02.782924Z [info     ] [MONITOR] call_llm_json starting [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215
+2026-04-25T15:36:02.782924Z [info     ] [MONITOR] call_llm_json starting [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215
+2026-04-25T15:36:02.785900Z [info     ] [MONITOR] Creating thread-local OpenAI client [chunks2skus.utils.llm_client] base_url=https://ark.cn-beijing.volces.com/api/v3 thread=ThreadPoolExecutor-0_1
+2026-04-25T15:36:02.790051Z [info     ] [MONITOR] Creating thread-local OpenAI client [chunks2skus.utils.llm_client] base_url=https://ark.cn-beijing.volces.com/api/v3 thread=ThreadPoolExecutor-0_2
+2026-04-25T15:36:04.186666Z [info     ] [MONITOR] Starting LLM call    [chunks2skus.utils.llm_client] max_tokens=64000 model=doubao-seed-2-0-pro-260215 prompt_length=9003 temperature=0.3
+2026-04-25T15:36:04.190055Z [info     ] [MONITOR] Starting LLM call    [chunks2skus.utils.llm_client] max_tokens=64000 model=doubao-seed-2-0-pro-260215 prompt_length=8935 temperature=0.3
+2026-04-25T15:36:04.190055Z [info     ] [MONITOR] Starting LLM call    [chunks2skus.utils.llm_client] max_tokens=128000 model=doubao-seed-2-0-pro-260215 prompt_length=15744 temperature=0.3
+2026-04-25T15:36:56.300641Z [info     ] [MONITOR] LLM call SUCCESS     [chunks2skus.utils.llm_client] finish_reason=stop model=doubao-seed-2-0-pro-260215 response_length=2080
+2026-04-25T15:36:56.301658Z [info     ] [MONITOR] JSON parse SUCCESS   [chunks2skus.utils.llm_client] keys=['procedures']
+2026-04-25T15:36:56.317273Z [info     ] Procedural extraction complete [chunks2skus.extractors.procedural_extractor] chunk_id=报告-苏州工业园区的虚拟电厂调研报告：怎样做区域级虚拟电厂_chunk_001 skills_created=3
+2026-04-25T15:37:16.887175Z [info     ] [MONITOR] LLM call SUCCESS     [chunks2skus.utils.llm_client] finish_reason=stop model=doubao-seed-2-0-pro-260215 response_length=3302
+2026-04-25T15:37:16.887678Z [info     ] [MONITOR] JSON parse SUCCESS   [chunks2skus.utils.llm_client] keys=['facts']
+2026-04-25T15:37:16.905859Z [info     ] Factual extraction complete    [chunks2skus.extractors.factual_extractor] chunk_id=报告-苏州工业园区的虚拟电厂调研报告：怎样做区域级虚拟电厂_chunk_001 skus_created=8
+2026-04-25T15:37:44.019470Z [info     ] [MONITOR] LLM call SUCCESS     [chunks2skus.utils.llm_client] finish_reason=stop model=doubao-seed-2-0-pro-260215 response_length=4073
+2026-04-25T15:37:44.020478Z [info     ] [MONITOR] JSON parse SUCCESS   [chunks2skus.utils.llm_client] keys=['new_labels', 'new_glossary', 'updated_glossary', 'new_relationships']
+2026-04-25T15:37:44.022761Z [info     ] Added new labels               [chunks2skus.extractors.relational_extractor] chunk_id=报告-苏州工业园区的虚拟电厂调研报告：怎样做区域级虚拟电厂_chunk_001 count=3
+2026-04-25T15:37:44.029455Z [info     ] Merged new glossary entries    [chunks2skus.extractors.relational_extractor] chunk_id=报告-苏州工业园区的虚拟电厂调研报告：怎样做区域级虚拟电厂_chunk_001 count=6
+2026-04-25T15:37:44.032510Z [info     ] Updated existing glossary entries [chunks2skus.extractors.relational_extractor] chunk_id=报告-苏州工业园区的虚拟电厂调研报告：怎样做区域级虚拟电厂_chunk_001 fallback_count=1 total_in_response=4 updated_count=3
+2026-04-25T15:37:44.034628Z [info     ] Merged new relationships       [chunks2skus.extractors.relational_extractor] chunk_id=报告-苏州工业园区的虚拟电厂调研报告：怎样做区域级虚拟电厂_chunk_001 count=14
+2026-04-25T15:37:44.040692Z [info     ] Relational extraction complete [chunks2skus.extractors.relational_extractor] chunk_id=报告-苏州工业园区的虚拟电厂调研报告：怎样做区域级虚拟电厂_chunk_001 labels=14 relationships=384 terms=233
+2026-04-25T15:37:44.043214Z [info     ] Extracting meta knowledge      [chunks2skus.extractors.meta_extractor] chunk_id=报告-苏州工业园区的虚拟电厂调研报告：怎样做区域级虚拟电厂_chunk_001
+2026-04-25T15:37:44.045728Z [info     ] [MONITOR] Creating thread-local OpenAI client [chunks2skus.utils.llm_client] base_url=https://ark.cn-beijing.volces.com/api/v3 thread=ThreadPoolExecutor-1_0
+2026-04-25T15:37:44.046746Z [info     ] [MONITOR] Creating thread-local OpenAI client [chunks2skus.utils.llm_client] base_url=https://ark.cn-beijing.volces.com/api/v3 thread=ThreadPoolExecutor-1_1
+2026-04-25T15:37:45.344721Z [info     ] [MONITOR] Starting LLM call    [chunks2skus.utils.llm_client] max_tokens=32000 model=doubao-seed-2-0-pro-260215 prompt_length=16700 temperature=0.7
+2026-04-25T15:37:45.346732Z [info     ] [MONITOR] Starting LLM call    [chunks2skus.utils.llm_client] max_tokens=128000 model=doubao-seed-2-0-pro-260215 prompt_length=29992 temperature=0.2
+2026-04-25T15:40:48.118004Z [info     ] [MONITOR] LLM call SUCCESS     [chunks2skus.utils.llm_client] finish_reason=stop model=doubao-seed-2-0-pro-260215 response_length=8725
+2026-04-25T15:40:48.123753Z [info     ] Updated eureka.md              [chunks2skus.extractors.meta_extractor] chunk_id=报告-苏州工业园区的虚拟电厂调研报告：怎样做区域级虚拟电厂_chunk_001 new_size=8725 old_size=8115
+2026-04-25T15:42:26.693112Z [info     ] [MONITOR] LLM call SUCCESS     [chunks2skus.utils.llm_client] finish_reason=stop model=doubao-seed-2-0-pro-260215 response_length=29856
+2026-04-25T15:42:26.702179Z [info     ] Meta extraction complete       [chunks2skus.extractors.meta_extractor] chunk_id=报告-苏州工业园区的虚拟电厂调研报告：怎样做区域级虚拟电厂_chunk_001 eureka_chars=8725 mapping_chars=29856
+2026-04-25T15:42:26.705187Z [info     ] Chunk processed                [chunks2skus.pipeline] chunk_id=报告-苏州工业园区的虚拟电厂调研报告：怎样做区域级虚拟电厂_chunk_001 new_skus=13 total_skus=536
+2026-04-25T15:42:26.709754Z [info     ] Processing chunk               [chunks2skus.pipeline] chunk_id='报告-远景科技调研报告：如何把握储能 AIDC领域未来机会_chunk_001' progress=23/26
+2026-04-25T15:42:26.710762Z [info     ] Processing chunk               [chunks2skus.router] chunk_id='报告-远景科技调研报告：如何把握储能 AIDC领域未来机会_chunk_001' title='报告-远景科技调研报告：如何把握储能 AIDC领域未来机会' tokens=11955
+2026-04-25T15:42:26.711825Z [info     ] Extracting factual knowledge   [chunks2skus.extractors.factual_extractor] chunk_id='报告-远景科技调研报告：如何把握储能 AIDC领域未来机会_chunk_001'
+2026-04-25T15:42:26.712830Z [info     ] Extracting relational knowledge [chunks2skus.extractors.relational_extractor] chunk_id='报告-远景科技调研报告：如何把握储能 AIDC领域未来机会_chunk_001'
+2026-04-25T15:42:26.712830Z [info     ] [MONITOR] call_llm_json starting [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215
+2026-04-25T15:42:26.712830Z [info     ] Extracting procedural knowledge [chunks2skus.extractors.procedural_extractor] chunk_id='报告-远景科技调研报告：如何把握储能 AIDC领域未来机会_chunk_001'
+2026-04-25T15:42:26.712830Z [info     ] [MONITOR] call_llm_json starting [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215
+2026-04-25T15:42:26.713831Z [info     ] [MONITOR] Creating thread-local OpenAI client [chunks2skus.utils.llm_client] base_url=https://ark.cn-beijing.volces.com/api/v3 thread=ThreadPoolExecutor-2_0
+2026-04-25T15:42:26.713831Z [info     ] [MONITOR] call_llm_json starting [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215
+2026-04-25T15:42:26.713831Z [info     ] [MONITOR] Creating thread-local OpenAI client [chunks2skus.utils.llm_client] base_url=https://ark.cn-beijing.volces.com/api/v3 thread=ThreadPoolExecutor-2_1
+2026-04-25T15:42:26.714834Z [info     ] [MONITOR] Creating thread-local OpenAI client [chunks2skus.utils.llm_client] base_url=https://ark.cn-beijing.volces.com/api/v3 thread=ThreadPoolExecutor-2_2
+2026-04-25T15:42:28.217325Z [info     ] [MONITOR] Starting LLM call    [chunks2skus.utils.llm_client] max_tokens=128000 model=doubao-seed-2-0-pro-260215 prompt_length=18791 temperature=0.3
+2026-04-25T15:42:28.418048Z [info     ] [MONITOR] Starting LLM call    [chunks2skus.utils.llm_client] max_tokens=64000 model=doubao-seed-2-0-pro-260215 prompt_length=11924 temperature=0.3
+2026-04-25T15:42:28.427759Z [info     ] [MONITOR] Starting LLM call    [chunks2skus.utils.llm_client] max_tokens=64000 model=doubao-seed-2-0-pro-260215 prompt_length=11856 temperature=0.3
+2026-04-25T15:43:12.109481Z [info     ] [MONITOR] LLM call SUCCESS     [chunks2skus.utils.llm_client] finish_reason=stop model=doubao-seed-2-0-pro-260215 response_length=1997
+2026-04-25T15:43:12.111623Z [info     ] [MONITOR] JSON parse SUCCESS   [chunks2skus.utils.llm_client] keys=['procedures']
+2026-04-25T15:43:12.135394Z [info     ] Procedural extraction complete [chunks2skus.extractors.procedural_extractor] chunk_id='报告-远景科技调研报告：如何把握储能 AIDC领域未来机会_chunk_001' skills_created=3
+2026-04-25T15:44:01.904619Z [info     ] [MONITOR] LLM call SUCCESS     [chunks2skus.utils.llm_client] finish_reason=stop model=doubao-seed-2-0-pro-260215 response_length=5397
+2026-04-25T15:44:01.905638Z [info     ] [MONITOR] JSON parse SUCCESS   [chunks2skus.utils.llm_client] keys=['facts']
+2026-04-25T15:44:01.943899Z [info     ] Factual extraction complete    [chunks2skus.extractors.factual_extractor] chunk_id='报告-远景科技调研报告：如何把握储能 AIDC领域未来机会_chunk_001' skus_created=12
+2026-04-25T15:44:42.089285Z [info     ] [MONITOR] LLM call SUCCESS     [chunks2skus.utils.llm_client] finish_reason=stop model=doubao-seed-2-0-pro-260215 response_length=4280
+2026-04-25T15:44:42.091308Z [info     ] [MONITOR] JSON parse SUCCESS   [chunks2skus.utils.llm_client] keys=['new_labels', 'new_glossary', 'updated_glossary', 'new_relationships']
+2026-04-25T15:44:42.095060Z [info     ] Added new labels               [chunks2skus.extractors.relational_extractor] chunk_id='报告-远景科技调研报告：如何把握储能 AIDC领域未来机会_chunk_001' count=3
+2026-04-25T15:44:42.097089Z [info     ] Merged new glossary entries    [chunks2skus.extractors.relational_extractor] chunk_id='报告-远景科技调研报告：如何把握储能 AIDC领域未来机会_chunk_001' count=12
+2026-04-25T15:44:42.098540Z [info     ] Updated existing glossary entries [chunks2skus.extractors.relational_extractor] chunk_id='报告-远景科技调研报告：如何把握储能 AIDC领域未来机会_chunk_001' fallback_count=0 total_in_response=0 updated_count=0
+2026-04-25T15:44:42.100558Z [info     ] Merged new relationships       [chunks2skus.extractors.relational_extractor] chunk_id='报告-远景科技调研报告：如何把握储能 AIDC领域未来机会_chunk_001' count=14
+2026-04-25T15:44:42.108061Z [info     ] Relational extraction complete [chunks2skus.extractors.relational_extractor] chunk_id='报告-远景科技调研报告：如何把握储能 AIDC领域未来机会_chunk_001' labels=14 relationships=398 terms=245
+2026-04-25T15:44:42.110638Z [info     ] Extracting meta knowledge      [chunks2skus.extractors.meta_extractor] chunk_id='报告-远景科技调研报告：如何把握储能 AIDC领域未来机会_chunk_001'
+2026-04-25T15:44:42.113101Z [info     ] [MONITOR] Creating thread-local OpenAI client [chunks2skus.utils.llm_client] base_url=https://ark.cn-beijing.volces.com/api/v3 thread=ThreadPoolExecutor-3_0
+2026-04-25T15:44:42.113101Z [info     ] [MONITOR] Creating thread-local OpenAI client [chunks2skus.utils.llm_client] base_url=https://ark.cn-beijing.volces.com/api/v3 thread=ThreadPoolExecutor-3_1
+2026-04-25T15:44:43.610103Z [info     ] [MONITOR] Starting LLM call    [chunks2skus.utils.llm_client] max_tokens=128000 model=doubao-seed-2-0-pro-260215 prompt_length=32391 temperature=0.2
+2026-04-25T15:44:43.619528Z [info     ] [MONITOR] Starting LLM call    [chunks2skus.utils.llm_client] max_tokens=32000 model=doubao-seed-2-0-pro-260215 prompt_length=17310 temperature=0.7
+2026-04-25T15:47:07.240681Z [info     ] [MONITOR] LLM call SUCCESS     [chunks2skus.utils.llm_client] finish_reason=stop model=doubao-seed-2-0-pro-260215 response_length=9249
+2026-04-25T15:47:07.245167Z [info     ] Updated eureka.md              [chunks2skus.extractors.meta_extractor] chunk_id='报告-远景科技调研报告：如何把握储能 AIDC领域未来机会_chunk_001' new_size=9249 old_size=8725
+2026-04-25T15:55:06.538160Z [info     ] [MONITOR] LLM call SUCCESS     [chunks2skus.utils.llm_client] finish_reason=stop model=doubao-seed-2-0-pro-260215 response_length=31339
+2026-04-25T15:55:06.542133Z [info     ] Meta extraction complete       [chunks2skus.extractors.meta_extractor] chunk_id='报告-远景科技调研报告：如何把握储能 AIDC领域未来机会_chunk_001' eureka_chars=9249 mapping_chars=31339
+2026-04-25T15:55:06.556453Z [info     ] Chunk processed                [chunks2skus.pipeline] chunk_id='报告-远景科技调研报告：如何把握储能 AIDC领域未来机会_chunk_001' new_skus=17 total_skus=553
+2026-04-25T15:55:06.557468Z [info     ] Processing chunk               [chunks2skus.pipeline] chunk_id=报告-金风科技调研报告：我国首个碳中和园区是怎样建成的？_chunk_001 progress=24/26
+2026-04-25T15:55:06.559986Z [info     ] Processing chunk               [chunks2skus.router] chunk_id=报告-金风科技调研报告：我国首个碳中和园区是怎样建成的？_chunk_001 title=报告-金风科技调研报告：我国首个碳中和园区是怎样建成的？ tokens=8696
+2026-04-25T15:55:06.563976Z [info     ] Extracting factual knowledge   [chunks2skus.extractors.factual_extractor] chunk_id=报告-金风科技调研报告：我国首个碳中和园区是怎样建成的？_chunk_001
+2026-04-25T15:55:06.564973Z [info     ] Extracting relational knowledge [chunks2skus.extractors.relational_extractor] chunk_id=报告-金风科技调研报告：我国首个碳中和园区是怎样建成的？_chunk_001
+2026-04-25T15:55:06.564973Z [info     ] [MONITOR] call_llm_json starting [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215
+2026-04-25T15:55:06.566345Z [info     ] Extracting procedural knowledge [chunks2skus.extractors.procedural_extractor] chunk_id=报告-金风科技调研报告：我国首个碳中和园区是怎样建成的？_chunk_001
+2026-04-25T15:55:06.569979Z [info     ] [MONITOR] call_llm_json starting [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215
+2026-04-25T15:55:06.569979Z [info     ] [MONITOR] Creating thread-local OpenAI client [chunks2skus.utils.llm_client] base_url=https://ark.cn-beijing.volces.com/api/v3 thread=ThreadPoolExecutor-4_0
+2026-04-25T15:55:06.571147Z [info     ] [MONITOR] call_llm_json starting [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215
+2026-04-25T15:55:06.571147Z [info     ] [MONITOR] Creating thread-local OpenAI client [chunks2skus.utils.llm_client] base_url=https://ark.cn-beijing.volces.com/api/v3 thread=ThreadPoolExecutor-4_1
+2026-04-25T15:55:06.574365Z [info     ] [MONITOR] Creating thread-local OpenAI client [chunks2skus.utils.llm_client] base_url=https://ark.cn-beijing.volces.com/api/v3 thread=ThreadPoolExecutor-4_2
+2026-04-25T15:55:08.170305Z [info     ] [MONITOR] Starting LLM call    [chunks2skus.utils.llm_client] max_tokens=64000 model=doubao-seed-2-0-pro-260215 prompt_length=8503 temperature=0.3
+2026-04-25T15:55:08.244359Z [info     ] [MONITOR] Starting LLM call    [chunks2skus.utils.llm_client] max_tokens=64000 model=doubao-seed-2-0-pro-260215 prompt_length=8435 temperature=0.3
+2026-04-25T15:55:08.287482Z [info     ] [MONITOR] Starting LLM call    [chunks2skus.utils.llm_client] max_tokens=128000 model=doubao-seed-2-0-pro-260215 prompt_length=15512 temperature=0.3
+2026-04-25T15:56:06.765110Z [info     ] [MONITOR] LLM call SUCCESS     [chunks2skus.utils.llm_client] finish_reason=stop model=doubao-seed-2-0-pro-260215 response_length=2519
+2026-04-25T15:56:06.766165Z [info     ] [MONITOR] JSON parse SUCCESS   [chunks2skus.utils.llm_client] keys=['procedures']
+2026-04-25T15:56:06.790484Z [info     ] Procedural extraction complete [chunks2skus.extractors.procedural_extractor] chunk_id=报告-金风科技调研报告：我国首个碳中和园区是怎样建成的？_chunk_001 skills_created=5
+2026-04-25T15:56:17.782380Z [info     ] [MONITOR] LLM call SUCCESS     [chunks2skus.utils.llm_client] finish_reason=stop model=doubao-seed-2-0-pro-260215 response_length=5947
+2026-04-25T15:56:17.783376Z [info     ] [MONITOR] JSON parse SUCCESS   [chunks2skus.utils.llm_client] keys=['facts']
+2026-04-25T15:56:17.813046Z [info     ] Factual extraction complete    [chunks2skus.extractors.factual_extractor] chunk_id=报告-金风科技调研报告：我国首个碳中和园区是怎样建成的？_chunk_001 skus_created=17
+2026-04-25T15:56:38.850355Z [info     ] [MONITOR] LLM call SUCCESS     [chunks2skus.utils.llm_client] finish_reason=stop model=doubao-seed-2-0-pro-260215 response_length=4093
+2026-04-25T15:56:38.851370Z [info     ] [MONITOR] JSON parse SUCCESS   [chunks2skus.utils.llm_client] keys=['new_labels', 'new_glossary', 'updated_glossary', 'new_relationships']
+2026-04-25T15:56:38.854878Z [info     ] Added new labels               [chunks2skus.extractors.relational_extractor] chunk_id=报告-金风科技调研报告：我国首个碳中和园区是怎样建成的？_chunk_001 count=3
+2026-04-25T15:56:38.856887Z [info     ] Merged new glossary entries    [chunks2skus.extractors.relational_extractor] chunk_id=报告-金风科技调研报告：我国首个碳中和园区是怎样建成的？_chunk_001 count=11
+2026-04-25T15:56:38.857889Z [info     ] Updated existing glossary entries [chunks2skus.extractors.relational_extractor] chunk_id=报告-金风科技调研报告：我国首个碳中和园区是怎样建成的？_chunk_001 fallback_count=0 total_in_response=1 updated_count=1
+2026-04-25T15:56:38.861166Z [info     ] Merged new relationships       [chunks2skus.extractors.relational_extractor] chunk_id=报告-金风科技调研报告：我国首个碳中和园区是怎样建成的？_chunk_001 count=13
+2026-04-25T15:56:38.870067Z [info     ] Relational extraction complete [chunks2skus.extractors.relational_extractor] chunk_id=报告-金风科技调研报告：我国首个碳中和园区是怎样建成的？_chunk_001 labels=14 relationships=411 terms=256
+2026-04-25T15:56:38.872073Z [info     ] Extracting meta knowledge      [chunks2skus.extractors.meta_extractor] chunk_id=报告-金风科技调研报告：我国首个碳中和园区是怎样建成的？_chunk_001
+2026-04-25T15:56:38.872073Z [info     ] [MONITOR] Creating thread-local OpenAI client [chunks2skus.utils.llm_client] base_url=https://ark.cn-beijing.volces.com/api/v3 thread=ThreadPoolExecutor-5_0
+2026-04-25T15:56:38.873575Z [info     ] [MONITOR] Creating thread-local OpenAI client [chunks2skus.utils.llm_client] base_url=https://ark.cn-beijing.volces.com/api/v3 thread=ThreadPoolExecutor-5_1
+2026-04-25T15:56:40.354042Z [info     ] [MONITOR] Starting LLM call    [chunks2skus.utils.llm_client] max_tokens=128000 model=doubao-seed-2-0-pro-260215 prompt_length=35551 temperature=0.2
+2026-04-25T15:56:40.361080Z [info     ] [MONITOR] Starting LLM call    [chunks2skus.utils.llm_client] max_tokens=32000 model=doubao-seed-2-0-pro-260215 prompt_length=17593 temperature=0.7
+2026-04-25T15:59:30.718154Z [info     ] [MONITOR] LLM call SUCCESS     [chunks2skus.utils.llm_client] finish_reason=stop model=doubao-seed-2-0-pro-260215 response_length=9906
+2026-04-25T15:59:30.722655Z [info     ] Updated eureka.md              [chunks2skus.extractors.meta_extractor] chunk_id=报告-金风科技调研报告：我国首个碳中和园区是怎样建成的？_chunk_001 new_size=9906 old_size=9249
+2026-04-25T16:01:25.326480Z [info     ] [MONITOR] LLM call SUCCESS     [chunks2skus.utils.llm_client] finish_reason=stop model=doubao-seed-2-0-pro-260215 response_length=33281
+2026-04-25T16:01:25.331523Z [info     ] Meta extraction complete       [chunks2skus.extractors.meta_extractor] chunk_id=报告-金风科技调研报告：我国首个碳中和园区是怎样建成的？_chunk_001 eureka_chars=9906 mapping_chars=33281
+2026-04-25T16:01:25.348603Z [info     ] Chunk processed                [chunks2skus.pipeline] chunk_id=报告-金风科技调研报告：我国首个碳中和园区是怎样建成的？_chunk_001 new_skus=24 total_skus=577
+2026-04-25T16:01:25.349604Z [info     ] Processing chunk               [chunks2skus.pipeline] chunk_id=报告-非洲调研报告（一）：中国新能源企业在肯尼亚有什么机会？_chunk_001 progress=25/26
+2026-04-25T16:01:25.349604Z [info     ] Processing chunk               [chunks2skus.router] chunk_id=报告-非洲调研报告（一）：中国新能源企业在肯尼亚有什么机会？_chunk_001 title=报告-非洲调研报告（一）：中国新能源企业在肯尼亚有什么机会？ tokens=10598
+2026-04-25T16:01:25.351618Z [info     ] Extracting factual knowledge   [chunks2skus.extractors.factual_extractor] chunk_id=报告-非洲调研报告（一）：中国新能源企业在肯尼亚有什么机会？_chunk_001
+2026-04-25T16:01:25.351618Z [info     ] Extracting relational knowledge [chunks2skus.extractors.relational_extractor] chunk_id=报告-非洲调研报告（一）：中国新能源企业在肯尼亚有什么机会？_chunk_001
+2026-04-25T16:01:25.351618Z [info     ] [MONITOR] call_llm_json starting [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215
+2026-04-25T16:01:25.352620Z [info     ] Extracting procedural knowledge [chunks2skus.extractors.procedural_extractor] chunk_id=报告-非洲调研报告（一）：中国新能源企业在肯尼亚有什么机会？_chunk_001
+2026-04-25T16:01:25.352620Z [info     ] [MONITOR] call_llm_json starting [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215
+2026-04-25T16:01:25.353622Z [info     ] [MONITOR] Creating thread-local OpenAI client [chunks2skus.utils.llm_client] base_url=https://ark.cn-beijing.volces.com/api/v3 thread=ThreadPoolExecutor-6_0
+2026-04-25T16:01:25.356039Z [info     ] [MONITOR] call_llm_json starting [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215
+2026-04-25T16:01:25.360631Z [info     ] [MONITOR] Creating thread-local OpenAI client [chunks2skus.utils.llm_client] base_url=https://ark.cn-beijing.volces.com/api/v3 thread=ThreadPoolExecutor-6_1
+2026-04-25T16:01:25.361648Z [info     ] [MONITOR] Creating thread-local OpenAI client [chunks2skus.utils.llm_client] base_url=https://ark.cn-beijing.volces.com/api/v3 thread=ThreadPoolExecutor-6_2
+2026-04-25T16:01:27.069556Z [info     ] [MONITOR] Starting LLM call    [chunks2skus.utils.llm_client] max_tokens=128000 model=doubao-seed-2-0-pro-260215 prompt_length=17613 temperature=0.3
+2026-04-25T16:01:27.082903Z [info     ] [MONITOR] Starting LLM call    [chunks2skus.utils.llm_client] max_tokens=64000 model=doubao-seed-2-0-pro-260215 prompt_length=10445 temperature=0.3
+2026-04-25T16:01:27.120116Z [info     ] [MONITOR] Starting LLM call    [chunks2skus.utils.llm_client] max_tokens=64000 model=doubao-seed-2-0-pro-260215 prompt_length=10377 temperature=0.3
+2026-04-25T16:02:16.526726Z [info     ] [MONITOR] LLM call SUCCESS     [chunks2skus.utils.llm_client] finish_reason=stop model=doubao-seed-2-0-pro-260215 response_length=2188
+2026-04-25T16:02:16.527751Z [info     ] [MONITOR] JSON parse SUCCESS   [chunks2skus.utils.llm_client] keys=['procedures']
+2026-04-25T16:02:16.553627Z [info     ] Procedural extraction complete [chunks2skus.extractors.procedural_extractor] chunk_id=报告-非洲调研报告（一）：中国新能源企业在肯尼亚有什么机会？_chunk_001 skills_created=4
+2026-04-25T16:02:54.845346Z [info     ] [MONITOR] LLM call SUCCESS     [chunks2skus.utils.llm_client] finish_reason=stop model=doubao-seed-2-0-pro-260215 response_length=4466
+2026-04-25T16:02:54.848656Z [info     ] [MONITOR] JSON parse SUCCESS   [chunks2skus.utils.llm_client] keys=['facts']
+2026-04-25T16:02:54.884070Z [info     ] Factual extraction complete    [chunks2skus.extractors.factual_extractor] chunk_id=报告-非洲调研报告（一）：中国新能源企业在肯尼亚有什么机会？_chunk_001 skus_created=8
+2026-04-25T16:03:19.534214Z [info     ] [MONITOR] LLM call SUCCESS     [chunks2skus.utils.llm_client] finish_reason=stop model=doubao-seed-2-0-pro-260215 response_length=4605
+2026-04-25T16:03:19.535218Z [info     ] [MONITOR] JSON parse SUCCESS   [chunks2skus.utils.llm_client] keys=['new_labels', 'new_glossary', 'updated_glossary', 'new_relationships']
+2026-04-25T16:03:19.549481Z [info     ] Added new labels               [chunks2skus.extractors.relational_extractor] chunk_id=报告-非洲调研报告（一）：中国新能源企业在肯尼亚有什么机会？_chunk_001 count=6
+2026-04-25T16:03:19.551982Z [info     ] Merged new glossary entries    [chunks2skus.extractors.relational_extractor] chunk_id=报告-非洲调研报告（一）：中国新能源企业在肯尼亚有什么机会？_chunk_001 count=10
+2026-04-25T16:03:19.554047Z [info     ] Updated existing glossary entries [chunks2skus.extractors.relational_extractor] chunk_id=报告-非洲调研报告（一）：中国新能源企业在肯尼亚有什么机会？_chunk_001 fallback_count=0 total_in_response=3 updated_count=3
+2026-04-25T16:03:19.559404Z [info     ] Merged new relationships       [chunks2skus.extractors.relational_extractor] chunk_id=报告-非洲调研报告（一）：中国新能源企业在肯尼亚有什么机会？_chunk_001 count=15
+2026-04-25T16:03:19.567422Z [info     ] Relational extraction complete [chunks2skus.extractors.relational_extractor] chunk_id=报告-非洲调研报告（一）：中国新能源企业在肯尼亚有什么机会？_chunk_001 labels=15 relationships=426 terms=266
+2026-04-25T16:03:19.570427Z [info     ] Extracting meta knowledge      [chunks2skus.extractors.meta_extractor] chunk_id=报告-非洲调研报告（一）：中国新能源企业在肯尼亚有什么机会？_chunk_001
+2026-04-25T16:03:19.575213Z [info     ] [MONITOR] Creating thread-local OpenAI client [chunks2skus.utils.llm_client] base_url=https://ark.cn-beijing.volces.com/api/v3 thread=ThreadPoolExecutor-7_0
+2026-04-25T16:03:19.576216Z [info     ] [MONITOR] Creating thread-local OpenAI client [chunks2skus.utils.llm_client] base_url=https://ark.cn-beijing.volces.com/api/v3 thread=ThreadPoolExecutor-7_1
+2026-04-25T16:03:21.035521Z [info     ] [MONITOR] Starting LLM call    [chunks2skus.utils.llm_client] max_tokens=128000 model=doubao-seed-2-0-pro-260215 prompt_length=38539 temperature=0.2
+2026-04-25T16:03:21.048659Z [info     ] [MONITOR] Starting LLM call    [chunks2skus.utils.llm_client] max_tokens=32000 model=doubao-seed-2-0-pro-260215 prompt_length=18492 temperature=0.7
+2026-04-25T16:05:50.720555Z [info     ] [MONITOR] LLM call SUCCESS     [chunks2skus.utils.llm_client] finish_reason=stop model=doubao-seed-2-0-pro-260215 response_length=10404
+2026-04-25T16:05:50.723611Z [info     ] Updated eureka.md              [chunks2skus.extractors.meta_extractor] chunk_id=报告-非洲调研报告（一）：中国新能源企业在肯尼亚有什么机会？_chunk_001 new_size=10404 old_size=9906
+2026-04-25T16:08:07.980749Z [info     ] [MONITOR] LLM call SUCCESS     [chunks2skus.utils.llm_client] finish_reason=stop model=doubao-seed-2-0-pro-260215 response_length=34420
+2026-04-25T16:08:07.986725Z [info     ] Meta extraction complete       [chunks2skus.extractors.meta_extractor] chunk_id=报告-非洲调研报告（一）：中国新能源企业在肯尼亚有什么机会？_chunk_001 eureka_chars=10404 mapping_chars=34420
+2026-04-25T16:08:08.000710Z [info     ] Chunk processed                [chunks2skus.pipeline] chunk_id=报告-非洲调研报告（一）：中国新能源企业在肯尼亚有什么机会？_chunk_001 new_skus=14 total_skus=591
+2026-04-25T16:08:08.001772Z [info     ] Processing chunk               [chunks2skus.pipeline] chunk_id=报告-非洲调研报告（二）：中国新能源企业在赞比亚有什么机会？_chunk_001 progress=26/26
+2026-04-25T16:08:08.001772Z [info     ] Processing chunk               [chunks2skus.router] chunk_id=报告-非洲调研报告（二）：中国新能源企业在赞比亚有什么机会？_chunk_001 title=报告-非洲调研报告（二）：中国新能源企业在赞比亚有什么机会？ tokens=10939
+2026-04-25T16:08:08.004941Z [info     ] Extracting factual knowledge   [chunks2skus.extractors.factual_extractor] chunk_id=报告-非洲调研报告（二）：中国新能源企业在赞比亚有什么机会？_chunk_001
+2026-04-25T16:08:08.006443Z [info     ] Extracting relational knowledge [chunks2skus.extractors.relational_extractor] chunk_id=报告-非洲调研报告（二）：中国新能源企业在赞比亚有什么机会？_chunk_001
+2026-04-25T16:08:08.007454Z [info     ] [MONITOR] call_llm_json starting [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215
+2026-04-25T16:08:08.009785Z [info     ] Extracting procedural knowledge [chunks2skus.extractors.procedural_extractor] chunk_id=报告-非洲调研报告（二）：中国新能源企业在赞比亚有什么机会？_chunk_001
+2026-04-25T16:08:08.009785Z [info     ] [MONITOR] call_llm_json starting [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215
+2026-04-25T16:08:08.011089Z [info     ] [MONITOR] Creating thread-local OpenAI client [chunks2skus.utils.llm_client] base_url=https://ark.cn-beijing.volces.com/api/v3 thread=ThreadPoolExecutor-8_0
+2026-04-25T16:08:08.011089Z [info     ] [MONITOR] call_llm_json starting [chunks2skus.utils.llm_client] model=doubao-seed-2-0-pro-260215
+2026-04-25T16:08:08.012390Z [info     ] [MONITOR] Creating thread-local OpenAI client [chunks2skus.utils.llm_client] base_url=https://ark.cn-beijing.volces.com/api/v3 thread=ThreadPoolExecutor-8_1
+2026-04-25T16:08:08.013620Z [info     ] [MONITOR] Creating thread-local OpenAI client [chunks2skus.utils.llm_client] base_url=https://ark.cn-beijing.volces.com/api/v3 thread=ThreadPoolExecutor-8_2
+2026-04-25T16:08:09.690208Z [info     ] [MONITOR] Starting LLM call    [chunks2skus.utils.llm_client] max_tokens=128000 model=doubao-seed-2-0-pro-260215 prompt_length=17938 temperature=0.3
+2026-04-25T16:08:09.718536Z [info     ] [MONITOR] Starting LLM call    [chunks2skus.utils.llm_client] max_tokens=64000 model=doubao-seed-2-0-pro-260215 prompt_length=10522 temperature=0.3
+2026-04-25T16:08:09.742104Z [info     ] [MONITOR] Starting LLM call    [chunks2skus.utils.llm_client] max_tokens=64000 model=doubao-seed-2-0-pro-260215 prompt_length=10590 temperature=0.3
+2026-04-25T16:08:59.317585Z [info     ] [MONITOR] LLM call SUCCESS     [chunks2skus.utils.llm_client] finish_reason=stop model=doubao-seed-2-0-pro-260215 response_length=2207
+2026-04-25T16:08:59.320642Z [info     ] [MONITOR] JSON parse SUCCESS   [chunks2skus.utils.llm_client] keys=['procedures']
+2026-04-25T16:08:59.344602Z [info     ] Procedural extraction complete [chunks2skus.extractors.procedural_extractor] chunk_id=报告-非洲调研报告（二）：中国新能源企业在赞比亚有什么机会？_chunk_001 skills_created=4
+2026-04-25T16:09:53.650363Z [info     ] [MONITOR] LLM call SUCCESS     [chunks2skus.utils.llm_client] finish_reason=stop model=doubao-seed-2-0-pro-260215 response_length=4695
+2026-04-25T16:09:53.651377Z [info     ] [MONITOR] JSON parse SUCCESS   [chunks2skus.utils.llm_client] keys=['new_labels', 'new_glossary', 'updated_glossary', 'new_relationships']
+2026-04-25T16:09:53.665551Z [info     ] Added new labels               [chunks2skus.extractors.relational_extractor] chunk_id=报告-非洲调研报告（二）：中国新能源企业在赞比亚有什么机会？_chunk_001 count=12
+2026-04-25T16:09:53.666547Z [info     ] Merged new glossary entries    [chunks2skus.extractors.relational_extractor] chunk_id=报告-非洲调研报告（二）：中国新能源企业在赞比亚有什么机会？_chunk_001 count=8
+2026-04-25T16:09:53.667050Z [info     ] Updated existing glossary entries [chunks2skus.extractors.relational_extractor] chunk_id=报告-非洲调研报告（二）：中国新能源企业在赞比亚有什么机会？_chunk_001 fallback_count=0 total_in_response=4 updated_count=4
+2026-04-25T16:09:53.669206Z [info     ] Merged new relationships       [chunks2skus.extractors.relational_extractor] chunk_id=报告-非洲调研报告（二）：中国新能源企业在赞比亚有什么机会？_chunk_001 count=19
+2026-04-25T16:09:53.675212Z [info     ] Relational extraction complete [chunks2skus.extractors.relational_extractor] chunk_id=报告-非洲调研报告（二）：中国新能源企业在赞比亚有什么机会？_chunk_001 labels=16 relationships=445 terms=274
+2026-04-25T16:10:47.685497Z [info     ] [MONITOR] LLM call SUCCESS     [chunks2skus.utils.llm_client] finish_reason=stop model=doubao-seed-2-0-pro-260215 response_length=7525
+2026-04-25T16:10:47.689602Z [warning  ] [MONITOR] All JSON parsing methods FAILED [chunks2skus.utils.llm_client] preview='{\n  "facts": [\n    {\n      "name": "赞比亚新能源调研基础信息",\n      "description": "本次聚焦中国新能源企业赞比亚市场机会的调研的基础属性信息",\n      "content_type": "json",\n      "content": {\n        "report_release_date": "2025-12-22",\n  ' text_length=7525
+2026-04-25T16:10:47.713433Z [warning  ] [MONITOR] JSON parse FAILED (not truncated), will retry [chunks2skus.utils.llm_client] response_preview='{\n  "facts": [\n    {\n      "name": "赞比亚新能源调研基础信息",\n      "description": "本次聚焦中国新能源企业赞比亚市场机会的调研的基础属性信息",\n      "content_type": "json",\n      "content": {\n        "report_release_date": "2025-12-22",\n        "survey_date": "2025年11月7日-12日",\n        "survey_location": "非洲赞比亚",\n        "survey_subjects"'
+2026-04-25T16:10:47.715899Z [info     ] [MONITOR] Retry 1/2            [chunks2skus.utils.llm_client]
+2026-04-25T16:10:47.716894Z [info     ] [MONITOR] Starting LLM call    [chunks2skus.utils.llm_client] max_tokens=64000 model=doubao-seed-2-0-pro-260215 prompt_length=11049 temperature=0.19999999999999998
+2026-04-25T16:12:44.080963Z [info     ] [MONITOR] LLM call SUCCESS     [chunks2skus.utils.llm_client] finish_reason=stop model=doubao-seed-2-0-pro-260215 response_length=6363
+2026-04-25T16:12:44.081972Z [info     ] [MONITOR] JSON parse SUCCESS on retry [chunks2skus.utils.llm_client] attempt=1
+2026-04-25T16:12:44.118495Z [info     ] Factual extraction complete    [chunks2skus.extractors.factual_extractor] chunk_id=报告-非洲调研报告（二）：中国新能源企业在赞比亚有什么机会？_chunk_001 skus_created=9
+2026-04-25T16:12:44.119998Z [info     ] Extracting meta knowledge      [chunks2skus.extractors.meta_extractor] chunk_id=报告-非洲调研报告（二）：中国新能源企业在赞比亚有什么机会？_chunk_001
+2026-04-25T16:12:44.122118Z [info     ] [MONITOR] Creating thread-local OpenAI client [chunks2skus.utils.llm_client] base_url=https://ark.cn-beijing.volces.com/api/v3 thread=ThreadPoolExecutor-9_0
+2026-04-25T16:12:44.122118Z [info     ] [MONITOR] Creating thread-local OpenAI client [chunks2skus.utils.llm_client] base_url=https://ark.cn-beijing.volces.com/api/v3 thread=ThreadPoolExecutor-9_1
+2026-04-25T16:12:45.594333Z [info     ] [MONITOR] Starting LLM call    [chunks2skus.utils.llm_client] max_tokens=128000 model=doubao-seed-2-0-pro-260215 prompt_length=40777 temperature=0.2
+2026-04-25T16:12:45.595337Z [info     ] [MONITOR] Starting LLM call    [chunks2skus.utils.llm_client] max_tokens=32000 model=doubao-seed-2-0-pro-260215 prompt_length=18990 temperature=0.7
+2026-04-25T16:15:02.769569Z [info     ] [MONITOR] LLM call SUCCESS     [chunks2skus.utils.llm_client] finish_reason=stop model=doubao-seed-2-0-pro-260215 response_length=10817
+2026-04-25T16:17:38.776278Z [info     ] [MONITOR] LLM call SUCCESS     [chunks2skus.utils.llm_client] finish_reason=stop model=doubao-seed-2-0-pro-260215 response_length=35628
+2026-04-25T16:24:03.159262Z [info     ] Updated eureka.md              [chunks2skus.extractors.meta_extractor] chunk_id=报告-非洲调研报告（二）：中国新能源企业在赞比亚有什么机会？_chunk_001 new_size=10817 old_size=10404
+2026-04-25T16:24:03.178960Z [info     ] Meta extraction complete       [chunks2skus.extractors.meta_extractor] chunk_id=报告-非洲调研报告（二）：中国新能源企业在赞比亚有什么机会？_chunk_001 eureka_chars=10817 mapping_chars=35628
+2026-04-25T16:24:03.186999Z [info     ] Chunk processed                [chunks2skus.pipeline] chunk_id=报告-非洲调研报告（二）：中国新能源企业在赞比亚有什么机会？_chunk_001 new_skus=15 total_skus=606
+2026-04-25T16:24:03.191084Z [info     ] Extraction pipeline complete   [chunks2skus.pipeline] chunks_processed=66 duration_seconds=2880.4 total_characters=4953824 total_skus=606
