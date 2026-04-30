@@ -485,6 +485,96 @@
         "报告-则鸣新能源调研报告：怎么样做好微电网？_chunk_001"
       ],
       "confidence": 1.0
+    },
+    {
+      "subject": "协鑫虚拟电厂",
+      "predicate": "example-of",
+      "object": "负荷型虚拟电厂",
+      "source_chunks": [
+        "报告-协鑫能科调研报告：江苏最大虚拟电厂是怎么做成的？_chunk_001"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "subject": "辅助服务市场",
+      "predicate": "superset-of",
+      "object": "填谷辅助服务",
+      "source_chunks": [
+        "报告-协鑫能科调研报告：江苏最大虚拟电厂是怎么做成的？_chunk_001"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "subject": "削峰填谷",
+      "predicate": "superset-of",
+      "object": "填谷辅助服务",
+      "source_chunks": [
+        "报告-协鑫能科调研报告：江苏最大虚拟电厂是怎么做成的？_chunk_001"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "subject": "储能系统",
+      "predicate": "superset-of",
+      "object": "蓄冷罐",
+      "source_chunks": [
+        "报告-协鑫能科调研报告：江苏最大虚拟电厂是怎么做成的？_chunk_001"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "subject": "分布式光伏",
+      "predicate": "causes",
+      "object": "填谷辅助服务",
+      "source_chunks": [
+        "报告-协鑫能科调研报告：江苏最大虚拟电厂是怎么做成的？_chunk_001"
+      ],
+      "confidence": 0.8
+    },
+    {
+      "subject": "虚拟电厂运营商",
+      "predicate": "has-a",
+      "object": "资源编码体系",
+      "source_chunks": [
+        "报告-协鑫能科调研报告：江苏最大虚拟电厂是怎么做成的？_chunk_001"
+      ],
+      "confidence": 0.8
+    },
+    {
+      "subject": "光储充协同",
+      "predicate": "enables",
+      "object": "填谷辅助服务",
+      "source_chunks": [
+        "报告-协鑫能科调研报告：江苏最大虚拟电厂是怎么做成的？_chunk_001"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "subject": "虚拟电厂运营商",
+      "predicate": "related-to",
+      "object": "填谷辅助服务",
+      "source_chunks": [
+        "报告-协鑫能科调研报告：江苏最大虚拟电厂是怎么做成的？_chunk_001"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "subject": "负荷型虚拟电厂",
+      "predicate": "related-to",
+      "object": "填谷辅助服务",
+      "source_chunks": [
+        "报告-协鑫能科调研报告：江苏最大虚拟电厂是怎么做成的？_chunk_001"
+      ],
+      "confidence": 0.8
+    },
+    {
+      "subject": "基线负荷",
+      "predicate": "related-to",
+      "object": "填谷辅助服务",
+      "source_chunks": [
+        "报告-协鑫能科调研报告：江苏最大虚拟电厂是怎么做成的？_chunk_001"
+      ],
+      "confidence": 1.0
     }
   ]
 }

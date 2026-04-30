@@ -1,15 +1,16 @@
 {
   "created_at": "2026-04-30T23:58:12.790314",
-  "updated_at": "2026-05-01T00:27:29.990193",
-  "total_skus": 85,
-  "total_characters": 97584,
+  "updated_at": "2026-05-01T00:30:54.063111",
+  "total_skus": 103,
+  "total_characters": 109198,
   "chunks_processed": [
     "报告-《关于优化集中式新能源发电企业市场报价的通知（试行）》深度解读与战略分析_chunk_001",
     "报告-乌克兰新能源市场机会调研报告_chunk_001",
     "报告-兆瓦云调研报告：虚拟电厂的下一城在哪里？_chunk_001",
     "报告-三一硅能非洲调研报告：在非洲如何做矿山微电网？_chunk_001",
     "报告-固德威一线调研报告：城市级虚拟电厂怎么做？_chunk_001",
-    "报告-则鸣新能源调研报告：怎么样做好微电网？_chunk_001"
+    "报告-则鸣新能源调研报告：怎么样做好微电网？_chunk_001",
+    "报告-协鑫能科调研报告：江苏最大虚拟电厂是怎么做成的？_chunk_001"
   ],
   "skus": [
     {
@@ -853,18 +854,198 @@
       "confidence": null
     },
     {
+      "sku_id": "sku_060",
+      "name": "协鑫虚拟电厂聚合规模",
+      "classification": "factual",
+      "path": "factual/sku_060",
+      "source_chunk": "报告-协鑫能科调研报告：江苏最大虚拟电厂是怎么做成的？_chunk_001",
+      "character_count": 85,
+      "description": "协鑫虚拟电厂聚合可调节负荷资源600MW，约占江苏省总量的30%，规模位居全省第一，为其参与电力辅助服务提供了充足的可调资源基础。",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_061",
+      "name": "江苏光伏装机容量及占比",
+      "classification": "factual",
+      "path": "factual/sku_061",
+      "source_chunk": "报告-协鑫能科调研报告：江苏最大虚拟电厂是怎么做成的？_chunk_001",
+      "character_count": 114,
+      "description": "截至2025年5月，江苏光伏装机突破7400万千瓦，占全省总电力装机的34%，导致午间光伏大发时电力过剩，需通过填谷消纳。",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_062",
+      "name": "填谷辅助服务原理",
+      "classification": "factual",
+      "path": "factual/sku_062",
+      "source_chunk": "报告-协鑫能科调研报告：江苏最大虚拟电厂是怎么做成的？_chunk_001",
+      "character_count": 122,
+      "description": "填谷辅助服务是在电力供大于求时鼓励增加用电以平衡系统，虚拟电厂聚合负荷参与并获得服务费，再与负荷企业分成。",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_063",
+      "name": "苏州吴中区能源中心可调资源参数",
+      "classification": "factual",
+      "path": "factual/sku_063",
+      "source_chunk": "报告-协鑫能科调研报告：江苏最大虚拟电厂是怎么做成的？_chunk_001",
+      "character_count": 185,
+      "description": "苏州吴中区某集中供能中心的可调制冷系统包含5台1800RT离心式冷水机组、1台850RT螺杆式冷水机组和2个63MWh水蓄冷储罐，年用电量约600万kWh，可调节能力达7MW。",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_064",
+      "name": "能源中心单次填谷响应收益及分成",
+      "classification": "factual",
+      "path": "factual/sku_064",
+      "source_chunk": "报告-协鑫能科调研报告：江苏最大虚拟电厂是怎么做成的？_chunk_001",
+      "character_count": 223,
+      "description": "2025年3月6日，该能源中心参与1.6MW填谷响应，中标价0.989元/kWh，5小时增用电8000度，总收益7900元，按2:8分成，运营商得1600元，企业得6300元，全年类似服务累计约50万元。",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_065",
+      "name": "协鑫“仓颉”能源管理平台",
+      "classification": "factual",
+      "path": "factual/sku_065",
+      "source_chunk": "报告-协鑫能科调研报告：江苏最大虚拟电厂是怎么做成的？_chunk_001",
+      "character_count": 160,
+      "description": "协鑫能科自2012年建设的综合能源管理平台，管理负荷近千家、总容量近2000万kVA，具备电水气多能源监测和光储运营管理功能，为虚拟电厂提供数据积累。",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_066",
+      "name": "协鑫灵活资源聚合平台",
+      "classification": "factual",
+      "path": "factual/sku_066",
+      "source_chunk": "报告-协鑫能科调研报告：江苏最大虚拟电厂是怎么做成的？_chunk_001",
+      "character_count": 120,
+      "description": "自2015年建设的虚拟电厂负荷管理调度平台，具备资源分类、需求发布、执行分析、收益预测、调度执行跟踪等功能，实现可调负荷的精细化运营。",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_067",
+      "name": "协鑫虚拟电厂用户识别码编码体系",
+      "classification": "factual",
+      "path": "factual/sku_067",
+      "source_chunk": "报告-协鑫能科调研报告：江苏最大虚拟电厂是怎么做成的？_chunk_001",
+      "character_count": 293,
+      "description": "协鑫虚拟电厂为每个接入用户分配19位唯一编码，包含地区、名称、可参与服务种类、填谷/削峰容量、用户类型及调节时长等信息，实现用户级精细化管理。",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_068",
+      "name": "协鑫虚拟电厂设备识别码编码体系",
+      "classification": "factual",
+      "path": "factual/sku_068",
+      "source_chunk": "报告-协鑫能科调研报告：江苏最大虚拟电厂是怎么做成的？_chunk_001",
+      "character_count": 271,
+      "description": "每个可调设备拥有12位唯一编码，涵盖地区、响应类型、用户类型、设备类型等信息，实现设备级精细分类与快速调度匹配。",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_069",
+      "name": "服装厂光储充虚拟电厂收益案例",
+      "classification": "factual",
+      "path": "factual/sku_069",
+      "source_chunk": "报告-协鑫能科调研报告：江苏最大虚拟电厂是怎么做成的？_chunk_001",
+      "character_count": 671,
+      "description": "协鑫为某服装厂提供光储充一体化服务并聚合参与虚拟电厂，通过光伏减少出力、储能充电、充电桩调度及生产负荷调节等方式获得多种收益，展示虚拟电厂嵌入基础能源业务的增值效应。",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_070",
+      "name": "协鑫能科业务规模及虚拟电厂战略定位",
+      "classification": "factual",
+      "path": "factual/sku_070",
+      "source_chunk": "报告-协鑫能科调研报告：江苏最大虚拟电厂是怎么做成的？_chunk_001",
+      "character_count": 261,
+      "description": "协鑫能科是全国最大民营电力投资商，管理电源超3000万kW，清洁能源超70%，服务客户6000余家，虚拟电厂作为链接新能源资产与综合能源服务的工具，实施资产与服务双轮驱动。",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_071",
+      "name": "协鑫虚拟电厂发展历程",
+      "classification": "factual",
+      "path": "factual/sku_071",
+      "source_chunk": "报告-协鑫能科调研报告：江苏最大虚拟电厂是怎么做成的？_chunk_001",
+      "character_count": 158,
+      "description": "协鑫虚拟电厂自2012年起从聚合灵活性资源起步，逐步参与需求侧管理、需求响应，至2021-2023年成立专业团队开展可调负荷辅助服务市场研究，积累了深厚经验。",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_072",
+      "name": "虚拟电厂参与填谷服务的典型执行流程",
+      "classification": "factual",
+      "path": "factual/sku_072",
+      "source_chunk": "报告-协鑫能科调研报告：江苏最大虚拟电厂是怎么做成的？_chunk_001",
+      "character_count": 285,
+      "description": "协鑫虚拟电厂执行填谷服务的标准化流程：预置方案、响应需求、邀约确认、申报执行、跟踪评估，并基于基线负荷计算响应量，确保与电网需求精准匹配。",
+      "confidence": null
+    },
+    {
+      "sku_id": "skill_025",
+      "name": "vpp-valley-filling-operation",
+      "classification": "procedural",
+      "path": "procedural/skill_025",
+      "source_chunk": "报告-协鑫能科调研报告：江苏最大虚拟电厂是怎么做成的？_chunk_001",
+      "character_count": 916,
+      "description": "当虚拟电厂收到电网填谷需求时，执行从需求匹配、负荷邀约、申报、实时调度到结算分成的完整流程。",
+      "confidence": null
+    },
+    {
+      "sku_id": "skill_026",
+      "name": "vpp-resource-coding-system",
+      "classification": "procedural",
+      "path": "procedural/skill_026",
+      "source_chunk": "报告-协鑫能科调研报告：江苏最大虚拟电厂是怎么做成的？_chunk_001",
+      "character_count": 850,
+      "description": "为虚拟电厂聚合的负荷用户和可调设备建立统一编码体系，实现高效分类、检索和调度管理。",
+      "confidence": null
+    },
+    {
+      "sku_id": "skill_027",
+      "name": "baseline-load-calculation-and-response-assessment",
+      "classification": "procedural",
+      "path": "procedural/skill_027",
+      "source_chunk": "报告-协鑫能科调研报告：江苏最大虚拟电厂是怎么做成的？_chunk_001",
+      "character_count": 538,
+      "description": "在电力需求响应或辅助服务后，根据日期类型选用不同方法计算基线负荷，从而确定填谷或削峰响应量。",
+      "confidence": null
+    },
+    {
+      "sku_id": "skill_028",
+      "name": "solar-storage-charging-vpp-participation",
+      "classification": "procedural",
+      "path": "procedural/skill_028",
+      "source_chunk": "报告-协鑫能科调研报告：江苏最大虚拟电厂是怎么做成的？_chunk_001",
+      "character_count": 1127,
+      "description": "指导分布式光伏、用户侧储能和充电桩协同参与虚拟电厂填谷服务，以经济性最优的方式调度并计算收益。",
+      "confidence": null
+    },
+    {
+      "sku_id": "skill_029",
+      "name": "embed-vpp-into-energy-services",
+      "classification": "procedural",
+      "path": "procedural/skill_029",
+      "source_chunk": "报告-协鑫能科调研报告：江苏最大虚拟电厂是怎么做成的？_chunk_001",
+      "character_count": 829,
+      "description": "将虚拟电厂功能嵌入现有能源服务业务，利用已有客户基础聚合负荷，通过增值服务突破虚拟电厂独立盈利难题。",
+      "confidence": null
+    },
+    {
       "sku_id": "relational-knowledge-base",
       "name": "relational-knowledge-base",
       "classification": "relational",
       "path": "relational",
       "source_chunk": "aggregated",
-      "character_count": 49116,
+      "character_count": 53522,
       "description": "Domain label hierarchy and terminology glossary",
       "confidence": null
     }
   ],
-  "factual_count": 59,
+  "factual_count": 72,
   "relational_count": 1,
-  "procedural_count": 24,
+  "procedural_count": 29,
   "meta_count": 1
 }
