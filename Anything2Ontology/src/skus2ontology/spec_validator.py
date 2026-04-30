@@ -38,7 +38,7 @@ CHECKS = {
     ),
     # Fix 4: space-separated refs should be newline-separated
     "sku_space_concat": (
-        r"skus/(?:factual|procedural|relational)/(?:sku|skill)_\d+\s+skus/",
+        r"skus/(?:factual|procedural|relational)/(?:sku|skill)_\d+[ \t]+skus/",
         "Fix 4: space-separated SKU refs on same line",
     ),
     # Fix 5: unexpanded SKU ranges after _expand_sku_ranges
