@@ -1,2 +1,6 @@
 2026-04-30T14:48:24.672818Z [info     ] Starting spec chatbot          [skus2ontology.chatbot] max_rounds=5 phase2_only=True
 2026-04-30T14:48:24.674335Z [info     ] Built SKU index summary        [skus2ontology.chatbot] chars=11242 sku_count=177
+2026-04-30T14:50:54.816434Z [info     ] Phase 2 anchor replacement complete [skus2ontology.chatbot] draft_chars=5532 final_chars=6087
+2026-04-30T14:50:54.817473Z [info     ] unwrap_resolved_anchors        [skus2ontology.chatbot] after=0 before=0 unwrapped=0
+2026-04-30T14:50:54.820693Z [info     ] Saved final spec (phase2-only) [skus2ontology.chatbot] chars=6087
+2026-04-30T14:50:54.823139Z [info     ] Saved chat log                 [skus2ontology.pipeline] confirmed=False path=..\战略分析\输出\ontology\chat_log.json rounds=0
