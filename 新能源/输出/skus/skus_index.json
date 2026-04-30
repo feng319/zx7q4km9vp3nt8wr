@@ -1,8 +1,8 @@
 {
   "created_at": "2026-04-30T23:58:12.790314",
-  "updated_at": "2026-05-01T00:49:56.621274",
-  "total_skus": 164,
-  "total_characters": 168413,
+  "updated_at": "2026-05-01T00:53:47.719185",
+  "total_skus": 176,
+  "total_characters": 182442,
   "chunks_processed": [
     "报告-《关于优化集中式新能源发电企业市场报价的通知（试行）》深度解读与战略分析_chunk_001",
     "报告-乌克兰新能源市场机会调研报告_chunk_001",
@@ -14,7 +14,8 @@
     "报告-固德威江西德安县调研报告：光储充一体化项目怎么做？_chunk_001",
     "报告-奇峰聚能调研报告：飞轮储能怎么做？_chunk_001",
     "报告-国海绿能一线调研报告：重卡换电站怎么做？_chunk_001",
-    "报告-安悦节能调研报告：怎样做冷热电综合能源服务？_chunk_001"
+    "报告-安悦节能调研报告：怎样做冷热电综合能源服务？_chunk_001",
+    "报告-广林汇智调研报告：在西北地区怎么做虚拟电厂？_chunk_001"
   ],
   "skus": [
     {
@@ -1648,18 +1649,138 @@
       "confidence": null
     },
     {
+      "sku_id": "sku_138",
+      "name": "广林汇智公司及虚拟电厂概况",
+      "classification": "factual",
+      "path": "factual/sku_138",
+      "source_chunk": "报告-广林汇智调研报告：在西北地区怎么做虚拟电厂？_chunk_001",
+      "character_count": 293,
+      "description": "广林汇智作为国内虚拟电厂领域开山企业之一，展示了其在西北地区的发展规模、合作伙伴和调节能力，其聚合规模和调节能力在国内极为少见。",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_139",
+      "name": "西北地区发展负荷型虚拟电厂的土壤",
+      "classification": "factual",
+      "path": "factual/sku_139",
+      "source_chunk": "报告-广林汇智调研报告：在西北地区怎么做虚拟电厂？_chunk_001",
+      "character_count": 325,
+      "description": "西北电网的两大特征——高新能源渗透率的送端电网和近年高耗能企业西迁——共同为负荷型虚拟电厂提供了生长条件。",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_140",
+      "name": "虚拟电厂的三代划分及广林汇智的布局",
+      "classification": "factual",
+      "path": "factual/sku_140",
+      "source_chunk": "报告-广林汇智调研报告：在西北地区怎么做虚拟电厂？_chunk_001",
+      "character_count": 339,
+      "description": "虚拟电厂按业态分为邀约型、市场型和跨空间自主调度型三代，广林汇智当前集中在一、二代，并向第二代大规模应用推进。",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_141",
+      "name": "调峰辅助服务参与流程与收益计算",
+      "classification": "factual",
+      "path": "factual/sku_141",
+      "source_chunk": "报告-广林汇智调研报告：在西北地区怎么做虚拟电厂？_chunk_001",
+      "character_count": 442,
+      "description": "以负荷型虚拟电厂参与调峰辅助服务为例，展示了标准化流程和经济收益模型，说明为何高耗能企业乐于被聚合。",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_142",
+      "name": "调峰辅助服务与需求侧响应的区别",
+      "classification": "factual",
+      "path": "factual/sku_142",
+      "source_chunk": "报告-广林汇智调研报告：在西北地区怎么做虚拟电厂？_chunk_001",
+      "character_count": 234,
+      "description": "两类邀约型虚拟电厂盈利模式在牵头部门、应用范围和作用机理上存在明确差异，调峰更面向全网，需求侧响应更侧重配网侧。",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_143",
+      "name": "第二代虚拟电厂参与电力现货市场的模式",
+      "classification": "factual",
+      "path": "factual/sku_143",
+      "source_chunk": "报告-广林汇智调研报告：在西北地区怎么做虚拟电厂？_chunk_001",
+      "character_count": 203,
+      "description": "第二代虚拟电厂通过与电力现货市场互动，将负荷可调节能力作为低成本虚拟储能，实现购电成本优化并分享收益。",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_144",
+      "name": "国家政策推动调峰服务费用向现货交易转移",
+      "classification": "factual",
+      "path": "factual/sku_144",
+      "source_chunk": "报告-广林汇智调研报告：在西北地区怎么做虚拟电厂？_chunk_001",
+      "character_count": 200,
+      "description": "2024年新规设定了调峰服务价格上限，且趋势上要求相关费用逐步纳入电力现货市场，促使虚拟电厂盈利模式必须向市场型升级。",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_145",
+      "name": "负荷型虚拟电厂聚合高耗能企业的关键方法",
+      "classification": "factual",
+      "path": "factual/sku_145",
+      "source_chunk": "报告-广林汇智调研报告：在西北地区怎么做虚拟电厂？_chunk_001",
+      "character_count": 280,
+      "description": "成功聚合高耗能企业的三个关键：算清收益账、深度梳理生产流程、具备合法的市场主体身份，三者缺一不可。",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_146",
+      "name": "虚拟电厂的核心意义与未来趋势",
+      "classification": "factual",
+      "path": "factual/sku_146",
+      "source_chunk": "报告-广林汇智调研报告：在西北地区怎么做虚拟电厂？_chunk_001",
+      "character_count": 284,
+      "description": "虚拟电厂像能源领域的“深加工”工具，通过改变资产收益模型使新能源等各类能源资产增值，在电力市场化背景下将成为刚需。",
+      "confidence": null
+    },
+    {
+      "sku_id": "skill_043",
+      "name": "virtual-plant-peak-regulation-workflow",
+      "classification": "procedural",
+      "path": "procedural/skill_043",
+      "source_chunk": "报告-广林汇智调研报告：在西北地区怎么做虚拟电厂？_chunk_001",
+      "character_count": 876,
+      "description": "参与调峰辅助服务：电网发布调峰需求后，聚合负荷企业资源参与响应并获取收益的完整流程。",
+      "confidence": null
+    },
+    {
+      "sku_id": "skill_044",
+      "name": "virtual-plant-spot-market-participation",
+      "classification": "procedural",
+      "path": "procedural/skill_044",
+      "source_chunk": "报告-广林汇智调研报告：在西北地区怎么做虚拟电厂？_chunk_001",
+      "character_count": 992,
+      "description": "参与电力现货市场：通过预测电价并主动调整用电计划，降低购电成本并获取收益的操作流程。",
+      "confidence": null
+    },
+    {
+      "sku_id": "skill_045",
+      "name": "aggregate-energy-intensive-loads",
+      "classification": "procedural",
+      "path": "procedural/skill_045",
+      "source_chunk": "报告-广林汇智调研报告：在西北地区怎么做虚拟电厂？_chunk_001",
+      "character_count": 1174,
+      "description": "聚合高耗能企业：通过算清账、梳理生产流程等手段将高耗能工业负荷整合为虚拟电厂可调资源的操作指南。",
+      "confidence": null
+    },
+    {
       "sku_id": "relational-knowledge-base",
       "name": "relational-knowledge-base",
       "classification": "relational",
       "path": "relational",
       "source_chunk": "aggregated",
-      "character_count": 85212,
+      "character_count": 93599,
       "description": "Domain label hierarchy and terminology glossary",
       "confidence": null
     }
   ],
-  "factual_count": 120,
+  "factual_count": 129,
   "relational_count": 1,
-  "procedural_count": 42,
+  "procedural_count": 45,
   "meta_count": 1
 }

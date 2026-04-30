@@ -1007,6 +1007,87 @@
         "报告-安悦节能调研报告：怎样做冷热电综合能源服务？_chunk_001"
       ],
       "confidence": 0.6
+    },
+    {
+      "subject": "新能源渗透率",
+      "predicate": "causes",
+      "object": "消纳缺口",
+      "source_chunks": [
+        "报告-广林汇智调研报告：在西北地区怎么做虚拟电厂？_chunk_001"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "subject": "新能源渗透率",
+      "predicate": "causes",
+      "object": "安全缺口",
+      "source_chunks": [
+        "报告-广林汇智调研报告：在西北地区怎么做虚拟电厂？_chunk_001"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "subject": "消纳缺口",
+      "predicate": "enables",
+      "object": "虚拟电厂",
+      "source_chunks": [
+        "报告-广林汇智调研报告：在西北地区怎么做虚拟电厂？_chunk_001"
+      ],
+      "confidence": 0.8
+    },
+    {
+      "subject": "安全缺口",
+      "predicate": "enables",
+      "object": "虚拟电厂",
+      "source_chunks": [
+        "报告-广林汇智调研报告：在西北地区怎么做虚拟电厂？_chunk_001"
+      ],
+      "confidence": 0.8
+    },
+    {
+      "subject": "邀约型虚拟电厂",
+      "predicate": "related-to",
+      "object": "调峰辅助服务",
+      "source_chunks": [
+        "报告-广林汇智调研报告：在西北地区怎么做虚拟电厂？_chunk_001"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "subject": "邀约型虚拟电厂",
+      "predicate": "related-to",
+      "object": "需求侧响应",
+      "source_chunks": [
+        "报告-广林汇智调研报告：在西北地区怎么做虚拟电厂？_chunk_001"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "subject": "市场型虚拟电厂",
+      "predicate": "related-to",
+      "object": "电力现货市场",
+      "source_chunks": [
+        "报告-广林汇智调研报告：在西北地区怎么做虚拟电厂？_chunk_001"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "subject": "调峰辅助服务",
+      "predicate": "superset-of",
+      "object": "填谷辅助服务",
+      "source_chunks": [
+        "报告-广林汇智调研报告：在西北地区怎么做虚拟电厂？_chunk_001"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "subject": "《关于建立健全电力辅助服务市场价格机制的通知》",
+      "predicate": "regulates",
+      "object": "调峰辅助服务费",
+      "source_chunks": [
+        "报告-广林汇智调研报告：在西北地区怎么做虚拟电厂？_chunk_001"
+      ],
+      "confidence": 1.0
     }
   ]
 }

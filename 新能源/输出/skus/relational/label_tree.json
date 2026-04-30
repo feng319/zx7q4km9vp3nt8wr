@@ -58,6 +58,23 @@
                       "children": []
                     }
                   ]
+                },
+                {
+                  "name": "按发展阶段",
+                  "children": [
+                    {
+                      "name": "邀约型虚拟电厂",
+                      "children": []
+                    },
+                    {
+                      "name": "市场型虚拟电厂",
+                      "children": []
+                    },
+                    {
+                      "name": "跨空间自主调度型虚拟电厂",
+                      "children": []
+                    }
+                  ]
                 }
               ]
             }
