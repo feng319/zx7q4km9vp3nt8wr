@@ -83,15 +83,18 @@ class OntologyPipeline:
         assembler = OntologyAssembler(self.skus_dir, self.ontology_dir)
         return assembler.assemble()
 
-    def chatbot_only(self) -> str:
+    def chatbot_only(self, phase2_only: bool = False) -> str:
         """
         Run only the chatbot step.
         Ontology must already exist with mapping.md.
 
+        Args:
+            phase2_only: If True, skip Phase 1 and only run Phase 2 anchor replacement.
+
         Returns:
             Spec content string.
         """
-        chatbot = SpecChatbot(self.ontology_dir)
+        chatbot = SpecChatbot(self.ontology_dir, phase2_only=phase2_only)
         spec = chatbot.run()
 
         # Save chat log

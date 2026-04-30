@@ -348,7 +348,42 @@ class SpecChatbot:
         Returns:
             The final spec content.
         """
-        logger.info("Starting spec chatbot", max_rounds=self.max_rounds)
+        logger.info("Starting spec chatbot", max_rounds=self.max_rounds, phase2_only=self.phase2_only)
+
+        # --- Phase 2 only: load existing spec.md and run anchor replacement ---
+        if self.phase2_only:
+            spec_path = self.ontology_dir / "spec.md"
+            if not spec_path.exists():
+                logger.error("spec.md not found for --phase2-only", path=str(spec_path))
+                click.echo("Error: spec.md not found in ontology directory.")
+                return ""
+            spec_draft = spec_path.read_text(encoding="utf-8")
+            click.echo(f"Loaded existing spec.md ({len(spec_draft)} chars)")
+
+            click.echo(self.ui["anchoring"])
+            draft_anchor_count = len(ANCHOR_PATTERN.findall(spec_draft))
+            click.echo(self.ui["anchor_count"].format(count=draft_anchor_count))
+            spec_final = self._anchor_references(spec_draft)
+
+            if not spec_final:
+                spec_final = spec_draft
+                logger.warning("Phase 2 anchor replacement failed, using draft with anchors")
+                click.echo(self.ui["anchor_degraded"])
+
+            before_unwrap = len(ANCHOR_PATTERN.findall(spec_final))
+            spec_final = self._unwrap_resolved_anchors(spec_final)
+            after_unwrap = len(ANCHOR_PATTERN.findall(spec_final))
+            logger.info("unwrap_resolved_anchors", before=before_unwrap, after=after_unwrap, unwrapped=before_unwrap - after_unwrap)
+
+            spec_final = self._normalize_reference_format(spec_final)
+            spec_final = self._expand_sku_ranges(spec_final)
+            spec_final = self._normalize_reference_format(spec_final)
+            spec_final = self._dedup_sku_refs(spec_final)
+
+            spec_path.write_text(spec_final, encoding="utf-8")
+            logger.info("Saved final spec (phase2-only)", chars=len(spec_final))
+            click.echo(self.ui["spec_saved"].format(path=spec_path))
+            return spec_final
 
         # Build phase 1 context
         system_prompt = self._build_system_prompt()
