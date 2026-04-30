@@ -1,0 +1,25 @@
+{
+  "core_info": "国内持有投资性地产最多的上市公司，截至2018年底投资性地产规模达785亿元，占总资产70%，商业模式本质为家具大卖场，实际更接近房地产公司",
+  "mode_comparison": [
+    {
+      "comparison_dimension": "物业归属",
+      "self_operation_mode": "自有/租赁",
+      "entrusted_management_mode": "合作方所有"
+    },
+    {
+      "comparison_dimension": "收入来源",
+      "self_operation_mode": "租金与管理费",
+      "entrusted_management_mode": "品牌冠名费、管理咨询费等"
+    },
+    {
+      "comparison_dimension": "成本结构",
+      "self_operation_mode": "承担物业成本",
+      "entrusted_management_mode": "无拿地/租金成本"
+    }
+  ],
+  "core_data": [
+    "1996年从生产环节转型为渠道商，盈利模式为收取品牌费和入驻租金",
+    "家居产业链上游原材料毛利率约20%，中游制造商30%-40%，下游渠道商高达70%，渠道商话语权最强",
+    "截至2019年初，拥有80家自营店和228家委托管理店，2018年负债率59%，净负债率62%，投资性房产公允价值变动收益占税前利润20%-40%"
+  ]
+}

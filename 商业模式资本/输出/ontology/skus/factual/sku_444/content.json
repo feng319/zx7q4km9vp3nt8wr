@@ -1,0 +1,9 @@
+{
+  "investment_amount": 50000000,
+  "peak_annual_profit": 70000000,
+  "later_annual_profit_range": [
+    20000000,
+    25000000
+  ],
+  "final_result": "未达到上市要求，无法成功上市"
+}

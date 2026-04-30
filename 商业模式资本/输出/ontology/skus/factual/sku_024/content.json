@@ -1,0 +1,31 @@
+{
+  "core_definition": "OP合伙人不承担企业法律风险，但需承担经营责任，基于增量利润或减亏进行利益分配，本质为激励机制，是永辉与海底捞成功的核心——机制创新",
+  "bonus_calculation_rule": "奖金包=利润增量/减亏额的30%，单店奖金包上限30万元",
+  "rank_bonus_distribution": [
+    {
+      "rank": "店长/店总",
+      "distribution_ratio": "8%",
+      "example_amount_330000_profit": "8000元"
+    },
+    {
+      "rank": "经理级",
+      "distribution_ratio": "9%",
+      "example_amount_330000_profit": "9000元"
+    },
+    {
+      "rank": "课长级",
+      "distribution_ratio": "13%",
+      "example_amount_330000_profit": "13000元"
+    },
+    {
+      "rank": "其他员工（OP）",
+      "distribution_ratio": "70%",
+      "example_amount_330000_profit": "70000元"
+    }
+  ],
+  "implementation_result": [
+    "果蔬损耗率从行业平均30%以上降至4%-5%",
+    "基层组织拥有招聘解雇权，自主优化人员配置避免人浮于事",
+    "年均培养1500名课长，构成经营团队核心力量"
+  ]
+}

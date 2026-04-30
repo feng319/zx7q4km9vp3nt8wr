@@ -1,0 +1,30 @@
+{
+  "core_info": "男装标准化程度高，适合规模化扩张，海澜之家是托管模式的典型代表，2019年剥离女装业务全面聚焦男装，生产环节采用轻资产外包模式",
+  "mode_comparison": [
+    {
+      "comparison_dimension": "管理权",
+      "trusteeship_mode": "企业统一管理",
+      "ordinary_franchise_mode": "加盟商自主管理"
+    },
+    {
+      "comparison_dimension": "扩张速度",
+      "trusteeship_mode": "快",
+      "ordinary_franchise_mode": "慢"
+    },
+    {
+      "comparison_dimension": "滞销产品处理",
+      "trusteeship_mode": "企业承担",
+      "ordinary_franchise_mode": "加盟商承担"
+    },
+    {
+      "comparison_dimension": "终端定价权",
+      "trusteeship_mode": "企业掌握",
+      "ordinary_franchise_mode": "加盟商掌握"
+    }
+  ],
+  "core_mechanism": [
+    "所有权与经营权分离：门店所有权归加盟商，经营权归海澜之家，加盟商承担装修、租金、工资等固定费用，企业负责日常运营",
+    "资金占用：加盟商无需缴纳加盟费，但需支付100万元保证金（5年合同期无违约无息退还），截至2018年底门店6673家，保证金规模约60亿元",
+    "存货管理：门店存货归属海澜之家，60%销售收入可退货，存货跌价风险转移至上游供应商"
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "stage_division": [
+    {
+      "stage": "初级创业",
+      "core_ability": "基础业务搭建能力",
+      "financial_application": "摘别人果实，依托成熟模式降低试错成本"
+    },
+    {
+      "stage": "中级创业",
+      "core_ability": "行业资源整合能力",
+      "financial_application": "参股托管+逐步并购，撬动外部资金扩张"
+    },
+    {
+      "stage": "高级创业",
+      "core_ability": "市场垄断能力",
+      "financial_application": "直接抢占市场，依托资本优势整合产业链"
+    },
+    {
+      "stage": "终极创业",
+      "core_ability": "行业规则定义能力",
+      "financial_application": "行业深度实战，构建生态级壁垒"
+    }
+  ],
+  "typical_case_library": [
+    "大健康行业：参股托管+逐步并购策略",
+    "小酒馆行业：海伦斯上市典型案例",
+    "连续创业案例：陆正耀的神州租车、神州专车、瑞幸咖啡创业历程",
+    "资本模型案例：瀚X系市场拓展金融模型、海航系杠杆收购方案、赵薇四两拨千斤极限杠杆操作"
+  ]
+}
