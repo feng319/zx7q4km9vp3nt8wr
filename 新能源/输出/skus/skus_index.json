@@ -1,8 +1,8 @@
 {
   "created_at": "2026-04-30T23:58:12.790314",
-  "updated_at": "2026-05-01T01:18:53.387407",
-  "total_skus": 264,
-  "total_characters": 264104,
+  "updated_at": "2026-05-01T01:23:41.668862",
+  "total_skus": 274,
+  "total_characters": 275180,
   "chunks_processed": [
     "报告-《关于优化集中式新能源发电企业市场报价的通知（试行）》深度解读与战略分析_chunk_001",
     "报告-乌克兰新能源市场机会调研报告_chunk_001",
@@ -22,7 +22,8 @@
     "报告-电管家一线调研报告：微电网怎么赚钱？_chunk_001",
     "报告-深石集团调研报告：房地产企业怎样做新能源？_chunk_001",
     "报告-河钢集团一线调研报告：钢铁行业存在哪些双碳机会？_chunk_001",
-    "报告-苏州工业园区的虚拟电厂调研报告：怎样做区域级虚拟电厂_chunk_001"
+    "报告-苏州工业园区的虚拟电厂调研报告：怎样做区域级虚拟电厂_chunk_001",
+    "报告-紫电捷控调研报告：交直流微电网怎么做？_chunk_001"
   ],
   "skus": [
     {
@@ -2656,18 +2657,118 @@
       "confidence": null
     },
     {
+      "sku_id": "sku_195",
+      "name": "北京紫电捷控电气有限公司概况",
+      "classification": "factual",
+      "path": "factual/sku_195",
+      "source_chunk": "报告-紫电捷控调研报告：交直流微电网怎么做？_chunk_001",
+      "character_count": 226,
+      "description": "北京紫电捷控电气有限公司是一家专注于电力电子技术应用的国家级高新技术企业，主营交直流微电网建设与电能质量优化，曾参与多项行业标准制定并完成首都首个光储直柔微电网项目。",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_196",
+      "name": "交直流微电网的定义",
+      "classification": "factual",
+      "path": "factual/sku_196",
+      "source_chunk": "报告-紫电捷控调研报告：交直流微电网怎么做？_chunk_001",
+      "character_count": 90,
+      "description": "交直流微电网由交流子网和直流子网组成，通过能量路由器连接，实现能量的双向流动。",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_197",
+      "name": "交直流微电网的发展驱动因素",
+      "classification": "factual",
+      "path": "factual/sku_197",
+      "source_chunk": "报告-紫电捷控调研报告：交直流微电网怎么做？_chunk_001",
+      "character_count": 155,
+      "description": "新能源直流电源和直流负荷的增长，驱动交直流微电网发展，以减少交直流变换损耗，提升能效。",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_198",
+      "name": "交直流微电网的主要应用场景",
+      "classification": "factual",
+      "path": "factual/sku_198",
+      "source_chunk": "报告-紫电捷控调研报告：交直流微电网怎么做？_chunk_001",
+      "character_count": 285,
+      "description": "交直流微电网主要应用于建筑光储直柔、光储充电站与工业直流微电网等场景，契合直流电源与负荷增长趋势。",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_199",
+      "name": "双台区柔直互联技术及其应用案例",
+      "classification": "factual",
+      "path": "factual/sku_199",
+      "source_chunk": "报告-紫电捷控调研报告：交直流微电网怎么做？_chunk_001",
+      "character_count": 771,
+      "description": "双台区柔直互联通过直流微电网连接两个配电台区，解决负载不平衡和光伏消纳瓶颈，已在校园、高速充电站和工业园区等场景得到应用，实现配电网末端资源挖掘。",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_200",
+      "name": "交直流微电网的关键设备",
+      "classification": "factual",
+      "path": "factual/sku_200",
+      "source_chunk": "报告-紫电捷控调研报告：交直流微电网怎么做？_chunk_001",
+      "character_count": 471,
+      "description": "交直流微电网的关键设备包括STS切换开关、AC/DC双向变换器、DC/DC功率变换器和管控装置，分别负责并离网切换、交直流变换、电压适配与系统监控。",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_201",
+      "name": "北京通州某企业光储直柔微电网项目案例",
+      "classification": "factual",
+      "path": "factual/sku_201",
+      "source_chunk": "报告-紫电捷控调研报告：交直流微电网怎么做？_chunk_001",
+      "character_count": 597,
+      "description": "北京通州某企业项目采用双台区柔直互联方案，新增变压器并通过直流微网连接两个台区，提升光伏消纳率与供电可靠性，测量误差≤0.5%，互供功率调节误差≤1%。",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_202",
+      "name": "交直流微电网的四种运行模式",
+      "classification": "factual",
+      "path": "factual/sku_202",
+      "source_chunk": "报告-紫电捷控调研报告：交直流微电网怎么做？_chunk_001",
+      "character_count": 823,
+      "description": "交直流微电网具有离网、两种并网运行及在线切换四种模式，通过不同设备角色的分配保障电能质量和供电连续性。",
+      "confidence": null
+    },
+    {
+      "sku_id": "skill_066",
+      "name": "ac-dc-microgrid-operation-mode-switching",
+      "classification": "procedural",
+      "path": "procedural/skill_066",
+      "source_chunk": "报告-紫电捷控调研报告：交直流微电网怎么做？_chunk_001",
+      "character_count": 886,
+      "description": "当交直流微电网需要保障不间断供电时，按四种模式自动切换运行，实现离网和并网状态管理",
+      "confidence": null
+    },
+    {
+      "sku_id": "skill_067",
+      "name": "dual-tai-qu-flexible-dc-interconnection-assessment",
+      "classification": "procedural",
+      "path": "procedural/skill_067",
+      "source_chunk": "报告-紫电捷控调研报告：交直流微电网怎么做？_chunk_001",
+      "character_count": 860,
+      "description": "评估两个相邻配电台区是否适合采用柔直互联微电网，以解决负载不平衡、光伏消纳或供电可靠性问题",
+      "confidence": null
+    },
+    {
       "sku_id": "relational-knowledge-base",
       "name": "relational-knowledge-base",
       "classification": "relational",
       "path": "relational",
       "source_chunk": "aggregated",
-      "character_count": 131368,
+      "character_count": 137280,
       "description": "Domain label hierarchy and terminology glossary",
       "confidence": null
     }
   ],
-  "factual_count": 197,
+  "factual_count": 205,
   "relational_count": 1,
-  "procedural_count": 65,
+  "procedural_count": 67,
   "meta_count": 1
 }

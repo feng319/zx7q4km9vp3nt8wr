@@ -1610,6 +1610,105 @@
         "报告-苏州工业园区的虚拟电厂调研报告：怎样做区域级虚拟电厂_chunk_001"
       ],
       "confidence": 1.0
+    },
+    {
+      "subject": "光储直柔微电网",
+      "predicate": "is-a",
+      "object": "交直流混合微电网",
+      "source_chunks": [
+        "报告-紫电捷控调研报告：交直流微电网怎么做？_chunk_001"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "subject": "台区柔直互联微电网",
+      "predicate": "is-a",
+      "object": "交直流混合微电网",
+      "source_chunks": [
+        "报告-紫电捷控调研报告：交直流微电网怎么做？_chunk_001"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "subject": "直流微电网",
+      "predicate": "is-a",
+      "object": "微电网",
+      "source_chunks": [
+        "报告-紫电捷控调研报告：交直流微电网怎么做？_chunk_001"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "subject": "工业直流微电网",
+      "predicate": "is-a",
+      "object": "微电网",
+      "source_chunks": [
+        "报告-紫电捷控调研报告：交直流微电网怎么做？_chunk_001"
+      ],
+      "confidence": 0.8
+    },
+    {
+      "subject": "交直流混合微电网",
+      "predicate": "requires",
+      "object": "ACDC交直流双向变换单元",
+      "source_chunks": [
+        "报告-紫电捷控调研报告：交直流微电网怎么做？_chunk_001"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "subject": "交直流混合微电网",
+      "predicate": "has-a",
+      "object": "静态转换开关",
+      "source_chunks": [
+        "报告-紫电捷控调研报告：交直流微电网怎么做？_chunk_001"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "subject": "交直流混合微电网",
+      "predicate": "has-a",
+      "object": "DCDC功率变换单元",
+      "source_chunks": [
+        "报告-紫电捷控调研报告：交直流微电网怎么做？_chunk_001"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "subject": "交直流混合微电网",
+      "predicate": "has-a",
+      "object": "微电网终端管控装置",
+      "source_chunks": [
+        "报告-紫电捷控调研报告：交直流微电网怎么做？_chunk_001"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "subject": "双台区柔直互联",
+      "predicate": "enables",
+      "object": "台区柔直互联微电网",
+      "source_chunks": [
+        "报告-紫电捷控调研报告：交直流微电网怎么做？_chunk_001"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "subject": "双台区柔直互联",
+      "predicate": "related-to",
+      "object": "配电台区",
+      "source_chunks": [
+        "报告-紫电捷控调研报告：交直流微电网怎么做？_chunk_001"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "subject": "双台区柔直互联",
+      "predicate": "related-to",
+      "object": "分布式光伏",
+      "source_chunks": [
+        "报告-紫电捷控调研报告：交直流微电网怎么做？_chunk_001"
+      ],
+      "confidence": 0.8
     }
   ]
 }

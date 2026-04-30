@@ -365,6 +365,38 @@
     {
       "name": "碳市场",
       "children": []
+    },
+    {
+      "name": "微电网",
+      "children": [
+        {
+          "name": "按应用场景",
+          "children": [
+            {
+              "name": "工业直流微电网",
+              "children": []
+            }
+          ]
+        },
+        {
+          "name": "按互联方式",
+          "children": [
+            {
+              "name": "台区柔直互联微电网",
+              "children": []
+            }
+          ]
+        },
+        {
+          "name": "按电流类型",
+          "children": [
+            {
+              "name": "直流微电网",
+              "children": []
+            }
+          ]
+        }
+      ]
     }
   ]
 }
