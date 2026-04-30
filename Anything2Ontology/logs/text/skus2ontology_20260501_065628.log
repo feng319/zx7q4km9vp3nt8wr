@@ -1,0 +1,16 @@
+2026-04-30T22:56:28.982058Z [info     ] Starting ontology pipeline     [skus2ontology.pipeline] ontology_dir='G:\\Program Files\\AI coding\\知识萃取\\新能源\\输出\\ontology' skip_chatbot=False skus_dir='G:\\Program Files\\AI coding\\知识萃取\\新能源\\输出\\skus'
+2026-04-30T22:56:28.982058Z [info     ] Starting ontology assembly     [skus2ontology.assembler] ontology_dir='G:\\Program Files\\AI coding\\知识萃取\\新能源\\输出\\ontology' skus_dir='G:\\Program Files\\AI coding\\知识萃取\\新能源\\输出\\skus'
+2026-04-30T22:56:29.901136Z [info     ] Copied directory               [skus2ontology.assembler] files=542 subdir=factual
+2026-04-30T22:56:30.569831Z [info     ] Copied directory               [skus2ontology.assembler] files=186 subdir=procedural
+2026-04-30T22:56:30.575168Z [info     ] Copied directory               [skus2ontology.assembler] files=4 subdir=relational
+2026-04-30T22:56:30.583757Z [info     ] Copied and rewrote skus_index.json [skus2ontology.assembler] paths_rewritten=364
+2026-04-30T22:56:30.593834Z [info     ] Generated chunk_to_sku.json    [skus2ontology.assembler] chunk_count=27
+2026-04-30T22:56:30.593834Z [info     ] Copied eureka.md to ontology root [skus2ontology.assembler]
+2026-04-30T22:56:30.597357Z [info     ] Chunk coverage validation passed [skus2ontology.assembler] eureka_chunks=22 extra_chunks=5 mapping_chunks=27
+2026-04-30T22:56:30.599383Z [info     ] Rewrote mapping.md             [skus2ontology.assembler] paths_rewritten=0
+2026-04-30T22:56:30.599383Z [info     ] Assembly complete              [skus2ontology.assembler] factual=271 paths_rewritten=364 procedural=93 total_files=736
+2026-04-30T22:56:30.600432Z [info     ] Starting spec chatbot          [skus2ontology.chatbot] max_rounds=5 phase2_only=False
+2026-04-30T22:56:30.601489Z [info     ] Built name_to_path lookup      [skus2ontology.chatbot] entries=366
+2026-04-30T22:56:30.602763Z [info     ] slug→path inline resolution    [skus2ontology.chatbot] matched=364 total_lines=384
+2026-04-30T22:56:30.602763Z [info     ] Loaded mapping.md (compressed) [skus2ontology.chatbot] compressed_chars=25797 original_chars=24026
+2026-04-30T22:56:30.602763Z [info     ] Loaded eureka.md               [skus2ontology.chatbot] chars=9512
