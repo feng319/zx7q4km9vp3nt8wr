@@ -1,11 +1,12 @@
 {
   "created_at": "2026-04-30T23:58:12.790314",
-  "updated_at": "2026-05-01T00:11:47.181411",
-  "total_skus": 26,
-  "total_characters": 31947,
+  "updated_at": "2026-05-01T00:16:43.301061",
+  "total_skus": 39,
+  "total_characters": 45935,
   "chunks_processed": [
     "报告-《关于优化集中式新能源发电企业市场报价的通知（试行）》深度解读与战略分析_chunk_001",
-    "报告-乌克兰新能源市场机会调研报告_chunk_001"
+    "报告-乌克兰新能源市场机会调研报告_chunk_001",
+    "报告-兆瓦云调研报告：虚拟电厂的下一城在哪里？_chunk_001"
   ],
   "skus": [
     {
@@ -259,18 +260,148 @@
       "confidence": null
     },
     {
+      "sku_id": "sku_012",
+      "name": "兆瓦云公司服务范围与容量",
+      "classification": "factual",
+      "path": "factual/sku_012",
+      "source_chunk": "报告-兆瓦云调研报告：虚拟电厂的下一城在哪里？_chunk_001",
+      "character_count": 192,
+      "description": "兆瓦云已取得9个电网14个省份的虚拟电厂独立运营资格，服务客户800余家，下游签约可控负荷容量超过10GW。",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_013",
+      "name": "兆瓦云技术团队背景与公司层级",
+      "classification": "factual",
+      "path": "factual/sku_013",
+      "source_chunk": "报告-兆瓦云调研报告：虚拟电厂的下一城在哪里？_chunk_001",
+      "character_count": 213,
+      "description": "创始团队均来自清华大学电机系，长期从事电力市场及能源互联网前沿技术研究，掌握虚拟电厂全链条核心技术，公司已纳入国家电投集团并列入独角兽培育计划。",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_014",
+      "name": "虚拟电厂商业形态与三级调控运营",
+      "classification": "factual",
+      "path": "factual/sku_014",
+      "source_chunk": "报告-兆瓦云调研报告：虚拟电厂的下一城在哪里？_chunk_001",
+      "character_count": 304,
+      "description": "兆瓦云以聚合可调负荷资源参与电力辅助服务、需求侧响应为主要商业形态，采用电网-虚拟电厂-负荷三级调控架构，通过用户平台和运营平台实现管理。",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_015",
+      "name": "兆瓦云延伸软件平台及测试平台",
+      "classification": "factual",
+      "path": "factual/sku_015",
+      "source_chunk": "报告-兆瓦云调研报告：虚拟电厂的下一城在哪里？_chunk_001",
+      "character_count": 168,
+      "description": "在虚拟电厂核心平台基础上，兆瓦云还开发了现货辅助决策、零碳电厂、售电现货交易等场景化平台，以及全国首套虚拟电厂功率调节能力测试平台。",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_016",
+      "name": "虚拟电厂全链条建设服务业务",
+      "classification": "factual",
+      "path": "factual/sku_016",
+      "source_chunk": "报告-兆瓦云调研报告：虚拟电厂的下一城在哪里？_chunk_001",
+      "character_count": 184,
+      "description": "兆瓦云除自营虚拟电厂外，还为跨界企业提供虚拟电厂全链条建设服务，涵盖软件、算法、培训、运营指导等，核心挑战在于运营逻辑而非纯技术。",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_017",
+      "name": "山西调峰辅助服务市场运营全流程",
+      "classification": "factual",
+      "path": "factual/sku_017",
+      "source_chunk": "报告-兆瓦云调研报告：虚拟电厂的下一城在哪里？_chunk_001",
+      "character_count": 445,
+      "description": "虚拟电厂参与山西调峰辅助服务需依次完成注册、信息接收、AI初筛与人工复核、量价申报、出清、执行、结算与复盘等步骤，各环节有严格时间节点。",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_018",
+      "name": "虚拟电厂调峰辅助服务报价与出清规则",
+      "classification": "factual",
+      "path": "factual/sku_018",
+      "source_chunk": "报告-兆瓦云调研报告：虚拟电厂的下一城在哪里？_chunk_001",
+      "character_count": 180,
+      "description": "调峰市场以15分钟为时段进行量价申报，出清按申报补偿价格由低到高排序；某交易日填谷报价中峰段480元/MWh、平段200元/MWh、谷段135元/MWh。",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_019",
+      "name": "工业负荷参与削峰填谷案例集",
+      "classification": "factual",
+      "path": "factual/sku_019",
+      "source_chunk": "报告-兆瓦云调研报告：虚拟电厂的下一城在哪里？_chunk_001",
+      "character_count": 742,
+      "description": "山西钢铁、新材料、铸业三家企业通过控制检修期或调整生产计划参与削峰填谷，分别获得65万元、51万元、6.7万元收益。",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_020",
+      "name": "兆瓦云虚拟电厂运营绩效汇总",
+      "classification": "factual",
+      "path": "factual/sku_020",
+      "source_chunk": "报告-兆瓦云调研报告：虚拟电厂的下一城在哪里？_chunk_001",
+      "character_count": 365,
+      "description": "山西虚拟电厂聚合容量超4GW，累计响应量超15985MWh，收益超430万元；重庆平台单月响应容量超205MW，收益超200万元。",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_021",
+      "name": "售电型虚拟电厂的偏差套利机制",
+      "classification": "factual",
+      "path": "factual/sku_021",
+      "source_chunk": "报告-兆瓦云调研报告：虚拟电厂的下一城在哪里？_chunk_001",
+      "character_count": 428,
+      "description": "售电型虚拟电厂通过日前申报电量与实际用电量偏差，利用现货价差进行套利，因虚拟电厂提供灵活调节贡献，政策对偏差率限制放宽（如山西放宽至40%），从而扩大套利空间。",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_022",
+      "name": "三种虚拟电厂形态对比及未来趋势",
+      "classification": "factual",
+      "path": "factual/sku_022",
+      "source_chunk": "报告-兆瓦云调研报告：虚拟电厂的下一城在哪里？_chunk_001",
+      "character_count": 523,
+      "description": "国内存在电网系、售电型、发电类型三种虚拟电厂，其中电网系已成熟但市场小，售电型通过偏差套利获利，发电类型聚合分布式资产交易生命力更强，是未来重要的增长方向。",
+      "confidence": null
+    },
+    {
+      "sku_id": "skill_005",
+      "name": "vpp-ancillary-service-workflow",
+      "classification": "procedural",
+      "path": "procedural/skill_005",
+      "source_chunk": "报告-兆瓦云调研报告：虚拟电厂的下一城在哪里？_chunk_001",
+      "character_count": 1063,
+      "description": "虚拟电厂运营商参与电力调峰辅助服务的完整流程，涵盖从注册入市到结算复盘的全过程。",
+      "confidence": null
+    },
+    {
+      "sku_id": "skill_006",
+      "name": "retail-vpp-spot-arbitrage",
+      "classification": "procedural",
+      "path": "procedural/skill_006",
+      "source_chunk": "报告-兆瓦云调研报告：虚拟电厂的下一城在哪里？_chunk_001",
+      "character_count": 930,
+      "description": "售电型虚拟电厂利用日前与实时现货电价偏差进行套利的操作流程，适用于偏差回收机制放宽地区的交易团队。",
+      "confidence": null
+    },
+    {
       "sku_id": "relational-knowledge-base",
       "name": "relational-knowledge-base",
       "classification": "relational",
       "path": "relational",
       "source_chunk": "aggregated",
-      "character_count": 24426,
+      "character_count": 32677,
       "description": "Domain label hierarchy and terminology glossary",
       "confidence": null
     }
   ],
-  "factual_count": 21,
+  "factual_count": 32,
   "relational_count": 1,
-  "procedural_count": 4,
+  "procedural_count": 6,
   "meta_count": 0
 }

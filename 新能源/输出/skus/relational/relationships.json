@@ -134,6 +134,123 @@
         "报告-乌克兰新能源市场机会调研报告_chunk_001"
       ],
       "confidence": 0.8
+    },
+    {
+      "subject": "虚拟电厂",
+      "predicate": "superset-of",
+      "object": "电网系虚拟电厂",
+      "source_chunks": [
+        "报告-兆瓦云调研报告：虚拟电厂的下一城在哪里？_chunk_001"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "subject": "虚拟电厂",
+      "predicate": "superset-of",
+      "object": "售电型虚拟电厂",
+      "source_chunks": [
+        "报告-兆瓦云调研报告：虚拟电厂的下一城在哪里？_chunk_001"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "subject": "虚拟电厂",
+      "predicate": "superset-of",
+      "object": "发电类型虚拟电厂",
+      "source_chunks": [
+        "报告-兆瓦云调研报告：虚拟电厂的下一城在哪里？_chunk_001"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "subject": "虚拟电厂",
+      "predicate": "requires",
+      "object": "三级调控架构",
+      "source_chunks": [
+        "报告-兆瓦云调研报告：虚拟电厂的下一城在哪里？_chunk_001"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "subject": "虚拟电厂",
+      "predicate": "related-to",
+      "object": "辅助服务市场",
+      "source_chunks": [
+        "报告-兆瓦云调研报告：虚拟电厂的下一城在哪里？_chunk_001"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "subject": "电网系虚拟电厂",
+      "predicate": "related-to",
+      "object": "辅助服务市场",
+      "source_chunks": [
+        "报告-兆瓦云调研报告：虚拟电厂的下一城在哪里？_chunk_001"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "subject": "售电型虚拟电厂",
+      "predicate": "related-to",
+      "object": "偏差收益",
+      "source_chunks": [
+        "报告-兆瓦云调研报告：虚拟电厂的下一城在哪里？_chunk_001"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "subject": "超额回收机制",
+      "predicate": "regulates",
+      "object": "偏差收益",
+      "source_chunks": [
+        "报告-兆瓦云调研报告：虚拟电厂的下一城在哪里？_chunk_001"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "subject": "超额回收机制",
+      "predicate": "depends-on",
+      "object": "现货偏差率",
+      "source_chunks": [
+        "报告-兆瓦云调研报告：虚拟电厂的下一城在哪里？_chunk_001"
+      ],
+      "confidence": 0.8
+    },
+    {
+      "subject": "辅助服务市场",
+      "predicate": "superset-of",
+      "object": "削峰填谷",
+      "source_chunks": [
+        "报告-兆瓦云调研报告：虚拟电厂的下一城在哪里？_chunk_001"
+      ],
+      "confidence": 0.8
+    },
+    {
+      "subject": "虚拟电厂功率调节能力测试平台",
+      "predicate": "certifies",
+      "object": "虚拟电厂",
+      "source_chunks": [
+        "报告-兆瓦云调研报告：虚拟电厂的下一城在哪里？_chunk_001"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "subject": "分布式光伏",
+      "predicate": "enables",
+      "object": "发电类型虚拟电厂",
+      "source_chunks": [
+        "报告-兆瓦云调研报告：虚拟电厂的下一城在哪里？_chunk_001"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "subject": "偏差结算",
+      "predicate": "related-to",
+      "object": "偏差收益",
+      "source_chunks": [
+        "报告-兆瓦云调研报告：虚拟电厂的下一城在哪里？_chunk_001"
+      ],
+      "confidence": 0.8
     }
   ]
 }

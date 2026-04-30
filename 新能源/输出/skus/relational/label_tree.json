@@ -17,7 +17,25 @@
         },
         {
           "name": "聚合模式",
-          "children": []
+          "children": [
+            {
+              "name": "虚拟电厂",
+              "children": [
+                {
+                  "name": "电网系虚拟电厂",
+                  "children": []
+                },
+                {
+                  "name": "售电型虚拟电厂",
+                  "children": []
+                },
+                {
+                  "name": "发电类型虚拟电厂",
+                  "children": []
+                }
+              ]
+            }
+          ]
         },
         {
           "name": "新能源基地",
