@@ -112,6 +112,19 @@
               "children": []
             }
           ]
+        },
+        {
+          "name": "车网互动",
+          "children": [
+            {
+              "name": "有序充电",
+              "children": []
+            },
+            {
+              "name": "V2G",
+              "children": []
+            }
+          ]
         }
       ]
     },

@@ -1232,6 +1232,87 @@
         "报告-正泰安能光伏星调研报告：在非洲如何做户用光伏？_chunk_001"
       ],
       "confidence": 0.6
+    },
+    {
+      "subject": "电动汽车无序充电",
+      "predicate": "causes",
+      "object": "电网调峰压力",
+      "source_chunks": [
+        "报告-特来电零碳大楼调研报告：怎样做车网互动？_chunk_001"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "subject": "车网互动",
+      "predicate": "enables",
+      "object": "削峰填谷",
+      "source_chunks": [
+        "报告-特来电零碳大楼调研报告：怎样做车网互动？_chunk_001"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "subject": "V2G",
+      "predicate": "requires",
+      "object": "V2G充电桩",
+      "source_chunks": [
+        "报告-特来电零碳大楼调研报告：怎样做车网互动？_chunk_001"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "subject": "需量控制",
+      "predicate": "related-to",
+      "object": "需量电费",
+      "source_chunks": [
+        "报告-特来电零碳大楼调研报告：怎样做车网互动？_chunk_001"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "subject": "V2G",
+      "predicate": "enables",
+      "object": "需量控制",
+      "source_chunks": [
+        "报告-特来电零碳大楼调研报告：怎样做车网互动？_chunk_001"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "subject": "新能源渗透率",
+      "predicate": "related-to",
+      "object": "电碳因子",
+      "source_chunks": [
+        "报告-特来电零碳大楼调研报告：怎样做车网互动？_chunk_001"
+      ],
+      "confidence": 0.8
+    },
+    {
+      "subject": "电池梯次利用",
+      "predicate": "enables",
+      "object": "储能系统",
+      "source_chunks": [
+        "报告-特来电零碳大楼调研报告：怎样做车网互动？_chunk_001"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "subject": "车网互动",
+      "predicate": "superset-of",
+      "object": "有序充电",
+      "source_chunks": [
+        "报告-特来电零碳大楼调研报告：怎样做车网互动？_chunk_001"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "subject": "车网互动",
+      "predicate": "superset-of",
+      "object": "V2G",
+      "source_chunks": [
+        "报告-特来电零碳大楼调研报告：怎样做车网互动？_chunk_001"
+      ],
+      "confidence": 1.0
     }
   ]
 }

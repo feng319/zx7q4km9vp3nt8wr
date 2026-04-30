@@ -2982,6 +2982,153 @@
       "related_terms": [
         "户用离网光伏系统"
       ]
+    },
+    {
+      "term": "车网互动",
+      "definition": "电动汽车通过有序充电和双向充放电实现与电网互动的技术和模式。",
+      "labels": [
+        "电力市场 > 车网互动"
+      ],
+      "source_chunks": [
+        "报告-特来电零碳大楼调研报告：怎样做车网互动？_chunk_001"
+      ],
+      "source_chunk": "报告-特来电零碳大楼调研报告：怎样做车网互动？_chunk_001",
+      "aliases": [],
+      "related_terms": []
+    },
+    {
+      "term": "有序充电",
+      "definition": "根据电网负荷情况，在低谷时段进行电动汽车充电的方式。",
+      "labels": [
+        "电力市场 > 车网互动 > 有序充电"
+      ],
+      "source_chunks": [
+        "报告-特来电零碳大楼调研报告：怎样做车网互动？_chunk_001"
+      ],
+      "source_chunk": "报告-特来电零碳大楼调研报告：怎样做车网互动？_chunk_001",
+      "aliases": [],
+      "related_terms": []
+    },
+    {
+      "term": "V2G",
+      "definition": "Vehicle to Grid，电动汽车向电网反向送电的技术。",
+      "labels": [
+        "电力市场 > 车网互动 > V2G"
+      ],
+      "source_chunks": [
+        "报告-特来电零碳大楼调研报告：怎样做车网互动？_chunk_001"
+      ],
+      "source_chunk": "报告-特来电零碳大楼调研报告：怎样做车网互动？_chunk_001",
+      "aliases": [
+        "Vehicle-to-Grid"
+      ],
+      "related_terms": []
+    },
+    {
+      "term": "V2G充电桩",
+      "definition": "支持双向充放电功能的电动汽车充电设备。",
+      "labels": [
+        "技术架构 > 智能硬件"
+      ],
+      "source_chunks": [
+        "报告-特来电零碳大楼调研报告：怎样做车网互动？_chunk_001"
+      ],
+      "source_chunk": "报告-特来电零碳大楼调研报告：怎样做车网互动？_chunk_001",
+      "aliases": [],
+      "related_terms": []
+    },
+    {
+      "term": "需量电费",
+      "definition": "根据用户最大需量计收的基本电费。",
+      "labels": [
+        "电力市场政策 > 电价政策"
+      ],
+      "source_chunks": [
+        "报告-特来电零碳大楼调研报告：怎样做车网互动？_chunk_001"
+      ],
+      "source_chunk": "报告-特来电零碳大楼调研报告：怎样做车网互动？_chunk_001",
+      "aliases": [],
+      "related_terms": []
+    },
+    {
+      "term": "需量控制",
+      "definition": "通过调节负荷或储能放电，控制用电功率不超过合同约定最大需量的措施。",
+      "labels": [
+        "技术架构 > 能源管理系统"
+      ],
+      "source_chunks": [
+        "报告-特来电零碳大楼调研报告：怎样做车网互动？_chunk_001"
+      ],
+      "source_chunk": "报告-特来电零碳大楼调研报告：怎样做车网互动？_chunk_001",
+      "aliases": [],
+      "related_terms": []
+    },
+    {
+      "term": "电碳因子",
+      "definition": "单位发电量所产生的二氧化碳排放量。",
+      "labels": [
+        "电力市场"
+      ],
+      "source_chunks": [
+        "报告-特来电零碳大楼调研报告：怎样做车网互动？_chunk_001"
+      ],
+      "source_chunk": "报告-特来电零碳大楼调研报告：怎样做车网互动？_chunk_001",
+      "aliases": [],
+      "related_terms": []
+    },
+    {
+      "term": "电池梯次利用",
+      "definition": "将退役动力电池应用于其他储能场景的再利用方式。",
+      "labels": [
+        "技术架构 > 储能系统"
+      ],
+      "source_chunks": [
+        "报告-特来电零碳大楼调研报告：怎样做车网互动？_chunk_001"
+      ],
+      "source_chunk": "报告-特来电零碳大楼调研报告：怎样做车网互动？_chunk_001",
+      "aliases": [
+        "梯次利用"
+      ],
+      "related_terms": []
+    },
+    {
+      "term": "电动汽车无序充电",
+      "definition": "大量电动汽车在电网高峰时段集中充电的行为。",
+      "labels": [
+        "电力市场 > 车网互动"
+      ],
+      "source_chunks": [
+        "报告-特来电零碳大楼调研报告：怎样做车网互动？_chunk_001"
+      ],
+      "source_chunk": "报告-特来电零碳大楼调研报告：怎样做车网互动？_chunk_001",
+      "aliases": [],
+      "related_terms": []
+    },
+    {
+      "term": "AI极速立体泊车系统",
+      "definition": "利用机器人和立体车架实现高密度停放并自动充电的智能停车系统。",
+      "labels": [
+        "技术架构 > 智能硬件"
+      ],
+      "source_chunks": [
+        "报告-特来电零碳大楼调研报告：怎样做车网互动？_chunk_001"
+      ],
+      "source_chunk": "报告-特来电零碳大楼调研报告：怎样做车网互动？_chunk_001",
+      "aliases": [],
+      "related_terms": []
+    },
+    {
+      "term": "电网调峰压力",
+      "definition": "电力系统因负荷波动需要调整发电出力而面临的压力。",
+      "labels": [
+        "电力市场 > 调度机制"
+      ],
+      "source_chunks": [
+        "报告-特来电零碳大楼调研报告：怎样做车网互动？_chunk_001"
+      ],
+      "source_chunk": "报告-特来电零碳大楼调研报告：怎样做车网互动？_chunk_001",
+      "aliases": [],
+      "related_terms": []
     }
   ]
 }

@@ -1,8 +1,8 @@
 {
   "created_at": "2026-04-30T23:58:12.790314",
-  "updated_at": "2026-05-01T00:59:46.675570",
-  "total_skus": 201,
-  "total_characters": 202852,
+  "updated_at": "2026-05-01T01:04:27.981414",
+  "total_skus": 219,
+  "total_characters": 213884,
   "chunks_processed": [
     "报告-《关于优化集中式新能源发电企业市场报价的通知（试行）》深度解读与战略分析_chunk_001",
     "报告-乌克兰新能源市场机会调研报告_chunk_001",
@@ -17,7 +17,8 @@
     "报告-安悦节能调研报告：怎样做冷热电综合能源服务？_chunk_001",
     "报告-广林汇智调研报告：在西北地区怎么做虚拟电厂？_chunk_001",
     "报告-恒实盛景调研报告：怎样做空调虚拟电厂？_chunk_001",
-    "报告-正泰安能光伏星调研报告：在非洲如何做户用光伏？_chunk_001"
+    "报告-正泰安能光伏星调研报告：在非洲如何做户用光伏？_chunk_001",
+    "报告-特来电零碳大楼调研报告：怎样做车网互动？_chunk_001"
   ],
   "skus": [
     {
@@ -2021,18 +2022,198 @@
       "confidence": null
     },
     {
+      "sku_id": "sku_147",
+      "name": "车网互动定义与互动方式",
+      "classification": "factual",
+      "path": "factual/sku_147",
+      "source_chunk": "报告-特来电零碳大楼调研报告：怎样做车网互动？_chunk_001",
+      "character_count": 139,
+      "description": "车网互动是电动汽车与电网之间的双向互动，包含时间互动（有序充电避开高峰）和能量互动（V2G反向送电）两层含义。",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_148",
+      "name": "电动汽车无序充电的风险",
+      "classification": "factual",
+      "path": "factual/sku_148",
+      "source_chunk": "报告-特来电零碳大楼调研报告：怎样做车网互动？_chunk_001",
+      "character_count": 122,
+      "description": "电动汽车无序充电会对电网造成极大压力，快充时单台车功率可超过一栋居民楼，可能引发供需失衡和电网崩溃，同时大幅抬高企业的需量电费。",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_149",
+      "name": "中国电动汽车储能潜力",
+      "classification": "factual",
+      "path": "factual/sku_149",
+      "source_chunk": "报告-特来电零碳大楼调研报告：怎样做车网互动？_chunk_001",
+      "character_count": 198,
+      "description": "截至报告，中国新能源汽车保有量接近4000万辆，存储总电量约20亿度，相当于2024年日均用电量的7.4%，若全部反向送电，功率可达2亿千瓦（约11个三峡电站装机容量）。",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_150",
+      "name": "车网互动车主收益模式",
+      "classification": "factual",
+      "path": "factual/sku_150",
+      "source_chunk": "报告-特来电零碳大楼调研报告：怎样做车网互动？_chunk_001",
+      "character_count": 186,
+      "description": "通过低谷充电（约0.3元/度）、高峰放电（约1元/度）赚取差价，部分地区提供额外补贴（深圳、湖北放电补贴可达3元/度），理想情况下车主年收入可达6000元，5年可覆盖电池成本。",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_151",
+      "name": "特来电超阶零碳大楼绿色供能系统参数",
+      "classification": "factual",
+      "path": "factual/sku_151",
+      "source_chunk": "报告-特来电零碳大楼调研报告：怎样做车网互动？_chunk_001",
+      "character_count": 229,
+      "description": "大楼位于青岛崂山，占地14.33亩，建筑面积约4.3万㎡，高度117米，集成光伏、梯次储能和数字化节能技术，光伏日均发电1500度，梯次储能14块退役电池，综合节能40%。",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_152",
+      "name": "特来电零碳大楼V2G车网互动设施与贡献",
+      "classification": "factual",
+      "path": "factual/sku_152",
+      "source_chunk": "报告-特来电零碳大楼调研报告：怎样做车网互动？_chunk_001",
+      "character_count": 168,
+      "description": "大楼底部设508个V2G停车位，假设每天300辆车各放10度电，可提供3000度电，满足大楼约50%用电，相当于储能容量扩充2倍，且无需大楼投资。",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_153",
+      "name": "特来电零碳大楼典型工作日能源管理策略",
+      "classification": "factual",
+      "path": "factual/sku_153",
+      "source_chunk": "报告-特来电零碳大楼调研报告：怎样做车网互动？_chunk_001",
+      "character_count": 290,
+      "description": "大楼通过叠加光伏、梯次储能和V2G，在不同时段优化负荷曲线，实现降电费和提绿电占比，尤其在17-19点高峰时段可完全依靠储能和V2G供电。",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_154",
+      "name": "午间时段低电碳因子与绿电占比提升原理",
+      "classification": "factual",
+      "path": "factual/sku_154",
+      "source_chunk": "报告-特来电零碳大楼调研报告：怎样做车网互动？_chunk_001",
+      "character_count": 116,
+      "description": "午间时段光伏发电占比高，电网电碳因子（每度电的碳排放）最低，因此在该时段充电或使用电网电能可间接提升全天绿电使用比例。",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_155",
+      "name": "电动汽车电池寿命与V2G循环利用论证",
+      "classification": "factual",
+      "path": "factual/sku_155",
+      "source_chunk": "报告-特来电零碳大楼调研报告：怎样做车网互动？_chunk_001",
+      "character_count": 191,
+      "description": "以50度电池、350公里续航为例，行驶20万公里仅消耗600次循环，总寿命约2000次，剩余1400次可用于V2G，即电池寿命有三分之二可用于车网互动。",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_156",
+      "name": "特来电大楼员工参与V2G的实际收益",
+      "classification": "factual",
+      "path": "factual/sku_156",
+      "source_chunk": "报告-特来电零碳大楼调研报告：怎样做车网互动？_chunk_001",
+      "character_count": 125,
+      "description": "在特来电零碳大楼，员工汽车每充放一度电价差约0.8-1元，每天10度电收益8-10元，基本覆盖日常通勤电费，甚至略有盈余。",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_157",
+      "name": "AI极速立体泊车系统参数与安全方案",
+      "classification": "factual",
+      "path": "factual/sku_157",
+      "source_chunk": "报告-特来电零碳大楼调研报告：怎样做车网互动？_chunk_001",
+      "character_count": 200,
+      "description": "大楼底层设高7.5米三层立体车库，举升机器人55秒/辆自动泊车，停车密度达传统车库4倍，同时配备实时安全监测和1分钟整车浸没消防系统。",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_158",
+      "name": "V2G商业化路径：从小场景起步",
+      "classification": "factual",
+      "path": "factual/sku_158",
+      "source_chunk": "报告-特来电零碳大楼调研报告：怎样做车网互动？_chunk_001",
+      "character_count": 178,
+      "description": "特来电大楼V2G的成功表明车网互动可先在大楼、园区等小场景内闭环，解决降电费和降碳需求，再推广至机关、学校、医院、机场等公共建筑。",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_159",
+      "name": "2025年国家车网互动试点政策清单",
+      "classification": "factual",
+      "path": "factual/sku_159",
+      "source_chunk": "报告-特来电零碳大楼调研报告：怎样做车网互动？_chunk_001",
+      "character_count": 241,
+      "description": "2025年国家出台多项政策推动车网互动，包括9个城市首批试点、三年倍增行动目标（新增V2G设施超5000个、反向放电超2000万度）以及将车网互动纳入新型电网指导意见。",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_160",
+      "name": "未来电动交通工具储能预测",
+      "classification": "factual",
+      "path": "factual/sku_160",
+      "source_chunk": "报告-特来电零碳大楼调研报告：怎样做车网互动？_chunk_001",
+      "character_count": 157,
+      "description": "预计到2030年我国电动汽车超1亿辆，2040年后超3亿辆，考虑重卡等大型车辆，交通工具日储能可超260亿度，与当前全社会日用电量相当。",
+      "confidence": null
+    },
+    {
+      "sku_id": "skill_054",
+      "name": "small-site-v2g-integration",
+      "classification": "procedural",
+      "path": "procedural/skill_054",
+      "source_chunk": "报告-特来电零碳大楼调研报告：怎样做车网互动？_chunk_001",
+      "character_count": 912,
+      "description": "如何在园区、办公楼等小场景中集成车网互动（V2G），实现降本降碳。",
+      "confidence": null
+    },
+    {
+      "sku_id": "skill_055",
+      "name": "ev-owner-v2g-incentive-program",
+      "classification": "procedural",
+      "path": "procedural/skill_055",
+      "source_chunk": "报告-特来电零碳大楼调研报告：怎样做车网互动？_chunk_001",
+      "character_count": 673,
+      "description": "激励电动汽车车主参与V2G放电，解决电池寿命顾虑与便捷性问题。",
+      "confidence": null
+    },
+    {
+      "sku_id": "skill_056",
+      "name": "high-density-ev-parking-safety",
+      "classification": "procedural",
+      "path": "procedural/skill_056",
+      "source_chunk": "报告-特来电零碳大楼调研报告：怎样做车网互动？_chunk_001",
+      "character_count": 609,
+      "description": "在高密度电动汽车停车场景（如立体车库）中确保安全，适用于V2G集中停放设置。",
+      "confidence": null
+    },
+    {
+      "sku_id": "skill_057",
+      "name": "new-energy-business-pilot-scaling",
+      "classification": "procedural",
+      "path": "procedural/skill_057",
+      "source_chunk": "报告-特来电零碳大楼调研报告：怎样做车网互动？_chunk_001",
+      "character_count": 710,
+      "description": "将新能源商业模式（如V2G）从试点小场景推广到更广市场的方法论。",
+      "confidence": null
+    },
+    {
       "sku_id": "relational-knowledge-base",
       "name": "relational-knowledge-base",
       "classification": "relational",
       "path": "relational",
       "source_chunk": "aggregated",
-      "character_count": 103271,
+      "character_count": 108859,
       "description": "Domain label hierarchy and terminology glossary",
       "confidence": null
     }
   ],
-  "factual_count": 146,
+  "factual_count": 160,
   "relational_count": 1,
-  "procedural_count": 53,
+  "procedural_count": 57,
   "meta_count": 1
 }
