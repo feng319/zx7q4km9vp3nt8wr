@@ -3,3 +3,25 @@
 2026-04-30T14:06:42.437795Z [info     ] slug→path inline resolution    [skus2ontology.chatbot] matched=175 total_lines=198
 2026-04-30T14:06:42.438794Z [info     ] Loaded mapping.md (compressed) [skus2ontology.chatbot] compressed_chars=9948 original_chars=9125
 2026-04-30T14:06:42.465143Z [info     ] Loaded eureka.md               [skus2ontology.chatbot] chars=1781
+2026-04-30T14:32:13.376368Z [info     ] Built SKU index summary        [skus2ontology.chatbot] chars=11242 sku_count=177
+2026-04-30T14:38:54.741893Z [error    ] LLM call failed                [skus2ontology.utils.llm_client] error='Connection error.' model=deepseek/deepseek-v4-pro-free
+2026-04-30T14:38:54.742395Z [error    ] Phase 2: LLM returned empty response [skus2ontology.chatbot]
+2026-04-30T14:38:54.742395Z [warning  ] Phase 2 anchor replacement failed, using draft with anchors [skus2ontology.chatbot]
+2026-04-30T14:38:54.742395Z [info     ] unwrap_resolved_anchors        [skus2ontology.chatbot] after=55 before=55 unwrapped=0
+2026-04-30T14:38:54.745303Z [info     ] Remaining anchors              [skus2ontology.chatbot] count=55 sample=['【锚点：企业生命周期阶段诊断与问题解决技能】', '【锚点：三大叠加周期识别数据】', '【锚点：企业生命周期四大阶段典型特征与核心风险数据】', '【锚点：企业四大核心基因数据】', '【锚点：企业全生命周期各阶段正常与异常特征数据】', '【锚点：科技类创业公司核心创始团队搭建技能】', '【锚点：科学家创业的角色认知误区及最优团队配置方案数据】', '【锚点：不同用人方式对应的组织发展结果数据】', '【锚点：真假资源增长判定标准数据】', '【锚点：避免战术勤奋掩盖战略懒惰技能】']
+2026-04-30T14:38:54.747399Z [info     ] Backed up existing spec.md     [skus2ontology.chatbot] backup='G:\\Program Files\\AI coding\\知识萃取\\战略分析\\输出\\ontology\\spec.md.bak.20260430_223854'
+2026-04-30T14:38:54.748406Z [info     ] Saved spec.md                  [skus2ontology.chatbot] chars=5532 path='G:\\Program Files\\AI coding\\知识萃取\\战略分析\\输出\\ontology\\spec.md'
+2026-04-30T14:38:54.748406Z [info     ] spec_check                     [skus2ontology.spec_validator] check=extra_chunk_bracket count=0 samples=[] status=PASS
+2026-04-30T14:38:54.749582Z [info     ] spec_check                     [skus2ontology.spec_validator] check=anchor_wrapping_chunk count=0 samples=[] status=PASS
+2026-04-30T14:38:54.749582Z [info     ] spec_check                     [skus2ontology.spec_validator] check=anchor_wrapping_sku count=0 samples=[] status=PASS
+2026-04-30T14:38:54.749582Z [info     ] spec_check                     [skus2ontology.spec_validator] check=sku_sku_concat count=0 samples=[] status=PASS
+2026-04-30T14:38:54.749582Z [info     ] spec_check                     [skus2ontology.spec_validator] check=sku_chunk_concat count=0 samples=[] status=PASS
+2026-04-30T14:38:54.749582Z [info     ] spec_check                     [skus2ontology.spec_validator] check=chunk_sku_concat count=0 samples=[] status=PASS
+2026-04-30T14:38:54.750830Z [info     ] spec_check                     [skus2ontology.spec_validator] check=sku_space_concat count=0 samples=[] status=PASS
+2026-04-30T14:38:54.750830Z [info     ] spec_check                     [skus2ontology.spec_validator] check=sku_range count=0 samples=[] status=PASS
+2026-04-30T14:38:54.750830Z [info     ] spec_check                     [skus2ontology.spec_validator] check=chinese_chunk_bracket count=0 samples=[] status=PASS
+2026-04-30T14:38:54.750830Z [info     ] spec_check                     [skus2ontology.spec_validator] check=chinese_sku_bracket count=0 samples=[] status=PASS
+2026-04-30T14:38:54.750830Z [info     ] spec_check                     [skus2ontology.spec_validator] check=remaining_anchor count=55 samples=['【锚点：企业生命周期阶段诊断与问题解决技能】', '【锚点：三大叠加周期识别数据】', '【锚点：企业生命周期四大阶段典型特征与核心风险数据】'] status=INFO
+2026-04-30T14:38:54.750830Z [info     ] spec_stats                     [skus2ontology.spec_validator] chunk_refs=12 chunk_unique=2 sku_refs=0 sku_unique=0
+2026-04-30T14:38:54.751970Z [info     ] spec_validator PASSED          [skus2ontology.spec_validator]
+2026-04-30T14:38:54.753112Z [info     ] Saved chat log                 [skus2ontology.pipeline] confirmed=False path=..\战略分析\输出\ontology\chat_log.json rounds=5
