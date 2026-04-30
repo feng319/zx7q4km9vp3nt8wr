@@ -1,0 +1,7 @@
+{"max_rounds": 5, "phase2_only": false, "event": "Starting spec chatbot", "logger": "skus2ontology.chatbot", "level": "info", "timestamp": "2026-04-30T15:17:07.046154Z"}
+{"entries": 958, "event": "Built name_to_path lookup", "logger": "skus2ontology.chatbot", "level": "info", "timestamp": "2026-04-30T15:17:07.050454Z"}
+{"total_lines": 971, "matched": 944, "event": "slug\u2192path inline resolution", "logger": "skus2ontology.chatbot", "level": "info", "timestamp": "2026-04-30T15:17:07.052567Z"}
+{"original_chars": 49322, "compressed_chars": 29995, "event": "Loaded mapping.md (compressed)", "logger": "skus2ontology.chatbot", "level": "info", "timestamp": "2026-04-30T15:17:07.053652Z"}
+{"chars": 16728, "event": "Loaded eureka.md", "logger": "skus2ontology.chatbot", "level": "info", "timestamp": "2026-04-30T15:17:07.054675Z"}
+{"model": "deepseek-v4-pro", "status": 403, "error": "Error code: 403 - {'error': {'code': '403', 'type': 'access_denied', 'message': 'You have no permission to access this resource'}}", "event": "LLM chat call failed (non-retryable)", "logger": "skus2ontology.utils.llm_client", "level": "error", "timestamp": "2026-04-30T15:17:09.678946Z"}
+{"path": "..\\\u5546\u4e1a\u6a21\u5f0f\u8d44\u672c\\\u8f93\u51fa\\ontology\\chat_log.json", "rounds": 0, "confirmed": false, "event": "Saved chat log", "logger": "skus2ontology.pipeline", "level": "info", "timestamp": "2026-04-30T15:17:09.681420Z"}
