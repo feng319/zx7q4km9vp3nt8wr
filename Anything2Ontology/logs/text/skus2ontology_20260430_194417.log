@@ -1,0 +1,3 @@
+2026-04-30T11:44:17.166094Z [info     ] Starting ontology pipeline     [skus2ontology.pipeline] ontology_dir='G:\\Program Files\\AI coding\\知识萃取\\商业模式资本\\输出\\ontology' skip_chatbot=True skus_dir='G:\\Program Files\\AI coding\\知识萃取\\商业模式资本\\输出\\ontology\\skus'
+2026-04-30T11:44:17.167136Z [info     ] Starting ontology assembly     [skus2ontology.assembler] ontology_dir='G:\\Program Files\\AI coding\\知识萃取\\商业模式资本\\输出\\ontology' skus_dir='G:\\Program Files\\AI coding\\知识萃取\\商业模式资本\\输出\\ontology\\skus'
+2026-04-30T11:44:17.167136Z [warning  ] mapping.md not found in meta/  [skus2ontology.assembler] path='G:\\Program Files\\AI coding\\知识萃取\\商业模式资本\\输出\\ontology\\skus\\meta\\mapping.md'
