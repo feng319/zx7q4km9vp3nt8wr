@@ -1430,6 +1430,105 @@
         "报告-深石集团调研报告：房地产企业怎样做新能源？_chunk_001"
       ],
       "confidence": 0.8
+    },
+    {
+      "subject": "短流程炼钢",
+      "predicate": "enables",
+      "object": "钢铁行业降碳",
+      "source_chunks": [
+        "报告-河钢集团一线调研报告：钢铁行业存在哪些双碳机会？_chunk_001"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "subject": "氢能炼钢",
+      "predicate": "enables",
+      "object": "钢铁行业降碳",
+      "source_chunks": [
+        "报告-河钢集团一线调研报告：钢铁行业存在哪些双碳机会？_chunk_001"
+      ],
+      "confidence": 0.8
+    },
+    {
+      "subject": "高炉富氢冶炼",
+      "predicate": "enables",
+      "object": "钢铁行业降碳",
+      "source_chunks": [
+        "报告-河钢集团一线调研报告：钢铁行业存在哪些双碳机会？_chunk_001"
+      ],
+      "confidence": 0.8
+    },
+    {
+      "subject": "余热利用",
+      "predicate": "enables",
+      "object": "钢铁行业降碳",
+      "source_chunks": [
+        "报告-河钢集团一线调研报告：钢铁行业存在哪些双碳机会？_chunk_001"
+      ],
+      "confidence": 0.8
+    },
+    {
+      "subject": "余压利用",
+      "predicate": "enables",
+      "object": "钢铁行业降碳",
+      "source_chunks": [
+        "报告-河钢集团一线调研报告：钢铁行业存在哪些双碳机会？_chunk_001"
+      ],
+      "confidence": 0.6
+    },
+    {
+      "subject": "可再生能源电力消纳责任权重",
+      "predicate": "requires",
+      "object": "绿电消费比例",
+      "source_chunks": [
+        "报告-河钢集团一线调研报告：钢铁行业存在哪些双碳机会？_chunk_001"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "subject": "综合能碳管理",
+      "predicate": "enables",
+      "object": "钢铁行业降碳",
+      "source_chunks": [
+        "报告-河钢集团一线调研报告：钢铁行业存在哪些双碳机会？_chunk_001"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "subject": "碳排放权交易市场",
+      "predicate": "related-to",
+      "object": "钢铁行业",
+      "source_chunks": [
+        "报告-河钢集团一线调研报告：钢铁行业存在哪些双碳机会？_chunk_001"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "subject": "氢能炼钢",
+      "predicate": "causes",
+      "object": "绿钢",
+      "source_chunks": [
+        "报告-河钢集团一线调研报告：钢铁行业存在哪些双碳机会？_chunk_001"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "subject": "综合能碳管理",
+      "predicate": "has-a",
+      "object": "能碳管理",
+      "source_chunks": [
+        "报告-河钢集团一线调研报告：钢铁行业存在哪些双碳机会？_chunk_001"
+      ],
+      "confidence": 0.8
+    },
+    {
+      "subject": "节能降碳",
+      "predicate": "enables",
+      "object": "钢铁行业降碳",
+      "source_chunks": [
+        "报告-河钢集团一线调研报告：钢铁行业存在哪些双碳机会？_chunk_001"
+      ],
+      "confidence": 1.0
     }
   ]
 }
