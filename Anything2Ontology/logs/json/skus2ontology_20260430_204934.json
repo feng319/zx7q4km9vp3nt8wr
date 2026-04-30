@@ -1,0 +1,5 @@
+{"max_rounds": 5, "event": "Starting spec chatbot", "logger": "skus2ontology.chatbot", "level": "info", "timestamp": "2026-04-30T12:49:34.241964Z"}
+{"entries": 958, "event": "Built name_to_path lookup", "logger": "skus2ontology.chatbot", "level": "info", "timestamp": "2026-04-30T12:49:34.246502Z"}
+{"total_lines": 2, "matched": 0, "event": "slug\u2192path inline resolution", "logger": "skus2ontology.chatbot", "level": "info", "timestamp": "2026-04-30T12:49:34.246502Z"}
+{"original_chars": 57, "compressed_chars": 12, "event": "Loaded mapping.md (compressed)", "logger": "skus2ontology.chatbot", "level": "info", "timestamp": "2026-04-30T12:49:34.247501Z"}
+{"chars": 42, "event": "Loaded eureka.md", "logger": "skus2ontology.chatbot", "level": "info", "timestamp": "2026-04-30T12:49:34.247501Z"}
