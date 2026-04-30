@@ -2,6 +2,6 @@
 
 - **分类**: relational
 - **来源**: aggregated
-- **字符数**: 108,859
+- **字符数**: 113,063
 
 Domain label hierarchy, terminology glossary, and typed relationships

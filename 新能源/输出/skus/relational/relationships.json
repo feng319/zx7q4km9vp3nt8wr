@@ -1313,6 +1313,78 @@
         "报告-特来电零碳大楼调研报告：怎样做车网互动？_chunk_001"
       ],
       "confidence": 1.0
+    },
+    {
+      "subject": "微电网",
+      "predicate": "superset-of",
+      "object": "光储充微电网",
+      "source_chunks": [
+        "报告-电管家一线调研报告：微电网怎么赚钱？_chunk_001"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "subject": "光储充微电网",
+      "predicate": "enables",
+      "object": "虚拟电厂",
+      "source_chunks": [
+        "报告-电管家一线调研报告：微电网怎么赚钱？_chunk_001"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "subject": "隔墙售电",
+      "predicate": "enables",
+      "object": "源网荷储一体化",
+      "source_chunks": [
+        "报告-电管家一线调研报告：微电网怎么赚钱？_chunk_001"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "subject": "分布式光伏",
+      "predicate": "enables",
+      "object": "隔墙售电",
+      "source_chunks": [
+        "报告-电管家一线调研报告：微电网怎么赚钱？_chunk_001"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "subject": "1+N商业模式",
+      "predicate": "related-to",
+      "object": "电力运维托管服务",
+      "source_chunks": [
+        "报告-电管家一线调研报告：微电网怎么赚钱？_chunk_001"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "subject": "负载为王",
+      "predicate": "related-to",
+      "object": "1+N商业模式",
+      "source_chunks": [
+        "报告-电管家一线调研报告：微电网怎么赚钱？_chunk_001"
+      ],
+      "confidence": 0.8
+    },
+    {
+      "subject": "服务即基建",
+      "predicate": "related-to",
+      "object": "负载为王",
+      "source_chunks": [
+        "报告-电管家一线调研报告：微电网怎么赚钱？_chunk_001"
+      ],
+      "confidence": 0.8
+    },
+    {
+      "subject": "综合能源服务",
+      "predicate": "superset-of",
+      "object": "电力运维托管服务",
+      "source_chunks": [
+        "报告-电管家一线调研报告：微电网怎么赚钱？_chunk_001"
+      ],
+      "confidence": 1.0
     }
   ]
 }
