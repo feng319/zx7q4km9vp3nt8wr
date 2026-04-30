@@ -1,8 +1,8 @@
 {
   "created_at": "2026-04-30T23:58:12.790314",
-  "updated_at": "2026-05-01T00:30:54.063111",
-  "total_skus": 103,
-  "total_characters": 109198,
+  "updated_at": "2026-05-01T00:37:26.590773",
+  "total_skus": 113,
+  "total_characters": 125538,
   "chunks_processed": [
     "报告-《关于优化集中式新能源发电企业市场报价的通知（试行）》深度解读与战略分析_chunk_001",
     "报告-乌克兰新能源市场机会调研报告_chunk_001",
@@ -10,7 +10,8 @@
     "报告-三一硅能非洲调研报告：在非洲如何做矿山微电网？_chunk_001",
     "报告-固德威一线调研报告：城市级虚拟电厂怎么做？_chunk_001",
     "报告-则鸣新能源调研报告：怎么样做好微电网？_chunk_001",
-    "报告-协鑫能科调研报告：江苏最大虚拟电厂是怎么做成的？_chunk_001"
+    "报告-协鑫能科调研报告：江苏最大虚拟电厂是怎么做成的？_chunk_001",
+    "报告-固德威江西德安县调研报告：光储充一体化项目怎么做？_chunk_001"
   ],
   "skus": [
     {
@@ -1034,18 +1035,118 @@
       "confidence": null
     },
     {
+      "sku_id": "sku_073",
+      "name": "德安重卡光储充项目资产配置",
+      "classification": "factual",
+      "path": "factual/sku_073",
+      "source_chunk": "报告-固德威江西德安县调研报告：光储充一体化项目怎么做？_chunk_001",
+      "character_count": 311,
+      "description": "该项目包含630kW光伏、875kW/1827kWh储能、8.3MW充电桩和30kW微型风机，给出了各设备的规格、数量和供应商，展示了光储充一体化的典型规模与设备组合。",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_074",
+      "name": "光储充电站用能策略与智慧能源管理系统架构",
+      "classification": "factual",
+      "path": "factual/sku_074",
+      "source_chunk": "报告-固德威江西德安县调研报告：光储充一体化项目怎么做？_chunk_001",
+      "character_count": 391,
+      "description": "用能优先级为光伏直供重卡、余电存储、储能参与峰谷套利；系统以光储协调控制器为核心，配合智能电表、电流互感器和通讯线路形成“神经系统”，实现光储协同与完全本地消纳。",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_075",
+      "name": "防逆流实现机制与风险点",
+      "classification": "factual",
+      "path": "factual/sku_075",
+      "source_chunk": "报告-固德威江西德安县调研报告：光储充一体化项目怎么做？_chunk_001",
+      "character_count": 363,
+      "description": "高压防逆流电表以0.5秒精度监测下行功率，当低于5kW阈值时，SEC3000C控制器毫秒级响应降低光伏与储能出力，实现柔性防逆流；同时需防范数据精度不足和通讯不稳带来的失效风险。",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_076",
+      "name": "储能充放电时段策略与未来规划",
+      "classification": "factual",
+      "path": "factual/sku_076",
+      "source_chunk": "报告-固德威江西德安县调研报告：光储充一体化项目怎么做？_chunk_001",
+      "character_count": 239,
+      "description": "基于江西电网峰谷电价，储能于谷段充电至70%（预留30%给光伏），平段不放电，峰段放电；后续接入更多光伏后将调整为每日两充两放，以提高收益。",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_077",
+      "name": "度电盈亏平衡点计算示例（连续7天数据）",
+      "classification": "factual",
+      "path": "factual/sku_077",
+      "source_chunk": "报告-固德威江西德安县调研报告：光储充一体化项目怎么做？_chunk_001",
+      "character_count": 593,
+      "description": "基于一周运营数据，光伏发电8800kWh、储能充放电及市电使用，计算出度电盈亏平衡点为0.66元/kWh，为制定结算电价提供定量参考依据。",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_078",
+      "name": "光储充项目实施中的细节挑战实例",
+      "classification": "factual",
+      "path": "factual/sku_078",
+      "source_chunk": "报告-固德威江西德安县调研报告：光储充一体化项目怎么做？_chunk_001",
+      "character_count": 150,
+      "description": "固德威GM330电表安装需并网柜厂家提前预留卡槽，以及电缆沟槽孔径从设计的100mm现场调整为150mm以避免损伤，说明项目成功依赖全流程的专业协调与现场服务。",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_079",
+      "name": "德安县虚拟电厂规划",
+      "classification": "factual",
+      "path": "factual/sku_079",
+      "source_chunk": "报告-固德威江西德安县调研报告：光储充一体化项目怎么做？_chunk_001",
+      "character_count": 125,
+      "description": "项目业主江西六能正与固德威合作，计划聚合当地分布式光伏、充电桩、高负荷等资源建立县级虚拟电厂，并将该重卡光储充电站纳入，后续开展电力交易、需求响应等运营服务，以提升新能源资产价值。",
+      "confidence": null
+    },
+    {
+      "sku_id": "skill_030",
+      "name": "anti-backflow-control-for-pv-storage-charging-station",
+      "classification": "procedural",
+      "path": "procedural/skill_030",
+      "source_chunk": "报告-固德威江西德安县调研报告：光储充一体化项目怎么做？_chunk_001",
+      "character_count": 870,
+      "description": "在光储充电站中实现防逆流控制，确保光伏余电不上电网，适用于需要100%本地消纳的项目",
+      "confidence": null
+    },
+    {
+      "sku_id": "skill_031",
+      "name": "levelized-cost-of-electricity-breakeven-calculation",
+      "classification": "procedural",
+      "path": "procedural/skill_031",
+      "source_chunk": "报告-固德威江西德安县调研报告：光储充一体化项目怎么做？_chunk_001",
+      "character_count": 746,
+      "description": "计算光储充电站的度电盈亏平衡点，为制定与用能企业的结算电价提供参考",
+      "confidence": null
+    },
+    {
+      "sku_id": "skill_032",
+      "name": "charging-discharging-strategy-for-ev-storage-station",
+      "classification": "procedural",
+      "path": "procedural/skill_032",
+      "source_chunk": "报告-固德威江西德安县调研报告：光储充一体化项目怎么做？_chunk_001",
+      "character_count": 808,
+      "description": "为重卡光储充电站制定储能充放电策略，结合电价时段和本地消纳要求实现最大化收益",
+      "confidence": null
+    },
+    {
       "sku_id": "relational-knowledge-base",
       "name": "relational-knowledge-base",
       "classification": "relational",
       "path": "relational",
       "source_chunk": "aggregated",
-      "character_count": 53522,
+      "character_count": 65266,
       "description": "Domain label hierarchy and terminology glossary",
       "confidence": null
     }
   ],
-  "factual_count": 72,
+  "factual_count": 79,
   "relational_count": 1,
-  "procedural_count": 29,
+  "procedural_count": 32,
   "meta_count": 1
 }

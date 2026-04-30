@@ -575,6 +575,177 @@
         "报告-协鑫能科调研报告：江苏最大虚拟电厂是怎么做成的？_chunk_001"
       ],
       "confidence": 1.0
+    },
+    {
+      "subject": "光储充一体化项目",
+      "predicate": "requires",
+      "object": "光储充协同",
+      "source_chunks": [
+        "报告-固德威江西德安县调研报告：光储充一体化项目怎么做？_chunk_001"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "subject": "光储充协同",
+      "predicate": "requires",
+      "object": "光储协调控制器",
+      "source_chunks": [
+        "报告-固德威江西德安县调研报告：光储充一体化项目怎么做？_chunk_001"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "subject": "光储充协同",
+      "predicate": "requires",
+      "object": "能源管理系统",
+      "source_chunks": [
+        "报告-固德威江西德安县调研报告：光储充一体化项目怎么做？_chunk_001"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "subject": "光储协调控制器",
+      "predicate": "regulates",
+      "object": "光伏逆变器",
+      "source_chunks": [
+        "报告-固德威江西德安县调研报告：光储充一体化项目怎么做？_chunk_001"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "subject": "光储协调控制器",
+      "predicate": "regulates",
+      "object": "储能系统",
+      "source_chunks": [
+        "报告-固德威江西德安县调研报告：光储充一体化项目怎么做？_chunk_001"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "subject": "防逆流",
+      "predicate": "requires",
+      "object": "防逆流电表",
+      "source_chunks": [
+        "报告-固德威江西德安县调研报告：光储充一体化项目怎么做？_chunk_001"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "subject": "防逆流电表",
+      "predicate": "related-to",
+      "object": "下行功率",
+      "source_chunks": [
+        "报告-固德威江西德安县调研报告：光储充一体化项目怎么做？_chunk_001"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "subject": "度电盈亏平衡点",
+      "predicate": "related-to",
+      "object": "结算电价",
+      "source_chunks": [
+        "报告-固德威江西德安县调研报告：光储充一体化项目怎么做？_chunk_001"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "subject": "虚拟电厂",
+      "predicate": "superset-of",
+      "object": "县级虚拟电厂",
+      "source_chunks": [
+        "报告-固德威江西德安县调研报告：光储充一体化项目怎么做？_chunk_001"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "subject": "零碳示范园区",
+      "predicate": "requires",
+      "object": "光储充一体化项目",
+      "source_chunks": [
+        "报告-固德威江西德安县调研报告：光储充一体化项目怎么做？_chunk_001"
+      ],
+      "confidence": 0.8
+    },
+    {
+      "subject": "地方平台公司",
+      "predicate": "related-to",
+      "object": "资源整合",
+      "source_chunks": [
+        "报告-固德威江西德安县调研报告：光储充一体化项目怎么做？_chunk_001"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "subject": "资源整合",
+      "predicate": "enables",
+      "object": "虚拟电厂",
+      "source_chunks": [
+        "报告-固德威江西德安县调研报告：光储充一体化项目怎么做？_chunk_001"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "subject": "柔性防逆流",
+      "predicate": "related-to",
+      "object": "弃光率",
+      "source_chunks": [
+        "报告-固德威江西德安县调研报告：光储充一体化项目怎么做？_chunk_001"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "subject": "分布式光伏",
+      "predicate": "superset-of",
+      "object": "车棚光伏",
+      "source_chunks": [
+        "报告-固德威江西德安县调研报告：光储充一体化项目怎么做？_chunk_001"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "subject": "储能系统",
+      "predicate": "related-to",
+      "object": "两充两放策略",
+      "source_chunks": [
+        "报告-固德威江西德安县调研报告：光储充一体化项目怎么做？_chunk_001"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "subject": "智慧能源控制器",
+      "predicate": "superset-of",
+      "object": "光储协调控制器",
+      "source_chunks": [
+        "报告-固德威江西德安县调研报告：光储充一体化项目怎么做？_chunk_001"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "subject": "虚拟电厂",
+      "predicate": "related-to",
+      "object": "需求侧响应",
+      "source_chunks": [
+        "报告-固德威江西德安县调研报告：光储充一体化项目怎么做？_chunk_001"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "subject": "电流互感器",
+      "predicate": "related-to",
+      "object": "智能电表",
+      "source_chunks": [
+        "报告-固德威江西德安县调研报告：光储充一体化项目怎么做？_chunk_001"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "subject": "能源管理系统",
+      "predicate": "superset-of",
+      "object": "智慧能源平台",
+      "source_chunks": [
+        "报告-固德威江西德安县调研报告：光储充一体化项目怎么做？_chunk_001"
+      ],
+      "confidence": 1.0
     }
   ]
 }
