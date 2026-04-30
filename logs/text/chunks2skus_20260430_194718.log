@@ -74,3 +74,7 @@
 2026-04-30T11:47:18.547722Z [info     ] Submitting chunk for Factual/Procedural [chunks2skus.pipeline] chunk_id=清源创业_chunk_003
 2026-04-30T11:47:18.548745Z [info     ] Submitting chunk for Factual/Procedural [chunks2skus.pipeline] chunk_id=连锁企业的商业模式和股权模式_chunk_001
 2026-04-30T11:47:18.548745Z [info     ] Submitting chunk for Factual/Procedural [chunks2skus.pipeline] chunk_id=闭门私董会_chunk_001
+2026-04-30T11:47:20.102478Z [info     ] [MONITOR] Starting LLM call    [chunks2skus.utils.llm_client] attempt=0 max_tokens=64000 model=doubao-seed-2-0-pro-260215 prompt_length=50583 temperature=0.3
+2026-04-30T11:47:20.102478Z [info     ] [MONITOR] Starting LLM call    [chunks2skus.utils.llm_client] attempt=0 max_tokens=64000 model=doubao-seed-2-0-pro-260215 prompt_length=97372 temperature=0.3
+2026-04-30T11:47:20.108496Z [info     ] [MONITOR] Starting LLM call    [chunks2skus.utils.llm_client] attempt=0 max_tokens=64000 model=doubao-seed-2-0-pro-260215 prompt_length=28145 temperature=0.3
+2026-04-30T11:47:20.139310Z [info     ] [MONITOR] Starting LLM call    [chunks2skus.utils.llm_client] attempt=0 max_tokens=64000 model=doubao-seed-2-0-pro-260215 prompt_length=83872 temperature=0.3
