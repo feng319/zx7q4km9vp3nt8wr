@@ -386,6 +386,105 @@
         "报告-固德威一线调研报告：城市级虚拟电厂怎么做？_chunk_001"
       ],
       "confidence": 1.0
+    },
+    {
+      "subject": "微电网",
+      "predicate": "superset-of",
+      "object": "离网型微电网",
+      "source_chunks": [
+        "报告-则鸣新能源调研报告：怎么样做好微电网？_chunk_001"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "subject": "微电网",
+      "predicate": "superset-of",
+      "object": "并网型微电网",
+      "source_chunks": [
+        "报告-则鸣新能源调研报告：怎么样做好微电网？_chunk_001"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "subject": "微电网",
+      "predicate": "superset-of",
+      "object": "交直流混合微电网",
+      "source_chunks": [
+        "报告-则鸣新能源调研报告：怎么样做好微电网？_chunk_001"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "subject": "微电网",
+      "predicate": "superset-of",
+      "object": "光储直柔微电网",
+      "source_chunks": [
+        "报告-则鸣新能源调研报告：怎么样做好微电网？_chunk_001"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "subject": "离网型微电网",
+      "predicate": "related-to",
+      "object": "光储柴微电网",
+      "source_chunks": [
+        "报告-则鸣新能源调研报告：怎么样做好微电网？_chunk_001"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "subject": "并网型微电网",
+      "predicate": "related-to",
+      "object": "分布式光伏",
+      "source_chunks": [
+        "报告-则鸣新能源调研报告：怎么样做好微电网？_chunk_001"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "subject": "微电网",
+      "predicate": "requires",
+      "object": "智慧能源控制器",
+      "source_chunks": [
+        "报告-则鸣新能源调研报告：怎么样做好微电网？_chunk_001"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "subject": "微电网",
+      "predicate": "requires",
+      "object": "微电网能量管理系统",
+      "source_chunks": [
+        "报告-则鸣新能源调研报告：怎么样做好微电网？_chunk_001"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "subject": "能源管理系统",
+      "predicate": "superset-of",
+      "object": "微电网能量管理系统",
+      "source_chunks": [
+        "报告-则鸣新能源调研报告：怎么样做好微电网？_chunk_001"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "subject": "负荷分析",
+      "predicate": "enables",
+      "object": "微电网",
+      "source_chunks": [
+        "报告-则鸣新能源调研报告：怎么样做好微电网？_chunk_001"
+      ],
+      "confidence": 0.8
+    },
+    {
+      "subject": "光储柴微电网",
+      "predicate": "has-a",
+      "object": "柴油发电机",
+      "source_chunks": [
+        "报告-则鸣新能源调研报告：怎么样做好微电网？_chunk_001"
+      ],
+      "confidence": 1.0
     }
   ]
 }

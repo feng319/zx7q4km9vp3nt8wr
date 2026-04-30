@@ -169,8 +169,43 @@
             {
               "name": "矿山微电网",
               "children": []
+            },
+            {
+              "name": "按连接方式",
+              "children": [
+                {
+                  "name": "离网型微电网",
+                  "children": []
+                },
+                {
+                  "name": "并网型微电网",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "按电流类型",
+              "children": [
+                {
+                  "name": "交直流混合微电网",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "按技术特点",
+              "children": [
+                {
+                  "name": "光储直柔微电网",
+                  "children": []
+                }
+              ]
             }
           ]
+        },
+        {
+          "name": "能源管理系统",
+          "children": []
         }
       ]
     },

@@ -1,14 +1,15 @@
 {
   "created_at": "2026-04-30T23:58:12.790314",
-  "updated_at": "2026-05-01T00:26:37.083572",
-  "total_skus": 68,
-  "total_characters": 74314,
+  "updated_at": "2026-05-01T00:27:29.990193",
+  "total_skus": 85,
+  "total_characters": 97584,
   "chunks_processed": [
     "报告-《关于优化集中式新能源发电企业市场报价的通知（试行）》深度解读与战略分析_chunk_001",
     "报告-乌克兰新能源市场机会调研报告_chunk_001",
     "报告-兆瓦云调研报告：虚拟电厂的下一城在哪里？_chunk_001",
     "报告-三一硅能非洲调研报告：在非洲如何做矿山微电网？_chunk_001",
-    "报告-固德威一线调研报告：城市级虚拟电厂怎么做？_chunk_001"
+    "报告-固德威一线调研报告：城市级虚拟电厂怎么做？_chunk_001",
+    "报告-则鸣新能源调研报告：怎么样做好微电网？_chunk_001"
   ],
   "skus": [
     {
@@ -672,16 +673,6 @@
       "confidence": null
     },
     {
-      "sku_id": "relational-knowledge-base",
-      "name": "relational-knowledge-base",
-      "classification": "relational",
-      "path": "relational",
-      "source_chunk": "aggregated",
-      "character_count": 43601,
-      "description": "Domain label hierarchy and terminology glossary",
-      "confidence": null
-    },
-    {
       "sku_id": "meta-knowledge",
       "name": "meta-knowledge",
       "classification": "meta",
@@ -690,10 +681,190 @@
       "character_count": 5569,
       "description": "SKU routing (mapping.md) and creative insights (eureka.md)",
       "confidence": null
+    },
+    {
+      "sku_id": "sku_051",
+      "name": "微电网的定义、分类与用途",
+      "classification": "factual",
+      "path": "factual/sku_051",
+      "source_chunk": "报告-则鸣新能源调研报告：怎么样做好微电网？_chunk_001",
+      "character_count": 187,
+      "description": "微电网是由分布式电源、储能、负荷和能源管理系统组成的小型发配用电系统，分为离网型和并网型，分别满足偏远地区供电和并网消纳、降本降碳需求。",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_052",
+      "name": "微电网云-边协同控制逻辑",
+      "classification": "factual",
+      "path": "factual/sku_052",
+      "source_chunk": "报告-则鸣新能源调研报告：怎么样做好微电网？_chunk_001",
+      "character_count": 244,
+      "description": "微电网通过云平台监测分析并生成调控策略，下放到边缘智慧能源控制器快速执行，兼顾全局优化与本地实时控制。",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_053",
+      "name": "园区交直流混合微电网系统配置",
+      "classification": "factual",
+      "path": "factual/sku_053",
+      "source_chunk": "报告-则鸣新能源调研报告：怎么样做好微电网？_chunk_001",
+      "character_count": 1496,
+      "description": "一个园区建筑光储直柔微电网的设备类型、参数及运行效果数据，包括光伏、储能、交直流负荷等详细配置。",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_054",
+      "name": "直流供电电压等级设计三原则",
+      "classification": "factual",
+      "path": "factual/sku_054",
+      "source_chunk": "报告-则鸣新能源调研报告：怎么样做好微电网？_chunk_001",
+      "character_count": 162,
+      "description": "微电网直流母线电压选取需遵循需求原则、经济原则和安全原则，以平衡设备兼容性、损耗和安全性。",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_055",
+      "name": "微电网的四种组网结构",
+      "classification": "factual",
+      "path": "factual/sku_055",
+      "source_chunk": "报告-则鸣新能源调研报告：怎么样做好微电网？_chunk_001",
+      "character_count": 303,
+      "description": "微电网单元间通过联络开关形成单网式、双网式、环网式和群网式结构，其复杂度和可靠性依次升高，适用于不同供电范围和要求。",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_056",
+      "name": "非洲离网光储柴微电网系统技术参数",
+      "classification": "factual",
+      "path": "factual/sku_056",
+      "source_chunk": "报告-则鸣新能源调研报告：怎么样做好微电网？_chunk_001",
+      "character_count": 725,
+      "description": "莫桑比克采矿场离网微电网项目集成了10MWp光伏、21MWh储能、4.5MW柴油发电机和33kV输电线路，为采矿作业区和营地区供电。",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_057",
+      "name": "非洲离网微电网项目财务分析",
+      "classification": "factual",
+      "path": "factual/sku_057",
+      "source_chunk": "报告-则鸣新能源调研报告：怎么样做好微电网？_chunk_001",
+      "character_count": 892,
+      "description": "对比纯柴油发电与光储柴微电网方案15年的用能费用，显示业主可节省约6357万美元，开发商约4年回收成本、总收益4608万美元。",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_058",
+      "name": "微电网运营的关键挑战：变量预测与策略灵活性",
+      "classification": "factual",
+      "path": "factual/sku_058",
+      "source_chunk": "报告-则鸣新能源调研报告：怎么样做好微电网？_chunk_001",
+      "character_count": 317,
+      "description": "微电网运行受天气、负荷、政策等多变量影响，设计阶段需精确预测，运营需持续优化策略，否则易导致储能超配、利用率低下等资源浪费。",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_059",
+      "name": "微电网差异化竞争策略：精细化",
+      "classification": "factual",
+      "path": "factual/sku_059",
+      "source_chunk": "报告-则鸣新能源调研报告：怎么样做好微电网？_chunk_001",
+      "character_count": 286,
+      "description": "针对大厂难以覆盖的个性化需求场景，通过精细化政策研究、负荷分析及特殊负荷建模，在微电网服务中构建竞争壁垒。",
+      "confidence": null
+    },
+    {
+      "sku_id": "skill_017",
+      "name": "design-dc-voltage-level",
+      "classification": "procedural",
+      "path": "procedural/skill_017",
+      "source_chunk": "报告-则鸣新能源调研报告：怎么样做好微电网？_chunk_001",
+      "character_count": 1394,
+      "description": "Determine the DC bus voltage level for a DC microgrid using demand, economy, and safety principles.",
+      "confidence": null
+    },
+    {
+      "sku_id": "skill_018",
+      "name": "select-main-bus-structure",
+      "classification": "procedural",
+      "path": "procedural/skill_018",
+      "source_chunk": "报告-则鸣新能源调研报告：怎么样做好微电网？_chunk_001",
+      "character_count": 1388,
+      "description": "Choose between a single or redundant main bus architecture for a DC microgrid based on reliability requirements.",
+      "confidence": null
+    },
+    {
+      "sku_id": "skill_019",
+      "name": "design-microgrid-networking-topology",
+      "classification": "procedural",
+      "path": "procedural/skill_019",
+      "source_chunk": "报告-则鸣新能源调研报告：怎么样做好微电网？_chunk_001",
+      "character_count": 1598,
+      "description": "Select the networking topology (single, dual, ring, mesh) for microgrid units based on coverage area and reliability needs.",
+      "confidence": null
+    },
+    {
+      "sku_id": "skill_020",
+      "name": "optimize-underperforming-microgrid",
+      "classification": "procedural",
+      "path": "procedural/skill_020",
+      "source_chunk": "报告-则鸣新能源调研报告：怎么样做好微电网？_chunk_001",
+      "character_count": 1991,
+      "description": "Diagnose and improve a microgrid that suffers from low PV/storage utilization due to sizing errors or policy changes.",
+      "confidence": null
+    },
+    {
+      "sku_id": "skill_021",
+      "name": "perform-detailed-load-analysis",
+      "classification": "procedural",
+      "path": "procedural/skill_021",
+      "source_chunk": "报告-则鸣新能源调研报告：怎么样做好微电网？_chunk_001",
+      "character_count": 1605,
+      "description": "Go beyond power measurements to study working principles of special loads, building accurate models for microgrid design.",
+      "confidence": null
+    },
+    {
+      "sku_id": "skill_022",
+      "name": "offgrid-microgrid-feasibility-analysis",
+      "classification": "procedural",
+      "path": "procedural/skill_022",
+      "source_chunk": "报告-则鸣新能源调研报告：怎么样做好微电网？_chunk_001",
+      "character_count": 1929,
+      "description": "Calculate cost savings and ROI for a solar-storage-diesel off-grid microgrid replacing pure diesel generation.",
+      "confidence": null
+    },
+    {
+      "sku_id": "skill_023",
+      "name": "differentiated-microgrid-service-strategy",
+      "classification": "procedural",
+      "path": "procedural/skill_023",
+      "source_chunk": "报告-则鸣新能源调研报告：怎么样做好微电网？_chunk_001",
+      "character_count": 1718,
+      "description": "Achieve competitive advantage by delivering highly refined microgrid services tailored to local policy and specific load characteristics.",
+      "confidence": null
+    },
+    {
+      "sku_id": "skill_024",
+      "name": "microgrid-cloud-edge-control-architecture",
+      "classification": "procedural",
+      "path": "procedural/skill_024",
+      "source_chunk": "报告-则鸣新能源调研报告：怎么样做好微电网？_chunk_001",
+      "character_count": 1520,
+      "description": "Implement a two-layer control system for microgrids: cloud platform for strategy and edge controller for fast execution.",
+      "confidence": null
+    },
+    {
+      "sku_id": "relational-knowledge-base",
+      "name": "relational-knowledge-base",
+      "classification": "relational",
+      "path": "relational",
+      "source_chunk": "aggregated",
+      "character_count": 49116,
+      "description": "Domain label hierarchy and terminology glossary",
+      "confidence": null
     }
   ],
-  "factual_count": 50,
+  "factual_count": 59,
   "relational_count": 1,
-  "procedural_count": 16,
+  "procedural_count": 24,
   "meta_count": 1
 }
