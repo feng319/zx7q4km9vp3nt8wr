@@ -1,0 +1,13 @@
+{"skus_dir": "..\\\u5546\u4e1a\u6a21\u5f0f\u8d44\u672c\\\u8f93\u51fa\\skus", "ontology_dir": "..\\\u5546\u4e1a\u6a21\u5f0f\u8d44\u672c\\\u8f93\u51fa\\ontology", "skip_chatbot": false, "event": "Starting ontology pipeline", "logger": "skus2ontology.pipeline", "level": "info", "timestamp": "2026-04-30T12:16:37.356900Z"}
+{"skus_dir": "G:\\Program Files\\AI coding\\\u77e5\u8bc6\u8403\u53d6\\\u5546\u4e1a\u6a21\u5f0f\u8d44\u672c\\\u8f93\u51fa\\skus", "ontology_dir": "G:\\Program Files\\AI coding\\\u77e5\u8bc6\u8403\u53d6\\\u5546\u4e1a\u6a21\u5f0f\u8d44\u672c\\\u8f93\u51fa\\ontology", "event": "Starting ontology assembly", "logger": "skus2ontology.assembler", "level": "info", "timestamp": "2026-04-30T12:16:37.357899Z"}
+{"subdir": "factual", "files": 0, "event": "Copied directory", "logger": "skus2ontology.assembler", "level": "info", "timestamp": "2026-04-30T12:16:37.360006Z"}
+{"subdir": "procedural", "files": 0, "event": "Copied directory", "logger": "skus2ontology.assembler", "level": "info", "timestamp": "2026-04-30T12:16:37.362158Z"}
+{"subdir": "relational", "files": 1, "event": "Copied directory", "logger": "skus2ontology.assembler", "level": "info", "timestamp": "2026-04-30T12:16:37.364335Z"}
+{"event": "Copied eureka.md to ontology root", "logger": "skus2ontology.assembler", "level": "info", "timestamp": "2026-04-30T12:16:37.365362Z"}
+{"paths_rewritten": 0, "event": "Rewrote mapping.md", "logger": "skus2ontology.assembler", "level": "info", "timestamp": "2026-04-30T12:16:37.366395Z"}
+{"total_files": 3, "factual": 0, "procedural": 0, "paths_rewritten": 0, "event": "Assembly complete", "logger": "skus2ontology.assembler", "level": "info", "timestamp": "2026-04-30T12:16:37.366395Z"}
+{"max_rounds": 5, "event": "Starting spec chatbot", "logger": "skus2ontology.chatbot", "level": "info", "timestamp": "2026-04-30T12:16:37.366395Z"}
+{"entries": 958, "event": "Built name_to_path lookup", "logger": "skus2ontology.chatbot", "level": "info", "timestamp": "2026-04-30T12:16:37.370802Z"}
+{"total_lines": 2, "matched": 0, "event": "slug\u2192path inline resolution", "logger": "skus2ontology.chatbot", "level": "info", "timestamp": "2026-04-30T12:16:37.370802Z"}
+{"original_chars": 57, "compressed_chars": 12, "event": "Loaded mapping.md (compressed)", "logger": "skus2ontology.chatbot", "level": "info", "timestamp": "2026-04-30T12:16:37.370802Z"}
+{"chars": 42, "event": "Loaded eureka.md", "logger": "skus2ontology.chatbot", "level": "info", "timestamp": "2026-04-30T12:16:37.370802Z"}
