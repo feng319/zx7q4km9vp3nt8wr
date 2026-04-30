@@ -1,0 +1,35 @@
+{
+  "core_data": {
+    "stock_code": "430430",
+    "peak_market_value": "130亿元",
+    "market_value_202003": "3000余万元",
+    "core_client": "百事可乐、雀巢、农夫山泉，2017年农夫山泉贡献营收28%超1800万元"
+  },
+  "mode_evolution": [
+    {
+      "mode_type": "强势企业模式",
+      "feature": "卖设备一手交钱一手交货，后续维修服务单独收费"
+    },
+    {
+      "mode_type": "弱势企业模式",
+      "feature": "卖设备捆绑服务，先服务后收款，后期调整为“钥匙模式”全产业链服务，导致交付周期长、收款慢，88%收入按完工百分比确认，应收账款高企，预收账款仅21万元"
+    }
+  ],
+  "vs_yiju_china_comparison": [
+    {
+      "comparison_dimension": "客户关系策略",
+      "plued": "未将客户转化为股东，丧失时机",
+      "yiju_china": "主动让开发商客户入股"
+    },
+    {
+      "comparison_dimension": "关联交易风险",
+      "plued": "无法规避",
+      "yiju_china": "通过股权绑定降低风险"
+    },
+    {
+      "comparison_dimension": "议价能力",
+      "plued": "弱势（应收账款高）",
+      "yiju_china": "强势（客户与利益绑定）"
+    }
+  ]
+}

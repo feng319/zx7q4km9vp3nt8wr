@@ -1,0 +1,37 @@
+{
+  "core_info": "国内房地产行业龙头，核心竞争力为对客户需求的深度理解能力，2000年引入美国帕尔迪公司的住宅工业化模式，从产品导向转为客户生命周期价值管理",
+  "customer_segmentation_system": [
+    {
+      "customer_type": "首次置业者",
+      "segmentation_dimension": "基础需求",
+      "product_strategy": "标准化住宅产品"
+    },
+    {
+      "customer_type": "首次改善者",
+      "segmentation_dimension": "空间升级需求",
+      "product_strategy": "功能优化型产品"
+    },
+    {
+      "customer_type": "二次改善者",
+      "segmentation_dimension": "品质提升需求",
+      "product_strategy": "高端定制化产品"
+    },
+    {
+      "customer_type": "活跃长者",
+      "segmentation_dimension": "养老配套需求",
+      "product_strategy": "适老化社区产品"
+    }
+  ],
+  "china_customer_classification": [
+    "经济务实型家庭：注重性价比与实用功能",
+    "职场新锐型家庭：偏好现代化社区配套",
+    "望子成龙型家庭：优先考虑学区资源",
+    "成功彰显型家庭：追求身份象征产品",
+    "养老关怀型家庭：侧重适老化设计"
+  ],
+  "core_advantage": [
+    "精准客户画像能力，跨区域复制标准化产品体系，实现当年拿地、当年销售、当年结转的快速周转模式",
+    "2018年表观负债率84%，实际有息负债率仅51%，万亿负债规模主要由经营性负债构成",
+    "中国核心城市优质房产呈现五年翻倍规律，过去15年持续验证，预计未来15年仍将延续"
+  ]
+}
