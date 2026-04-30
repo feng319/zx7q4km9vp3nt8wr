@@ -3,3 +3,24 @@
 {"total_lines": 971, "matched": 944, "event": "slug\u2192path inline resolution", "logger": "skus2ontology.chatbot", "level": "info", "timestamp": "2026-04-30T13:11:03.753238Z"}
 {"original_chars": 49322, "compressed_chars": 29995, "event": "Loaded mapping.md (compressed)", "logger": "skus2ontology.chatbot", "level": "info", "timestamp": "2026-04-30T13:11:03.754238Z"}
 {"chars": 16728, "event": "Loaded eureka.md", "logger": "skus2ontology.chatbot", "level": "info", "timestamp": "2026-04-30T13:11:03.754238Z"}
+{"original_chars": 65604, "limit": 50000, "event": "SKU index summary truncated", "logger": "skus2ontology.chatbot", "level": "warning", "timestamp": "2026-04-30T13:24:56.585122Z"}
+{"chars": 50033, "sku_count": 962, "event": "Built SKU index summary", "logger": "skus2ontology.chatbot", "level": "info", "timestamp": "2026-04-30T13:24:56.585122Z"}
+{"draft_chars": 7619, "final_chars": 7619, "event": "Phase 2 anchor replacement complete", "logger": "skus2ontology.chatbot", "level": "info", "timestamp": "2026-04-30T13:26:28.243925Z"}
+{"before": 0, "after": 0, "unwrapped": 0, "event": "unwrap_resolved_anchors", "logger": "skus2ontology.chatbot", "level": "info", "timestamp": "2026-04-30T13:26:28.243925Z"}
+{"event": "All anchors replaced successfully", "logger": "skus2ontology.chatbot", "level": "info", "timestamp": "2026-04-30T13:26:28.244926Z"}
+{"backup": "G:\\Program Files\\AI coding\\\u77e5\u8bc6\u8403\u53d6\\\u5546\u4e1a\u6a21\u5f0f\u8d44\u672c\\\u8f93\u51fa\\ontology\\spec.md.bak.20260430_212628", "event": "Backed up existing spec.md", "logger": "skus2ontology.chatbot", "level": "info", "timestamp": "2026-04-30T13:26:28.247444Z"}
+{"path": "G:\\Program Files\\AI coding\\\u77e5\u8bc6\u8403\u53d6\\\u5546\u4e1a\u6a21\u5f0f\u8d44\u672c\\\u8f93\u51fa\\ontology\\spec.md", "chars": 7598, "event": "Saved spec.md", "logger": "skus2ontology.chatbot", "level": "info", "timestamp": "2026-04-30T13:26:28.247444Z"}
+{"check": "extra_chunk_bracket", "status": "PASS", "count": 0, "samples": [], "event": "spec_check", "logger": "skus2ontology.spec_validator", "level": "info", "timestamp": "2026-04-30T13:26:28.248849Z"}
+{"check": "anchor_wrapping_chunk", "status": "PASS", "count": 0, "samples": [], "event": "spec_check", "logger": "skus2ontology.spec_validator", "level": "info", "timestamp": "2026-04-30T13:26:28.248849Z"}
+{"check": "anchor_wrapping_sku", "status": "PASS", "count": 0, "samples": [], "event": "spec_check", "logger": "skus2ontology.spec_validator", "level": "info", "timestamp": "2026-04-30T13:26:28.248849Z"}
+{"check": "sku_sku_concat", "status": "PASS", "count": 0, "samples": [], "event": "spec_check", "logger": "skus2ontology.spec_validator", "level": "info", "timestamp": "2026-04-30T13:26:28.248849Z"}
+{"check": "sku_chunk_concat", "status": "PASS", "count": 0, "samples": [], "event": "spec_check", "logger": "skus2ontology.spec_validator", "level": "info", "timestamp": "2026-04-30T13:26:28.248849Z"}
+{"check": "chunk_sku_concat", "status": "PASS", "count": 0, "samples": [], "event": "spec_check", "logger": "skus2ontology.spec_validator", "level": "info", "timestamp": "2026-04-30T13:26:28.250068Z"}
+{"check": "sku_space_concat", "status": "FAIL", "count": 22, "samples": ["skus/factual/sku_315\nskus/", "skus/factual/sku_540\nskus/", "skus/factual/sku_541\nskus/"], "event": "spec_check", "logger": "skus2ontology.spec_validator", "level": "warning", "timestamp": "2026-04-30T13:26:28.250068Z"}
+{"check": "sku_range", "status": "PASS", "count": 0, "samples": [], "event": "spec_check", "logger": "skus2ontology.spec_validator", "level": "info", "timestamp": "2026-04-30T13:26:28.250068Z"}
+{"check": "chinese_chunk_bracket", "status": "PASS", "count": 0, "samples": [], "event": "spec_check", "logger": "skus2ontology.spec_validator", "level": "info", "timestamp": "2026-04-30T13:26:28.250068Z"}
+{"check": "chinese_sku_bracket", "status": "PASS", "count": 0, "samples": [], "event": "spec_check", "logger": "skus2ontology.spec_validator", "level": "info", "timestamp": "2026-04-30T13:26:28.250068Z"}
+{"check": "remaining_anchor", "status": "PASS", "count": 0, "samples": [], "event": "spec_check", "logger": "skus2ontology.spec_validator", "level": "info", "timestamp": "2026-04-30T13:26:28.251146Z"}
+{"sku_refs": 34, "sku_unique": 32, "chunk_refs": 36, "chunk_unique": 14, "event": "spec_stats", "logger": "skus2ontology.spec_validator", "level": "info", "timestamp": "2026-04-30T13:26:28.251146Z"}
+{"failures": ["Fix 4: space-separated SKU refs on same line: 22 hits"], "event": "spec_validator FAILED", "logger": "skus2ontology.spec_validator", "level": "warning", "timestamp": "2026-04-30T13:26:28.251146Z"}
+{"path": "..\\\u5546\u4e1a\u6a21\u5f0f\u8d44\u672c\\\u8f93\u51fa\\ontology\\chat_log.json", "rounds": 5, "confirmed": false, "event": "Saved chat log", "logger": "skus2ontology.pipeline", "level": "info", "timestamp": "2026-04-30T13:26:28.253265Z"}
