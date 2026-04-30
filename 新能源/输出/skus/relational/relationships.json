@@ -1529,6 +1529,87 @@
         "报告-河钢集团一线调研报告：钢铁行业存在哪些双碳机会？_chunk_001"
       ],
       "confidence": 1.0
+    },
+    {
+      "subject": "分时电价",
+      "predicate": "enables",
+      "object": "虚拟电厂",
+      "source_chunks": [
+        "报告-苏州工业园区的虚拟电厂调研报告：怎样做区域级虚拟电厂_chunk_001"
+      ],
+      "confidence": 0.8
+    },
+    {
+      "subject": "容量补贴",
+      "predicate": "enables",
+      "object": "虚拟电厂",
+      "source_chunks": [
+        "报告-苏州工业园区的虚拟电厂调研报告：怎样做区域级虚拟电厂_chunk_001"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "subject": "响应奖励",
+      "predicate": "enables",
+      "object": "虚拟电厂",
+      "source_chunks": [
+        "报告-苏州工业园区的虚拟电厂调研报告：怎样做区域级虚拟电厂_chunk_001"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "subject": "配套支持",
+      "predicate": "enables",
+      "object": "虚拟电厂",
+      "source_chunks": [
+        "报告-苏州工业园区的虚拟电厂调研报告：怎样做区域级虚拟电厂_chunk_001"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "subject": "虚拟电厂管理平台",
+      "predicate": "regulates",
+      "object": "虚拟电厂运营商",
+      "source_chunks": [
+        "报告-苏州工业园区的虚拟电厂调研报告：怎样做区域级虚拟电厂_chunk_001"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "subject": "虚拟电厂管理平台",
+      "predicate": "related-to",
+      "object": "碳普惠",
+      "source_chunks": [
+        "报告-苏州工业园区的虚拟电厂调研报告：怎样做区域级虚拟电厂_chunk_001"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "subject": "微电网",
+      "predicate": "superset-of",
+      "object": "工业绿色微电网",
+      "source_chunks": [
+        "报告-苏州工业园区的虚拟电厂调研报告：怎样做区域级虚拟电厂_chunk_001"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "subject": "工业绿色微电网",
+      "predicate": "related-to",
+      "object": "虚拟电厂",
+      "source_chunks": [
+        "报告-苏州工业园区的虚拟电厂调研报告：怎样做区域级虚拟电厂_chunk_001"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "subject": "新型负荷",
+      "predicate": "related-to",
+      "object": "虚拟电厂",
+      "source_chunks": [
+        "报告-苏州工业园区的虚拟电厂调研报告：怎样做区域级虚拟电厂_chunk_001"
+      ],
+      "confidence": 1.0
     }
   ]
 }

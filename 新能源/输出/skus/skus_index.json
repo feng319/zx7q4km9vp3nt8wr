@@ -1,8 +1,8 @@
 {
   "created_at": "2026-04-30T23:58:12.790314",
-  "updated_at": "2026-05-01T01:16:12.073621",
-  "total_skus": 252,
-  "total_characters": 255060,
+  "updated_at": "2026-05-01T01:18:53.387407",
+  "total_skus": 264,
+  "total_characters": 264104,
   "chunks_processed": [
     "报告-《关于优化集中式新能源发电企业市场报价的通知（试行）》深度解读与战略分析_chunk_001",
     "报告-乌克兰新能源市场机会调研报告_chunk_001",
@@ -21,7 +21,8 @@
     "报告-特来电零碳大楼调研报告：怎样做车网互动？_chunk_001",
     "报告-电管家一线调研报告：微电网怎么赚钱？_chunk_001",
     "报告-深石集团调研报告：房地产企业怎样做新能源？_chunk_001",
-    "报告-河钢集团一线调研报告：钢铁行业存在哪些双碳机会？_chunk_001"
+    "报告-河钢集团一线调研报告：钢铁行业存在哪些双碳机会？_chunk_001",
+    "报告-苏州工业园区的虚拟电厂调研报告：怎样做区域级虚拟电厂_chunk_001"
   ],
   "skus": [
     {
@@ -2535,18 +2536,138 @@
       "confidence": null
     },
     {
+      "sku_id": "sku_203",
+      "name": "苏州工业园区概况与产业体系",
+      "classification": "factual",
+      "path": "factual/sku_203",
+      "source_chunk": "报告-苏州工业园区的虚拟电厂调研报告：怎样做区域级虚拟电厂_chunk_001",
+      "character_count": 400,
+      "description": "苏州工业园区面积278平方公里，2024年GDP超4000亿元占苏州15%，国家级经开区九连冠，重点发展六大产业集群和23条重点产业链。",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_204",
+      "name": "苏州工业园区能源参数与绿色转型矛盾",
+      "classification": "factual",
+      "path": "factual/sku_204",
+      "source_chunk": "报告-苏州工业园区的虚拟电厂调研报告：怎样做区域级虚拟电厂_chunk_001",
+      "character_count": 314,
+      "description": "园区年用电量约150亿度、蒸汽约120万吨，光伏装机超700兆瓦，3个独立储能共150兆瓦时，高端产业对供电稳定性要求极高，绿色转型与供电稳定形成尖锐矛盾。",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_205",
+      "name": "苏州工业园区虚拟电厂两层架构",
+      "classification": "factual",
+      "path": "factual/sku_205",
+      "source_chunk": "报告-苏州工业园区的虚拟电厂调研报告：怎样做区域级虚拟电厂_chunk_001",
+      "character_count": 223,
+      "description": "园区虚拟电厂平台采用两层架构，管理6家聚合商，聚合超80家企业，覆盖光伏、储能、充换电站、空调楼宇、工业生产负荷、通信基站六类资源。",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_206",
+      "name": "苏州工业园区虚拟电厂运营案例",
+      "classification": "factual",
+      "path": "factual/sku_206",
+      "source_chunk": "报告-苏州工业园区的虚拟电厂调研报告：怎样做区域级虚拟电厂_chunk_001",
+      "character_count": 345,
+      "description": "某工作日削峰响应中，4家聚合商组织34家企业，实际降低负荷20.151兆瓦，响应准确率约94%，降低用电量约2万度，预估补贴约2万元。",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_207",
+      "name": "苏州工业园区虚拟电厂补贴政策",
+      "classification": "factual",
+      "path": "factual/sku_207",
+      "source_chunk": "报告-苏州工业园区的虚拟电厂调研报告：怎样做区域级虚拟电厂_chunk_001",
+      "character_count": 460,
+      "description": "园区推出三层补贴模式：容量补贴（聚合商，不超过50元/千瓦）、响应奖励（每度电不超过6元）、配套支持（储能放电0.15元/度、V2G充电桩不高于80元/千瓦建设补贴、光伏并网补贴）。",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_208",
+      "name": "园区级虚拟电厂的三层核心价值",
+      "classification": "factual",
+      "path": "factual/sku_208",
+      "source_chunk": "报告-苏州工业园区的虚拟电厂调研报告：怎样做区域级虚拟电厂_chunk_001",
+      "character_count": 275,
+      "description": "虚拟电厂为工业园区带来三层价值：提高新能源消纳率助力碳达峰、缓解保供压力并降低企业电费、通过服务企业绿电需求促进招商留商。",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_209",
+      "name": "可调负荷资源的调度优先级",
+      "classification": "factual",
+      "path": "factual/sku_209",
+      "source_chunk": "报告-苏州工业园区的虚拟电厂调研报告：怎样做区域级虚拟电厂_chunk_001",
+      "character_count": 247,
+      "description": "园区内可调负荷资源优先响应省级电力调度，其次市级，最后园区级；园区级调度以低成本解决局部问题，避免低效的跨层级协同。",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_210",
+      "name": "苏州工业园区虚拟电厂政企协同模式",
+      "classification": "factual",
+      "path": "factual/sku_210",
+      "source_chunk": "报告-苏州工业园区的虚拟电厂调研报告：怎样做区域级虚拟电厂_chunk_001",
+      "character_count": 145,
+      "description": "虚拟电厂平台建设采用政企协同，由园区经发委牵头，联合园区供电公司、协鑫能科等成立专项工作组，各方优势互补以快速推进。",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_211",
+      "name": "园区虚拟电厂资源普查与接入推进方式",
+      "classification": "factual",
+      "path": "factual/sku_211",
+      "source_chunk": "报告-苏州工业园区的虚拟电厂调研报告：怎样做区域级虚拟电厂_chunk_001",
+      "character_count": 136,
+      "description": "由政府牵头开展可调节资源普查，搭建政府-运营商-用户三方沟通平台，通过行业协会推荐、政策宣讲等方式动员企业参与，降低企业风险顾虑。",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_212",
+      "name": "虚拟电厂与园区能碳管理融合规划",
+      "classification": "factual",
+      "path": "factual/sku_212",
+      "source_chunk": "报告-苏州工业园区的虚拟电厂调研报告：怎样做区域级虚拟电厂_chunk_001",
+      "character_count": 190,
+      "description": "苏州工业园区规划让能源系统与虚拟电厂深度融合，整合电、气、热等多能源数据，并推动与碳普惠平台互通，提供绿电消费认证、碳减排核算等增值服务。",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_213",
+      "name": "推动虚拟电厂发展的两个外部变量",
+      "classification": "factual",
+      "path": "factual/sku_213",
+      "source_chunk": "报告-苏州工业园区的虚拟电厂调研报告：怎样做区域级虚拟电厂_chunk_001",
+      "character_count": 291,
+      "description": "分时电价市场化和工业绿色微电网建设指南将重塑虚拟电厂价值，使其从可选项逐步变为工业绿色转型的标配。",
+      "confidence": null
+    },
+    {
+      "sku_id": "skill_065",
+      "name": "build-industrial-park-virtual-power-plant",
+      "classification": "procedural",
+      "path": "procedural/skill_065",
+      "source_chunk": "报告-苏州工业园区的虚拟电厂调研报告：怎样做区域级虚拟电厂_chunk_001",
+      "character_count": 1304,
+      "description": "为工业园区规划建设区域级虚拟电厂管理平台时使用，涵盖从协同推进、资源接入到补贴设计和能碳融合的完整流程。",
+      "confidence": null
+    },
+    {
       "sku_id": "relational-knowledge-base",
       "name": "relational-knowledge-base",
       "classification": "relational",
       "path": "relational",
       "source_chunk": "aggregated",
-      "character_count": 126654,
+      "character_count": 131368,
       "description": "Domain label hierarchy and terminology glossary",
       "confidence": null
     }
   ],
-  "factual_count": 186,
+  "factual_count": 197,
   "relational_count": 1,
-  "procedural_count": 64,
+  "procedural_count": 65,
   "meta_count": 1
 }

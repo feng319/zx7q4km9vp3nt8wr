@@ -286,12 +286,21 @@
             {
               "name": "光储充微电网",
               "children": []
+            },
+            {
+              "name": "工业绿色微电网",
+              "children": []
             }
           ]
         },
         {
           "name": "能源管理系统",
-          "children": []
+          "children": [
+            {
+              "name": "虚拟电厂管理平台",
+              "children": []
+            }
+          ]
         },
         {
           "name": "节能技术",
