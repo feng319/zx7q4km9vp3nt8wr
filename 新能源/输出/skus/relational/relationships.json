@@ -1088,6 +1088,96 @@
         "报告-广林汇智调研报告：在西北地区怎么做虚拟电厂？_chunk_001"
       ],
       "confidence": 1.0
+    },
+    {
+      "subject": "恒实盛景虚拟电厂",
+      "predicate": "example-of",
+      "object": "空调虚拟电厂",
+      "source_chunks": [
+        "报告-恒实盛景调研报告：怎样做空调虚拟电厂？_chunk_001"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "subject": "恒实盛景",
+      "predicate": "example-of",
+      "object": "虚拟电厂运营商",
+      "source_chunks": [
+        "报告-恒实盛景调研报告：怎样做空调虚拟电厂？_chunk_001"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "subject": "空调虚拟电厂",
+      "predicate": "related-to",
+      "object": "需求侧响应",
+      "source_chunks": [
+        "报告-恒实盛景调研报告：怎样做空调虚拟电厂？_chunk_001"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "subject": "需求侧响应",
+      "predicate": "superset-of",
+      "object": "日前需求响应市场",
+      "source_chunks": [
+        "报告-恒实盛景调研报告：怎样做空调虚拟电厂？_chunk_001"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "subject": "需求侧响应",
+      "predicate": "superset-of",
+      "object": "日内需求响应市场",
+      "source_chunks": [
+        "报告-恒实盛景调研报告：怎样做空调虚拟电厂？_chunk_001"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "subject": "热惯性",
+      "predicate": "enables",
+      "object": "空调虚拟电厂",
+      "source_chunks": [
+        "报告-恒实盛景调研报告：怎样做空调虚拟电厂？_chunk_001"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "subject": "空调虚拟电厂",
+      "predicate": "enables",
+      "object": "无感节能",
+      "source_chunks": [
+        "报告-恒实盛景调研报告：怎样做空调虚拟电厂？_chunk_001"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "subject": "全投资模式",
+      "predicate": "related-to",
+      "object": "虚拟电厂运营商",
+      "source_chunks": [
+        "报告-恒实盛景调研报告：怎样做空调虚拟电厂？_chunk_001"
+      ],
+      "confidence": 0.8
+    },
+    {
+      "subject": "仿生控制算法",
+      "predicate": "part-of",
+      "object": "空调虚拟电厂",
+      "source_chunks": [
+        "报告-恒实盛景调研报告：怎样做空调虚拟电厂？_chunk_001"
+      ],
+      "confidence": 0.8
+    },
+    {
+      "subject": "虚拟电厂+产业",
+      "predicate": "related-to",
+      "object": "虚拟电厂",
+      "source_chunks": [
+        "报告-恒实盛景调研报告：怎样做空调虚拟电厂？_chunk_001"
+      ],
+      "confidence": 1.0
     }
   ]
 }

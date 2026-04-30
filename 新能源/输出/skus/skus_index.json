@@ -1,8 +1,8 @@
 {
   "created_at": "2026-04-30T23:58:12.790314",
-  "updated_at": "2026-05-01T00:53:47.719185",
-  "total_skus": 176,
-  "total_characters": 182442,
+  "updated_at": "2026-05-01T00:57:07.401131",
+  "total_skus": 184,
+  "total_characters": 193210,
   "chunks_processed": [
     "报告-《关于优化集中式新能源发电企业市场报价的通知（试行）》深度解读与战略分析_chunk_001",
     "报告-乌克兰新能源市场机会调研报告_chunk_001",
@@ -15,7 +15,8 @@
     "报告-奇峰聚能调研报告：飞轮储能怎么做？_chunk_001",
     "报告-国海绿能一线调研报告：重卡换电站怎么做？_chunk_001",
     "报告-安悦节能调研报告：怎样做冷热电综合能源服务？_chunk_001",
-    "报告-广林汇智调研报告：在西北地区怎么做虚拟电厂？_chunk_001"
+    "报告-广林汇智调研报告：在西北地区怎么做虚拟电厂？_chunk_001",
+    "报告-恒实盛景调研报告：怎样做空调虚拟电厂？_chunk_001"
   ],
   "skus": [
     {
@@ -1769,18 +1770,98 @@
       "confidence": null
     },
     {
+      "sku_id": "sku_121",
+      "name": "空调负荷作为虚拟电厂资源的原理与可调节潜力",
+      "classification": "factual",
+      "path": "factual/sku_121",
+      "source_chunk": "报告-恒实盛景调研报告：怎样做空调虚拟电厂？_chunk_001",
+      "character_count": 436,
+      "description": "空调负荷具有高耗能和强可调节性两大特征，使其成为建设虚拟电厂的理想资源，城市空调负荷的可调节总量极高。",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_122",
+      "name": "恒实盛景空调虚拟电厂的商业模式与收益结构",
+      "classification": "factual",
+      "path": "factual/sku_122",
+      "source_chunk": "报告-恒实盛景调研报告：怎样做空调虚拟电厂？_chunk_001",
+      "character_count": 377,
+      "description": "恒实盛景以聚合商、投资商、运营商、技术提供商四重身份运作空调虚拟电厂，通过全投资模式实现用户零成本参与并分享收益。",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_123",
+      "name": "深圳虚拟电厂需求侧响应机制与典型案例",
+      "classification": "factual",
+      "path": "factual/sku_123",
+      "source_chunk": "报告-恒实盛景调研报告：怎样做空调虚拟电厂？_chunk_001",
+      "character_count": 482,
+      "description": "深圳虚拟电厂需求侧响应分为日前和日内市场，空调虚拟电厂通过降低用电功率获取服务费，一次典型响应实现显著削峰和节省电量。",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_124",
+      "name": "AI驱动空调虚拟电厂精细调控的四步流程",
+      "classification": "factual",
+      "path": "factual/sku_124",
+      "source_chunk": "报告-恒实盛景调研报告：怎样做空调虚拟电厂？_chunk_001",
+      "character_count": 358,
+      "description": "恒实盛景自2024年起探索AI驱动的空调虚拟电厂调控，形成可调能力预测、目标拆解、实时校正、分析复盘四步闭环。",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_125",
+      "name": "空调虚拟电厂场景深耕的关键变量与“虚拟电厂+产业”路径",
+      "classification": "factual",
+      "path": "factual/sku_125",
+      "source_chunk": "报告-恒实盛景调研报告：怎样做空调虚拟电厂？_chunk_001",
+      "character_count": 631,
+      "description": "空调虚拟电厂的成功依赖于对建筑场景中人体感、建筑特性等多变量的深度理解，恒实盛景通过场景深耕演进为建筑供冷行家，形成“虚拟电厂+产业”模式。",
+      "confidence": null
+    },
+    {
+      "sku_id": "skill_046",
+      "name": "ai-driven-ac-virtual-power-plant-regulation",
+      "classification": "procedural",
+      "path": "procedural/skill_046",
+      "source_chunk": "报告-恒实盛景调研报告：怎样做空调虚拟电厂？_chunk_001",
+      "character_count": 662,
+      "description": "使用AI算法实现空调虚拟电厂精细调控的四步流程，适用于复杂场景下的负荷预测、任务分配、实时校正和复盘优化。",
+      "confidence": null
+    },
+    {
+      "sku_id": "skill_047",
+      "name": "demand-side-response-participation-workflow",
+      "classification": "procedural",
+      "path": "procedural/skill_047",
+      "source_chunk": "报告-恒实盛景调研报告：怎样做空调虚拟电厂？_chunk_001",
+      "character_count": 747,
+      "description": "空调虚拟电厂参与电力需求侧响应的完整流程，包括市场类型选择、响应执行和收益结算。",
+      "confidence": null
+    },
+    {
+      "sku_id": "skill_048",
+      "name": "zone-based-ac-precision-control-strategy",
+      "classification": "procedural",
+      "path": "procedural/skill_048",
+      "source_chunk": "报告-恒实盛景调研报告：怎样做空调虚拟电厂？_chunk_001",
+      "character_count": 949,
+      "description": "针对复杂建筑（如医院、商场）的空调虚拟电厂精细化分区调控策略制定方法，确保体感舒适前提下的柔性调温。",
+      "confidence": null
+    },
+    {
       "sku_id": "relational-knowledge-base",
       "name": "relational-knowledge-base",
       "classification": "relational",
       "path": "relational",
       "source_chunk": "aggregated",
-      "character_count": 93599,
+      "character_count": 99725,
       "description": "Domain label hierarchy and terminology glossary",
       "confidence": null
     }
   ],
-  "factual_count": 129,
+  "factual_count": 134,
   "relational_count": 1,
-  "procedural_count": 45,
+  "procedural_count": 48,
   "meta_count": 1
 }

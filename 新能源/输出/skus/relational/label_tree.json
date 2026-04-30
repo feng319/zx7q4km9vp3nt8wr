@@ -272,6 +272,43 @@
     {
       "name": "海外市场",
       "children": []
+    },
+    {
+      "name": "虚拟电厂",
+      "children": [
+        {
+          "name": "按聚合类型",
+          "children": [
+            {
+              "name": "负荷型虚拟电厂",
+              "children": [
+                {
+                  "name": "空调虚拟电厂",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "辅助服务市场",
+      "children": [
+        {
+          "name": "需求侧响应",
+          "children": [
+            {
+              "name": "日前需求响应市场",
+              "children": []
+            },
+            {
+              "name": "日内需求响应市场",
+              "children": []
+            }
+          ]
+        }
+      ]
     }
   ]
 }
