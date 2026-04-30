@@ -1,0 +1,13 @@
+2026-04-30T11:51:41.235931Z [info     ] Starting ontology pipeline     [skus2ontology.pipeline] ontology_dir='G:\\Program Files\\AI coding\\知识萃取\\商业模式资本\\输出\\ontology' skip_chatbot=False skus_dir='G:\\Program Files\\AI coding\\知识萃取\\商业模式资本\\输出\\skus'
+2026-04-30T11:51:41.236932Z [info     ] Starting ontology assembly     [skus2ontology.assembler] ontology_dir='G:\\Program Files\\AI coding\\知识萃取\\商业模式资本\\输出\\ontology' skus_dir='G:\\Program Files\\AI coding\\知识萃取\\商业模式资本\\输出\\skus'
+2026-04-30T11:51:41.238934Z [info     ] Copied directory               [skus2ontology.assembler] files=0 subdir=factual
+2026-04-30T11:51:41.513572Z [info     ] Copied directory               [skus2ontology.assembler] files=0 subdir=procedural
+2026-04-30T11:51:41.540728Z [info     ] Copied directory               [skus2ontology.assembler] files=1 subdir=relational
+2026-04-30T11:51:41.541727Z [info     ] Copied eureka.md to ontology root [skus2ontology.assembler]
+2026-04-30T11:51:41.542727Z [info     ] Rewrote mapping.md             [skus2ontology.assembler] paths_rewritten=0
+2026-04-30T11:51:41.542727Z [info     ] Assembly complete              [skus2ontology.assembler] factual=0 paths_rewritten=0 procedural=0 total_files=3
+2026-04-30T11:51:41.542727Z [info     ] Starting spec chatbot          [skus2ontology.chatbot] max_rounds=5
+2026-04-30T11:51:41.545806Z [info     ] Built name_to_path lookup      [skus2ontology.chatbot] entries=958
+2026-04-30T11:51:41.546960Z [info     ] slug→path inline resolution    [skus2ontology.chatbot] matched=0 total_lines=2
+2026-04-30T11:51:41.546960Z [info     ] Loaded mapping.md (compressed) [skus2ontology.chatbot] compressed_chars=12 original_chars=57
+2026-04-30T11:51:41.546960Z [info     ] Loaded eureka.md               [skus2ontology.chatbot] chars=42
