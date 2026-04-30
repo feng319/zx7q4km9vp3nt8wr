@@ -773,6 +773,7 @@ class SpecChatbot:
         - 【chunk: xxx】 → [chunk: xxx]     (Chinese brackets → standard brackets)
         - [chunk: xxx]]  → [chunk: xxx]     (fix duplicated closing brackets)
         - 【skus/...】   → skus/...          (Chinese brackets around SKU paths)
+        - ref、ref       → one per line      (Chinese comma-separated refs → newline-separated)
         - skus/... skus/... → one per line   (space-separated SKU refs → newline-separated)
         - [chunk: a][chunk: b] → one per line (adjacent chunk refs → newline-separated)
         """
@@ -798,6 +799,25 @@ class SpecChatbot:
         spec = re.sub(
             r"(\[chunk:\s*[^\]]+\])(?=skus/)",
             r"\1\n",
+            spec,
+        )
+        # Chinese comma (、) separated refs → one per line
+        # SKU、SKU
+        spec = re.sub(
+            r"(skus/(?:factual|procedural|relational)/(?:sku|skill)_\d+)、",
+            r"\1\n",
+            spec,
+        )
+        # [chunk: ...]、ref
+        spec = re.sub(
+            r"(\[chunk:\s*[^\]]+\])、",
+            r"\1\n",
+            spec,
+        )
+        # ref、[chunk: ...] — the 、before a chunk ref
+        spec = re.sub(
+            r"、(\[chunk:\s*[^\]]+\])",
+            r"\n\1",
             spec,
         )
         # Space-separated SKU refs on same line → one per line
