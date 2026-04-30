@@ -1,8 +1,8 @@
 {
   "created_at": "2026-04-30T23:58:12.790314",
-  "updated_at": "2026-05-01T01:40:15.847885",
-  "total_skus": 334,
-  "total_characters": 332759,
+  "updated_at": "2026-05-01T01:45:40.927622",
+  "total_skus": 348,
+  "total_characters": 345550,
   "chunks_processed": [
     "报告-《关于优化集中式新能源发电企业市场报价的通知（试行）》深度解读与战略分析_chunk_001",
     "报告-乌克兰新能源市场机会调研报告_chunk_001",
@@ -27,7 +27,8 @@
     "报告-纬景储能调研报告：液流电池为储能带来的机会_chunk_001",
     "报告-良信电器调研报告：怎样建设零碳工厂？_chunk_001",
     "报告-非洲调研报告（二）：中国新能源企业在赞比亚有什么机会？_chunk_001",
-    "报告-非洲调研报告（一）：中国新能源企业在肯尼亚有什么机会？_chunk_001"
+    "报告-非洲调研报告（一）：中国新能源企业在肯尼亚有什么机会？_chunk_001",
+    "报告-远景科技调研报告：如何把握储能 AIDC领域未来机会_chunk_001"
   ],
   "skus": [
     {
@@ -3361,18 +3362,158 @@
       "confidence": null
     },
     {
+      "sku_id": "sku_261",
+      "name": "远景科技集团业务板块与行业地位",
+      "classification": "factual",
+      "path": "factual/sku_261",
+      "source_chunk": "报告-远景科技调研报告：如何把握储能 AIDC领域未来机会_chunk_001",
+      "character_count": 211,
+      "description": "远景科技集团从风机起家，已扩展至储能、绿氢、动力电池、智慧能源等业务，拥有多个标杆项目，是全球前十大风机制造商中排名第二的企业。",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_262",
+      "name": "136号文件取消强制配储政策",
+      "classification": "factual",
+      "path": "factual/sku_262",
+      "source_chunk": "报告-远景科技调研报告：如何把握储能 AIDC领域未来机会_chunk_001",
+      "character_count": 151,
+      "description": "2025年国家发改委、国家能源局印发136号文件，取消新能源项目强制配储要求，推动储能行业向市场化盈利模式转变。",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_263",
+      "name": "江苏射阳250MW/500MWh电网侧储能电站盈利分析",
+      "classification": "factual",
+      "path": "factual/sku_263",
+      "source_chunk": "报告-远景科技调研报告：如何把握储能 AIDC领域未来机会_chunk_001",
+      "character_count": 785,
+      "description": "远景在江苏射阳的电网侧储能电站通过迎峰度夏补贴和调峰服务，实现年收益约1.34亿元，预计4-5年回本，展示了高可靠性与高转换效率对电网侧储能盈利的关键作用。",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_264",
+      "name": "储能电站参与电力现货市场交易七步流程",
+      "classification": "factual",
+      "path": "factual/sku_264",
+      "source_chunk": "报告-远景科技调研报告：如何把握储能 AIDC领域未来机会_chunk_001",
+      "character_count": 312,
+      "description": "电网侧储能参与电力现货市场交易需经过信息收集、天气预测、电价预测、生成策略、人工微调、申报、执行等七步，日前96点报价，日内实时调整。",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_265",
+      "name": "储能现货交易的关键点：精细化天气预测与AI智能交易",
+      "classification": "factual",
+      "path": "factual/sku_265",
+      "source_chunk": "报告-远景科技调研报告：如何把握储能 AIDC领域未来机会_chunk_001",
+      "character_count": 336,
+      "description": "储能电站实现高收益依赖于15分钟级精准天气预测和AI自动化交易系统，远景通过自研模型和EnOS平台，AI交易收益比人工高15-20%。",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_266",
+      "name": "AIDC智算中心的电力需求结构与高耗能特征",
+      "classification": "factual",
+      "path": "factual/sku_266",
+      "source_chunk": "报告-远景科技调研报告：如何把握储能 AIDC领域未来机会_chunk_001",
+      "character_count": 500,
+      "description": "AIDC（智算中心）主要耗电来自IT设备、制冷、供配电和辅助设施，一座5万机架数据中心年耗电可达19亿度，PUE可优化至1.1-1.2，是未来重要的增量电力负荷。",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_267",
+      "name": "中国数据中心用电量现状与增长预测",
+      "classification": "factual",
+      "path": "factual/sku_267",
+      "source_chunk": "报告-远景科技调研报告：如何把握储能 AIDC领域未来机会_chunk_001",
+      "character_count": 379,
+      "description": "2023年全国数据中心用电量约1500亿度，按15%增速，2030年将达4000亿度，其中绿电占比要求超过80%，带来巨大新能源装机需求。",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_268",
+      "name": "中国八大算力枢纽及重点省份算力政策",
+      "classification": "factual",
+      "path": "factual/sku_268",
+      "source_chunk": "报告-远景科技调研报告：如何把握储能 AIDC领域未来机会_chunk_001",
+      "character_count": 782,
+      "description": "东数西算工程下，京津冀、长三角、粤港澳、内蒙古、宁夏、甘肃、成渝、贵州为八大算力枢纽，相关省份均出台政策推动绿色算力建设。",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_269",
+      "name": "电算协同：用数据转移替代电力传输",
+      "classification": "factual",
+      "path": "factual/sku_269",
+      "source_chunk": "报告-远景科技调研报告：如何把握储能 AIDC领域未来机会_chunk_001",
+      "character_count": 188,
+      "description": "电算协同模式下，通过将计算任务转移到新能源发电充足的地区，以避免电力远距离传输损耗，要求数据中心与新能源场站同步规划、建设与运营。",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_270",
+      "name": "远景通过负荷侧改造适应新能源波动的实践",
+      "classification": "factual",
+      "path": "factual/sku_270",
+      "source_chunk": "报告-远景科技调研报告：如何把握储能 AIDC领域未来机会_chunk_001",
+      "character_count": 236,
+      "description": "远景在化工和冶金等领域的项目中自研设备（如制氢电解槽、矿热炉），以适应新能源发电波动，实现随风光出力灵活生产，并推出新一代绿色能源AIDC解决方案。",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_271",
+      "name": "杰文斯悖论解释AI效率提升将增加总能源需求",
+      "classification": "factual",
+      "path": "factual/sku_271",
+      "source_chunk": "报告-远景科技调研报告：如何把握储能 AIDC领域未来机会_chunk_001",
+      "character_count": 165,
+      "description": "杰文斯悖论指出技术效率提升反而导致总能源消耗增加，DeepSeek等AI效率提升降低使用成本，将刺激更大规模AI部署，增加对新能源的需求。",
+      "confidence": null
+    },
+    {
+      "sku_id": "skill_086",
+      "name": "grid-side-energy-storage-revenue-estimation",
+      "classification": "procedural",
+      "path": "procedural/skill_086",
+      "source_chunk": "报告-远景科技调研报告：如何把握储能 AIDC领域未来机会_chunk_001",
+      "character_count": 902,
+      "description": "估算电网侧储能电站在迎峰度夏/冬保供及日常调峰模式下的年收益与回本周期，适用于有补贴政策的地区",
+      "confidence": null
+    },
+    {
+      "sku_id": "skill_087",
+      "name": "energy-storage-spot-market-trading",
+      "classification": "procedural",
+      "path": "procedural/skill_087",
+      "source_chunk": "报告-远景科技调研报告：如何把握储能 AIDC领域未来机会_chunk_001",
+      "character_count": 984,
+      "description": "储能电站通过报量报价参与日前电力现货市场，并结合日内实时调整进行套利的操作流程",
+      "confidence": null
+    },
+    {
+      "sku_id": "skill_088",
+      "name": "electricity-computing-coordination-implementation",
+      "classification": "procedural",
+      "path": "procedural/skill_088",
+      "source_chunk": "报告-远景科技调研报告：如何把握储能 AIDC领域未来机会_chunk_001",
+      "character_count": 1048,
+      "description": "实施电算协同项目，实现数据中心与新能源电站同步规划、建设、运营，使算力随绿电转移",
+      "confidence": null
+    },
+    {
       "sku_id": "relational-knowledge-base",
       "name": "relational-knowledge-base",
       "classification": "relational",
       "path": "relational",
       "source_chunk": "aggregated",
-      "character_count": 163802,
+      "character_count": 169614,
       "description": "Domain label hierarchy and terminology glossary",
       "confidence": null
     }
   ],
-  "factual_count": 247,
+  "factual_count": 258,
   "relational_count": 1,
-  "procedural_count": 85,
+  "procedural_count": 88,
   "meta_count": 1
 }

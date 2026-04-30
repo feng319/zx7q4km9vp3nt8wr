@@ -129,6 +129,10 @@
         {
           "name": "隔墙售电",
           "children": []
+        },
+        {
+          "name": "电算协同",
+          "children": []
         }
       ]
     },
@@ -381,6 +385,10 @@
         {
           "name": "零碳工厂",
           "children": []
+        },
+        {
+          "name": "零碳产业园",
+          "children": []
         }
       ]
     },
@@ -414,6 +422,24 @@
           "children": [
             {
               "name": "直流微电网",
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "储能系统",
+      "children": [
+        {
+          "name": "按并网位置",
+          "children": [
+            {
+              "name": "电网侧储能",
+              "children": []
+            },
+            {
+              "name": "电源侧储能",
               "children": []
             }
           ]

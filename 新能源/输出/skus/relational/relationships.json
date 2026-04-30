@@ -2142,6 +2142,60 @@
         "报告-非洲调研报告（一）：中国新能源企业在肯尼亚有什么机会？_chunk_001"
       ],
       "confidence": 1.0
+    },
+    {
+      "subject": "日内电力现货市场",
+      "predicate": "part-of",
+      "object": "电力现货市场",
+      "source_chunks": [
+        "报告-远景科技调研报告：如何把握储能 AIDC领域未来机会_chunk_001"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "subject": "智算中心",
+      "predicate": "implements",
+      "object": "电算协同",
+      "source_chunks": [
+        "报告-远景科技调研报告：如何把握储能 AIDC领域未来机会_chunk_001"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "subject": "日前现货交易",
+      "predicate": "depends-on",
+      "object": "天气预测",
+      "source_chunks": [
+        "报告-远景科技调研报告：如何把握储能 AIDC领域未来机会_chunk_001"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "subject": "强制配储",
+      "predicate": "causes",
+      "object": "电源侧储能",
+      "source_chunks": [
+        "报告-远景科技调研报告：如何把握储能 AIDC领域未来机会_chunk_001"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "subject": "136号文",
+      "predicate": "contradicts",
+      "object": "强制配储",
+      "source_chunks": [
+        "报告-远景科技调研报告：如何把握储能 AIDC领域未来机会_chunk_001"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "subject": "绿电消费比例",
+      "predicate": "regulates",
+      "object": "智算中心",
+      "source_chunks": [
+        "报告-远景科技调研报告：如何把握储能 AIDC领域未来机会_chunk_001"
+      ],
+      "confidence": 1.0
     }
   ]
 }
