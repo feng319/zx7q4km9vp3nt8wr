@@ -39,3 +39,7 @@
 2026-04-30T15:58:12.824962Z [info     ] Extracting factual knowledge   [chunks2skus.extractors.factual_extractor] chunk_id=报告-乌克兰新能源市场机会调研报告_chunk_001
 2026-04-30T15:58:12.825961Z [info     ] [MONITOR] call_llm_json starting [chunks2skus.utils.llm_client] model=deepseek-v4-pro
 2026-04-30T15:58:12.825961Z [info     ] [MONITOR] Creating thread-local OpenAI client [chunks2skus.utils.llm_client] base_url=https://api.deepseek.com thread=ThreadPoolExecutor-1_2
+2026-04-30T15:58:14.234394Z [info     ] [MONITOR] Starting LLM call    [chunks2skus.utils.llm_client] attempt=0 max_tokens=64000 model=deepseek-v4-pro prompt_length=10480 temperature=0.3
+2026-04-30T15:58:14.274762Z [info     ] [MONITOR] Starting LLM call    [chunks2skus.utils.llm_client] attempt=0 max_tokens=64000 model=deepseek-v4-pro prompt_length=11260 temperature=0.3
+2026-04-30T15:58:14.274762Z [info     ] [MONITOR] Starting LLM call    [chunks2skus.utils.llm_client] attempt=0 max_tokens=64000 model=deepseek-v4-pro prompt_length=8514 temperature=0.3
+2026-04-30T15:58:14.290367Z [info     ] [MONITOR] Starting LLM call    [chunks2skus.utils.llm_client] attempt=0 max_tokens=64000 model=deepseek-v4-pro prompt_length=9432 temperature=0.3
