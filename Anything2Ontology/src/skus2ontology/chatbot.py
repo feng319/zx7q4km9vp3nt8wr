@@ -626,6 +626,24 @@ class SpecChatbot:
 
         result = "\n".join(lines)
 
+        if len(result) > SKU_INDEX_MAX_CHARS:
+            # Truncate by complete lines
+            result_lines = result.split("\n")
+            truncated: list[str] = []
+            total = 0
+            for line in result_lines:
+                if total + len(line) + 1 > SKU_INDEX_MAX_CHARS:
+                    break
+                truncated.append(line)
+                total += len(line) + 1
+            result = "\n".join(truncated)
+            result += "\n\n... (索引已截断，未列出的 SKU 请通过 mapping.md 查找)"
+            logger.warning(
+                "SKU index summary truncated",
+                original_chars=len("\n".join(result_lines)),
+                limit=SKU_INDEX_MAX_CHARS,
+            )
+
         logger.info("Built SKU index summary", chars=len(result), sku_count=len(skus))
         return result
 
