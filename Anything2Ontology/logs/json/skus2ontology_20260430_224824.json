@@ -1,0 +1,2 @@
+{"max_rounds": 5, "phase2_only": true, "event": "Starting spec chatbot", "logger": "skus2ontology.chatbot", "level": "info", "timestamp": "2026-04-30T14:48:24.672818Z"}
+{"chars": 11242, "sku_count": 177, "event": "Built SKU index summary", "logger": "skus2ontology.chatbot", "level": "info", "timestamp": "2026-04-30T14:48:24.674335Z"}

@@ -1,0 +1,2 @@
+2026-04-30T14:48:24.672818Z [info     ] Starting spec chatbot          [skus2ontology.chatbot] max_rounds=5 phase2_only=True
+2026-04-30T14:48:24.674335Z [info     ] Built SKU index summary        [skus2ontology.chatbot] chars=11242 sku_count=177
