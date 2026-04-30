@@ -1,8 +1,8 @@
 {
   "created_at": "2026-04-30T23:58:12.790314",
-  "updated_at": "2026-05-01T01:23:41.668862",
+  "updated_at": "2026-05-01T01:27:33.134463",
   "total_skus": 274,
-  "total_characters": 275180,
+  "total_characters": 281015,
   "chunks_processed": [
     "报告-《关于优化集中式新能源发电企业市场报价的通知（试行）》深度解读与战略分析_chunk_001",
     "报告-乌克兰新能源市场机会调研报告_chunk_001",
@@ -2197,16 +2197,6 @@
       "confidence": null
     },
     {
-      "sku_id": "meta-knowledge",
-      "name": "meta-knowledge",
-      "classification": "meta",
-      "path": "meta",
-      "source_chunk": "aggregated",
-      "character_count": 19014,
-      "description": "SKU routing (mapping.md) and creative insights (eureka.md)",
-      "confidence": null
-    },
-    {
       "sku_id": "sku_161",
       "name": "电管家集团五大业务板块",
       "classification": "factual",
@@ -2764,6 +2754,16 @@
       "source_chunk": "aggregated",
       "character_count": 137280,
       "description": "Domain label hierarchy and terminology glossary",
+      "confidence": null
+    },
+    {
+      "sku_id": "meta-knowledge",
+      "name": "meta-knowledge",
+      "classification": "meta",
+      "path": "meta",
+      "source_chunk": "aggregated",
+      "character_count": 24849,
+      "description": "SKU routing (mapping.md) and creative insights (eureka.md)",
       "confidence": null
     }
   ],
