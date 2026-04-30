@@ -85,7 +85,16 @@
         },
         {
           "name": "辅助服务市场",
-          "children": []
+          "children": [
+            {
+              "name": "一次调频",
+              "children": []
+            },
+            {
+              "name": "二次调频",
+              "children": []
+            }
+          ]
         }
       ]
     },
@@ -157,7 +166,12 @@
       "children": [
         {
           "name": "储能系统",
-          "children": []
+          "children": [
+            {
+              "name": "飞轮储能",
+              "children": []
+            }
+          ]
         },
         {
           "name": "新能源设备",

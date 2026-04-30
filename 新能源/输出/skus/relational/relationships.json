@@ -746,6 +746,150 @@
         "报告-固德威江西德安县调研报告：光储充一体化项目怎么做？_chunk_001"
       ],
       "confidence": 1.0
+    },
+    {
+      "subject": "储能系统",
+      "predicate": "superset-of",
+      "object": "飞轮储能",
+      "source_chunks": [
+        "报告-奇峰聚能调研报告：飞轮储能怎么做？_chunk_001"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "subject": "辅助服务市场",
+      "predicate": "superset-of",
+      "object": "一次调频",
+      "source_chunks": [
+        "报告-奇峰聚能调研报告：飞轮储能怎么做？_chunk_001"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "subject": "辅助服务市场",
+      "predicate": "superset-of",
+      "object": "二次调频",
+      "source_chunks": [
+        "报告-奇峰聚能调研报告：飞轮储能怎么做？_chunk_001"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "subject": "飞轮储能",
+      "predicate": "enables",
+      "object": "一次调频",
+      "source_chunks": [
+        "报告-奇峰聚能调研报告：飞轮储能怎么做？_chunk_001"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "subject": "飞轮储能",
+      "predicate": "enables",
+      "object": "二次调频",
+      "source_chunks": [
+        "报告-奇峰聚能调研报告：飞轮储能怎么做？_chunk_001"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "subject": "一次调频",
+      "predicate": "depends-on",
+      "object": "频率死区",
+      "source_chunks": [
+        "报告-奇峰聚能调研报告：飞轮储能怎么做？_chunk_001"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "subject": "二次调频",
+      "predicate": "depends-on",
+      "object": "AGC",
+      "source_chunks": [
+        "报告-奇峰聚能调研报告：飞轮储能怎么做？_chunk_001"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "subject": "K值",
+      "predicate": "has-a",
+      "object": "响应时间性能指标",
+      "source_chunks": [
+        "报告-奇峰聚能调研报告：飞轮储能怎么做？_chunk_001"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "subject": "K值",
+      "predicate": "has-a",
+      "object": "响应速率性能指标",
+      "source_chunks": [
+        "报告-奇峰聚能调研报告：飞轮储能怎么做？_chunk_001"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "subject": "K值",
+      "predicate": "has-a",
+      "object": "响应精度性能指标",
+      "source_chunks": [
+        "报告-奇峰聚能调研报告：飞轮储能怎么做？_chunk_001"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "subject": "排序价格",
+      "predicate": "depends-on",
+      "object": "K值",
+      "source_chunks": [
+        "报告-奇峰聚能调研报告：飞轮储能怎么做？_chunk_001"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "subject": "独立储能电站",
+      "predicate": "related-to",
+      "object": "辅助服务市场",
+      "source_chunks": [
+        "报告-奇峰聚能调研报告：飞轮储能怎么做？_chunk_001"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "subject": "混合储能电站",
+      "predicate": "has-a",
+      "object": "飞轮储能",
+      "source_chunks": [
+        "报告-奇峰聚能调研报告：飞轮储能怎么做？_chunk_001"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "subject": "两个细则",
+      "predicate": "regulates",
+      "object": "一次调频",
+      "source_chunks": [
+        "报告-奇峰聚能调研报告：飞轮储能怎么做？_chunk_001"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "subject": "调频里程",
+      "predicate": "related-to",
+      "object": "辅助服务市场",
+      "source_chunks": [
+        "报告-奇峰聚能调研报告：飞轮储能怎么做？_chunk_001"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "subject": "飞轮储能",
+      "predicate": "has-a",
+      "object": "飞轮转子",
+      "source_chunks": [
+        "报告-奇峰聚能调研报告：飞轮储能怎么做？_chunk_001"
+      ],
+      "confidence": 1.0
     }
   ]
 }

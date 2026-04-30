@@ -1,8 +1,8 @@
 {
   "created_at": "2026-04-30T23:58:12.790314",
-  "updated_at": "2026-05-01T00:37:26.590773",
-  "total_skus": 113,
-  "total_characters": 125538,
+  "updated_at": "2026-05-01T00:41:46.489466",
+  "total_skus": 126,
+  "total_characters": 139922,
   "chunks_processed": [
     "报告-《关于优化集中式新能源发电企业市场报价的通知（试行）》深度解读与战略分析_chunk_001",
     "报告-乌克兰新能源市场机会调研报告_chunk_001",
@@ -11,7 +11,8 @@
     "报告-固德威一线调研报告：城市级虚拟电厂怎么做？_chunk_001",
     "报告-则鸣新能源调研报告：怎么样做好微电网？_chunk_001",
     "报告-协鑫能科调研报告：江苏最大虚拟电厂是怎么做成的？_chunk_001",
-    "报告-固德威江西德安县调研报告：光储充一体化项目怎么做？_chunk_001"
+    "报告-固德威江西德安县调研报告：光储充一体化项目怎么做？_chunk_001",
+    "报告-奇峰聚能调研报告：飞轮储能怎么做？_chunk_001"
   ],
   "skus": [
     {
@@ -1135,18 +1136,148 @@
       "confidence": null
     },
     {
+      "sku_id": "sku_091",
+      "name": "北京奇峰聚能科技有限公司概况",
+      "classification": "factual",
+      "path": "factual/sku_091",
+      "source_chunk": "报告-奇峰聚能调研报告：飞轮储能怎么做？_chunk_001",
+      "character_count": 288,
+      "description": "飞轮储能头部企业奇峰聚能的基本信息，包括成立时间、业务、股东、产能、技术资质及核心能力。",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_092",
+      "name": "飞轮储能基本原理与核心部件",
+      "classification": "factual",
+      "path": "factual/sku_092",
+      "source_chunk": "报告-奇峰聚能调研报告：飞轮储能怎么做？_chunk_001",
+      "character_count": 146,
+      "description": "飞轮储能的工作原理、能量转换方式、核心部件组成及材料。",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_093",
+      "name": "飞轮储能设备储能能力参数",
+      "classification": "factual",
+      "path": "factual/sku_093",
+      "source_chunk": "报告-奇峰聚能调研报告：飞轮储能怎么做？_chunk_001",
+      "character_count": 194,
+      "description": "以奇峰聚能产品为例的飞轮储能设备功率、转速、储电量及放电时间等储能能力指标。",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_094",
+      "name": "飞轮储能与电化学储能关键性能对比",
+      "classification": "factual",
+      "path": "factual/sku_094",
+      "source_chunk": "报告-奇峰聚能调研报告：飞轮储能怎么做？_chunk_001",
+      "character_count": 315,
+      "description": "飞轮储能（功率型）与电化学储能（如锂电池）在响应速度、充放电寿命及适用场景上的系统对比。",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_095",
+      "name": "飞轮储能的主要应用场景",
+      "classification": "factual",
+      "path": "factual/sku_095",
+      "source_chunk": "报告-奇峰聚能调研报告：飞轮储能怎么做？_chunk_001",
+      "character_count": 155,
+      "description": "飞轮储能当前及潜在的应用方向，并指出最具商业化前景的领域。",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_096",
+      "name": "电网一次调频与二次调频的概念及对比",
+      "classification": "factual",
+      "path": "factual/sku_096",
+      "source_chunk": "报告-奇峰聚能调研报告：飞轮储能怎么做？_chunk_001",
+      "character_count": 302,
+      "description": "电力系统中一次调频和二次调频的定义、响应时间、调节精度及两者关系的通俗解释。",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_097",
+      "name": "火电厂一次调频考核与飞轮储能辅助价值",
+      "classification": "factual",
+      "path": "factual/sku_097",
+      "source_chunk": "报告-奇峰聚能调研报告：飞轮储能怎么做？_chunk_001",
+      "character_count": 534,
+      "description": "火电厂一次调频面临的考核压力、飞轮储能如何联合运行以降低罚款并保护机组，以及某百万机组改造项目的投资与收益数据。",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_098",
+      "name": "山西独立储能电站参与一次调频市场交易流程",
+      "classification": "factual",
+      "path": "factual/sku_098",
+      "source_chunk": "报告-奇峰聚能调研报告：飞轮储能怎么做？_chunk_001",
+      "character_count": 316,
+      "description": "山西省独立储能电站从注册到结算的六步一次调频市场交易流程。",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_099",
+      "name": "独立储能电站一次调频服务收益计算方法",
+      "classification": "factual",
+      "path": "factual/sku_099",
+      "source_chunk": "报告-奇峰聚能调研报告：飞轮储能怎么做？_chunk_001",
+      "character_count": 345,
+      "description": "山西市场下一次调频服务费计算公式、参数定义、K值构成及典型取值下的单次收益算例。",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_100",
+      "name": "奇峰聚能某100MW混合储能独立电站经济性指标",
+      "classification": "factual",
+      "path": "factual/sku_100",
+      "source_chunk": "报告-奇峰聚能调研报告：飞轮储能怎么做？_chunk_001",
+      "character_count": 449,
+      "description": "山西某100MW飞轮+锂电池混合储能项目的投资、收益构成与回收期数据。",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_101",
+      "name": "飞轮储能商业化前景与新能源调频需求关联",
+      "classification": "factual",
+      "path": "factual/sku_101",
+      "source_chunk": "报告-奇峰聚能调研报告：飞轮储能怎么做？_chunk_001",
+      "character_count": 395,
+      "description": "新能源装机占比提高对飞轮储能需求的驱动逻辑，山西率先开放一次调频市场的政策事实以及复制到其他省份的可能性。",
+      "confidence": null
+    },
+    {
+      "sku_id": "skill_033",
+      "name": "energy-storage-frequency-regulation-market-participation",
+      "classification": "procedural",
+      "path": "procedural/skill_033",
+      "source_chunk": "报告-奇峰聚能调研报告：飞轮储能怎么做？_chunk_001",
+      "character_count": 949,
+      "description": "适用于独立储能电站注册并参与电力一次调频市场交易的完整操作流程，基于山西等省份现行规则。",
+      "confidence": null
+    },
+    {
+      "sku_id": "skill_034",
+      "name": "flywheel-storage-project-revenue-estimation",
+      "classification": "procedural",
+      "path": "procedural/skill_034",
+      "source_chunk": "报告-奇峰聚能调研报告：飞轮储能怎么做？_chunk_001",
+      "character_count": 915,
+      "description": "飞轮储能项目收益测算与投资可行性评估方法，适用于含一次调频服务的独立储能或火电辅助调频项目。",
+      "confidence": null
+    },
+    {
       "sku_id": "relational-knowledge-base",
       "name": "relational-knowledge-base",
       "classification": "relational",
       "path": "relational",
       "source_chunk": "aggregated",
-      "character_count": 65266,
+      "character_count": 74347,
       "description": "Domain label hierarchy and terminology glossary",
       "confidence": null
     }
   ],
-  "factual_count": 79,
+  "factual_count": 90,
   "relational_count": 1,
-  "procedural_count": 32,
+  "procedural_count": 34,
   "meta_count": 1
 }
