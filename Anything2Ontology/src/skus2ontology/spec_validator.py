@@ -127,3 +127,13 @@ def validate(spec_path: Path) -> bool:
         logger.warning("spec_validator FAILED", failures=failures)
 
     return passed
+
+
+if __name__ == "__main__":
+    import sys
+    if len(sys.argv) < 2:
+        print("用法: python spec_validator.py <path/to/spec.md>")
+        sys.exit(1)
+    spec_path = Path(sys.argv[1])
+    result = validate(spec_path)
+    sys.exit(0 if result else 1)
