@@ -14,3 +14,27 @@
 2026-04-30T22:56:30.602763Z [info     ] slug→path inline resolution    [skus2ontology.chatbot] matched=364 total_lines=384
 2026-04-30T22:56:30.602763Z [info     ] Loaded mapping.md (compressed) [skus2ontology.chatbot] compressed_chars=25797 original_chars=24026
 2026-04-30T22:56:30.602763Z [info     ] Loaded eureka.md               [skus2ontology.chatbot] chars=9512
+2026-04-30T23:28:17.814622Z [info     ] Built SKU index summary        [skus2ontology.chatbot] chars=24641 sku_count=366
+2026-04-30T23:31:29.494922Z [error    ] Phase 2: LLM returned empty response [skus2ontology.chatbot]
+2026-04-30T23:31:29.495923Z [warning  ] Phase 2 anchor replacement failed, using draft with anchors [skus2ontology.chatbot]
+2026-04-30T23:31:29.496922Z [info     ] unwrap_resolved_anchors        [skus2ontology.chatbot] after=138 before=138 unwrapped=0
+2026-04-30T23:31:29.498920Z [info     ] Remaining anchors              [skus2ontology.chatbot] count=138 sample=['【锚点：集中式新能源发电市场报价政策发布机构、文号及核心目标】', '【锚点：集中报价模式下“四不改变”原则如何实现金融与物理解耦】', '【锚点：集中报价的适用范围、身份约束和规模约束及其反垄断意义】', '【锚点：三一硅能矿山微电网的投资+售电商业模式】', '【锚点：矿山微电网投资的回收周期预期与风控措施】', '【锚点：通过客户筛选、尽调与风险金来控制矿山微电网投资风险】', '【锚点：综合能源服务盈利的关键在于深入研究客户生产工艺与用能规律】', '【锚点：综合能源服务商应在同一客户身上持续深耕挖掘新业务，而非不断开拓新客户的长期思维】', '【锚点：当需要在综合能源服务中建立长期客户关系，通过持续深耕和业务协同不断挖掘新服务机会时查阅】', '【锚点：电管家以一项核心服务黏住用户再延伸售电、光伏、储能等多项服务的“1+N”能源业务拓展模式】']
+2026-04-30T23:31:29.500156Z [info     ] Backed up existing spec.md     [skus2ontology.chatbot] backup='G:\\Program Files\\AI coding\\知识萃取\\新能源\\输出\\ontology\\spec.md.bak.20260501_073129'
+2026-04-30T23:31:29.501156Z [info     ] Saved spec.md                  [skus2ontology.chatbot] chars=11277 path='G:\\Program Files\\AI coding\\知识萃取\\新能源\\输出\\ontology\\spec.md'
+2026-04-30T23:31:29.502157Z [info     ] spec_check                     [skus2ontology.spec_validator] check=extra_chunk_bracket count=0 samples=[] status=PASS
+2026-04-30T23:31:29.502157Z [info     ] spec_check                     [skus2ontology.spec_validator] check=anchor_wrapping_chunk count=0 samples=[] status=PASS
+2026-04-30T23:31:29.503157Z [info     ] spec_check                     [skus2ontology.spec_validator] check=anchor_wrapping_sku count=0 samples=[] status=PASS
+2026-04-30T23:31:29.503157Z [info     ] spec_check                     [skus2ontology.spec_validator] check=sku_sku_concat count=0 samples=[] status=PASS
+2026-04-30T23:31:29.504156Z [info     ] spec_check                     [skus2ontology.spec_validator] check=sku_chunk_concat count=0 samples=[] status=PASS
+2026-04-30T23:31:29.504156Z [info     ] spec_check                     [skus2ontology.spec_validator] check=chunk_sku_concat count=0 samples=[] status=PASS
+2026-04-30T23:31:29.504156Z [info     ] spec_check                     [skus2ontology.spec_validator] check=sku_space_concat count=0 samples=[] status=PASS
+2026-04-30T23:31:29.505200Z [info     ] spec_check                     [skus2ontology.spec_validator] check=sku_range count=0 samples=[] status=PASS
+2026-04-30T23:31:29.505200Z [info     ] spec_check                     [skus2ontology.spec_validator] check=chinese_chunk_bracket count=0 samples=[] status=PASS
+2026-04-30T23:31:29.506274Z [info     ] spec_check                     [skus2ontology.spec_validator] check=chinese_sku_bracket count=0 samples=[] status=PASS
+2026-04-30T23:31:29.506274Z [info     ] spec_check                     [skus2ontology.spec_validator] check=remaining_anchor count=138 samples=['【锚点：集中式新能源发电市场报价政策发布机构、文号及核心目标】', '【锚点：集中报价模式下“四不改变”原则如何实现金融与物理解耦】', '【锚点：集中报价的适用范围、身份约束和规模约束及其反垄断意义】'] status=INFO
+2026-04-30T23:31:29.506274Z [info     ] spec_stats                     [skus2ontology.spec_validator] chunk_refs=0 chunk_unique=0 sku_refs=0 sku_unique=0
+2026-04-30T23:31:29.506274Z [info     ] spec_validator PASSED          [skus2ontology.spec_validator]
+2026-04-30T23:31:29.508511Z [info     ] Saved chat log                 [skus2ontology.pipeline] confirmed=False path='G:\\Program Files\\AI coding\\知识萃取\\新能源\\输出\\ontology\\chat_log.json' rounds=5
+2026-04-30T23:31:29.510826Z [info     ] Generated README.md            [skus2ontology.readme_generator] path='G:\\Program Files\\AI coding\\知识萃取\\新能源\\输出\\ontology\\README.md'
+2026-04-30T23:31:29.511822Z [info     ] Saved ontology manifest        [skus2ontology.pipeline] path='G:\\Program Files\\AI coding\\知识萃取\\新能源\\输出\\ontology\\ontology_manifest.json'
+2026-04-30T23:31:29.512820Z [info     ] Ontology pipeline complete     [skus2ontology.pipeline] duration_seconds=2100.5 has_readme=True has_spec=True total_files=736
