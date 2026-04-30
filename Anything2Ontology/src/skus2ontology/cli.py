@@ -98,10 +98,15 @@ def assemble(skus_dir: Path | None, ontology_dir: Path | None):
     type=click.Path(exists=True, path_type=Path),
     help="Ontology directory (must already exist with mapping.md)",
 )
-def chatbot(ontology_dir: Path | None):
+@click.option(
+    "--phase2-only",
+    is_flag=True,
+    help="Skip Phase 1 interactive chat, only run Phase 2 anchor replacement on existing spec.md",
+)
+def chatbot(ontology_dir: Path | None, phase2_only: bool):
     """Run the spec chatbot on an existing ontology."""
     pipeline = OntologyPipeline(ontology_dir=ontology_dir)
-    spec = pipeline.chatbot_only()
+    spec = pipeline.chatbot_only(phase2_only=phase2_only)
 
     if spec:
         click.echo(f"\nspec.md generated ({len(spec)} chars)")
