@@ -702,6 +702,10 @@ class MetaExtractor(BaseExtractor):
         # Shrinkage guard: reject if content shrank by more than 50%
         # (eureka may legitimately consolidate/shorten entries)
         if len(response) >= max(50, current_size * 0.5) or current_size < 100:
+            # Fix LLM translating Chinese chunk prefixes to English
+            CHUNK_PREFIX_CORRECTIONS = {"report-": "报告-"}
+            for wrong, correct in CHUNK_PREFIX_CORRECTIONS.items():
+                response = response.replace(wrong, correct)
             self.eureka_path.write_text(response, encoding="utf-8")
             logger.info(
                 "Updated eureka.md",
