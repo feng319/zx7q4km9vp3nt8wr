@@ -1,0 +1,41 @@
+2026-04-30T15:58:12.790314Z [info     ] Starting extraction pipeline   [chunks2skus.pipeline] chunks_dir='G:\\Program Files\\AI coding\\知识萃取\\新能源\\输出\\chunks' force_reset=False output_dir='G:\\Program Files\\AI coding\\知识萃取\\新能源\\输出\\skus'
+2026-04-30T15:58:12.792487Z [info     ] Loaded chunks                  [chunks2skus.router] count=26
+2026-04-30T15:58:12.792487Z [info     ] Processing chunks              [chunks2skus.pipeline] total=26
+2026-04-30T15:58:12.792487Z [info     ] Submitting chunk for Factual/Procedural [chunks2skus.pipeline] chunk_id=报告-《关于优化集中式新能源发电企业市场报价的通知（试行）》深度解读与战略分析_chunk_001
+2026-04-30T15:58:12.793888Z [info     ] Submitting chunk for Factual/Procedural [chunks2skus.pipeline] chunk_id=报告-三一硅能非洲调研报告：在非洲如何做矿山微电网？_chunk_001
+2026-04-30T15:58:12.793888Z [info     ] Submitting chunk for Factual/Procedural [chunks2skus.pipeline] chunk_id=报告-乌克兰新能源市场机会调研报告_chunk_001
+2026-04-30T15:58:12.794963Z [info     ] Submitting chunk for Factual/Procedural [chunks2skus.pipeline] chunk_id=报告-兆瓦云调研报告：虚拟电厂的下一城在哪里？_chunk_001
+2026-04-30T15:58:12.794963Z [info     ] Submitting chunk for Factual/Procedural [chunks2skus.pipeline] chunk_id=报告-则鸣新能源调研报告：怎么样做好微电网？_chunk_001
+2026-04-30T15:58:12.795965Z [info     ] Submitting chunk for Factual/Procedural [chunks2skus.pipeline] chunk_id=报告-协鑫能科调研报告：江苏最大虚拟电厂是怎么做成的？_chunk_001
+2026-04-30T15:58:12.795965Z [info     ] Submitting chunk for Factual/Procedural [chunks2skus.pipeline] chunk_id=报告-固德威一线调研报告：城市级虚拟电厂怎么做？_chunk_001
+2026-04-30T15:58:12.795965Z [info     ] Submitting chunk for Factual/Procedural [chunks2skus.pipeline] chunk_id=报告-固德威江西德安县调研报告：光储充一体化项目怎么做？_chunk_001
+2026-04-30T15:58:12.796962Z [info     ] Submitting chunk for Factual/Procedural [chunks2skus.pipeline] chunk_id=报告-国海绿能一线调研报告：重卡换电站怎么做？_chunk_001
+2026-04-30T15:58:12.796962Z [info     ] Submitting chunk for Factual/Procedural [chunks2skus.pipeline] chunk_id=报告-奇峰聚能调研报告：飞轮储能怎么做？_chunk_001
+2026-04-30T15:58:12.796962Z [info     ] Submitting chunk for Factual/Procedural [chunks2skus.pipeline] chunk_id=报告-安悦节能调研报告：怎样做冷热电综合能源服务？_chunk_001
+2026-04-30T15:58:12.796962Z [info     ] Submitting chunk for Factual/Procedural [chunks2skus.pipeline] chunk_id=报告-广林汇智调研报告：在西北地区怎么做虚拟电厂？_chunk_001
+2026-04-30T15:58:12.796962Z [info     ] Submitting chunk for Factual/Procedural [chunks2skus.pipeline] chunk_id=报告-恒实盛景调研报告：怎样做空调虚拟电厂？_chunk_001
+2026-04-30T15:58:12.798010Z [info     ] Submitting chunk for Factual/Procedural [chunks2skus.pipeline] chunk_id=报告-正泰安能光伏星调研报告：在非洲如何做户用光伏？_chunk_001
+2026-04-30T15:58:12.798010Z [info     ] Submitting chunk for Factual/Procedural [chunks2skus.pipeline] chunk_id=报告-河钢集团一线调研报告：钢铁行业存在哪些双碳机会？_chunk_001
+2026-04-30T15:58:12.798010Z [info     ] Submitting chunk for Factual/Procedural [chunks2skus.pipeline] chunk_id=报告-深石集团调研报告：房地产企业怎样做新能源？_chunk_001
+2026-04-30T15:58:12.798010Z [info     ] Submitting chunk for Factual/Procedural [chunks2skus.pipeline] chunk_id=报告-特来电零碳大楼调研报告：怎样做车网互动？_chunk_001
+2026-04-30T15:58:12.798010Z [info     ] Submitting chunk for Factual/Procedural [chunks2skus.pipeline] chunk_id=报告-电管家一线调研报告：微电网怎么赚钱？_chunk_001
+2026-04-30T15:58:12.798010Z [info     ] Submitting chunk for Factual/Procedural [chunks2skus.pipeline] chunk_id=报告-紫电捷控调研报告：交直流微电网怎么做？_chunk_001
+2026-04-30T15:58:12.799059Z [info     ] Submitting chunk for Factual/Procedural [chunks2skus.pipeline] chunk_id=报告-纬景储能调研报告：液流电池为储能带来的机会_chunk_001
+2026-04-30T15:58:12.799059Z [info     ] Submitting chunk for Factual/Procedural [chunks2skus.pipeline] chunk_id=报告-良信电器调研报告：怎样建设零碳工厂？_chunk_001
+2026-04-30T15:58:12.799059Z [info     ] Submitting chunk for Factual/Procedural [chunks2skus.pipeline] chunk_id=报告-苏州工业园区的虚拟电厂调研报告：怎样做区域级虚拟电厂_chunk_001
+2026-04-30T15:58:12.799059Z [info     ] Submitting chunk for Factual/Procedural [chunks2skus.pipeline] chunk_id='报告-远景科技调研报告：如何把握储能 AIDC领域未来机会_chunk_001'
+2026-04-30T15:58:12.799059Z [info     ] Submitting chunk for Factual/Procedural [chunks2skus.pipeline] chunk_id=报告-金风科技调研报告：我国首个碳中和园区是怎样建成的？_chunk_001
+2026-04-30T15:58:12.799059Z [info     ] Submitting chunk for Factual/Procedural [chunks2skus.pipeline] chunk_id=报告-非洲调研报告（一）：中国新能源企业在肯尼亚有什么机会？_chunk_001
+2026-04-30T15:58:12.800063Z [info     ] Submitting chunk for Factual/Procedural [chunks2skus.pipeline] chunk_id=报告-非洲调研报告（二）：中国新能源企业在赞比亚有什么机会？_chunk_001
+2026-04-30T15:58:12.805304Z [info     ] Extracting factual knowledge   [chunks2skus.extractors.factual_extractor] chunk_id=报告-《关于优化集中式新能源发电企业市场报价的通知（试行）》深度解读与战略分析_chunk_001
+2026-04-30T15:58:12.805304Z [info     ] [MONITOR] call_llm_json starting [chunks2skus.utils.llm_client] model=deepseek-v4-pro
+2026-04-30T15:58:12.805304Z [info     ] [MONITOR] Creating thread-local OpenAI client [chunks2skus.utils.llm_client] base_url=https://api.deepseek.com thread=ThreadPoolExecutor-1_0
+2026-04-30T15:58:12.813687Z [info     ] Extracting factual knowledge   [chunks2skus.extractors.factual_extractor] chunk_id=报告-三一硅能非洲调研报告：在非洲如何做矿山微电网？_chunk_001
+2026-04-30T15:58:12.814891Z [info     ] [MONITOR] call_llm_json starting [chunks2skus.utils.llm_client] model=deepseek-v4-pro
+2026-04-30T15:58:12.814891Z [info     ] [MONITOR] Creating thread-local OpenAI client [chunks2skus.utils.llm_client] base_url=https://api.deepseek.com thread=ThreadPoolExecutor-1_1
+2026-04-30T15:58:12.820989Z [info     ] Extracting factual knowledge   [chunks2skus.extractors.factual_extractor] chunk_id=报告-兆瓦云调研报告：虚拟电厂的下一城在哪里？_chunk_001
+2026-04-30T15:58:12.820989Z [info     ] [MONITOR] call_llm_json starting [chunks2skus.utils.llm_client] model=deepseek-v4-pro
+2026-04-30T15:58:12.820989Z [info     ] [MONITOR] Creating thread-local OpenAI client [chunks2skus.utils.llm_client] base_url=https://api.deepseek.com thread=ThreadPoolExecutor-1_3
+2026-04-30T15:58:12.824962Z [info     ] Extracting factual knowledge   [chunks2skus.extractors.factual_extractor] chunk_id=报告-乌克兰新能源市场机会调研报告_chunk_001
+2026-04-30T15:58:12.825961Z [info     ] [MONITOR] call_llm_json starting [chunks2skus.utils.llm_client] model=deepseek-v4-pro
+2026-04-30T15:58:12.825961Z [info     ] [MONITOR] Creating thread-local OpenAI client [chunks2skus.utils.llm_client] base_url=https://api.deepseek.com thread=ThreadPoolExecutor-1_2
