@@ -11,3 +11,27 @@
 2026-04-30T11:51:41.546960Z [info     ] slug→path inline resolution    [skus2ontology.chatbot] matched=0 total_lines=2
 2026-04-30T11:51:41.546960Z [info     ] Loaded mapping.md (compressed) [skus2ontology.chatbot] compressed_chars=12 original_chars=57
 2026-04-30T11:51:41.546960Z [info     ] Loaded eureka.md               [skus2ontology.chatbot] chars=42
+2026-04-30T12:03:58.482596Z [warning  ] SKU index summary truncated    [skus2ontology.chatbot] limit=50000 original_chars=65604
+2026-04-30T12:03:58.482596Z [info     ] Built SKU index summary        [skus2ontology.chatbot] chars=50033 sku_count=962
+2026-04-30T12:05:14.731561Z [info     ] Phase 2 anchor replacement complete [skus2ontology.chatbot] draft_chars=4291 final_chars=4299
+2026-04-30T12:05:14.731561Z [info     ] unwrap_resolved_anchors        [skus2ontology.chatbot] after=45 before=45 unwrapped=0
+2026-04-30T12:05:14.733738Z [info     ] Remaining anchors              [skus2ontology.chatbot] count=45 sample=['【锚点：咨询行业痛点分类知识库】', '【锚点：全周期咨询方案框架标准】', '【锚点：商业咨询服务用户画像库】', '【锚点：企业信息字段采集标准】', '【锚点：全周期阶段划分规则库】', '【锚点：商业模式与盈利模式适配性规则库】', '【锚点：跨模式冲突识别算法】', '【锚点：15类成熟商业模式细则库】', '【锚点：分行业商业模式适配规则库】', '【锚点：21类可复用盈利模型细则库】']
+2026-04-30T12:05:14.734962Z [info     ] Backed up existing spec.md     [skus2ontology.chatbot] backup='G:\\Program Files\\AI coding\\知识萃取\\商业模式资本\\输出\\ontology\\spec.md.bak.20260430_200514'
+2026-04-30T12:05:14.736145Z [info     ] Saved spec.md                  [skus2ontology.chatbot] chars=4299 path='G:\\Program Files\\AI coding\\知识萃取\\商业模式资本\\输出\\ontology\\spec.md'
+2026-04-30T12:05:14.736145Z [info     ] spec_check                     [skus2ontology.spec_validator] check=extra_chunk_bracket count=0 samples=[] status=PASS
+2026-04-30T12:05:14.737198Z [info     ] spec_check                     [skus2ontology.spec_validator] check=anchor_wrapping_chunk count=0 samples=[] status=PASS
+2026-04-30T12:05:14.737198Z [info     ] spec_check                     [skus2ontology.spec_validator] check=anchor_wrapping_sku count=0 samples=[] status=PASS
+2026-04-30T12:05:14.737198Z [info     ] spec_check                     [skus2ontology.spec_validator] check=sku_sku_concat count=0 samples=[] status=PASS
+2026-04-30T12:05:14.737198Z [info     ] spec_check                     [skus2ontology.spec_validator] check=sku_chunk_concat count=0 samples=[] status=PASS
+2026-04-30T12:05:14.738202Z [info     ] spec_check                     [skus2ontology.spec_validator] check=chunk_sku_concat count=0 samples=[] status=PASS
+2026-04-30T12:05:14.738202Z [info     ] spec_check                     [skus2ontology.spec_validator] check=sku_space_concat count=0 samples=[] status=PASS
+2026-04-30T12:05:14.738202Z [info     ] spec_check                     [skus2ontology.spec_validator] check=sku_range count=0 samples=[] status=PASS
+2026-04-30T12:05:14.738202Z [info     ] spec_check                     [skus2ontology.spec_validator] check=chinese_chunk_bracket count=0 samples=[] status=PASS
+2026-04-30T12:05:14.738202Z [info     ] spec_check                     [skus2ontology.spec_validator] check=chinese_sku_bracket count=0 samples=[] status=PASS
+2026-04-30T12:05:14.739201Z [info     ] spec_check                     [skus2ontology.spec_validator] check=remaining_anchor count=45 samples=['【锚点：咨询行业痛点分类知识库】', '【锚点：全周期咨询方案框架标准】', '【锚点：商业咨询服务用户画像库】'] status=INFO
+2026-04-30T12:05:14.739201Z [info     ] spec_stats                     [skus2ontology.spec_validator] chunk_refs=25 chunk_unique=25 sku_refs=2 sku_unique=2
+2026-04-30T12:05:14.739201Z [info     ] spec_validator PASSED          [skus2ontology.spec_validator]
+2026-04-30T12:05:14.740404Z [info     ] Saved chat log                 [skus2ontology.pipeline] confirmed=False path='G:\\Program Files\\AI coding\\知识萃取\\商业模式资本\\输出\\ontology\\chat_log.json' rounds=5
+2026-04-30T12:05:14.741642Z [info     ] Generated README.md            [skus2ontology.readme_generator] path='G:\\Program Files\\AI coding\\知识萃取\\商业模式资本\\输出\\ontology\\README.md'
+2026-04-30T12:05:14.742671Z [info     ] Saved ontology manifest        [skus2ontology.pipeline] path='G:\\Program Files\\AI coding\\知识萃取\\商业模式资本\\输出\\ontology\\ontology_manifest.json'
+2026-04-30T12:05:14.742671Z [info     ] Ontology pipeline complete     [skus2ontology.pipeline] duration_seconds=813.5 has_readme=True has_spec=True total_files=3
