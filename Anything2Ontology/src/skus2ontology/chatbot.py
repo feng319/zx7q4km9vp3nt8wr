@@ -330,12 +330,13 @@ def _extract_spec(response: str) -> str:
 class SpecChatbot:
     """Interactive chatbot that generates spec.md through a two-phase process."""
 
-    def __init__(self, ontology_dir: Path):
+    def __init__(self, ontology_dir: Path, phase2_only: bool = False):
         self.ontology_dir = Path(ontology_dir).resolve()
         self.max_rounds = settings.max_chat_rounds
         self.session = ChatSession(max_rounds=self.max_rounds)
         self.lang = settings.language
         self.ui = UI_MESSAGES[self.lang]
+        self.phase2_only = phase2_only
 
     def run(self) -> str:
         """
