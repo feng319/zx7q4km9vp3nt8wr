@@ -1,16 +1,14 @@
 {
-  "created_at": "2026-04-30T20:16:37.358943",
+  "created_at": "2026-04-28T22:04:20.430706",
   "source_skus_dir": "output/skus",
   "ontology_dir": "output/ontology",
-  "factual_count": 0,
-  "procedural_count": 0,
+  "factual_count": 616,
+  "procedural_count": 344,
   "has_relational": true,
   "has_mapping": true,
   "has_eureka": true,
-  "has_chunk_mapping": false,
-  "chunk_coverage_ok": false,
   "has_spec": true,
   "has_readme": true,
-  "total_files_copied": 3,
-  "paths_rewritten": 0
+  "total_files_copied": 1927,
+  "paths_rewritten": 962
 }
