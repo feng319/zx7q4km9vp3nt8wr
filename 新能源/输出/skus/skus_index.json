@@ -1,8 +1,8 @@
 {
   "created_at": "2026-04-30T23:58:12.790314",
-  "updated_at": "2026-05-01T01:37:15.282505",
-  "total_skus": 316,
-  "total_characters": 322885,
+  "updated_at": "2026-05-01T01:40:15.847885",
+  "total_skus": 334,
+  "total_characters": 332759,
   "chunks_processed": [
     "报告-《关于优化集中式新能源发电企业市场报价的通知（试行）》深度解读与战略分析_chunk_001",
     "报告-乌克兰新能源市场机会调研报告_chunk_001",
@@ -26,7 +26,8 @@
     "报告-紫电捷控调研报告：交直流微电网怎么做？_chunk_001",
     "报告-纬景储能调研报告：液流电池为储能带来的机会_chunk_001",
     "报告-良信电器调研报告：怎样建设零碳工厂？_chunk_001",
-    "报告-非洲调研报告（二）：中国新能源企业在赞比亚有什么机会？_chunk_001"
+    "报告-非洲调研报告（二）：中国新能源企业在赞比亚有什么机会？_chunk_001",
+    "报告-非洲调研报告（一）：中国新能源企业在肯尼亚有什么机会？_chunk_001"
   ],
   "skus": [
     {
@@ -3180,18 +3181,198 @@
       "confidence": null
     },
     {
+      "sku_id": "sku_235",
+      "name": "肯尼亚发电能源结构",
+      "classification": "factual",
+      "path": "factual/sku_235",
+      "source_chunk": "报告-非洲调研报告（一）：中国新能源企业在肯尼亚有什么机会？_chunk_001",
+      "character_count": 410,
+      "description": "肯尼亚发电能源以可再生能源为主，地热、水电、风光合计占比超80%，但火电仍有一定比例，揭示了新能源发展基础和分布式光伏的替代空间。",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_236",
+      "name": "肯尼亚零售电价水平与降低电价的迫切性",
+      "classification": "factual",
+      "path": "factual/sku_236",
+      "source_chunk": "报告-非洲调研报告（一）：中国新能源企业在肯尼亚有什么机会？_chunk_001",
+      "character_count": 151,
+      "description": "肯尼亚零售电价高达1.2-1.6元人民币/度，约为中国的2-3倍，推高生活与生产成本，甚至引发社会动荡，降低电价成为政府迫切需求，为低成本新能源方案提供了巨大市场机会。",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_237",
+      "name": "肯尼亚新能源上网电价政策的演变",
+      "classification": "factual",
+      "path": "factual/sku_237",
+      "source_chunk": "报告-非洲调研报告（一）：中国新能源企业在肯尼亚有什么机会？_chunk_001",
+      "character_count": 218,
+      "description": "从固定电价补贴转向能源拍卖机制，导致大型集中式并网项目陷入停滞，突显了当前分布式光伏受鼓励的政策方向。",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_238",
+      "name": "肯尼亚分布式光伏的现行政策框架（工商业侧）",
+      "classification": "factual",
+      "path": "factual/sku_238",
+      "source_chunk": "报告-非洲调研报告（一）：中国新能源企业在肯尼亚有什么机会？_chunk_001",
+      "character_count": 217,
+      "description": "肯尼亚当前鼓励工商业分布式光伏，以自发自用为主，余电上网试点尚未大面积普及，明确了投资者的合规路径和最现实的商业模型。",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_239",
+      "name": "肯尼亚户用光伏市场的机会与信用风险",
+      "classification": "factual",
+      "path": "factual/sku_239",
+      "source_chunk": "报告-非洲调研报告（一）：中国新能源企业在肯尼亚有什么机会？_chunk_001",
+      "character_count": 134,
+      "description": "偏远乡村缺电为户用离网光伏提供发展空间，但回款和信用风险突出，要求投资者必须建立预付费与分期付款机制。",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_240",
+      "name": "肯尼亚电网瓶颈与分布式光伏的中短期主导地位",
+      "classification": "factual",
+      "path": "factual/sku_240",
+      "source_chunk": "报告-非洲调研报告（一）：中国新能源企业在肯尼亚有什么机会？_chunk_001",
+      "character_count": 138,
+      "description": "尽管地热可开发量高达10吉瓦，但目前开发率仅约10%，缺电和高电价的根源在于电网薄弱，十年内难有根本改善，因此中短期新能源必须以分布式为主并主动“绕开”电网。",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_241",
+      "name": "肯尼亚三大国有能源公司及其角色分工",
+      "classification": "factual",
+      "path": "factual/sku_241",
+      "source_chunk": "报告-非洲调研报告（一）：中国新能源企业在肯尼亚有什么机会？_chunk_001",
+      "character_count": 323,
+      "description": "KenGen、KETRACO、KPLC分别承担发电、输电和配电售电职能，形成与中国“五大四小+国家电网”相似的结构，是进入肯尼亚电力市场必须打交道的实体。",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_242",
+      "name": "KenGen未来十年装机与储能扩张计划",
+      "classification": "factual",
+      "path": "factual/sku_242",
+      "source_chunk": "报告-非洲调研报告（一）：中国新能源企业在肯尼亚有什么机会？_chunk_001",
+      "character_count": 139,
+      "description": "KenGen计划新增1500兆瓦装机并试水储能，面临巨大投资需求，积极寻求私营资本和与中国企业的合作，反映了当地电力投资的最刚性缺口。",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_243",
+      "name": "印度新能源企业在肯尼亚的主导地位与成功经验",
+      "classification": "factual",
+      "path": "factual/sku_243",
+      "source_chunk": "报告-非洲调研报告（一）：中国新能源企业在肯尼亚有什么机会？_chunk_001",
+      "character_count": 233,
+      "description": "印度企业凭借深耕本地和重视质量成为肯尼亚新能源市场最活跃的群体，揭示了“外来者”难以通过短期低质策略成功的市场现实。",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_244",
+      "name": "肯尼亚工商业分布式光伏的典型高消纳场景",
+      "classification": "factual",
+      "path": "factual/sku_244",
+      "source_chunk": "报告-非洲调研报告（一）：中国新能源企业在肯尼亚有什么机会？_chunk_001",
+      "character_count": 166,
+      "description": "酒店、钢铁水泥厂、农业灌溉、偏远旅游设施等构成肯尼亚当前工商业分布式光伏的主力场景，反映了“负荷为王”的落地逻辑。",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_245",
+      "name": "肯尼亚社会经济与人口基本指标",
+      "classification": "factual",
+      "path": "factual/sku_245",
+      "source_chunk": "报告-非洲调研报告（一）：中国新能源企业在肯尼亚有什么机会？_chunk_001",
+      "character_count": 146,
+      "description": "庞大年轻人口和东非第二的GDP规模表明肯尼亚具有巨大的能源需求增长潜力，为新能源市场提供了长期基本面支撑。",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_246",
+      "name": "肯尼亚作为东非交通与金融枢纽的战略地位",
+      "classification": "factual",
+      "path": "factual/sku_246",
+      "source_chunk": "报告-非洲调研报告（一）：中国新能源企业在肯尼亚有什么机会？_chunk_001",
+      "character_count": 148,
+      "description": "蒙巴萨港和内罗毕的枢纽功能叠加移动支付先发优势，使肯尼亚成为辐射东非的出海支点，增强了新能源企业在本地布局所能形成的区域联动效应。",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_247",
+      "name": "肯尼亚开放接入（隔墙售电）的政策窗口",
+      "classification": "factual",
+      "path": "factual/sku_247",
+      "source_chunk": "报告-非洲调研报告（一）：中国新能源企业在肯尼亚有什么机会？_chunk_001",
+      "character_count": 129,
+      "description": "未来允许发电企业跨区域直供电力的开放接入制度，为跨区直供工业用户等新商业模式打开可能性，但需满足土地权属和备案审批条件。",
+      "confidence": null
+    },
+    {
+      "sku_id": "skill_081",
+      "name": "kenya-commercial-solar-compliance",
+      "classification": "procedural",
+      "path": "procedural/skill_081",
+      "source_chunk": "报告-非洲调研报告（一）：中国新能源企业在肯尼亚有什么机会？_chunk_001",
+      "character_count": 515,
+      "description": "在肯尼亚建设运营工商业分布式光伏项目所需的监管合规流程，适用于自发自用或余电上网项目。",
+      "confidence": null
+    },
+    {
+      "sku_id": "skill_082",
+      "name": "kenya-open-access-energy-sales",
+      "classification": "procedural",
+      "path": "procedural/skill_082",
+      "source_chunk": "报告-非洲调研报告（一）：中国新能源企业在肯尼亚有什么机会？_chunk_001",
+      "character_count": 433,
+      "description": "在肯尼亚利用开放接入制度实现跨区域直供电（隔墙售电）的流程，适用于用电方屋顶不足时的跨区供电。",
+      "confidence": null
+    },
+    {
+      "sku_id": "skill_083",
+      "name": "kenya-household-solar-risk-mitigation",
+      "classification": "procedural",
+      "path": "procedural/skill_083",
+      "source_chunk": "报告-非洲调研报告（一）：中国新能源企业在肯尼亚有什么机会？_chunk_001",
+      "character_count": 486,
+      "description": "进入肯尼亚户用光伏（离网）市场的收款风险规避策略，适用于偏远缺电地区的分布式户用系统。",
+      "confidence": null
+    },
+    {
+      "sku_id": "skill_084",
+      "name": "kenya-localization-strategy",
+      "classification": "procedural",
+      "path": "procedural/skill_084",
+      "source_chunk": "报告-非洲调研报告（一）：中国新能源企业在肯尼亚有什么机会？_chunk_001",
+      "character_count": 610,
+      "description": "在非洲新能源市场实现本地化深耕的实战指南，避免一次性交易陷阱，适用于中企出海肯尼亚。",
+      "confidence": null
+    },
+    {
+      "sku_id": "skill_085",
+      "name": "kenya-business-model-selection",
+      "classification": "procedural",
+      "path": "procedural/skill_085",
+      "source_chunk": "报告-非洲调研报告（一）：中国新能源企业在肯尼亚有什么机会？_chunk_001",
+      "character_count": 582,
+      "description": "根据肯尼亚政策与市场现状，选择合适的新能源业务模式（集中式、工商业分布式、户用）。",
+      "confidence": null
+    },
+    {
       "sku_id": "relational-knowledge-base",
       "name": "relational-knowledge-base",
       "classification": "relational",
       "path": "relational",
       "source_chunk": "aggregated",
-      "character_count": 159106,
+      "character_count": 163802,
       "description": "Domain label hierarchy and terminology glossary",
       "confidence": null
     }
   ],
-  "factual_count": 234,
+  "factual_count": 247,
   "relational_count": 1,
-  "procedural_count": 80,
+  "procedural_count": 85,
   "meta_count": 1
 }

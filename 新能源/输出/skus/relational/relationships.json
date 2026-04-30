@@ -2070,6 +2070,78 @@
         "报告-非洲调研报告（二）：中国新能源企业在赞比亚有什么机会？_chunk_001"
       ],
       "confidence": 0.8
+    },
+    {
+      "subject": "能源拍卖机制",
+      "predicate": "contradicts",
+      "object": "绿色电价",
+      "source_chunks": [
+        "报告-非洲调研报告（一）：中国新能源企业在肯尼亚有什么机会？_chunk_001"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "subject": "净计量政策",
+      "predicate": "enables",
+      "object": "余电上网",
+      "source_chunks": [
+        "报告-非洲调研报告（一）：中国新能源企业在肯尼亚有什么机会？_chunk_001"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "subject": "输电开放接入政策",
+      "predicate": "enables",
+      "object": "隔墙售电",
+      "source_chunks": [
+        "报告-非洲调研报告（一）：中国新能源企业在肯尼亚有什么机会？_chunk_001"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "subject": "弱电网",
+      "predicate": "causes",
+      "object": "分布式光伏",
+      "source_chunks": [
+        "报告-非洲调研报告（一）：中国新能源企业在肯尼亚有什么机会？_chunk_001"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "subject": "分布式光伏",
+      "predicate": "superset-of",
+      "object": "工商业光伏",
+      "source_chunks": [
+        "报告-非洲调研报告（一）：中国新能源企业在肯尼亚有什么机会？_chunk_001"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "subject": "分布式光伏",
+      "predicate": "superset-of",
+      "object": "户用光伏",
+      "source_chunks": [
+        "报告-非洲调研报告（一）：中国新能源企业在肯尼亚有什么机会？_chunk_001"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "subject": "户用光伏",
+      "predicate": "superset-of",
+      "object": "户用离网光伏系统",
+      "source_chunks": [
+        "报告-非洲调研报告（一）：中国新能源企业在肯尼亚有什么机会？_chunk_001"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "subject": "工商业光伏",
+      "predicate": "implements",
+      "object": "自发自用",
+      "source_chunks": [
+        "报告-非洲调研报告（一）：中国新能源企业在肯尼亚有什么机会？_chunk_001"
+      ],
+      "confidence": 1.0
     }
   ]
 }
