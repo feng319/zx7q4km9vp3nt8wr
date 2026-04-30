@@ -1,13 +1,18 @@
 """LLM client wrapper for SiliconFlow API calls."""
 
+import time
 from typing import Optional
 
 import structlog
-from openai import OpenAI
+from openai import OpenAI, APIConnectionError, APITimeoutError, APIStatusError
 
 from skus2ontology.config import settings
 
 logger = structlog.get_logger(__name__)
+
+# Retry config
+MAX_RETRIES = 3
+RETRY_BASE_DELAY = 5  # seconds
 
 # Module-level client (lazy initialized)
 _client: Optional[OpenAI] = None
