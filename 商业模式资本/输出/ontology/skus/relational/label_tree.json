@@ -1,0 +1,480 @@
+{
+  "roots": [
+    {
+      "name": "个人成长",
+      "children": [
+        {
+          "name": "学习方法",
+          "children": []
+        },
+        {
+          "name": "幽默培养",
+          "children": []
+        },
+        {
+          "name": "人生发展",
+          "children": []
+        },
+        {
+          "name": "教育理念",
+          "children": []
+        }
+      ]
+    },
+    {
+      "name": "资本金融",
+      "children": [
+        {
+          "name": "投资逻辑",
+          "children": [
+            {
+              "name": "估值方法",
+              "children": []
+            },
+            {
+              "name": "投资阶段",
+              "children": []
+            },
+            {
+              "name": "投资策略",
+              "children": []
+            }
+          ]
+        },
+        {
+          "name": "融资方法",
+          "children": [
+            {
+              "name": "票据融资",
+              "children": []
+            },
+            {
+              "name": "非股非债融资",
+              "children": []
+            }
+          ]
+        },
+        {
+          "name": "上市路径",
+          "children": []
+        },
+        {
+          "name": "对赌协议",
+          "children": []
+        },
+        {
+          "name": "资本模式",
+          "children": [
+            {
+              "name": "股权架构",
+              "children": [
+                {
+                  "name": "上市公司架构设计",
+                  "children": []
+                },
+                {
+                  "name": "控股公司设计",
+                  "children": [
+                    {
+                      "name": "合伙企业设计",
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "name": "控制权设计",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "供应链金融产品",
+              "children": []
+            },
+            {
+              "name": "资本派系",
+              "children": []
+            }
+          ]
+        },
+        {
+          "name": "市值管理",
+          "children": []
+        }
+      ]
+    },
+    {
+      "name": "实体产业",
+      "children": [
+        {
+          "name": "食品饮料",
+          "children": [
+            {
+              "name": "休闲食品",
+              "children": []
+            },
+            {
+              "name": "临期食品",
+              "children": []
+            },
+            {
+              "name": "烘焙食品",
+              "children": [
+                {
+                  "name": "新国潮烘焙",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "餐饮服务",
+          "children": []
+        },
+        {
+          "name": "医疗健康",
+          "children": [
+            {
+              "name": "智慧医疗",
+              "children": []
+            },
+            {
+              "name": "医药零售",
+              "children": []
+            },
+            {
+              "name": "医疗器械",
+              "children": []
+            },
+            {
+              "name": "视力健康服务",
+              "children": []
+            }
+          ]
+        },
+        {
+          "name": "美业服务",
+          "children": [
+            {
+              "name": "轻医美",
+              "children": []
+            },
+            {
+              "name": "生活美容",
+              "children": []
+            }
+          ]
+        },
+        {
+          "name": "宠物行业",
+          "children": []
+        },
+        {
+          "name": "汽车服务",
+          "children": []
+        },
+        {
+          "name": "教育培训",
+          "children": [
+            {
+              "name": "在线教育",
+              "children": []
+            },
+            {
+              "name": "素质教育",
+              "children": [
+                {
+                  "name": "K12素质教育",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "职业教育",
+              "children": []
+            },
+            {
+              "name": "学历教育",
+              "children": []
+            }
+          ]
+        },
+        {
+          "name": "母婴服务",
+          "children": [
+            {
+              "name": "托育服务",
+              "children": []
+            },
+            {
+              "name": "月子服务",
+              "children": []
+            }
+          ]
+        },
+        {
+          "name": "家政服务",
+          "children": []
+        },
+        {
+          "name": "人力资源",
+          "children": []
+        },
+        {
+          "name": "服装制造",
+          "children": []
+        },
+        {
+          "name": "影视文娱",
+          "children": []
+        },
+        {
+          "name": "养老服务",
+          "children": []
+        },
+        {
+          "name": "家居建材",
+          "children": []
+        },
+        {
+          "name": "零售服务",
+          "children": [
+            {
+              "name": "新消费",
+              "children": []
+            },
+            {
+              "name": "酒类零售",
+              "children": []
+            }
+          ]
+        },
+        {
+          "name": "美妆个护",
+          "children": []
+        },
+        {
+          "name": "房地产开发",
+          "children": []
+        },
+        {
+          "name": "交通运输",
+          "children": [
+            {
+              "name": "仓储物流",
+              "children": []
+            },
+            {
+              "name": "通用航空服务",
+              "children": [
+                {
+                  "name": "航空教育培训",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "文旅娱乐",
+          "children": [
+            {
+              "name": "剧本杀",
+              "children": []
+            },
+            {
+              "name": "量贩式KTV",
+              "children": []
+            },
+            {
+              "name": "酒吧",
+              "children": []
+            },
+            {
+              "name": "露营",
+              "children": []
+            }
+          ]
+        },
+        {
+          "name": "广告营销",
+          "children": []
+        },
+        {
+          "name": "农业",
+          "children": []
+        },
+        {
+          "name": "体育产业",
+          "children": []
+        },
+        {
+          "name": "企业服务",
+          "children": []
+        },
+        {
+          "name": "新能源产业",
+          "children": [
+            {
+              "name": "生物质能源产业",
+              "children": [
+                {
+                  "name": "生物质能源托管服务",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "电梯服务",
+          "children": []
+        },
+        {
+          "name": "移民服务",
+          "children": []
+        }
+      ]
+    },
+    {
+      "name": "互联网科技",
+      "children": [
+        {
+          "name": "大数据应用",
+          "children": [
+            {
+              "name": "隐私防护技术",
+              "children": []
+            }
+          ]
+        },
+        {
+          "name": "人工智能应用",
+          "children": [
+            {
+              "name": "AIGC",
+              "children": []
+            }
+          ]
+        },
+        {
+          "name": "平台商业模式",
+          "children": [
+            {
+              "name": "电商模式",
+              "children": [
+                {
+                  "name": "跨境电商",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "共享经济模式",
+              "children": []
+            },
+            {
+              "name": "产业互联网",
+              "children": []
+            }
+          ]
+        },
+        {
+          "name": "软件服务",
+          "children": [
+            {
+              "name": "SaaS服务",
+              "children": []
+            }
+          ]
+        },
+        {
+          "name": "工业互联网",
+          "children": []
+        },
+        {
+          "name": "元宇宙",
+          "children": []
+        },
+        {
+          "name": "5G技术应用",
+          "children": []
+        },
+        {
+          "name": "短视频运营",
+          "children": [
+            {
+              "name": "抖音运营",
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "企业经营",
+      "children": [
+        {
+          "name": "商业模式",
+          "children": []
+        },
+        {
+          "name": "渠道管理",
+          "children": []
+        },
+        {
+          "name": "用户运营",
+          "children": []
+        },
+        {
+          "name": "合规管理",
+          "children": [
+            {
+              "name": "税务筹划",
+              "children": []
+            }
+          ]
+        },
+        {
+          "name": "并购整合",
+          "children": [
+            {
+              "name": "并购基金模式",
+              "children": []
+            }
+          ]
+        },
+        {
+          "name": "品牌管理",
+          "children": [
+            {
+              "name": "企业命名策略",
+              "children": []
+            }
+          ]
+        },
+        {
+          "name": "供应链管理",
+          "children": []
+        },
+        {
+          "name": "合伙人管理",
+          "children": []
+        },
+        {
+          "name": "激励机制",
+          "children": []
+        },
+        {
+          "name": "裂变模式",
+          "children": []
+        },
+        {
+          "name": "ToB业务运营",
+          "children": []
+        }
+      ]
+    }
+  ]
+}
