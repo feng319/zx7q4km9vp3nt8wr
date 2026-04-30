@@ -890,6 +890,42 @@
         "报告-奇峰聚能调研报告：飞轮储能怎么做？_chunk_001"
       ],
       "confidence": 1.0
+    },
+    {
+      "subject": "重卡换电站",
+      "predicate": "related-to",
+      "object": "虚拟电厂",
+      "source_chunks": [
+        "报告-国海绿能一线调研报告：重卡换电站怎么做？_chunk_001"
+      ],
+      "confidence": 0.8
+    },
+    {
+      "subject": "重卡换电站",
+      "predicate": "related-to",
+      "object": "源网荷储",
+      "source_chunks": [
+        "报告-国海绿能一线调研报告：重卡换电站怎么做？_chunk_001"
+      ],
+      "confidence": 0.8
+    },
+    {
+      "subject": "重卡换电站",
+      "predicate": "has-a",
+      "object": "换电服务费",
+      "source_chunks": [
+        "报告-国海绿能一线调研报告：重卡换电站怎么做？_chunk_001"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "subject": "重卡换电站",
+      "predicate": "related-to",
+      "object": "电动物流车",
+      "source_chunks": [
+        "报告-国海绿能一线调研报告：重卡换电站怎么做？_chunk_001"
+      ],
+      "confidence": 1.0
     }
   ]
 }

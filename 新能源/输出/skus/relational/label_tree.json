@@ -175,7 +175,12 @@
         },
         {
           "name": "新能源设备",
-          "children": []
+          "children": [
+            {
+              "name": "换电设施",
+              "children": []
+            }
+          ]
         },
         {
           "name": "智能硬件",

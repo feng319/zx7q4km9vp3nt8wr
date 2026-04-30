@@ -1,8 +1,8 @@
 {
   "created_at": "2026-04-30T23:58:12.790314",
-  "updated_at": "2026-05-01T00:41:46.489466",
-  "total_skus": 126,
-  "total_characters": 139922,
+  "updated_at": "2026-05-01T00:45:30.907248",
+  "total_skus": 140,
+  "total_characters": 148297,
   "chunks_processed": [
     "报告-《关于优化集中式新能源发电企业市场报价的通知（试行）》深度解读与战略分析_chunk_001",
     "报告-乌克兰新能源市场机会调研报告_chunk_001",
@@ -12,7 +12,8 @@
     "报告-则鸣新能源调研报告：怎么样做好微电网？_chunk_001",
     "报告-协鑫能科调研报告：江苏最大虚拟电厂是怎么做成的？_chunk_001",
     "报告-固德威江西德安县调研报告：光储充一体化项目怎么做？_chunk_001",
-    "报告-奇峰聚能调研报告：飞轮储能怎么做？_chunk_001"
+    "报告-奇峰聚能调研报告：飞轮储能怎么做？_chunk_001",
+    "报告-国海绿能一线调研报告：重卡换电站怎么做？_chunk_001"
   ],
   "skus": [
     {
@@ -1266,18 +1267,158 @@
       "confidence": null
     },
     {
+      "sku_id": "sku_080",
+      "name": "国海绿能公司概况",
+      "classification": "factual",
+      "path": "factual/sku_080",
+      "source_chunk": "报告-国海绿能一线调研报告：重卡换电站怎么做？_chunk_001",
+      "character_count": 298,
+      "description": "国海绿能（上海）能源有限公司成立于2021年，是一家重卡换电站制造企业，产品涵盖电动重卡充换电站、绿电移动能源车、风光储充换综合能源站、换电机器人、电池箱PACK、绿电模块建筑和云服务平台，自产率90%，在江苏江阴拥有10万平方米研发生产基地，是工业5.0数字化工厂，销售网络覆盖中国60多个城市及印度、印尼等4个海外服务站，与国家能源集团、国家电网、宁德时代等企业战略合作，累计交付超过70座换电站。",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_081",
+      "name": "重卡换电站定义与工作原理",
+      "classification": "factual",
+      "path": "factual/sku_081",
+      "source_chunk": "报告-国海绿能一线调研报告：重卡换电站怎么做？_chunk_001",
+      "character_count": 314,
+      "description": "重卡换电站是为电动重型卡车（总质量超14吨）提供快速换电的设施，电动重卡电池容量约200~400度电，续航约200-300公里；采用顶吊式换电，5~7分钟完成一块电池的拆卸与安装，相比充电能大幅提高重卡运营时间（假设每小时利润300元，每日3小时充电即损失900元），尤其适用于高频、固定路线的生产运输场景。",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_082",
+      "name": "国海绿能换电站型号与服务能力参数",
+      "classification": "factual",
+      "path": "factual/sku_082",
+      "source_chunk": "报告-国海绿能一线调研报告：重卡换电站怎么做？_chunk_001",
+      "character_count": 491,
+      "description": "国海绿能换电站按充电仓位与中转仓位数命名，例如“3+1”指3个充电仓位加1个中转仓位；“7+1”型每天最多服务168车次（约50辆车），单次换电6-7分钟，配电容量2000~3200kVA，工作温度范围-20°C~55°C（可定制-40°C）；“12+2”型可同时为两辆车换电。",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_083",
+      "name": "重卡换电站投资成本明细（案例）",
+      "classification": "factual",
+      "path": "factual/sku_083",
+      "source_chunk": "报告-国海绿能一线调研报告：重卡换电站怎么做？_chunk_001",
+      "character_count": 270,
+      "description": "某工业企业20辆车车队规划两座3+1型换电站、两座1000kVA箱变及6块282kWh电池，设备及建设总投资约430万元，不含土地成本；具体为：换电站180万元（90万/座），变电站及电缆施工140万元（70万/座），动力电池109.8万元（18.3万/块）。",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_084",
+      "name": "重卡换电站服务费阶梯定价案例",
+      "classification": "factual",
+      "path": "factual/sku_084",
+      "source_chunk": "报告-国海绿能一线调研报告：重卡换电站怎么做？_chunk_001",
+      "character_count": 184,
+      "description": "某100辆车项目年用电约1500万度，单个换电站服务费随用电量增加而递减：年用电600-700万度时为0.32元/度，700-800万度时0.30元/度，800-900万度时0.28元/度。",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_085",
+      "name": "国海绿能重卡换电四大合作模式",
+      "classification": "factual",
+      "path": "factual/sku_085",
+      "source_chunk": "报告-国海绿能一线调研报告：重卡换电站怎么做？_chunk_001",
+      "character_count": 457,
+      "description": "国海绿能提供四种合作模式：1）设备销售与EPC建设，客户自投，适合资金雄厚、需求明确的客户；2）融资租赁以租代售，解决资金短缺；3）合资投资运营，双方按股权比例共享收益共担风险；4）短期设备租赁，适合1-2年临时作业场景。",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_086",
+      "name": "电动重卡与柴油重卡经济性对比（案例）",
+      "classification": "factual",
+      "path": "factual/sku_086",
+      "source_chunk": "报告-国海绿能一线调研报告：重卡换电站怎么做？_chunk_001",
+      "character_count": 349,
+      "description": "假设柴油重卡价格40万/辆，电动重卡60万/辆；柴油能耗成本2.4元/km，电动1.4元/km（按1元/度电）；20辆车年行驶322.56万km，电动重卡多投400万，年省能源费322.56万元，额外投资回收期约1.24年。",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_087",
+      "name": "2024年中国重卡及新能源重卡市场销量",
+      "classification": "factual",
+      "path": "factual/sku_087",
+      "source_chunk": "报告-国海绿能一线调研报告：重卡换电站怎么做？_chunk_001",
+      "character_count": 261,
+      "description": "2024年重卡市场总销量90.17万辆，其中新能源重卡8.2万辆（同比+140%），电动重卡7.7万辆（同比+154.1%），换电重卡2.87万辆（同比+95%），表明新能源重卡与换电模式均处于高速增长期。",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_088",
+      "name": "重卡换电站收益测算模型（第三方投资）",
+      "classification": "factual",
+      "path": "factual/sku_088",
+      "source_chunk": "报告-国海绿能一线调研报告：重卡换电站怎么做？_chunk_001",
+      "character_count": 255,
+      "description": "换电站通过收取充电服务费盈利，案例中每度电服务费0.35元，年用电452万度，年服务费收入158.2万元；初始设备投资430万元，约2.7年回收设备成本，加上每年约40万元运维费用，整体约4年回本；若企业自投无需服务费，回本更快。",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_089",
+      "name": "中国重卡保有量及碳排放占比",
+      "classification": "factual",
+      "path": "factual/sku_089",
+      "source_chunk": "报告-国海绿能一线调研报告：重卡换电站怎么做？_chunk_001",
+      "character_count": 105,
+      "description": "中国重卡保有量约900万辆，仅占汽车总保有量的3%，但每年排放的二氧化碳占道路交通碳排放的20%以上，凸显重卡电动化对碳减排的重要作用。",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_090",
+      "name": "重卡换电应用场景与综合能源协同潜力",
+      "classification": "factual",
+      "path": "factual/sku_090",
+      "source_chunk": "报告-国海绿能一线调研报告：重卡换电站怎么做？_chunk_001",
+      "character_count": 272,
+      "description": "重卡换电适用于电厂、钢厂、矿山、港口、搅拌站等短途封闭场景以及未来干线物流；换电站可与风光储充项目结合，形成源网荷储一体化模式，通过峰谷套利、V2G、虚拟电厂等增加盈利点，提升项目经济性和可持续性。",
+      "confidence": null
+    },
+    {
+      "sku_id": "skill_035",
+      "name": "heavy-truck-battery-swap-station-investment-analysis",
+      "classification": "procedural",
+      "path": "procedural/skill_035",
+      "source_chunk": "报告-国海绿能一线调研报告：重卡换电站怎么做？_chunk_001",
+      "character_count": 1053,
+      "description": "评估重卡换电站投资可行性，计算电动重卡经济性和换电站投资回收周期。",
+      "confidence": null
+    },
+    {
+      "sku_id": "skill_036",
+      "name": "battery-swap-station-cooperation-model-selection",
+      "classification": "procedural",
+      "path": "procedural/skill_036",
+      "source_chunk": "报告-国海绿能一线调研报告：重卡换电站怎么做？_chunk_001",
+      "character_count": 763,
+      "description": "根据资金实力、专业能力和使用期限，选择适合的重卡换电站投资合作模式。",
+      "confidence": null
+    },
+    {
+      "sku_id": "skill_037",
+      "name": "top-lift-battery-swap-procedure",
+      "classification": "procedural",
+      "path": "procedural/skill_037",
+      "source_chunk": "报告-国海绿能一线调研报告：重卡换电站怎么做？_chunk_001",
+      "character_count": 461,
+      "description": "了解顶吊式重卡换电站自动更换大容量电池包的操作步骤。",
+      "confidence": null
+    },
+    {
       "sku_id": "relational-knowledge-base",
       "name": "relational-knowledge-base",
       "classification": "relational",
       "path": "relational",
       "source_chunk": "aggregated",
-      "character_count": 74347,
+      "character_count": 77189,
       "description": "Domain label hierarchy and terminology glossary",
       "confidence": null
     }
   ],
-  "factual_count": 90,
+  "factual_count": 101,
   "relational_count": 1,
-  "procedural_count": 34,
+  "procedural_count": 37,
   "meta_count": 1
 }
