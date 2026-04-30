@@ -1,0 +1,11 @@
+{
+  "response_capacity_planned_mw": 21.404,
+  "response_capacity_actual_mw": 20.151,
+  "accuracy": "约94%",
+  "participating_aggregators": 4,
+  "participating_enterprises": 34,
+  "time_window": "某工作日17:00-18:00",
+  "electricity_reduced_kwh": "约2万度",
+  "estimated_total_subsidy_yuan": "约2万元（按3元/度标准估算）",
+  "revenue_sharing": "补贴费用由4家聚合商与34家企业分成"
+}

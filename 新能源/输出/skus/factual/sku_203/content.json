@@ -1,0 +1,16 @@
+{
+  "area_sqkm": 278,
+  "gdp_2024": "超4000亿元",
+  "gdp_share_of_suzhou": "15%",
+  "national_development_zone_ranking": "九连冠",
+  "industrial_clusters": [
+    "新一代信息技术",
+    "高端装备制造",
+    "生物医药及大健康",
+    "纳米技术应用及新材料",
+    "人工智能",
+    "数字经济"
+  ],
+  "key_industrial_chains_count": 23,
+  "chain_examples": "集成电路、工业软件、光通信与光电子、工业母机与数控装备、机器人与智能装备、航空航天装备、创新药研发与产业化、高端医疗器械、第三代半导体材料、人工智能大模型与算力基础设施、新型储能、光伏、氢能等"
+}
