@@ -1,10 +1,11 @@
 {
   "created_at": "2026-04-30T23:58:12.790314",
-  "updated_at": "2026-05-01T00:09:08.823193",
-  "total_skus": 14,
-  "total_characters": 23523,
+  "updated_at": "2026-05-01T00:11:47.181411",
+  "total_skus": 26,
+  "total_characters": 31947,
   "chunks_processed": [
-    "报告-《关于优化集中式新能源发电企业市场报价的通知（试行）》深度解读与战略分析_chunk_001"
+    "报告-《关于优化集中式新能源发电企业市场报价的通知（试行）》深度解读与战略分析_chunk_001",
+    "报告-乌克兰新能源市场机会调研报告_chunk_001"
   ],
   "skus": [
     {
@@ -138,18 +139,138 @@
       "confidence": null
     },
     {
+      "sku_id": "sku_023",
+      "name": "战前乌克兰光伏市场地位",
+      "classification": "factual",
+      "path": "factual/sku_023",
+      "source_chunk": "报告-乌克兰新能源市场机会调研报告_chunk_001",
+      "character_count": 104,
+      "description": "在俄乌冲突前，乌克兰曾是欧洲发展光伏最快的国家之一，也是中国光伏产品出口的十大目的国之一，享受固定高绿色电价（0.168欧元/千瓦时）。",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_024",
+      "name": "乌克兰战后新能源市场爆发的三大驱动力",
+      "classification": "factual",
+      "path": "factual/sku_024",
+      "source_chunk": "报告-乌克兰新能源市场机会调研报告_chunk_001",
+      "character_count": 111,
+      "description": "降低对俄能源依赖、规避集中式火电厂被毁风险、满足欧盟候选国2030年新能源发电占比40%的要求，是乌克兰战后重建大规模发展新能源的三大核心推动力。",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_025",
+      "name": "2兆瓦分布式光伏储能系统回本周期与电价",
+      "classification": "factual",
+      "path": "factual/sku_025",
+      "source_chunk": "报告-乌克兰新能源市场机会调研报告_chunk_001",
+      "character_count": 124,
+      "description": "在乌克兰，一个2兆瓦光伏配套储能系统的投资回收期约1.5年，得益于高并网电价（约0.168欧元/千瓦时）和居民无息贷款支持。",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_026",
+      "name": "乌克兰当前新能源发展优惠政策",
+      "classification": "factual",
+      "path": "factual/sku_026",
+      "source_chunk": "报告-乌克兰新能源市场机会调研报告_chunk_001",
+      "character_count": 107,
+      "description": "乌克兰为刺激新能源发展出台了多项优惠措施，包括设备免税、居民补贴、公共场所强制安装和审批简化等。",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_027",
+      "name": "DTEK 200MW/400MWh储能项目投标案例",
+      "classification": "factual",
+      "path": "factual/sku_027",
+      "source_chunk": "报告-乌克兰新能源市场机会调研报告_chunk_001",
+      "character_count": 119,
+      "description": "乌克兰最大私营能源公司DTEK招标的200MW/400MWh储能项目，中国企业报价仅为美方产品的1/3，虽因政治因素未中标，但表明大储需求存在且中国产品价格竞争力显著。",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_028",
+      "name": "光伏路灯在乌克兰的普及前景",
+      "classification": "factual",
+      "path": "factual/sku_028",
+      "source_chunk": "报告-乌克兰新能源市场机会调研报告_chunk_001",
+      "character_count": 84,
+      "description": "光伏路灯独立于电网，技术门槛低且可快速部署，预计将在乌克兰公共道路照明中大面积推广，以弥补电网投资不足。",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_029",
+      "name": "乌克兰空气源热泵市场增长要素",
+      "classification": "factual",
+      "path": "factual/sku_029",
+      "source_chunk": "报告-乌克兰新能源市场机会调研报告_chunk_001",
+      "character_count": 103,
+      "description": "分布式光伏普及降低用电成本，配合免税、补贴政策和具有价格优势的中国产品，使乌克兰空气源热泵需求快速上升。",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_030",
+      "name": "乌克兰智能电表与智能气表升级需求",
+      "classification": "factual",
+      "path": "factual/sku_030",
+      "source_chunk": "报告-乌克兰新能源市场机会调研报告_chunk_001",
+      "character_count": 111,
+      "description": "乌克兰陈旧的电网和天然气管网设施在战争中进一步受损，催生智能表计数字化升级的庞大需求，且该领域附加值高、利润空间大。",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_031",
+      "name": "乌克兰电动汽车及电动物流车需求暴增",
+      "classification": "factual",
+      "path": "factual/sku_031",
+      "source_chunk": "报告-乌克兰新能源市场机会调研报告_chunk_001",
+      "character_count": 100,
+      "description": "受成品油供应断裂和油价飙升影响，乌克兰电动汽车增速迅猛，其中电动物流车（含半挂牵引车）需求暴增，以应对海运转陆运的运输压力。",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_032",
+      "name": "中国新能源企业在乌克兰的竞争态势",
+      "classification": "factual",
+      "path": "factual/sku_032",
+      "source_chunk": "报告-乌克兰新能源市场机会调研报告_chunk_001",
+      "character_count": 94,
+      "description": "已有大量中国企业参与乌克兰能源项目竞标，如高压套管招标出现十余家中企竞争，表明市场并非蓝海，提前布局可避免后续激烈竞争。",
+      "confidence": null
+    },
+    {
+      "sku_id": "skill_003",
+      "name": "ukraine-new-energy-market-entry-guide",
+      "classification": "procedural",
+      "path": "procedural/skill_003",
+      "source_chunk": "报告-乌克兰新能源市场机会调研报告_chunk_001",
+      "character_count": 1008,
+      "description": "进入乌克兰新能源市场前的准备步骤与注意事项，适用于计划开拓乌克兰新能源业务的企业。",
+      "confidence": null
+    },
+    {
+      "sku_id": "skill_004",
+      "name": "ukraine-new-energy-opportunity-screening",
+      "classification": "procedural",
+      "path": "procedural/skill_004",
+      "source_chunk": "报告-乌克兰新能源市场机会调研报告_chunk_001",
+      "character_count": 1350,
+      "description": "基于当前乌克兰能源格局，系统性识别和评估新能源市场机会的框架，涵盖光伏、储能、工业用电及细分产品。",
+      "confidence": null
+    },
+    {
       "sku_id": "relational-knowledge-base",
       "name": "relational-knowledge-base",
       "classification": "relational",
       "path": "relational",
       "source_chunk": "aggregated",
-      "character_count": 19417,
+      "character_count": 24426,
       "description": "Domain label hierarchy and terminology glossary",
       "confidence": null
     }
   ],
-  "factual_count": 11,
+  "factual_count": 21,
   "relational_count": 1,
-  "procedural_count": 2,
+  "procedural_count": 4,
   "meta_count": 0
 }

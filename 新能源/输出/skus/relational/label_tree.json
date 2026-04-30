@@ -30,6 +30,10 @@
         {
           "name": "电力传输",
           "children": []
+        },
+        {
+          "name": "非正规市场",
+          "children": []
         }
       ]
     },
@@ -42,6 +46,10 @@
         },
         {
           "name": "政策原则",
+          "children": []
+        },
+        {
+          "name": "电价政策",
           "children": []
         }
       ]
@@ -86,10 +94,31 @@
     },
     {
       "name": "技术架构",
-      "children": []
+      "children": [
+        {
+          "name": "储能系统",
+          "children": []
+        },
+        {
+          "name": "新能源设备",
+          "children": []
+        },
+        {
+          "name": "智能硬件",
+          "children": []
+        },
+        {
+          "name": "新能源车辆",
+          "children": []
+        }
+      ]
     },
     {
       "name": "职业",
+      "children": []
+    },
+    {
+      "name": "海外市场",
       "children": []
     }
   ]

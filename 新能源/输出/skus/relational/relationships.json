@@ -107,6 +107,33 @@
         "报告-《关于优化集中式新能源发电企业市场报价的通知（试行）》深度解读与战略分析_chunk_001"
       ],
       "confidence": 1.0
+    },
+    {
+      "subject": "能源安全",
+      "predicate": "causes",
+      "object": "分布式能源",
+      "source_chunks": [
+        "报告-乌克兰新能源市场机会调研报告_chunk_001"
+      ],
+      "confidence": 0.8
+    },
+    {
+      "subject": "分布式光伏",
+      "predicate": "enables",
+      "object": "户用储能",
+      "source_chunks": [
+        "报告-乌克兰新能源市场机会调研报告_chunk_001"
+      ],
+      "confidence": 0.8
+    },
+    {
+      "subject": "绿色电价",
+      "predicate": "causes",
+      "object": "分布式光伏",
+      "source_chunks": [
+        "报告-乌克兰新能源市场机会调研报告_chunk_001"
+      ],
+      "confidence": 0.8
     }
   ]
 }

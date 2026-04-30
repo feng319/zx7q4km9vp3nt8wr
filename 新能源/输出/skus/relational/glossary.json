@@ -633,6 +633,188 @@
       "related_terms": [
         "集中报价"
       ]
+    },
+    {
+      "term": "绿色电价",
+      "definition": "对可再生能源发电给予的固定上网电价补贴机制",
+      "labels": [
+        "电力市场政策 > 电价政策"
+      ],
+      "source_chunks": [
+        "报告-乌克兰新能源市场机会调研报告_chunk_001"
+      ],
+      "source_chunk": "报告-乌克兰新能源市场机会调研报告_chunk_001",
+      "aliases": [
+        "固定电价补贴",
+        "FIT"
+      ],
+      "related_terms": [
+        "上网电价"
+      ]
+    },
+    {
+      "term": "上网电价",
+      "definition": "发电企业向电网销售电力的价格",
+      "labels": [
+        "电力市场 > 结算机制"
+      ],
+      "source_chunks": [
+        "报告-乌克兰新能源市场机会调研报告_chunk_001"
+      ],
+      "source_chunk": "报告-乌克兰新能源市场机会调研报告_chunk_001",
+      "aliases": [
+        "并网电价"
+      ],
+      "related_terms": [
+        "绿色电价"
+      ]
+    },
+    {
+      "term": "户用储能",
+      "definition": "安装在家庭用户侧，用于存储电能以供自用的储能系统",
+      "labels": [
+        "技术架构 > 储能系统"
+      ],
+      "source_chunks": [
+        "报告-乌克兰新能源市场机会调研报告_chunk_001"
+      ],
+      "source_chunk": "报告-乌克兰新能源市场机会调研报告_chunk_001",
+      "aliases": [
+        "家用储能"
+      ],
+      "related_terms": [
+        "分布式光伏"
+      ]
+    },
+    {
+      "term": "分布式能源",
+      "definition": "分布在用户端的能源综合利用系统，通常包括分布式发电、储能和负荷",
+      "labels": [
+        "电力市场 > 发电类型"
+      ],
+      "source_chunks": [
+        "报告-乌克兰新能源市场机会调研报告_chunk_001"
+      ],
+      "source_chunk": "报告-乌克兰新能源市场机会调研报告_chunk_001",
+      "aliases": [
+        "分布式能源系统"
+      ],
+      "related_terms": [
+        "分布式光伏",
+        "户用储能"
+      ]
+    },
+    {
+      "term": "光伏路灯",
+      "definition": "利用太阳能光伏发电并储能的独立照明设施",
+      "labels": [
+        "技术架构 > 新能源设备"
+      ],
+      "source_chunks": [
+        "报告-乌克兰新能源市场机会调研报告_chunk_001"
+      ],
+      "source_chunk": "报告-乌克兰新能源市场机会调研报告_chunk_001",
+      "aliases": [],
+      "related_terms": []
+    },
+    {
+      "term": "空气源热泵",
+      "definition": "以空气为热源，通过制冷循环实现制冷和制热的设备",
+      "labels": [
+        "技术架构 > 新能源设备"
+      ],
+      "source_chunks": [
+        "报告-乌克兰新能源市场机会调研报告_chunk_001"
+      ],
+      "source_chunk": "报告-乌克兰新能源市场机会调研报告_chunk_001",
+      "aliases": [],
+      "related_terms": []
+    },
+    {
+      "term": "智能电表",
+      "definition": "具有双向通信、远程控制和数据处理功能的电能计量装置",
+      "labels": [
+        "技术架构 > 智能硬件"
+      ],
+      "source_chunks": [
+        "报告-乌克兰新能源市场机会调研报告_chunk_001"
+      ],
+      "source_chunk": "报告-乌克兰新能源市场机会调研报告_chunk_001",
+      "aliases": [],
+      "related_terms": [
+        "智能气表"
+      ]
+    },
+    {
+      "term": "智能气表",
+      "definition": "具有双向通信、远程控制和数据处理功能的燃气计量装置",
+      "labels": [
+        "技术架构 > 智能硬件"
+      ],
+      "source_chunks": [
+        "报告-乌克兰新能源市场机会调研报告_chunk_001"
+      ],
+      "source_chunk": "报告-乌克兰新能源市场机会调研报告_chunk_001",
+      "aliases": [],
+      "related_terms": [
+        "智能电表"
+      ]
+    },
+    {
+      "term": "电动物流车",
+      "definition": "采用电力驱动，用于货物运输的车辆，包括电动重卡",
+      "labels": [
+        "技术架构 > 新能源车辆"
+      ],
+      "source_chunks": [
+        "报告-乌克兰新能源市场机会调研报告_chunk_001"
+      ],
+      "source_chunk": "报告-乌克兰新能源市场机会调研报告_chunk_001",
+      "aliases": [
+        "电动重卡"
+      ],
+      "related_terms": []
+    },
+    {
+      "term": "电力黑市",
+      "definition": "在官方电力市场之外，以高于官方价格进行电力交易的非正规市场",
+      "labels": [
+        "电力市场 > 非正规市场"
+      ],
+      "source_chunks": [
+        "报告-乌克兰新能源市场机会调研报告_chunk_001"
+      ],
+      "source_chunk": "报告-乌克兰新能源市场机会调研报告_chunk_001",
+      "aliases": [],
+      "related_terms": []
+    },
+    {
+      "term": "能源安全",
+      "definition": "一个国家或地区稳定、可靠、经济地获取所需能源的程度",
+      "labels": [
+        "电力市场政策 > 政策原则"
+      ],
+      "source_chunks": [
+        "报告-乌克兰新能源市场机会调研报告_chunk_001"
+      ],
+      "source_chunk": "报告-乌克兰新能源市场机会调研报告_chunk_001",
+      "aliases": [],
+      "related_terms": [
+        "分布式能源"
+      ]
+    },
+    {
+      "term": "新能源出海",
+      "definition": "新能源企业将业务拓展至海外市场的商业活动",
+      "labels": [
+        "海外市场"
+      ],
+      "source_chunks": [
+        "报告-乌克兰新能源市场机会调研报告_chunk_001"
+      ],
+      "source_chunk": "报告-乌克兰新能源市场机会调研报告_chunk_001",
+      "aliases": [],
+      "related_terms": []
     }
   ]
 }
