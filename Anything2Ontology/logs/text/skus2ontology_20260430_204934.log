@@ -3,3 +3,24 @@
 2026-04-30T12:49:34.246502Z [info     ] slug→path inline resolution    [skus2ontology.chatbot] matched=0 total_lines=2
 2026-04-30T12:49:34.247501Z [info     ] Loaded mapping.md (compressed) [skus2ontology.chatbot] compressed_chars=12 original_chars=57
 2026-04-30T12:49:34.247501Z [info     ] Loaded eureka.md               [skus2ontology.chatbot] chars=42
+2026-04-30T12:59:27.031825Z [warning  ] SKU index summary truncated    [skus2ontology.chatbot] limit=50000 original_chars=65604
+2026-04-30T12:59:27.031825Z [info     ] Built SKU index summary        [skus2ontology.chatbot] chars=50033 sku_count=962
+2026-04-30T13:00:32.659579Z [info     ] Phase 2 anchor replacement complete [skus2ontology.chatbot] draft_chars=2998 final_chars=2998
+2026-04-30T13:00:32.660583Z [info     ] unwrap_resolved_anchors        [skus2ontology.chatbot] after=11 before=11 unwrapped=0
+2026-04-30T13:00:32.663749Z [info     ] Remaining anchors              [skus2ontology.chatbot] count=11 sample=['【锚点：全周期方案阶段划分与触发规则】', '【锚点：商业模式/盈利模型参数自定义配置规则】', '【锚点：15类成熟商业模式规则库】', '【锚点：21类可复用盈利模型组件库】', '【锚点：各行业/各阶段落地执行SOP模板库】', '【锚点：咨询方案落地风险节点与规避规则库】', '【锚点：各上市板上市成本测算规则库】', '【锚点：企业经营监管合规知识库】', '【锚点：合规风险自动识别算法】', '【锚点：各行业单店盈利测算模型】']
+2026-04-30T13:00:32.665762Z [info     ] Backed up existing spec.md     [skus2ontology.chatbot] backup='G:\\Program Files\\AI coding\\知识萃取\\商业模式资本\\输出\\ontology\\spec.md.bak.20260430_210032'
+2026-04-30T13:00:32.667931Z [info     ] Saved spec.md                  [skus2ontology.chatbot] chars=2998 path='G:\\Program Files\\AI coding\\知识萃取\\商业模式资本\\输出\\ontology\\spec.md'
+2026-04-30T13:00:32.667931Z [info     ] spec_check                     [skus2ontology.spec_validator] check=extra_chunk_bracket count=0 samples=[] status=PASS
+2026-04-30T13:00:32.669285Z [info     ] spec_check                     [skus2ontology.spec_validator] check=anchor_wrapping_chunk count=0 samples=[] status=PASS
+2026-04-30T13:00:32.669285Z [info     ] spec_check                     [skus2ontology.spec_validator] check=anchor_wrapping_sku count=0 samples=[] status=PASS
+2026-04-30T13:00:32.669285Z [info     ] spec_check                     [skus2ontology.spec_validator] check=sku_sku_concat count=0 samples=[] status=PASS
+2026-04-30T13:00:32.670535Z [info     ] spec_check                     [skus2ontology.spec_validator] check=sku_chunk_concat count=0 samples=[] status=PASS
+2026-04-30T13:00:32.670535Z [info     ] spec_check                     [skus2ontology.spec_validator] check=chunk_sku_concat count=0 samples=[] status=PASS
+2026-04-30T13:00:32.670535Z [info     ] spec_check                     [skus2ontology.spec_validator] check=sku_space_concat count=0 samples=[] status=PASS
+2026-04-30T13:00:32.671727Z [info     ] spec_check                     [skus2ontology.spec_validator] check=sku_range count=0 samples=[] status=PASS
+2026-04-30T13:00:32.671727Z [info     ] spec_check                     [skus2ontology.spec_validator] check=chinese_chunk_bracket count=0 samples=[] status=PASS
+2026-04-30T13:00:32.671727Z [info     ] spec_check                     [skus2ontology.spec_validator] check=chinese_sku_bracket count=0 samples=[] status=PASS
+2026-04-30T13:00:32.671727Z [info     ] spec_check                     [skus2ontology.spec_validator] check=remaining_anchor count=11 samples=['【锚点：全周期方案阶段划分与触发规则】', '【锚点：商业模式/盈利模型参数自定义配置规则】', '【锚点：15类成熟商业模式规则库】'] status=INFO
+2026-04-30T13:00:32.672833Z [info     ] spec_stats                     [skus2ontology.spec_validator] chunk_refs=3 chunk_unique=3 sku_refs=2 sku_unique=2
+2026-04-30T13:00:32.672833Z [info     ] spec_validator PASSED          [skus2ontology.spec_validator]
+2026-04-30T13:00:32.704933Z [info     ] Saved chat log                 [skus2ontology.pipeline] confirmed=False path=..\商业模式资本\输出\ontology\chat_log.json rounds=5
