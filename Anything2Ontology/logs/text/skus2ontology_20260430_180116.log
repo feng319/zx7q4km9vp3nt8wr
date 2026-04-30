@@ -1,0 +1,25 @@
+2026-04-30T10:01:16.154931Z [info     ] Starting spec chatbot          [skus2ontology.chatbot] max_rounds=5
+2026-04-30T10:01:16.173552Z [info     ] Built name_to_path lookup      [skus2ontology.chatbot] entries=324
+2026-04-30T10:01:16.183773Z [info     ] slug→path inline resolution    [skus2ontology.chatbot] matched=322 total_lines=342
+2026-04-30T10:01:16.183773Z [info     ] Loaded mapping.md (compressed) [skus2ontology.chatbot] compressed_chars=17649 original_chars=16088
+2026-04-30T10:01:16.191176Z [info     ] Loaded eureka.md               [skus2ontology.chatbot] chars=6964
+2026-04-30T10:21:09.518284Z [info     ] Built SKU index summary        [skus2ontology.chatbot] chars=22850 sku_count=324
+2026-04-30T10:22:30.488991Z [info     ] Phase 2 anchor replacement complete [skus2ontology.chatbot] draft_chars=3583 final_chars=3583
+2026-04-30T10:22:30.488991Z [info     ] unwrap_resolved_anchors        [skus2ontology.chatbot] after=8 before=8 unwrapped=0
+2026-04-30T10:22:30.489991Z [info     ] Remaining anchors              [skus2ontology.chatbot] count=8 sample=['【锚点：18个新能源细分赛道全量事实数据、标杆项目全周期运营数据、政策规则、行业发展趋势】', '【锚点：标杆案例多维度匹配度评估规则】', '【锚点：全场景新能源项目落地实操流程、风险防控方案、收益测算模板】', '【锚点：新能源项目全流程技术选型规则、工程风险排查清单、架构设计参考标准】', '【锚点：全品类新能源项目收益测算基准参数、回本周期测算公式、敏感性分析模型】', '【锚点：新能源主流场景官方合作方信息、对接流程、合作门槛与模式参考】', '【锚点：全场景新能源项目全流程合规节点清单、审批流程、对接主体说明】', '【锚点：新能源差异化蓝海机会评估规则、低竞争高潜力赛道清单】']
+2026-04-30T10:22:30.492653Z [info     ] Backed up existing spec.md     [skus2ontology.chatbot] backup='G:\\Program Files\\AI coding\\知识萃取\\新能源\\输出\\ontology\\spec.md.bak.20260430_182230'
+2026-04-30T10:22:30.492653Z [info     ] Saved spec.md                  [skus2ontology.chatbot] chars=3583 path='G:\\Program Files\\AI coding\\知识萃取\\新能源\\输出\\ontology\\spec.md'
+2026-04-30T10:22:30.493992Z [info     ] spec_check                     [skus2ontology.spec_validator] check=extra_chunk_bracket count=0 samples=[] status=PASS
+2026-04-30T10:22:30.495088Z [info     ] spec_check                     [skus2ontology.spec_validator] check=anchor_wrapping_chunk count=0 samples=[] status=PASS
+2026-04-30T10:22:30.495088Z [info     ] spec_check                     [skus2ontology.spec_validator] check=anchor_wrapping_sku count=0 samples=[] status=PASS
+2026-04-30T10:22:30.495088Z [info     ] spec_check                     [skus2ontology.spec_validator] check=sku_sku_concat count=0 samples=[] status=PASS
+2026-04-30T10:22:30.495088Z [info     ] spec_check                     [skus2ontology.spec_validator] check=sku_chunk_concat count=0 samples=[] status=PASS
+2026-04-30T10:22:30.496297Z [info     ] spec_check                     [skus2ontology.spec_validator] check=chunk_sku_concat count=0 samples=[] status=PASS
+2026-04-30T10:22:30.496297Z [info     ] spec_check                     [skus2ontology.spec_validator] check=sku_space_concat count=0 samples=[] status=PASS
+2026-04-30T10:22:30.496297Z [info     ] spec_check                     [skus2ontology.spec_validator] check=sku_range count=0 samples=[] status=PASS
+2026-04-30T10:22:30.496297Z [info     ] spec_check                     [skus2ontology.spec_validator] check=chinese_chunk_bracket count=0 samples=[] status=PASS
+2026-04-30T10:22:30.497420Z [info     ] spec_check                     [skus2ontology.spec_validator] check=chinese_sku_bracket count=0 samples=[] status=PASS
+2026-04-30T10:22:30.497420Z [info     ] spec_check                     [skus2ontology.spec_validator] check=remaining_anchor count=8 samples=['【锚点：18个新能源细分赛道全量事实数据、标杆项目全周期运营数据、政策规则、行业发展趋势】', '【锚点：标杆案例多维度匹配度评估规则】', '【锚点：全场景新能源项目落地实操流程、风险防控方案、收益测算模板】'] status=INFO
+2026-04-30T10:22:30.497420Z [info     ] spec_stats                     [skus2ontology.spec_validator] chunk_refs=24 chunk_unique=24 sku_refs=0 sku_unique=0
+2026-04-30T10:22:30.497420Z [info     ] spec_validator PASSED          [skus2ontology.spec_validator]
+2026-04-30T10:22:30.499494Z [info     ] Saved chat log                 [skus2ontology.pipeline] confirmed=False path='G:\\Program Files\\AI coding\\知识萃取\\新能源\\输出\\ontology\\chat_log.json' rounds=5

@@ -1,0 +1,25 @@
+2026-04-30T10:38:13.679183Z [info     ] Starting Anything2Markdown pipeline [anything2markdown.cli]
+2026-04-30T10:38:13.680202Z [info     ] Input directory                [anything2markdown.cli] path='G:\\Program Files\\AI coding\\知识萃取\\商业模式资本\\输入'
+2026-04-30T10:38:13.680202Z [info     ] Output directory               [anything2markdown.cli] path='G:\\Program Files\\AI coding\\知识萃取\\商业模式资本\\输出'
+2026-04-30T10:38:13.683457Z [info     ] Starting Anything2Markdown pipeline [anything2markdown.pipeline] input_dir='G:\\Program Files\\AI coding\\知识萃取\\商业模式资本\\输入' output_dir='G:\\Program Files\\AI coding\\知识萃取\\商业模式资本\\输出'
+2026-04-30T10:38:13.684457Z [info     ] Processing items in parallel   [anything2markdown.pipeline] count=9 max_workers=4 task_type=cpu
+2026-04-30T10:38:13.684457Z [info     ] Processing file                [anything2markdown.pipeline] file=2025财富破局从商业模式开始.docx
+2026-04-30T10:38:13.684457Z [info     ] Processing file                [anything2markdown.pipeline] file=商业创新案例.docx
+2026-04-30T10:38:13.685612Z [info     ] Processing file                [anything2markdown.pipeline] file=商业模式与资本运营.docx
+2026-04-30T10:38:13.685612Z [info     ] Skipping already-processed file [anything2markdown.pipeline] file=2025财富破局从商业模式开始.docx output=2025财富破局从商业模式开始.md
+2026-04-30T10:38:13.685612Z [info     ] Processing file                [anything2markdown.pipeline] file=商业模式创新案例大全.docx
+2026-04-30T10:38:13.685612Z [info     ] Skipping already-processed file [anything2markdown.pipeline] file=商业创新案例.docx output=商业创新案例.md
+2026-04-30T10:38:13.686636Z [info     ] Skipping already-processed file [anything2markdown.pipeline] file=商业模式与资本运营.docx output=商业模式与资本运营.md
+2026-04-30T10:38:13.687641Z [info     ] Skipping already-processed file [anything2markdown.pipeline] file=商业模式创新案例大全.docx output=商业模式创新案例大全.md
+2026-04-30T10:38:13.687641Z [info     ] Processing file                [anything2markdown.pipeline] file=定位战略塑造产品卖点.docx
+2026-04-30T10:38:13.688645Z [info     ] Processing file                [anything2markdown.pipeline] file=新资本商业模式与盈利模式.docx
+2026-04-30T10:38:13.689660Z [info     ] Processing file                [anything2markdown.pipeline] file=清源创业.docx
+2026-04-30T10:38:13.689660Z [info     ] Processing file                [anything2markdown.pipeline] file=连锁企业的商业模式和股权模式.docx
+2026-04-30T10:38:13.690956Z [info     ] Skipping already-processed file [anything2markdown.pipeline] file=定位战略塑造产品卖点.docx output=定位战略塑造产品卖点.md
+2026-04-30T10:38:13.690956Z [info     ] MarkItDown parsing             [anything2markdown.parsers.markitdown_parser] file=新资本商业模式与盈利模式.docx
+2026-04-30T10:38:13.692009Z [info     ] MarkItDown parsing             [anything2markdown.parsers.markitdown_parser] file=清源创业.docx
+2026-04-30T10:38:13.692009Z [info     ] MarkItDown parsing             [anything2markdown.parsers.markitdown_parser] file=连锁企业的商业模式和股权模式.docx
+2026-04-30T10:38:13.693351Z [info     ] Processing file                [anything2markdown.pipeline] file=闭门私董会.docx
+2026-04-30T10:38:13.693351Z [info     ] Skipping already-processed file [anything2markdown.pipeline] file=闭门私董会.docx output=闭门私董会.md
+2026-04-30T10:38:18.775291Z [info     ] MarkItDown success             [anything2markdown.parsers.markitdown_parser] chars=39667 file=连锁企业的商业模式和股权模式.docx output=连锁企业的商业模式和股权模式.md
+2026-04-30T10:38:24.640078Z [info     ] MarkItDown success             [anything2markdown.parsers.markitdown_parser] chars=133479 file=新资本商业模式与盈利模式.docx output=新资本商业模式与盈利模式.md

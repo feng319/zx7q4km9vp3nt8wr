@@ -1,0 +1,29 @@
+2026-04-30T10:34:17.747039Z [info     ] Starting Anything2Markdown pipeline [anything2markdown.cli]
+2026-04-30T10:34:17.748039Z [info     ] Input directory                [anything2markdown.cli] path='G:\\Program Files\\AI coding\\知识萃取\\商业模式资本\\输入'
+2026-04-30T10:34:17.748039Z [info     ] Output directory               [anything2markdown.cli] path='G:\\Program Files\\AI coding\\知识萃取\\商业模式资本\\输出'
+2026-04-30T10:34:17.750039Z [info     ] Starting Anything2Markdown pipeline [anything2markdown.pipeline] input_dir='G:\\Program Files\\AI coding\\知识萃取\\商业模式资本\\输入' output_dir='G:\\Program Files\\AI coding\\知识萃取\\商业模式资本\\输出'
+2026-04-30T10:34:17.751140Z [info     ] Processing items in parallel   [anything2markdown.pipeline] count=9 max_workers=4 task_type=cpu
+2026-04-30T10:34:17.751140Z [info     ] Processing file                [anything2markdown.pipeline] file=2025财富破局从商业模式开始.docx
+2026-04-30T10:34:17.751140Z [info     ] Processing file                [anything2markdown.pipeline] file=商业创新案例.docx
+2026-04-30T10:34:17.752642Z [info     ] Processing file                [anything2markdown.pipeline] file=商业模式与资本运营.docx
+2026-04-30T10:34:17.752642Z [info     ] MarkItDown parsing             [anything2markdown.parsers.markitdown_parser] file=2025财富破局从商业模式开始.docx
+2026-04-30T10:34:17.752642Z [info     ] Processing file                [anything2markdown.pipeline] file=商业模式创新案例大全.docx
+2026-04-30T10:34:17.753781Z [info     ] MarkItDown parsing             [anything2markdown.parsers.markitdown_parser] file=商业创新案例.docx
+2026-04-30T10:34:17.753781Z [info     ] MarkItDown parsing             [anything2markdown.parsers.markitdown_parser] file=商业模式与资本运营.docx
+2026-04-30T10:34:17.754825Z [info     ] MarkItDown parsing             [anything2markdown.parsers.markitdown_parser] file=商业模式创新案例大全.docx
+2026-04-30T10:34:24.033634Z [info     ] MarkItDown success             [anything2markdown.parsers.markitdown_parser] chars=49137 file=2025财富破局从商业模式开始.docx output=2025财富破局从商业模式开始.md
+2026-04-30T10:34:24.035705Z [info     ] Processing file                [anything2markdown.pipeline] file=定位战略塑造产品卖点.docx
+2026-04-30T10:34:24.036710Z [info     ] MarkItDown parsing             [anything2markdown.parsers.markitdown_parser] file=定位战略塑造产品卖点.docx
+2026-04-30T10:34:27.052219Z [info     ] MarkItDown success             [anything2markdown.parsers.markitdown_parser] chars=82426 file=商业创新案例.docx output=商业创新案例.md
+2026-04-30T10:34:27.052219Z [info     ] Processing file                [anything2markdown.pipeline] file=新资本商业模式与盈利模式.docx
+2026-04-30T10:34:27.053491Z [info     ] MarkItDown parsing             [anything2markdown.parsers.markitdown_parser] file=新资本商业模式与盈利模式.docx
+2026-04-30T10:34:32.124937Z [info     ] MarkItDown success             [anything2markdown.parsers.markitdown_parser] chars=107211 file=商业模式创新案例大全.docx output=商业模式创新案例大全.md
+2026-04-30T10:34:32.125451Z [info     ] Processing file                [anything2markdown.pipeline] file=清源创业.docx
+2026-04-30T10:34:32.126471Z [info     ] MarkItDown parsing             [anything2markdown.parsers.markitdown_parser] file=清源创业.docx
+2026-04-30T10:34:35.835216Z [info     ] MarkItDown success             [anything2markdown.parsers.markitdown_parser] chars=39468 file=定位战略塑造产品卖点.docx output=定位战略塑造产品卖点.md
+2026-04-30T10:34:35.836223Z [info     ] Processing file                [anything2markdown.pipeline] file=连锁企业的商业模式和股权模式.docx
+2026-04-30T10:34:35.837223Z [info     ] MarkItDown parsing             [anything2markdown.parsers.markitdown_parser] file=连锁企业的商业模式和股权模式.docx
+2026-04-30T10:34:42.659835Z [info     ] MarkItDown success             [anything2markdown.parsers.markitdown_parser] chars=122625 file=商业模式与资本运营.docx output=商业模式与资本运营.md
+2026-04-30T10:34:42.659835Z [info     ] Processing file                [anything2markdown.pipeline] file=闭门私董会.docx
+2026-04-30T10:34:42.661136Z [info     ] MarkItDown parsing             [anything2markdown.parsers.markitdown_parser] file=闭门私董会.docx
+2026-04-30T10:34:45.749086Z [info     ] MarkItDown success             [anything2markdown.parsers.markitdown_parser] chars=31554 file=闭门私董会.docx output=闭门私董会.md

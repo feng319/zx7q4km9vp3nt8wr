@@ -1,0 +1,26 @@
+2026-04-30T08:57:00.668062Z [info     ] Starting spec chatbot          [skus2ontology.chatbot] max_rounds=5
+2026-04-30T08:57:00.691341Z [info     ] Built name_to_path lookup      [skus2ontology.chatbot] entries=958
+2026-04-30T08:57:00.695396Z [info     ] slug→path inline resolution    [skus2ontology.chatbot] matched=944 total_lines=971
+2026-04-30T08:57:00.695396Z [info     ] Loaded mapping.md (compressed) [skus2ontology.chatbot] compressed_chars=29995 original_chars=49322
+2026-04-30T08:57:00.705712Z [info     ] Loaded eureka.md               [skus2ontology.chatbot] chars=16728
+2026-04-30T09:16:57.790946Z [warning  ] SKU index summary truncated    [skus2ontology.chatbot] limit=50000 original_chars=65604
+2026-04-30T09:16:57.790946Z [info     ] Built SKU index summary        [skus2ontology.chatbot] chars=50033 sku_count=962
+2026-04-30T09:19:20.581108Z [info     ] Phase 2 anchor replacement complete [skus2ontology.chatbot] draft_chars=7223 final_chars=7223
+2026-04-30T09:19:20.581108Z [info     ] unwrap_resolved_anchors        [skus2ontology.chatbot] after=13 before=13 unwrapped=0
+2026-04-30T09:19:20.583559Z [info     ] Remaining anchors              [skus2ontology.chatbot] count=13 sample=['【锚点：消费金融持牌要求、消费分期费率合规区间参考】', '【锚点：跨行业招商分成比例参考表、异业合作权责划分模板】', '【锚点：客户分层运营SOP模板、沉睡客户唤醒规则】', '【锚点：客户终身价值测算公式、不同行业CLV参考阈值】', '【锚点：公关危机分级响应模板、正向事件营销传播路径设计方法】', '【锚点：易货交易合规规则、易货模式税负测算方法、异业易货价值评估标准】', '【锚点：转介绍阶梯奖励规则模板、转介绍权益兑付SOP】', '【锚点：各行业失败案例避坑清单、跨赛道模式复用适配度评估标准】', '【锚点：落地节点里程碑考核模板、风险点应对预案库、各阶段资源需求测算表】', '【锚点：上市全流程成本测算模板、各板块上市时间周期参考表、对赌条款兜底模板库】']
+2026-04-30T09:19:20.584562Z [info     ] Backed up existing spec.md     [skus2ontology.chatbot] backup='G:\\Program Files\\AI coding\\知识萃取\\商业模式资本\\输出\\ontology\\spec.md.bak.20260430_171920'
+2026-04-30T09:19:20.585743Z [info     ] Saved spec.md                  [skus2ontology.chatbot] chars=7387 path='G:\\Program Files\\AI coding\\知识萃取\\商业模式资本\\输出\\ontology\\spec.md'
+2026-04-30T09:19:20.585743Z [info     ] spec_check                     [skus2ontology.spec_validator] check=extra_chunk_bracket count=0 samples=[] status=PASS
+2026-04-30T09:19:20.585743Z [info     ] spec_check                     [skus2ontology.spec_validator] check=anchor_wrapping_chunk count=0 samples=[] status=PASS
+2026-04-30T09:19:20.587053Z [info     ] spec_check                     [skus2ontology.spec_validator] check=anchor_wrapping_sku count=0 samples=[] status=PASS
+2026-04-30T09:19:20.587053Z [info     ] spec_check                     [skus2ontology.spec_validator] check=sku_sku_concat count=0 samples=[] status=PASS
+2026-04-30T09:19:20.587053Z [info     ] spec_check                     [skus2ontology.spec_validator] check=sku_chunk_concat count=0 samples=[] status=PASS
+2026-04-30T09:19:20.587053Z [info     ] spec_check                     [skus2ontology.spec_validator] check=chunk_sku_concat count=0 samples=[] status=PASS
+2026-04-30T09:19:20.588261Z [warning  ] spec_check                     [skus2ontology.spec_validator] check=sku_space_concat count=4 samples=['skus/factual/sku_469\nskus/', 'skus/factual/sku_471\nskus/', 'skus/factual/sku_473\nskus/'] status=FAIL
+2026-04-30T09:19:20.588261Z [info     ] spec_check                     [skus2ontology.spec_validator] check=sku_range count=0 samples=[] status=PASS
+2026-04-30T09:19:20.588261Z [info     ] spec_check                     [skus2ontology.spec_validator] check=chinese_chunk_bracket count=0 samples=[] status=PASS
+2026-04-30T09:19:20.588261Z [info     ] spec_check                     [skus2ontology.spec_validator] check=chinese_sku_bracket count=0 samples=[] status=PASS
+2026-04-30T09:19:20.588261Z [info     ] spec_check                     [skus2ontology.spec_validator] check=remaining_anchor count=13 samples=['【锚点：消费金融持牌要求、消费分期费率合规区间参考】', '【锚点：跨行业招商分成比例参考表、异业合作权责划分模板】', '【锚点：客户分层运营SOP模板、沉睡客户唤醒规则】'] status=INFO
+2026-04-30T09:19:20.588261Z [info     ] spec_stats                     [skus2ontology.spec_validator] chunk_refs=45 chunk_unique=36 sku_refs=8 sku_unique=8
+2026-04-30T09:19:20.588261Z [warning  ] spec_validator FAILED          [skus2ontology.spec_validator] failures=['Fix 4: space-separated SKU refs on same line: 4 hits']
+2026-04-30T09:19:20.595651Z [info     ] Saved chat log                 [skus2ontology.pipeline] confirmed=False path='G:\\Program Files\\AI coding\\知识萃取\\商业模式资本\\输出\\ontology\\chat_log.json' rounds=5
