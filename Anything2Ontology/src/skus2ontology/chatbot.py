@@ -112,7 +112,7 @@ Spec 章节模板（严格按此结构）：
 ```
 
 规则：
-- 当你能从上方「知识库主题分布」中识别出具体 SKU 时，直接写出 SKU 引用（如 skus/factual/sku_002）
+- 当你能从上方「知识库主题分布」中识别出具体 SKU 时，写出 SKU 引用并附带其名称（如 skus/factual/sku_002 某某模式核心参数）——不允许只写路径不写名称
 - 当你能从 eureka.md 或主题列表中识别出具体 chunk 时，直接写出 chunk 引用：[chunk: xxx_chunk_xxx]（chunk 标识从 eureka.md 的方括号里获取）
 - 如果你已经知道 SKU 或 chunk 引用，**不要**用 【锚点：...】 包裹——直接写出。锚点标记**仅用于**你完全无法识别具体引用的情况
 - 锚点标记放在对应的核心功能章节内
@@ -180,7 +180,7 @@ SKU 索引：
 
 规则：
 - 将每个【锚点：描述】标记替换为语义最匹配的 SKU 引用
-- 引用格式：skus/分类/SKU_ID（如 skus/factual/sku_001、skus/procedural/skill_003）
+- 引用格式：skus/分类/SKU_ID 名称（如 skus/factual/sku_001 某某模式核心参数、skus/procedural/skill_003 某某流程设计规则）——每个 SKU 引用必须附带索引中的 name 字段，不允许只写路径
 - 分类取值：factual、procedural、relational — 使用索引中的 classification 字段值
 - SKU_ID 是索引中的 sku_id 字段值（如 sku_001、skill_003）
 - 保留所有已有的 [chunk: xxx_chunk_xxx] 引用不变——这些是有效的 chunk 引用，不是锚点标记。不要用【锚点：...】包裹它们，也不要以任何方式修改它们。
