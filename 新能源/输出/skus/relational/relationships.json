@@ -926,6 +926,87 @@
         "报告-国海绿能一线调研报告：重卡换电站怎么做？_chunk_001"
       ],
       "confidence": 1.0
+    },
+    {
+      "subject": "售电服务",
+      "predicate": "enables",
+      "object": "综合能源服务",
+      "source_chunks": [
+        "报告-安悦节能调研报告：怎样做冷热电综合能源服务？_chunk_001"
+      ],
+      "confidence": 0.8
+    },
+    {
+      "subject": "固体储热装置",
+      "predicate": "enables",
+      "object": "峰谷套利",
+      "source_chunks": [
+        "报告-安悦节能调研报告：怎样做冷热电综合能源服务？_chunk_001"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "subject": "热泵",
+      "predicate": "superset-of",
+      "object": "空气源热泵",
+      "source_chunks": [
+        "报告-安悦节能调研报告：怎样做冷热电综合能源服务？_chunk_001"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "subject": "热泵",
+      "predicate": "superset-of",
+      "object": "地源热泵",
+      "source_chunks": [
+        "报告-安悦节能调研报告：怎样做冷热电综合能源服务？_chunk_001"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "subject": "热泵",
+      "predicate": "superset-of",
+      "object": "电压缩热泵",
+      "source_chunks": [
+        "报告-安悦节能调研报告：怎样做冷热电综合能源服务？_chunk_001"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "subject": "热泵",
+      "predicate": "superset-of",
+      "object": "吸收式热泵",
+      "source_chunks": [
+        "报告-安悦节能调研报告：怎样做冷热电综合能源服务？_chunk_001"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "subject": "工业余热利用",
+      "predicate": "related-to",
+      "object": "热泵",
+      "source_chunks": [
+        "报告-安悦节能调研报告：怎样做冷热电综合能源服务？_chunk_001"
+      ],
+      "confidence": 0.8
+    },
+    {
+      "subject": "太阳能跟踪控制系统",
+      "predicate": "part-of",
+      "object": "线性菲涅尔式集热系统",
+      "source_chunks": [
+        "报告-安悦节能调研报告：怎样做冷热电综合能源服务？_chunk_001"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "subject": "综合能源服务",
+      "predicate": "related-to",
+      "object": "虚拟电厂",
+      "source_chunks": [
+        "报告-安悦节能调研报告：怎样做冷热电综合能源服务？_chunk_001"
+      ],
+      "confidence": 0.6
     }
   ]
 }

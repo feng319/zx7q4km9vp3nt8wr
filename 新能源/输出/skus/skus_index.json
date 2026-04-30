@@ -1,8 +1,8 @@
 {
   "created_at": "2026-04-30T23:58:12.790314",
-  "updated_at": "2026-05-01T00:48:23.144916",
-  "total_skus": 140,
-  "total_characters": 154003,
+  "updated_at": "2026-05-01T00:49:56.621274",
+  "total_skus": 164,
+  "total_characters": 168413,
   "chunks_processed": [
     "报告-《关于优化集中式新能源发电企业市场报价的通知（试行）》深度解读与战略分析_chunk_001",
     "报告-乌克兰新能源市场机会调研报告_chunk_001",
@@ -13,7 +13,8 @@
     "报告-协鑫能科调研报告：江苏最大虚拟电厂是怎么做成的？_chunk_001",
     "报告-固德威江西德安县调研报告：光储充一体化项目怎么做？_chunk_001",
     "报告-奇峰聚能调研报告：飞轮储能怎么做？_chunk_001",
-    "报告-国海绿能一线调研报告：重卡换电站怎么做？_chunk_001"
+    "报告-国海绿能一线调研报告：重卡换电站怎么做？_chunk_001",
+    "报告-安悦节能调研报告：怎样做冷热电综合能源服务？_chunk_001"
   ],
   "skus": [
     {
@@ -1397,16 +1398,6 @@
       "confidence": null
     },
     {
-      "sku_id": "relational-knowledge-base",
-      "name": "relational-knowledge-base",
-      "classification": "relational",
-      "path": "relational",
-      "source_chunk": "aggregated",
-      "character_count": 77189,
-      "description": "Domain label hierarchy and terminology glossary",
-      "confidence": null
-    },
-    {
       "sku_id": "meta-knowledge",
       "name": "meta-knowledge",
       "classification": "meta",
@@ -1415,10 +1406,260 @@
       "character_count": 11275,
       "description": "SKU routing (mapping.md) and creative insights (eureka.md)",
       "confidence": null
+    },
+    {
+      "sku_id": "sku_102",
+      "name": "安悦节能公司概况",
+      "classification": "factual",
+      "path": "factual/sku_102",
+      "source_chunk": "报告-安悦节能调研报告：怎样做冷热电综合能源服务？_chunk_001",
+      "character_count": 450,
+      "description": "山东安悦节能技术有限公司的基本信息，包括成立背景、业务范围和行业地位。",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_103",
+      "name": "综合能源服务与传统能源服务的区别",
+      "classification": "factual",
+      "path": "factual/sku_103",
+      "source_chunk": "报告-安悦节能调研报告：怎样做冷热电综合能源服务？_chunk_001",
+      "character_count": 218,
+      "description": "综合能源服务的核心定义及其与传统能源服务模式的本质差异。",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_104",
+      "name": "热泵基本原理及燃气热泵节能效率",
+      "classification": "factual",
+      "path": "factual/sku_104",
+      "source_chunk": "报告-安悦节能调研报告：怎样做冷热电综合能源服务？_chunk_001",
+      "character_count": 211,
+      "description": "热泵的功能是将热能从低温物体提取到高温物体，其驱动能源不直接用于制热，而是驱动热泵工作，因而制热效率高于直接制热。",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_105",
+      "name": "地源热泵供冷供热技术",
+      "classification": "factual",
+      "path": "factual/sku_105",
+      "source_chunk": "报告-安悦节能调研报告：怎样做冷热电综合能源服务？_chunk_001",
+      "character_count": 93,
+      "description": "地源热泵利用浅层地热能（一般100米以内）进行制冷制热，为建筑物提供空调或采暖。",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_106",
+      "name": "我国工业余热资源规模",
+      "classification": "factual",
+      "path": "factual/sku_106",
+      "source_chunk": "报告-安悦节能调研报告：怎样做冷热电综合能源服务？_chunk_001",
+      "character_count": 94,
+      "description": "我国每年产生的工业余热资源量相当于10多亿吨煤，利用潜力巨大。",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_107",
+      "name": "工业余热利用的五种典型技术方案",
+      "classification": "factual",
+      "path": "factual/sku_107",
+      "source_chunk": "报告-安悦节能调研报告：怎样做冷热电综合能源服务？_chunk_001",
+      "character_count": 285,
+      "description": "根据余热温度高低和形态，可采用直接换热、电压缩热泵、吸收式热泵、蒸汽机械再压缩、ORC膨胀发电等方式回收利用工业余热。",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_108",
+      "name": "压缩空气系统节能的市场空间",
+      "classification": "factual",
+      "path": "factual/sku_108",
+      "source_chunk": "报告-安悦节能调研报告：怎样做冷热电综合能源服务？_chunk_001",
+      "character_count": 122,
+      "description": "压缩空气系统是工业领域高能耗环节，占全国工业总耗电量的10%以上，每年耗电数千亿度，节能改造空间大。",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_109",
+      "name": "综合能源服务中的储热与储冷技术",
+      "classification": "factual",
+      "path": "factual/sku_109",
+      "source_chunk": "报告-安悦节能调研报告：怎样做冷热电综合能源服务？_chunk_001",
+      "character_count": 166,
+      "description": "储能不局限于电池储电，还包括储热和储冷技术，能有效降低企业用能成本。",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_110",
+      "name": "菲涅尔式太阳能聚光集热系统参数（案例）",
+      "classification": "factual",
+      "path": "factual/sku_110",
+      "source_chunk": "报告-安悦节能调研报告：怎样做冷热电综合能源服务？_chunk_001",
+      "character_count": 234,
+      "description": "案例中采用的线性菲涅尔式太阳能聚光集热系统，通过1000平米反光镜将阳光汇聚到集热管，加热导热油至300℃。",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_111",
+      "name": "固体储热装置技术参数（案例）",
+      "classification": "factual",
+      "path": "factual/sku_111",
+      "source_chunk": "报告-安悦节能调研报告：怎样做冷热电综合能源服务？_chunk_001",
+      "character_count": 228,
+      "description": "案例中的固体储热装置储热量4.6 MWh，充放热温度范围明确，具备长寿命和高效率。",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_112",
+      "name": "光热+电加热+固体储热协同运行工况",
+      "classification": "factual",
+      "path": "factual/sku_112",
+      "source_chunk": "报告-安悦节能调研报告：怎样做冷热电综合能源服务？_chunk_001",
+      "character_count": 217,
+      "description": "太阳能制热、谷电加热与固体储热通过四种工况协同运行，实现热能供应、移峰填谷和成本优化。",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_113",
+      "name": "干燥罐余热利用的热泵方案（案例）",
+      "classification": "factual",
+      "path": "factual/sku_113",
+      "source_chunk": "报告-安悦节能调研报告：怎样做冷热电综合能源服务？_chunk_001",
+      "character_count": 138,
+      "description": "案例中采用两级热泵从干燥罐冷却水中回收余热，替代电加热为滤油机供热。",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_114",
+      "name": "案例中地源热泵系统配置与节能效果",
+      "classification": "factual",
+      "path": "factual/sku_114",
+      "source_chunk": "报告-安悦节能调研报告：怎样做冷热电综合能源服务？_chunk_001",
+      "character_count": 201,
+      "description": "案例厂区办公楼采用地源热泵供冷供暖，配置78口深井，较原系统节能40%以上。",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_115",
+      "name": "案例整体节能降碳效果",
+      "classification": "factual",
+      "path": "factual/sku_115",
+      "source_chunk": "报告-安悦节能调研报告：怎样做冷热电综合能源服务？_chunk_001",
+      "character_count": 147,
+      "description": "通过五合一综合方案，案例工厂年利用太阳热量450MWh，节电30万度，天然气消耗减半，年减碳约1300吨。",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_116",
+      "name": "化工企业副产氢利用项目效益",
+      "classification": "factual",
+      "path": "factual/sku_116",
+      "source_chunk": "报告-安悦节能调研报告：怎样做冷热电综合能源服务？_chunk_001",
+      "character_count": 133,
+      "description": "安悦节能为某化工企业设计副产氢蒸汽锅炉方案，投资235万元，年收益406万元，回收期仅7个月。",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_117",
+      "name": "综合能源服务盈利的关键：研究客户生产规律",
+      "classification": "factual",
+      "path": "factual/sku_117",
+      "source_chunk": "报告-安悦节能调研报告：怎样做冷热电综合能源服务？_chunk_001",
+      "character_count": 137,
+      "description": "做综合能源服务实现盈利，最重要的不是成本控制，而是深入研究客户的生产工艺与用能规律，才能设计出最优方案。",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_118",
+      "name": "综合能源服务的长期深耕思维",
+      "classification": "factual",
+      "path": "factual/sku_118",
+      "source_chunk": "报告-安悦节能调研报告：怎样做冷热电综合能源服务？_chunk_001",
+      "character_count": 174,
+      "description": "综合能源服务商应建立长期思维，在同一客户身上持续挖掘新业务，而非像单一能源服务那样不断开拓新客户。",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_119",
+      "name": "综合能源服务中业务协同的必要性",
+      "classification": "factual",
+      "path": "factual/sku_119",
+      "source_chunk": "报告-安悦节能调研报告：怎样做冷热电综合能源服务？_chunk_001",
+      "character_count": 218,
+      "description": "综合能源服务不是简单增加业务类型，而要让多种服务（如售电与蓄冷蓄热）协同，否则某些项目可能无法落地。",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_120",
+      "name": "综合能源服务的发展趋势：多业务全面联动",
+      "classification": "factual",
+      "path": "factual/sku_120",
+      "source_chunk": "报告-安悦节能调研报告：怎样做冷热电综合能源服务？_chunk_001",
+      "character_count": 155,
+      "description": "未来综合能源服务需将光伏、储能、充换电、供冷供热、节能改造、售电、虚拟电厂等全部联动，实现通盘优化，才能为客户带来真实能源节省并持续发展。",
+      "confidence": null
+    },
+    {
+      "sku_id": "skill_038",
+      "name": "how-to-design-cchp-energy-service",
+      "classification": "procedural",
+      "path": "procedural/skill_038",
+      "source_chunk": "报告-安悦节能调研报告：怎样做冷热电综合能源服务？_chunk_001",
+      "character_count": 627,
+      "description": "当为工业企业设计冷热电综合能源服务方案时，遵循此分步流程以协同多技术实现节能降碳。",
+      "confidence": null
+    },
+    {
+      "sku_id": "skill_039",
+      "name": "select-waste-heat-recovery-technology",
+      "classification": "procedural",
+      "path": "procedural/skill_039",
+      "source_chunk": "报告-安悦节能调研报告：怎样做冷热电综合能源服务？_chunk_001",
+      "character_count": 502,
+      "description": "根据工业余热的温度、形态和现场条件，通过决策树选择最合适的回收利用技术。",
+      "confidence": null
+    },
+    {
+      "sku_id": "skill_040",
+      "name": "operate-solar-thermal-electric-storage-modes",
+      "classification": "procedural",
+      "path": "procedural/skill_040",
+      "source_chunk": "报告-安悦节能调研报告：怎样做冷热电综合能源服务？_chunk_001",
+      "character_count": 605,
+      "description": "运行“太阳能制热+电加热+固体储热”系统时，根据实时条件在四种工况间切换，实现最优经济运行。",
+      "confidence": null
+    },
+    {
+      "sku_id": "skill_041",
+      "name": "deploy-ground-source-heat-pump-system",
+      "classification": "procedural",
+      "path": "procedural/skill_041",
+      "source_chunk": "报告-安悦节能调研报告：怎样做冷热电综合能源服务？_chunk_001",
+      "character_count": 505,
+      "description": "为建筑提供清洁高效的供冷/供暖方案，利用浅层地热能替代化石能源，适用于有打井条件的场地。",
+      "confidence": null
+    },
+    {
+      "sku_id": "skill_042",
+      "name": "develop-long-term-integrated-energy-customer",
+      "classification": "procedural",
+      "path": "procedural/skill_042",
+      "source_chunk": "报告-安悦节能调研报告：怎样做冷热电综合能源服务？_chunk_001",
+      "character_count": 527,
+      "description": "在综合能源服务中建立长期客户关系，通过持续深耕和业务协同，不断挖掘同一客户的新服务机会。",
+      "confidence": null
+    },
+    {
+      "sku_id": "relational-knowledge-base",
+      "name": "relational-knowledge-base",
+      "classification": "relational",
+      "path": "relational",
+      "source_chunk": "aggregated",
+      "character_count": 85212,
+      "description": "Domain label hierarchy and terminology glossary",
+      "confidence": null
     }
   ],
-  "factual_count": 101,
+  "factual_count": 120,
   "relational_count": 1,
-  "procedural_count": 37,
+  "procedural_count": 42,
   "meta_count": 1
 }
