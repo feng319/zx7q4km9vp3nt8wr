@@ -251,6 +251,78 @@
         "报告-兆瓦云调研报告：虚拟电厂的下一城在哪里？_chunk_001"
       ],
       "confidence": 0.8
+    },
+    {
+      "subject": "微电网",
+      "predicate": "superset-of",
+      "object": "矿山微电网",
+      "source_chunks": [
+        "报告-三一硅能非洲调研报告：在非洲如何做矿山微电网？_chunk_001"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "subject": "微电网",
+      "predicate": "superset-of",
+      "object": "光储柴微电网",
+      "source_chunks": [
+        "报告-三一硅能非洲调研报告：在非洲如何做矿山微电网？_chunk_001"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "subject": "微电网",
+      "predicate": "requires",
+      "object": "能源管理系统",
+      "source_chunks": [
+        "报告-三一硅能非洲调研报告：在非洲如何做矿山微电网？_chunk_001"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "subject": "光储柴微电网",
+      "predicate": "has-a",
+      "object": "分布式光伏",
+      "source_chunks": [
+        "报告-三一硅能非洲调研报告：在非洲如何做矿山微电网？_chunk_001"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "subject": "光储柴微电网",
+      "predicate": "has-a",
+      "object": "储能系统",
+      "source_chunks": [
+        "报告-三一硅能非洲调研报告：在非洲如何做矿山微电网？_chunk_001"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "subject": "弱电网",
+      "predicate": "related-to",
+      "object": "微电网",
+      "source_chunks": [
+        "报告-三一硅能非洲调研报告：在非洲如何做矿山微电网？_chunk_001"
+      ],
+      "confidence": 0.8
+    },
+    {
+      "subject": "购电协议",
+      "predicate": "enables",
+      "object": "微电网",
+      "source_chunks": [
+        "报告-三一硅能非洲调研报告：在非洲如何做矿山微电网？_chunk_001"
+      ],
+      "confidence": 0.8
+    },
+    {
+      "subject": "源网荷储",
+      "predicate": "related-to",
+      "object": "微电网",
+      "source_chunks": [
+        "报告-三一硅能非洲调研报告：在非洲如何做矿山微电网？_chunk_001"
+      ],
+      "confidence": 0.8
     }
   ]
 }

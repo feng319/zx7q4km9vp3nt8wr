@@ -1,12 +1,13 @@
 {
   "created_at": "2026-04-30T23:58:12.790314",
-  "updated_at": "2026-05-01T00:16:43.301061",
-  "total_skus": 39,
-  "total_characters": 45935,
+  "updated_at": "2026-05-01T00:20:27.027187",
+  "total_skus": 56,
+  "total_characters": 58174,
   "chunks_processed": [
     "报告-《关于优化集中式新能源发电企业市场报价的通知（试行）》深度解读与战略分析_chunk_001",
     "报告-乌克兰新能源市场机会调研报告_chunk_001",
-    "报告-兆瓦云调研报告：虚拟电厂的下一城在哪里？_chunk_001"
+    "报告-兆瓦云调研报告：虚拟电厂的下一城在哪里？_chunk_001",
+    "报告-三一硅能非洲调研报告：在非洲如何做矿山微电网？_chunk_001"
   ],
   "skus": [
     {
@@ -390,18 +391,188 @@
       "confidence": null
     },
     {
+      "sku_id": "sku_033",
+      "name": "三一硅能公司业务概况",
+      "classification": "factual",
+      "path": "factual/sku_033",
+      "source_chunk": "报告-三一硅能非洲调研报告：在非洲如何做矿山微电网？_chunk_001",
+      "character_count": 129,
+      "description": "三一硅能是三一集团下属新能源企业，覆盖光伏制造全产业链，并在源网荷储、微电网融合方面有突破，海外业务遍及多个大洲，打造了非洲最大矿山微电网项目。",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_034",
+      "name": "非洲矿产资源储量与开发状况",
+      "classification": "factual",
+      "path": "factual/sku_034",
+      "source_chunk": "报告-三一硅能非洲调研报告：在非洲如何做矿山微电网？_chunk_001",
+      "character_count": 389,
+      "description": "非洲矿产资源总价值约占全球23%，在钴、锰、铂族金属等关键矿产方面占据全球主导地位，并拥有大量已发现矿床。",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_035",
+      "name": "铜矿开采与选矿流程及能耗",
+      "classification": "factual",
+      "path": "factual/sku_035",
+      "source_chunk": "报告-三一硅能非洲调研报告：在非洲如何做矿山微电网？_chunk_001",
+      "character_count": 1075,
+      "description": "铜矿开采分为采矿和选矿两大环节，选矿能耗高于采矿，占矿区总用电量的70%以上，其中球磨机和浮选需24小时连续运转。",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_036",
+      "name": "乔瓦矿山光储微电网项目技术参数与成本效益",
+      "classification": "factual",
+      "path": "factual/sku_036",
+      "source_chunk": "报告-三一硅能非洲调研报告：在非洲如何做矿山微电网？_chunk_001",
+      "character_count": 498,
+      "description": "三一硅能在赞比亚建设的乔瓦矿山微电网一期含5MW光伏、6MWh储能，二期规划扩至12MW光伏、36MWh储能，采用光储柴协同，用电成本降至约1元/度。",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_037",
+      "name": "三一硅能矿山微电网商业模式",
+      "classification": "factual",
+      "path": "factual/sku_037",
+      "source_chunk": "报告-三一硅能非洲调研报告：在非洲如何做矿山微电网？_chunk_001",
+      "character_count": 187,
+      "description": "三一硅能采取投资+EPC总包模式，通过售电协议长期回收投资，业主无需大额前期投入，回收成本后电费为纯利润。",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_038",
+      "name": "在非洲做矿山微电网的物流、施工与运维挑战",
+      "classification": "factual",
+      "path": "factual/sku_038",
+      "source_chunk": "报告-三一硅能非洲调研报告：在非洲如何做矿山微电网？_chunk_001",
+      "character_count": 224,
+      "description": "非洲矿山微电网项目面临物流繁琐、道路条件差、本地员工技能不足、偏远运维难等挑战，三一硅能通过前置清关、中国师傅带本地工人、远程监控等对策应对。",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_039",
+      "name": "与三一硅能在非洲矿山微电网的合作机会",
+      "classification": "factual",
+      "path": "factual/sku_039",
+      "source_chunk": "报告-三一硅能非洲调研报告：在非洲如何做矿山微电网？_chunk_001",
+      "character_count": 144,
+      "description": "三一硅能开放了EPC施工分包、设备采购与供应、项目信息共享三大合作方向，欢迎中国企业参与。",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_040",
+      "name": "马里人福药业光储微电网项目参数与效益",
+      "classification": "factual",
+      "path": "factual/sku_040",
+      "source_chunk": "报告-三一硅能非洲调研报告：在非洲如何做矿山微电网？_chunk_001",
+      "character_count": 411,
+      "description": "派诺科技在西非马里为制药厂建成的光储微电网项目，装机2004kW光伏配1000kW/2088kWh储能，实现100%绿电供应，用电成本下降70%，年省柴油82万升。",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_041",
+      "name": "矿山微电网投资回收周期与风险控制",
+      "classification": "factual",
+      "path": "factual/sku_041",
+      "source_chunk": "报告-三一硅能非洲调研报告：在非洲如何做矿山微电网？_chunk_001",
+      "character_count": 274,
+      "description": "投资者普遍希望将矿山、工厂类微电网投资回收周期控制在2-6年内，并通过优选客户、尽调、加入风险金等方式管理长期风险。",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_042",
+      "name": "三一硅能推动矿山机械电动化及充电网络布局",
+      "classification": "factual",
+      "path": "factual/sku_042",
+      "source_chunk": "报告-三一硅能非洲调研报告：在非洲如何做矿山微电网？_chunk_001",
+      "character_count": 163,
+      "description": "三一硅能借助光储微电网推动矿山机械和物流运输电动化，在赞比亚打造了全球首个“微电网+短倒运输”项目，并计划建设长途充电网络。",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_043",
+      "name": "非洲工商业光储微电网可复制场景",
+      "classification": "factual",
+      "path": "factual/sku_043",
+      "source_chunk": "报告-三一硅能非洲调研报告：在非洲如何做矿山微电网？_chunk_001",
+      "character_count": 88,
+      "description": "类似制药厂的微电网模式可推广至纺织、农场、食品加工、渔业、酒店、医院、学校、工业园、物流园等多个行业。",
+      "confidence": null
+    },
+    {
+      "sku_id": "skill_007",
+      "name": "design-mining-microgrid-power-architecture",
+      "classification": "procedural",
+      "path": "procedural/skill_007",
+      "source_chunk": "报告-三一硅能非洲调研报告：在非洲如何做矿山微电网？_chunk_001",
+      "character_count": 673,
+      "description": "为矿山设计光储柴协同供电架构，实现日间光伏、夜间储能、应急柴发的可靠供电模式。",
+      "confidence": null
+    },
+    {
+      "sku_id": "skill_008",
+      "name": "manage-africa-microgrid-logistics",
+      "classification": "procedural",
+      "path": "procedural/skill_008",
+      "source_chunk": "报告-三一硅能非洲调研报告：在非洲如何做矿山微电网？_chunk_001",
+      "character_count": 529,
+      "description": "应对非洲内陆国物流困难，确保微电网大型设备安全高效运抵偏远矿区。",
+      "confidence": null
+    },
+    {
+      "sku_id": "skill_009",
+      "name": "organize-microgrid-construction-team",
+      "classification": "procedural",
+      "path": "procedural/skill_009",
+      "source_chunk": "报告-三一硅能非洲调研报告：在非洲如何做矿山微电网？_chunk_001",
+      "character_count": 419,
+      "description": "采用中国师傅带本地工人的施工组织模式，在非洲保证微电网工程质量。",
+      "confidence": null
+    },
+    {
+      "sku_id": "skill_010",
+      "name": "deploy-microgrid-remote-ops",
+      "classification": "procedural",
+      "path": "procedural/skill_010",
+      "source_chunk": "报告-三一硅能非洲调研报告：在非洲如何做矿山微电网？_chunk_001",
+      "character_count": 546,
+      "description": "在矿区偏远地区建立少人值班+远程监控的微电网运维体系，利用星链回传数据。",
+      "confidence": null
+    },
+    {
+      "sku_id": "skill_011",
+      "name": "mitigate-microgrid-investment-risk",
+      "classification": "procedural",
+      "path": "procedural/skill_011",
+      "source_chunk": "报告-三一硅能非洲调研报告：在非洲如何做矿山微电网？_chunk_001",
+      "character_count": 589,
+      "description": "通过客户筛选、充分尽调和风险金报价，控制矿山微电网项目的投资回收风险。",
+      "confidence": null
+    },
+    {
+      "sku_id": "skill_012",
+      "name": "structure-microgrid-ppa-business-model",
+      "classification": "procedural",
+      "path": "procedural/skill_012",
+      "source_chunk": "报告-三一硅能非洲调研报告：在非洲如何做矿山微电网？_chunk_001",
+      "character_count": 526,
+      "description": "以投资方和售电方双重身份与矿山业主签订长期购电协议，回收微电网建设成本。",
+      "confidence": null
+    },
+    {
       "sku_id": "relational-knowledge-base",
       "name": "relational-knowledge-base",
       "classification": "relational",
       "path": "relational",
       "source_chunk": "aggregated",
-      "character_count": 32677,
+      "character_count": 38052,
       "description": "Domain label hierarchy and terminology glossary",
       "confidence": null
     }
   ],
-  "factual_count": 32,
+  "factual_count": 43,
   "relational_count": 1,
-  "procedural_count": 6,
+  "procedural_count": 12,
   "meta_count": 0
 }

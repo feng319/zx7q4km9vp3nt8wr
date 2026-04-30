@@ -52,6 +52,10 @@
         {
           "name": "非正规市场",
           "children": []
+        },
+        {
+          "name": "购电协议",
+          "children": []
         }
       ]
     },
@@ -107,6 +111,10 @@
         {
           "name": "风险控制",
           "children": []
+        },
+        {
+          "name": "EPC总承包",
+          "children": []
         }
       ]
     },
@@ -128,6 +136,15 @@
         {
           "name": "新能源车辆",
           "children": []
+        },
+        {
+          "name": "微电网",
+          "children": [
+            {
+              "name": "矿山微电网",
+              "children": []
+            }
+          ]
         }
       ]
     },
