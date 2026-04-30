@@ -327,7 +327,12 @@
     },
     {
       "name": "海外市场",
-      "children": []
+      "children": [
+        {
+          "name": "非洲市场",
+          "children": []
+        }
+      ]
     },
     {
       "name": "虚拟电厂",

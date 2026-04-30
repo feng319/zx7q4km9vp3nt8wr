@@ -2016,6 +2016,60 @@
         "报告-良信电器调研报告：怎样建设零碳工厂？_chunk_001"
       ],
       "confidence": 1.0
+    },
+    {
+      "subject": "输电开放接入政策",
+      "predicate": "enables",
+      "object": "矿业直供电",
+      "source_chunks": [
+        "报告-非洲调研报告（二）：中国新能源企业在赞比亚有什么机会？_chunk_001"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "subject": "矿业直供电",
+      "predicate": "requires",
+      "object": "购电协议",
+      "source_chunks": [
+        "报告-非洲调研报告（二）：中国新能源企业在赞比亚有什么机会？_chunk_001"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "subject": "实施协议",
+      "predicate": "related-to",
+      "object": "投资者",
+      "source_chunks": [
+        "报告-非洲调研报告（二）：中国新能源企业在赞比亚有什么机会？_chunk_001"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "subject": "投资保护协议",
+      "predicate": "related-to",
+      "object": "外国投资者",
+      "source_chunks": [
+        "报告-非洲调研报告（二）：中国新能源企业在赞比亚有什么机会？_chunk_001"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "subject": "投资保护协议",
+      "predicate": "has-a",
+      "object": "利润汇回保障",
+      "source_chunks": [
+        "报告-非洲调研报告（二）：中国新能源企业在赞比亚有什么机会？_chunk_001"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "subject": "交通电动化",
+      "predicate": "related-to",
+      "object": "车网互动",
+      "source_chunks": [
+        "报告-非洲调研报告（二）：中国新能源企业在赞比亚有什么机会？_chunk_001"
+      ],
+      "confidence": 0.8
     }
   ]
 }

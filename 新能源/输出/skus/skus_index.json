@@ -1,8 +1,8 @@
 {
   "created_at": "2026-04-30T23:58:12.790314",
-  "updated_at": "2026-05-01T01:33:26.377167",
-  "total_skus": 305,
-  "total_characters": 312627,
+  "updated_at": "2026-05-01T01:37:15.282505",
+  "total_skus": 316,
+  "total_characters": 322885,
   "chunks_processed": [
     "报告-《关于优化集中式新能源发电企业市场报价的通知（试行）》深度解读与战略分析_chunk_001",
     "报告-乌克兰新能源市场机会调研报告_chunk_001",
@@ -25,7 +25,8 @@
     "报告-苏州工业园区的虚拟电厂调研报告：怎样做区域级虚拟电厂_chunk_001",
     "报告-紫电捷控调研报告：交直流微电网怎么做？_chunk_001",
     "报告-纬景储能调研报告：液流电池为储能带来的机会_chunk_001",
-    "报告-良信电器调研报告：怎样建设零碳工厂？_chunk_001"
+    "报告-良信电器调研报告：怎样建设零碳工厂？_chunk_001",
+    "报告-非洲调研报告（二）：中国新能源企业在赞比亚有什么机会？_chunk_001"
   ],
   "skus": [
     {
@@ -3069,18 +3070,128 @@
       "confidence": null
     },
     {
+      "sku_id": "sku_228",
+      "name": "赞比亚电力危机现状",
+      "classification": "factual",
+      "path": "factual/sku_228",
+      "source_chunk": "报告-非洲调研报告（二）：中国新能源企业在赞比亚有什么机会？_chunk_001",
+      "character_count": 298,
+      "description": "赞比亚当前严重缺电，装机容量3700MW中仅1200MW可发电，负荷需求2400-2800MW，缺口过半，水电占比超80%且受干旱影响，每日供电仅3-4小时，威胁经济命脉。",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_229",
+      "name": "赞比亚新能源市场发展三大驱动力",
+      "classification": "factual",
+      "path": "factual/sku_229",
+      "source_chunk": "报告-非洲调研报告（二）：中国新能源企业在赞比亚有什么机会？_chunk_001",
+      "character_count": 333,
+      "description": "矿业扩张（计划铜产量提至300万吨/年，矿业电力消费至2030年增长131亿度）、农业与制造业扩张（需新增117亿度，40%农村人口无稳定用电）以及成为区域电力出口枢纽的雄心，共同推动赞比亚新能源市场长期增长。",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_230",
+      "name": "赞比亚新能源装机目标与执行缺口",
+      "classification": "factual",
+      "path": "factual/sku_230",
+      "source_chunk": "报告-非洲调研报告（二）：中国新能源企业在赞比亚有什么机会？_chunk_001",
+      "character_count": 167,
+      "description": "赞比亚远期目标2030年电力装机达10GW、2050年达20GW；总统要求2025年底前完成1000MW太阳能装机，但截至2025年11月实际落地仅125MW，缺口875MW。",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_231",
+      "name": "赞比亚政府支持新能源投资者的主要政策措施",
+      "classification": "factual",
+      "path": "factual/sku_231",
+      "source_chunk": "报告-非洲调研报告（二）：中国新能源企业在赞比亚有什么机会？_chunk_001",
+      "character_count": 540,
+      "description": "赞比亚政府通过电网开放接入、购电协议审批提速、投资注册快车道、阶梯式激励门槛以及投资保护协议等手段，从“管制”转向“放开”，大力吸引外资新能源投资。",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_232",
+      "name": "外资新能源项目在赞比亚的投资审批流程",
+      "classification": "factual",
+      "path": "factual/sku_232",
+      "source_chunk": "报告-非洲调研报告（二）：中国新能源企业在赞比亚有什么机会？_chunk_001",
+      "character_count": 278,
+      "description": "赞比亚新能源项目投资审批需依次经过能源部可行性研究申请、环境管理局环评、签署政府实施协议、能源监管局颁发许可四个环节，流程透明但环评涉及社区协商要求严格。",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_233",
+      "name": "赞比亚新能源市场六大投资机会",
+      "classification": "factual",
+      "path": "factual/sku_233",
+      "source_chunk": "报告-非洲调研报告（二）：中国新能源企业在赞比亚有什么机会？_chunk_001",
+      "character_count": 495,
+      "description": "涵盖公用事业级光储电站、矿业直供电、工商业分布式光储、农村离网微电网、交通电动化及跨国电力出口六大方向，各机会在收益稳定性、政策壁垒和市场需求上差异显著。",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_234",
+      "name": "赞比亚新能源市场竞争格局与中企进入策略",
+      "classification": "factual",
+      "path": "factual/sku_234",
+      "source_chunk": "报告-非洲调研报告（二）：中国新能源企业在赞比亚有什么机会？_chunk_001",
+      "character_count": 426,
+      "description": "市场已聚集天合、隆基、阳光等多家中国供应链企业，储能系统均价一年内降幅35%，竞争焦点转向服务响应与品牌信誉；华为经验表明本地化服务体系是成功关键，建议采取‘先立足再扩展’、抱团出海的策略。",
+      "confidence": null
+    },
+    {
+      "sku_id": "skill_077",
+      "name": "zambia-renewable-project-approval",
+      "classification": "procedural",
+      "path": "procedural/skill_077",
+      "source_chunk": "报告-非洲调研报告（二）：中国新能源企业在赞比亚有什么机会？_chunk_001",
+      "character_count": 768,
+      "description": "在赞比亚开发新能源项目（太阳能、储能等）的投资审批流程，适用于向政府申请许可的投资者。",
+      "confidence": null
+    },
+    {
+      "sku_id": "skill_078",
+      "name": "zambia-offtaker-selection-strategy",
+      "classification": "procedural",
+      "path": "procedural/skill_078",
+      "source_chunk": "报告-非洲调研报告（二）：中国新能源企业在赞比亚有什么机会？_chunk_001",
+      "character_count": 733,
+      "description": "在赞比亚投资电站时，如何选择购电方以降低付款风险，基于国家电力公司财务状况和输电开放接入政策。",
+      "confidence": null
+    },
+    {
+      "sku_id": "skill_079",
+      "name": "zambia-local-after-sales-strategy",
+      "classification": "procedural",
+      "path": "procedural/skill_079",
+      "source_chunk": "报告-非洲调研报告（二）：中国新能源企业在赞比亚有什么机会？_chunk_001",
+      "character_count": 608,
+      "description": "在赞比亚新能源市场竞争中建立本地化售后服务体系，提升客户留存率和品牌信誉。",
+      "confidence": null
+    },
+    {
+      "sku_id": "skill_080",
+      "name": "africa-market-entry-stepwise",
+      "classification": "procedural",
+      "path": "procedural/skill_080",
+      "source_chunk": "报告-非洲调研报告（二）：中国新能源企业在赞比亚有什么机会？_chunk_001",
+      "character_count": 845,
+      "description": "中国新能源企业进入非洲市场的通用路径，从建立示范项目到规模化扩展，避免速赢幻觉。",
+      "confidence": null
+    },
+    {
       "sku_id": "relational-knowledge-base",
       "name": "relational-knowledge-base",
       "classification": "relational",
       "path": "relational",
       "source_chunk": "aggregated",
-      "character_count": 154339,
+      "character_count": 159106,
       "description": "Domain label hierarchy and terminology glossary",
       "confidence": null
     }
   ],
-  "factual_count": 227,
+  "factual_count": 234,
   "relational_count": 1,
-  "procedural_count": 76,
+  "procedural_count": 80,
   "meta_count": 1
 }
