@@ -3,3 +3,23 @@
 2026-04-30T15:19:24.738695Z [info     ] slug→path inline resolution    [skus2ontology.chatbot] matched=944 total_lines=971
 2026-04-30T15:19:24.738695Z [info     ] Loaded mapping.md (compressed) [skus2ontology.chatbot] compressed_chars=29995 original_chars=49322
 2026-04-30T15:19:24.739692Z [info     ] Loaded eureka.md               [skus2ontology.chatbot] chars=16728
+2026-04-30T15:48:14.956009Z [info     ] Built SKU index summary        [skus2ontology.chatbot] chars=65604 sku_count=962
+2026-04-30T15:52:09.433904Z [info     ] Phase 2 anchor replacement complete [skus2ontology.chatbot] draft_chars=14618 final_chars=13482
+2026-04-30T15:52:09.434905Z [info     ] unwrap_resolved_anchors        [skus2ontology.chatbot] after=0 before=0 unwrapped=0
+2026-04-30T15:52:09.435908Z [info     ] All anchors replaced successfully [skus2ontology.chatbot]
+2026-04-30T15:52:09.437907Z [info     ] Backed up existing spec.md     [skus2ontology.chatbot] backup='G:\\Program Files\\AI coding\\知识萃取\\商业模式资本\\输出\\ontology\\spec.md.bak.20260430_235209'
+2026-04-30T15:52:09.437907Z [info     ] Saved spec.md                  [skus2ontology.chatbot] chars=13482 path='G:\\Program Files\\AI coding\\知识萃取\\商业模式资本\\输出\\ontology\\spec.md'
+2026-04-30T15:52:09.438906Z [info     ] spec_check                     [skus2ontology.spec_validator] check=extra_chunk_bracket count=0 samples=[] status=PASS
+2026-04-30T15:52:09.438906Z [info     ] spec_check                     [skus2ontology.spec_validator] check=anchor_wrapping_chunk count=0 samples=[] status=PASS
+2026-04-30T15:52:09.438906Z [info     ] spec_check                     [skus2ontology.spec_validator] check=anchor_wrapping_sku count=0 samples=[] status=PASS
+2026-04-30T15:52:09.439982Z [info     ] spec_check                     [skus2ontology.spec_validator] check=sku_sku_concat count=0 samples=[] status=PASS
+2026-04-30T15:52:09.439982Z [info     ] spec_check                     [skus2ontology.spec_validator] check=sku_chunk_concat count=0 samples=[] status=PASS
+2026-04-30T15:52:09.439982Z [info     ] spec_check                     [skus2ontology.spec_validator] check=chunk_sku_concat count=0 samples=[] status=PASS
+2026-04-30T15:52:09.439982Z [info     ] spec_check                     [skus2ontology.spec_validator] check=sku_space_concat count=0 samples=[] status=PASS
+2026-04-30T15:52:09.440982Z [info     ] spec_check                     [skus2ontology.spec_validator] check=sku_range count=0 samples=[] status=PASS
+2026-04-30T15:52:09.440982Z [info     ] spec_check                     [skus2ontology.spec_validator] check=chinese_chunk_bracket count=0 samples=[] status=PASS
+2026-04-30T15:52:09.440982Z [info     ] spec_check                     [skus2ontology.spec_validator] check=chinese_sku_bracket count=0 samples=[] status=PASS
+2026-04-30T15:52:09.440982Z [info     ] spec_check                     [skus2ontology.spec_validator] check=remaining_anchor count=0 samples=[] status=PASS
+2026-04-30T15:52:09.440982Z [info     ] spec_stats                     [skus2ontology.spec_validator] chunk_refs=51 chunk_unique=39 sku_refs=0 sku_unique=0
+2026-04-30T15:52:09.441981Z [info     ] spec_validator PASSED          [skus2ontology.spec_validator]
+2026-04-30T15:52:09.443981Z [info     ] Saved chat log                 [skus2ontology.pipeline] confirmed=False path=..\商业模式资本\输出\ontology\chat_log.json rounds=5
