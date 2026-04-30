@@ -1,8 +1,8 @@
 {
   "created_at": "2026-04-30T23:58:12.790314",
-  "updated_at": "2026-05-01T01:07:54.932553",
-  "total_skus": 229,
-  "total_characters": 230485,
+  "updated_at": "2026-05-01T01:11:11.360785",
+  "total_skus": 241,
+  "total_characters": 238119,
   "chunks_processed": [
     "报告-《关于优化集中式新能源发电企业市场报价的通知（试行）》深度解读与战略分析_chunk_001",
     "报告-乌克兰新能源市场机会调研报告_chunk_001",
@@ -19,7 +19,8 @@
     "报告-恒实盛景调研报告：怎样做空调虚拟电厂？_chunk_001",
     "报告-正泰安能光伏星调研报告：在非洲如何做户用光伏？_chunk_001",
     "报告-特来电零碳大楼调研报告：怎样做车网互动？_chunk_001",
-    "报告-电管家一线调研报告：微电网怎么赚钱？_chunk_001"
+    "报告-电管家一线调研报告：微电网怎么赚钱？_chunk_001",
+    "报告-深石集团调研报告：房地产企业怎样做新能源？_chunk_001"
   ],
   "skus": [
     {
@@ -2303,18 +2304,138 @@
       "confidence": null
     },
     {
+      "sku_id": "sku_169",
+      "name": "深石集团基本信息",
+      "classification": "factual",
+      "path": "factual/sku_169",
+      "source_chunk": "报告-深石集团调研报告：房地产企业怎样做新能源？_chunk_001",
+      "character_count": 86,
+      "description": "深石集团成立于2017年，由万科集团创始人王石创立，主营业务为提供碳中和社区解决方案。",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_170",
+      "name": "\"生物圈三号\"概念渊源",
+      "classification": "factual",
+      "path": "factual/sku_170",
+      "source_chunk": "报告-深石集团调研报告：房地产企业怎样做新能源？_chunk_001",
+      "character_count": 157,
+      "description": "源自地球生态圈（生物圈一号）和1991年失败的人造封闭生态实验（生物圈二号），深石集团结合碳中和目标命名其碳中和社区项目。",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_171",
+      "name": "大梅沙碳中和社区项目概况",
+      "classification": "factual",
+      "path": "factual/sku_171",
+      "source_chunk": "报告-深石集团调研报告：房地产企业怎样做新能源？_chunk_001",
+      "character_count": 155,
+      "description": "大梅沙碳中和社区位于深圳盐田区，占地3.2平方公里，常住约2万人，年游客近600万人次，目标到2028年能耗降低40%、新能源占比20%，2021年启动，以万科中心为试点。",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_172",
+      "name": "万科中心建筑基本信息",
+      "classification": "factual",
+      "path": "factual/sku_172",
+      "source_chunk": "报告-深石集团调研报告：房地产企业怎样做新能源？_chunk_001",
+      "character_count": 136,
+      "description": "万科中心占地面积6.2万平方米，总建筑面积12万平方米，2009年竣工，曾为万科总部，后转型为办公、办学、展览、餐饮等公共建筑。",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_173",
+      "name": "万科中心清洁能源基础设施与发电数据",
+      "classification": "factual",
+      "path": "factual/sku_173",
+      "source_chunk": "报告-深石集团调研报告：房地产企业怎样做新能源？_chunk_001",
+      "character_count": 212,
+      "description": "屋顶铺设8000平方米光伏，配备储能和自研能碳管理平台，安装400块智能电表，改造后光伏年发电量达72万度，占建筑总能耗85%。",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_174",
+      "name": "万科中心建筑节能改造技术",
+      "classification": "factual",
+      "path": "factual/sku_174",
+      "source_chunk": "报告-深石集团调研报告：房地产企业怎样做新能源？_chunk_001",
+      "character_count": 184,
+      "description": "采用磁悬浮制冷机组、冰蓄冷、智能照明控制、智能百叶外墙、地板送风等技术降低能耗。",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_175",
+      "name": "万科中心资源循环利用措施",
+      "classification": "factual",
+      "path": "factual/sku_175",
+      "source_chunk": "报告-深石集团调研报告：房地产企业怎样做新能源？_chunk_001",
+      "character_count": 216,
+      "description": "厨余垃圾通过黑水虻处理实现100%本地资源化，雨水收集系统年减少市政用水近5万吨，建筑材料采用竹材、泡沫铝、固碳砖等低碳材料。",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_176",
+      "name": "四零麦当劳餐厅模式",
+      "classification": "factual",
+      "path": "factual/sku_176",
+      "source_chunk": "报告-深石集团调研报告：房地产企业怎样做新能源？_chunk_001",
+      "character_count": 144,
+      "description": "2024年10月全国首座“四零麦当劳”在万科中心落地，依靠园区低碳设施实现零碳、零能耗、零废弃物、零水耗，商家无需额外投入即可实现低碳运营。",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_177",
+      "name": "深石集团碳中和社区商业化战略",
+      "classification": "factual",
+      "path": "factual/sku_177",
+      "source_chunk": "报告-深石集团调研报告：房地产企业怎样做新能源？_chunk_001",
+      "character_count": 339,
+      "description": "通过“加、减、绿、碳、金”模式实现商业闭环，包括盘活资产创造负荷、节能改造分成、绿色能源替代、碳资产交易和绿色基金，预计2026-2027年打平成本，强调无补贴运作。",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_178",
+      "name": "跨界企业新能源布局实例",
+      "classification": "factual",
+      "path": "factual/sku_178",
+      "source_chunk": "报告-深石集团调研报告：房地产企业怎样做新能源？_chunk_001",
+      "character_count": 91,
+      "description": "山东铁投能源投资集团2025年8月注资100亿元布局“交通+能源”业务，中国石油推动油田生产用电+新能源模式，2024年新增新能源装机近5GW。",
+      "confidence": null
+    },
+    {
+      "sku_id": "skill_060",
+      "name": "plus-minus-green-carbon-gold-strategy",
+      "classification": "procedural",
+      "path": "procedural/skill_060",
+      "source_chunk": "报告-深石集团调研报告：房地产企业怎样做新能源？_chunk_001",
+      "character_count": 1122,
+      "description": "使用深石集团的加减绿碳金五步战略，在社区或建筑群中打造可商业化运营的碳中和项目。",
+      "confidence": null
+    },
+    {
+      "sku_id": "skill_061",
+      "name": "activate-real-estate-assets-to-create-energy-load",
+      "classification": "procedural",
+      "path": "procedural/skill_061",
+      "source_chunk": "报告-深石集团调研报告：房地产企业怎样做新能源？_chunk_001",
+      "character_count": 920,
+      "description": "通过盘活闲置房地产资产、增加人流量来创造新的用电负荷，为新能源项目奠定负荷基础。",
+      "confidence": null
+    },
+    {
       "sku_id": "relational-knowledge-base",
       "name": "relational-knowledge-base",
       "classification": "relational",
       "path": "relational",
       "source_chunk": "aggregated",
-      "character_count": 113063,
+      "character_count": 116935,
       "description": "Domain label hierarchy and terminology glossary",
       "confidence": null
     }
   ],
-  "factual_count": 168,
+  "factual_count": 178,
   "relational_count": 1,
-  "procedural_count": 59,
+  "procedural_count": 61,
   "meta_count": 1
 }

@@ -1385,6 +1385,51 @@
         "报告-电管家一线调研报告：微电网怎么赚钱？_chunk_001"
       ],
       "confidence": 1.0
+    },
+    {
+      "subject": "冰蓄冷",
+      "predicate": "enables",
+      "object": "峰谷套利",
+      "source_chunks": [
+        "报告-深石集团调研报告：房地产企业怎样做新能源？_chunk_001"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "subject": "碳普惠",
+      "predicate": "enables",
+      "object": "分布式光伏",
+      "source_chunks": [
+        "报告-深石集团调研报告：房地产企业怎样做新能源？_chunk_001"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "subject": "碳中和社区",
+      "predicate": "related-to",
+      "object": "零碳示范园区",
+      "source_chunks": [
+        "报告-深石集团调研报告：房地产企业怎样做新能源？_chunk_001"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "subject": "加减绿碳金战略",
+      "predicate": "implements",
+      "object": "碳中和社区",
+      "source_chunks": [
+        "报告-深石集团调研报告：房地产企业怎样做新能源？_chunk_001"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "subject": "绿电直连",
+      "predicate": "enables",
+      "object": "分布式光伏",
+      "source_chunks": [
+        "报告-深石集团调研报告：房地产企业怎样做新能源？_chunk_001"
+      ],
+      "confidence": 0.8
     }
   ]
 }
