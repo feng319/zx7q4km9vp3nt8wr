@@ -12,7 +12,7 @@ logger = structlog.get_logger(__name__)
 
 # Retry config
 MAX_RETRIES = 3
-RETRY_BASE_DELAY = 5  # seconds
+RETRY_DELAYS = [10, 30, 60]  # seconds, per attempt
 
 # Module-level client (lazy initialized)
 _client: Optional[OpenAI] = None
@@ -86,7 +86,7 @@ def call_llm(
         except (APIConnectionError, APITimeoutError) as e:
             logger.warning("LLM call failed (retryable)", model=model, attempt=attempt, error=str(e))
             if attempt < MAX_RETRIES:
-                delay = RETRY_BASE_DELAY * attempt
+                delay = RETRY_DELAYS[attempt - 1]
                 logger.info("Retrying after delay", delay_seconds=delay, attempt=attempt)
                 time.sleep(delay)
             else:
@@ -97,7 +97,7 @@ def call_llm(
             if e.status_code >= 500:
                 logger.warning("LLM call failed (retryable server error)", model=model, attempt=attempt, status=e.status_code)
                 if attempt < MAX_RETRIES:
-                    delay = RETRY_BASE_DELAY * attempt
+                    delay = RETRY_DELAYS[attempt - 1]
                     time.sleep(delay)
                 else:
                     logger.error("LLM call failed after retries", model=model, retries=MAX_RETRIES, error=str(e))
@@ -158,7 +158,7 @@ def call_llm_chat(
         except (APIConnectionError, APITimeoutError) as e:
             logger.warning("LLM chat call failed (retryable)", model=model, attempt=attempt, error=str(e))
             if attempt < MAX_RETRIES:
-                delay = RETRY_BASE_DELAY * attempt
+                delay = RETRY_DELAYS[attempt - 1]
                 logger.info("Retrying after delay", delay_seconds=delay, attempt=attempt)
                 time.sleep(delay)
             else:
@@ -169,7 +169,7 @@ def call_llm_chat(
             if e.status_code >= 500:
                 logger.warning("LLM chat call failed (retryable server error)", model=model, attempt=attempt, status=e.status_code)
                 if attempt < MAX_RETRIES:
-                    delay = RETRY_BASE_DELAY * attempt
+                    delay = RETRY_DELAYS[attempt - 1]
                     time.sleep(delay)
                 else:
                     logger.error("LLM chat call failed after retries", model=model, retries=MAX_RETRIES, error=str(e))
