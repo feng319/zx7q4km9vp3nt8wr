@@ -1,0 +1,7 @@
+2026-04-30T14:01:03.135595Z [info     ] Starting spec chatbot          [skus2ontology.chatbot] max_rounds=5
+2026-04-30T14:01:03.152157Z [info     ] Built name_to_path lookup      [skus2ontology.chatbot] entries=177
+2026-04-30T14:01:03.153396Z [info     ] slug→path inline resolution    [skus2ontology.chatbot] matched=175 total_lines=198
+2026-04-30T14:01:03.154396Z [info     ] Loaded mapping.md (compressed) [skus2ontology.chatbot] compressed_chars=9948 original_chars=9125
+2026-04-30T14:01:03.166980Z [info     ] Loaded eureka.md               [skus2ontology.chatbot] chars=1781
+2026-04-30T14:01:06.738538Z [error    ] LLM chat call failed           [skus2ontology.utils.llm_client] error="Error code: 500 - {'message': 'invalid csrf token'}" model=deepseek/deepseek-v4-pro-free
+2026-04-30T14:01:06.740543Z [info     ] Saved chat log                 [skus2ontology.pipeline] confirmed=False path=..\战略分析\输出\ontology\chat_log.json rounds=0

@@ -1,0 +1,7 @@
+{"max_rounds": 5, "event": "Starting spec chatbot", "logger": "skus2ontology.chatbot", "level": "info", "timestamp": "2026-04-30T14:02:15.085897Z"}
+{"entries": 177, "event": "Built name_to_path lookup", "logger": "skus2ontology.chatbot", "level": "info", "timestamp": "2026-04-30T14:02:15.087260Z"}
+{"total_lines": 198, "matched": 175, "event": "slug\u2192path inline resolution", "logger": "skus2ontology.chatbot", "level": "info", "timestamp": "2026-04-30T14:02:15.087260Z"}
+{"original_chars": 9125, "compressed_chars": 9948, "event": "Loaded mapping.md (compressed)", "logger": "skus2ontology.chatbot", "level": "info", "timestamp": "2026-04-30T14:02:15.088260Z"}
+{"chars": 1781, "event": "Loaded eureka.md", "logger": "skus2ontology.chatbot", "level": "info", "timestamp": "2026-04-30T14:02:15.098297Z"}
+{"model": "deepseek/deepseek-v4-pro-free", "error": "Error code: 500 - {'message': 'invalid csrf token'}", "event": "LLM chat call failed", "logger": "skus2ontology.utils.llm_client", "level": "error", "timestamp": "2026-04-30T14:02:18.795742Z"}
+{"path": "..\\\u6218\u7565\u5206\u6790\\\u8f93\u51fa\\ontology\\chat_log.json", "rounds": 0, "confirmed": false, "event": "Saved chat log", "logger": "skus2ontology.pipeline", "level": "info", "timestamp": "2026-04-30T14:02:18.797742Z"}
