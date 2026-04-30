@@ -1,0 +1,29 @@
+{
+  "core_info": "上海高科技园区开发企业，2015年启动转型，从传统地产开发商转向“房东+股东”的科技投行模式",
+  "mode_comparison": [
+    {
+      "mode_type": "房地产开发模式",
+      "asset_attribute": "重资产",
+      "profit_focus": "土地销售",
+      "benchmark_enterprise": "陆家嘴"
+    },
+    {
+      "mode_type": "产业服务模式",
+      "asset_attribute": "轻重资产结合",
+      "profit_focus": "租金及服务收入",
+      "benchmark_enterprise": "未披露"
+    },
+    {
+      "mode_type": "股权投资模式",
+      "asset_attribute": "轻资产",
+      "profit_focus": "投资收益",
+      "benchmark_enterprise": "未披露"
+    }
+  ],
+  "transformation_result": [
+    "长期股权投资和可供出售金融资产约50亿元，未来增值潜力显著",
+    "投资收益从股权处置收益转向长期持有收益，投资风格从风险投资转向产业投资",
+    "主营业务收入持续下滑，但投资收益有效对冲利润亏损，成为主要利润来源",
+    "核心策略为以资招商，通过股权投资吸引优质企业入驻，混合制或民营机制是盈利关键"
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "mode_nature": "酒行业同股不同权设计的典型应用",
+  "core_rules": {
+    "option_conversion": "经销商采购销量可折算为期权，上市前送股比例与关联交易挂钩，需明确披露",
+    "private_placement": {
+      "issued_shares": 30000000,
+      "issue_price": 12,
+      "market_value_after_placement": 360000000,
+      "subsequent_stock_price": 76,
+      "investment_return_rate": "400%（100万投资1年赚400万）"
+    },
+    "bottom_guarantee_rule": "若定增后股价下跌，泸州老窖偿还本金并支付5%的年化利息，该模式每年开展一次"
+  },
+  "platform_operation": "设立由经销商入股、经销商担任董事长的期权营销公司承接终端业务，后续泸州老窖收购该公司，实现雇佣关系向合伙关系转变"
+}
