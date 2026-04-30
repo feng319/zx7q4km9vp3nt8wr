@@ -2196,6 +2196,96 @@
         "报告-远景科技调研报告：如何把握储能 AIDC领域未来机会_chunk_001"
       ],
       "confidence": 1.0
+    },
+    {
+      "subject": "零碳园区",
+      "predicate": "requires",
+      "object": "零碳操作系统",
+      "source_chunks": [
+        "报告-金风科技调研报告：我国首个碳中和园区是怎样建成的？_chunk_001"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "subject": "碳账户",
+      "predicate": "part-of",
+      "object": "零碳操作系统",
+      "source_chunks": [
+        "报告-金风科技调研报告：我国首个碳中和园区是怎样建成的？_chunk_001"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "subject": "发电预测",
+      "predicate": "enables",
+      "object": "负荷调度",
+      "source_chunks": [
+        "报告-金风科技调研报告：我国首个碳中和园区是怎样建成的？_chunk_001"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "subject": "超短期滚动功率预测",
+      "predicate": "is-a",
+      "object": "发电预测",
+      "source_chunks": [
+        "报告-金风科技调研报告：我国首个碳中和园区是怎样建成的？_chunk_001"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "subject": "绿电直连",
+      "predicate": "enables",
+      "object": "绿电溯源",
+      "source_chunks": [
+        "报告-金风科技调研报告：我国首个碳中和园区是怎样建成的？_chunk_001"
+      ],
+      "confidence": 0.6
+    },
+    {
+      "subject": "区块链溯源绿电",
+      "predicate": "enables",
+      "object": "绿电溯源",
+      "source_chunks": [
+        "报告-金风科技调研报告：我国首个碳中和园区是怎样建成的？_chunk_001"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "subject": "水蓄冷罐",
+      "predicate": "related-to",
+      "object": "负荷调度",
+      "source_chunks": [
+        "报告-金风科技调研报告：我国首个碳中和园区是怎样建成的？_chunk_001"
+      ],
+      "confidence": 0.8
+    },
+    {
+      "subject": "CCER",
+      "predicate": "enables",
+      "object": "碳抵销",
+      "source_chunks": [
+        "报告-金风科技调研报告：我国首个碳中和园区是怎样建成的？_chunk_001"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "subject": "零碳园区",
+      "predicate": "requires",
+      "object": "综合能源服务",
+      "source_chunks": [
+        "报告-金风科技调研报告：我国首个碳中和园区是怎样建成的？_chunk_001"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "subject": "碳账户",
+      "predicate": "enables",
+      "object": "综合能碳管理",
+      "source_chunks": [
+        "报告-金风科技调研报告：我国首个碳中和园区是怎样建成的？_chunk_001"
+      ],
+      "confidence": 0.8
     }
   ]
 }

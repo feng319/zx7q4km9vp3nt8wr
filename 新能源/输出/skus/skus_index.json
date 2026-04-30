@@ -1,8 +1,8 @@
 {
   "created_at": "2026-04-30T23:58:12.790314",
-  "updated_at": "2026-05-01T01:45:40.927622",
-  "total_skus": 348,
-  "total_characters": 345550,
+  "updated_at": "2026-05-01T01:48:03.722761",
+  "total_skus": 366,
+  "total_characters": 365053,
   "chunks_processed": [
     "报告-《关于优化集中式新能源发电企业市场报价的通知（试行）》深度解读与战略分析_chunk_001",
     "报告-乌克兰新能源市场机会调研报告_chunk_001",
@@ -28,7 +28,8 @@
     "报告-良信电器调研报告：怎样建设零碳工厂？_chunk_001",
     "报告-非洲调研报告（二）：中国新能源企业在赞比亚有什么机会？_chunk_001",
     "报告-非洲调研报告（一）：中国新能源企业在肯尼亚有什么机会？_chunk_001",
-    "报告-远景科技调研报告：如何把握储能 AIDC领域未来机会_chunk_001"
+    "报告-远景科技调研报告：如何把握储能 AIDC领域未来机会_chunk_001",
+    "报告-金风科技调研报告：我国首个碳中和园区是怎样建成的？_chunk_001"
   ],
   "skus": [
     {
@@ -2752,16 +2753,6 @@
       "confidence": null
     },
     {
-      "sku_id": "meta-knowledge",
-      "name": "meta-knowledge",
-      "classification": "meta",
-      "path": "meta",
-      "source_chunk": "aggregated",
-      "character_count": 24849,
-      "description": "SKU routing (mapping.md) and creative insights (eureka.md)",
-      "confidence": null
-    },
-    {
       "sku_id": "sku_214",
       "name": "锌铁液流电池原材料成本优势",
       "classification": "factual",
@@ -3502,18 +3493,208 @@
       "confidence": null
     },
     {
+      "sku_id": "meta-knowledge",
+      "name": "meta-knowledge",
+      "classification": "meta",
+      "path": "meta",
+      "source_chunk": "aggregated",
+      "character_count": 31983,
+      "description": "SKU routing (mapping.md) and creative insights (eureka.md)",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_248",
+      "name": "零碳园区建设路径框架",
+      "classification": "factual",
+      "path": "factual/sku_248",
+      "source_chunk": "报告-金风科技调研报告：我国首个碳中和园区是怎样建成的？_chunk_001",
+      "character_count": 364,
+      "description": "金风科技提出的零碳园区建设需要经过三个阶段、覆盖四个领域、遵循五个步骤，形成了一套可供行业参考的系统性方法。",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_249",
+      "name": "绿洲零碳操作系统功能架构",
+      "classification": "factual",
+      "path": "factual/sku_249",
+      "source_chunk": "报告-金风科技调研报告：我国首个碳中和园区是怎样建成的？_chunk_001",
+      "character_count": 228,
+      "description": "金风科技自主研制的“绿洲零碳”数字化操作系统，是零碳园区的统一管理大脑，通过连接所有能源设备并集成碳账户等模块，实现能碳管理的智能化与精细化。",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_250",
+      "name": "亦庄智慧园区基本概况与能源设备配置",
+      "classification": "factual",
+      "path": "factual/sku_250",
+      "source_chunk": "报告-金风科技调研报告：我国首个碳中和园区是怎样建成的？_chunk_001",
+      "character_count": 523,
+      "description": "金风科技亦庄智慧园区作为我国首个‘碳中和’智慧园区，配置了4.8MW风电、2.34MW光伏及地源热泵等设施，并实施多项节能改造，其基础设施是零碳运营的物理基础。",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_251",
+      "name": "亦庄园区用电负荷特征与重点设备监测",
+      "classification": "factual",
+      "path": "factual/sku_251",
+      "source_chunk": "报告-金风科技调研报告：我国首个碳中和园区是怎样建成的？_chunk_001",
+      "character_count": 512,
+      "description": "2024年园区的用电负荷集中分布在3000kW以下，占比近80%，据此将额定功率50kW以上的20台重点用能设备纳入自动监控，为负荷调度提供依据。",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_252",
+      "name": "零碳园区“预测+负荷调度”运营策略",
+      "classification": "factual",
+      "path": "factual/sku_252",
+      "source_chunk": "报告-金风科技调研报告：我国首个碳中和园区是怎样建成的？_chunk_001",
+      "character_count": 454,
+      "description": "在无法安装储能电池的限制下，亦庄园区通过提前预测风光出力和动态调度可调负荷时间，实现了绿电高比例本地消纳，避免了弃电上网。",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_253",
+      "name": "2024年亦庄园区能源与碳排放年度运行数据",
+      "classification": "factual",
+      "path": "factual/sku_253",
+      "source_chunk": "报告-金风科技调研报告：我国首个碳中和园区是怎样建成的？_chunk_001",
+      "character_count": 188,
+      "description": "2024年园区总用电1572万kWh，其中风光绿电自发电835万kWh，本地消纳率达93%，绿电占整体用电比例达49.6%，全年碳排放总量为8863.65吨CO2e。",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_254",
+      "name": "温室气体排放范围分类",
+      "classification": "factual",
+      "path": "factual/sku_254",
+      "source_chunk": "报告-金风科技调研报告：我国首个碳中和园区是怎样建成的？_chunk_001",
+      "character_count": 183,
+      "description": "根据国际标准，企业或园区的碳排放分为范围一（直接排放）、范围二（外购能源间接排放）和范围三（价值链间接排放），此分类是量化和管理碳足迹的基础。",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_255",
+      "name": "亦庄园区2024年碳排放构成与抵消实现",
+      "classification": "factual",
+      "path": "factual/sku_255",
+      "source_chunk": "报告-金风科技调研报告：我国首个碳中和园区是怎样建成的？_chunk_001",
+      "character_count": 280,
+      "description": "2024年园区范围二（外购电力）排放占碳排放总量的83%，是主要排放源，金风科技通过购买CCER抵消全部8863.65吨碳排放，实现园区整体碳中和。",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_256",
+      "name": "CCER抵消机制简介",
+      "classification": "factual",
+      "path": "factual/sku_256",
+      "source_chunk": "报告-金风科技调研报告：我国首个碳中和园区是怎样建成的？_chunk_001",
+      "character_count": 202,
+      "description": "中国核证减排量（CCER）是一种碳交易工具，企业通过核证的温室气体减排量可在市场上出售，用于其他企业抵消自身碳排放，是零碳园区实现净零排放的关键手段。",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_257",
+      "name": "零碳园区降本效果分析",
+      "classification": "factual",
+      "path": "factual/sku_257",
+      "source_chunk": "报告-金风科技调研报告：我国首个碳中和园区是怎样建成的？_chunk_001",
+      "character_count": 402,
+      "description": "2024年亦庄园区零碳微电网模式下电费比全网购电减少97万元，叠加节能措施总计节省约133万元，证实降碳与降本可以兼得。",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_258",
+      "name": "区块链绿电溯源技术",
+      "classification": "factual",
+      "path": "factual/sku_258",
+      "source_chunk": "报告-金风科技调研报告：我国首个碳中和园区是怎样建成的？_chunk_001",
+      "character_count": 222,
+      "description": "金风科技通过区块链记录绿电生产、交易与使用的全链路数据，实现绿电数字化溯源，可作为替代物理专线的高效认证方式，推动绿电消费。",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_259",
+      "name": "金风科技零碳项目推广规模",
+      "classification": "factual",
+      "path": "factual/sku_259",
+      "source_chunk": "报告-金风科技调研报告：我国首个碳中和园区是怎样建成的？_chunk_001",
+      "character_count": 89,
+      "description": "截至2024年末，金风科技已推动1000多个零碳项目，覆盖多个高碳行业，奠定了其在零碳园区建设领域的先行者地位。",
+      "confidence": null
+    },
+    {
+      "sku_id": "sku_260",
+      "name": "零碳园区可持续建设核心原则",
+      "classification": "factual",
+      "path": "factual/sku_260",
+      "source_chunk": "报告-金风科技调研报告：我国首个碳中和园区是怎样建成的？_chunk_001",
+      "character_count": 147,
+      "description": "零碳园区建设必须将降低用能成本放在核心位置，降碳的同时不能提高企业用能成本，否则市场难以持续推广，这是当前技术条件下可行的关键判断。",
+      "confidence": null
+    },
+    {
+      "sku_id": "skill_089",
+      "name": "zero-carbon-park-construction-process",
+      "classification": "procedural",
+      "path": "procedural/skill_089",
+      "source_chunk": "报告-金风科技调研报告：我国首个碳中和园区是怎样建成的？_chunk_001",
+      "character_count": 661,
+      "description": "遵循金风科技总结的五步法，指导零碳园区从规划到认证的全流程建设，适用于新建或改造园区实现碳中和目标。",
+      "confidence": null
+    },
+    {
+      "sku_id": "skill_090",
+      "name": "load-assessment-and-management-for-zero-carbon-park",
+      "classification": "procedural",
+      "path": "procedural/skill_090",
+      "source_chunk": "报告-金风科技调研报告：我国首个碳中和园区是怎样建成的？_chunk_001",
+      "character_count": 638,
+      "description": "梳理园区电力负荷特征，识别重点用能设备，建立监测体系，为零碳园区调度和节能改造提供基础。",
+      "confidence": null
+    },
+    {
+      "sku_id": "skill_091",
+      "name": "generation-forecast-and-load-shifting-in-zero-carbon-operation",
+      "classification": "procedural",
+      "path": "procedural/skill_091",
+      "source_chunk": "报告-金风科技调研报告：我国首个碳中和园区是怎样建成的？_chunk_001",
+      "character_count": 770,
+      "description": "通过日前发电预测、日内滚动校正和灵活负荷调度，最大化本地消纳可再生能源发电，降低园区碳排放。",
+      "confidence": null
+    },
+    {
+      "sku_id": "skill_092",
+      "name": "blockchain-based-green-electricity-tracing",
+      "classification": "procedural",
+      "path": "procedural/skill_092",
+      "source_chunk": "报告-金风科技调研报告：我国首个碳中和园区是怎样建成的？_chunk_001",
+      "character_count": 603,
+      "description": "利用区块链记录新能源发电与用户用电匹配，无需专线即可获得可溯源的绿电消费证明，满足绿电认证需求。",
+      "confidence": null
+    },
+    {
+      "sku_id": "skill_093",
+      "name": "carbon-offset-with-ccer",
+      "classification": "procedural",
+      "path": "procedural/skill_093",
+      "source_chunk": "报告-金风科技调研报告：我国首个碳中和园区是怎样建成的？_chunk_001",
+      "character_count": 471,
+      "description": "计算园区无法消除的碳排放量，通过购买中国核证减排量（CCER）进行抵消，完成碳中和。",
+      "confidence": null
+    },
+    {
       "sku_id": "relational-knowledge-base",
       "name": "relational-knowledge-base",
       "classification": "relational",
       "path": "relational",
       "source_chunk": "aggregated",
-      "character_count": 169614,
+      "character_count": 175046,
       "description": "Domain label hierarchy and terminology glossary",
       "confidence": null
     }
   ],
-  "factual_count": 258,
+  "factual_count": 271,
   "relational_count": 1,
-  "procedural_count": 88,
+  "procedural_count": 93,
   "meta_count": 1
 }
