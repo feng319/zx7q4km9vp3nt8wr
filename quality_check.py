@@ -34,17 +34,26 @@ def read_text(p: Path) -> str:
 # ── analysis functions ───────────────────────────────────────────────
 
 def analyze_sku_distribution(kb_dir: Path) -> dict:
-    """Stage 3: SKU 数量、分类分布、平均文件大小"""
+    """Stage 3: SKU 数量、分类分布、平均文件大小（SKU 是目录，内含 content.md/header.md）"""
     skus_dir = kb_dir / "输出" / "skus"
     result = {}
     total = 0
     for cls in ["factual", "procedural", "relational"]:
         d = skus_dir / cls
-        files = list(d.glob("*.md")) if d.exists() else []
-        result[f"{cls}_count"] = len(files)
-        total += len(files)
-        if files:
-            sizes = [f.stat().st_size for f in files]
+        # SKU entries are directories (sku_001/, skill_001/, etc.)
+        dirs = sorted(d.iterdir()) if d.exists() else []
+        dirs = [x for x in dirs if x.is_dir() and not x.name.startswith(".")]
+        result[f"{cls}_count"] = len(dirs)
+        total += len(dirs)
+        # Measure content.md or content.json size
+        sizes = []
+        for sd in dirs:
+            for fname in ["content.md", "content.json"]:
+                fp = sd / fname
+                if fp.exists():
+                    sizes.append(fp.stat().st_size)
+                    break
+        if sizes:
             result[f"{cls}_avg_bytes"] = int(sum(sizes) / len(sizes))
             result[f"{cls}_min_bytes"] = min(sizes)
             result[f"{cls}_max_bytes"] = max(sizes)
