@@ -17,9 +17,12 @@ from datetime import datetime
 
 import streamlit as st
 from openai import OpenAI
+from dotenv import load_dotenv
 
 # ── 配置 ──────────────────────────────────────────────
 BASE = Path(r"G:\Program Files\AI coding\知识萃取")
+load_dotenv(BASE / "Anything2Ontology" / ".env")
+
 ONTOLOGY_ROOTS = {
     "商业模式资本": BASE / "商业模式资本" / "输出" / "ontology",
     "战略分析":     BASE / "战略分析" / "输出" / "ontology",
@@ -27,10 +30,28 @@ ONTOLOGY_ROOTS = {
 }
 ARCHIVE_ROOT = BASE / "对话存档"
 ARCHIVE_ROOT.mkdir(parents=True, exist_ok=True)
-API_KEY      = os.getenv("ARK_API_KEY", "ark-d0608b79-bf7a-4464-9381-60fc43d7476e-83fbd")
-BASE_URL     = "https://ark.cn-beijing.volces.com/api/v3"
-MODEL        = "doubao-seed-2-0-pro-260215"
-MAX_TOKENS   = 4096
+MAX_TOKENS = 4096
+
+# LLM 配置（按 provider 分组）
+LLM_PROVIDERS = {
+    "火山引擎 Ark": {
+        "base_url": "https://ark.cn-beijing.volces.com/api/v3",
+        "api_key":  os.getenv("ARK_API_KEY", ""),
+        "models": {
+            "doubao-seed-2-0-pro-260215":  "doubao-seed-2-0-pro (默认)",
+            "doubao-seed-2-0-lite-260215": "doubao-seed-2-0-lite",
+            "doubao-seed-2-0-mini-260215": "doubao-seed-2-0-mini",
+        },
+    },
+    "DeepSeek": {
+        "base_url": os.getenv("SILICONFLOW_BASE_URL", "https://api.deepseek.com"),
+        "api_key":  os.getenv("SILICONFLOW_API_KEY", ""),
+        "models": {
+            "deepseek-v4-pro":  "DeepSeek V4 Pro",
+            "deepseek-v4-flash": "DeepSeek V4 Flash",
+        },
+    },
+}
 
 
 # ── 对话存档 ──────────────────────────────────────────
@@ -297,11 +318,14 @@ def main():
         st.divider()
 
         # 模型选择
-        model_options = {
-            "doubao-seed-2-0-pro-260215": "doubao-seed-2-0-pro (默认)",
-            "doubao-seed-2-0-lite-260215": "doubao-seed-2-0-lite",
-            "doubao-seed-2-0-mini-260215": "doubao-seed-2-0-mini",
-        }
+        st.subheader("LLM 配置")
+        provider_name = st.selectbox(
+            "服务商",
+            list(LLM_PROVIDERS.keys()),
+            key="provider",
+        )
+        provider = LLM_PROVIDERS[provider_name]
+        model_options = provider["models"]
         selected_model = st.selectbox(
             "模型",
             list(model_options.keys()),
@@ -414,7 +438,7 @@ def main():
         with st.chat_message("user"):
             st.markdown(prompt)
 
-        client = OpenAI(api_key=API_KEY, base_url=BASE_URL)
+        client = OpenAI(api_key=provider["api_key"], base_url=provider["base_url"])
         system_prompt = SYSTEM_PROMPT_TEMPLATE.format(
             ontology_content=ontology_content
         )
