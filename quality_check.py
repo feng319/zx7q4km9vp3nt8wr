@@ -111,15 +111,86 @@ def analyze_eureka(kb_dir: Path) -> dict:
     }
 
 
+# ── Spec 污染检查（参考 spec_validator.py 六项机制） ──
+
+SPEC_CHECKS = {
+    "extra_chunk_bracket": (
+        r"\[chunk:[^\]]+\]\]+",
+        "[chunk: xxx]] 多余右括号",
+    ),
+    "anchor_wrapping_chunk": (
+        r"【锚点：[^】]*\[chunk:[^】]+】",
+        "【锚点：[chunk: ...]...】 复合锚点",
+    ),
+    "anchor_wrapping_sku": (
+        r"【锚点：[^】]*skus/(?:factual|procedural|relational)/[^】]+】",
+        "【锚点：skus/...】 复合锚点",
+    ),
+    "sku_sku_concat": (
+        r"skus/(?:factual|procedural|relational)/(?:sku|skill)_\d+skus/",
+        "SKU-SKU 零空白粘连",
+    ),
+    "sku_chunk_concat": (
+        r"skus/(?:factual|procedural|relational)/(?:sku|skill)_\d+\[chunk:",
+        "SKU-chunk 零空白粘连",
+    ),
+    "chunk_sku_concat": (
+        r"\[chunk:[^\]]+\]skus/",
+        "chunk-SKU 零空白粘连",
+    ),
+    "sku_space_concat": (
+        r"skus/(?:factual|procedural|relational)/(?:sku|skill)_\d+[ \t]+skus/",
+        "空格分隔的 SKU 引用应换行",
+    ),
+    "sku_range": (
+        r"skus/(?:factual|procedural|relational)/sku_\d{3}-\d{3}",
+        "sku_xxx-yyy 未展开范围",
+    ),
+    "chinese_chunk_bracket": (
+        r"【chunk:[^】]+】",
+        "【chunk: xxx】 中文括号残留",
+    ),
+    "chinese_sku_bracket": (
+        r"【skus/(?:factual|procedural|relational)/[^】]+】",
+        "【skus/...】 中文括号残留",
+    ),
+    "remaining_anchor": (
+        r"【锚点：[^】]+】",
+        "剩余未解析锚点（仅 INFO）",
+    ),
+}
+
+SKU_LINE_RE = re.compile(
+    r"(?m)^skus/(?:factual|procedural|relational)/(?:sku|skill)_\d+$"
+)
+
+
+def validate_spec(spec_text: str) -> list[dict]:
+    """对 spec 内容执行 spec_validator 六项污染检查，返回检查结果列表。"""
+    results = []
+    for key, (pattern, desc) in SPEC_CHECKS.items():
+        hits = re.findall(pattern, spec_text)
+        count = len(hits)
+        is_critical = key != "remaining_anchor"
+        status = "PASS" if count == 0 else ("FAIL" if is_critical else "INFO")
+        results.append({
+            "check": key,
+            "desc": desc,
+            "count": count,
+            "status": status,
+            "samples": hits[:5],
+        })
+    return results
+
+
 def analyze_spec(kb_dir: Path) -> dict:
-    """Stage 4: spec.md 质量"""
+    """Stage 4: spec.md 质量（含六项污染检查）"""
     spec_path = kb_dir / "输出" / "ontology" / "spec.md"
     text = read_text(spec_path)
     if not text:
         return {"exists": False}
 
     anchors = re.findall(r"【锚点[^】]*】", text)
-    unique_anchors = set(anchors)
     chunk_refs = re.findall(r"\[chunk:\s*[^\]]+\]", text)
     sku_refs = re.findall(r"skus/(?:factual|procedural|relational)/(?:sku|skill)_\d+", text)
     unique_skus = set(sku_refs)
@@ -128,19 +199,27 @@ def analyze_spec(kb_dir: Path) -> dict:
     h2s = re.findall(r"^## .+", text, re.MULTILINE)
     h3s = re.findall(r"^### .+", text, re.MULTILINE)
 
+    # 六项污染检查
+    checks = validate_spec(text)
+    critical_fails = [c for c in checks if c["status"] == "FAIL"]
+
     return {
         "exists": True,
         "chars": len(text),
         "anchors_remaining": len(anchors),
-        "anchors_unique": len(unique_anchors),
+        "anchors_unique": len(set(anchors)),
         "chunk_refs": len(chunk_refs),
         "chunk_refs_unique": len(set(chunk_refs)),
         "sku_refs": len(sku_refs),
         "sku_refs_unique": len(unique_skus),
+        "sku_line_refs": len(SKU_LINE_RE.findall(text)),
         "h1_count": len(h1s),
         "h2_count": len(h2s),
         "h3_count": len(h3s),
         "anchor_free": len(anchors) == 0,
+        "checks": checks,
+        "critical_fails": len(critical_fails),
+        "all_pass": len(critical_fails) == 0,
     }
 
 
