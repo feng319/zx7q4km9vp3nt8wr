@@ -313,6 +313,9 @@ def main():
         spec = analyze_spec(kb_dir)
         chat = analyze_chat_log(kb_dir)
 
+        # README check (needs sku stats)
+        readme = analyze_readme(kb_dir, sku)
+
         # ── SKU Distribution ──
         report_lines.append("### Stage 3: SKU 分布\n")
         report_lines.append(f"| 分类 | 数量 | 平均大小 | 最小 | 最大 |")
@@ -366,6 +369,27 @@ def main():
             report_lines.append(f"- SKU 条目: {mapping['sku_entries']}\n")
         else:
             report_lines.append("- ⚠ 文件不存在\n")
+
+        # ── README ──
+        report_lines.append("### Stage 3/4: README.md\n")
+        if readme["exists"]:
+            report_lines.append(f"- 大小: {readme['chars']} chars")
+            anchor_status = "PASS" if readme["anchor_mentions"] == 0 else "FAIL"
+            report_lines.append(f"- 残留锚点提及: {readme['anchor_mentions']} [{anchor_status}]")
+            chunk_status = "PASS" if readme["has_chunk_protocol"] else "FAIL"
+            report_lines.append(f"- [chunk:] 协议链路: {'有' if readme['has_chunk_protocol'] else '无'} [{chunk_status}]")
+            three_status = "FAIL" if readme["has_three_types_ref"] else "PASS"
+            report_lines.append(f"- 引用类型正确（两类）: {'是' if not readme['has_three_types_ref'] else '否（仍为三类）'} [{three_status}]")
+            if readme["stat_mismatches"]:
+                report_lines.append(f"- ⚠ 统计不一致:")
+                for m in readme["stat_mismatches"]:
+                    report_lines.append(f"  - {m}")
+            else:
+                report_lines.append(f"- 统计一致性: [PASS]")
+            readme_status = "PASS" if readme["all_pass"] else "FAIL"
+            report_lines.append(f"- **结论: {readme_status}**\n")
+        else:
+            report_lines.append("- ⚠ 文件不存在 [FAIL]\n")
 
         # ── Spec ──
         report_lines.append("### Stage 4: Spec.md\n")
