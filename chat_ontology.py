@@ -19,37 +19,48 @@ import streamlit as st
 from openai import OpenAI
 
 # ── 配置 ──────────────────────────────────────────────
-ONTOLOGY_DIR = Path(r"G:\Program Files\AI coding\知识萃取\输出\ontology")
-ARCHIVE_DIR  = Path(r"G:\Program Files\AI coding\知识萃取\对话存档")
+BASE = Path(r"G:\Program Files\AI coding\知识萃取")
+ONTOLOGY_ROOTS = {
+    "商业模式资本": BASE / "商业模式资本" / "输出" / "ontology",
+    "战略分析":     BASE / "战略分析" / "输出" / "ontology",
+    "新能源":       BASE / "新能源" / "输出" / "ontology",
+}
+ARCHIVE_ROOT = BASE / "对话存档"
+ARCHIVE_ROOT.mkdir(parents=True, exist_ok=True)
 API_KEY      = os.getenv("ARK_API_KEY", "ark-d0608b79-bf7a-4464-9381-60fc43d7476e-83fbd")
 BASE_URL     = "https://ark.cn-beijing.volces.com/api/v3"
 MODEL        = "doubao-seed-2-0-pro-260215"
 MAX_TOKENS   = 4096
-ARCHIVE_DIR.mkdir(parents=True, exist_ok=True)
 
 
 # ── 对话存档 ──────────────────────────────────────────
-def archive_path(client_name: str) -> Path:
+def _archive_dir(kb_name: str) -> Path:
+    d = ARCHIVE_ROOT / kb_name
+    d.mkdir(parents=True, exist_ok=True)
+    return d
+
+
+def archive_path(client_name: str, kb_name: str) -> Path:
     safe = re.sub(r'[\\/:*?"<>|]', "_", client_name)
-    return ARCHIVE_DIR / f"{safe}.json"
+    return _archive_dir(kb_name) / f"{safe}.json"
 
 
-def load_archive(client_name: str) -> list:
-    p = archive_path(client_name)
+def load_archive(client_name: str, kb_name: str) -> list:
+    p = archive_path(client_name, kb_name)
     if p.exists():
         return json.loads(p.read_text(encoding="utf-8"))
     return []
 
 
-def save_archive(client_name: str, messages: list):
-    archive_path(client_name).write_text(
+def save_archive(client_name: str, kb_name: str, messages: list):
+    archive_path(client_name, kb_name).write_text(
         json.dumps(messages, ensure_ascii=False, indent=2),
         encoding="utf-8",
     )
 
 
-def list_clients() -> list[str]:
-    return [p.stem for p in sorted(ARCHIVE_DIR.glob("*.json"))]
+def list_clients(kb_name: str) -> list[str]:
+    return [p.stem for p in sorted(_archive_dir(kb_name).glob("*.json"))]
 
 
 # ── 加载 ontology ─────────────────────────────────────
@@ -68,7 +79,7 @@ def _compress_chunk_mapping(raw: dict) -> str:
 
 
 @st.cache_resource
-def load_ontology() -> tuple[str, int]:
+def load_ontology(ontology_dir: Path) -> tuple[str, int]:
     parts = []
     for name, label in [
         ("README.md",  "知识库说明"),
@@ -76,7 +87,7 @@ def load_ontology() -> tuple[str, int]:
         ("mapping.md", "SKU 映射"),
         ("eureka.md",  "跨领域创意洞察"),
     ]:
-        p = ONTOLOGY_DIR / name
+        p = ontology_dir / name
         parts.append(
             f"# {label}\n{p.read_text(encoding='utf-8')}"
             if p.exists() else f"# {name} — 未找到"
