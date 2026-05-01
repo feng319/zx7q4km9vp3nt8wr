@@ -14,7 +14,6 @@ ontology/
 ├── mapping.md                   # SKU路由 — 找到正确的知识
 ├── eureka.md                    # 创意洞察和功能构想
 ├── chunk_to_sku.json            # chunk 到 SKU 的候选映射
-├── chunks_index.json            # chunk 元数据索引
 ├── ontology_manifest.json       # 组装元数据
 ├── chat_log.json                # 对话记录
 └── skus/
@@ -60,7 +59,7 @@ ontology/
 
 | 引用类型 | 操作步骤 |
 |----------|----------|
-| `[skus/factual/sku_xxx]` 或 `[skus/procedural/skill_xxx]` | **直接读取** → `read_file` 对应的 `header.md` + content |
+| `skus/factual/sku_xxx` 或 `skus/procedural/skill_xxx` | **直接读取** → `read_file` 对应的 `header.md` + content |
 | `[chunk: xxx_chunk_xxx]` | **Chunk 查询** → 步骤1：打开 `chunk_to_sku.json`，找到 chunk 键 → 步骤2：扫描所有条目的 `keywords` 和 `name`，找出语义匹配的条目 → 步骤3：读取匹配的条目（`rank` 仅作同等相关时的参考，不代表语义相关度）→ 步骤4：如无 keywords 匹配，退回读取 rank 1-3 兜底 |
 | 主题级查询（无具体引用） | **Mapping** → 在 `mapping.md` 中找到相关分组，读取列出的 SKU 文件 |
 | 查看标签树、术语表和关系型知识 | **关系型** → 读取 `skus/relational/` 下的 label_tree.json、glossary.json |
