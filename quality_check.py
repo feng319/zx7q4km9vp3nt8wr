@@ -4,8 +4,13 @@
 import json
 import os
 import re
+import sys
 from collections import Counter
 from pathlib import Path
+
+# 导入项目内的 spec_validator（避免重复定义检查项）
+sys.path.insert(0, str(Path(__file__).resolve().parent / "Anything2Ontology" / "src"))
+from skus2ontology.spec_validator import CHECKS as SPEC_CHECKS, SKU_LINE_RE, validate as _validate_spec
 
 BASE = Path(r"G:\Program Files\AI coding\知识萃取")
 KBS = ["商业模式资本", "战略分析", "新能源"]
