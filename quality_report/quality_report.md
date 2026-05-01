@@ -12,7 +12,7 @@
 | Spec SKU 引用 | 104 | 52 | 105 |
 | Eureka Chunk 引用 | 42 | 3 | 22 |
 | Phase 1 确认 | NO | NO | NO |
-| README 质量 | NO | YES | YES |
+| README 质量 | NO | NO | NO |
 
 # 知识库质量分析报告
 
@@ -60,13 +60,13 @@
 
 ### Stage 3/4: README.md
 
-- 大小: 2197 chars
+- 大小: 2152 chars
 - 残留锚点提及: 0 [PASS]
 - [chunk:] 协议链路: 有 [PASS]
 - 引用类型正确（两类）: 是 [PASS]
-- ⚠ 统计不一致:
-  - 事实型: README=0, 实际=616
-  - 程序型: README=0, 实际=344
+- 统计一致性: [PASS]
+- SKU 引用方括号误用: 0 [PASS]
+- 幽灵文件（目录结构中列出但不存在）: skus_index.json [FAIL]
 - **结论: FAIL**
 
 ### Stage 4: Spec.md
@@ -150,7 +150,9 @@
 - [chunk:] 协议链路: 有 [PASS]
 - 引用类型正确（两类）: 是 [PASS]
 - 统计一致性: [PASS]
-- **结论: PASS**
+- SKU 引用方括号误用: 0 [PASS]
+- 幽灵文件（目录结构中列出但不存在）: skus_index.json [FAIL]
+- **结论: FAIL**
 
 ### Stage 4: Spec.md
 
@@ -228,12 +230,14 @@
 
 ### Stage 3/4: README.md
 
-- 大小: 2251 chars
+- 大小: 2200 chars
 - 残留锚点提及: 0 [PASS]
 - [chunk:] 协议链路: 有 [PASS]
 - 引用类型正确（两类）: 是 [PASS]
 - 统计一致性: [PASS]
-- **结论: PASS**
+- SKU 引用方括号误用: 0 [PASS]
+- 幽灵文件（目录结构中列出但不存在）: skus_index.json [FAIL]
+- **结论: FAIL**
 
 ### Stage 4: Spec.md
 
