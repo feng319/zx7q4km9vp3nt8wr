@@ -95,8 +95,8 @@ def analyze_eureka(kb_dir: Path) -> dict:
     if not text:
         return {"exists": False}
 
-    # Count chunk references
-    chunk_refs = re.findall(r"\[chunk:\s*[^\]]+\]", text)
+    # Count chunk references — 实际格式为 [报告-xxx_chunk_001]，非 [chunk: xxx]
+    chunk_refs = re.findall(r"\[[^\]]*_chunk_\d+[^\]]*\]", text)
     unique_chunks = set(chunk_refs)
 
     # Count sections
