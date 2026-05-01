@@ -50,6 +50,8 @@ def analyze_sku_distribution(kb_dir: Path) -> dict:
             result[f"{cls}_max_bytes"] = max(sizes)
         else:
             result[f"{cls}_avg_bytes"] = 0
+            result[f"{cls}_min_bytes"] = 0
+            result[f"{cls}_max_bytes"] = 0
     result["total"] = total
     return result
 
