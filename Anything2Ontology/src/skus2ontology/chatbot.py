@@ -856,6 +856,14 @@ class SpecChatbot:
             r"\n\1",
             spec,
         )
+        # Mixed references separated by 、→ newline-separated
+        # Handles: sku_490、[chunk: xxx]、sku_507  (顿号 between any ref types)
+        spec = re.sub(
+            r"(skus/(?:factual|procedural|relational)/(?:sku|skill)_\d+|"
+            r"\[chunk:\s*[^\]]+\])\s*、\s*(?=skus/|\[chunk:)",
+            r"\1\n",
+            spec,
+        )
         # Space-separated SKU refs on same line → one per line
         spec = re.sub(
             r"(skus/(?:factual|procedural|relational)/(?:sku|skill)_\d+)\s+(?=skus/)",
