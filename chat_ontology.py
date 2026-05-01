@@ -94,7 +94,7 @@ def load_ontology(ontology_dir: Path) -> tuple[str, int]:
         )
 
     # chunk_to_sku.json: 只注入紧凑摘要（sku_id + name + keywords），不注入全量
-    chunk_path = ONTOLOGY_DIR / "chunk_to_sku.json"
+    chunk_path = ontology_dir / "chunk_to_sku.json"
     if chunk_path.exists():
         raw = json.loads(chunk_path.read_text(encoding="utf-8"))
         compact = _compress_chunk_mapping(raw)
@@ -229,12 +229,30 @@ def main():
         layout="wide",
     )
 
-    ontology_content, char_count = load_ontology()
-    token_est = char_count // 4
-
     # ── 侧边栏 ──
     with st.sidebar:
         st.header("🧭 知识副驾")
+
+        # 知识库选择
+        st.subheader("知识库")
+        selected_kb = st.selectbox(
+            "选择知识库",
+            list(ONTOLOGY_ROOTS.keys()),
+            key="selected_kb",
+        )
+        ontology_dir = ONTOLOGY_ROOTS[selected_kb]
+
+        # 切换知识库时清空对话
+        if st.session_state.get("_last_kb") != selected_kb:
+            st.session_state._last_kb = selected_kb
+            st.session_state.messages = []
+            st.session_state.response_times = []
+            st.rerun()
+
+        ontology_content, char_count = load_ontology(ontology_dir)
+        token_est = char_count // 4
+
+        st.divider()
 
         # 客户档案
         st.subheader("客户档案")
