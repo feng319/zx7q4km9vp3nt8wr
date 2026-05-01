@@ -14,3 +14,26 @@
 2026-05-01T00:21:09.760530Z [info     ] slug→path inline resolution    [skus2ontology.chatbot] matched=364 total_lines=384
 2026-05-01T00:21:09.760530Z [info     ] Loaded mapping.md (compressed) [skus2ontology.chatbot] compressed_chars=25797 original_chars=24026
 2026-05-01T00:21:09.760530Z [info     ] Loaded eureka.md               [skus2ontology.chatbot] chars=9512
+2026-05-01T00:56:04.163319Z [info     ] Built SKU index summary        [skus2ontology.chatbot] chars=24641 sku_count=366
+2026-05-01T00:59:17.901332Z [info     ] Phase 2 anchor replacement complete [skus2ontology.chatbot] draft_chars=8815 final_chars=12295
+2026-05-01T00:59:17.901332Z [info     ] unwrap_resolved_anchors        [skus2ontology.chatbot] after=0 before=0 unwrapped=0
+2026-05-01T00:59:17.903335Z [info     ] All anchors replaced successfully [skus2ontology.chatbot]
+2026-05-01T00:59:17.904334Z [info     ] Backed up existing spec.md     [skus2ontology.chatbot] backup='G:\\Program Files\\AI coding\\知识萃取\\新能源\\输出\\ontology\\spec.md.bak.20260501_085917'
+2026-05-01T00:59:17.905406Z [info     ] Saved spec.md                  [skus2ontology.chatbot] chars=12295 path='G:\\Program Files\\AI coding\\知识萃取\\新能源\\输出\\ontology\\spec.md'
+2026-05-01T00:59:17.906660Z [info     ] spec_check                     [skus2ontology.spec_validator] check=extra_chunk_bracket count=0 samples=[] status=PASS
+2026-05-01T00:59:17.906660Z [info     ] spec_check                     [skus2ontology.spec_validator] check=anchor_wrapping_chunk count=0 samples=[] status=PASS
+2026-05-01T00:59:17.906660Z [info     ] spec_check                     [skus2ontology.spec_validator] check=anchor_wrapping_sku count=0 samples=[] status=PASS
+2026-05-01T00:59:17.906660Z [info     ] spec_check                     [skus2ontology.spec_validator] check=sku_sku_concat count=0 samples=[] status=PASS
+2026-05-01T00:59:17.906660Z [info     ] spec_check                     [skus2ontology.spec_validator] check=sku_chunk_concat count=0 samples=[] status=PASS
+2026-05-01T00:59:17.907705Z [info     ] spec_check                     [skus2ontology.spec_validator] check=chunk_sku_concat count=0 samples=[] status=PASS
+2026-05-01T00:59:17.907705Z [info     ] spec_check                     [skus2ontology.spec_validator] check=sku_space_concat count=0 samples=[] status=PASS
+2026-05-01T00:59:17.907705Z [info     ] spec_check                     [skus2ontology.spec_validator] check=sku_range count=0 samples=[] status=PASS
+2026-05-01T00:59:17.907705Z [info     ] spec_check                     [skus2ontology.spec_validator] check=chinese_chunk_bracket count=0 samples=[] status=PASS
+2026-05-01T00:59:17.907705Z [info     ] spec_check                     [skus2ontology.spec_validator] check=chinese_sku_bracket count=0 samples=[] status=PASS
+2026-05-01T00:59:17.908960Z [info     ] spec_check                     [skus2ontology.spec_validator] check=remaining_anchor count=0 samples=[] status=PASS
+2026-05-01T00:59:17.908960Z [info     ] spec_stats                     [skus2ontology.spec_validator] chunk_refs=25 chunk_unique=21 sku_refs=0 sku_unique=0
+2026-05-01T00:59:17.908960Z [info     ] spec_validator PASSED          [skus2ontology.spec_validator]
+2026-05-01T00:59:17.911257Z [info     ] Saved chat log                 [skus2ontology.pipeline] confirmed=False path='G:\\Program Files\\AI coding\\知识萃取\\新能源\\输出\\ontology\\chat_log.json' rounds=5
+2026-05-01T00:59:17.912260Z [info     ] Generated README.md            [skus2ontology.readme_generator] path='G:\\Program Files\\AI coding\\知识萃取\\新能源\\输出\\ontology\\README.md'
+2026-05-01T00:59:17.913407Z [info     ] Saved ontology manifest        [skus2ontology.pipeline] path='G:\\Program Files\\AI coding\\知识萃取\\新能源\\输出\\ontology\\ontology_manifest.json'
+2026-05-01T00:59:17.913407Z [info     ] Ontology pipeline complete     [skus2ontology.pipeline] duration_seconds=2290.5 has_readme=True has_spec=True total_files=736
