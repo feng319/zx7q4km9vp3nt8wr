@@ -256,7 +256,7 @@ def main():
 
         # 客户档案
         st.subheader("客户档案")
-        clients = list_clients()
+        clients = list_clients(selected_kb)
         client_input = st.text_input(
             "当前客户名称",
             value=st.session_state.get("client_name", ""),
@@ -266,7 +266,7 @@ def main():
         if client_input != st.session_state.get("client_name", ""):
             st.session_state.client_name = client_input
             if client_input:
-                st.session_state.messages = load_archive(client_input)
+                st.session_state.messages = load_archive(client_input, selected_kb)
                 st.session_state.response_times = []
                 st.rerun()
 
@@ -275,7 +275,7 @@ def main():
                 for c in clients:
                     if st.button(c, key=f"client_{c}", use_container_width=True):
                         st.session_state.client_name = c
-                        st.session_state.messages = load_archive(c)
+                        st.session_state.messages = load_archive(c, selected_kb)
                         st.session_state.response_times = []
                         st.rerun()
 
