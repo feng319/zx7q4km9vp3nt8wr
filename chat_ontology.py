@@ -363,7 +363,7 @@ def main():
 
     # ── 主区域 ──
     client_name = st.session_state.get("client_name", "")
-    title = f"🧭 知识副驾 · {client_name}" if client_name else "🧭 知识副驾"
+    title = f"🧭 {selected_kb} · {client_name}" if client_name else f"🧭 {selected_kb}"
     st.title(title)
     if client_name:
         st.caption(f"~{token_est:,} tokens | 对话自动保存")
