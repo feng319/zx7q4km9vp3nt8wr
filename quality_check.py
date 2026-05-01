@@ -436,6 +436,7 @@ def main():
             "sku_refs": spec.get("sku_refs_unique", 0),
             "eureka_chunks": eureka.get("chunk_refs_unique", 0),
             "confirmed": chat.get("confirmed", False),
+            "readme_pass": readme.get("all_pass", False),
         })
 
     # ── Summary table ──
@@ -455,6 +456,7 @@ def main():
         ("Spec SKU 引用", "sku_refs"),
         ("Eureka Chunk 引用", "eureka_chunks"),
         ("Phase 1 确认", "confirmed"),
+        ("README 质量", "readme_pass"),
     ]
 
     for label, key, *suffix in fields:
