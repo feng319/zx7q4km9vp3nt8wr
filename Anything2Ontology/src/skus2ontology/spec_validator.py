@@ -56,6 +56,11 @@ CHECKS = {
         r"【skus/(?:factual|procedural|relational)/[^】]+】",
         "Extra: 【skus/...】 Chinese bracket residue",
     ),
+    # SKU ref followed by 、 (should be newline-separated)
+    "sku_pause_concat": (
+        r"skus/(?:factual|procedural|relational)/(?:sku|skill)_\d+\s*、",
+        "Extra: SKU ref followed by 、(should be newline-separated)",
+    ),
     # Remaining unresolved anchors (informational only)
     "remaining_anchor": (
         r"【锚点：[^】]+】",
