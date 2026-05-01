@@ -343,7 +343,7 @@ def main():
                 st.session_state.response_times = []
                 client = st.session_state.get("client_name", "")
                 if client:
-                    save_archive(client, [])
+                    save_archive(client, selected_kb, [])
                 st.rerun()
         with col2:
             if st.session_state.get("messages"):
@@ -454,7 +454,7 @@ def main():
 
         # 自动保存到客户档案
         if st.session_state.get("client_name"):
-            save_archive(st.session_state.client_name, st.session_state.messages)
+            save_archive(st.session_state.client_name, selected_kb, st.session_state.messages)
 
         st.rerun()
 
