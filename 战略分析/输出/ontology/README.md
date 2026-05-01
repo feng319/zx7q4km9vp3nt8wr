@@ -13,6 +13,7 @@ ontology/
 ├── spec.md                      # 应用规格说明
 ├── mapping.md                   # SKU路由 — 找到正确的知识
 ├── eureka.md                    # 创意洞察和功能构想
+├── chunk_to_sku.json            # chunk 到 SKU 的候选映射
 ├── ontology_manifest.json       # 组装元数据
 ├── chat_log.json                # 对话记录
 └── skus/
