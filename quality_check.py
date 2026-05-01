@@ -223,6 +223,53 @@ def analyze_sku_duplicates(kb_dir: Path) -> dict:
     }
 
 
+def analyze_readme(kb_dir: Path, actual_sku: dict) -> dict:
+    """Stage 3/4: README.md 质量检查"""
+    path = kb_dir / "输出" / "ontology" / "README.md"
+    text = read_text(path)
+    if not text:
+        return {"exists": False}
+
+    issues: list[str] = []
+
+    # 1. 不应提及残留锚点（remaining_anchor 已全部清零）
+    anchor_mentions = re.findall(r"残留锚点|【锚点", text)
+    if anchor_mentions:
+        issues.append(f"残留锚点误导信息: {len(anchor_mentions)} 处")
+
+    # 2. Agent 查询协议表应包含 [chunk:] 解析链路
+    has_chunk_protocol = "chunk_to_sku.json" in text and ("步骤1" in text or "步骤" in text)
+
+    # 3. spec.md 引用格式应为"两类引用"（非"三类引用"）
+    has_three_types = bool(re.search(r"三类引用", text))
+
+    # 4. 统计数据与实际 SKU 数量一致性
+    stat_mismatches: list[str] = []
+    factual_match = re.search(r"事实型SKU.*?:\s*(\d+)", text)
+    procedural_match = re.search(r"程序型SKU.*?:\s*(\d+)", text)
+    if factual_match:
+        stated = int(factual_match.group(1))
+        actual = actual_sku.get("factual_count", 0)
+        if stated != actual:
+            stat_mismatches.append(f"事实型: README={stated}, 实际={actual}")
+    if procedural_match:
+        stated = int(procedural_match.group(1))
+        actual = actual_sku.get("procedural_count", 0)
+        if stated != actual:
+            stat_mismatches.append(f"程序型: README={stated}, 实际={actual}")
+
+    return {
+        "exists": True,
+        "chars": len(text),
+        "anchor_mentions": len(anchor_mentions),
+        "has_chunk_protocol": has_chunk_protocol,
+        "has_three_types_ref": has_three_types,
+        "stat_mismatches": stat_mismatches,
+        "issues": issues,
+        "all_pass": len(issues) == 0 and not has_three_types and not stat_mismatches and has_chunk_protocol,
+    }
+
+
 def analyze_mapping(kb_dir: Path) -> dict:
     """Stage 3/4: mapping.md 质量"""
     path = kb_dir / "输出" / "ontology" / "mapping.md"
