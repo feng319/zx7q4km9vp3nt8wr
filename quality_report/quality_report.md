@@ -1,0 +1,181 @@
+---
+
+## 总览对比
+
+| 指标 | 商业模式资本 | 战略分析 | 新能源 |
+|------|------------|---------|--------|
+| SKUs | 960 | 175 | 364 |
+| Chunks | 58 | 7 | 27 |
+| Chunk 覆盖率 | 100.0% | 100.0% | 100.0% |
+| Spec 大小 | 13482 chars | 6087 chars | 12295 chars |
+| 剩余锚点 | 0 | 0 | 0 |
+| Spec SKU 引用 | 104 | 52 | 105 |
+| Eureka Chunk 引用 | 0 | 0 | 0 |
+| Phase 1 确认 | NO | NO | NO |
+
+# 知识库质量分析报告
+
+分析时间: 2026-05-01
+
+
+---
+## 商业模式资本
+
+### Stage 3: SKU 分布
+
+| 分类 | 数量 | 平均大小 | 最小 | 最大 |
+|------|------|---------|------|------|
+| factual | 616 | 957B | 140B | 7641B |
+| procedural | 344 | 0B | 0B | 0B |
+| relational | 0 | 0B | 0B | 0B |
+| **总计** | **960** | | | |
+
+### Stage 3: Chunk 覆盖率
+
+- 总 chunks: 58
+- 有 SKU 映射: 58
+- 空映射: 0
+- 覆盖率: **100.0%** [PASS]
+
+### Stage 3: Eureka.md
+
+- 大小: 16728 chars
+- Chunk 引用: 0 total, 0 unique
+- 章节数: 141
+- 前缀漂移: 0 [PASS]
+### Stage 3: SKU 重复检测
+
+- 总 SKU: 962
+- 重复名称: 4 [FAIL]
+- 重复 ID: 0 [FAIL]
+- 空名称: 0
+- 空描述: 0
+
+### Stage 3/4: Mapping.md
+
+- 大小: 49322 chars
+- 章节数: 25
+- SKU 条目: 944
+
+### Stage 4: Spec.md
+
+- 大小: 13482 chars
+- 章节结构: H1=1, H2=3, H3=5
+- 剩余锚点: 0 (unique: 0) [PASS]
+- Chunk 引用: 51 (unique: 39)
+- SKU 引用: 143 (unique: 104)
+- SKU 覆盖率: 10.8% (spec引用 / ontology总SKU)
+### Stage 4: Chat Log
+
+- 开始时间: 2026-04-30T23:19:24
+- 轮次: 5/5
+- 用户确认: False
+- 消息数: 14 (user=6, assistant=7)
+
+---
+## 战略分析
+
+### Stage 3: SKU 分布
+
+| 分类 | 数量 | 平均大小 | 最小 | 最大 |
+|------|------|---------|------|------|
+| factual | 129 | 597B | 124B | 2696B |
+| procedural | 46 | 0B | 0B | 0B |
+| relational | 0 | 0B | 0B | 0B |
+| **总计** | **175** | | | |
+
+### Stage 3: Chunk 覆盖率
+
+- 总 chunks: 7
+- 有 SKU 映射: 7
+- 空映射: 0
+- 覆盖率: **100.0%** [PASS]
+
+### Stage 3: Eureka.md
+
+- 大小: 1781 chars
+- Chunk 引用: 0 total, 0 unique
+- 章节数: 14
+- 前缀漂移: 0 [PASS]
+### Stage 3: SKU 重复检测
+
+- 总 SKU: 177
+- 重复名称: 0 [PASS]
+- 重复 ID: 0 [PASS]
+- 空名称: 0
+- 空描述: 0
+
+### Stage 3/4: Mapping.md
+
+- 大小: 9125 chars
+- 章节数: 21
+- SKU 条目: 175
+
+### Stage 4: Spec.md
+
+- 大小: 6087 chars
+- 章节结构: H1=1, H2=6, H3=13
+- 剩余锚点: 0 (unique: 0) [PASS]
+- Chunk 引用: 12 (unique: 2)
+- SKU 引用: 55 (unique: 52)
+- SKU 覆盖率: 29.7% (spec引用 / ontology总SKU)
+### Stage 4: Chat Log
+
+- 开始时间: 2026-04-30T22:48:24
+- 轮次: 0/5
+- 用户确认: False
+- 消息数: 0 (user=0, assistant=0)
+
+---
+## 新能源
+
+### Stage 3: SKU 分布
+
+| 分类 | 数量 | 平均大小 | 最小 | 最大 |
+|------|------|---------|------|------|
+| factual | 271 | 653B | 146B | 2255B |
+| procedural | 93 | 0B | 0B | 0B |
+| relational | 0 | 0B | 0B | 0B |
+| **总计** | **364** | | | |
+
+### Stage 3: Chunk 覆盖率
+
+- 总 chunks: 27
+- 有 SKU 映射: 27
+- 空映射: 0
+- 覆盖率: **100.0%** [PASS]
+
+### Stage 3: Eureka.md
+
+- 大小: 9512 chars
+- Chunk 引用: 0 total, 0 unique
+- 章节数: 33
+- 前缀漂移: 0 [PASS]
+### Stage 3: SKU 重复检测
+
+- 总 SKU: 366
+- 重复名称: 0 [PASS]
+- 重复 ID: 0 [PASS]
+- 空名称: 0
+- 空描述: 0
+
+### Stage 3/4: Mapping.md
+
+- 大小: 24026 chars
+- 章节数: 18
+- SKU 条目: 364
+
+### Stage 4: Spec.md
+
+- 大小: 12295 chars
+- 章节结构: H1=1, H2=5, H3=5
+- 剩余锚点: 0 (unique: 0) [PASS]
+- Chunk 引用: 25 (unique: 21)
+- SKU 引用: 122 (unique: 105)
+- SKU 覆盖率: 28.8% (spec引用 / ontology总SKU)
+### Stage 4: Chat Log
+
+- 开始时间: 2026-05-01T08:21:09
+- 轮次: 5/5
+- 用户确认: False
+- 消息数: 14 (user=6, assistant=7)
