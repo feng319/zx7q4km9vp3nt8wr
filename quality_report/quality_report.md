@@ -10,7 +10,7 @@
 | Spec 大小 | 13482 chars | 6087 chars | 12295 chars |
 | 剩余锚点 | 0 | 0 | 0 |
 | Spec SKU 引用 | 104 | 52 | 105 |
-| Eureka Chunk 引用 | 0 | 0 | 0 |
+| Eureka Chunk 引用 | 42 | 3 | 22 |
 | Phase 1 确认 | NO | NO | NO |
 
 # 知识库质量分析报告
@@ -40,7 +40,7 @@
 ### Stage 3: Eureka.md
 
 - 大小: 16728 chars
-- Chunk 引用: 0 total, 0 unique
+- Chunk 引用: 131 total, 42 unique
 - 章节数: 141
 - 前缀漂移: 0 [PASS]
 ### Stage 3: SKU 重复检测
@@ -80,6 +80,7 @@
 | Fix 5: sku_xxx-yyy unexpanded range | PASS | 0 |
 | Extra: 【chunk: xxx】 Chinese bracket residue | PASS | 0 |
 | Extra: 【skus/...】 Chinese bracket residue | PASS | 0 |
+| Extra: SKU ref followed by 、(should be newline-separated) | PASS | 0 |
 | Info: remaining unresolved anchors | PASS | 0 |
 
 - **结论: PASS**
@@ -113,7 +114,7 @@
 ### Stage 3: Eureka.md
 
 - 大小: 1781 chars
-- Chunk 引用: 0 total, 0 unique
+- Chunk 引用: 14 total, 3 unique
 - 章节数: 14
 - 前缀漂移: 0 [PASS]
 ### Stage 3: SKU 重复检测
@@ -153,6 +154,7 @@
 | Fix 5: sku_xxx-yyy unexpanded range | PASS | 0 |
 | Extra: 【chunk: xxx】 Chinese bracket residue | PASS | 0 |
 | Extra: 【skus/...】 Chinese bracket residue | PASS | 0 |
+| Extra: SKU ref followed by 、(should be newline-separated) | PASS | 0 |
 | Info: remaining unresolved anchors | PASS | 0 |
 
 - **结论: PASS**
@@ -186,7 +188,7 @@
 ### Stage 3: Eureka.md
 
 - 大小: 9512 chars
-- Chunk 引用: 0 total, 0 unique
+- Chunk 引用: 33 total, 22 unique
 - 章节数: 33
 - 前缀漂移: 0 [PASS]
 ### Stage 3: SKU 重复检测
@@ -226,6 +228,7 @@
 | Fix 5: sku_xxx-yyy unexpanded range | PASS | 0 |
 | Extra: 【chunk: xxx】 Chinese bracket residue | PASS | 0 |
 | Extra: 【skus/...】 Chinese bracket residue | PASS | 0 |
+| Extra: SKU ref followed by 、(should be newline-separated) | PASS | 0 |
 | Info: remaining unresolved anchors | PASS | 0 |
 
 - **结论: PASS**
