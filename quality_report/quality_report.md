@@ -70,17 +70,17 @@
 
 | 检查项 | 结果 | 数量 |
 |--------|------|------|
-| [chunk: xxx]] 多余右括号 | PASS | 0 |
-| 【锚点：[chunk: ...]...】 复合锚点 | PASS | 0 |
-| 【锚点：skus/...】 复合锚点 | PASS | 0 |
-| SKU-SKU 零空白粘连 | PASS | 0 |
-| SKU-chunk 零空白粘连 | PASS | 0 |
-| chunk-SKU 零空白粘连 | PASS | 0 |
-| 空格分隔的 SKU 引用应换行 | PASS | 0 |
-| sku_xxx-yyy 未展开范围 | PASS | 0 |
-| 【chunk: xxx】 中文括号残留 | PASS | 0 |
-| 【skus/...】 中文括号残留 | PASS | 0 |
-| 剩余未解析锚点（仅 INFO） | PASS | 0 |
+| Fix 1/2: [chunk: xxx]] extra closing bracket | PASS | 0 |
+| Fix 2/6: 【锚点：[chunk: ...]...】 compound anchor | PASS | 0 |
+| Fix 2/6: 【锚点：skus/...】 compound anchor | PASS | 0 |
+| Fix 3: SKU-SKU zero-width concatenation | PASS | 0 |
+| Fix 3: SKU-chunk zero-width concatenation | PASS | 0 |
+| Fix 3: chunk-SKU zero-width concatenation | PASS | 0 |
+| Fix 4: space-separated SKU refs on same line | PASS | 0 |
+| Fix 5: sku_xxx-yyy unexpanded range | PASS | 0 |
+| Extra: 【chunk: xxx】 Chinese bracket residue | PASS | 0 |
+| Extra: 【skus/...】 Chinese bracket residue | PASS | 0 |
+| Info: remaining unresolved anchors | PASS | 0 |
 
 - **结论: PASS**
 
@@ -143,17 +143,17 @@
 
 | 检查项 | 结果 | 数量 |
 |--------|------|------|
-| [chunk: xxx]] 多余右括号 | PASS | 0 |
-| 【锚点：[chunk: ...]...】 复合锚点 | PASS | 0 |
-| 【锚点：skus/...】 复合锚点 | PASS | 0 |
-| SKU-SKU 零空白粘连 | PASS | 0 |
-| SKU-chunk 零空白粘连 | PASS | 0 |
-| chunk-SKU 零空白粘连 | PASS | 0 |
-| 空格分隔的 SKU 引用应换行 | PASS | 0 |
-| sku_xxx-yyy 未展开范围 | PASS | 0 |
-| 【chunk: xxx】 中文括号残留 | PASS | 0 |
-| 【skus/...】 中文括号残留 | PASS | 0 |
-| 剩余未解析锚点（仅 INFO） | PASS | 0 |
+| Fix 1/2: [chunk: xxx]] extra closing bracket | PASS | 0 |
+| Fix 2/6: 【锚点：[chunk: ...]...】 compound anchor | PASS | 0 |
+| Fix 2/6: 【锚点：skus/...】 compound anchor | PASS | 0 |
+| Fix 3: SKU-SKU zero-width concatenation | PASS | 0 |
+| Fix 3: SKU-chunk zero-width concatenation | PASS | 0 |
+| Fix 3: chunk-SKU zero-width concatenation | PASS | 0 |
+| Fix 4: space-separated SKU refs on same line | PASS | 0 |
+| Fix 5: sku_xxx-yyy unexpanded range | PASS | 0 |
+| Extra: 【chunk: xxx】 Chinese bracket residue | PASS | 0 |
+| Extra: 【skus/...】 Chinese bracket residue | PASS | 0 |
+| Info: remaining unresolved anchors | PASS | 0 |
 
 - **结论: PASS**
 
@@ -216,17 +216,17 @@
 
 | 检查项 | 结果 | 数量 |
 |--------|------|------|
-| [chunk: xxx]] 多余右括号 | PASS | 0 |
-| 【锚点：[chunk: ...]...】 复合锚点 | PASS | 0 |
-| 【锚点：skus/...】 复合锚点 | PASS | 0 |
-| SKU-SKU 零空白粘连 | PASS | 0 |
-| SKU-chunk 零空白粘连 | PASS | 0 |
-| chunk-SKU 零空白粘连 | PASS | 0 |
-| 空格分隔的 SKU 引用应换行 | PASS | 0 |
-| sku_xxx-yyy 未展开范围 | PASS | 0 |
-| 【chunk: xxx】 中文括号残留 | PASS | 0 |
-| 【skus/...】 中文括号残留 | PASS | 0 |
-| 剩余未解析锚点（仅 INFO） | PASS | 0 |
+| Fix 1/2: [chunk: xxx]] extra closing bracket | PASS | 0 |
+| Fix 2/6: 【锚点：[chunk: ...]...】 compound anchor | PASS | 0 |
+| Fix 2/6: 【锚点：skus/...】 compound anchor | PASS | 0 |
+| Fix 3: SKU-SKU zero-width concatenation | PASS | 0 |
+| Fix 3: SKU-chunk zero-width concatenation | PASS | 0 |
+| Fix 3: chunk-SKU zero-width concatenation | PASS | 0 |
+| Fix 4: space-separated SKU refs on same line | PASS | 0 |
+| Fix 5: sku_xxx-yyy unexpanded range | PASS | 0 |
+| Extra: 【chunk: xxx】 Chinese bracket residue | PASS | 0 |
+| Extra: 【skus/...】 Chinese bracket residue | PASS | 0 |
+| Info: remaining unresolved anchors | PASS | 0 |
 
 - **结论: PASS**
 

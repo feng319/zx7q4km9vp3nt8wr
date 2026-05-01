@@ -150,8 +150,8 @@ def analyze_spec(kb_dir: Path) -> dict:
     h2s = re.findall(r"^## .+", text, re.MULTILINE)
     h3s = re.findall(r"^### .+", text, re.MULTILINE)
 
-    # 六项污染检查
-    checks = validate_spec(text)
+    # 污染检查（复用 spec_validator.CHECKS）
+    checks = validate_spec_detail(text)
     critical_fails = [c for c in checks if c["status"] == "FAIL"]
 
     return {
