@@ -258,6 +258,17 @@ def analyze_readme(kb_dir: Path, actual_sku: dict) -> dict:
         if stated != actual:
             stat_mismatches.append(f"程序型: README={stated}, 实际={actual}")
 
+    # 5. Agent 查询协议表中 SKU 引用不应带方括号（裸路径才是正确格式）
+    bracket_sku_refs = re.findall(r"\[skus/(?:factual|procedural|relational)/", text)
+
+    # 6. 目录结构中列出的文件应实际存在（检查 chunks_index.json 等幽灵文件）
+    ontology_dir = kb_dir / "输出" / "ontology"
+    ghost_files: list[str] = []
+    for listed_file in re.findall(r"├── (\S+)\.json|└── (\S+)\.json", text):
+        fname = next(g for g in listed_file if g)
+        if not (ontology_dir / f"{fname}.json").exists():
+            ghost_files.append(f"{fname}.json")
+
     return {
         "exists": True,
         "chars": len(text),
@@ -265,8 +276,17 @@ def analyze_readme(kb_dir: Path, actual_sku: dict) -> dict:
         "has_chunk_protocol": has_chunk_protocol,
         "has_three_types_ref": has_three_types,
         "stat_mismatches": stat_mismatches,
+        "bracket_sku_refs": len(bracket_sku_refs),
+        "ghost_files": ghost_files,
         "issues": issues,
-        "all_pass": len(issues) == 0 and not has_three_types and not stat_mismatches and has_chunk_protocol,
+        "all_pass": (
+            len(issues) == 0
+            and not has_three_types
+            and not stat_mismatches
+            and has_chunk_protocol
+            and len(bracket_sku_refs) == 0
+            and len(ghost_files) == 0
+        ),
     }
 
 
@@ -386,6 +406,10 @@ def main():
                     report_lines.append(f"  - {m}")
             else:
                 report_lines.append(f"- 统计一致性: [PASS]")
+            bracket_status = "PASS" if readme["bracket_sku_refs"] == 0 else "FAIL"
+            report_lines.append(f"- SKU 引用方括号误用: {readme['bracket_sku_refs']} [{bracket_status}]")
+            ghost_status = "PASS" if not readme["ghost_files"] else "FAIL"
+            report_lines.append(f"- 幽灵文件（目录结构中列出但不存在）: {', '.join(readme['ghost_files']) if readme['ghost_files'] else '无'} [{ghost_status}]")
             readme_status = "PASS" if readme["all_pass"] else "FAIL"
             report_lines.append(f"- **结论: {readme_status}**\n")
         else:
