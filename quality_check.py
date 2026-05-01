@@ -378,10 +378,18 @@ def main():
             report_lines.append(f"- 剩余锚点: {spec['anchors_remaining']} (unique: {spec['anchors_unique']}) [{anchor_status}]")
             report_lines.append(f"- Chunk 引用: {spec['chunk_refs']} (unique: {spec['chunk_refs_unique']})")
             report_lines.append(f"- SKU 引用: {spec['sku_refs']} (unique: {spec['sku_refs_unique']})")
-            # Coverage: what % of ontology SKUs are referenced in spec
             if sku["total"] > 0:
                 cov = round(spec["sku_refs_unique"] / sku["total"] * 100, 1)
                 report_lines.append(f"- SKU 覆盖率: {cov}% (spec引用 / ontology总SKU)")
+
+            # 六项污染检查结果
+            report_lines.append(f"\n#### Spec 污染检查\n")
+            report_lines.append(f"| 检查项 | 结果 | 数量 |")
+            report_lines.append(f"|--------|------|------|")
+            for c in spec["checks"]:
+                report_lines.append(f"| {c['desc']} | {c['status']} | {c['count']} |")
+            pass_fail = "PASS" if spec["all_pass"] else f"FAIL ({spec['critical_fails']}项)"
+            report_lines.append(f"\n- **结论: {pass_fail}**\n")
         else:
             report_lines.append("- ⚠ 文件不存在\n")
 

@@ -65,6 +65,25 @@
 - Chunk 引用: 51 (unique: 39)
 - SKU 引用: 143 (unique: 104)
 - SKU 覆盖率: 10.8% (spec引用 / ontology总SKU)
+
+#### Spec 污染检查
+
+| 检查项 | 结果 | 数量 |
+|--------|------|------|
+| [chunk: xxx]] 多余右括号 | PASS | 0 |
+| 【锚点：[chunk: ...]...】 复合锚点 | PASS | 0 |
+| 【锚点：skus/...】 复合锚点 | PASS | 0 |
+| SKU-SKU 零空白粘连 | PASS | 0 |
+| SKU-chunk 零空白粘连 | PASS | 0 |
+| chunk-SKU 零空白粘连 | PASS | 0 |
+| 空格分隔的 SKU 引用应换行 | PASS | 0 |
+| sku_xxx-yyy 未展开范围 | PASS | 0 |
+| 【chunk: xxx】 中文括号残留 | PASS | 0 |
+| 【skus/...】 中文括号残留 | PASS | 0 |
+| 剩余未解析锚点（仅 INFO） | PASS | 0 |
+
+- **结论: PASS**
+
 ### Stage 4: Chat Log
 
 - 开始时间: 2026-04-30T23:19:24
@@ -119,6 +138,25 @@
 - Chunk 引用: 12 (unique: 2)
 - SKU 引用: 55 (unique: 52)
 - SKU 覆盖率: 29.7% (spec引用 / ontology总SKU)
+
+#### Spec 污染检查
+
+| 检查项 | 结果 | 数量 |
+|--------|------|------|
+| [chunk: xxx]] 多余右括号 | PASS | 0 |
+| 【锚点：[chunk: ...]...】 复合锚点 | PASS | 0 |
+| 【锚点：skus/...】 复合锚点 | PASS | 0 |
+| SKU-SKU 零空白粘连 | PASS | 0 |
+| SKU-chunk 零空白粘连 | PASS | 0 |
+| chunk-SKU 零空白粘连 | PASS | 0 |
+| 空格分隔的 SKU 引用应换行 | PASS | 0 |
+| sku_xxx-yyy 未展开范围 | PASS | 0 |
+| 【chunk: xxx】 中文括号残留 | PASS | 0 |
+| 【skus/...】 中文括号残留 | PASS | 0 |
+| 剩余未解析锚点（仅 INFO） | PASS | 0 |
+
+- **结论: PASS**
+
 ### Stage 4: Chat Log
 
 - 开始时间: 2026-04-30T22:48:24
@@ -173,6 +211,25 @@
 - Chunk 引用: 25 (unique: 21)
 - SKU 引用: 122 (unique: 105)
 - SKU 覆盖率: 28.8% (spec引用 / ontology总SKU)
+
+#### Spec 污染检查
+
+| 检查项 | 结果 | 数量 |
+|--------|------|------|
+| [chunk: xxx]] 多余右括号 | PASS | 0 |
+| 【锚点：[chunk: ...]...】 复合锚点 | PASS | 0 |
+| 【锚点：skus/...】 复合锚点 | PASS | 0 |
+| SKU-SKU 零空白粘连 | PASS | 0 |
+| SKU-chunk 零空白粘连 | PASS | 0 |
+| chunk-SKU 零空白粘连 | PASS | 0 |
+| 空格分隔的 SKU 引用应换行 | PASS | 0 |
+| sku_xxx-yyy 未展开范围 | PASS | 0 |
+| 【chunk: xxx】 中文括号残留 | PASS | 0 |
+| 【skus/...】 中文括号残留 | PASS | 0 |
+| 剩余未解析锚点（仅 INFO） | PASS | 0 |
+
+- **结论: PASS**
+
 ### Stage 4: Chat Log
 
 - 开始时间: 2026-05-01T08:21:09
