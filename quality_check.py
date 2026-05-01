@@ -464,7 +464,7 @@ def main():
         vals = []
         for s in summary_table:
             v = s[key]
-            if key == "confirmed":
+            if key in ("confirmed", "readme_pass"):
                 vals.append("YES" if v else "NO")
             elif key == "anchors" and v == -1:
                 vals.append("N/A")

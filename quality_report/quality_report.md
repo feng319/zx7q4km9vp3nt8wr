@@ -12,6 +12,7 @@
 | Spec SKU 引用 | 104 | 52 | 105 |
 | Eureka Chunk 引用 | 42 | 3 | 22 |
 | Phase 1 确认 | NO | NO | NO |
+| README 质量 | NO | YES | YES |
 
 # 知识库质量分析报告
 
@@ -56,6 +57,17 @@
 - 大小: 49322 chars
 - 章节数: 25
 - SKU 条目: 944
+
+### Stage 3/4: README.md
+
+- 大小: 2197 chars
+- 残留锚点提及: 0 [PASS]
+- [chunk:] 协议链路: 有 [PASS]
+- 引用类型正确（两类）: 是 [PASS]
+- ⚠ 统计不一致:
+  - 事实型: README=0, 实际=616
+  - 程序型: README=0, 实际=344
+- **结论: FAIL**
 
 ### Stage 4: Spec.md
 
@@ -131,6 +143,15 @@
 - 章节数: 21
 - SKU 条目: 175
 
+### Stage 3/4: README.md
+
+- 大小: 2146 chars
+- 残留锚点提及: 0 [PASS]
+- [chunk:] 协议链路: 有 [PASS]
+- 引用类型正确（两类）: 是 [PASS]
+- 统计一致性: [PASS]
+- **结论: PASS**
+
 ### Stage 4: Spec.md
 
 - 大小: 6087 chars
@@ -204,6 +225,15 @@
 - 大小: 24026 chars
 - 章节数: 18
 - SKU 条目: 364
+
+### Stage 3/4: README.md
+
+- 大小: 2251 chars
+- 残留锚点提及: 0 [PASS]
+- [chunk:] 协议链路: 有 [PASS]
+- 引用类型正确（两类）: 是 [PASS]
+- 统计一致性: [PASS]
+- **结论: PASS**
 
 ### Stage 4: Spec.md
 
