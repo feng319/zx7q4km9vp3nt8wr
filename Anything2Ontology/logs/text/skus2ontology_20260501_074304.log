@@ -14,3 +14,27 @@
 2026-04-30T23:43:05.103410Z [info     ] slug→path inline resolution    [skus2ontology.chatbot] matched=364 total_lines=384
 2026-04-30T23:43:05.103410Z [info     ] Loaded mapping.md (compressed) [skus2ontology.chatbot] compressed_chars=25797 original_chars=24026
 2026-04-30T23:43:05.103410Z [info     ] Loaded eureka.md               [skus2ontology.chatbot] chars=9512
+2026-05-01T00:05:04.907382Z [info     ] Built SKU index summary        [skus2ontology.chatbot] chars=24641 sku_count=366
+2026-05-01T00:11:12.774786Z [error    ] Phase 2: LLM returned empty response [skus2ontology.chatbot]
+2026-05-01T00:11:12.774786Z [warning  ] Phase 2 anchor replacement failed, using draft with anchors [skus2ontology.chatbot]
+2026-05-01T00:11:12.775797Z [info     ] unwrap_resolved_anchors        [skus2ontology.chatbot] after=413 before=413 unwrapped=0
+2026-05-01T00:11:12.777938Z [info     ] Remaining anchors              [skus2ontology.chatbot] count=413 sample=['【锚点：评估同一集团内新能源场站是否满足集中报价准入条件的方法论，泛化为企业能力自评框架】', '【锚点：系统识别和评估市场机会的流程】', '【锚点：集中报价的适用范围、身份约束和规模约束及其反垄断意义】', '【锚点：了解《关于优化集中式新能源发电企业市场报价的通知（试行）》的发布机构、文号及核心目标】', '【锚点：集中报价的适用范围、身份约束和规模约束及其反垄断意义】', '【锚点：理解集中报价模式下“四不改变”原则如何实现金融与物理解耦】', '【锚点：集中报价的退出限制与公示要求】', '【锚点：中标电量分解到各物理场站的算法原则与优劣】', '【锚点：比较集中报价改革前后市场结构变化】', '【锚点：对比中国集中报价政策与国际成熟电力市场聚合模式】']
+2026-05-01T00:11:12.779110Z [info     ] Backed up existing spec.md     [skus2ontology.chatbot] backup='G:\\Program Files\\AI coding\\知识萃取\\新能源\\输出\\ontology\\spec.md.bak.20260501_081112'
+2026-05-01T00:11:12.780513Z [info     ] Saved spec.md                  [skus2ontology.chatbot] chars=21258 path='G:\\Program Files\\AI coding\\知识萃取\\新能源\\输出\\ontology\\spec.md'
+2026-05-01T00:11:12.781518Z [info     ] spec_check                     [skus2ontology.spec_validator] check=extra_chunk_bracket count=0 samples=[] status=PASS
+2026-05-01T00:11:12.781518Z [info     ] spec_check                     [skus2ontology.spec_validator] check=anchor_wrapping_chunk count=0 samples=[] status=PASS
+2026-05-01T00:11:12.781518Z [info     ] spec_check                     [skus2ontology.spec_validator] check=anchor_wrapping_sku count=0 samples=[] status=PASS
+2026-05-01T00:11:12.781518Z [info     ] spec_check                     [skus2ontology.spec_validator] check=sku_sku_concat count=0 samples=[] status=PASS
+2026-05-01T00:11:12.781518Z [info     ] spec_check                     [skus2ontology.spec_validator] check=sku_chunk_concat count=0 samples=[] status=PASS
+2026-05-01T00:11:12.782723Z [info     ] spec_check                     [skus2ontology.spec_validator] check=chunk_sku_concat count=0 samples=[] status=PASS
+2026-05-01T00:11:12.782723Z [info     ] spec_check                     [skus2ontology.spec_validator] check=sku_space_concat count=0 samples=[] status=PASS
+2026-05-01T00:11:12.782723Z [info     ] spec_check                     [skus2ontology.spec_validator] check=sku_range count=0 samples=[] status=PASS
+2026-05-01T00:11:12.782723Z [info     ] spec_check                     [skus2ontology.spec_validator] check=chinese_chunk_bracket count=0 samples=[] status=PASS
+2026-05-01T00:11:12.783772Z [info     ] spec_check                     [skus2ontology.spec_validator] check=chinese_sku_bracket count=0 samples=[] status=PASS
+2026-05-01T00:11:12.783772Z [info     ] spec_check                     [skus2ontology.spec_validator] check=remaining_anchor count=413 samples=['【锚点：评估同一集团内新能源场站是否满足集中报价准入条件的方法论，泛化为企业能力自评框架】', '【锚点：系统识别和评估市场机会的流程】', '【锚点：集中报价的适用范围、身份约束和规模约束及其反垄断意义】'] status=INFO
+2026-05-01T00:11:12.783772Z [info     ] spec_stats                     [skus2ontology.spec_validator] chunk_refs=60 chunk_unique=34 sku_refs=0 sku_unique=0
+2026-05-01T00:11:12.783772Z [info     ] spec_validator PASSED          [skus2ontology.spec_validator]
+2026-05-01T00:11:12.785899Z [info     ] Saved chat log                 [skus2ontology.pipeline] confirmed=False path='G:\\Program Files\\AI coding\\知识萃取\\新能源\\输出\\ontology\\chat_log.json' rounds=5
+2026-05-01T00:11:12.787943Z [info     ] Generated README.md            [skus2ontology.readme_generator] path='G:\\Program Files\\AI coding\\知识萃取\\新能源\\输出\\ontology\\README.md'
+2026-05-01T00:11:12.788950Z [info     ] Saved ontology manifest        [skus2ontology.pipeline] path='G:\\Program Files\\AI coding\\知识萃取\\新能源\\输出\\ontology\\ontology_manifest.json'
+2026-05-01T00:11:12.788950Z [info     ] Ontology pipeline complete     [skus2ontology.pipeline] duration_seconds=1688.7 has_readme=True has_spec=True total_files=736
