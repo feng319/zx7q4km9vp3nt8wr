@@ -51,11 +51,10 @@ ontology/
 
 ## spec.md 引用格式
 
-`spec.md` 中可能出现三类引用：
+`spec.md` 中可能出现两类引用：
 
 1. **直接 SKU 引用**：`skus/factual/sku_001`、`skus/procedural/skill_001` — 直接读取对应路径
 2. **chunk 引用**：`[chunk: 商业模式与资本运营_chunk_001]` — 先查 `chunk_to_sku.json` 中对应 chunk 的候选 SKU，再读取候选项的 `path`
-3. **残留锚点**：`【锚点：描述】` — 当前知识库暂无精确 SKU 对应，应作为待补知识或外部资源需求处理
 
 ## Agent 查询协议
 
@@ -65,7 +64,6 @@ ontology/
 |----------|----------|
 | `[skus/factual/sku_xxx]` 或 `[skus/procedural/skill_xxx]` | **直接读取** → `read_file` 对应的 `header.md` + content |
 | `[chunk: xxx_chunk_xxx]` | **Chunk 查询** → 步骤1：打开 `chunk_to_sku.json`，找到 chunk 键 → 步骤2：扫描所有条目的 `keywords` 和 `name`，找出语义匹配的条目 → 步骤3：读取匹配的条目（`rank` 仅作同等相关时的参考，不代表语义相关度）→ 步骤4：如无 keywords 匹配，退回读取 rank 1-3 兜底 |
-| `【锚点：洞察标题】`（未替换的残留锚点） | **Eureka 桥接** → 步骤1：在 `eureka.md` 中搜索洞察标题 → 步骤2：从方括号 `[...]` 中提取 chunk 标识 → 步骤3：打开 `chunk_to_sku.json`，找到 chunk 键 → 步骤4：用 keywords/name 筛选，每个 chunk 读取前3条 → 步骤5：合并后按 sku_id 去重 |
 | 主题级查询（无具体引用） | **Mapping** → 在 `mapping.md` 中找到相关分组，读取列出的 SKU 文件 |
 | 查看标签树、术语表和关系型知识 | **关系型** → 读取 `skus/relational/` 下的 label_tree.json、glossary.json |
 
