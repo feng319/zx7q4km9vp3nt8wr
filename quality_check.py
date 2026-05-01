@@ -262,12 +262,12 @@ def analyze_readme(kb_dir: Path, actual_sku: dict) -> dict:
     bracket_sku_refs = re.findall(r"\[skus/(?:factual|procedural|relational)/", text)
 
     # 6. 目录结构中列出的文件应实际存在（检查 chunks_index.json 等幽灵文件）
+    #    只匹配根目录直接子文件（行首 ├── 或 └──，排除子目录嵌套的 │ ├── 等）
     ontology_dir = kb_dir / "输出" / "ontology"
     ghost_files: list[str] = []
-    for listed_file in re.findall(r"├── (\S+)\.json|└── (\S+)\.json", text):
-        fname = next(g for g in listed_file if g)
-        if not (ontology_dir / f"{fname}.json").exists():
-            ghost_files.append(f"{fname}.json")
+    for listed_file in re.findall(r"(?:^├── |^└── )(\S+\.json)", text, re.MULTILINE):
+        if not (ontology_dir / listed_file).exists():
+            ghost_files.append(listed_file)
 
     return {
         "exists": True,
