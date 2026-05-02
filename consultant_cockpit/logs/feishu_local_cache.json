@@ -138,5 +138,33 @@
     "data": null,
     "timestamp": "2026-05-03T06:41:30.874066",
     "retry_suggested": true
+  },
+  {
+    "operation": "list_records",
+    "error": "网络超时",
+    "data": null,
+    "timestamp": "2026-05-03T06:43:15.872231",
+    "retry_suggested": true
+  },
+  {
+    "operation": "op1",
+    "error": "e1",
+    "data": null,
+    "timestamp": "2026-05-03T06:43:17.896008",
+    "retry_suggested": true
+  },
+  {
+    "operation": "op2",
+    "error": "e2",
+    "data": null,
+    "timestamp": "2026-05-03T06:43:17.896008",
+    "retry_suggested": true
+  },
+  {
+    "operation": "op",
+    "error": "e",
+    "data": null,
+    "timestamp": "2026-05-03T06:43:17.907513",
+    "retry_suggested": true
   }
 ]
