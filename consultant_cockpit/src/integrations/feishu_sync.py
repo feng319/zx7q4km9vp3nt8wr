@@ -192,7 +192,7 @@ class FeishuSync:
                     })
 
                     self._last_snapshot[rid] = record_json
-                    self.stats["change_count"] += 1
+                    self._update_stats("change_count", increment=1)
 
         except Exception as e:
             # 异常写入队列，主线程处理
