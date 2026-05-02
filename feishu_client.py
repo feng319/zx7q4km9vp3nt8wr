@@ -10,11 +10,13 @@ TABLE_ID = os.getenv("FEISHU_BITABLE_TABLE_ID")
 DOC_TEMPLATE_TOKEN = os.getenv("FEISHU_DOC_TEMPLATE_TOKEN")
 
 
-def _run_cli(args: list[str]) -> dict:
+def _run_cli(args: list[str], use_format: bool = True) -> dict:
     """统一执行 lark-cli 命令，返回 JSON。"""
     # Windows 需要使用 lark-cli.cmd
-    cmd = ["lark-cli.cmd"] + args + ["--format", "json"]
-    result = subprocess.run(cmd, capture_output=True, text=True, timeout=30, shell=True)
+    cmd = ["lark-cli.cmd"] + args
+    if use_format:
+        cmd += ["--format", "json"]
+    result = subprocess.run(cmd, capture_output=True, text=True, timeout=30, shell=True, encoding='utf-8')
     if result.returncode != 0:
         raise RuntimeError(f"lark-cli failed: {result.stderr}")
     return json.loads(result.stdout) if result.stdout else {}
