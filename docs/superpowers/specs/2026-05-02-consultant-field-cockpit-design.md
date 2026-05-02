@@ -1176,6 +1176,7 @@ $ lark-cli event list
 import threading
 import time
 import queue
+import json
 from typing import Callable, Dict, Any, List, Optional
 
 class FeishuSync:
@@ -1195,24 +1196,33 @@ class FeishuSync:
         # 线程安全队列：后台线程只写队列，不直接写 session_state
         self.change_queue = queue.Queue()
 
-        self._last_snapshot: Dict[str, Any] = {}
+        self._last_snapshot: Dict[str, str] = {}  # record_id -> JSON序列化后的字符串
         self._running = False
         self._thread: Optional[threading.Thread] = None
+        self._lock = threading.Lock()  # 保护 _running 和 _thread 的并发访问
 
     def start_listening(self):
         """启动后台轮询线程"""
-        if self._running:
-            return
+        with self._lock:
+            if self._running:
+                return
+            if self._thread is not None and self._thread.is_alive():
+                # 旧线程还在运行，等待其结束
+                self._running = False
+                self._thread.join(timeout=5)
 
-        self._running = True
-        self._thread = threading.Thread(target=self._poll_loop, daemon=True)
-        self._thread.start()
+            self._running = True
+            self._thread = threading.Thread(target=self._poll_loop, daemon=True)
+            self._thread.start()
 
     def stop_listening(self):
         """停止轮询线程"""
-        self._running = False
-        if self._thread:
-            self._thread.join(timeout=5)
+        with self._lock:
+            self._running = False
+            thread_to_join = self._thread
+
+        if thread_to_join is not None:
+            thread_to_join.join(timeout=5)
 
     def _poll_loop(self):
         """轮询主循环"""
@@ -1226,14 +1236,19 @@ class FeishuSync:
             records = self.feishu_client.list_records()
             for record in records:
                 rid = record.get("record_id")
-                if rid and self._last_snapshot.get(rid) != record:
+                if not rid:
+                    continue
+
+                # 使用 JSON 序列化进行比较，避免 datetime 等类型的误判
+                record_json = json.dumps(record, sort_keys=True, default=str)
+                if self._last_snapshot.get(rid) != record_json:
                     # 后台线程只写队列，不直接写 session_state
                     self.change_queue.put({
                         "record_id": rid,
                         "data": record,
                         "change_type": "update"
                     })
-                    self._last_snapshot[rid] = record
+                    self._last_snapshot[rid] = record_json
         except Exception as e:
             # 异常写入队列，主线程处理
             self.change_queue.put({
