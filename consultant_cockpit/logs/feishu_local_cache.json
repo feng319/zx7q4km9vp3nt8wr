@@ -1,0 +1,37 @@
+[
+  {
+    "operation": "list_records",
+    "error": "网络超时",
+    "data": null,
+    "timestamp": "2026-05-02T23:04:20.975025",
+    "retry_suggested": true
+  },
+  {
+    "operation": "op1",
+    "error": "e1",
+    "data": null,
+    "timestamp": "2026-05-02T23:04:22.994429",
+    "retry_suggested": true
+  },
+  {
+    "operation": "op2",
+    "error": "e2",
+    "data": null,
+    "timestamp": "2026-05-02T23:04:22.995452",
+    "retry_suggested": true
+  },
+  {
+    "operation": "op",
+    "error": "e",
+    "data": null,
+    "timestamp": "2026-05-02T23:04:22.996454",
+    "retry_suggested": true
+  },
+  {
+    "operation": "sync",
+    "error": "网络错误",
+    "data": null,
+    "timestamp": "2026-05-02T23:04:34.575697",
+    "retry_suggested": true
+  }
+]

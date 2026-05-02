@@ -1,0 +1,4 @@
+2026-05-02T23:04:31.023524 | stopped
+poll_count: 2
+change_count: 1
+error_count: 0
