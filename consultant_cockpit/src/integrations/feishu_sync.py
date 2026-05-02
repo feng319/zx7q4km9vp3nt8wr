@@ -61,7 +61,8 @@ class FeishuSync:
         self._thread: Optional[threading.Thread] = None
         self._lock = threading.Lock()  # 保护 _running 和 _thread 的并发访问
 
-        # 统计信息
+        # 统计信息（线程安全）
+        self._stats_lock = threading.Lock()
         self.stats = {
             "poll_count": 0,
             "change_count": 0,
