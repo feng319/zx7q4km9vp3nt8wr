@@ -46,10 +46,15 @@ class MockFeishuClientForSync:
 
 
 def mock_on_record_change(record_data, session_state):
-    """Mock 变更回调"""
-    if "processed_records" not in session_state:
-        session_state.processed_records = []
-    session_state.processed_records.append(record_data.get("record_id"))
+    """Mock 变更回调（支持 dict 和 object）"""
+    if isinstance(session_state, dict):
+        if "processed_records" not in session_state:
+            session_state["processed_records"] = []
+        session_state["processed_records"].append(record_data.get("record_id"))
+    else:
+        if not hasattr(session_state, "processed_records"):
+            session_state.processed_records = []
+        session_state.processed_records.append(record_data.get("record_id"))
 
 
 # ============= FeishuSyncMock 测试 =============
