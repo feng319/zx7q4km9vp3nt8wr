@@ -6,7 +6,13 @@
 
 **Architecture:** Streamlit本地应用(顾问作战层)+ 飞书多维表格(客户共识层)。采用垂直切片方式,Day 1跑通最小决策链(候选→共识→备忘录),Day 2补全功能+飞书集成,Day 3增强功能+验证。
 
-**Tech Stack:** Python 3.10+, Streamlit, OpenAI SDK, python-docx, lark-cli, Pydantic
+**Tech Stack:** Python 3.12 (系统安装), Streamlit, OpenAI SDK, python-docx, lark-cli, Pydantic
+
+**重要环境说明:**
+- 系统存在多个 Python 版本，必须使用 Python 3.12 (C:/Users/56839/AppData/Local/Programs/Python/Python312/python.exe)
+- 不依赖虚拟环境，依赖已安装到系统 Python 3.12
+- 启动命令: consultant_cockpit/start.bat 或 npm start (端口 8501)
+- 知识副驾: start_chat.bat 或 npm run chat (端口 8502)
 
 ---
 
