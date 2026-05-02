@@ -853,7 +853,8 @@ class FeishuClient:
         field_names = list(fields.keys())
         field_values = [fields[k] for k in field_names]
 
-        if existing:
+        # 防护：record_id 为 None 时走新建逻辑
+        if existing and existing.get("record_id") is not None:
             return _run_cli([
                 "base", "+record-upsert",
                 "--base-token", self.app_token,
@@ -862,6 +863,7 @@ class FeishuClient:
                 "--json", json.dumps(fields, ensure_ascii=False),
             ], use_format=False)
 
+        # 新建记录（包含 existing 为 None 或 record_id 为 None 的情况）
         return _run_cli([
             "base", "+record-batch-create",
             "--base-token", self.app_token,
