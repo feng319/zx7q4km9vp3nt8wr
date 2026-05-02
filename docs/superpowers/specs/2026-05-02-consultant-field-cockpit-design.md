@@ -1152,21 +1152,27 @@ PRESET_BUSINESS_TREE = {
 
 #### 11.2.1 技术方案选择
 
-**验证结论**：`lark-cli event list` 当前只显示 IM 事件。`lark-event` Skill（WebSocket 长连接）理论上支持 `drive.file.bitable_record_changed_v1`，但尚未完成本地验证。
+**验证结论**：WebSocket 事件订阅方案已验证可行！
 
+**验证结果**：
 ```
-$ lark-cli event list
-当前支持的事件类型:
-- im.message.receive_v1     # IM消息接收
-- im.message.read_v1        # IM消息已读
-- im.message.reaction_v1    # IM消息表情反应
+✅ 收到 drive.file.edit_v1 事件
+✅ 收到 drive.file.bitable_record_changed_v1 事件
+   - action: "record_added" | "record_modified" | "record_deleted"
+   - record_id: 变更记录ID
+   - table_id: 数据表ID
+   - field_id + field_value: 字段变更详情
 ```
 
-**飞书原生支持的事件**：`drive.file.bitable_record_changed_v1`（多维表格记录变更），但需要：
-1. 先调用"订阅云文档事件接口"
-2. 权限要求：`drive:drive:readonly` + `bitable:bitable:readonly`
+**主方案**：WebSocket 长连接（使用 `@larksuiteoapi/node-sdk`）
 
-**当前方案**：轮询为主（已验证可行），保留 WebSocket 升级路径（Day 3 结束前完成验证）。
+**前置条件**：
+1. 开发者后台配置：事件与回调 → 订阅方式 → 使用长连接接收事件
+2. 添加事件：`drive.file.bitable_record_changed_v1`、`drive.file.edit_v1`
+3. 权限要求：`bitable:app` 或 `drive:drive`
+4. 调用订阅API：`POST drive/v1/files/:file_token/subscribe?file_type=bitable`
+
+**降级方案**：轮询（当 WebSocket 不可用时）
 
 #### 11.2.2 模块结构
 
