@@ -1646,19 +1646,34 @@ def render_battle_card_preview(battle_card):
     st.markdown(f"**日期**：{battle_card.date} | **顾问**：{battle_card.consultant or '未填写'}")
     st.markdown(f"**模式**：{'假设验证版' if battle_card.mode == 'hypothesis' else '信息补全版'}")
 
-    # 各区块内容
+    # 各区块内容 - 字段名与 _generate_hypothesis_version / _generate_info_building_version 输出一致
     content = battle_card.content
-    with st.expander("📌 客户背景", expanded=True):
-        st.markdown(content.get("background", "暂无"))
 
-    with st.expander("🎯 战略假设", expanded=True):
-        st.markdown(content.get("strategy_hypothesis", "暂无"))
-
-    with st.expander("📊 SKU分析", expanded=True):
-        st.markdown(content.get("sku_analysis", "暂无"))
-
-    with st.expander("❓ 追问清单", expanded=False):
-        st.markdown(content.get("followup_questions", "暂无"))
+    if battle_card.mode == "hypothesis":
+        # 验证假设版字段
+        with st.expander("🎯 诊断假设", expanded=True):
+            st.markdown(content.get("diagnosis_hypothesis", "暂无"))
+        with st.expander("📌 战略追问", expanded=True):
+            st.markdown(content.get("strategy_questions", "暂无"))
+        with st.expander("💼 商业模式追问", expanded=False):
+            st.markdown(content.get("business_questions", "暂无"))
+        with st.expander("🎤 口播台词", expanded=False):
+            st.markdown(content.get("demo_scripts", "暂无"))
+        with st.expander("🛡️ 风险话术", expanded=False):
+            st.markdown(content.get("risk_responses", "暂无"))
+    else:
+        # 信息建立版字段
+        with st.expander("📋 待确认字段", expanded=True):
+            missing = content.get("missing_fields", [])
+            st.markdown("\n".join(f"- {f}" for f in missing) if missing else "暂无")
+        with st.expander("🌲 战略追问树", expanded=True):
+            st.json(content.get("strategy_tree", {}))
+        with st.expander("📊 商业模式追问树", expanded=False):
+            st.json(content.get("business_tree", {}))
+        with st.expander("🎤 口播台词", expanded=False):
+            st.markdown(content.get("demo_scripts", "暂无"))
+        with st.expander("🛡️ 风险话术", expanded=False):
+            st.markdown(content.get("risk_responses", "暂无"))
 
 
 def render_sync_status(feishu_sync):
