@@ -1583,15 +1583,17 @@ def render_battle_card_tab(
         # 5. 操作按钮区
         col1, col2, col3 = st.columns(3)
         with col1:
-            # 下载 Word
-            if st.button("📥 下载Word", use_container_width=True):
-                word_bytes = battle_card_generator._render_to_word(battle_card)
-                st.download_button(
-                    label="确认下载",
-                    data=word_bytes,
-                    file_name=f"作战卡_{company}_{battle_card.date}.docx",
-                    mime="application/vnd.openxmlformats-officedocument.wordprocessingml.document"
-                )
+            # 下载 Word：直接使用 st.download_button，不要嵌套在 st.button 里
+            # word_bytes 存入 session_state 避免重复生成
+            if "battle_card_word_bytes" not in st.session_state:
+                st.session_state["battle_card_word_bytes"] = battle_card_generator._render_to_word(battle_card)
+            st.download_button(
+                label="📥 下载Word",
+                data=st.session_state["battle_card_word_bytes"],
+                file_name=f"作战卡_{battle_card.company}_{battle_card.date}.docx",
+                mime="application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+                use_container_width=True
+            )
 
         with col2:
             # 发送飞书
