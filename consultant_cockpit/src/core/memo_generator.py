@@ -112,6 +112,8 @@ class MemoGenerator:
         # 三、初步建议方向
         doc.add_heading('三、初步建议方向', level=1)
         for i, direction in enumerate(structure["chapters"]["初步建议方向"], 1):
-            doc.add_paragraph(f"方向{i}: {direction['方向']}")
+            # 剥离内部元数据后再写入Word
+            clean_direction = self._strip_metadata(direction)
+            doc.add_paragraph(f"方向{i}: {clean_direction['方向']}")
 
         doc.save(output_path)
