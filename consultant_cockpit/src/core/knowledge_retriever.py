@@ -72,6 +72,62 @@ class KnowledgeRetriever:
                 confidence="🟢",
                 stage="战略梳理",
                 recalled_at=datetime.now()
+            ),
+            SKUCard(
+                id="sku_004",
+                title="分布式光伏运营模式",
+                summary="分布式光伏的商业模式创新",
+                confidence="🟢",
+                stage="商业模式",
+                recalled_at=datetime.now()
+            ),
+            SKUCard(
+                id="sku_005",
+                title="重卡换电商业案例",
+                summary="重卡换电站的盈利模型",
+                confidence="🟡",
+                stage="商业模式",
+                recalled_at=datetime.now()
+            ),
+            SKUCard(
+                id="sku_006",
+                title="微电网运营案例",
+                summary="工业园区微电网运营实践",
+                confidence="🟢",
+                stage="战略梳理",
+                recalled_at=datetime.now()
+            ),
+            SKUCard(
+                id="sku_007",
+                title="综合能源服务转型",
+                summary="传统能源企业转型综合能源服务",
+                confidence="🟡",
+                stage="战略梳理",
+                recalled_at=datetime.now()
+            ),
+            SKUCard(
+                id="sku_008",
+                title="储能电站运营",
+                summary="独立储能电站的商业模式",
+                confidence="🟢",
+                stage="商业模式",
+                recalled_at=datetime.now()
+            ),
+            SKUCard(
+                id="sku_009",
+                title="电力交易代理",
+                summary="电力市场化交易代理服务",
+                confidence="🟢",
+                stage="战略梳理",
+                recalled_at=datetime.now()
+            ),
+            SKUCard(
+                id="sku_010",
+                title="需求响应聚合",
+                summary="需求响应资源聚合模式",
+                confidence="🟡",
+                stage="商业模式",
+                recalled_at=datetime.now()
             )
         ]
 
