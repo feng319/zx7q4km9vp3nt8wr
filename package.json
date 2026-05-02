@@ -3,12 +3,12 @@
   "version": "1.0.0",
   "description": "知识萃取项目",
   "scripts": {
-    "start": "powershell -Command \"& { $env:VIRTUAL_ENV = $null; & '../Anything2Ontology/.venv/Scripts/Activate.ps1'; streamlit run src/ui/main_app.py }\"",
-    "cockpit": "powershell -Command \"& { $env:VIRTUAL_ENV = $null; & '../Anything2Ontology/.venv/Scripts/Activate.ps1'; streamlit run src/ui/main_app.py }\"",
-    "test": "powershell -Command \"& { $env:VIRTUAL_ENV = $null; & '../Anything2Ontology/.venv/Scripts/Activate.ps1'; pytest tests/ -v }\"",
-    "test:chain": "powershell -Command \"& { $env:VIRTUAL_ENV = $null; & '../Anything2Ontology/.venv/Scripts/Activate.ps1'; pytest tests/test_consensus_chain.py -v }\"",
-    "test:candidate": "powershell -Command \"& { $env:VIRTUAL_ENV = $null; & '../Anything2Ontology/.venv/Scripts/Activate.ps1'; pytest tests/test_candidate_generator.py -v }\"",
-    "test:memo": "powershell -Command \"& { $env:VIRTUAL_ENV = $null; & '../Anything2Ontology/.venv/Scripts/Activate.ps1'; pytest tests/test_memo_generator.py -v }\""
+    "start": "cd consultant_cockpit && ../Anything2Ontology/.venv/Scripts/python.exe -m streamlit run src/ui/main_app.py",
+    "cockpit": "cd consultant_cockpit && ../Anything2Ontology/.venv/Scripts/python.exe -m streamlit run src/ui/main_app.py",
+    "test": "cd consultant_cockpit && ../Anything2Ontology/.venv/Scripts/python.exe -m pytest tests/ -v",
+    "test:chain": "cd consultant_cockpit && ../Anything2Ontology/.venv/Scripts/python.exe -m pytest tests/test_consensus_chain.py -v",
+    "test:candidate": "cd consultant_cockpit && ../Anything2Ontology/.venv/Scripts/python.exe -m pytest tests/test_candidate_generator.py -v",
+    "test:memo": "cd consultant_cockpit && ../Anything2Ontology/.venv/Scripts/python.exe -m pytest tests/test_memo_generator.py -v"
   },
   "keywords": [],
   "author": "",
