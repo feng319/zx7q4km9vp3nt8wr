@@ -43,7 +43,7 @@ def get_record_by_company(company: str) -> dict | None:
         "base", "+field-list",
         "--base-token", APP_TOKEN,
         "--table-id", TABLE_ID,
-    ], use_format=True)
+    ], use_format=False)
 
     field_names = [f["name"] for f in fields_data.get("data", {}).get("fields", [])]
 
