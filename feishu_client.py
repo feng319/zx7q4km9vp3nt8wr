@@ -38,12 +38,25 @@ def list_records() -> list[dict]:
 
 def get_record_by_company(company: str) -> dict | None:
     """按公司名查询单条记录。"""
+    # 首先获取字段映射
+    fields_data = _run_cli([
+        "base", "+field-list",
+        "--base-token", APP_TOKEN,
+        "--table-id", TABLE_ID,
+    ], use_format=True)
+
+    field_names = [f["name"] for f in fields_data.get("data", {}).get("fields", [])]
+
+    # 遍历记录查找
     for r in list_records():
-        # 适配记录格式
-        fields = r.get("fields", {})
-        if isinstance(fields, dict):
-            if fields.get("客户公司名") == company:
-                return r
+        # 记录是列表格式，需要转换为字典
+        if isinstance(r, list):
+            fields_dict = {}
+            for i, name in enumerate(field_names):
+                if i < len(r):
+                    fields_dict[name] = r[i]
+            if fields_dict.get("客户公司名") == company:
+                return {"record_id": None, "fields": fields_dict}  # 简化版本，record_id 需要从其他 API 获取
     return None
 
 
