@@ -43,7 +43,7 @@ class ConsensusChain:
                 self.feishu_client.sync_consensus_record(record.model_dump())
             except Exception as e:
                 # 飞书同步失败不影响本地记录
-                print(f"飞书同步失败: {e}")
+                _logger.warning(f"飞书同步失败: {e}")
 
     def get_record(self, record_id: str) -> Optional[ConsensusRecord]:
         """获取记录"""
