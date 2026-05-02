@@ -899,7 +899,11 @@ class FeishuClient:
         return filled / len(rules)
 
     def render_to_doc(self, company: str, doc_token: str = None) -> Dict:
-        """把多维表格记录渲染到云文档"""
+        """把多维表格记录渲染到云文档
+
+        TODO: Day 3 确认 doc_template.md 的占位符格式后完善
+        当前假设占位符格式为 {{字段名}}，需实际验证
+        """
         if doc_token is None:
             doc_token = self.doc_template_token
 
@@ -910,9 +914,10 @@ class FeishuClient:
 
         template = Path("doc_template.md").read_text(encoding="utf-8")
         rendered = template
+        # 占位符格式：{{字段名}}（待 Day 3 确认实际格式）
         for key in ["客户公司名", "产品线", "客户群体", "收入结构",
                     "毛利结构", "交付情况", "资源分布", "战略目标"]:
-            rendered = rendered.replace(f"{{{{{key}}}}}", str(f.get(key, "（待填充）")))
+            rendered = rendered.replace("{{" + key + "}}", str(f.get(key, "（待填充）")))
 
         return _run_cli([
             "docs", "+update",
