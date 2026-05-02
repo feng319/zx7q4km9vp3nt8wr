@@ -1,6 +1,6 @@
 # src/core/memo_generator.py
 from typing import Dict, List
-from .consensus_chain import ConsensusChain
+from consultant_cockpit.src.core.consensus_chain import ConsensusChain
 
 class MemoGenerator:
     """备忘录生成器(三层架构)"""
