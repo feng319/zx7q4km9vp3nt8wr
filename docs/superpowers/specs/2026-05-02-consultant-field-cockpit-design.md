@@ -973,4 +973,469 @@
 
 ---
 
-**文档锁定,可进入开发。**
+## 十一、Day 3 实施详细设计
+
+### 11.1 会前作战卡模块设计
+
+#### 11.1.1 模块结构
+
+```python
+# src/core/battle_card_generator.py
+"""会前作战卡生成器"""
+from dataclasses import dataclass
+from typing import Optional, List
+from docx import Document
+
+@dataclass
+class BattleCard:
+    """作战卡数据结构"""
+    company: str
+    date: str
+    consultant: str
+    mode: str  # "hypothesis" | "info_building"
+    completeness: float
+    content: dict  # 各区块内容
+
+class BattleCardGenerator:
+    """作战卡生成器"""
+
+    def __init__(self, feishu_client, llm_client):
+        self.feishu_client = feishu_client
+        self.llm_client = llm_client
+        # 复用 FeishuClient.calc_completeness，不单独实现
+
+    def generate(self, company: str) -> BattleCard:
+        """生成会前作战卡"""
+        # 1. 获取客户档案
+        profile = self.feishu_client.get_client_profile(company)
+
+        # 2. 计算完整度（复用 FeishuClient）
+        completeness = self.feishu_client.calc_completeness(profile)
+
+        # 3. 根据完整度选择模式
+        if completeness >= 0.6:
+            content = self._generate_hypothesis_version(profile)
+            mode = "hypothesis"
+        else:
+            content = self._generate_info_building_version(profile)
+            mode = "info_building"
+
+        return BattleCard(
+            company=company,
+            date=datetime.now().strftime("%Y-%m-%d"),
+            consultant="",
+            mode=mode,
+            completeness=completeness,
+            content=content
+        )
+
+    def _generate_hypothesis_version(self, profile: dict) -> dict:
+        """生成验证假设版（完整度≥60%）"""
+        # 数据流：规则过滤 → 优先级排序 → LLM润色(含约束prompt) → 硬约束校验
+
+        # 1. 规则过滤：根据角色×场景×痛点过滤SKU
+        candidate_skus = self._filter_skus(profile)
+
+        # 2. 优先级排序：加权计算Top 15
+        top_skus = self._rank_skus(candidate_skus, profile)
+
+        # 3. LLM润色：分批传入，转化为口播台词
+        #    Prompt包含五条硬约束（复用 memo_generator.polish_chapter）
+        content = {
+            "diagnosis_hypothesis": self._generate_hypothesis(top_skus[:3], profile),
+            "strategy_questions": self._generate_questions(top_skus[3:6], "战略梳理"),
+            "business_questions": self._generate_questions(top_skus[6:9], "商业模式"),
+            "demo_scripts": self._generate_scripts(top_skus[9:12]),
+            "risk_responses": self._generate_risk_responses()
+        }
+
+        # 4. 硬约束校验：确保诊断假设引用≥1个🟢/🟡SKU
+        self._validate_constraints(content, top_skus)
+
+        return content
+
+    def _generate_info_building_version(self, profile: dict) -> dict:
+        """生成信息建立版（完整度<60%）"""
+        # 追问树区分两种模式：
+        # - 预设追问树：固定分支，作战卡静态显示
+        # - 动态追问建议：右栏实时生成，顾问点击"我来写"触发
+
+        content = {
+            "missing_fields": self._identify_missing_fields(profile),
+            "strategy_tree": PRESET_STRATEGY_TREE,  # 预设固定分支
+            "business_tree": PRESET_BUSINESS_TREE,
+            "demo_scripts": self._generate_scripts(self._get_top_skus(profile)[:3]),
+            "risk_responses": self._generate_risk_responses()
+        }
+
+        return content
+
+    def _render_to_word(self, battle_card: BattleCard) -> bytes:
+        """渲染为Word文档"""
+        doc = Document()
+
+        # 标题区
+        title = doc.add_paragraph()
+        run = title.add_run(f"客户作战卡({'验证假设版' if battle_card.mode == 'hypothesis' else '信息建立版'})")
+        run.bold = True
+
+        # 各区块渲染...
+
+        return doc.save()
+```
+
+#### 11.1.2 风险话术设计
+
+**触发条件与素材来源**：
+
+| 话术 | 触发条件 | 素材来源 |
+|---|---|---|
+| "我们已经有方向了" | 客户明确表达已有倾向 | 固定模板："那您觉得现在最大的执行障碍是什么？" |
+| 客户问超出范围 | 问题涉及非诊断领域（如技术细节、合同条款） | 固定模板："这是关键问题，列入下阶段专项研究，一周内回复" |
+| 客户质疑专业性 | 客户对顾问/系统表示怀疑 | 动态生成：引用🟢SKU作为背书 |
+
+#### 11.1.3 追问树模式区分
+
+```python
+# 预设追问树（固定在作战卡中）
+PRESET_STRATEGY_TREE = {
+    "anchor": "您现在最头疼的一件事是什么?",
+    "branches": {
+        "增长": ["现在增长靠什么驱动?", "这个驱动力能持续多久?"],
+        "盈利": ["哪条线最赚钱?为什么?", "其他线是战略投入还是历史包袱?"],
+        "方向": ["现在有几个方向在跑?", "资源是怎么分配的?"]
+    }
+}
+
+# 动态追问建议（右栏实时生成）
+# 当客户回答不落在预设分支时，触发动态生成
+# 顾问点击"我来写"，输入客户实际回答，系统实时生成下一追问
+```
+
+### 11.2 飞书实时同步模块设计
+
+#### 11.2.1 技术方案选择
+
+**验证结论**：当前 lark-cli 版本只支持 IM 事件，不支持 bitable 变更事件。
+
+```
+$ lark-cli event list
+当前支持的事件类型:
+- im.message.receive_v1     # IM消息接收
+- im.message.read_v1        # IM消息已读
+- im.message.reaction_v1    # IM消息表情反应
+```
+
+**飞书原生支持的事件**：`drive.file.bitable_record_changed_v1`（多维表格记录变更），但需要：
+1. 先调用"订阅云文档事件接口"
+2. 权限要求：`drive:drive:readonly` + `bitable:bitable:readonly`
+
+**最终方案**：轮询为主（当前可行），未来可升级为 WebSocket。
+
+#### 11.2.2 模块结构
+
+```python
+# src/core/feishu_sync.py
+"""飞书实时同步模块"""
+import threading
+import time
+import queue
+from typing import Callable, Dict, Any, List, Optional
+
+class FeishuSync:
+    """飞书实时同步（轮询方案）"""
+
+    def __init__(self, feishu_client, on_record_change: Callable, poll_interval: int = 30):
+        """
+        Args:
+            feishu_client: 飞书客户端
+            on_record_change: 变更回调函数
+            poll_interval: 轮询间隔（秒），默认30秒
+        """
+        self.feishu_client = feishu_client
+        self.on_record_change = on_record_change
+        self.poll_interval = poll_interval
+
+        # 线程安全队列：后台线程只写队列，不直接写 session_state
+        self.change_queue = queue.Queue()
+
+        self._last_snapshot: Dict[str, Any] = {}
+        self._running = False
+        self._thread: Optional[threading.Thread] = None
+
+    def start_listening(self):
+        """启动后台轮询线程"""
+        if self._running:
+            return
+
+        self._running = True
+        self._thread = threading.Thread(target=self._poll_loop, daemon=True)
+        self._thread.start()
+
+    def stop_listening(self):
+        """停止轮询线程"""
+        self._running = False
+        if self._thread:
+            self._thread.join(timeout=5)
+
+    def _poll_loop(self):
+        """轮询主循环"""
+        while self._running:
+            self._check_changes()
+            time.sleep(self.poll_interval)
+
+    def _check_changes(self):
+        """检查变更（合并 handler）"""
+        try:
+            records = self.feishu_client.list_records()
+            for record in records:
+                rid = record.get("record_id")
+                if rid and self._last_snapshot.get(rid) != record:
+                    # 后台线程只写队列，不直接写 session_state
+                    self.change_queue.put({
+                        "record_id": rid,
+                        "data": record,
+                        "change_type": "update"
+                    })
+                    self._last_snapshot[rid] = record
+        except Exception as e:
+            # 异常写入队列，主线程处理
+            self.change_queue.put({
+                "change_type": "error",
+                "error": str(e)
+            })
+
+    def get_pending_changes(self) -> List[Dict]:
+        """获取待处理的变更记录（主线程调用）"""
+        changes = []
+        while not self.change_queue.empty():
+            changes.append(self.change_queue.get())
+        return changes
+
+    def process_changes_in_main_thread(self, session_state):
+        """在主线程中处理变更（Streamlit回调）"""
+        changes = self.get_pending_changes()
+        for change in changes:
+            if change.get("change_type") == "error":
+                # 错误处理
+                session_state.last_sync_error = change["error"]
+            else:
+                # 正常变更处理
+                self.on_record_change(change["data"], session_state)
+```
+
+#### 11.2.3 场景描述修正
+
+**原描述**："客户在飞书侧修改字段" → **修正为**："飞书端预填/更新"
+
+**场景**：
+1. 会前：顾问/助理在飞书多维表格预填客户背景
+2. 会议中：客户确认字段内容，顾问在飞书侧更新
+3. Streamlit 通过轮询同步最新状态
+
+### 11.3 演练验证与降级方案
+
+#### 11.3.1 演练验证流程
+
+```
+演练验证流程
+├── 阶段一：数据准备（30分钟）
+│   ├── 真实客户背景预填（从飞书读取或本地模拟）
+│   ├── 3套测试场景（设备商/集成商/聚合商）
+│   └── 知识库SKU验证（确保有有🟢/🟡可引用）
+│
+├── 阶段二：三轮完整流程（每轮20分钟）
+│   ├── 第一轮：信息建立版作战卡 + 完整度<60%场景
+│   ├── 第二轮：验证假设版作战卡 + 完整度≥60%场景
+│   └── 第三轮：含飞书同步的完整链路
+│
+└── 阶段三：降级方案验证（每项5分钟）
+    ├── 飞书API失败 → Word投屏+手动同步
+    ├── LLM响应延迟 → 候选预计算+同步生成降级
+    └── 知识库召回不准 → 手动`/案例`指令补充
+```
+
+#### 11.3.2 技术风险降级方案
+
+| 风险 | 概率 | 降级方案 | 实现位置 |
+|---|---|---|---|
+| 飞书API失败 | 低 | Word投屏+手动同步 | `feishu_client.py` 异常捕获 |
+| lark-cli踩坑 | 中 | 预留lark-oapi作为兜底后端 | `_run_cli()` 失败时切换 |
+| LLM响应延迟 | 中 | 候选预计算+同步生成降级 | `candidate_generator.py` 超时处理 |
+| 知识库召回不准 | 中 | 手动`/案例`指令补充 | UI层快捷指令 |
+| Streamlit全量重渲染导致演示模式意外退出 | 中 | `demo_mode`持久化到`session_state`，每次重渲染优先恢复CSS类 | `demo_mode.py` |
+
+#### 11.3.3 产品风险降级方案
+
+| 风险 | 概率 | 降级方案 | 实现位置 |
+|---|---|---|---|
+| AI输出幻觉 | 中 | 可信度标签+顾问最终判断 | SKU卡片显示🟢🟡🔴 |
+| 客户问超出范围 | 高 | 标准话术响应 | 作战卡风险话术区块 |
+| 备忘录质量不足 | 中 | 共识链记录质量检查+三约束机制 | `memo_generator.py` |
+
+#### 11.3.4 降级处理器实现
+
+```python
+# src/core/fallback_handler.py
+"""降级处理器"""
+from typing import Optional, Callable
+from dataclasses import dataclass
+from enum import Enum
+
+class FallbackType(Enum):
+    """降级类型"""
+    FEISHU_API = "feishu_api"
+    LARK_CLI = "lark_cli"
+    LLM_TIMEOUT = "llm_timeout"
+    KNOWLEDGE_RECALL = "knowledge_recall"
+
+@dataclass
+class FallbackResult:
+    """降级结果"""
+    success: bool
+    fallback_type: FallbackType
+    message: str
+    data: Optional[dict] = None
+
+class FallbackHandler:
+    """统一降级处理器"""
+
+    def __init__(self):
+        self.fallback_counts = {t: 0 for t in FallbackType}
+
+    def handle_feishu_failure(self, operation: str, error: Exception) -> FallbackResult:
+        """处理飞书API失败"""
+        self.fallback_counts[FallbackType.FEISHU_API] += 1
+
+        return FallbackResult(
+            success=True,
+            fallback_type=FallbackType.FEISHU_API,
+            message=f"飞书同步失败，已保存到本地。会议结束后请手动同步。错误：{error}",
+            data={"operation": operation, "local_cached": True}
+        )
+
+    def handle_llm_timeout(self, generator: Callable, timeout_seconds: int = 10) -> FallbackResult:
+        """处理LLM响应超时"""
+        self.fallback_counts[FallbackType.LLM_TIMEOUT] += 1
+
+        try:
+            result = generator()
+            return FallbackResult(
+                success=True,
+                fallback_type=FallbackType.LLM_TIMEOUT,
+                message="使用同步生成模式",
+                data=result
+            )
+        except Exception as e:
+            return FallbackResult(
+                success=False,
+                fallback_type=FallbackType.LLM_TIMEOUT,
+                message=f"LLM生成失败：{e}"
+            )
+
+    def handle_knowledge_recall_failure(self, manual_query: str, knowledge_base) -> FallbackResult:
+        """处理知识库召回失败"""
+        self.fallback_counts[FallbackType.KNOWLEDGE_RECALL] += 1
+
+        results = knowledge_base.search(manual_query, top_k=5)
+        return FallbackResult(
+            success=len(results) > 0,
+            fallback_type=FallbackType.KNOWLEDGE_RECALL,
+            message=f"手动召回结果：{len(results)}条",
+            data={"results": results, "query": manual_query}
+        )
+
+    def get_fallback_report(self) -> dict:
+        """获取降级统计报告"""
+        return {
+            "total_fallbacks": sum(self.fallback_counts.values()),
+            "by_type": self.fallback_counts
+        }
+```
+
+#### 11.3.5 演练验证检查清单
+
+```python
+# tests/rehearsal_checklist.py
+"""演练验证检查清单"""
+
+REHEARSAL_CHECKLIST = {
+    "数据准备": [
+        "飞书多维表格有测试客户数据",
+        "本地模拟数据文件存在",
+        "知识库有≥10个🟢/🟡 SKU",
+    ],
+    "第一轮演练（信息建立版）": [
+        "作战卡生成成功（Word格式）",
+        "追问树显示正确",
+        "字段完整度<60%触发信息建立版",
+        "共识链记录正常",
+        "备忘录生成成功",
+    ],
+    "第二轮演练（验证假设版）": [
+        "作战卡生成成功（含诊断假设）",
+        "必问3问显示正确",
+        "候选生成三约束通过",
+        "候选选中自动进共识链",
+        "飞书同步正常",
+    ],
+    "第三轮演练（完整链路）": [
+        "飞书实时同步开启",
+        "客户修改触发同步",
+        "演示模式切换正常",
+        "备忘录一键发送",
+    ],
+    "降级方案验证": [
+        "飞书API失败降级正常",
+        "LLM超时降级正常",
+        "知识库召回降级正常",
+        "演示模式重渲染不退出",
+    ],
+}
+```
+
+### 11.4 交付准备
+
+#### 11.4.1 交付物清单
+
+```
+交付物清单
+├── 代码交付
+│   ├── src/
+│   │   ├── core/
+│   │   │   ├── battle_card_generator.py    # 会前作战卡生成器
+│   │   │   ├── feishu_sync.py              # 飞书实时同步
+│   │   │   └── fallback_handler.py         # 降级处理器
+│   │   └── ui/
+│   │       └── battle_card_tab.py          # 作战卡Tab组件
+│   ├── tests/
+│   │   ├── test_battle_card.py             # 作战卡单元测试
+│   │   ├── test_feishu_sync.py             # 同步模块测试
+│   │   └── test_rehearsal.py               # 演练验证测试
+│   └── docs/
+│       └── api/
+│           └── battle-card-api.md          # API文档
+│
+├── 测试报告
+│   ├── 单元测试覆盖率报告（目标≥80%）
+│   ├── 演练验证检查清单（全部通过）
+│   └── 降级方案验证报告
+│
+└── 文档交付
+    ├── 架构说明文档
+    ├── API使用文档
+    └── 运维手册（含降级操作指南）
+```
+
+#### 11.4.2 测试验收标准
+
+| 验收项 | 标准 | 验证方法 |
+|---|---|---|
+| 单元测试 | 覆盖率≥80% | `pytest --cov` |
+| 演练验证 | 检查清单全部通过 | 手动执行 |
+| 降级方案 | 每项降级至少验证1次 | 模拟故障注入 |
+| 文档完整性 | 架构+API+运维手册齐全 | 评审 |
+
+---
+
+**Day 3 设计锁定，可进入开发。**
