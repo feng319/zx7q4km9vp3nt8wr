@@ -8,6 +8,13 @@ class MemoGenerator:
     def __init__(self, consensus_chain: ConsensusChain):
         self.consensus_chain = consensus_chain
 
+    def _strip_metadata(self, direction: Dict) -> Dict:
+        """剥离内部元数据字段（来源等），防止写入Word或传给LLM"""
+        return {
+            "方向": direction.get("方向", "")
+            # 注意：不包含"来源"字段
+        }
+
     def extract_data(self) -> Dict:
         """第一层: 数据提取(确定性规则)"""
         data = {
