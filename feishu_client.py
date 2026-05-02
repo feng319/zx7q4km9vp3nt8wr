@@ -51,18 +51,27 @@ def upsert_record(company: str, fields: dict) -> dict:
     """新增或更新一条客户记录。"""
     fields = {**fields, "客户公司名": company}
     existing = get_record_by_company(company)
+
+    # 构造 fields 和 rows 格式
+    field_names = list(fields.keys())
+    field_values = [fields[k] for k in field_names]
+
     if existing:
+        # 更新记录 - 使用 record-upsert
         return _run_cli([
-            "base", "+record-batch-update",
+            "base", "+record-upsert",
             "--base-token", APP_TOKEN,
             "--table-id", TABLE_ID,
-            "--json", json.dumps({"records": [{"record_id": existing["record_id"], "fields": fields}]}, ensure_ascii=False),
+            "--record-id", existing["record_id"],
+            "--json", json.dumps(fields, ensure_ascii=False),
         ], use_format=False)
+
+    # 新增记录 - 使用 batch-create
     return _run_cli([
         "base", "+record-batch-create",
         "--base-token", APP_TOKEN,
         "--table-id", TABLE_ID,
-        "--json", json.dumps({"records": [{"fields": fields}]}, ensure_ascii=False),
+        "--json", json.dumps({"fields": field_names, "rows": [field_values]}, ensure_ascii=False),
     ], use_format=False)
 
 
