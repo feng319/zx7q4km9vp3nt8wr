@@ -12,13 +12,7 @@ dotenv.config();
 
 // 从环境变量获取配置
 const APP_ID = process.env.FEISHU_APP_ID || 'cli_a97ff9da2f389cb3';
-const APP_SECRET = process.env.FEISHU_APP_SECRET;
-
-if (!APP_SECRET) {
-  console.error('❌ 请设置 FEISHU_APP_SECRET 环境变量');
-  console.log('提示：可以从 lark-cli 配置或开发者后台获取');
-  process.exit(1);
-}
+const APP_SECRET = process.env.FEISHU_APP_SECRET || 'rYsYjGknDDvNH842so63yeFkqtOi5XaW';
 
 const BITABLE_APP_TOKEN = process.env.FEISHU_BITABLE_APP_TOKEN || 'C1qybEyn9am06FspDb2czASQnif';
 
