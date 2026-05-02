@@ -985,6 +985,8 @@
 from dataclasses import dataclass
 from typing import Optional, List
 from docx import Document
+from io import BytesIO
+from datetime import datetime
 
 @dataclass
 class BattleCard:
@@ -996,6 +998,10 @@ class BattleCard:
     completeness: float
     content: dict  # 各区块内容
 
+class InsufficientSkuError(Exception):
+    """SKU数量不足异常"""
+    pass
+
 class BattleCardGenerator:
     """作战卡生成器"""
 
@@ -1004,8 +1010,13 @@ class BattleCardGenerator:
         self.llm_client = llm_client
         # 复用 FeishuClient.calc_completeness，不单独实现
 
-    def generate(self, company: str) -> BattleCard:
-        """生成会前作战卡"""
+    def generate(self, company: str, consultant: str = "") -> BattleCard:
+        """生成会前作战卡
+
+        Args:
+            company: 客户公司名称
+            consultant: 顾问姓名（可选，由调用方从 session_state 或 feishu_client 获取）
+        """
         # 1. 获取客户档案
         profile = self.feishu_client.get_client_profile(company)
 
@@ -1023,7 +1034,7 @@ class BattleCardGenerator:
         return BattleCard(
             company=company,
             date=datetime.now().strftime("%Y-%m-%d"),
-            consultant="",
+            consultant=consultant,  # 由调用方传入，或留空
             mode=mode,
             completeness=completeness,
             content=content
@@ -1039,17 +1050,25 @@ class BattleCardGenerator:
         # 2. 优先级排序：加权计算Top 15
         top_skus = self._rank_skus(candidate_skus, profile)
 
-        # 3. LLM润色：分批传入，转化为口播台词
+        # 3. SKU最小数量保护：确保至少有6条用于核心区块
+        MIN_SKU_COUNT = 6
+        if len(top_skus) < MIN_SKU_COUNT:
+            raise InsufficientSkuError(
+                f"SKU召回不足{MIN_SKU_COUNT}条，当前{len(top_skus)}条，无法生成高质量作战卡"
+            )
+
+        # 4. LLM润色：分批传入，转化为口播台词
         #    Prompt包含五条硬约束（复用 memo_generator.polish_chapter）
+        #    切片安全：Python切片越界不报错，但可能返回空列表
         content = {
             "diagnosis_hypothesis": self._generate_hypothesis(top_skus[:3], profile),
             "strategy_questions": self._generate_questions(top_skus[3:6], "战略梳理"),
             "business_questions": self._generate_questions(top_skus[6:9], "商业模式"),
-            "demo_scripts": self._generate_scripts(top_skus[9:12]),
+            "demo_scripts": self._generate_scripts(top_skus[9:12] if len(top_skus) >= 12 else []),
             "risk_responses": self._generate_risk_responses()
         }
 
-        # 4. 硬约束校验：确保诊断假设引用≥1个🟢/🟡SKU
+        # 5. 硬约束校验：确保诊断假设引用≥1个🟢/🟡SKU
         self._validate_constraints(content, top_skus)
 
         return content
@@ -1071,17 +1090,25 @@ class BattleCardGenerator:
         return content
 
     def _render_to_word(self, battle_card: BattleCard) -> bytes:
-        """渲染为Word文档"""
+        """渲染为Word文档
+
+        Returns:
+            bytes: Word文档的字节流（用于下载或发送）
+        """
         doc = Document()
 
         # 标题区
         title = doc.add_paragraph()
-        run = title.add_run(f"客户作战卡({'验证假设版' if battle_card.mode == 'hypothesis' else '信息建立版'})")
+        mode_text = '验证假设版' if battle_card.mode == 'hypothesis' else '信息建立版'
+        run = title.add_run(f"客户作战卡({mode_text})")
         run.bold = True
 
         # 各区块渲染...
 
-        return doc.save()
+        # 使用 BytesIO 返回字节流（doc.save() 无路径时返回 None）
+        buffer = BytesIO()
+        doc.save(buffer)
+        return buffer.getvalue()
 ```
 
 #### 11.1.2 风险话术设计
