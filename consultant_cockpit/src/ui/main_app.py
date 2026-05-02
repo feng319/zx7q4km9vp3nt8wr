@@ -560,37 +560,212 @@ def main():
     # 初始化
     init_session_state()
 
-    # 演示模式 CSS 注入（设计文档 5.2 节）
+    # 注入全局 CSS 样式（响应式 + 设计令牌 + 可访问性）
+    st.markdown("""
+    <style>
+    /* ============= 设计令牌 ============= */
+    :root {
+        /* 主色调 */
+        --color-primary: #4A90E2;
+        --color-primary-dark: #357ABD;
+        --color-secondary: #667eea;
+        --color-accent: #764ba2;
+
+        /* 语义色 */
+        --color-success: #28a745;
+        --color-warning: #ffc107;
+        --color-error: #dc3545;
+        --color-info: #17a2b8;
+
+        /* 中性色 */
+        --color-text: #333333;
+        --color-text-muted: #6c757d;
+        --color-background: #ffffff;
+        --color-surface: #f8f9fa;
+        --color-border: #dee2e6;
+
+        /* 间距 */
+        --spacing-xs: 4px;
+        --spacing-sm: 8px;
+        --spacing-md: 16px;
+        --spacing-lg: 24px;
+        --spacing-xl: 32px;
+
+        /* 字体 */
+        --font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+        --font-size-sm: 0.875rem;
+        --font-size-base: 1rem;
+        --font-size-lg: 1.125rem;
+        --font-size-xl: 1.25rem;
+
+        /* 圆角 */
+        --radius-sm: 4px;
+        --radius-md: 8px;
+        --radius-lg: 12px;
+
+        /* 阴影 */
+        --shadow-sm: 0 1px 2px rgba(0,0,0,0.05);
+        --shadow-md: 0 4px 6px rgba(0,0,0,0.1);
+        --shadow-lg: 0 10px 15px rgba(0,0,0,0.15);
+    }
+
+    /* ============= 响应式布局 ============= */
+    /* 移动端适配 (<= 768px) */
+    @media screen and (max-width: 768px) {
+        /* 单栏布局 */
+        [data-testid="stHorizontalBlock"] {
+            flex-direction: column !important;
+        }
+
+        /* 放大触摸目标 (最小 44x44px) */
+        .stButton button {
+            min-height: 44px;
+            min-width: 44px;
+            padding: var(--spacing-sm) var(--spacing-md);
+        }
+
+        /* 调整字体大小 */
+        .stMarkdown, .stText {
+            font-size: var(--font-size-base) !important;
+        }
+
+        /* 隐藏侧边栏次要内容 */
+        .stSidebar .stExpander {
+            margin-bottom: var(--spacing-sm);
+        }
+
+        /* 表格横向滚动 */
+        .stDataFrame, [data-testid="stTable"] {
+            overflow-x: auto;
+        }
+    }
+
+    /* 平板适配 (769px - 1024px) */
+    @media screen and (min-width: 769px) and (max-width: 1024px) {
+        [data-testid="stHorizontalBlock"] > div {
+            flex: 1 1 45% !important;
+        }
+    }
+
+    /* ============= 可访问性增强 ============= */
+    /* 焦点指示器 */
+    *:focus {
+        outline: 2px solid var(--color-primary) !important;
+        outline-offset: 2px;
+    }
+
+    /* 按钮焦点状态 */
+    .stButton button:focus {
+        box-shadow: 0 0 0 3px rgba(74, 144, 226, 0.3);
+    }
+
+    /* 链接焦点状态 */
+    a:focus {
+        text-decoration: underline;
+    }
+
+    /* 跳过链接（屏幕阅读器） */
+    .skip-link {
+        position: absolute;
+        top: -40px;
+        left: 0;
+        background: var(--color-primary);
+        color: white;
+        padding: var(--spacing-sm) var(--spacing-md);
+        z-index: 10000;
+        transition: top 0.3s;
+    }
+    .skip-link:focus {
+        top: 0;
+    }
+
+    /* 高对比度模式支持 */
+    @media (prefers-contrast: high) {
+        :root {
+            --color-border: #000000;
+            --color-text: #000000;
+        }
+        .stButton button {
+            border: 2px solid #000000 !important;
+        }
+    }
+
+    /* 减少动画模式 */
+    @media (prefers-reduced-motion: reduce) {
+        * {
+            animation-duration: 0.01ms !important;
+            animation-iteration-count: 1 !important;
+            transition-duration: 0.01ms !important;
+        }
+    }
+
+    /* ============= 演示模式样式 ============= */
+    /* 隐藏调试信息 */
+    .stDebug { display: none !important; }
+
+    /* 演示模式下备弹区折叠为小图标（设计文档 2.3 节） */
+    .demo-sku-panel {
+        position: fixed;
+        right: 20px;
+        bottom: 20px;
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        background: var(--color-primary);
+        cursor: pointer;
+        z-index: 1000;
+        box-shadow: var(--shadow-lg);
+    }
+    .demo-sku-panel:hover {
+        width: 300px;
+        height: auto;
+        border-radius: var(--radius-md);
+    }
+
+    /* ============= 组件样式 ============= */
+    /* 进度条增强对比度 */
+    .stProgress > div > div > div {
+        background-color: var(--color-primary) !important;
+    }
+
+    /* 徽章样式 */
+    .badge {
+        display: inline-block;
+        padding: var(--spacing-xs) var(--spacing-sm);
+        border-radius: var(--radius-lg);
+        font-size: var(--font-size-sm);
+        font-weight: 500;
+    }
+    .badge-error {
+        background: var(--color-error);
+        color: white;
+    }
+    .badge-success {
+        background: var(--color-success);
+        color: white;
+    }
+    .badge-warning {
+        background: var(--color-warning);
+        color: #212529;
+    }
+    </style>
+
+    <!-- 跳过链接（可访问性） -->
+    <a href="#main-content" class="skip-link">跳到主要内容</a>
+    """, unsafe_allow_html=True)
+
+    # 演示模式额外样式
     if st.session_state.get("demo_mode"):
         st.markdown("""
         <style>
-        /* 隐藏调试信息 */
-        .stDebug { display: none !important; }
         /* 放大字体 */
         .stMarkdown { font-size: 1.2em !important; }
-        /* 演示模式下备弹区折叠为小图标（设计文档 2.3 节） */
-        .demo-sku-panel {
-            position: fixed;
-            right: 20px;
-            bottom: 20px;
-            width: 60px;
-            height: 60px;
-            border-radius: 50%;
-            background: #4A90E2;
-            cursor: pointer;
-            z-index: 1000;
-        }
-        .demo-sku-panel:hover {
-            width: 300px;
-            height: auto;
-            border-radius: 10px;
-        }
         </style>
         """, unsafe_allow_html=True)
 
-        # 知识库版本号营销格式（设计文档 5.3 节）
+        # 知识库版本号营销格式（使用设计令牌）
         st.markdown("""
-        <div style="text-align: center; margin: 20px 0; padding: 10px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; border-radius: 10px;">
+        <div style="text-align: center; margin: 20px 0; padding: 10px; background: linear-gradient(135deg, var(--color-secondary) 0%, var(--color-accent) 100%); color: white; border-radius: var(--radius-md);">
             <strong>知识库 v2.0 · 364个新能源行业案例 · 35条跨域洞察</strong>
         </div>
         """, unsafe_allow_html=True)
