@@ -12,6 +12,8 @@ recalled_at 字段功能全面测试脚本
 """
 
 import sys
+import io
+sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8')
 sys.path.insert(0, "G:\\Program Files\\AI coding\\知识萃取\\consultant_cockpit")
 
 from datetime import datetime, timedelta
