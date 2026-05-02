@@ -1311,7 +1311,7 @@ class FeishuSync:
 | 风险 | 概率 | 降级方案 | 实现位置 |
 |---|---|---|---|
 | 飞书API失败 | 低 | Word投屏+手动同步 | `feishu_client.py` 异常捕获 |
-| lark-cli踩坑 | 中 | 预留lark-oapi作为兜底后端 | `_run_cli()` 失败时切换 |
+| lark-cli踩坑 | 中 | 重试机制（最多3次，间隔1秒）+ 错误日志记录 | `_run_cli()` 失败时重试 |
 | LLM响应延迟 | 中 | 候选预计算+同步生成降级 | `candidate_generator.py` 超时处理 |
 | 知识库召回不准 | 中 | 手动`/案例`指令补充 | UI层快捷指令 |
 | Streamlit全量重渲染导致演示模式意外退出 | 中 | `demo_mode`持久化到`session_state`，每次重渲染优先恢复CSS类 | `demo_mode.py` |
