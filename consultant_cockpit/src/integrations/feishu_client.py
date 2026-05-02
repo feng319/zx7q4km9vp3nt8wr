@@ -85,32 +85,59 @@ class FeishuClient:
         return None
 
     def sync_consensus_record(self, record: Dict) -> bool:
-        """
-        同步共识记录到飞书
+        """同步共识记录到飞书"诊断共识"表
+
+        设计文档 4.4 节：第二张表"诊断共识"结构：
+        - 发现内容：record.content
+        - 确认时间：record.timestamp
+        - 建议方向：record.recommendation
 
         Args:
-            record: ConsensusRecord 的字典表示，包含 id, type, content, status 等字段
+            record: ConsensusRecord 的字典表示
 
         Returns:
             bool: 同步成功返回 True
         """
-        company = record.get("company_name", "默认客户")
+        # 获取诊断共识表ID（第二张表）
+        consensus_table_id = os.getenv("FEISHU_BITABLE_CONSENSUS_TABLE_ID", self.table_id)
+
         content = record.get("content", "")
+        timestamp = record.get("timestamp", "")
+        recommendation = record.get("recommendation", "")
         record_type = record.get("type", "fact")
         status = record.get("status", "recorded")
 
-        # 构造要更新的字段
+        # 构造诊断共识表的字段（设计文档 4.4 节）
         fields = {
-            "共识类型": record_type,
-            "共识内容": content,
+            "发现内容": content,
+            "确认时间": str(timestamp) if timestamp else "",
+            "建议方向": recommendation,
+            "类型": record_type,
             "状态": status,
         }
 
         try:
-            self.upsert_record(company, fields)
-            return True
+            # 写入诊断共识表
+            return self._upsert_consensus_record(fields, consensus_table_id)
         except Exception as e:
             print(f"飞书同步失败: {e}")
+            return False
+
+    def _upsert_consensus_record(self, fields: Dict, table_id: str) -> bool:
+        """写入诊断共识表"""
+        try:
+            _run_cli([
+                "base", "+record-batch-create",
+                "--base-token", self.app_token,
+                "--table-id", table_id,
+                "--json", json.dumps({
+                    "fields": list(fields.keys()),
+                    "rows": [list(fields.values())]
+                }, ensure_ascii=False),
+            ], use_format=False)
+            return True
+        except Exception as e:
+            print(f"写入诊断共识表失败: {e}")
             return False
 
     def upsert_record(self, company: str, fields: Dict) -> Dict:
@@ -153,24 +180,58 @@ class FeishuClient:
         fields = {"诊断进度": f"{progress:.0%}"}
         self.upsert_record(company, fields)
 
-    def calc_completeness(self, record: Optional[Dict]) -> float:
-        """程序硬规则判断完整度，返回 0.0-1.0"""
+    def calc_completeness(self, record: Optional[Dict], consensus_chain=None) -> float:
+        """计算客户档案完整度
+
+        设计文档 6.2 节：
+        - 9个字段等权重，每个字段非空即计 11%
+        - 第 100% 由至少1条 status=confirmed 的共识链记录触发
+
+        Args:
+            record: 客户档案记录
+            consensus_chain: 共识链（可选，用于触发第100%）
+        """
         if not record:
             return 0.0
-        rules = {
-            "产品线": 20, "客户群体": 10, "收入结构": 10,
-            "毛利结构": 10, "交付情况": 10, "资源分布": 10, "战略目标": 15,
-        }
+
+        # 9个字段等权重（设计文档 6.2 节）
+        required_fields = [
+            "客户公司名", "产品线", "客户群体", "收入结构",
+            "毛利结构", "交付情况", "资源分布", "战略目标", "显性诉求"
+        ]
+
         fields = record.get("fields", {})
-        filled = sum(1 for k, min_len in rules.items()
-                     if len(str(fields.get(k, ""))) >= min_len)
-        return filled / len(rules)
+        filled_count = sum(
+            1 for f in required_fields
+            if fields.get(f) and len(str(fields.get(f, ""))) >= 5
+        )
+
+        # 基础完整度：每个字段 11%
+        base_completeness = filled_count / len(required_fields)
+
+        # 第 100% 触发条件：至少1条 status=confirmed 的共识链记录
+        if consensus_chain:
+            confirmed = consensus_chain.get_confirmed_consensus()
+            if confirmed:
+                return min(1.0, base_completeness + 0.01)  # 触发第100%
+
+        return base_completeness
 
     def render_to_doc(self, company: str, doc_token: str = None) -> Dict:
         """把多维表格记录渲染到云文档
 
-        TODO: Day 3 确认 doc_template.md 的占位符格式后完善
-        当前假设占位符格式为 {{字段名}}，需实际验证
+        设计文档 4.4 节：占位符格式为 {{字段名}}
+
+        已确认的占位符列表：
+        - {{客户公司名}}
+        - {{产品线}}
+        - {{客户群体}}
+        - {{收入结构}}
+        - {{毛利结构}}
+        - {{交付情况}}
+        - {{资源分布}}
+        - {{战略目标}}
+        - {{显性诉求}}
         """
         if doc_token is None:
             doc_token = self.doc_template_token
@@ -180,11 +241,34 @@ class FeishuClient:
             raise ValueError(f"找不到客户：{company}")
         f = record["fields"]
 
-        template = Path("doc_template.md").read_text(encoding="utf-8")
+        # 读取模板文件
+        template_path = Path(__file__).parent.parent.parent / "config" / "doc_template.md"
+        if template_path.exists():
+            template = template_path.read_text(encoding="utf-8")
+        else:
+            # 默认模板
+            template = """# 客户诊断报告
+
+## 基本信息
+- 客户公司名：{{客户公司名}}
+- 产品线：{{产品线}}
+- 客户群体：{{客户群体}}
+
+## 业务结构
+- 收入结构：{{收入结构}}
+- 毛利结构：{{毛利结构}}
+- 交付情况：{{交付情况}}
+- 资源分布：{{资源分布}}
+
+## 战略信息
+- 战略目标：{{战略目标}}
+- 显性诉求：{{显性诉求}}
+"""
+
         rendered = template
-        # 占位符格式：{{字段名}}（待 Day 3 确认实际格式）
+        # 占位符格式：{{字段名}}（已确认）
         for key in ["客户公司名", "产品线", "客户群体", "收入结构",
-                    "毛利结构", "交付情况", "资源分布", "战略目标"]:
+                    "毛利结构", "交付情况", "资源分布", "战略目标", "显性诉求"]:
             rendered = rendered.replace("{{" + key + "}}", str(f.get(key, "（待填充）")))
 
         return _run_cli([

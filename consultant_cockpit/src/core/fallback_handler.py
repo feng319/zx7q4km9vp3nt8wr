@@ -45,6 +45,9 @@ class FallbackHandler:
     4. Word生成失败 → 纯文本输出
     """
 
+    # 本地缓存文件路径
+    LOCAL_CACHE_FILE = "logs/feishu_local_cache.json"
+
     def __init__(self, max_workers: int = 3):
         """
         Args:
@@ -53,33 +56,77 @@ class FallbackHandler:
         self.fallback_counts = {t: 0 for t in FallbackType}
         self.fallback_history: List[FallbackResult] = []
         self._executor = ThreadPoolExecutor(max_workers=max_workers)
+        self._local_cache: List[Dict] = self._load_local_cache()
 
-    def handle_feishu_failure(self, operation: str, error: Exception) -> FallbackResult:
+    def _load_local_cache(self) -> List[Dict]:
+        """加载本地缓存"""
+        from pathlib import Path
+        cache_file = Path(self.LOCAL_CACHE_FILE)
+        if cache_file.exists():
+            try:
+                with open(cache_file, "r", encoding="utf-8") as f:
+                    return json.load(f)
+            except Exception:
+                return []
+        return []
+
+    def _save_local_cache(self):
+        """保存本地缓存到文件"""
+        from pathlib import Path
+        cache_file = Path(self.LOCAL_CACHE_FILE)
+        cache_file.parent.mkdir(parents=True, exist_ok=True)
+        with open(cache_file, "w", encoding="utf-8") as f:
+            json.dump(self._local_cache, f, ensure_ascii=False, indent=2)
+
+    def handle_feishu_failure(self, operation: str, error: Exception, data: Dict = None) -> FallbackResult:
         """处理飞书API失败
 
         Args:
             operation: 操作名称
             error: 原始异常
+            data: 需要缓存的数据（可选）
 
         Returns:
             FallbackResult: 降级结果
         """
         self.fallback_counts[FallbackType.FEISHU_API] += 1
 
+        # 真正的本地缓存：将失败的操作数据写入本地文件
+        cache_entry = {
+            "operation": operation,
+            "error": str(error),
+            "data": data,
+            "timestamp": datetime.now().isoformat(),
+            "retry_suggested": True
+        }
+        self._local_cache.append(cache_entry)
+        self._save_local_cache()
+
         result = FallbackResult(
             success=True,
             fallback_type=FallbackType.FEISHU_API,
-            message=f"飞书同步失败，已保存到本地。会议结束后请手动同步。",
+            message=f"飞书同步失败，已保存到本地缓存（{len(self._local_cache)}条待同步）。会议结束后请手动同步。",
             original_error=str(error),
             data={
                 "operation": operation,
                 "local_cached": True,
+                "cache_size": len(self._local_cache),
+                "cache_file": self.LOCAL_CACHE_FILE,
                 "retry_suggested": True
             }
         )
 
         self.fallback_history.append(result)
         return result
+
+    def get_local_cache(self) -> List[Dict]:
+        """获取本地缓存内容"""
+        return self._local_cache.copy()
+
+    def clear_local_cache(self):
+        """清除本地缓存"""
+        self._local_cache.clear()
+        self._save_local_cache()
 
     def handle_lark_cli_failure(
         self,
@@ -118,7 +165,8 @@ class FallbackHandler:
         self,
         generator: Callable,
         timeout_seconds: int = 10,
-        fallback_value: Any = None
+        fallback_value: Any = None,
+        fallback_template_name: str = None
     ) -> FallbackResult:
         """处理LLM响应超时（真正的超时控制）
 
@@ -126,6 +174,7 @@ class FallbackHandler:
             generator: 无参数的可调用对象，返回LLM生成结果
             timeout_seconds: 超时时间（秒），默认10秒
             fallback_value: 超时时的降级值
+            fallback_template_name: 降级模板名称（用于返回可用内容）
 
         Returns:
             FallbackResult: 包含成功/失败状态和结果数据
@@ -145,25 +194,45 @@ class FallbackHandler:
             )
 
         except FuturesTimeoutError:
-            # 超时降级
+            # 超时降级：返回降级模板内容（设计文档 7.5 节第五条硬约束）
+            fallback_content = fallback_value
+            if fallback_template_name:
+                fallback_content = get_fallback_template(fallback_template_name)
+            if fallback_content is None:
+                fallback_content = ""
+
             result = FallbackResult(
                 success=False,
                 fallback_type=FallbackType.LLM_TIMEOUT,
-                message=f"LLM响应超时（>{timeout_seconds}秒），已降级处理",
+                message=f"LLM响应超时（>{timeout_seconds}秒），已降级为模板内容",
                 original_error="TimeoutError",
-                data={"fallback_value": fallback_value}
+                data={
+                    "fallback_value": fallback_content,
+                    "fallback_template": fallback_template_name,
+                    "content_available": bool(fallback_content)
+                }
             )
             self.fallback_history.append(result)
             return result
 
         except Exception as e:
-            # 其他错误
+            # 其他错误：同样返回降级内容
+            fallback_content = fallback_value
+            if fallback_template_name:
+                fallback_content = get_fallback_template(fallback_template_name)
+            if fallback_content is None:
+                fallback_content = ""
+
             result = FallbackResult(
                 success=False,
                 fallback_type=FallbackType.LLM_TIMEOUT,
                 message=f"LLM生成失败：{e}",
                 original_error=str(e),
-                data={"fallback_value": fallback_value}
+                data={
+                    "fallback_value": fallback_content,
+                    "fallback_template": fallback_template_name,
+                    "content_available": bool(fallback_content)
+                }
             )
             self.fallback_history.append(result)
             return result

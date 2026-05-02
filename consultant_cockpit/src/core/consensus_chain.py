@@ -55,6 +55,74 @@ class ConsensusChain:
         if record:
             record.status = "confirmed"
 
+    def correct_record(self, record_id: str, new_content: str, source: str = "manual_correction") -> ConsensusRecord:
+        """修正记录（不覆盖原记录，新增一条修正记录）
+
+        设计文档 4.1 节要求：
+        - 原记录标记为 superseded
+        - 新记录 source=manual_correction，replaces 指向原记录
+
+        Args:
+            record_id: 要修正的记录ID
+            new_content: 修正后的内容
+            source: 修正来源（默认 manual_correction）
+
+        Returns:
+            新创建的修正记录
+        """
+        original = self.get_record(record_id)
+        if not original:
+            raise ValueError(f"找不到记录: {record_id}")
+
+        # 创建新记录
+        new_record = ConsensusRecord(
+            id=f"{record_id}_corr_{len(self.records)}",
+            timestamp=datetime.now(),
+            type=original.type,
+            stage=original.stage,
+            content=new_content,
+            source=source,
+            evidence_sku=original.evidence_sku.copy(),
+            status="confirmed",
+            replaces=record_id
+        )
+
+        # 标记原记录为已替代
+        original.status = "superseded"
+        original.superseded_by = new_record.id
+
+        # 添加新记录
+        self.records.append(new_record)
+
+        return new_record
+
+    def get_superseded_records(self) -> List[ConsensusRecord]:
+        """获取已被替代的记录（用于追溯修正历史）"""
+        return [
+            r for r in self.records
+            if r.status == "superseded"
+        ]
+
+    def get_correction_history(self, record_id: str) -> List[ConsensusRecord]:
+        """获取某条记录的修正历史
+
+        Args:
+            record_id: 原始记录ID
+
+        Returns:
+            修正记录列表（按时间正序）
+        """
+        history = []
+        current = self.get_record(record_id)
+        while current and current.superseded_by:
+            corrected = self.get_record(current.superseded_by)
+            if corrected:
+                history.append(corrected)
+                current = corrected
+            else:
+                break
+        return history
+
     def get_confirmed_facts(self) -> List[ConsensusRecord]:
         """获取已确认的事实（排除已被替代的记录）"""
         return [

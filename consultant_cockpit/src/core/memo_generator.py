@@ -7,9 +7,10 @@ from src.core.consensus_chain import ConsensusChain
 class MemoGenerator:
     """备忘录生成器(三层架构)"""
 
-    def __init__(self, consensus_chain: ConsensusChain, llm_client=None):
+    def __init__(self, consensus_chain: ConsensusChain, llm_client=None, client_profile: Dict = None):
         self.consensus_chain = consensus_chain
         self.llm_client = llm_client
+        self.client_profile = client_profile or {}  # 客户档案（从外部注入）
 
     def _strip_metadata(self, direction: Dict) -> Dict:
         """剥离内部元数据字段（来源等），防止写入Word或传给LLM"""
@@ -24,7 +25,7 @@ class MemoGenerator:
             "facts": [],
             "consensus": [],
             "pending": [],
-            "client_profile": {}  # 从外部注入
+            "client_profile": self.client_profile  # 使用注入的客户档案
         }
 
         # 提取已确认事实
@@ -52,7 +53,15 @@ class MemoGenerator:
         return data
 
     def generate_structure(self) -> Dict:
-        """第二层: 结构组装(模板+规则)"""
+        """第二层: 结构组装(模板+规则)
+
+        设计文档 4.5 节和 7.3 节映射表：
+        - 一、问题重构
+        - 二、关键发现（按优先级排序）
+        - 三、初步建议方向
+        - 四、需要进一步访谈
+        - 五、建议下一步合作方式（服务包推荐）
+        """
         data = self.extract_data()
 
         structure = {
@@ -65,11 +74,22 @@ class MemoGenerator:
             "核心问题": data["consensus"][0]["content"] if data["consensus"] else ""
         }
 
-        # 二、关键发现
+        # 二、关键发现（按优先级排序：source=candidate_selected > 时间戳最早 > 时间戳最新）
+        strategy_facts = self._sort_facts_by_priority([
+            f for f in data["facts"] if f["stage"] == "战略梳理"
+        ])
+        business_facts = self._sort_facts_by_priority([
+            f for f in data["facts"] if f["stage"] == "商业模式"
+        ])
+
         structure["chapters"]["关键发现"] = {
-            "战略层面": [f["content"] for f in data["facts"] if f["stage"] == "战略梳理"][:3],
-            "商业模式层面": [f["content"] for f in data["facts"] if f["stage"] == "商业模式"][:3]
+            "战略层面": [f["content"] for f in strategy_facts[:3]],
+            "商业模式层面": [f["content"] for f in business_facts[:3]]
         }
+
+        # 超过3条的降级到"需要进一步访谈"
+        extra_facts = strategy_facts[3:] + business_facts[3:]
+        structure["chapters"]["_extra_facts"] = [f["content"] for f in extra_facts]
 
         # 三、初步建议方向
         structure["chapters"]["初步建议方向"] = [
@@ -83,9 +103,70 @@ class MemoGenerator:
         # 四、需要进一步访谈
         structure["chapters"]["需要进一步访谈"] = [
             p["content"] for p in data["pending"]
-        ]
+        ] + structure["chapters"].pop("_extra_facts", [])
+
+        # 五、建议下一步合作方式（设计文档 7.6 节）
+        structure["chapters"]["建议下一步合作方式"] = self._generate_service_recommendation(data)
 
         return structure
+
+    def _sort_facts_by_priority(self, facts: List[Dict]) -> List[Dict]:
+        """按优先级排序事实
+
+        规则（设计文档 7.3 节）：
+        1. source=candidate_selected 优先
+        2. 时间戳最早优先
+        3. 时间戳最新优先
+        """
+        def priority_key(fact):
+            # source=candidate_selected 排最前
+            source_priority = 0 if fact.get("source") == "candidate_selected" else 1
+            return source_priority
+
+        return sorted(facts, key=priority_key)
+
+    def _generate_service_recommendation(self, data: Dict) -> Dict:
+        """生成服务包推荐（设计文档 7.6 节）
+
+        逻辑：
+        - 共识链确认条数 >= 5 且完整度 >= 60%：推荐"深度诊断服务包"
+        - 共识链确认条数 >= 3 且完整度 >= 40%：推荐"初步诊断服务包"
+        - 其他：推荐"免费初步沟通"
+        """
+        confirmed_count = len(data["consensus"]) + len(data["facts"])
+        completeness = self._calc_profile_completeness(data["client_profile"])
+
+        if confirmed_count >= 5 and completeness >= 0.6:
+            return {
+                "推荐服务包": "深度诊断服务包",
+                "理由": f"已确认{confirmed_count}条共识，客户档案完整度{completeness:.0%}，建议进入深度诊断阶段",
+                "下一步": "安排2-3次深度访谈，聚焦关键决策点"
+            }
+        elif confirmed_count >= 3 and completeness >= 0.4:
+            return {
+                "推荐服务包": "初步诊断服务包",
+                "理由": f"已确认{confirmed_count}条共识，建议进一步明确诊断方向",
+                "下一步": "补充关键信息，完善客户档案"
+            }
+        else:
+            return {
+                "推荐服务包": "免费初步沟通",
+                "理由": f"当前共识条数{confirmed_count}条，建议继续建立信任关系",
+                "下一步": "聚焦客户痛点，收集更多背景信息"
+            }
+
+    def _calc_profile_completeness(self, profile: Dict) -> float:
+        """计算客户档案完整度"""
+        if not profile:
+            return 0.0
+
+        required_fields = [
+            "产品线", "客户群体", "收入结构", "毛利结构",
+            "交付情况", "资源分布", "战略目标", "显性诉求"
+        ]
+
+        filled = sum(1 for f in required_fields if profile.get(f) and len(str(profile.get(f, ""))) >= 5)
+        return filled / len(required_fields)
 
     def generate_word(self, output_path: str):
         """生成Word文档(第三层: AI润色在Day 2实现)"""
@@ -118,6 +199,18 @@ class MemoGenerator:
             # 剥离内部元数据后再写入Word
             clean_direction = self._strip_metadata(direction)
             doc.add_paragraph(f"方向{i}: {clean_direction['方向']}")
+
+        # 四、需要进一步访谈
+        doc.add_heading('四、需要进一步访谈', level=1)
+        for item in structure["chapters"]["需要进一步访谈"]:
+            doc.add_paragraph(item, style='List Bullet')
+
+        # 五、建议下一步合作方式
+        doc.add_heading('五、建议下一步合作方式', level=1)
+        recommendation = structure["chapters"]["建议下一步合作方式"]
+        doc.add_paragraph(f"推荐服务包: {recommendation['推荐服务包']}")
+        doc.add_paragraph(f"理由: {recommendation['理由']}")
+        doc.add_paragraph(f"下一步: {recommendation['下一步']}")
 
         doc.save(output_path)
 

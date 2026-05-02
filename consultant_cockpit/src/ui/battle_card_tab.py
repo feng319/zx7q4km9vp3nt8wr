@@ -112,8 +112,11 @@ def render_battle_card_tab(
                 st.session_state["current_battle_card"] = battle_card
                 st.session_state["battle_card_completeness"] = battle_card.completeness
 
-                # 预生成 Word 字节流
-                st.session_state["battle_card_word_bytes"] = battle_card_generator.render_to_word(battle_card)
+                # 预生成 Word 字节流（缓存 key 绑定公司名+日期，避免跨客户污染）
+                cache_key = f"battle_card_word_bytes_{battle_card.company}_{battle_card.date}"
+                st.session_state[cache_key] = battle_card_generator.render_to_word(battle_card)
+                # 同时保存当前缓存 key，供下载按钮使用
+                st.session_state["current_word_cache_key"] = cache_key
 
                 st.success(f"作战卡生成成功！模式：{'验证假设版' if battle_card.mode == 'hypothesis' else '信息建立版'}")
                 st.rerun()
@@ -130,8 +133,9 @@ def render_battle_card_tab(
         col1, col2, col3 = st.columns(3)
 
         with col1:
-            # 下载 Word
-            word_bytes = st.session_state.get("battle_card_word_bytes")
+            # 下载 Word（使用绑定的缓存 key）
+            cache_key = st.session_state.get("current_word_cache_key")
+            word_bytes = st.session_state.get(cache_key) if cache_key else None
             if word_bytes:
                 st.download_button(
                     label="📥 下载Word",

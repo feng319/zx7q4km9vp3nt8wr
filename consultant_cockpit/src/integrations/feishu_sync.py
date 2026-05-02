@@ -51,6 +51,11 @@ class FeishuSync:
         # 快照缓存：用于检测变更
         self._last_snapshot: Dict[str, str] = {}  # record_id -> JSON序列化后的字符串
 
+        # 已知写入集合：避免自写自触发的假变更
+        # 当 Streamlit 侧写入记录后，把 record_id 加入此集合，_check_changes 跳过这些 ID
+        self._known_write_ids: set = set()
+        self._known_write_lock = threading.Lock()
+
         # 线程控制
         self._running = False
         self._thread: Optional[threading.Thread] = None
@@ -83,12 +88,32 @@ class FeishuSync:
                 self._running = False
                 self._thread.join(timeout=5)
 
+            # 初始化快照：避免首次轮询触发全量变更
+            self._initialize_snapshot()
+
             self._running = True
             self._thread = threading.Thread(target=self._poll_loop, daemon=True)
             self._thread.start()
 
         self._write_heartbeat("started")
         return True
+
+    def _initialize_snapshot(self):
+        """初始化快照，避免首次轮询触发全量变更
+
+        问题修复：_check_changes 首次运行时会把所有现有记录都当作"变更"推入队列。
+        解决方案：在启动时先做一次初始化快照，记录所有现有记录的状态。
+        """
+        try:
+            records = self.feishu_client.list_records()
+            for record in records:
+                rid = record.get("record_id")
+                if rid:
+                    self._last_snapshot[rid] = json.dumps(record, sort_keys=True, default=str)
+            self._write_heartbeat(f"initialized with {len(self._last_snapshot)} records")
+        except Exception as e:
+            # 初始化失败不影响启动，只是首次轮询会有全量变更
+            self._write_heartbeat(f"init failed: {e}")
 
     def stop_listening(self):
         """停止轮询线程"""
@@ -126,6 +151,14 @@ class FeishuSync:
                 if not rid:
                     continue
 
+                # 跳过已知写入的记录（避免自写自触发）
+                with self._known_write_lock:
+                    if rid in self._known_write_ids:
+                        # 更新快照但不触发变更回调
+                        self._last_snapshot[rid] = json.dumps(record, sort_keys=True, default=str)
+                        self._known_write_ids.discard(rid)  # 一次性使用后移除
+                        continue
+
                 # 使用 JSON 序列化进行比较，避免 datetime 等类型的误判
                 record_json = json.dumps(record, sort_keys=True, default=str)
 
@@ -150,6 +183,18 @@ class FeishuSync:
             })
             self.stats["error_count"] += 1
             self.stats["last_error"] = str(e)
+
+    def register_known_write(self, record_id: str):
+        """注册已知写入的记录ID
+
+        当 Streamlit 侧写入记录到飞书后，调用此方法注册 record_id，
+        避免下次轮询时把这条记录误判为"外部变更"。
+
+        Args:
+            record_id: 刚写入的记录ID
+        """
+        with self._known_write_lock:
+            self._known_write_ids.add(record_id)
 
     def _handle_error(self, error: str):
         """处理错误"""

@@ -6,26 +6,25 @@
 - 规则过滤 → 优先级排序 → LLM润色 → 硬约束校验
 - Word文档输出
 """
-from dataclasses import dataclass, field
 from typing import Optional, List, Dict, Any
 from datetime import datetime
 from io import BytesIO
 import json
 
+from pydantic import BaseModel, Field
 from docx import Document
 from docx.shared import Pt, Inches
 from docx.enum.text import WD_ALIGN_PARAGRAPH
 
 
-@dataclass
-class BattleCard:
-    """作战卡数据结构"""
+class BattleCard(BaseModel):
+    """作战卡数据结构（使用 Pydantic BaseModel 保持项目一致性）"""
     company: str
     date: str
     consultant: str
     mode: str  # "hypothesis" | "info_building"
     completeness: float
-    content: Dict[str, Any] = field(default_factory=dict)
+    content: Dict[str, Any] = Field(default_factory=dict)
 
 
 class InsufficientSkuError(Exception):
@@ -95,11 +94,25 @@ class BattleCardGenerator:
 
         Returns:
             BattleCard: 作战卡数据结构
+
+        Raises:
+            ValueError: 当客户档案不存在时
         """
         # 1. 获取客户档案
         profile = self.feishu_client.get_client_profile(company)
 
-        # 2. 计算完整度（复用 FeishuClient）
+        # 2. 处理 profile 为 None 的情况
+        if profile is None:
+            # 创建空档案，使用默认值继续生成
+            profile = {
+                "record_id": None,
+                "fields": {
+                    "客户公司名": company,
+                    # 其他字段为空
+                }
+            }
+
+        # 3. 计算完整度（复用 FeishuClient）
         completeness = self.feishu_client.calc_completeness(profile)
 
         # 3. 根据完整度选择模式
@@ -230,12 +243,23 @@ class BattleCardGenerator:
             )
 
         # 4. LLM润色：分批传入，转化为口播台词
+        #    修复：demo_scripts 在 SKU 数量不足时使用剩余 SKU
+        demo_sku_count = len(top_skus) - 9
+        if demo_sku_count >= 3:
+            demo_skus = top_skus[9:12]
+        elif demo_sku_count > 0:
+            # SKU 数量在 9-11 条之间，使用剩余的 SKU
+            demo_skus = top_skus[9:]
+        else:
+            # SKU 数量不足 9 条，从末尾取最多 3 条
+            demo_skus = top_skus[max(0, len(top_skus)-3):]
+
         content = {
             "diagnosis_hypothesis": self._generate_hypothesis(top_skus[:3], profile),
             "strategy_questions": self._generate_questions(top_skus[3:6], "战略梳理"),
             "business_questions": self._generate_questions(top_skus[6:9] if len(top_skus) >= 9 else [], "商业模式"),
-            "demo_scripts": self._generate_scripts(top_skus[9:12] if len(top_skus) >= 12 else []),
-            "risk_responses": self._generate_risk_responses()
+            "demo_scripts": self._generate_scripts(demo_skus),
+            "risk_responses": self._generate_risk_responses(top_skus)  # 传入SKU用于动态生成
         }
 
         # 5. 硬约束校验：确保诊断假设引用≥1个🟢/🟡SKU
@@ -252,7 +276,7 @@ class BattleCardGenerator:
             "strategy_tree": PRESET_STRATEGY_TREE,
             "business_tree": PRESET_BUSINESS_TREE,
             "demo_scripts": self._generate_scripts(top_skus[:3]),
-            "risk_responses": self._generate_risk_responses()
+            "risk_responses": self._generate_risk_responses(top_skus)  # 传入SKU用于动态生成
         }
 
         return content
@@ -368,11 +392,48 @@ class BattleCardGenerator:
 
         return "\n".join(lines)
 
-    def _generate_risk_responses(self) -> str:
-        """生成风险话术"""
+    def _generate_risk_responses(self, skus: List[Dict] = None) -> str:
+        """生成风险话术
+
+        Args:
+            skus: SKU列表（可选，用于动态生成第三条话术）
+
+        Returns:
+            风险话术文本
+        """
         lines = []
-        for key, value in RISK_RESPONSES.items():
-            lines.append(f"▸ {value['trigger']}\n  → {value['response']}")
+
+        # 第一条：固定模板
+        lines.append(f"▸ {RISK_RESPONSES['已有方向']['trigger']}")
+        lines.append(f"  → {RISK_RESPONSES['已有方向']['response']}")
+
+        # 第二条：固定模板
+        lines.append(f"▸ {RISK_RESPONSES['超出范围']['trigger']}")
+        lines.append(f"  → {RISK_RESPONSES['超出范围']['response']}")
+
+        # 第三条：动态生成（引用🟢SKU作为背书）
+        lines.append(f"▸ {RISK_RESPONSES['质疑专业性']['trigger']}")
+
+        if skus:
+            # 找到🟢可信度的SKU
+            green_skus = [sku for sku in skus if sku.get("confidence") == "🟢"]
+            if green_skus:
+                # 动态生成：引用🟢SKU作为背书
+                sku_ref = green_skus[0]
+                lines.append(f"  → 我们在{sku_ref['title']}领域有深入研究，可以分享相关案例")
+            else:
+                # 没有🟢SKU，使用🟡SKU
+                yellow_skus = [sku for sku in skus if sku.get("confidence") == "🟡"]
+                if yellow_skus:
+                    sku_ref = yellow_skus[0]
+                    lines.append(f"  → 我们在{sku_ref['title']}方向有相关经验，可以展开讨论")
+                else:
+                    # 降级：通用话术
+                    lines.append("  → 我们在新能源行业有丰富的咨询经验，可以分享具体案例")
+        else:
+            # 无SKU时使用通用话术
+            lines.append("  → 我们在新能源行业有丰富的咨询经验，可以分享具体案例")
+
         return "\n".join(lines)
 
     def _identify_missing_fields(self, profile: Dict) -> List[str]:
