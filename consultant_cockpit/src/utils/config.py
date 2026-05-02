@@ -10,6 +10,7 @@ class Config:
     LLM_API_KEY = os.getenv("OPENAI_API_KEY", "")
     LLM_BASE_URL = os.getenv("LLM_BASE_URL", "https://api.openai.com/v1")
     LLM_MODEL = os.getenv("LLM_MODEL", "gpt-4")
+    LLM_TIMEOUT_SECONDS = 30  # LLM调用超时时间（秒）
 
     # 候选生成配置
     CANDIDATE_MAX_REGENERATE = 2  # 最大重生成次数
