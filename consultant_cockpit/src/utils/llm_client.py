@@ -1,6 +1,6 @@
 # src/utils/llm_client.py
 from openai import OpenAI
-from .config import Config
+from consultant_cockpit.src.utils.config import Config
 
 class LLMClient:
     """LLM客户端封装"""
