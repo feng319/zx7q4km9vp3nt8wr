@@ -16,8 +16,7 @@ if "consensus_chain" not in st.session_state:
 if "llm_client" not in st.session_state:
     st.session_state.llm_client = LLMClient()
 
-def main():
-    st.title("顾问现场作战系统")
+st.title("顾问现场作战系统")
 
 # 侧边栏: 指令输入
 st.sidebar.header("快捷指令")
