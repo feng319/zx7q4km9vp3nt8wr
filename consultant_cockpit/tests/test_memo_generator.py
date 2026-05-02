@@ -51,3 +51,59 @@ def test_generate_memo_structure(consensus_chain):
     assert "chapters" in structure
     assert "关键发现" in structure["chapters"]
     assert "初步建议方向" in structure["chapters"]
+
+def test_superseded_facts_excluded():
+    """测试被修正的事实不进入备忘录"""
+    chain = ConsensusChain()
+    # 添加一条正常确认的事实
+    chain.add_record(ConsensusRecord(
+        id="fact_normal",
+        timestamp=datetime.now(),
+        type="fact",
+        stage="战略梳理",
+        content="正常事实",
+        source="manual",
+        status="confirmed"
+    ))
+    # 添加一条被替代的事实
+    chain.add_record(ConsensusRecord(
+        id="fact_superseded",
+        timestamp=datetime.now(),
+        type="fact",
+        stage="战略梳理",
+        content="被修正的旧事实",
+        source="manual",
+        status="superseded"
+    ))
+
+    generator = MemoGenerator(chain)
+    data = generator.extract_data()
+    contents = [f["content"] for f in data["facts"]]
+
+    assert "正常事实" in contents
+    assert "被修正的旧事实" not in contents
+
+def test_strip_metadata():
+    """测试元数据剥离"""
+    chain = ConsensusChain()
+    chain.add_record(ConsensusRecord(
+        id="consensus_1",
+        timestamp=datetime.now(),
+        type="consensus",
+        stage="战略梳理",
+        content="测试判断",
+        source="candidate_selected",
+        status="confirmed",
+        recommendation="测试方向"
+    ))
+
+    generator = MemoGenerator(chain)
+    structure = generator.generate_structure()
+
+    # 检查结构中有"来源"字段
+    assert "来源" in structure["chapters"]["初步建议方向"][0]
+
+    # 检查 _strip_metadata 能正确剥离
+    clean = generator._strip_metadata(structure["chapters"]["初步建议方向"][0])
+    assert "来源" not in clean
+    assert "方向" in clean
