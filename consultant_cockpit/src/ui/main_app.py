@@ -2,16 +2,23 @@
 import sys
 from pathlib import Path
 
-# 确保项目根目录在 Python 路径中
-project_root = Path(__file__).parent.parent.parent
+# 动态添加项目根目录到 Python 路径
+# 支持从 consultant_cockpit 目录或项目根目录运行
+current_dir = Path(__file__).parent
+project_root = current_dir.parent.parent  # 知识萃取/
 if str(project_root) not in sys.path:
     sys.path.insert(0, str(project_root))
 
+# 同时添加 consultant_cockpit 目录（用于直接导入 src）
+cockpit_dir = current_dir.parent  # consultant_cockpit/
+if str(cockpit_dir) not in sys.path:
+    sys.path.insert(0, str(cockpit_dir))
+
 import streamlit as st
-from consultant_cockpit.src.core.consensus_chain import ConsensusChain, ConsensusRecord
-from consultant_cockpit.src.core.candidate_generator import CandidateGenerator
-from consultant_cockpit.src.core.memo_generator import MemoGenerator
-from consultant_cockpit.src.utils.llm_client import LLMClient
+from src.core.consensus_chain import ConsensusChain, ConsensusRecord
+from src.core.candidate_generator import CandidateGenerator
+from src.core.memo_generator import MemoGenerator
+from src.utils.llm_client import LLMClient
 from datetime import datetime
 
 # 初始化
