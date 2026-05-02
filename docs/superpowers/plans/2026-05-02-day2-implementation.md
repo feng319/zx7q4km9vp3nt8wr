@@ -317,7 +317,9 @@ def render_right_panel():
                 st.session_state.selected_question = suggestion["question"]
         with col2:
             if st.button("跳过", key="skip_suggestion"):
-                pass  # 触发下一个建议
+                # 清空当前建议，触发下一次知识召回
+                st.session_state.pop("current_suggestion", None)
+                st.rerun()
         with col3:
             if st.button("我来写", key="custom_question"):
                 st.session_state.custom_question_mode = True
