@@ -120,3 +120,51 @@ class MemoGenerator:
             doc.add_paragraph(f"方向{i}: {clean_direction['方向']}")
 
         doc.save(output_path)
+
+    def polish_chapter(self, chapter_data: Dict, max_words: int = 200) -> str:
+        """第三层：AI润色章节
+
+        Args:
+            chapter_data: 章节数据（键值对或列表）
+            max_words: 最大字数限制
+
+        Returns:
+            润色后的段落文字，或降级后的要点列表
+        """
+        if not self.llm_client:
+            # 降级：无LLM时直接返回要点列表
+            return self._format_as_bullets(chapter_data)
+
+        prompt = f"""请将以下要点转化成连贯的段落文字。
+
+要求：
+1. 只能用下面的要点，不能添加任何额外信息
+2. 字数不超过{max_words}字
+3. 所有数字和专有名词必须与原始要点完全一致
+4. 语气专业、客观、建设性，不使用夸张词汇
+
+要点：
+{json.dumps(chapter_data, ensure_ascii=False, indent=2)}
+
+直接输出润色后的段落，不要其他解释。"""
+
+        try:
+            result = self.llm_client.generate(prompt, temperature=0.3)
+            # 字数截断
+            if len(result) > max_words:
+                result = result[:max_words] + "..."
+            return result
+        except Exception as e:
+            # 降级：润色失败时使用原始要点
+            return self._format_as_bullets(chapter_data)
+
+    def _format_as_bullets(self, chapter_data: Dict) -> str:
+        """降级：格式化为要点列表"""
+        lines = []
+        for key, value in chapter_data.items():
+            if isinstance(value, list):
+                for item in value:
+                    lines.append(f"- {item}")
+            else:
+                lines.append(f"- {key}: {value}")
+        return "\n".join(lines)
