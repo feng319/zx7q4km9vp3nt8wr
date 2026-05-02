@@ -21,12 +21,26 @@ class ConsensusRecord(BaseModel):
 
 class ConsensusChain:
     """共识链管理器"""
-    def __init__(self):
-        self.records: List[ConsensusRecord] = []
 
-    def add_record(self, record: ConsensusRecord):
-        """添加记录"""
+    def __init__(self, feishu_client=None):
+        self.records: List[ConsensusRecord] = []
+        self.feishu_client = feishu_client
+
+    def add_record(self, record: ConsensusRecord, sync_to_feishu: bool = True):
+        """添加记录（可选同步到飞书）
+
+        Args:
+            record: 共识记录
+            sync_to_feishu: 是否同步到飞书（默认 True）
+        """
         self.records.append(record)
+
+        if sync_to_feishu and self.feishu_client:
+            try:
+                self.feishu_client.sync_consensus_record(record.model_dump())
+            except Exception as e:
+                # 飞书同步失败不影响本地记录
+                print(f"飞书同步失败: {e}")
 
     def get_record(self, record_id: str) -> Optional[ConsensusRecord]:
         """获取记录"""
