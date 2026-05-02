@@ -1,9 +1,9 @@
 # src/ui/main_app.py
 import streamlit as st
-from ..core.consensus_chain import ConsensusChain, ConsensusRecord
-from ..core.candidate_generator import CandidateGenerator
-from ..core.memo_generator import MemoGenerator
-from ..utils.llm_client import LLMClient
+from src.core.consensus_chain import ConsensusChain, ConsensusRecord
+from src.core.candidate_generator import CandidateGenerator
+from src.core.memo_generator import MemoGenerator
+from src.utils.llm_client import LLMClient
 from datetime import datetime
 
 # 初始化
@@ -12,7 +12,7 @@ if "consensus_chain" not in st.session_state:
 if "llm_client" not in st.session_state:
     st.session_state.llm_client = LLMClient()
 
-def main():
+st.title("顾问现场作战系统")
 
 # 侧边栏: 指令输入
 st.sidebar.header("快捷指令")
@@ -24,7 +24,7 @@ if st.sidebar.button("记录"):
         record = ConsensusRecord(
             id=f"cc_{len(st.session_state.consensus_chain.records)}",
             timestamp=datetime.now(),
-            type="fact",  # 简化,实际需要判断
+            type="fact",
             stage="战略梳理",
             content=manual_input,
             source="manual",
@@ -39,7 +39,6 @@ if st.sidebar.button("/候选"):
         st.session_state.llm_client,
         st.session_state.consensus_chain
     )
-    # Mock备弹区SKU(Day 1使用mock数据)
     mock_skus = [{"id": "sku_001", "confidence": "🟢"}]
     constraints = generator.check_constraints(mock_skus)
 
@@ -56,7 +55,6 @@ if "candidates" in st.session_state:
         col1, col2, col3 = st.columns(3)
         with [col1, col2, col3][i]:
             if st.button(f"候选{i+1}: {candidate.title}", key=f"candidate_{i}"):
-                # 选中候选,自动进入共识链
                 record = ConsensusRecord(
                     id=f"cc_{len(st.session_state.consensus_chain.records)}",
                     timestamp=datetime.now(),
