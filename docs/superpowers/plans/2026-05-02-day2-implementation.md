@@ -1264,3 +1264,96 @@ def _initialize_snapshot(self):
 - `consultant_cockpit/scripts/subscribe_feishu_bitable.py` - 飞书多维表格订阅脚本
 
 **结论**: Day 3 审计问题已全部修复完成。
+
+---
+
+## 潜在问题修复记录 (2026-05-02)
+
+> **修复日期**: 2026-05-02
+> **问题来源**: 超出审计范围的新问题扫描
+> **修复结果**: 3项潜在问题全部修复
+
+### 已修复问题
+
+| 问题# | 问题描述 | 严重程度 | 修复文件 | 状态 |
+|-------|----------|----------|----------|------|
+| **问题 A** | `_parse_response` 解析逻辑过于脆弱，生产环境大概率失败 | 执行风险 | `candidate_generator.py` | ✅ 已修复 |
+| **问题 B** | `FeishuSync` 自写自触发假变更 | 功能缺陷 | `feishu_sync.py` | ✅ 已修复 |
+| **问题 C** | `battle_card_word_bytes` 跨客户数据污染 | 数据错误 | `battle_card_tab.py` | ✅ 已修复 |
+
+### 关键代码变更详情
+
+#### 1. `candidate_generator.py` - 解析逻辑增强
+
+```python
+def _parse_response(self, response: str) -> List[Candidate]:
+    """解析LLM响应
+
+    兼容处理：
+    - 全角冒号（：）和半角冒号（:）
+    - "候选A"、"候选1"、"候选方向A" 等变体
+    - 前置空格/制表符
+    - 解析失败时返回错误提示候选
+    """
+    # 全角/半角冒号兼容
+    normalized = line.replace('：', ':')
+
+    # 解析失败保护：不足3个候选时用错误提示填充
+    if len(candidates) < 3:
+        candidates.append(Candidate(
+            title=f"候选{len(candidates)+1}（解析失败）",
+            description="LLM输出格式异常，请重新生成候选",
+            risk_level=["稳健", "平衡", "激进"][len(candidates) % 3]
+        ))
+
+    # PRD 3.4 节校验：三个候选描述长度差异不超过 30%
+    if (max_len - min_len) / max_len > 0.3:
+        print(f"⚠️ 候选描述长度差异超过30%: {lengths}")
+```
+
+#### 2. `feishu_sync.py` - 避免自写自触发
+
+```python
+# 新增已知写入集合
+self._known_write_ids: set = set()
+self._known_write_lock = threading.Lock()
+
+def register_known_write(self, record_id: str):
+    """注册已知写入的记录ID，避免误判为外部变更"""
+    with self._known_write_lock:
+        self._known_write_ids.add(record_id)
+
+def _check_changes(self):
+    # 跳过已知写入的记录（避免自写自触发）
+    with self._known_write_lock:
+        if rid in self._known_write_ids:
+            self._last_snapshot[rid] = record_json
+            self._known_write_ids.discard(rid)
+            continue
+```
+
+#### 3. `battle_card_tab.py` - Word 缓存绑定客户
+
+```python
+# 缓存 key 绑定公司名+日期，避免跨客户污染
+cache_key = f"battle_card_word_bytes_{battle_card.company}_{battle_card.date}"
+st.session_state[cache_key] = battle_card_generator.render_to_word(battle_card)
+st.session_state["current_word_cache_key"] = cache_key
+
+# 下载时使用绑定的缓存 key
+cache_key = st.session_state.get("current_word_cache_key")
+word_bytes = st.session_state.get(cache_key) if cache_key else None
+```
+
+### 使用说明
+
+**问题 B 的使用方式**：当 Streamlit 侧写入记录到飞书后，需要调用 `register_known_write()`：
+
+```python
+# 在写入飞书后调用
+result = feishu_client.upsert_record(company, fields)
+if result.get("record_id"):
+    feishu_sync.register_known_write(result["record_id"])
+```
+
+**结论**: 所有潜在问题已修复完成，代码无冲突。
