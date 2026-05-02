@@ -131,5 +131,12 @@
     "data": null,
     "timestamp": "2026-05-03T06:41:19.621409",
     "retry_suggested": true
+  },
+  {
+    "operation": "sync",
+    "error": "网络错误",
+    "data": null,
+    "timestamp": "2026-05-03T06:41:30.874066",
+    "retry_suggested": true
   }
 ]
