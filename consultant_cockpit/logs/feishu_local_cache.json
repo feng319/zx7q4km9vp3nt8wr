@@ -33,5 +33,40 @@
     "data": null,
     "timestamp": "2026-05-02T23:04:34.575697",
     "retry_suggested": true
+  },
+  {
+    "operation": "list_records",
+    "error": "网络超时",
+    "data": null,
+    "timestamp": "2026-05-03T06:35:45.510274",
+    "retry_suggested": true
+  },
+  {
+    "operation": "op1",
+    "error": "e1",
+    "data": null,
+    "timestamp": "2026-05-03T06:35:47.784716",
+    "retry_suggested": true
+  },
+  {
+    "operation": "op2",
+    "error": "e2",
+    "data": null,
+    "timestamp": "2026-05-03T06:35:47.785716",
+    "retry_suggested": true
+  },
+  {
+    "operation": "op",
+    "error": "e",
+    "data": null,
+    "timestamp": "2026-05-03T06:35:47.786220",
+    "retry_suggested": true
+  },
+  {
+    "operation": "sync",
+    "error": "网络错误",
+    "data": null,
+    "timestamp": "2026-05-03T06:35:59.180514",
+    "retry_suggested": true
   }
 ]
