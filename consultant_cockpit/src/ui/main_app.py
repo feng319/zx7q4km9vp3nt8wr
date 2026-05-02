@@ -424,11 +424,11 @@ def render_right_panel():
     # 备弹区（SKU卡片）- 渐进式更新设计
     st.markdown("---")
 
-    # 检查是否有新召回（小红点提示）
+    # 检查是否有新召回（小红点提示）- 使用设计令牌
     has_new_skus = st.session_state.get("has_new_skus", False)
     if has_new_skus:
         st.markdown("""
-        <div style="display: inline-block; padding: 5px 10px; background: #ff4444; color: white; border-radius: 15px; font-size: 12px;">
+        <div class="badge badge-error" role="status" aria-live="polite">
             🔴 有新备弹
         </div>
         """, unsafe_allow_html=True)
