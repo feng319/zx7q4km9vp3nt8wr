@@ -15,6 +15,7 @@ import time
 from src.core.consensus_chain import ConsensusChain
 from src.utils.llm_client import LLMClient
 from src.utils.config import Config
+from src.core.fallback_handler import FallbackHandler, get_fallback_template
 
 
 class Candidate(BaseModel):
@@ -76,10 +77,11 @@ class CandidateGenerator:
     """
 
     def __init__(self, llm_client: LLMClient, consensus_chain: ConsensusChain,
-                 knowledge_retriever=None):
+                 knowledge_retriever=None, fallback_handler: FallbackHandler = None):
         self.llm_client = llm_client
         self.consensus_chain = consensus_chain
         self.knowledge_retriever = knowledge_retriever
+        self.fallback_handler = fallback_handler or FallbackHandler()
 
         # 预计算缓存
         self._cache = CandidateCache()
