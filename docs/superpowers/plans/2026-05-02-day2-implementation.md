@@ -886,6 +886,49 @@ class ConsensusChain:
                 print(f"飞书同步失败: {e}")
 ```
 
+- [ ] **Step 3: 调试确认 list_records 返回结构**
+
+在实现 Task 10a 之前，必须先确认 lark-cli `+record-list` 的实际返回格式，以便正确提取 `record_id`。
+
+```bash
+# 在 consultant_cockpit 目录下运行
+cd consultant_cockpit
+python -c "
+from src.integrations.feishu_client import FeishuClient
+import json
+c = FeishuClient()
+records = c.list_records()
+if records:
+    print('首条记录结构:')
+    print(json.dumps(records[0], ensure_ascii=False, indent=2))
+else:
+    print('无记录，请先在飞书多维表格中创建一条测试记录')
+"
+```
+
+根据输出结果，确认：
+1. 每条记录是 `dict` 还是 `list` 格式
+2. `record_id` 字段的位置（顶层还是嵌套）
+3. 如果是 `list` 格式，确定 `record_id` 如何获取
+
+**可能的返回结构示例：**
+
+```json
+// dict 格式（推荐）
+{
+  "record_id": "recXXXXXX",
+  "fields": {
+    "客户公司名": "测试客户A",
+    "产品线": "储能、光伏"
+  }
+}
+
+// list 格式（需要额外处理）
+["测试客户A", "储能、光伏", ...]
+```
+
+如果返回的是 `list` 格式，需要修改 `list_records()` 方法，使用 `--include-record-id` 参数或调用其他 API 获取 record_id。
+
 ---
 
 ## Day 2 验收标准
