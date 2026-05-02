@@ -296,7 +296,7 @@ class FeishuSync:
             "is_running": is_running,
             "thread_alive": thread_alive,
             "queue_size": self.change_queue.qsize(),
-            "stats": self.stats.copy(),
+            "stats": self._get_stats(),
             "poll_interval": self.poll_interval
         }
 
