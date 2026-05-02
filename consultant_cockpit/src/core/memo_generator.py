@@ -2,15 +2,19 @@
 from typing import Dict, List, Optional
 import json
 from src.core.consensus_chain import ConsensusChain
+from src.core.fallback_handler import FallbackHandler
+from src.utils.config import Config
 
 
 class MemoGenerator:
     """备忘录生成器(三层架构)"""
 
-    def __init__(self, consensus_chain: ConsensusChain, llm_client=None, client_profile: Dict = None):
+    def __init__(self, consensus_chain: ConsensusChain, llm_client=None,
+                 client_profile: Dict = None, fallback_handler: FallbackHandler = None):
         self.consensus_chain = consensus_chain
         self.llm_client = llm_client
         self.client_profile = client_profile or {}  # 客户档案（从外部注入）
+        self.fallback_handler = fallback_handler or FallbackHandler()
 
     def _strip_metadata(self, direction: Dict) -> Dict:
         """剥离内部元数据字段（来源等），防止写入Word或传给LLM"""
