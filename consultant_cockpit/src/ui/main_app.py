@@ -1,13 +1,9 @@
-# src/ui/main_app.py - v2
-import sys
-from pathlib import Path
-sys.path.insert(0, str(Path(__file__).parent.parent))
-
+# src/ui/main_app.py
 import streamlit as st
-from src.core.consensus_chain import ConsensusChain, ConsensusRecord
-from src.core.candidate_generator import CandidateGenerator
-from src.core.memo_generator import MemoGenerator
-from src.utils.llm_client import LLMClient
+from ..core.consensus_chain import ConsensusChain, ConsensusRecord
+from ..core.candidate_generator import CandidateGenerator
+from ..core.memo_generator import MemoGenerator
+from ..utils.llm_client import LLMClient
 from datetime import datetime
 
 # 初始化
@@ -16,7 +12,7 @@ if "consensus_chain" not in st.session_state:
 if "llm_client" not in st.session_state:
     st.session_state.llm_client = LLMClient()
 
-st.title("顾问现场作战系统")
+def main():
 
 # 侧边栏: 指令输入
 st.sidebar.header("快捷指令")
