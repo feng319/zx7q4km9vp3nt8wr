@@ -123,7 +123,7 @@ class FeishuClient:
             # 写入诊断共识表
             return self._upsert_consensus_record(fields, consensus_table_id)
         except Exception as e:
-            print(f"飞书同步失败: {e}")
+            _logger.warning(f"飞书同步失败: {e}")
             return False
 
     def _upsert_consensus_record(self, fields: Dict, table_id: str) -> bool:
@@ -140,7 +140,7 @@ class FeishuClient:
             ], use_format=False)
             return True
         except Exception as e:
-            print(f"写入诊断共识表失败: {e}")
+            _logger.error(f"写入诊断共识表失败: {e}")
             return False
 
     def upsert_record(self, company: str, fields: Dict) -> Dict:
