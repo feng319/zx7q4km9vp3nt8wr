@@ -303,7 +303,7 @@ class BattleCardGenerator:
         fields = profile.get("fields", {}) if profile else {}
         company = fields.get("客户公司名", "客户")
         product_line = fields.get("产品线", "未知")
-       诉求 = fields.get("显性诉求", "")
+        诉求 = fields.get("显性诉求", "")
 
         prompt = f"""基于以下客户信息和行业案例，生成1-2句诊断假设。
 
