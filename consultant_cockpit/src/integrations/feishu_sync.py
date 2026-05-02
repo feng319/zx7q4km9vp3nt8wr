@@ -234,11 +234,12 @@ class FeishuSync:
     def _write_heartbeat(self, status: str):
         """写入心跳文件"""
         try:
+            stats = self._get_stats()
             with open(self.heartbeat_file, "w", encoding="utf-8") as f:
                 f.write(f"{datetime.now().isoformat()} | {status}\n")
-                f.write(f"poll_count: {self.stats['poll_count']}\n")
-                f.write(f"change_count: {self.stats['change_count']}\n")
-                f.write(f"error_count: {self.stats['error_count']}\n")
+                f.write(f"poll_count: {stats['poll_count']}\n")
+                f.write(f"change_count: {stats['change_count']}\n")
+                f.write(f"error_count: {stats['error_count']}\n")
         except Exception:
             pass  # 心跳写入失败不影响主流程
 
