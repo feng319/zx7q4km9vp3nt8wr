@@ -4,6 +4,9 @@ import subprocess, json, os
 from pathlib import Path
 from dotenv import load_dotenv
 from typing import Dict, Optional, List
+from src.utils.logger import get_logger
+
+_logger = get_logger("feishu_client")
 
 load_dotenv()
 
