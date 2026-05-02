@@ -175,10 +175,11 @@ def test_handle_knowledge_recall_success():
 
     # Mock 知识召回器
     from src.core.knowledge_retriever import SKUCard
+    from datetime import datetime
 
     mock_retriever = Mock()
     mock_retriever.recall_by_keywords = Mock(return_value=[
-        SKUCard(id="sku_001", title="测试SKU", summary="摘要", confidence="🟢", stage="测试")
+        SKUCard(id="sku_001", title="测试SKU", summary="摘要", confidence="🟢", stage="测试", recalled_at=datetime.now())
     ])
 
     result = handler.handle_knowledge_recall_failure(
