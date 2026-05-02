@@ -14,7 +14,7 @@ print("=" * 60)
 
 # 1. 创建共识链
 chain = ConsensusChain()
-print("\n✓ 共识链创建成功")
+print("\n[OK] 共识链创建成功")
 
 # 2. 添加3条事实
 for i in range(3):
@@ -29,7 +29,7 @@ for i in range(3):
     )
     chain.add_record(record)
 
-print(f"✓ 已添加 {len(chain.records)} 条事实")
+print(f"[OK] 已添加 {len(chain.records)} 条事实")
 
 # 3. 添加1条判断
 consensus_record = ConsensusRecord(
@@ -43,19 +43,19 @@ consensus_record = ConsensusRecord(
     recommendation="聚焦储能主航道"
 )
 chain.add_record(consensus_record)
-print(f"✓ 已添加判断，当前共识链总数: {len(chain.records)}")
+print(f"[OK] 已添加判断，当前共识链总数: {len(chain.records)}")
 
 # 4. 验证共识链方法
 confirmed_facts = chain.get_confirmed_facts()
 confirmed_consensus = chain.get_confirmed_consensus()
-print(f"✓ 已确认事实数: {len(confirmed_facts)}")
-print(f"✓ 已确认判断数: {len(confirmed_consensus)}")
+print(f"[OK] 已确认事实数: {len(confirmed_facts)}")
+print(f"[OK] 已确认判断数: {len(confirmed_consensus)}")
 
 # 5. 生成备忘录
 generator = MemoGenerator(chain)
 output_path = "test_memo_output.docx"
 generator.generate_word(output_path)
-print(f"✓ 备忘录已生成: {output_path}")
+print(f"[OK] 备忘录已生成: {output_path}")
 
 print("\n" + "=" * 60)
 print("所有验证通过！Day 1 最小闭环成功")
