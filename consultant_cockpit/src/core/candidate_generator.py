@@ -153,9 +153,21 @@ class CandidateGenerator:
         return list(set(keywords))[:5]
 
     def generate_candidates(self) -> List[Candidate]:
-        """生成候选方案"""
+        """生成候选方案（带超时保护）"""
         prompt = self._build_prompt()
-        response = self.llm_client.generate(prompt, temperature=0.7)
+
+        # 使用 FallbackHandler 进行超时保护
+        result = self.fallback_handler.handle_llm_timeout(
+            generator=lambda: self.llm_client.generate(prompt, temperature=0.7),
+            timeout_seconds=Config.LLM_TIMEOUT_SECONDS,
+            fallback_template_name="diagnosis_hypothesis"
+        )
+
+        if result.success:
+            response = result.data.get("result", "")
+        else:
+            # 超时降级：使用模板内容生成默认候选
+            response = result.data.get("fallback_value", "")
 
         candidates = self._parse_response(response)
 
@@ -163,7 +175,15 @@ class CandidateGenerator:
         if not self._check_diversity(candidates):
             # 重新生成(最多2次)
             for _ in range(Config.CANDIDATE_MAX_REGENERATE):
-                response = self.llm_client.generate(prompt, temperature=0.8)
+                retry_result = self.fallback_handler.handle_llm_timeout(
+                    generator=lambda: self.llm_client.generate(prompt, temperature=0.8),
+                    timeout_seconds=Config.LLM_TIMEOUT_SECONDS,
+                    fallback_template_name="diagnosis_hypothesis"
+                )
+                if retry_result.success:
+                    response = retry_result.data.get("result", "")
+                else:
+                    response = retry_result.data.get("fallback_value", "")
                 candidates = self._parse_response(response)
                 if self._check_diversity(candidates):
                     break
