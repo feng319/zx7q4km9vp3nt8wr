@@ -1,0 +1,16 @@
+{
+  "name": "knowledge-extraction",
+  "version": "1.0.0",
+  "description": "知识萃取项目",
+  "scripts": {
+    "start": "cd consultant_cockpit && streamlit run src/ui/main_app.py",
+    "cockpit": "cd consultant_cockpit && streamlit run src/ui/main_app.py",
+    "test": "cd consultant_cockpit && pytest tests/ -v",
+    "test:chain": "cd consultant_cockpit && pytest tests/test_consensus_chain.py -v",
+    "test:candidate": "cd consultant_cockpit && pytest tests/test_candidate_generator.py -v",
+    "test:memo": "cd consultant_cockpit && pytest tests/test_memo_generator.py -v"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
