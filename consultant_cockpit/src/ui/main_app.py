@@ -488,8 +488,7 @@ def init_session_state():
     if "candidate_generator" not in st.session_state:
         st.session_state.candidate_generator = CandidateGenerator(
             llm_client=st.session_state.llm_client,
-            consensus_chain=st.session_state.consensus_chain,
-            knowledge_retriever=st.session_state.knowledge_retriever
+            consensus_chain=st.session_state.consensus_chain
         )
 
     # Day 3 新增组件
