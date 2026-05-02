@@ -74,6 +74,25 @@ class FeishuSync:
         # 确保心跳文件目录存在
         self.heartbeat_file.parent.mkdir(parents=True, exist_ok=True)
 
+    def _update_stats(self, key: str, value: Any = None, increment: int = None):
+        """线程安全地更新统计信息
+
+        Args:
+            key: 统计项键名
+            value: 设置的值（可选）
+            increment: 增量值（可选）
+        """
+        with self._stats_lock:
+            if increment is not None:
+                self.stats[key] = self.stats.get(key, 0) + increment
+            if value is not None:
+                self.stats[key] = value
+
+    def _get_stats(self) -> Dict:
+        """线程安全地获取统计信息副本"""
+        with self._stats_lock:
+            return self.stats.copy()
+
     def start_listening(self) -> bool:
         """启动后台轮询线程
 
@@ -141,8 +160,8 @@ class FeishuSync:
 
     def _check_changes(self):
         """检查变更（合并 handler）"""
-        self.stats["poll_count"] += 1
-        self.stats["last_poll_time"] = datetime.now().isoformat()
+        self._update_stats("poll_count", increment=1)
+        self._update_stats("last_poll_time", value=datetime.now().isoformat())
 
         try:
             records = self.feishu_client.list_records()
