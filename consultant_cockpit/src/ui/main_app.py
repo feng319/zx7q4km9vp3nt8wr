@@ -46,17 +46,19 @@ st.sidebar.header("快捷指令")
 manual_input = st.sidebar.text_input("/记 <内容>")
 if st.sidebar.button("记录"):
     if manual_input:
+        # 使用 infer_type 自动判断类型
+        record_type = infer_type(manual_input)
         record = ConsensusRecord(
             id=f"cc_{len(st.session_state.consensus_chain.records)}",
             timestamp=datetime.now(),
-            type="fact",
+            type=record_type,
             stage="战略梳理",
             content=manual_input,
             source="manual",
             status="recorded"
         )
         st.session_state.consensus_chain.add_record(record)
-        st.success("已记录")
+        st.success(f"已记录 (类型: {record_type})")
 
 # /候选 指令
 if st.sidebar.button("/候选"):
