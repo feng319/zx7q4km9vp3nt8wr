@@ -28,7 +28,7 @@ def list_records() -> list[dict]:
         "base", "+record-list",
         "--base-token", APP_TOKEN,
         "--table-id", TABLE_ID,
-    ])
+    ], use_format=True)
     # 适配 lark-cli base +record-list 返回格式
     if "data" in data and "items" not in data:
         # 返回格式: {"data": {"data": [...], "fields": [...], ...}}
@@ -57,13 +57,13 @@ def upsert_record(company: str, fields: dict) -> dict:
             "--base-token", APP_TOKEN,
             "--table-id", TABLE_ID,
             "--json", json.dumps({"records": [{"record_id": existing["record_id"], "fields": fields}]}, ensure_ascii=False),
-        ])
+        ], use_format=False)
     return _run_cli([
         "base", "+record-batch-create",
         "--base-token", APP_TOKEN,
         "--table-id", TABLE_ID,
         "--json", json.dumps({"records": [{"fields": fields}]}, ensure_ascii=False),
-    ])
+    ], use_format=False)
 
 
 def calc_completeness(record: dict) -> float:
