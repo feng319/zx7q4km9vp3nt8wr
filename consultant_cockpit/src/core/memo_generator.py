@@ -1,12 +1,15 @@
 # src/core/memo_generator.py
-from typing import Dict, List
+from typing import Dict, List, Optional
+import json
 from src.core.consensus_chain import ConsensusChain
+
 
 class MemoGenerator:
     """备忘录生成器(三层架构)"""
 
-    def __init__(self, consensus_chain: ConsensusChain):
+    def __init__(self, consensus_chain: ConsensusChain, llm_client=None):
         self.consensus_chain = consensus_chain
+        self.llm_client = llm_client
 
     def _strip_metadata(self, direction: Dict) -> Dict:
         """剥离内部元数据字段（来源等），防止写入Word或传给LLM"""
