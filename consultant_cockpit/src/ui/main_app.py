@@ -184,8 +184,23 @@ def render_right_panel():
             st.write(sku.summary)
 
 
-def main():
-    # 初始化
+def on_feishu_record_change(record_data, session_state):
+    """飞书记录变更回调"""
+    # 更新客户档案缓存
+    if "feishu_records_cache" not in session_state:
+        session_state.feishu_records_cache = {}
+
+    record_id = record_data.get("record_id")
+    if record_id:
+        session_state.feishu_records_cache[record_id] = record_data
+
+    # 触发完整度重算
+    session_state.feishu_cache_valid = False
+
+
+def init_session_state():
+    """初始化 session_state"""
+    # 核心组件
     if "consensus_chain" not in st.session_state:
         st.session_state.consensus_chain = ConsensusChain()
     if "llm_client" not in st.session_state:
@@ -195,8 +210,55 @@ def main():
     if "sku_cache" not in st.session_state:
         st.session_state.sku_cache = []
 
-    st.title("顾问现场作战系统")
+    # Day 3 新增组件
+    if "feishu_client" not in st.session_state:
+        try:
+            st.session_state.feishu_client = FeishuClient()
+        except Exception:
+            st.session_state.feishu_client = None
 
+    if "battle_card_generator" not in st.session_state:
+        st.session_state.battle_card_generator = BattleCardGenerator(
+            feishu_client=st.session_state.get("feishu_client"),
+            llm_client=st.session_state.llm_client,
+            knowledge_retriever=st.session_state.knowledge_retriever
+        )
+
+    if "fallback_handler" not in st.session_state:
+        st.session_state.fallback_handler = FallbackHandler()
+
+    # 飞书同步（可选）
+    if "feishu_sync" not in st.session_state:
+        feishu_client = st.session_state.get("feishu_client")
+        if feishu_client:
+            st.session_state.feishu_sync = FeishuSync(
+                feishu_client=feishu_client,
+                on_record_change=on_feishu_record_change,
+                poll_interval=30
+            )
+        else:
+            st.session_state.feishu_sync = FeishuSyncMock()
+
+    # UI 状态
+    if "demo_mode" not in st.session_state:
+        st.session_state.demo_mode = False
+    if "current_company" not in st.session_state:
+        st.session_state.current_company = ""
+
+
+def render_battle_card_tab_wrapper():
+    """渲染作战卡 Tab（封装）"""
+    from src.ui.battle_card_tab import render_battle_card_tab
+
+    render_battle_card_tab(
+        battle_card_generator=st.session_state.battle_card_generator,
+        feishu_sync=st.session_state.feishu_sync,
+        feishu_client=st.session_state.get("feishu_client")
+    )
+
+
+def render_main_tab():
+    """渲染主界面 Tab（原有三栏布局）"""
     # 三栏布局
     col_left, col_center, col_right = st.columns([3, 5, 2])
 
@@ -208,6 +270,39 @@ def main():
 
     with col_right:
         render_right_panel()
+
+
+def main():
+    # 初始化
+    init_session_state()
+
+    # 演示模式 CSS 注入
+    if st.session_state.get("demo_mode"):
+        st.markdown("""
+        <style>
+        /* 隐藏调试信息 */
+        .stDebug { display: none !important; }
+        /* 放大字体 */
+        .stMarkdown { font-size: 1.2em !important; }
+        </style>
+        """, unsafe_allow_html=True)
+
+    st.title("顾问现场作战系统")
+
+    # Tab 布局
+    tab1, tab2 = st.tabs(["🎯 会议作战", "📋 会前作战卡"])
+
+    with tab1:
+        render_main_tab()
+
+    with tab2:
+        render_battle_card_tab_wrapper()
+
+    # 处理飞书同步变更
+    if st.session_state.get("feishu_sync"):
+        changes = st.session_state.feishu_sync.get_pending_changes()
+        if changes:
+            st.session_state.feishu_sync.process_changes_in_main_thread(st.session_state)
 
 
 if __name__ == "__main__":
