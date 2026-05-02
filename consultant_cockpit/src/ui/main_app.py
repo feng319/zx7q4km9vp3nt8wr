@@ -1,9 +1,13 @@
 # src/ui/main_app.py
+import sys
+from pathlib import Path
+sys.path.insert(0, str(Path(__file__).parent.parent))
+
 import streamlit as st
-from ..core.consensus_chain import ConsensusChain, ConsensusRecord
-from ..core.candidate_generator import CandidateGenerator
-from ..core.memo_generator import MemoGenerator
-from ..utils.llm_client import LLMClient
+from src.core.consensus_chain import ConsensusChain, ConsensusRecord
+from src.core.candidate_generator import CandidateGenerator
+from src.core.memo_generator import MemoGenerator
+from src.utils.llm_client import LLMClient
 from datetime import datetime
 
 # 初始化
