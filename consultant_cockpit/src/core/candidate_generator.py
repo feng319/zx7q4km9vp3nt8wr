@@ -16,6 +16,9 @@ from src.core.consensus_chain import ConsensusChain
 from src.utils.llm_client import LLMClient
 from src.utils.config import Config
 from src.core.fallback_handler import FallbackHandler, get_fallback_template
+from src.utils.logger import get_logger
+
+_logger = get_logger("candidate_generator")
 
 
 class Candidate(BaseModel):
