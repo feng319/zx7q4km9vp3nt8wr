@@ -125,4 +125,4 @@ if __name__ == "__main__":
     upsert_record("测试客户A", {"显性诉求": "想做虚拟电厂", "产品线": "储能、光伏、节能改造三条线"})
     rec = get_record_by_company("测试客户A")
     print(f"完整度：{calc_completeness(rec):.0%}")
-    print("✓ 飞书集成跑通")
+    print("[OK] 飞书集成跑通")
