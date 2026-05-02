@@ -1,0 +1,103 @@
+"""feishu_client.py - lark-cli 子进程封装层"""
+import subprocess, json, os
+from pathlib import Path
+from dotenv import load_dotenv
+
+load_dotenv()
+
+APP_TOKEN = os.getenv("FEISHU_BITABLE_APP_TOKEN")
+TABLE_ID = os.getenv("FEISHU_BITABLE_TABLE_ID")
+DOC_TEMPLATE_TOKEN = os.getenv("FEISHU_DOC_TEMPLATE_TOKEN")
+
+
+def _run_cli(args: list[str]) -> dict:
+    """统一执行 lark-cli 命令，返回 JSON。"""
+    cmd = ["lark-cli"] + args + ["--format", "json"]
+    result = subprocess.run(cmd, capture_output=True, text=True, timeout=30)
+    if result.returncode != 0:
+        raise RuntimeError(f"lark-cli failed: {result.stderr}")
+    return json.loads(result.stdout) if result.stdout else {}
+
+
+def list_records() -> list[dict]:
+    """列出所有客户记录。"""
+    data = _run_cli([
+        "base", "+record-list",
+        "--base-token", APP_TOKEN,
+        "--table-id", TABLE_ID,
+    ])
+    # 适配 lark-cli base +record-list 返回格式
+    if "data" in data and "items" not in data:
+        # 返回格式: {"data": {"data": [...], "fields": [...], ...}}
+        return data.get("data", {}).get("data", [])
+    return data.get("items", [])
+
+
+def get_record_by_company(company: str) -> dict | None:
+    """按公司名查询单条记录。"""
+    for r in list_records():
+        # 适配记录格式
+        fields = r.get("fields", {})
+        if isinstance(fields, dict):
+            if fields.get("客户公司名") == company:
+                return r
+    return None
+
+
+def upsert_record(company: str, fields: dict) -> dict:
+    """新增或更新一条客户记录。"""
+    fields = {**fields, "客户公司名": company}
+    existing = get_record_by_company(company)
+    if existing:
+        return _run_cli([
+            "base", "+record-batch-update",
+            "--base-token", APP_TOKEN,
+            "--table-id", TABLE_ID,
+            "--json", json.dumps({"records": [{"record_id": existing["record_id"], "fields": fields}]}, ensure_ascii=False),
+        ])
+    return _run_cli([
+        "base", "+record-batch-create",
+        "--base-token", APP_TOKEN,
+        "--table-id", TABLE_ID,
+        "--json", json.dumps({"records": [{"fields": fields}]}, ensure_ascii=False),
+    ])
+
+
+def calc_completeness(record: dict) -> float:
+    """程序硬规则判断完整度，返回 0.0-1.0。"""
+    rules = {
+        "产品线": 20, "客户群体": 10, "收入结构": 10,
+        "毛利结构": 10, "交付情况": 10, "资源分布": 10, "战略目标": 15,
+    }
+    fields = record.get("fields", {})
+    filled = sum(1 for k, min_len in rules.items()
+                 if len(str(fields.get(k, ""))) >= min_len)
+    return filled / len(rules)
+
+
+def render_to_doc(company: str, doc_token: str) -> dict:
+    """把多维表格记录渲染到云文档（B.2 模板的填充版）。"""
+    record = get_record_by_company(company)
+    if not record:
+        raise ValueError(f"找不到客户：{company}")
+    f = record["fields"]
+
+    template = Path("doc_template.md").read_text(encoding="utf-8")
+    rendered = template
+    for key in ["客户公司名", "产品线", "客户群体", "收入结构",
+                "毛利结构", "交付情况", "资源分布", "战略目标"]:
+        rendered = rendered.replace(f"{{{{{key}}}}}", str(f.get(key, "（待填充）")))
+
+    return _run_cli([
+        "docs", "+update",
+        "--doc", doc_token,
+        "--markdown", rendered,
+    ])
+
+
+if __name__ == "__main__":
+    # 自测：跑一遍主流程
+    upsert_record("测试客户A", {"显性诉求": "想做虚拟电厂", "产品线": "储能、光伏、节能改造三条线"})
+    rec = get_record_by_company("测试客户A")
+    print(f"完整度：{calc_completeness(rec):.0%}")
+    print("✓ 飞书集成跑通")
