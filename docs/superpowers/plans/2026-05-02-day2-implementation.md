@@ -696,26 +696,46 @@ class FeishuClient:
         return [f["name"] for f in fields_data.get("data", {}).get("fields", [])]
 
     def list_records(self) -> List[Dict]:
-        """列出所有客户记录"""
+        """列出所有客户记录（保留原始结构）"""
         data = _run_cli([
             "base", "+record-list",
             "--base-token", self.app_token,
             "--table-id", self.table_id,
         ], use_format=True)
         if "data" in data and "items" not in data:
-            return data.get("data", {}).get("data", [])
+            # 返回格式可能是 {"data": {"data": [...], "fields": [...]}}
+            # 或 {"data": {"items": [...]}}
+            inner = data.get("data", {})
+            return inner.get("data", inner.get("items", []))
         return data.get("items", [])
 
     def get_client_profile(self, company: str) -> Optional[Dict]:
-        """获取客户档案（按公司名查询）"""
+        """
+        获取客户档案（按公司名查询）
+
+        注意：需要正确提取 record_id 用于后续更新操作。
+        lark-cli +record-list 返回的每条记录结构可能是：
+        - dict 格式: {"record_id": "xxx", "fields": {...}}
+        - list 格式: [field1_value, field2_value, ...]（record_id 在独立字段）
+
+        建议先运行调试命令确认实际结构。
+        """
         field_names = self._get_field_names()
         for r in self.list_records():
-            if isinstance(r, list):
+            if isinstance(r, dict):
+                # dict 格式：fields 在 "fields" 键里
+                fields = r.get("fields", {})
+                if fields.get("客户公司名") == company:
+                    return {"record_id": r.get("record_id"), "fields": fields}
+            elif isinstance(r, list):
+                # list 格式：按字段顺序解析
                 fields_dict = {}
                 for i, name in enumerate(field_names):
                     if i < len(r):
                         fields_dict[name] = r[i]
                 if fields_dict.get("客户公司名") == company:
+                    # list 格式下 record_id 通常不在列表里，需要从其他来源获取
+                    # 这种情况需要额外 API 调用或调整 list_records 返回格式
                     return {"record_id": None, "fields": fields_dict}
         return None
 
