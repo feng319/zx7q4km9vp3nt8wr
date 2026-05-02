@@ -88,8 +88,10 @@ def upsert_record(company: str, fields: dict) -> dict:
     ], use_format=False)
 
 
-def calc_completeness(record: dict) -> float:
+def calc_completeness(record: dict | None) -> float:
     """程序硬规则判断完整度，返回 0.0-1.0。"""
+    if not record:
+        return 0.0
     rules = {
         "产品线": 20, "客户群体": 10, "收入结构": 10,
         "毛利结构": 10, "交付情况": 10, "资源分布": 10, "战略目标": 15,
