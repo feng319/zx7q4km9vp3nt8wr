@@ -1152,7 +1152,7 @@ PRESET_BUSINESS_TREE = {
 
 #### 11.2.1 技术方案选择
 
-**验证结论**：当前 lark-cli 版本只支持 IM 事件，不支持 bitable 变更事件。
+**验证结论**：`lark-cli event list` 当前只显示 IM 事件。`lark-event` Skill（WebSocket 长连接）理论上支持 `drive.file.bitable_record_changed_v1`，但尚未完成本地验证。
 
 ```
 $ lark-cli event list
@@ -1166,7 +1166,7 @@ $ lark-cli event list
 1. 先调用"订阅云文档事件接口"
 2. 权限要求：`drive:drive:readonly` + `bitable:bitable:readonly`
 
-**最终方案**：轮询为主（当前可行），未来可升级为 WebSocket。
+**当前方案**：轮询为主（已验证可行），保留 WebSocket 升级路径（Day 3 结束前完成验证）。
 
 #### 11.2.2 模块结构
 
