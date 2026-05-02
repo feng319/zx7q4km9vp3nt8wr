@@ -1329,9 +1329,10 @@ class FeishuSync:
 ```python
 # src/core/fallback_handler.py
 """降级处理器"""
-from typing import Optional, Callable
+from typing import Optional, Callable, List
 from dataclasses import dataclass
 from enum import Enum
+from concurrent.futures import ThreadPoolExecutor, TimeoutError as FuturesTimeoutError
 
 class FallbackType(Enum):
     """降级类型"""
@@ -1366,16 +1367,34 @@ class FallbackHandler:
         )
 
     def handle_llm_timeout(self, generator: Callable, timeout_seconds: int = 10) -> FallbackResult:
-        """处理LLM响应超时"""
+        """处理LLM响应超时（真正的超时控制）
+
+        Args:
+            generator: 无参数的可调用对象，返回LLM生成结果
+            timeout_seconds: 超时时间（秒），默认10秒
+
+        Returns:
+            FallbackResult: 包含成功/失败状态和结果数据
+        """
         self.fallback_counts[FallbackType.LLM_TIMEOUT] += 1
 
         try:
-            result = generator()
+            # 使用 ThreadPoolExecutor 实现真正的超时控制
+            with ThreadPoolExecutor(max_workers=1) as executor:
+                future = executor.submit(generator)
+                result = future.result(timeout=timeout_seconds)
+
             return FallbackResult(
                 success=True,
                 fallback_type=FallbackType.LLM_TIMEOUT,
-                message="使用同步生成模式",
+                message="LLM生成成功",
                 data=result
+            )
+        except FuturesTimeoutError:
+            return FallbackResult(
+                success=False,
+                fallback_type=FallbackType.LLM_TIMEOUT,
+                message=f"LLM响应超时（>{timeout_seconds}秒），已降级为跳过该步骤"
             )
         except Exception as e:
             return FallbackResult(
@@ -1384,11 +1403,20 @@ class FallbackHandler:
                 message=f"LLM生成失败：{e}"
             )
 
-    def handle_knowledge_recall_failure(self, manual_query: str, knowledge_base) -> FallbackResult:
-        """处理知识库召回失败"""
+    def handle_knowledge_recall_failure(self, manual_query: str, knowledge_retriever) -> FallbackResult:
+        """处理知识库召回失败
+
+        Args:
+            manual_query: 手动输入的查询关键词
+            knowledge_retriever: KnowledgeRetriever 实例（Day 2 实现）
+
+        Returns:
+            FallbackResult: 包含召回结果
+        """
         self.fallback_counts[FallbackType.KNOWLEDGE_RECALL] += 1
 
-        results = knowledge_base.search(manual_query, top_k=5)
+        # 使用 Day 2 的 recall_by_keywords 接口
+        results: List = knowledge_retriever.recall_by_keywords([manual_query], top_k=5)
         return FallbackResult(
             success=len(results) > 0,
             fallback_type=FallbackType.KNOWLEDGE_RECALL,
