@@ -1,4 +1,4 @@
-# src/ui/main_app.py - 三栏布局版本
+# src/ui/main_app.py - 三栏布局版本 + Day 3 作战卡集成
 import sys
 from pathlib import Path
 
@@ -19,7 +19,11 @@ from src.core.consensus_chain import ConsensusChain, ConsensusRecord
 from src.core.candidate_generator import CandidateGenerator
 from src.core.memo_generator import MemoGenerator
 from src.core.knowledge_retriever import KnowledgeRetriever, SKUCard
+from src.core.battle_card_generator import BattleCardGenerator
+from src.core.fallback_handler import FallbackHandler
 from src.utils.llm_client import LLMClient
+from src.integrations.feishu_client import FeishuClient
+from src.integrations.feishu_sync import FeishuSync, FeishuSyncMock
 from datetime import datetime
 
 
