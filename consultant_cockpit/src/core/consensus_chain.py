@@ -2,6 +2,9 @@
 from datetime import datetime
 from typing import Optional, List, Literal
 from pydantic import BaseModel, Field
+from src.utils.logger import get_logger
+
+_logger = get_logger("consensus_chain")
 
 class ConsensusRecord(BaseModel):
     """共识链记录"""
