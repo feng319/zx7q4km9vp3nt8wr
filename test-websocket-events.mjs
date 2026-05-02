@@ -6,9 +6,6 @@
  */
 
 import * as Lark from '@larksuiteoapi/node-sdk';
-import dotenv from 'dotenv';
-
-dotenv.config();
 
 // 从环境变量获取配置
 const APP_ID = process.env.FEISHU_APP_ID || 'cli_a97ff9da2f389cb3';
