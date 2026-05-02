@@ -1,9 +1,17 @@
 # src/ui/main_app.py
+import sys
+from pathlib import Path
+
+# 确保项目根目录在 Python 路径中
+project_root = Path(__file__).parent.parent.parent
+if str(project_root) not in sys.path:
+    sys.path.insert(0, str(project_root))
+
 import streamlit as st
-from src.core.consensus_chain import ConsensusChain, ConsensusRecord
-from src.core.candidate_generator import CandidateGenerator
-from src.core.memo_generator import MemoGenerator
-from src.utils.llm_client import LLMClient
+from consultant_cockpit.src.core.consensus_chain import ConsensusChain, ConsensusRecord
+from consultant_cockpit.src.core.candidate_generator import CandidateGenerator
+from consultant_cockpit.src.core.memo_generator import MemoGenerator
+from consultant_cockpit.src.utils.llm_client import LLMClient
 from datetime import datetime
 
 # 初始化

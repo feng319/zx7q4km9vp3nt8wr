@@ -1,9 +1,9 @@
 # src/core/candidate_generator.py
 from typing import List, Dict, Optional
 from pydantic import BaseModel
-from .consensus_chain import ConsensusChain
-from ..utils.llm_client import LLMClient
-from ..utils.config import Config
+from consultant_cockpit.src.core.consensus_chain import ConsensusChain
+from consultant_cockpit.src.utils.llm_client import LLMClient
+from consultant_cockpit.src.utils.config import Config
 
 class Candidate(BaseModel):
     """候选方案"""
