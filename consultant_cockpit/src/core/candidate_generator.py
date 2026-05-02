@@ -349,7 +349,7 @@ class CandidateGenerator:
                     self._cache.set(candidates)
                     return candidates
                 except Exception as e:
-                    print(f"预计算失败: {e}")
+                    _logger.error(f"预计算失败: {e}")
 
         return self._cache.get()
 
@@ -370,7 +370,7 @@ class CandidateGenerator:
                 try:
                     self.check_and_precompute(available_skus)
                 except Exception as e:
-                    print(f"后台预计算异常: {e}")
+                    _logger.error(f"后台预计算异常: {e}")
                 self._stop_background.wait(interval)
 
         self._background_thread = threading.Thread(
