@@ -21,6 +21,16 @@ from src.core.memo_generator import MemoGenerator
 from src.utils.llm_client import LLMClient
 from datetime import datetime
 
+
+def infer_type(content: str) -> str:
+    """推断记录类型（fact/consensus）
+
+    规则：包含共识关键词的判定为consensus，否则为fact
+    """
+    consensus_keywords = ["客户认可", "我们决定", "确认", "选择", "同意", "认可"]
+    return "consensus" if any(kw in content for kw in consensus_keywords) else "fact"
+
+
 # 初始化
 if "consensus_chain" not in st.session_state:
     st.session_state.consensus_chain = ConsensusChain()
