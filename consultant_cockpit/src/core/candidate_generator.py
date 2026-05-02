@@ -137,7 +137,7 @@ class CandidateGenerator:
                             "supplemented_sku": supplemented_skus[0].model_dump() if hasattr(supplemented_skus[0], 'model_dump') else supplemented_skus[0]
                         }
                 except Exception as e:
-                    print(f"补充召回失败: {e}")
+                    _logger.warning(f"补充召回失败: {e}")
 
             return {
                 "valid": False,
@@ -284,7 +284,7 @@ class CandidateGenerator:
             min_len = min(lengths)
             if max_len > 0 and (max_len - min_len) / max_len > 0.3:
                 # 长度差异过大，记录日志但不阻断
-                print(f"⚠️ 候选描述长度差异超过30%: {lengths}")
+                _logger.warning(f"候选描述长度差异超过30%: {lengths}")
 
         return candidates
 
