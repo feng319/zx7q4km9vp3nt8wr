@@ -1506,6 +1506,161 @@ REHEARSAL_CHECKLIST = {
     └── 运维手册（含降级操作指南）
 ```
 
+#### 11.4.1.1 battle_card_tab.py UI 设计
+
+```python
+# src/ui/battle_card_tab.py
+"""作战卡 Tab 组件 - Streamlit UI"""
+import streamlit as st
+from typing import Optional, Callable
+from io import BytesIO
+
+def render_battle_card_tab(
+    battle_card_generator,
+    feishu_sync,
+    on_download: Optional[Callable] = None,
+    on_send_feishu: Optional[Callable] = None
+):
+    """渲染作战卡 Tab
+
+    Args:
+        battle_card_generator: BattleCardGenerator 实例
+        feishu_sync: FeishuSync 实例（可选）
+        on_download: 下载回调
+        on_send_feishu: 发送飞书回调
+    """
+    st.subheader("📋 会前作战卡")
+
+    # 1. 输入区
+    col1, col2 = st.columns([2, 1])
+    with col1:
+        company = st.text_input(
+            "客户公司名称",
+            placeholder="输入客户公司全称",
+            help="用于作战卡标题和知识库召回"
+        )
+    with col2:
+        consultant = st.text_input(
+            "顾问姓名",
+            value=st.session_state.get("consultant_name", ""),
+            help="留空则从 session_state 获取"
+        )
+
+    # 2. 完整度指示器
+    completeness = st.session_state.get("battle_card_completeness", 0.0)
+    completeness_color = "🟢" if completeness >= 0.8 else "🟡" if completeness >= 0.6 else "🔴"
+    st.metric(
+        "信息完整度",
+        f"{completeness_color} {completeness:.0%}",
+        help="≥80% 显示绿色，60%-80% 黄色，<60% 红色"
+    )
+
+    # 3. 生成按钮
+    if st.button("🎯 生成作战卡", disabled=not company, use_container_width=True):
+        with st.spinner("正在生成作战卡..."):
+            try:
+                battle_card = battle_card_generator.generate(
+                    company=company,
+                    consultant=consultant
+                )
+                st.session_state["current_battle_card"] = battle_card
+                st.session_state["battle_card_completeness"] = battle_card.completeness
+                st.rerun()
+            except Exception as e:
+                st.error(f"生成失败：{e}")
+
+    # 4. 作战卡预览区
+    battle_card = st.session_state.get("current_battle_card")
+    if battle_card:
+        render_battle_card_preview(battle_card)
+
+        # 5. 操作按钮区
+        col1, col2, col3 = st.columns(3)
+        with col1:
+            # 下载 Word
+            if st.button("📥 下载Word", use_container_width=True):
+                word_bytes = battle_card_generator._render_to_word(battle_card)
+                st.download_button(
+                    label="确认下载",
+                    data=word_bytes,
+                    file_name=f"作战卡_{company}_{battle_card.date}.docx",
+                    mime="application/vnd.openxmlformats-officedocument.wordprocessingml.document"
+                )
+
+        with col2:
+            # 发送飞书
+            if st.button("📤 发送飞书", use_container_width=True):
+                if on_send_feishu:
+                    on_send_feishu(battle_card)
+                else:
+                    st.warning("飞书发送功能未配置")
+
+        with col3:
+            # 切换演示模式
+            demo_mode = st.session_state.get("demo_mode", False)
+            if st.button(
+                "🎬 进入演示模式" if not demo_mode else "🔙 退出演示模式",
+                use_container_width=True
+            ):
+                st.session_state["demo_mode"] = not demo_mode
+                st.rerun()
+
+    # 6. 飞书同步状态（可选）
+    if feishu_sync:
+        render_sync_status(feishu_sync)
+
+
+def render_battle_card_preview(battle_card):
+    """渲染作战卡预览"""
+    st.markdown("---")
+    st.markdown(f"### {battle_card.company} - 会前作战卡")
+    st.markdown(f"**日期**：{battle_card.date} | **顾问**：{battle_card.consultant or '未填写'}")
+    st.markdown(f"**模式**：{'假设验证版' if battle_card.mode == 'hypothesis' else '信息补全版'}")
+
+    # 各区块内容
+    content = battle_card.content
+    with st.expander("📌 客户背景", expanded=True):
+        st.markdown(content.get("background", "暂无"))
+
+    with st.expander("🎯 战略假设", expanded=True):
+        st.markdown(content.get("strategy_hypothesis", "暂无"))
+
+    with st.expander("📊 SKU分析", expanded=True):
+        st.markdown(content.get("sku_analysis", "暂无"))
+
+    with st.expander("❓ 追问清单", expanded=False):
+        st.markdown(content.get("followup_questions", "暂无"))
+
+
+def render_sync_status(feishu_sync):
+    """渲染飞书同步状态"""
+    st.markdown("---")
+    col1, col2 = st.columns([3, 1])
+    with col1:
+        if feishu_sync._running:
+            st.success("🔄 飞书同步中...")
+        else:
+            st.info("⏸️ 飞书同步已暂停")
+
+    with col2:
+        if st.button("同步设置", key="sync_settings"):
+            st.session_state["show_sync_settings"] = True
+
+    # 同步设置弹窗
+    if st.session_state.get("show_sync_settings"):
+        with st.expander("同步设置", expanded=True):
+            new_interval = st.slider(
+                "轮询间隔（秒）",
+                min_value=10,
+                max_value=120,
+                value=feishu_sync.poll_interval
+            )
+            if st.button("应用"):
+                feishu_sync.poll_interval = new_interval
+                st.session_state["show_sync_settings"] = False
+                st.rerun()
+```
+
 #### 11.4.2 测试验收标准
 
 | 验收项 | 标准 | 验证方法 |
