@@ -219,7 +219,7 @@ class MemoGenerator:
         doc.save(output_path)
 
     def polish_chapter(self, chapter_data: Dict, max_words: int = 200) -> str:
-        """第三层：AI润色章节
+        """第三层：AI润色章节（带超时保护）
 
         Args:
             chapter_data: 章节数据（键值对或列表）
@@ -245,15 +245,22 @@ class MemoGenerator:
 
 直接输出润色后的段落，不要其他解释。"""
 
-        try:
-            result = self.llm_client.generate(prompt, temperature=0.3)
+        # 使用 FallbackHandler 进行超时保护
+        result = self.fallback_handler.handle_llm_timeout(
+            generator=lambda: self.llm_client.generate(prompt, temperature=0.3),
+            timeout_seconds=Config.LLM_TIMEOUT_SECONDS,
+            fallback_value=self._format_as_bullets(chapter_data)
+        )
+
+        if result.success:
+            polished = result.data.get("result", "")
             # 字数截断
-            if len(result) > max_words:
-                result = result[:max_words] + "..."
-            return result
-        except Exception as e:
-            # 降级：润色失败时使用原始要点
-            return self._format_as_bullets(chapter_data)
+            if len(polished) > max_words:
+                polished = polished[:max_words] + "..."
+            return polished
+        else:
+            # 超时降级：使用原始要点
+            return result.data.get("fallback_value", self._format_as_bullets(chapter_data))
 
     def _format_as_bullets(self, chapter_data: Dict) -> str:
         """降级：格式化为要点列表"""
