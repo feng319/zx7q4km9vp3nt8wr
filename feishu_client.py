@@ -95,7 +95,7 @@ def render_to_doc(company: str, doc_token: str) -> dict:
         "docs", "+update",
         "--doc", doc_token,
         "--markdown", rendered,
-    ])
+    ], use_format=False)
 
 
 if __name__ == "__main__":
