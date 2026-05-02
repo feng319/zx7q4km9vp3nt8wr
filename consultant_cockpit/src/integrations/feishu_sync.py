@@ -201,8 +201,8 @@ class FeishuSync:
                 "error": str(e),
                 "timestamp": datetime.now().isoformat()
             })
-            self.stats["error_count"] += 1
-            self.stats["last_error"] = str(e)
+            self._update_stats("error_count", increment=1)
+            self._update_stats("last_error", value=str(e))
 
     def register_known_write(self, record_id: str):
         """注册已知写入的记录ID
@@ -218,8 +218,8 @@ class FeishuSync:
 
     def _handle_error(self, error: str):
         """处理错误"""
-        self.stats["error_count"] += 1
-        self.stats["last_error"] = error
+        self._update_stats("error_count", increment=1)
+        self._update_stats("last_error", value=error)
 
         # 写入错误日志
         self._write_heartbeat(f"error: {error}")
