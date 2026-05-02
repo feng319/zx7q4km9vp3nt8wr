@@ -42,14 +42,14 @@ class ConsensusChain:
             record.status = "confirmed"
 
     def get_confirmed_facts(self) -> List[ConsensusRecord]:
-        """获取已确认的事实"""
+        """获取已确认的事实（排除已被替代的记录）"""
         return [
             r for r in self.records
             if r.type == "fact" and r.status == "confirmed"
         ]
 
     def get_confirmed_consensus(self) -> List[ConsensusRecord]:
-        """获取已确认的判断"""
+        """获取已确认的判断（排除已被替代的记录）"""
         return [
             r for r in self.records
             if r.type == "consensus" and r.status == "confirmed"
@@ -60,4 +60,11 @@ class ConsensusChain:
         return [
             r for r in self.records
             if r.status == "pending_client_confirm"
+        ]
+
+    def get_active_records(self) -> List[ConsensusRecord]:
+        """获取所有有效记录（排除已被替代的记录）"""
+        return [
+            r for r in self.records
+            if r.status != "superseded"
         ]
