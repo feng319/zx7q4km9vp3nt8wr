@@ -231,28 +231,8 @@ fastify.get('/api/feishu-status', async (request, reply) => {
   }
 });
 
-// 创建会话（允许任意 Content-Type 和空 body）
-fastify.post('/api/sessions', {
-  config: {
-    rawBody: true
-  },
-  onRequest: async (request, reply) => {
-    // 如果 Content-Type 是 application/json 但没有 body，改为 text/plain 避免 Fastify 报错
-    const contentType = request.headers['content-type'];
-    if (contentType && contentType.includes('application/json')) {
-      // 检查是否有实际 body（通过 content-length）
-      const contentLength = parseInt(request.headers['content-length'] || '0', 10);
-      if (contentLength === 0) {
-        // 移除 Content-Type，让 Fastify 不尝试解析
-        delete request.headers['content-type'];
-      }
-    }
-  },
-  preHandler: async (request, reply) => {
-    // 允许空 body
-    request.body = request.body || {};
-  }
-}, async (request, reply) => {
+// 创建会话
+fastify.post('/api/sessions', async (request, reply) => {
   const sessionId = require('crypto').randomUUID();
   getOrCreateSession(sessionId);
 
