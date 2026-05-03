@@ -134,7 +134,7 @@ function escapeHtml(text) {
 
 async function apiRequest(endpoint, options = {}) {
   // 只有在有 body 时才设置 Content-Type
-  const hasBody = options.body || options.method === 'POST' || options.method === 'PUT' || options.method === 'PATCH';
+  const hasBody = options.body !== undefined;
 
   const response = await fetch(`${API_BASE}${endpoint}`, {
     headers: hasBody ? {
