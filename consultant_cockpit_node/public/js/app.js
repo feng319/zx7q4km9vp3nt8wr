@@ -1061,12 +1061,49 @@ async function checkFeishuStatus() {
   }
 }
 
-function init() {
+/**
+ * 自动加载最近的会话
+ * 页面刷新后尝试恢复之前的会话
+ */
+async function autoLoadRecentSession() {
+  try {
+    const data = await apiRequest('/sessions');
+
+    if (data.success && data.sessions && data.sessions.length > 0) {
+      // 获取最近的会话（已按更新时间排序）
+      const recentSession = data.sessions[0];
+
+      state.sessionId = recentSession.session_id;
+      elements.sessionId.textContent = `会话: ${state.sessionId.slice(0, 8)}...`;
+
+      // 连接 WebSocket
+      connectWebSocket();
+
+      // 加载会话状态
+      await getSessionState();
+
+      setStatus(`已恢复最近会话 (${recentSession.record_count} 条记录)`, 'success');
+      return true;
+    }
+  } catch (error) {
+    console.warn('自动加载会话失败:', error);
+  }
+
+  return false;
+}
+
+async function init() {
   initElements();
   initEventListeners();
   checkFeishuStatus(); // 检查飞书连接状态
-  renderAll();
-  setStatus('就绪 - 点击"新建会话"开始');
+
+  // 尝试自动加载最近的会话
+  const sessionLoaded = await autoLoadRecentSession();
+
+  if (!sessionLoaded) {
+    renderAll();
+    setStatus('就绪 - 点击"新建会话"开始');
+  }
 }
 
 // 启动应用
