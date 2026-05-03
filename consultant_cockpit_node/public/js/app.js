@@ -337,7 +337,7 @@ async function executeRecordCommand(content) {
   const recordType = inferType(content);
 
   try {
-    await apiRequest(`/sessions/${state.sessionId}/records`, {
+    const result = await apiRequest(`/sessions/${state.sessionId}/records`, {
       method: 'POST',
       body: JSON.stringify({
         type: recordType,
@@ -348,8 +348,13 @@ async function executeRecordCommand(content) {
     });
 
     elements.commandInput.value = '';
-    setStatus(`已记录 (类型: ${recordType}, 阶段: ${state.currentStage})`, 'success');
+    setStatus(`已记录 (类型: ${recordType === 'fact' ? '事实' : '共识'}, 阶段: ${state.currentStage})`, 'success');
+
+    // 立即刷新状态并闪动新记录（不等 WebSocket）
     await getSessionState();
+    if (result.record?.id) {
+      flashRecord(result.record.id);
+    }
   } catch (error) {
     setStatus(`记录失败: ${error.message}`, 'error');
   }
