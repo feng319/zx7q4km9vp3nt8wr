@@ -201,7 +201,7 @@ node --test tests/candidateGen.test.js
 
 ### 4. 会话丢失
 
-会话自动保存在 `data/sessions/` 目录。重启服务后会自动恢复最近的会话。
+会话自动保存在 `data/sessions/` 目录。页面刷新后会自动恢复最近的会话（包括共识链记录和备弹 SKU）。服务重启后数据不丢失。
 
 ## 技术栈
 
