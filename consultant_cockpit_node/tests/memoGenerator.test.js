@@ -3,15 +3,21 @@
 const { describe, it, beforeEach } = require('node:test');
 const assert = require('node:assert');
 const { MemoGenerator } = require('../src/core/memoGenerator');
+const { ConsensusChain } = require('../src/core/consensusChain');
 
 describe('MemoGenerator', () => {
   /** @type {MemoGenerator} */
   let generator;
+  /** @type {ConsensusChain} */
+  let consensusChain;
 
   beforeEach(() => {
+    consensusChain = new ConsensusChain();
+
     generator = new MemoGenerator({
+      consensusChain,
       llmClient: {
-        chat: async (prompt) => {
+        generate: async (prompt) => {
           if (prompt.includes('提取')) {
             return JSON.stringify({
               facts: ['提取的事实1', '提取的事实2'],
@@ -37,134 +43,172 @@ describe('MemoGenerator', () => {
           }
           return '{}';
         }
+      },
+      clientProfile: {
+        显性诉求: '客户希望提升盈利能力',
       }
     });
   });
 
-  describe('generate', () => {
-    it('should generate memo with three layers', async () => {
-      const records = [
-        { type: 'fact', content: '事实内容', status: 'confirmed' },
-        { type: 'consensus', content: '共识内容', status: 'confirmed' },
-      ];
-
-      const result = await generator.generate(records, {
-        company: '测试公司',
-        date: '2026-05-03',
+  describe('extractData', () => {
+    it('should extract facts and consensus from chain', () => {
+      // 添加测试数据
+      consensusChain.addRecord({
+        type: 'fact',
+        stage: '战略梳理',
+        content: '公司2023年营收5亿元',
+        source: 'manual',
+        status: 'confirmed'
       });
 
-      assert.ok(result.chapters);
-      assert.ok(result.chapters['问题重构']);
-    });
-  });
-
-  describe('extract layer', () => {
-    it('should extract facts and consensuses from records', async () => {
-      const records = [
-        { type: 'fact', content: '事实1' },
-        { type: 'fact', content: '事实2' },
-        { type: 'consensus', content: '共识1' },
-      ];
-
-      const extracted = await generator._extractLayer(records);
-
-      assert.ok(Array.isArray(extracted.facts));
-      assert.ok(Array.isArray(extracted.consensuses));
-    });
-  });
-
-  describe('structure layer', () => {
-    it('should structure extracted content into chapters', async () => {
-      const extracted = {
-        facts: ['事实1', '事实2'],
-        consensuses: ['共识1'],
-      };
-
-      const structured = await generator._structureLayer(extracted, {
-        company: '测试公司',
+      consensusChain.addRecord({
+        type: 'consensus',
+        stage: '商业模式',
+        content: '应聚焦高端市场',
+        source: 'ai_suggested',
+        status: 'confirmed'
       });
 
-      assert.ok(structured.chapters);
-      assert.ok(structured.chapters['问题重构']);
-      assert.ok(structured.chapters['关键发现']);
+      const data = generator.extractData();
+
+      assert.ok(Array.isArray(data.facts));
+      assert.ok(Array.isArray(data.consensus));
+      assert.strictEqual(data.facts.length, 1);
+      assert.strictEqual(data.consensus.length, 1);
     });
   });
 
-  describe('polish layer', () => {
-    it('should polish structured content', async () => {
-      const structured = {
-        chapters: {
-          '问题重构': {
-            '原始诉求': '诉求',
-          }
+  describe('generateStructure', () => {
+    it('should generate memo structure with all chapters', () => {
+      // 添加测试数据
+      consensusChain.addRecord({
+        type: 'fact',
+        stage: '战略梳理',
+        content: '测试事实',
+        source: 'manual',
+        status: 'confirmed'
+      });
+
+      const structure = generator.generateStructure();
+
+      assert.ok(structure.chapters);
+      assert.ok(structure.chapters['问题重构']);
+      assert.ok(structure.chapters['关键发现']);
+      assert.ok(structure.chapters['初步建议方向']);
+      assert.ok(structure.chapters['需要进一步访谈']);
+      assert.ok(structure.chapters['建议下一步合作方式']);
+    });
+  });
+
+  describe('polishChapter', () => {
+    it('should return bullets when no LLM client', async () => {
+      const genNoLlm = new MemoGenerator({
+        consensusChain,
+        llmClient: null
+      });
+
+      const result = await genNoLlm.polishChapter({
+        要点1: '内容1',
+        要点2: '内容2'
+      });
+
+      assert.ok(result.includes('要点1') || result.includes('内容1'));
+    });
+
+    it('should polish with LLM', async () => {
+      const result = await generator.polishChapter({
+        要点: '测试内容'
+      });
+
+      assert.ok(typeof result === 'string');
+    });
+  });
+
+  describe('generateServiceRecommendation', () => {
+    it('should recommend deep diagnosis for high completeness', () => {
+      const data = {
+        facts: Array(5).fill({ content: '事实' }),
+        consensus: Array(3).fill({ content: '共识' }),
+        pending: [],
+        client_profile: {
+          产品线: '智能硬件产品线描述',
+          客户群体: '中大型企业客户群体',
+          收入结构: '硬件销售为主收入结构',
+          毛利结构: '较高毛利结构描述',
+          交付情况: '项目制交付情况描述',
+          资源分布: '研发为主资源分布',
+          战略目标: '成为行业第一战略目标',
+          显性诉求: '提升盈利能力诉求描述'
         }
       };
 
-      const polished = await generator._polishLayer(structured);
+      const recommendation = generator.generateServiceRecommendation(data);
 
-      assert.ok(typeof polished === 'string');
+      assert.strictEqual(recommendation['推荐服务包'], '深度诊断服务包');
     });
-  });
 
-  describe('generateWord', () => {
-    it('should generate Word document', async () => {
-      const memo = {
-        chapters: {
-          '问题重构': {
-            '原始诉求': '客户诉求',
-            '核心问题': '核心问题',
-          },
-          '关键发现': {
-            '战略层面': ['发现1', '发现2'],
-          },
+    it('should recommend preliminary diagnosis for medium completeness', () => {
+      const data = {
+        facts: Array(3).fill({ content: '事实' }),
+        consensus: [],
+        pending: [],
+        client_profile: {
+          产品线: '产品线描述',
+          客户群体: '客户群体描述',
+          收入结构: '收入结构描述',
+          毛利结构: '毛利结构描述'
         }
       };
 
-      const buffer = await generator.generateWord(memo, {
-        title: '测试备忘录',
-      });
+      const recommendation = generator.generateServiceRecommendation(data);
 
-      assert.ok(Buffer.isBuffer(buffer));
-      // 验证 ZIP 文件头（docx 是 ZIP 格式）
-      assert.strictEqual(buffer[0], 0x50); // 'P'
-      assert.strictEqual(buffer[1], 0x4B); // 'K'
+      assert.strictEqual(recommendation['推荐服务包'], '初步诊断服务包');
+    });
+
+    it('should recommend free consultation for low completeness', () => {
+      const data = {
+        facts: [{ content: '事实' }],
+        consensus: [],
+        pending: [],
+        client_profile: {}
+      };
+
+      const recommendation = generator.generateServiceRecommendation(data);
+
+      assert.strictEqual(recommendation['推荐服务包'], '免费初步沟通');
     });
   });
 
-  describe('chapter validation', () => {
-    it('should include all required chapters', async () => {
-      const records = [
-        { type: 'fact', content: '事实' },
-      ];
+  describe('_formatAsBullets', () => {
+    it('should format object as bullet list', () => {
+      const result = generator._formatAsBullets({
+        key1: 'value1',
+        key2: ['item1', 'item2']
+      });
 
-      const result = await generator.generate(records);
+      assert.ok(result.includes('key1'));
+      assert.ok(result.includes('value1'));
+    });
 
-      const requiredChapters = [
-        '问题重构',
-        '关键发现',
-        '初步建议方向',
-        '需要进一步访谈',
-        '建议下一步合作方式',
-      ];
-
-      for (const chapter of requiredChapters) {
-        assert.ok(result.chapters[chapter], `Missing chapter: ${chapter}`);
-      }
+    it('should handle string input', () => {
+      const result = generator._formatAsBullets('simple string');
+      assert.strictEqual(result, 'simple string');
     });
   });
 
-  describe('error handling', () => {
-    it('should handle LLM failure gracefully', async () => {
-      const failingGenerator = new MemoGenerator({
-        llmClient: {
-          chat: async () => { throw new Error('LLM error'); }
-        }
+  describe('_calcProfileCompleteness', () => {
+    it('should return 0 for empty profile', () => {
+      const completeness = generator._calcProfileCompleteness({});
+      assert.strictEqual(completeness, 0);
+    });
+
+    it('should calculate completeness for partial profile', () => {
+      const completeness = generator._calcProfileCompleteness({
+        产品线: '这是一个产品线描述',
+        客户群体: '这是客户群体描述'
       });
 
-      await assert.rejects(
-        async () => failingGenerator.generate([{ type: 'fact', content: 'test' }]),
-        /LLM error/
-      );
+      assert.ok(completeness > 0 && completeness < 1);
     });
   });
 });

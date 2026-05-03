@@ -3,79 +3,56 @@
 const { describe, it, beforeEach } = require('node:test');
 const assert = require('node:assert');
 const { CandidateGenerator, CandidateCache } = require('../src/core/candidateGen');
+const { ConsensusChain } = require('../src/core/consensusChain');
 
 describe('CandidateCache', () => {
   /** @type {CandidateCache} */
   let cache;
 
   beforeEach(() => {
-    cache = new CandidateCache({ ttlSeconds: 60 });
+    cache = new CandidateCache();
   });
 
   describe('get/set', () => {
     it('should return null for empty cache', () => {
-      const result = cache.get('战略梳理');
+      const result = cache.get();
       assert.strictEqual(result, null);
     });
 
     it('should store and retrieve candidates', () => {
       const candidates = [
-        { id: 'c1', title: '方案1', risk_level: '稳健' },
-        { id: 'c2', title: '方案2', risk_level: '平衡' },
+        { id: 'c1', title: '方案1', risk_level: '稳健', description: '', evidence_skus: [] },
+        { id: 'c2', title: '方案2', risk_level: '平衡', description: '', evidence_skus: [] },
       ];
 
-      cache.set('战略梳理', candidates);
-      const result = cache.get('战略梳理');
+      cache.set(candidates);
+      const result = cache.get();
 
       assert.ok(result);
-      assert.strictEqual(result.candidates.length, 2);
-    });
-  });
-
-  describe('TTL expiration', () => {
-    it('should return null after TTL expires', async () => {
-      const shortCache = new CandidateCache({ ttlSeconds: 1 });
-
-      shortCache.set('战略梳理', [{ id: 'c1' }]);
-
-      // 等待过期
-      await new Promise(resolve => setTimeout(resolve, 1100));
-
-      const result = shortCache.get('战略梳理');
-      assert.strictEqual(result, null);
+      assert.strictEqual(result.length, 2);
     });
   });
 
   describe('invalidate', () => {
-    it('should clear cache for specific stage', () => {
-      cache.set('战略梳理', [{ id: 'c1' }]);
-      cache.set('商业模式', [{ id: 'c2' }]);
+    it('should invalidate cache', () => {
+      cache.set([{ id: 'c1', title: '方案1', risk_level: '稳健', description: '', evidence_skus: [] }]);
+      cache.invalidate();
 
-      cache.invalidate('战略梳理');
-
-      assert.strictEqual(cache.get('战略梳理'), null);
-      assert.ok(cache.get('商业模式'));
-    });
-
-    it('should clear all cache', () => {
-      cache.set('战略梳理', [{ id: 'c1' }]);
-      cache.set('商业模式', [{ id: 'c2' }]);
-
-      cache.invalidateAll();
-
-      assert.strictEqual(cache.get('战略梳理'), null);
-      assert.strictEqual(cache.get('商业模式'), null);
+      assert.strictEqual(cache.isValid(), false);
+      assert.strictEqual(cache.get(), null);
     });
   });
 
-  describe('status', () => {
-    it('should return cache status', () => {
-      cache.set('战略梳理', [{ id: 'c1' }]);
+  describe('getAgeSeconds', () => {
+    it('should return age in seconds', async () => {
+      cache.set([{ id: 'c1', title: '测试', risk_level: '稳健', description: '', evidence_skus: [] }]);
 
-      const status = cache.getStatus('战略梳理');
+      // 等待一小段时间
+      await new Promise(resolve => setTimeout(resolve, 100));
 
-      assert.strictEqual(status.is_valid, true);
-      assert.ok(typeof status.age_seconds === 'number');
+      const age = cache.getAgeSeconds();
+
+      assert.ok(age >= 0.1);
     });
   });
 });
@@ -83,115 +60,211 @@ describe('CandidateCache', () => {
 describe('CandidateGenerator', () => {
   /** @type {CandidateGenerator} */
   let generator;
+  /** @type {ConsensusChain} */
+  let consensusChain;
 
   beforeEach(() => {
+    consensusChain = new ConsensusChain();
+
     generator = new CandidateGenerator({
       llmClient: {
-        chat: async () => JSON.stringify({
-          candidates: [
-            { title: '稳健方案', description: '稳健描述', risk_level: '稳健' },
-            { title: '平衡方案', description: '平衡描述', risk_level: '平衡' },
-            { title: '激进方案', description: '激进描述', risk_level: '激进' },
-          ]
-        })
-      }
-    });
-  });
-
-  describe('generate', () => {
-    it('should generate three candidates', async () => {
-      const facts = [
-        { content: '事实1' },
-        { content: '事实2' },
-      ];
-
-      const result = await generator.generate('战略梳理', facts);
-
-      assert.strictEqual(result.length, 3);
-      assert.ok(result.every(c => c.id));
-      assert.ok(result.every(c => c.title));
-      assert.ok(result.every(c => c.risk_level));
+        generate: async () => `候选1: 稳健型策略，优先保障现有业务稳定运行，稳健型策略
+候选2: 平衡型策略，在稳健基础上适度投入创新业务，平衡型策略
+候选3: 激进型策略，大胆投入新业务方向，追求高增长高回报，激进型策略`
+      },
+      consensusChain
     });
 
-    it('should assign evidence SKUs to candidates', async () => {
-      const facts = [
-        { content: '事实1', evidence_sku: ['sku_1'] },
-        { content: '事实2', evidence_sku: ['sku_2'] },
-      ];
-
-      const result = await generator.generate('战略梳理', facts);
-
-      // 每个候选应该有关联的 SKU
-      assert.ok(result.every(c => c.evidence_skus && c.evidence_skus.length >= 0));
+    // 添加足够的测试数据
+    consensusChain.addRecord({
+      type: 'fact',
+      stage: '战略梳理',
+      content: '公司有强大的研发团队',
+      source: 'manual',
+      status: 'confirmed'
     });
-  });
 
-  describe('getCached', () => {
-    it('should return cached candidates if valid', async () => {
-      const facts = [{ content: '事实1' }];
+    consensusChain.addRecord({
+      type: 'fact',
+      stage: '战略梳理',
+      content: '市场份额在下降',
+      source: 'manual',
+      status: 'confirmed'
+    });
 
-      // 第一次生成
-      const first = await generator.getCached('战略梳理', facts);
+    consensusChain.addRecord({
+      type: 'fact',
+      stage: '战略梳理',
+      content: '现金流充裕',
+      source: 'manual',
+      status: 'confirmed'
+    });
 
-      // 第二次应该返回缓存
-      const second = await generator.getCached('战略梳理', facts);
-
-      assert.ok(first);
-      assert.ok(second);
-      assert.strictEqual(second.cacheStatus.is_valid, true);
+    consensusChain.addRecord({
+      type: 'consensus',
+      stage: '战略梳理',
+      content: '应聚焦高端市场',
+      source: 'ai_suggested',
+      status: 'pending_client_confirm'
     });
   });
 
   describe('checkConstraints', () => {
     it('should pass when all constraints met', () => {
-      const candidates = [
-        { id: 'c1', evidence_skus: ['sku_1', 'sku_2'] },
-        { id: 'c2', evidence_skus: ['sku_3', 'sku_4'] },
-        { id: 'c3', evidence_skus: ['sku_5', 'sku_6'] },
+      const skus = [
+        { id: 'sku_1', title: 'SKU 1', confidence: '🟢' },
+        { id: 'sku_2', title: 'SKU 2', confidence: '🟡' },
       ];
 
-      const result = generator.checkConstraints(candidates, {
-        minSkuPerCandidate: 2,
-        minTotalCandidates: 3,
-      });
+      const result = generator.checkConstraints(skus);
 
       assert.strictEqual(result.valid, true);
     });
 
-    it('should fail when SKU insufficient', () => {
-      const candidates = [
-        { id: 'c1', evidence_skus: ['sku_1'] },
-      ];
-
-      const result = generator.checkConstraints(candidates, {
-        minSkuPerCandidate: 2,
+    it('should fail when not enough facts', () => {
+      // 创建一个新的、空的共识链
+      const emptyChain = new ConsensusChain();
+      const genWithEmptyChain = new CandidateGenerator({
+        llmClient: { generate: async () => '' },
+        consensusChain: emptyChain
       });
 
+      const result = genWithEmptyChain.checkConstraints([]);
+
       assert.strictEqual(result.valid, false);
-      assert.ok(result.message.includes('不足'));
+      assert.ok(result.message.includes('共识不足'));
+    });
+
+    it('should fail when no pending consensus', () => {
+      // 创建一个没有待确认共识的链
+      const chainNoPending = new ConsensusChain();
+      chainNoPending.addRecord({
+        type: 'fact',
+        stage: '战略梳理',
+        content: '事实1',
+        source: 'manual',
+        status: 'confirmed'
+      });
+      chainNoPending.addRecord({
+        type: 'fact',
+        stage: '战略梳理',
+        content: '事实2',
+        source: 'manual',
+        status: 'confirmed'
+      });
+      chainNoPending.addRecord({
+        type: 'fact',
+        stage: '战略梳理',
+        content: '事实3',
+        source: 'manual',
+        status: 'confirmed'
+      });
+      // 没有待确认共识
+
+      const genNoPending = new CandidateGenerator({
+        llmClient: { generate: async () => '' },
+        consensusChain: chainNoPending
+      });
+
+      const result = genNoPending.checkConstraints([]);
+
+      assert.strictEqual(result.valid, false);
+      assert.ok(result.message.includes('待确认'));
     });
   });
 
-  describe('precompute', () => {
-    it('should precompute candidates in background', async () => {
-      const consensusChain = {
-        getConfirmedFacts: () => [{ content: '事实1' }],
-        getPendingConsensus: () => [],
-      };
+  describe('generateCandidates', () => {
+    it('should generate three candidates', async () => {
+      const candidates = await generator.generateCandidates();
 
-      // 启动预计算
-      generator.startPrecompute(consensusChain);
+      assert.strictEqual(candidates.length, 3);
+      assert.ok(candidates.every(c => c.id));
+      assert.ok(candidates.every(c => c.title));
+      assert.ok(candidates.every(c => c.risk_level));
+    });
 
-      // 等待一小段时间
-      await new Promise(resolve => setTimeout(resolve, 100));
+    it('should have different risk levels', async () => {
+      const candidates = await generator.generateCandidates();
 
-      // 停止预计算
-      generator.stopPrecompute();
+      const riskLevels = candidates.map(c => c.risk_level);
+      const uniqueLevels = new Set(riskLevels);
 
-      // 验证缓存已填充
-      const status = generator.cache.getStatus('战略梳理');
-      // 可能还没完成，但不应抛出错误
-      assert.ok(true);
+      assert.strictEqual(uniqueLevels.size, 3);
+    });
+  });
+
+  describe('_parseResponse', () => {
+    it('should parse LLM response correctly', () => {
+      const response = `候选1: 稳健型策略描述，稳健型策略
+候选2: 平衡型策略描述，平衡型策略
+候选3: 激进型策略描述，激进型策略`;
+
+      const candidates = generator._parseResponse(response);
+
+      assert.strictEqual(candidates.length, 3);
+      assert.strictEqual(candidates[0].risk_level, '稳健');
+      assert.strictEqual(candidates[1].risk_level, '平衡');
+      assert.strictEqual(candidates[2].risk_level, '激进');
+    });
+
+    it('should handle full-width colon', () => {
+      const response = `候选1：稳健型策略描述，稳健型策略
+候选2：平衡型策略描述，平衡型策略
+候选3：激进型策略描述，激进型策略`;
+
+      const candidates = generator._parseResponse(response);
+
+      assert.strictEqual(candidates.length, 3);
+    });
+
+    it('should fill missing candidates', () => {
+      const response = `候选1: 只有一个候选`;
+
+      const candidates = generator._parseResponse(response);
+
+      assert.strictEqual(candidates.length, 3);
+      // 后两个应该是填充的
+      assert.ok(candidates[1].title.includes('解析失败') || candidates[1].title.includes('候选'));
+    });
+  });
+
+  describe('cache operations', () => {
+    it('should cache candidates', async () => {
+      await generator.generateCandidates();
+
+      const cached = generator.getCachedCandidates();
+
+      assert.ok(cached);
+      assert.strictEqual(cached.length, 3);
+    });
+
+    it('should invalidate cache', () => {
+      generator._cache.set([{ id: 'c1', title: '测试', risk_level: '稳健', description: '', evidence_skus: [] }]);
+
+      generator.invalidateCache();
+
+      assert.strictEqual(generator._cache.isValid(), false);
+    });
+
+    it('should return cache status', () => {
+      const status = generator.getCacheStatus();
+
+      assert.ok(typeof status.is_valid === 'boolean');
+      assert.ok(typeof status.age_seconds === 'number');
+    });
+  });
+
+  describe('background precompute', () => {
+    it('should start and stop background precompute', () => {
+      const skus = [{ id: 'sku_1', title: 'SKU 1', confidence: '🟢' }];
+
+      generator.startBackgroundPrecompute(skus, 1);
+
+      assert.strictEqual(generator.isPrecomputeRunning(), true);
+
+      generator.stopBackgroundPrecompute();
+
+      assert.strictEqual(generator.isPrecomputeRunning(), false);
     });
   });
 });
