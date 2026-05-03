@@ -689,7 +689,7 @@ textarea {
 }
 
 .record-item.flash {
-  animation: record-flash 1.5s ease-out;
+  animation: record-flash 0.3s ease-out;
   border-left: 3px solid transparent;
 }
 
