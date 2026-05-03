@@ -244,7 +244,14 @@ fastify.get('/api/feishu-status', async (request, reply) => {
 // 创建会话
 fastify.post('/api/sessions', async (request, reply) => {
   const sessionId = require('crypto').randomUUID();
-  getOrCreateSession(sessionId);
+  const { company } = request.body || {};
+
+  const session = getOrCreateSession(sessionId);
+
+  // 存储公司名到会话中
+  if (company) {
+    session.company = company;
+  }
 
   reply.code(201);
   return {
