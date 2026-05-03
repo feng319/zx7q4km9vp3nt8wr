@@ -553,6 +553,8 @@ class FeishuClient {
     if (profile['显性诉求']) fields['显性诉求'] = profile['显性诉求'];
     if (profile['当前追问']) fields['当前追问'] = profile['当前追问'];
     if (profile['诊断进度']) fields['诊断进度'] = profile['诊断进度'];
+    // 完整度字段（类型20=进度条，值为数字 0-100）
+    if (profile['完整度'] !== undefined) fields['完整度'] = profile['完整度'];
 
     return fields;
   }
