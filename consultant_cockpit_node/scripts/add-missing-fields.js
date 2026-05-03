@@ -50,10 +50,10 @@ async function main() {
   // 1. 添加「当前追问」字段（单行文本，type=1）
   await addField('当前追问', 1);
 
-  // 2. 添加「诊断进度」字段（百分比，type=2 是数字类型，飞书没有专门的百分比类型）
-  // 飞书多维表格的百分比其实是数字类型 + 格式化显示
+  // 2. 添加「诊断进度」字段（数字类型，type=2）
+  // 飞书多维表格通过 formatter 设置显示为百分比
   await addField('诊断进度', 2, {
-    formatter: '0%',  // 百分比格式
+    formatter: '0%',
   });
 
   console.log('\n=== 完成 ===');
