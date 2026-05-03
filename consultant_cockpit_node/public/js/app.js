@@ -600,13 +600,23 @@ function showCandidatesOverlay() {
   elements.candidatesCards.innerHTML = state.candidates.map((candidate, index) => {
     const risk = riskLabels[candidate.risk_level] || riskLabels.medium;
     return `
-      <div class="candidate-card" data-index="${index}" onclick="selectCandidate(${index})">
+      <div class="candidate-card" data-index="${index}" onclick="selectCandidate(${index})" tabindex="0" role="button" aria-label="候选 ${String.fromCharCode(65 + index)}: ${escapeHtml(candidate.title || `方案 ${index + 1}`)}">
         <div class="candidate-card-label">候选 ${String.fromCharCode(65 + index)}</div>
         <div class="candidate-card-title">${escapeHtml(candidate.title || `方案 ${index + 1}`)}</div>
         <div class="candidate-card-desc">${escapeHtml(candidate.description)}</div>
       </div>
     `;
   }).join('');
+
+  // 添加键盘导航支持
+  elements.candidatesCards.querySelectorAll('.candidate-card').forEach((card, index) => {
+    card.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        selectCandidate(index);
+      }
+    });
+  });
 
   // 清除红点徽标
   elements.candidateBadge.textContent = '';
