@@ -292,7 +292,29 @@ fastify.post('/api/sessions', async (request, reply) => {
   return {
     session_id: sessionId,
     message: 'Session created',
+    company: session.company || null,
   };
+});
+
+// 更新会话的公司名
+fastify.patch('/api/sessions/:sessionId/company', async (request, reply) => {
+  const { sessionId } = request.params;
+  const { company } = request.body || {};
+
+  if (!sessions.has(sessionId)) {
+    reply.code(404);
+    return { error: 'Session not found' };
+  }
+
+  const session = await getOrCreateSession(sessionId);
+
+  if (company) {
+    session.company = company;
+    return { success: true, company };
+  } else {
+    reply.code(400);
+    return { error: 'company is required' };
+  }
 });
 
 // 获取会话状态
