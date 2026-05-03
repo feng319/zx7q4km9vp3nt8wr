@@ -1,0 +1,269 @@
+/**
+ * 演示模式样式 - Demo Mode Styles
+ *
+ * 三级敏感度分区：
+ * - Level 1: 隐藏敏感内容
+ * - Level 2: 替换敏感内容
+ * - Level 3: 保留显示
+ */
+
+/* ==================== 状态徽章 ==================== */
+
+.demo-badge {
+  position: fixed;
+  top: 16px;
+  right: 16px;
+  z-index: 9999;
+  padding: 8px 16px;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  transition: all 0.2s ease;
+  user-select: none;
+}
+
+.demo-badge:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.demo-badge::before {
+  content: '🎭';
+  font-size: 16px;
+}
+
+/* 各级别徽章样式 */
+.demo-badge.demo-level-1 {
+  background: linear-gradient(135deg, #ff4d4f, #ff7875);
+  color: white;
+}
+
+.demo-badge.demo-level-2 {
+  background: linear-gradient(135deg, #faad14, #ffc53d);
+  color: white;
+}
+
+.demo-badge.demo-level-3 {
+  background: linear-gradient(135deg, #52c41a, #73d13d);
+  color: white;
+}
+
+/* ==================== 第一级：隐藏模式 ==================== */
+
+body.demo-level-1 .client-name,
+body.demo-level-1 .company-info,
+body.demo-level-1 .financial-data,
+body.demo-level-1 .contact-info,
+body.demo-level-1 .personal-data,
+body.demo-level-1 [data-demo="hide"],
+body.demo-level-1 .project-name,
+body.demo-level-1 .business-detail,
+body.demo-level-1 .strategy-info,
+body.demo-level-1 [data-demo="replace"] {
+  display: none !important;
+}
+
+/* 隐藏敏感记录内容 */
+body.demo-level-1 .record-item .record-content {
+  color: transparent;
+  text-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
+  user-select: none;
+}
+
+/* 隐藏客户档案敏感字段 */
+body.demo-level-1 .profile-sensitive {
+  display: none !important;
+}
+
+/* ==================== 第二级：替换模式 ==================== */
+
+body.demo-level-2 .client-name,
+body.demo-level-2 .company-info,
+body.demo-level-2 .financial-data,
+body.demo-level-2 .contact-info,
+body.demo-level-2 .personal-data,
+body.demo-level-2 [data-demo="hide"] {
+  display: none !important;
+}
+
+/* 替换样式 - 显示占位符 */
+body.demo-level-2 .project-name,
+body.demo-level-2 .business-detail,
+body.demo-level-2 .strategy-info,
+body.demo-level-2 [data-demo="replace"] {
+  position: relative;
+  color: #999;
+  background: #f5f5f5;
+  border-radius: 4px;
+  padding: 4px 8px;
+  font-style: italic;
+}
+
+body.demo-level-2 .project-name::before,
+body.demo-level-2 .business-detail::before,
+body.demo-level-2 .strategy-info::before {
+  content: attr(data-placeholder);
+  color: #999;
+}
+
+/* 敏感内容模糊化 */
+body.demo-level-2 .record-item .record-content {
+  filter: blur(4px);
+  transition: filter 0.3s ease;
+}
+
+body.demo-level-2 .record-item:hover .record-content {
+  filter: blur(0);
+}
+
+/* ==================== 第三级：保留模式 ==================== */
+
+body.demo-level-3 .client-name,
+body.demo-level-3 .company-info,
+body.demo-level-3 .financial-data,
+body.demo-level-3 .contact-info,
+body.demo-level-3 .personal-data,
+body.demo-level-3 [data-demo="hide"] {
+  display: none !important;
+}
+
+/* 其他内容正常显示 */
+body.demo-level-3 .project-name,
+body.demo-level-3 .business-detail,
+body.demo-level-3 .strategy-info,
+body.demo-level-3 [data-demo="replace"],
+body.demo-level-3 [data-demo="retain"] {
+  display: block;
+}
+
+/* 添加水印效果 */
+body.demo-level-3::after {
+  content: '演示模式';
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-45deg);
+  font-size: 120px;
+  color: rgba(0, 0, 0, 0.03);
+  pointer-events: none;
+  z-index: 1;
+  white-space: nowrap;
+}
+
+/* ==================== 通用演示模式样式 ==================== */
+
+/* 演示模式下的页面边框提示 */
+body.demo-level-1::before,
+body.demo-level-2::before,
+body.demo-level-3::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  z-index: 9998;
+}
+
+body.demo-level-1::before {
+  background: linear-gradient(90deg, #ff4d4f, #ff7875, #ff4d4f);
+}
+
+body.demo-level-2::before {
+  background: linear-gradient(90deg, #faad14, #ffc53d, #faad14);
+}
+
+body.demo-level-3::before {
+  background: linear-gradient(90deg, #52c41a, #73d13d, #52c41a);
+}
+
+/* 演示模式下的输入框提示 */
+body[class*="demo-level"] input::placeholder,
+body[class*="demo-level"] textarea::placeholder {
+  color: #bbb;
+}
+
+/* 演示模式下禁用某些操作 */
+body[class*="demo-level"] .demo-disabled {
+  pointer-events: none;
+  opacity: 0.5;
+}
+
+/* 演示模式提示条 */
+.demo-mode-notice {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 8px 16px;
+  text-align: center;
+  font-size: 13px;
+  z-index: 9997;
+}
+
+.demo-mode-notice .shortcuts {
+  margin-left: 16px;
+  opacity: 0.8;
+}
+
+/* ==================== 动画效果 ==================== */
+
+/* 徽章闪烁动画（可选） */
+@keyframes demo-badge-pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.7;
+  }
+}
+
+.demo-badge.pulse {
+  animation: demo-badge-pulse 2s ease-in-out infinite;
+}
+
+/* 内容切换过渡 */
+.record-content,
+.project-name,
+.business-detail,
+.strategy-info {
+  transition: all 0.1s ease;
+}
+
+/* ==================== 响应式适配 ==================== */
+
+@media (max-width: 768px) {
+  .demo-badge {
+    top: 8px;
+    right: 8px;
+    padding: 6px 12px;
+    font-size: 12px;
+  }
+
+  body.demo-level-3::after {
+    font-size: 60px;
+  }
+}
+
+/* ==================== 打印样式 ==================== */
+
+@media print {
+  .demo-badge {
+    display: none !important;
+  }
+
+  body[class*="demo-level"]::before {
+    display: none !important;
+  }
+
+  body.demo-level-3::after {
+    display: none !important;
+  }
+}
