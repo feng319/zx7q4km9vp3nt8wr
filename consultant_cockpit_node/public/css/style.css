@@ -926,10 +926,15 @@ textarea {
   border-left: 3px solid transparent;
 }
 
-/* 快捷指令区 */
+/* 快捷指令区：固定在对话区底部，始终可见 */
 .command-section {
-  margin-top: 16px;
+  margin-top: auto; /* 自动推到底部 */
   flex-shrink: 0;
+  position: sticky;
+  bottom: 0;
+  background: var(--panel-bg);
+  padding: 12px 0 0;
+  z-index: 10;
 }
 
 .command-section h3 {
