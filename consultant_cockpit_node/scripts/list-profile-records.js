@@ -1,28 +1,38 @@
 #!/usr/bin/env node
 // 查询客户档案表中的记录
 
-const FeishuClient = require('../src/integrations/feishuClient');
+const lark = require('@larksuiteoapi/node-sdk');
+require('dotenv').config();
 
-async function main() {
-  const client = new FeishuClient();
+const client = new lark.Client({
+  appId: process.env.FEISHU_APP_ID,
+  appSecret: process.env.FEISHU_APP_SECRET,
+  appType: lark.AppType.SelfBuild,
+  domain: lark.Domain.Feishu,
+});
 
+const bitableToken = process.env.FEISHU_BITABLE_APP_TOKEN;
+const profileTableId = process.env.FEISHU_BITABLE_PROFILE_TABLE_ID;
+
+async function listRecords() {
   console.log('=== 客户档案表中的记录 ===\n');
 
   try {
-    // 查询客户档案表
-    const response = await client._withRetry(async () => {
-      return await client.client.bitable.appTableRecord.list({
-        path: {
-          app_token: client.appToken,
-          table_id: client.profileTableId,  // 使用客户档案表
-        },
-        params: {
-          page_size: 100,
-        },
-      });
+    const response = await client.bitable.appTableRecord.listWithIterator({
+      path: {
+        app_token: bitableToken,
+        table_id: profileTableId,
+      },
+      params: {
+        page_size: 100,
+      },
     });
 
-    const records = response.data?.items || [];
+    const records = [];
+    for await (const item of response.data.items) {
+      records.push(item);
+    }
+
     console.log(`共 ${records.length} 条记录:\n`);
 
     for (const record of records) {
@@ -46,7 +56,10 @@ async function main() {
     }
   } catch (error) {
     console.error('查询失败:', error.message);
+    if (error.code) {
+      console.error('错误代码:', error.code);
+    }
   }
 }
 
-main().catch(console.error);
+listRecords().catch(console.error);
