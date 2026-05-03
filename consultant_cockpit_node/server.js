@@ -657,7 +657,7 @@ fastify.post('/api/fallback/retry', async (request, reply) => {
 // ==================== WebSocket 路由 ====================
 
 fastify.register(async function (fastify) {
-  fastify.get('/ws/:sessionId', { websocket: true }, (socket, request) => {
+  fastify.get('/ws/:sessionId', { websocket: true }, async (socket, request) => {
     const { sessionId } = request.params;
     const session = await getOrCreateSession(sessionId);
 
