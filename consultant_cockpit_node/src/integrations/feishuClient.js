@@ -559,7 +559,13 @@ class FeishuClient {
 
     for (const name of fieldNames) {
       if (fields[name]) {
-        profile[name] = fields[name];
+        // 处理飞书返回的富文本格式 [{ text: '...', type: 'text' }]
+        const value = fields[name];
+        if (Array.isArray(value) && value[0]?.text) {
+          profile[name] = value[0].text;
+        } else {
+          profile[name] = value;
+        }
       }
     }
 
