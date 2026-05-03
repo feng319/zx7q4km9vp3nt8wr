@@ -39,11 +39,12 @@ class FeishuClient {
     this.profileTableId = options.profileTableId || config.feishu.profileTableId;
 
     // 初始化 lark 客户端
+    // 使用 Domain.Feishu（中国版飞书），而非 Domain.Lark（国际版）
     this.client = new lark.Client({
       appId: this.appId,
       appSecret: this.appSecret,
       appType: lark.AppType.SelfBuild,
-      domain: lark.Domain.Lark, // 使用飞书域名
+      domain: lark.Domain.Feishu,
     });
 
     // 本地缓存（用于降级）
