@@ -157,10 +157,23 @@ async function apiRequest(endpoint, options = {}) {
 
 async function createSession() {
   try {
-    const data = await apiRequest('/sessions', { method: 'POST' });
+    // 弹出输入框让用户输入客户公司名
+    const company = prompt('请输入客户公司名称（可选，用于同步到飞书客户档案表）:');
+
+    const body = company ? { company } : {};
+    const data = await apiRequest('/sessions', {
+      method: 'POST',
+      body: JSON.stringify(body)
+    });
+
     state.sessionId = data.session_id;
     elements.sessionId.textContent = `会话: ${state.sessionId.slice(0, 8)}...`;
-    setStatus('会话创建成功', 'success');
+
+    if (company) {
+      setStatus(`会话创建成功（客户: ${company}）`, 'success');
+    } else {
+      setStatus('会话创建成功', 'success');
+    }
 
     // 连接 WebSocket
     connectWebSocket();
