@@ -679,6 +679,9 @@ function renderConsensusChain() {
         ${record.status === 'pending_client_confirm' ? `
           <button class="btn-inline-confirm" onclick="confirmRecord('${record.id}')">确认</button>
         ` : ''}
+        ${record.status !== 'superseded' ? `
+          <button class="btn-inline-correct" onclick="correctRecord('${record.id}')">修改</button>
+        ` : ''}
       </div>
       <div class="record-content">${escapeHtml(record.content)}</div>
     </div>
