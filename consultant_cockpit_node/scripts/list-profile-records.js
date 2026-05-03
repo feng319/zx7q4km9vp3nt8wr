@@ -16,9 +16,11 @@ const profileTableId = process.env.FEISHU_BITABLE_PROFILE_TABLE_ID;
 
 async function listRecords() {
   console.log('=== 客户档案表中的记录 ===\n');
+  console.log('profileTableId:', profileTableId);
+  console.log('bitableToken:', bitableToken);
 
   try {
-    const response = await client.bitable.appTableRecord.listWithIterator({
+    const response = await client.bitable.appTableRecord.list({
       path: {
         app_token: bitableToken,
         table_id: profileTableId,
@@ -28,14 +30,13 @@ async function listRecords() {
       },
     });
 
-    const records = [];
-    for await (const item of response.data.items) {
-      records.push(item);
-    }
+    console.log('API 响应状态:', response.code);
+    console.log('API 响应消息:', response.msg);
 
-    console.log(`共 ${records.length} 条记录:\n`);
+    const items = response.data?.items || [];
+    console.log(`共 ${items.length} 条记录:\n`);
 
-    for (const record of records) {
+    for (const record of items) {
       console.log(`--- 记录 ---`);
       console.log('record_id:', record.record_id);
 

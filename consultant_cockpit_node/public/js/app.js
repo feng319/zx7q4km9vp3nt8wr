@@ -986,6 +986,7 @@ function initEventListeners() {
 
   // 会话管理
   elements.newSessionBtn.addEventListener('click', createSession);
+  elements.sessionSelect.addEventListener('change', handleSessionSelectChange);
 
   // 指令执行
   elements.executeCommandBtn.addEventListener('click', () => {
