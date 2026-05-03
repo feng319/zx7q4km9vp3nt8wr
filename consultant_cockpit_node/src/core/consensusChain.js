@@ -312,35 +312,18 @@ class ConsensusChain extends EventEmitter {
     const profileData = {};
     const content = record.content || '';
 
-    // 9 个静态字段的关键词映射
-    const fieldKeywords = {
-      '产品线': ['产品线', '产品', 'SKU'],
-      '客户群体': ['客户群体', '客户', '用户'],
-      '收入结构': ['收入结构', '收入', '营收'],
-      '毛利结构': ['毛利结构', '毛利', '利润'],
-      '交付情况': ['交付情况', '交付', '履约'],
-      '资源分布': ['资源分布', '资源'],
-      '战略目标': ['战略目标', '战略', '目标'],
-      '显性诉求': ['显性诉求', '诉求', '需求'],
-    };
+    // 9 个静态字段的精确匹配（格式：字段名：值）
+    const fieldNames = [
+      '产品线', '客户群体', '收入结构', '毛利结构',
+      '交付情况', '资源分布', '战略目标', '显性诉求'
+    ];
 
-    // 检查内容是否包含相关关键词
-    for (const [field, keywords] of Object.entries(fieldKeywords)) {
-      if (keywords.some(kw => content.includes(kw))) {
-        // 提取关键词后面的内容作为字段值
-        const value = this._extractFieldValue(content, keywords);
-        if (value) {
-          profileData[field] = value;
-        }
-      }
-    }
-
-    // 如果是事实类型的记录，且内容较短，可能是某个字段的值
-    if (record.type === 'fact' && content.length < 200) {
-      // 尝试根据内容特征推断字段
-      const inferredField = this._inferField(content);
-      if (inferredField && !profileData[inferredField]) {
-        profileData[inferredField] = content;
+    for (const field of fieldNames) {
+      // 匹配格式：字段名：值 或 字段名: 值
+      const regex = new RegExp(`${field}[:：]\\s*(.+?)(?:[。\\n]|$)`, 's');
+      const match = content.match(regex);
+      if (match && match[1]) {
+        profileData[field] = match[1].trim();
       }
     }
 
@@ -348,7 +331,7 @@ class ConsensusChain extends EventEmitter {
   }
 
   /**
-   * 从内容中提取字段值
+   * 从内容中提取字段值（已废弃，保留兼容）
    * @private
    * @param {string} content
    * @param {string[]} keywords
@@ -370,7 +353,7 @@ class ConsensusChain extends EventEmitter {
   }
 
   /**
-   * 根据内容推断字段名
+   * 根据内容推断字段名（已废弃，保留兼容）
    * @private
    * @param {string} content
    * @returns {string|null}
