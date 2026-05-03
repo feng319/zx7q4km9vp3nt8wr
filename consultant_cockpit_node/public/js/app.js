@@ -42,6 +42,7 @@ const state = {
   sessionId: null,
   records: [],
   candidates: null,
+  candidateId: null,  // 当前选中候选对应的记录 ID
   skus: [],
   currentStage: '战略梳理',
   completeness: 0,
