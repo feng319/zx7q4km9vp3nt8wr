@@ -930,19 +930,16 @@ async function checkFeishuStatus() {
 
     if (data.connected) {
       dot.className = 'status-dot status-dot-connected';
-      dot.style.backgroundColor = '#52c41a';  // 直接设置绿色
-      dot.style.boxShadow = '0 0 4px #52c41a';
+      dot.style.cssText = 'background-color: #52c41a !important; box-shadow: 0 0 4px #52c41a;';
       text.textContent = '已连接';
     } else {
       dot.className = 'status-dot status-dot-disconnected';
-      dot.style.backgroundColor = '#999999';
-      dot.style.boxShadow = 'none';
+      dot.style.cssText = 'background-color: #999999;';
       text.textContent = data.reason === 'mock_mode' ? '未配置' : '断开';
     }
   } catch (error) {
     dot.className = 'status-dot status-dot-error';
-    dot.style.backgroundColor = '#ff4d4f';
-    dot.style.boxShadow = 'none';
+    dot.style.cssText = 'background-color: #ff4d4f;';
     text.textContent = '检测失败';
   }
 }
