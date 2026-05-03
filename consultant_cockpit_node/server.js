@@ -46,20 +46,11 @@ const { getConfig } = require('./src/utils/config');
 // ==================== 自定义 Content-Type Parser ====================
 
 // 允许 application/json 的空 body（返回空对象而非报错）
-// 注意：不使用 parseAs: 'string'，直接处理 Buffer 以避免 Content-Length 问题
-fastify.addContentTypeParser('application/json', {}, (req, body, done) => {
+fastify.addContentTypeParser('application/json', { parseAs: 'string' }, (req, body, done) => {
   try {
-    // body 可能是字符串、对象或空字符串
-    if (body === '' || body === null || body === undefined) {
-      done(null, {});
-    } else if (typeof body === 'object') {
-      done(null, body);
-    } else if (typeof body === 'string') {
-      const json = body === '' ? {} : JSON.parse(body);
-      done(null, json);
-    } else {
-      done(null, {});
-    }
+    // 空 body 返回空对象
+    const json = body === '' ? {} : JSON.parse(body);
+    done(null, json);
   } catch (err) {
     done(err, undefined);
   }
