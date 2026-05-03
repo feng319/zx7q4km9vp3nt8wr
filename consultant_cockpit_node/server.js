@@ -43,6 +43,19 @@ const { FeishuSync, FeishuSyncMock } = require('./src/integrations/feishuSync');
 const { SessionManager } = require('./src/core/sessionManager');
 const { getConfig } = require('./src/utils/config');
 
+// ==================== 自定义 Content-Type Parser ====================
+
+// 允许 application/json 的空 body（返回空对象而非报错）
+fastify.addContentTypeParser('application/json', { parseAs: 'string' }, (req, body, done) => {
+  try {
+    // 空 body 返回空对象
+    const json = body === '' ? {} : JSON.parse(body);
+    done(null, json);
+  } catch (err) {
+    done(err, undefined);
+  }
+});
+
 // ==================== 插件注册 ====================
 
 // WebSocket 支持
