@@ -979,6 +979,9 @@ pytest tests/ -v
 
 Expected: All tests PASS
 
+> ⚠️ **注意**：Day 1 测试用例未覆盖 `correctRecord/superseded` 修正路径（该功能在后续迭代实现）。
+> Node.js 金标准测试集必须补充此场景测试用例。
+
 - [ ] **验收2: 手动测试最小闭环**
 
 重复Task 5 Step 3的测试步骤,确保完整流程无报错。
