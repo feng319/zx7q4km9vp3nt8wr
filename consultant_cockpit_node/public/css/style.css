@@ -105,6 +105,35 @@ body {
   display: flex;
   align-items: center;
   gap: 24px;
+  flex-wrap: wrap;
+}
+
+/* 中等屏幕时减小间距 */
+@media (max-width: 900px) {
+  .header-controls {
+    gap: 16px;
+  }
+}
+
+/* 小屏幕时隐藏飞书状态和演示模式徽标 */
+@media (max-width: 700px) {
+  .feishu-status,
+  .mode-badge {
+    display: none;
+  }
+}
+
+/* 更小屏幕时简化 LLM 选择器 */
+@media (max-width: 600px) {
+  .llm-selector label {
+    display: none;
+  }
+  .llm-selector select {
+    min-width: 100px;
+  }
+  .llm-selector .model-select {
+    min-width: 120px;
+  }
 }
 
 .llm-selector {
