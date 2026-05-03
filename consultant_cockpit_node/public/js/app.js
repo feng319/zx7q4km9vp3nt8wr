@@ -414,7 +414,9 @@ async function executeCaseRecallCommand(keywords, mode = 'case') {
 function showCandidatesOverlay() {
   if (!state.candidates || state.candidates.length === 0) return;
 
+  // 设计规范 3.5 节：主对话区其他内容半透明化
   elements.candidatesOverlay.style.display = 'flex';
+  elements.candidatesOverlay.closest('.dialog-panel').classList.add('has-candidates');
 
   const riskLabels = {
     low: { text: '稳健', class: 'low' },
@@ -439,6 +441,7 @@ function showCandidatesOverlay() {
 
 function hideCandidatesOverlay() {
   elements.candidatesOverlay.style.display = 'none';
+  elements.candidatesOverlay.closest('.dialog-panel').classList.remove('has-candidates');
 }
 
 async function selectCandidate(index) {
