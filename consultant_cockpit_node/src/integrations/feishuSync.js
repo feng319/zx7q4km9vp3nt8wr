@@ -315,7 +315,7 @@ class FeishuSync extends EventEmitter {
    * @private
    * @param {Object} event - 飞书事件对象
    */
-  _handleBitableChangeEvent(event) {
+  async _handleBitableChangeEvent(event) {
     try {
       const body = event.event?.body || {};
       const action = body.action; // 'record_added' | 'record_modified' | 'record_deleted'
