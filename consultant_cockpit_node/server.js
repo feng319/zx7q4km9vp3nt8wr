@@ -390,7 +390,7 @@ fastify.post('/api/sessions/:sessionId/records/:recordId/correct', async (reques
   const session = getOrCreateSession(sessionId);
 
   try {
-    const newRecord = session.consensusChain.correctRecord(recordId, request.body);
+    const newRecord = session.consensusChain.correctRecord(recordId, request.body.content || request.body);
     reply.code(201);
     return { success: true, record: newRecord };
   } catch (error) {
