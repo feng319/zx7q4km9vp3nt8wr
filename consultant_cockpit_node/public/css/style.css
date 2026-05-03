@@ -204,6 +204,12 @@ input:focus, select:focus, textarea:focus {
   box-shadow: 0 0 0 2px rgba(24, 144, 255, 0.2);
 }
 
+/* 键盘焦点指示器 */
+input:focus-visible, select:focus-visible, textarea:focus-visible {
+  outline: 2px solid var(--primary-color);
+  outline-offset: 2px;
+}
+
 textarea {
   width: 100%;
   min-height: 80px;
@@ -213,13 +219,19 @@ textarea {
 
 /* 按钮 */
 .btn {
-  padding: 8px 16px;
+  padding: 10px 16px;
   border: none;
   border-radius: 4px;
   font-size: 14px;
   font-weight: 500;
   cursor: pointer;
   transition: all 0.3s;
+  min-height: 44px;
+}
+
+.btn:focus-visible {
+  outline: 2px solid var(--primary-color);
+  outline-offset: 2px;
 }
 
 .btn-primary {
