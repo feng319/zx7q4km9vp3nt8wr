@@ -249,8 +249,9 @@ class FeishuClient {
    */
   async getClientProfile(company) {
     try {
-      // 使用扁平化的 filter 参数格式（飞书 API 要求）
-      const response = await this.client.bitable.appTableRecord.list({
+      // 使用 search API 支持 filter 功能
+      // 飞书 Node SDK 的 list 方法不支持 filter，需要使用 search
+      const response = await this.client.bitable.appTableRecord.search({
         path: {
           app_token: this.bitableToken,
           table_id: this.profileTableId,
@@ -258,10 +259,16 @@ class FeishuClient {
         params: {
           user_id_type: 'open_id',
           page_size: 10,
-          'filter[conditions][0][field_name]': '客户公司名',
-          'filter[conditions][0][operator]': 'is',
-          'filter[conditions][0][value][0]': company,
-          'filter[conjunction]': 'and',
+        },
+        data: {
+          filter: {
+            conjunction: 'and',
+            conditions: [{
+              field_name: '客户公司名',
+              operator: 'is',
+              value: [company],
+            }],
+          },
         },
       });
 
@@ -274,10 +281,11 @@ class FeishuClient {
         return null;
       }
 
-      const record = records[0];
+      // 找到匹配的记录（可能有多个，取第一个有客户公司名的）
+      const matchedRecord = records.find(r => r.fields?.['客户公司名'] === company) || records[0];
       const profile = {
-        record_id: record.record_id,
-        ...this._fieldsToProfile(record.fields),
+        record_id: matchedRecord.record_id,
+        ...this._fieldsToProfile(matchedRecord.fields),
       };
 
       // 更新缓存
