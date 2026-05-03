@@ -288,6 +288,11 @@ class ConsensusChain:
             r for r in self.records
             if r.status == "pending_client_confirm"
         ]
+
+# 注：以上为 Day 1 精简版代码。
+# correctRecord / superseded 修正路径已在后续迭代中实现，
+# 完整实现见仓库 consensus_chain.py:61-100（correct_record, get_superseded_records, get_correction_history）。
+# CandidateCache 预计算缓存见仓库 candidate_generator.py:33-72, 304-401。
 ```
 
 - [ ] **Step 4: 运行测试验证通过**
@@ -1008,8 +1013,8 @@ Expected: All tests PASS
 
 ### 已实现功能清单（Node.js 迁移可直接参考）
 
-> ⚠️ **重要**：下表代码行号对应**仓库实际源码**，非本文档 Task 步骤中展示的精简版代码。
-> Node.js 迁移时请直接阅读仓库源码，本文档代码片段仅作逻辑参考。
+> ⚠️ **重要**：下表代码行号对应**实际源码**，非本文档 Task 步骤中展示的精简版代码。
+> Node.js 迁移时请直接阅读源码，本文档代码片段仅作逻辑参考。
 
 | 功能 | 实现文件 | 关键代码行 | 备注 |
 |------|---------|-----------|------|
