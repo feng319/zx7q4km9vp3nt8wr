@@ -412,6 +412,44 @@ async function executeCaseRecallCommand(keywords, mode = 'case') {
   }
 }
 
+/**
+ * 执行总结指令
+ * 生成当前阶段的诊断总结
+ */
+function executeSummaryCommand() {
+  if (!state.sessionId) {
+    setStatus('请先创建会话', 'warning');
+    return;
+  }
+
+  // 按阶段分组统计
+  const stageRecords = state.records.filter(r => r.stage === state.currentStage);
+  const facts = stageRecords.filter(r => r.type === 'fact');
+  const consensus = stageRecords.filter(r => r.type === 'consensus');
+  const confirmed = stageRecords.filter(r => r.status === 'confirmed');
+
+  // 生成总结文本
+  const summaryLines = [
+    `【${state.currentStage}阶段总结】`,
+    `已确认事实: ${facts.filter(f => f.status === 'confirmed').length} 条`,
+    `待确认判断: ${consensus.filter(c => c.status === 'pending_client_confirm').length} 条`,
+    `已达成共识: ${confirmed.filter(c => c.type === 'consensus').length} 条`,
+    `完整度: ${Math.round(state.completeness)}%`
+  ];
+
+  // 添加关键发现
+  if (facts.length > 0) {
+    summaryLines.push('', '关键发现:');
+    facts.slice(0, 3).forEach((f, i) => {
+      summaryLines.push(`  ${i + 1}. ${f.content.slice(0, 50)}${f.content.length > 50 ? '...' : ''}`);
+    });
+  }
+
+  // 显示总结
+  elements.suggestionQuestion.textContent = summaryLines.join('\n');
+  setStatus('已生成阶段总结', 'success');
+}
+
 // ==================== 候选方案覆盖层 ====================
 
 function showCandidatesOverlay() {
