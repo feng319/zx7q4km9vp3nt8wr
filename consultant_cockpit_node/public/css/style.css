@@ -927,7 +927,7 @@ textarea {
 /* 右栏：追问建议卡 */
 .suggestion-panel {
   min-width: 200px;
-  max-width: 300px;
+  /* 移除 max-width，让右栏像左栏一样填满分配的空间 */
 }
 
 /* 右栏内部使用 flex 布局，让备弹区自动填充 */
