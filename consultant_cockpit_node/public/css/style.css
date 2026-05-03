@@ -716,8 +716,9 @@ textarea {
 /* 共识链显示区 */
 .consensus-chain {
   margin-bottom: 16px;
-  min-height: 100px;
-  max-height: 200px;
+  min-height: 80px;
+  /* 增加显示高度，使用 flex 自动填充 */
+  flex: 1;
   overflow-y: auto;
 }
 
@@ -964,8 +965,10 @@ textarea {
 }
 
 #sku-list {
-  max-height: 200px;
+  /* 增加显示高度，使用 flex 自动填充 */
+  flex: 1;
   overflow-y: auto;
+  min-height: 100px;
 }
 
 #sku-list .empty-state {
