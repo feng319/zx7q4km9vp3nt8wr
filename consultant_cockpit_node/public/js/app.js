@@ -390,6 +390,58 @@ async function executeConfirmCommand() {
   }
 }
 
+/**
+ * /改 <内容>：修正最近一条记录（PRD 4.1 节）
+ * 不覆盖原记录，而是新增一条 source=manual_correction、replaces=原ID 的记录
+ * 原记录自动标记为 superseded
+ */
+async function executeCorrectCommand(newContent) {
+  if (!state.sessionId) {
+    setStatus('请先创建会话', 'warning');
+    return;
+  }
+
+  // 找目标记录：选中候选 > 最新 pending > 最新一条非 superseded 记录
+  let target = null;
+  if (state.candidateId) {
+    target = state.records.find(r => r.id === state.candidateId);
+  }
+  if (!target) {
+    target = state.records
+      .filter(r => r.status === 'pending_client_confirm')
+      .pop();
+  }
+  if (!target) {
+    target = state.records
+      .filter(r => r.status !== 'superseded')
+      .pop();
+  }
+
+  if (!target) {
+    setStatus('没有可修正的记录', 'warning');
+    return;
+  }
+
+  try {
+    await apiRequest(`/sessions/${state.sessionId}/records/${target.id}/correct`, {
+      method: 'POST',
+      body: JSON.stringify({
+        content: newContent,
+        source: 'manual_correction',
+        type: target.type,
+        stage: target.stage
+      })
+    });
+
+    state.candidateId = null;
+    elements.commandInput.value = '';
+    setStatus(`已修正: ${target.content.slice(0, 20)}... → ${newContent.slice(0, 20)}...`, 'success');
+    await getSessionState();
+  } catch (error) {
+    setStatus(`修正失败: ${error.message}`, 'error');
+  }
+}
+
 async function executeStageSwitchCommand(stage) {
   if (stage) {
     // 指定阶段
