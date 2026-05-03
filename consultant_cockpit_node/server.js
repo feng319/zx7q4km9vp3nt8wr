@@ -26,6 +26,8 @@ const fastify = require('fastify')({
   // 允许空 body（用于 POST 请求不需要 body 的情况）
   bodyLimit: 1048576, // 1MB
   ignoreTrailingSlash: true,
+  // 禁用 body 验证，允许空 body
+  disableRequestLogging: true,
 });
 
 const path = require('path');
