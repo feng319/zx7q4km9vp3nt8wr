@@ -1208,20 +1208,6 @@ async function switchToSession(sessionId) {
   }
 }
 
-    // 加载备弹
-    await loadInitialSkus();
-
-    // 更新下拉框选中状态
-    for (const option of elements.sessionSelect.options) {
-      option.selected = option.value === sessionId;
-    }
-
-    setStatus(`已切换到会话 ${sessionId.slice(0, 8)}...`, 'success');
-  } catch (error) {
-    setStatus(`切换会话失败: ${error.message}`, 'error');
-  }
-}
-
 /**
  * 自动加载最近的会话
  * 页面刷新后尝试恢复之前的会话
