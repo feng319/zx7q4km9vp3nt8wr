@@ -86,18 +86,37 @@ curl http://localhost:8501/api/health
 **测试步骤**:
 
 1. 点击 "新建会话" 按钮
-2. 选择记录类型（事实/判断）
-3. 选择阶段（战略梳理/商业模式/行业演示）
-4. 输入内容
-5. 点击 "添加记录"
+2. 输入 `/记 <内容>` 添加事实记录
+3. 输入 `/记 <内容>` 添加第二条记录
+4. 输入 `/确认` 确认最新一条待确认记录
+5. 或点击记录行内"确认"按钮确认指定记录
+
+**状态流转（PRD 4.2）**:
+
+```
+/记 创建 → pending_client_confirm（UI 显示"待确认"）
+    ↓
+/确认 或 点击确认按钮 → confirmed（UI 显示"已确认"，同步飞书）
+```
 
 **验收标准**:
 
 - [ ] 会话创建成功，显示会话 ID
-- [ ] 记录添加成功，显示在列表中
-- [ ] 记录状态显示为 "已记录"
-- [ ] 点击 "确认" 后状态变为 "已确认"
+- [ ] `/记` 添加记录成功，状态为 `pending_client_confirm`，UI 显示"待确认"
+- [ ] 共识链区域出现绿色闪动反馈（0.3 秒）
+- [ ] 左栏完整度进度条数字上升
+- [ ] 每条"待确认"记录行内右侧显示"确认"按钮（不影响行高）
+- [ ] `/确认` 确认最新一条 `pending_client_confirm` 记录
+- [ ] 候选选中后 `/确认` 优先确认选中的候选记录
+- [ ] 确认后状态变为 `confirmed`，UI 显示"已确认"
+- [ ] 仅 `confirmed` 记录同步到飞书"诊断共识"表，`pending_client_confirm` 不同步
 - [ ] 点击 "修正" 后可以修改内容
+
+**智能确认逻辑**:
+
+`/确认` 按以下优先级确认记录：
+1. 如果有选中的候选记录 → 确认该候选记录
+2. 否则 → 确认最新一条 `pending_client_confirm` 状态的记录
 
 **API 测试**:
 
@@ -110,8 +129,21 @@ curl -X POST http://localhost:8501/api/sessions/SESSION_ID/records \
   -H "Content-Type: application/json" \
   -d '{"type":"fact","content":"测试内容","stage":"战略梳理"}'
 
-# 确认记录
+# 智能确认（无 body → 确认最新 pending 记录）
+curl -X POST http://localhost:8501/api/sessions/SESSION_ID/confirm \
+  -H "Content-Type: application/json" \
+  -d '{}'
+
+# 智能确认（指定 record_id）
+curl -X POST http://localhost:8501/api/sessions/SESSION_ID/confirm \
+  -H "Content-Type: application/json" \
+  -d '{"record_id":"record_xxx"}'
+
+# 确认记录（旧接口，指定 ID）
 curl -X POST http://localhost:8501/api/sessions/SESSION_ID/records/RECORD_ID/confirm
+
+# 获取会话状态（含完整度、字段状态、记录列表）
+curl http://localhost:8501/api/sessions/SESSION_ID
 ```
 
 ---
