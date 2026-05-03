@@ -182,8 +182,8 @@ class FeishuClient {
       /** @type {Object[]} */
       const allRecords = [];
 
-      // list 返回异步迭代器，自动处理分页
-      const iterator = this.client.bitable.appTableRecord.list({
+      // 使用 list 方法获取记录
+      const response = await this.client.bitable.appTableRecord.list({
         path: {
           app_token: this.bitableToken,
           table_id: this.consensusTableId,
@@ -194,8 +194,12 @@ class FeishuClient {
         },
       });
 
-      // 遍历迭代器获取所有记录
-      for await (const record of iterator) {
+      if (response.code !== 0) {
+        throw new Error('Lark API error: ' + response.code + ' - ' + response.msg);
+      }
+
+      const records = response.data?.items || [];
+      for (const record of records) {
         if (record && record.record_id) {
           allRecords.push({
             record_id: record.record_id,
