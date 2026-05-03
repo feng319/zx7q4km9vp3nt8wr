@@ -550,8 +550,16 @@ fastify.register(async function (fastify) {
 
     fastify.log.info({ sessionId }, 'WebSocket connected');
 
+    // 检查 connection 和 socket 是否存在
+    if (!connection || !connection.socket) {
+      fastify.log.error({ sessionId }, 'WebSocket connection or socket is undefined');
+      return;
+    }
+
+    const socket = connection.socket;
+
     // 发送初始状态
-    connection.socket.send(JSON.stringify({
+    socket.send(JSON.stringify({
       type: 'init',
       data: {
         session_id: sessionId,
@@ -561,7 +569,7 @@ fastify.register(async function (fastify) {
 
     // 监听共识链变更
     const handleChange = (event) => {
-      connection.socket.send(JSON.stringify({
+      socket.send(JSON.stringify({
         type: 'change',
         data: event,
       }));
@@ -570,7 +578,7 @@ fastify.register(async function (fastify) {
     session.consensusChain.on('change', handleChange);
 
     // 处理客户端消息
-    connection.socket.on('message', (message) => {
+    socket.on('message', (message) => {
       try {
         const data = JSON.parse(message.toString());
         // 可以在这里处理客户端发来的命令
@@ -581,7 +589,7 @@ fastify.register(async function (fastify) {
     });
 
     // 清理
-    connection.socket.on('close', () => {
+    socket.on('close', () => {
       session.consensusChain.off('change', handleChange);
       fastify.log.info({ sessionId }, 'WebSocket disconnected');
     });
