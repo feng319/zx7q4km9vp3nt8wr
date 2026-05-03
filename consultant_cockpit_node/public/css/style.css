@@ -813,7 +813,8 @@ textarea {
 
 /* 右栏：追问建议卡 */
 .suggestion-panel {
-  min-width: 180px;
+  min-width: 200px;
+  max-width: 300px;
 }
 
 .suggestion-status {
