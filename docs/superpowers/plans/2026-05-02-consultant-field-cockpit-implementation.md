@@ -1001,10 +1001,36 @@ Expected: All tests PASS
 ### 已完成任务
 
 - [x] Task 1: 项目初始化和依赖安装
-- [x] Task 2: 共识链数据结构
-- [x] Task 3: 候选生成器(MDU核心)
+- [x] Task 2: 共识链数据结构（含 correctRecord/superseded 修正路径）
+- [x] Task 3: 候选生成器(MDU核心)（含 CandidateCache 预计算缓存）
 - [x] Task 4: 最小备忘录生成器(纯模板填充)
 - [x] Task 5: Streamlit主应用(最小版本)
+
+### 已实现功能清单（Node.js 迁移可直接参考）
+
+| 功能 | 实现文件 | 关键代码行 | 备注 |
+|------|---------|-----------|------|
+| correctRecord/superseded | consensus_chain.py | 61-100 | ✅ 完整实现 |
+| CandidateCache 预计算缓存 | candidate_generator.py | 33-72, 304-401 | ✅ 线程安全、TTL、后台线程 |
+| LLM 超时保护 | candidate_generator.py | 163-167 | 通过 FallbackHandler 实现 |
+| 补充召回机制 | candidate_generator.py | 125-140 | 第三约束触发时召回 |
+
+### 已知问题（Node.js 版本需修复）
+
+**问题 #1**: `main_app.py` id 生成用数组长度，有冲突风险
+- 代码: `f"cc_{len(chain.records)}"`
+- 影响: correctRecord 新增记录后 id 可能重复
+- 修复: Node.js 改用 `crypto.randomUUID()`
+
+**问题 #2**: `_check_diversity` 是简化版（仅检查风险等级字符串）
+- 代码: `len(set(risk_levels)) == 3`
+- 影响: 三个候选都写"稳健"会无限重生成
+- 修复: Node.js 可维持简化方案，但需在 A 文档明确说明
+
+**问题 #3**: `llm_client.py` 缺失全局并发限流
+- 当前: 裸调用 OpenAI SDK，无 p-limit(3) 限制
+- 影响: 多候选并发生成时可能触发 API 限流
+- 修复: Node.js 使用 `p-limit` 包限制并发为 3
 
 ---
 
