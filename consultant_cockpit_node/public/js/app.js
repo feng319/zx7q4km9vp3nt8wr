@@ -778,11 +778,12 @@ function updateCandidateBadge() {
 function getStatusText(status) {
   // PRD 4.2: /记 创建的记录 status=pending_client_confirm，UI 显示"待确认"
   // /确认 后 status=confirmed，UI 显示"已确认"
+  // 添加图标以区分状态（无障碍：不仅依赖颜色）
   const statusMap = {
-    recorded: '已记录',
-    pending_client_confirm: '待确认',
-    confirmed: '已确认',
-    superseded: '已作废'
+    recorded: '📝 已记录',
+    pending_client_confirm: '⏳ 待确认',
+    confirmed: '✓ 已确认',
+    superseded: '✗ 已作废'
   };
   return statusMap[status] || status;
 }
