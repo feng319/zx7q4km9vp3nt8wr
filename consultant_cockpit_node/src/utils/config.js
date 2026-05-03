@@ -218,7 +218,12 @@ Config.getSummary = function() {
     },
     Server: {
       port: this.PORT,
+      host: this.HOST,
       logLevel: this.LOG_LEVEL,
+    },
+    Session: {
+      storageDir: this.SESSION_STORAGE_DIR,
+      autoSaveInterval: this.SESSION_AUTO_SAVE_INTERVAL,
     },
     Candidate: {
       maxRegenerate: this.CANDIDATE_MAX_REGENERATE,
@@ -228,4 +233,49 @@ Config.getSummary = function() {
   };
 };
 
+/**
+ * 获取结构化配置对象
+ * 用于 server.js 等模块的便捷访问
+ *
+ * @returns {Object} 结构化配置对象
+ */
+function getConfig() {
+  return {
+    llm: {
+      apiKey: Config.LLM_API_KEY,
+      baseURL: Config.LLM_BASE_URL,
+      model: Config.LLM_MODEL,
+      timeout: Config.LLM_TIMEOUT_SECONDS,
+    },
+    feishu: {
+      appId: Config.FEISHU_APP_ID,
+      appSecret: Config.FEISHU_APP_SECRET,
+      bitableToken: Config.FEISHU_BITABLE_APP_TOKEN,
+      tableId: Config.FEISHU_BITABLE_TABLE_ID,
+      consensusTableId: Config.FEISHU_BITABLE_CONSENSUS_TABLE_ID,
+      profileTableId: Config.FEISHU_BITABLE_TABLE_ID, // 暂用主表
+    },
+    server: {
+      port: Config.PORT,
+      host: Config.HOST,
+      logLevel: Config.LOG_LEVEL,
+    },
+    session: {
+      storageDir: Config.SESSION_STORAGE_DIR,
+      autoSaveInterval: Config.SESSION_AUTO_SAVE_INTERVAL,
+    },
+    knowledge: {
+      basePath: Config.KNOWLEDGE_BASE_PATH,
+      keywordsDictPath: Config.KEYWORDS_DICT_PATH,
+    },
+    candidate: {
+      maxRegenerate: Config.CANDIDATE_MAX_REGENERATE,
+      minFacts: Config.CANDIDATE_MIN_FACTS,
+      similarityThreshold: Config.CANDIDATE_SIMILARITY_THRESHOLD,
+    },
+    servicePackages: Config.SERVICE_PACKAGES,
+  };
+}
+
 module.exports = Config;
+module.exports.getConfig = getConfig;
