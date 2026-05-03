@@ -29,7 +29,7 @@ async function main() {
   r = await req({ hostname:'localhost', port:8501, path:`/api/sessions/${sid}/records`, method:'POST', headers:{'Content-Type':'application/json','Content-Length':Buffer.byteLength(body)} }, body);
   const recordId = r.b.record?.id;
   console.log('2. /记 添加记录:', r.b.success ? '✅' : '❌', 'ID:', recordId);
-  console.log('   status:', r.b.record?.status, '(应为 recorded)');
+  console.log('   status:', r.b.record?.status, '(应为 pending_client_confirm)');
 
   // 检查 session 状态
   r = await req({ hostname:'localhost', port:8501, path:`/api/sessions/${sid}`, method:'GET' });
