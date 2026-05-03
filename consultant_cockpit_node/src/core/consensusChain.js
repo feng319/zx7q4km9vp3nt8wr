@@ -39,7 +39,7 @@ class ConsensusChain extends EventEmitter {
    * @returns {ConsensusRecord} 添加后的记录（含 id 和 timestamp）
    * @fires ConsensusChain#change
    */
-  addRecord(record, syncToFeishu = true) {
+  addRecord(record, syncToFeishu = false) {
     const now = new Date().toISOString();
 
     // 使用 crypto.randomUUID() 生成唯一 ID（修复 Python 版本的数组长度 Bug）
