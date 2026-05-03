@@ -249,6 +249,7 @@ class FeishuClient {
    */
   async getClientProfile(company) {
     try {
+      // 使用扁平化的 filter 参数格式（飞书 API 要求）
       const response = await this.client.bitable.appTableRecord.list({
         path: {
           app_token: this.bitableToken,
@@ -257,16 +258,10 @@ class FeishuClient {
         params: {
           user_id_type: 'open_id',
           page_size: 10,
-        },
-        data: {
-          filter: {
-            conditions: [{
-              field_name: '客户公司名',
-              operator: 'is',
-              value: [company],
-            }],
-            conjunction: 'and',
-          },
+          'filter[conditions][0][field_name]': '客户公司名',
+          'filter[conditions][0][operator]': 'is',
+          'filter[conditions][0][value][0]': company,
+          'filter[conjunction]': 'and',
         },
       });
 
