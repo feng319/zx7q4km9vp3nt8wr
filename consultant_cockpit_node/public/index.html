@@ -33,55 +33,139 @@
       </div>
     </header>
 
-    <!-- 主内容区 -->
+    <!-- 主内容区：三栏布局 3:5:2 -->
     <main id="main-content" class="main">
-      <!-- 左侧：共识链 -->
-      <section class="panel consensus-panel" aria-labelledby="consensus-heading">
-        <h2 id="consensus-heading">共识链</h2>
+      <!-- 左栏(3)：诊断进度状态板 -->
+      <section class="panel status-panel" aria-labelledby="status-heading">
+        <h2 id="status-heading">诊断进度</h2>
         <div class="panel-content">
-          <div class="input-group">
-            <label for="record-type" class="visually-hidden">记录类型</label>
-            <select id="record-type" aria-label="记录类型">
-              <option value="fact">事实</option>
-              <option value="consensus">判断</option>
-            </select>
-            <label for="record-stage" class="visually-hidden">阶段</label>
-            <select id="record-stage" aria-label="阶段">
-              <option value="战略梳理">战略梳理</option>
-              <option value="商业模式">商业模式</option>
-              <option value="行业演示">行业演示</option>
-            </select>
+          <!-- 完整度进度条 -->
+          <div class="completeness-section">
+            <div class="progress-bar">
+              <div class="progress-fill" id="completeness-progress" style="width: 0%"></div>
+            </div>
+            <p class="progress-label">完整度: <span id="completeness-value">0%</span></p>
           </div>
-          <label for="record-content" class="visually-hidden">内容</label>
-          <textarea id="record-content" placeholder="输入内容..." aria-label="记录内容"></textarea>
-          <div class="input-group">
-            <label for="record-source" class="visually-hidden">来源</label>
-            <input type="text" id="record-source" placeholder="来源（可选）" aria-label="来源">
-            <button id="add-record-btn" class="btn btn-primary">添加记录</button>
+
+          <!-- 字段状态列表 -->
+          <div class="fields-status" id="fields-status">
+            <div class="field-item status-empty">
+              <span class="field-icon">○</span>
+              <span class="field-name">产品线</span>
+            </div>
+            <div class="field-item status-empty">
+              <span class="field-icon">○</span>
+              <span class="field-name">客户群体</span>
+            </div>
+            <div class="field-item status-empty">
+              <span class="field-icon">○</span>
+              <span class="field-name">收入结构</span>
+            </div>
+            <div class="field-item status-empty">
+              <span class="field-icon">○</span>
+              <span class="field-name">毛利结构</span>
+            </div>
+            <div class="field-item status-empty">
+              <span class="field-icon">○</span>
+              <span class="field-name">交付情况</span>
+            </div>
+            <div class="field-item status-empty">
+              <span class="field-icon">○</span>
+              <span class="field-name">资源分布</span>
+            </div>
+            <div class="field-item status-empty">
+              <span class="field-icon">○</span>
+              <span class="field-name">战略目标</span>
+            </div>
+            <div class="field-item status-empty">
+              <span class="field-icon">○</span>
+              <span class="field-name">显性诉求</span>
+            </div>
+            <div class="field-item status-empty">
+              <span class="field-icon">○</span>
+              <span class="field-name">隐性痛点</span>
+            </div>
           </div>
-          <div id="records-list" class="records-list" role="list" aria-label="记录列表"></div>
+
+          <!-- 当前阶段 -->
+          <div class="current-stage">
+            <p class="stage-label">当前阶段</p>
+            <p class="stage-value" id="current-stage">战略梳理</p>
+          </div>
         </div>
       </section>
 
-      <!-- 中间：候选方案 -->
-      <section class="panel candidates-panel" aria-labelledby="candidates-heading">
-        <h2 id="candidates-heading">候选方案</h2>
+      <!-- 中栏(5)：主对话区 -->
+      <section class="panel dialog-panel" aria-labelledby="dialog-heading">
+        <h2 id="dialog-heading">对话区</h2>
         <div class="panel-content">
-          <button id="get-candidates-btn" class="btn btn-secondary">生成候选方案</button>
-          <div id="candidates-list" class="candidates-list" role="list" aria-label="候选方案列表"></div>
+          <!-- 阶段指示 -->
+          <p class="stage-indicator">当前阶段: <strong id="stage-display">战略梳理</strong></p>
+
+          <!-- 共识链显示区 -->
+          <div class="consensus-chain" id="consensus-chain" role="list" aria-label="共识链">
+            <div class="empty-state">暂无记录，使用下方指令添加</div>
+          </div>
+
+          <!-- 快捷指令区 -->
+          <div class="command-section">
+            <h3>快捷指令</h3>
+            <div class="command-input-group">
+              <input type="text" id="command-input" placeholder="输入指令（如：/记、/确认、/切、/候选、/案例）" aria-label="指令输入">
+              <button id="execute-command-btn" class="btn btn-primary">执行</button>
+            </div>
+
+            <!-- 常用指令按钮 -->
+            <div class="quick-commands">
+              <button id="cmd-candidate" class="btn btn-secondary cmd-btn">
+                <span class="cmd-badge" id="candidate-badge"></span>/候选
+              </button>
+              <button id="cmd-confirm" class="btn btn-secondary cmd-btn">/确认</button>
+              <button id="cmd-switch" class="btn btn-secondary cmd-btn">/切</button>
+              <button id="cmd-case" class="btn btn-secondary cmd-btn">/案例</button>
+            </div>
+          </div>
+
+          <!-- 候选方案弹出区（覆盖式） -->
+          <div class="candidates-overlay" id="candidates-overlay" style="display: none;">
+            <div class="candidates-header">
+              <h3>这是基于已确认的事实生成的方案，请选择最贴合客户局势的方向</h3>
+              <button class="close-overlay-btn" id="close-candidates-btn">×</button>
+            </div>
+            <div class="candidates-cards" id="candidates-cards"></div>
+          </div>
         </div>
       </section>
 
-      <!-- 右侧：知识召回 -->
-      <section class="panel knowledge-panel" aria-labelledby="knowledge-heading">
-        <h2 id="knowledge-heading">知识召回</h2>
+      <!-- 右栏(2)：追问建议卡 -->
+      <section class="panel suggestion-panel" aria-labelledby="suggestion-heading">
+        <h2 id="suggestion-heading">建议</h2>
         <div class="panel-content">
-          <div class="input-group">
-            <label for="recall-keywords" class="visually-hidden">关键词</label>
-            <input type="text" id="recall-keywords" placeholder="输入关键词（逗号分隔）" aria-label="关键词">
-            <button id="recall-btn" class="btn btn-secondary">召回</button>
+          <!-- 状态切换提示 -->
+          <div class="suggestion-status" id="suggestion-status">
+            <div class="status-info">追问建议模式</div>
           </div>
-          <div id="sku-list" class="sku-list" role="list" aria-label="知识列表"></div>
+
+          <!-- 当前追问建议 -->
+          <div class="current-suggestion" id="current-suggestion">
+            <p class="suggestion-question" id="suggestion-question">点击"新建会话"开始诊断</p>
+            <div class="suggestion-actions">
+              <button id="use-suggestion-btn" class="btn btn-primary btn-sm">用这个问题</button>
+              <button id="skip-suggestion-btn" class="btn btn-secondary btn-sm">跳过</button>
+              <button id="custom-question-btn" class="btn btn-secondary btn-sm">我来写</button>
+            </div>
+          </div>
+
+          <!-- 备弹区（SKU卡片） -->
+          <div class="sku-section">
+            <div class="sku-header">
+              <span class="sku-title">备弹区</span>
+              <span class="new-sku-badge" id="new-sku-badge" style="display: none;">🔴 有新备弹</span>
+            </div>
+            <div class="sku-list" id="sku-list" role="list" aria-label="知识备弹">
+              <div class="empty-state">暂无备弹</div>
+            </div>
+          </div>
         </div>
       </section>
     </main>
@@ -95,7 +179,7 @@
         <input type="file" id="import-file" accept=".json" style="display:none">
         <button id="import-btn" class="btn btn-secondary">导入会话</button>
       </div>
-      <div id="status-bar" class="status-bar">就绪</div>
+      <div id="status-bar" class="status-bar">就绪 - 点击"新建会话"开始</div>
     </footer>
   </div>
 
