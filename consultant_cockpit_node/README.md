@@ -70,10 +70,18 @@ GET /api/health
 
 ```
 POST /api/sessions              # 创建会话
+GET  /api/sessions              # 列出所有会话（按修改时间排序）
 GET  /api/sessions/:sessionId   # 获取会话状态
 GET  /api/sessions/:sessionId/export   # 导出会话
 POST /api/sessions/:sessionId/import   # 导入会话
 ```
+
+### 会话持久化
+
+- 会话自动保存到 `data/sessions/` 目录
+- 共识链变更时自动触发保存
+- 页面刷新后自动恢复最近的会话
+- 服务重启后会话数据不丢失
 
 ### 记录操作
 
