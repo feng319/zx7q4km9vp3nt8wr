@@ -506,7 +506,7 @@ textarea {
   border: none;
   font-size: 24px;
   cursor: pointer;
-  color: #999;
+  color: var(--text-muted-color);
 }
 
 .modal-close:hover {

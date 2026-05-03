@@ -71,13 +71,13 @@ const elements = {
 
 // 工具函数
 function setStatus(message, type = 'info') {
-  const colors = {
-    info: '#666',
-    success: '#52c41a',
-    warning: '#faad14',
-    error: '#ff4d4f'
+  const statusColors = {
+    info: 'var(--text-secondary-color)',
+    success: 'var(--success-color)',
+    warning: 'var(--warning-color)',
+    error: 'var(--error-color)'
   };
-  elements.statusBar.style.color = colors[type] || colors.info;
+  elements.statusBar.style.color = statusColors[type] || statusColors.info;
   elements.statusBar.textContent = message;
 }
 
