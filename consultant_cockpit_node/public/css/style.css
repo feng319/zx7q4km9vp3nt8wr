@@ -610,6 +610,11 @@ textarea {
   color: var(--text-secondary-color);
 }
 
+.status-tag.pending_client_confirm {
+  background: #fffbe6;
+  color: #d48806;
+}
+
 .status-tag.confirmed {
   background: #f6ffed;
   color: var(--success-color);
