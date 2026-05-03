@@ -300,6 +300,9 @@ function parseAndExecuteCommand(command) {
     if (content) executeRecordCommand(content);
   } else if (command === '/确认') {
     executeConfirmCommand();
+  } else if (command.startsWith('/改')) {
+    const content = command.slice(2).trim();
+    if (content) executeCorrectCommand(content);
   } else if (command.startsWith('/切')) {
     const stage = command.slice(2).trim();
     executeStageSwitchCommand(stage);
