@@ -187,6 +187,23 @@ function getOrCreateSession(sessionId) {
 
 // ==================== API 路由 ====================
 
+// 获取会话列表（用于页面刷新后恢复最近会话）
+fastify.get('/api/sessions', async (request, reply) => {
+  try {
+    const sessionsList = await sessionManager.listSessions();
+    return {
+      success: true,
+      sessions: sessionsList,
+    };
+  } catch (error) {
+    return {
+      success: false,
+      sessions: [],
+      error: error.message,
+    };
+  }
+});
+
 // 健康检查
 fastify.get('/api/health', async (request, reply) => {
   return {
