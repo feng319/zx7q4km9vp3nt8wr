@@ -190,6 +190,30 @@ body {
   opacity: 0.9;
 }
 
+/* 会话选择下拉框 */
+.session-select {
+  padding: 6px 12px;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  background: white;
+  font-size: 13px;
+  color: var(--text-color);
+  cursor: pointer;
+  max-width: 220px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.session-select:hover {
+  border-color: var(--primary-color);
+}
+
+.session-select:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 2px rgba(24, 144, 255, 0.2);
+}
+
 /* 主内容区：三栏布局 3:5:2 */
 .main {
   display: grid;
