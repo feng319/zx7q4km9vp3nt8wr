@@ -515,13 +515,20 @@ function initLLMSelector() {
     const provider = LLM_PROVIDERS[providerId];
     if (!provider) return;
 
-    modelSelect.innerHTML = provider.models.map(model =>
-      `<option value="${model.id}">${model.name}</option>`
-    ).join('');
+    // 显示加载状态
+    modelSelect.disabled = true;
+    modelSelect.innerHTML = '<option value="">加载中...</option>';
 
-    // 更新状态
-    state.llmProvider = providerId;
-    state.llmModel = provider.models[0]?.id || '';
+    // 使用 setTimeout 模拟异步加载（实际场景中可能是 API 调用）
+    setTimeout(() => {
+      modelSelect.innerHTML = provider.models.map(model =>
+        `<option value="${model.id}">${model.name}</option>`
+      ).join('');
+
+      modelSelect.disabled = false;
+      state.llmProvider = providerId;
+      state.llmModel = provider.models[0]?.id || '';
+    }, 50);
   }
 
   // 初始化当前提供商的模型列表
