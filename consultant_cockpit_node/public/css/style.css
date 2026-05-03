@@ -1253,3 +1253,99 @@ textarea {
 .demo-mode .sku-section:hover #sku-list {
   display: block;
 }
+
+/* ==================== 无障碍：减少动画模式 ==================== */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  .loading {
+    animation: none;
+    border: 2px solid var(--primary-color);
+  }
+
+  .candidate-card:hover,
+  .btn-inline-confirm:hover,
+  .btn-inline-correct:hover {
+    transform: none;
+  }
+}
+
+/* ==================== 深色模式 ==================== */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg-color: #141414;
+    --panel-bg: #1f1f1f;
+    --text-color: #e8e8e8;
+    --text-secondary-color: #a6a6a6;
+    --text-muted-color: #6b6b6b;
+    --border-color: #434343;
+    --bg-secondary: #262626;
+    --bg-tertiary: #303030;
+    --shadow: 0 2px 8px rgba(0, 0, 0, 0.45);
+  }
+
+  .header {
+    background: linear-gradient(135deg, #177ddc, #096dd9);
+  }
+
+  .llm-selector select option {
+    background: #1f1f1f;
+  }
+
+  .btn-secondary {
+    background: #303030;
+    border-color: #434343;
+    color: #e8e8e8;
+  }
+
+  .btn-secondary:hover {
+    border-color: var(--primary-color);
+    color: var(--primary-color);
+  }
+
+  .btn-inline-confirm {
+    background: #162312;
+    border-color: #52c41a;
+  }
+
+  .btn-inline-correct {
+    background: #1f1a0d;
+    border-color: #faad14;
+  }
+
+  .status-tag.recorded {
+    background: #303030;
+    color: #a6a6a6;
+  }
+
+  .status-tag.pending_client_confirm {
+    background: #1f1a0d;
+    color: #faad14;
+  }
+
+  .status-tag.confirmed {
+    background: #162312;
+    color: #52c41a;
+  }
+
+  .status-tag.superseded {
+    background: #2a1215;
+    color: #ff4d4f;
+  }
+
+  .candidates-overlay {
+    background: rgba(31, 31, 31, 0.95);
+  }
+
+  .modal-content {
+    background: #1f1f1f;
+    color: #e8e8e8;
+  }
+}
