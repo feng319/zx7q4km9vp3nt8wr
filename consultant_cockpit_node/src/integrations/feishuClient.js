@@ -182,8 +182,8 @@ class FeishuClient {
       /** @type {Object[]} */
       const allRecords = [];
 
-      // listWithIterator 返回异步迭代器，自动处理分页
-      const iterator = this.client.bitable.appTableRecord.listWithIterator({
+      // list 返回异步迭代器，自动处理分页
+      const iterator = this.client.bitable.appTableRecord.list({
         path: {
           app_token: this.bitableToken,
           table_id: this.consensusTableId,
@@ -235,7 +235,7 @@ class FeishuClient {
    */
   async getClientProfile(company) {
     try {
-      const response = await this.client.bitable.appTableRecord.listWithIterator({
+      const response = await this.client.bitable.appTableRecord.list({
         path: {
           app_token: this.bitableToken,
           table_id: this.profileTableId,
