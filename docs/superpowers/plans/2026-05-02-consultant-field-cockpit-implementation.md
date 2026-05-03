@@ -291,8 +291,8 @@ class ConsensusChain:
 
 # 注：以上为 Day 1 精简版代码。
 # correctRecord / superseded 修正路径已在后续迭代中实现，
-# 完整实现见仓库 consensus_chain.py:61-100（correct_record, get_superseded_records, get_correction_history）。
-# CandidateCache 预计算缓存见仓库 candidate_generator.py:33-72, 304-401。
+# 完整实现见 consensus_chain.py:61-100（correct_record, get_superseded_records, get_correction_history）。
+# CandidateCache 预计算缓存见 candidate_generator.py:33-72, 304-401。
 ```
 
 - [ ] **Step 4: 运行测试验证通过**
@@ -1045,7 +1045,7 @@ Expected: All tests PASS
 ## 后续任务(Day 2-3)
 
 > 📌 Day 2-3 的详细实施步骤未文档化。
-> 对应代码已在仓库中，Node.js 迁移时直接阅读源码：
+> 对应代码已在项目中，Node.js 迁移时直接阅读源码：
 > - `knowledge_retriever.py` → `knowledgeRetriever.js`
 > - `feishu_client.py` → `feishuClient.js`（注意 record_id Bug，见 v1.3 Day 0 验收）
 > - `feishu_sync.py` → `feishuSync.js`（仅轮询，WebSocket 未集成）
