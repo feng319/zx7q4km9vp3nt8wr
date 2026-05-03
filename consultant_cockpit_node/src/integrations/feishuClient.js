@@ -93,16 +93,16 @@ class FeishuClient {
 
       return { success: true, record_id: recordId };
     } catch (error) {
-      // 增强错误日志，输出完整错误详情
-      logger.error('Failed to create consensus record', {
+      // 增强错误日志，输出完整错误详情（pino API: 第一个参数是 object，第二个是 message）
+      logger.error({
         message: error.message,
         code: error.code,
         status: error.response?.status,
         body: error.response?.data ?? error.response?.body,
-        record: JSON.stringify(record).slice(0, 200), // 截断避免日志过长
+        record: JSON.stringify(record).slice(0, 200),
         bitableToken: this.bitableToken ? 'configured' : 'missing',
         consensusTableId: this.consensusTableId ? 'configured' : 'missing',
-      });
+      }, 'Failed to create consensus record');
       return { success: false, error: error.message };
     }
   }
