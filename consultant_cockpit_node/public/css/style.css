@@ -427,8 +427,8 @@ textarea {
 }
 
 .status-tag.recorded {
-  background: #f0f0f0;
-  color: #666;
+  background: var(--bg-tertiary);
+  color: var(--text-secondary-color);
 }
 
 .status-tag.confirmed {
@@ -463,7 +463,7 @@ textarea {
 .empty-state {
   text-align: center;
   padding: 32px;
-  color: #999;
+  color: var(--text-muted-color);
 }
 
 /* 模态框 */
