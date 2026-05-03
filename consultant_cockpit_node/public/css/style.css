@@ -387,10 +387,33 @@ textarea {
   display: flex;
   align-items: flex-start;
   gap: 12px;
+  cursor: pointer;
+  padding: 8px;
+  border-radius: 4px;
+  transition: background-color 0.2s;
+}
+
+.sku-item:hover {
+  background: var(--bg-secondary);
+}
+
+.sku-item:focus {
+  outline: 2px solid var(--primary-color);
+  outline-offset: 2px;
 }
 
 .sku-confidence {
   font-size: 20px;
+  flex-shrink: 0;
+}
+
+/* PRD 3.2 节：SKU 编号显示 */
+.sku-id {
+  font-size: 11px;
+  color: var(--text-muted-color);
+  background: var(--bg-tertiary);
+  padding: 2px 6px;
+  border-radius: 3px;
   flex-shrink: 0;
 }
 
@@ -406,6 +429,15 @@ textarea {
 .sku-summary {
   font-size: 13px;
   color: var(--text-secondary-color);
+  transition: max-height 0.2s ease;
+  overflow: hidden;
+}
+
+/* PRD 3.2 节：默认折叠摘要 */
+.sku-summary.collapsed {
+  max-height: 0;
+  margin: 0;
+  padding: 0;
 }
 
 /* 底部 */
