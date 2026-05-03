@@ -598,11 +598,12 @@ textarea {
   100% { transform: rotate(360deg); }
 }
 
-/* 空状态 */
+/* 空状态 - 统一样式 */
 .empty-state {
   text-align: center;
-  padding: 32px;
+  padding: 24px;
   color: var(--text-muted-color);
+  font-size: 14px;
 }
 
 /* 模态框 */
