@@ -1331,6 +1331,20 @@ textarea {
     background: #1f1f1f;
   }
 
+  .session-select {
+    background: #303030;
+    border-color: #434343;
+    color: #e8e8e8;
+  }
+
+  .session-select:hover {
+    border-color: var(--primary-color);
+  }
+
+  .session-select option {
+    background: #1f1f1f;
+  }
+
   .btn-secondary {
     background: #303030;
     border-color: #434343;
