@@ -93,7 +93,16 @@ class FeishuClient {
 
       return { success: true, record_id: recordId };
     } catch (error) {
-      logger.error('Failed to create consensus record', { error: error.message });
+      // 增强错误日志，输出完整错误详情
+      logger.error('Failed to create consensus record', {
+        message: error.message,
+        code: error.code,
+        status: error.response?.status,
+        body: error.response?.data ?? error.response?.body,
+        record: JSON.stringify(record).slice(0, 200), // 截断避免日志过长
+        bitableToken: this.bitableToken ? 'configured' : 'missing',
+        consensusTableId: this.consensusTableId ? 'configured' : 'missing',
+      });
       return { success: false, error: error.message };
     }
   }
