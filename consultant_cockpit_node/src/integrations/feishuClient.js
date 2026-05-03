@@ -585,6 +585,11 @@ class FeishuClient {
       }
     }
 
+    // 完整度字段（类型20=进度条，值为数字）
+    if (fields['完整度'] !== undefined) {
+      profile['完整度'] = fields['完整度'];
+    }
+
     return profile;
   }
 
