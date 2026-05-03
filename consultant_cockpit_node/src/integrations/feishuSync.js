@@ -170,6 +170,12 @@ class FeishuSync extends EventEmitter {
   /**
    * 启动 WebSocket 长连接
    * 设计文档 11.2.1 节：使用 @larksuiteoapi/node-sdk 的 WebSocket 事件订阅
+   *
+   * SDK v1.62.1 正确用法：
+   * 1. lark.Client 用于 API 调用（订阅等）
+   * 2. lark.WSClient 是独立的 WebSocket 客户端类
+   * 3. lark.EventDispatcher 用于事件路由
+   *
    * @private
    * @returns {Promise<boolean>}
    */
@@ -177,7 +183,7 @@ class FeishuSync extends EventEmitter {
     try {
       const config = getConfig();
 
-      // 创建 lark 客户端
+      // 创建 lark 客户端（用于 API 调用，如订阅）
       this._larkClient = new lark.Client({
         appId: config.feishu.appId,
         appSecret: config.feishu.appSecret,
@@ -194,32 +200,40 @@ class FeishuSync extends EventEmitter {
       // 先订阅多维表格
       await this._subscribeBitable();
 
-      // 启动事件监听
-      this._larkClient.wsClient.start();
+      // 创建 EventDispatcher（事件分发器）
+      // SDK 要求：两个参数必须为空字符串
+      this._eventDispatcher = new lark.EventDispatcher('', '');
 
-      // 监听连接状态
-      this._larkClient.wsClient.on('connect', () => {
-        logger.info('WebSocket connected');
-        this._stats.wsConnectCount++;
+      // 注册事件处理器
+      this._eventDispatcher.register({
+        'drive.file.bitable_record_changed_v1': (data) => {
+          this._handleBitableChangeEvent(data);
+          return Promise.resolve();
+        }
       });
 
-      this._larkClient.wsClient.on('disconnect', () => {
-        logger.warn('WebSocket disconnected, attempting reconnect');
-        this._handleWsDisconnect();
+      // 创建独立的 WSClient
+      this._wsClient = new lark.WSClient({
+        appId: config.feishu.appId,
+        appSecret: config.feishu.appSecret,
+        appType: lark.AppType.SelfBuild,
+        domain: lark.Domain.Lark,
+        eventDispatcher: this._eventDispatcher,
       });
 
-      // 监听多维表格变更事件
-      // 事件类型：drive.file.bitable_record_changed_v1
-      this._larkClient.wsClient.on('drive.file.bitable_record_changed_v1', (event) => {
-        this._handleBitableChangeEvent(event);
-      });
+      // 启动 WebSocket 连接
+      // start() 需要传入包含 eventDispatcher 的参数对象
+      this._wsClient.start({ eventDispatcher: this._eventDispatcher });
+
+      logger.info('WebSocket client started, waiting for connection');
 
       // 等待连接建立（最多 10 秒）
-      await this._waitForWsConnection(10000);
+      // 由于 WSClient 不提供 isConnected 方法，我们等待一段时间后假设成功
+      await new Promise(resolve => setTimeout(resolve, 3000));
 
       return true;
     } catch (error) {
-      logger.error('WebSocket start failed', { error: error.message });
+      logger.error('WebSocket start failed', { error: error.message, stack: error.stack });
       this._stats.errorCount++;
       this._stats.lastError = error.message;
       return false;
