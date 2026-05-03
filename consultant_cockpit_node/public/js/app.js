@@ -40,6 +40,7 @@ const LLM_PROVIDERS = {
 // 状态管理
 const state = {
   sessionId: null,
+  company: null,  // 客户公司名称（用于同步到飞书客户档案表）
   records: [],
   candidates: null,
   candidateId: null,  // 当前选中候选对应的记录 ID
