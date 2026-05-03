@@ -363,12 +363,20 @@ textarea {
   margin-bottom: 8px;
 }
 
+/* 类型标签和阶段靠左，状态标签和按钮靠右 */
 .record-type {
   font-size: 12px;
   padding: 2px 8px;
   border-radius: 4px;
   background: var(--primary-color);
   color: white;
+  margin-right: auto; /* 推到左侧 */
+}
+
+.status-tag,
+.btn-inline-confirm,
+.btn-inline-correct {
+  margin-left: 0; /* 右侧元素自然靠右 */
 }
 
 .record-type.consensus {

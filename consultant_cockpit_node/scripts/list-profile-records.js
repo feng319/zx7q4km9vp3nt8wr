@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 // 查询客户档案表中的记录
 
-const FeishuClient = require('../src/feishu/feishuClient');
+const FeishuClient = require('../src/integrations/feishuClient');
 
 async function main() {
   const client = new FeishuClient();
