@@ -546,6 +546,30 @@ textarea {
   display: flex;
   gap: 12px;
   margin-bottom: 12px;
+  flex-wrap: wrap;
+}
+
+/* 小屏幕时按钮缩小间距 */
+@media (max-width: 768px) {
+  .actions {
+    gap: 8px;
+  }
+  .actions .btn {
+    padding: 8px 12px;
+    font-size: 13px;
+    min-height: 36px;
+  }
+}
+
+/* 更小屏幕时次要按钮隐藏 */
+@media (max-width: 500px) {
+  .actions .btn-secondary {
+    display: none;
+  }
+  .actions .btn-primary,
+  .actions .btn-success {
+    flex: 1;
+  }
 }
 
 .status-bar {
