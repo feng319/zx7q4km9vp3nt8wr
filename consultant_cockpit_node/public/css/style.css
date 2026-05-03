@@ -933,24 +933,25 @@ textarea {
 }
 
 .feishu-status .status-dot {
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
+  width: 8px !important;
+  height: 8px !important;
+  min-width: 8px;
+  border-radius: 50% !important;
   transition: background-color 0.3s ease;
-  background-color: #999999; /* 默认灰色 */
+  background-color: #999999 !important;
 }
 
 .feishu-status .status-dot-connected {
-  background-color: var(--success-color);
-  box-shadow: 0 0 4px var(--success-color);
+  background-color: #52c41a !important;
+  box-shadow: 0 0 4px #52c41a !important;
 }
 
 .feishu-status .status-dot-disconnected {
-  background-color: #999999;
+  background-color: #999999 !important;
 }
 
 .feishu-status .status-dot-error {
-  background-color: var(--error-color);
+  background-color: #ff4d4f !important;
 }
 
 .feishu-status .status-text {
