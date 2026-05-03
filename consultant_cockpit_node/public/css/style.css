@@ -373,10 +373,20 @@ textarea {
   border-radius: 4px;
   padding: 12px;
   margin-bottom: 8px;
+  display: block; /* 确保每条记录独立显示 */
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .record-item:hover, .candidate-item:hover, .sku-item:hover {
   border-color: var(--primary-color);
+}
+
+/* 共识链内的记录项 */
+.consensus-chain .record-item {
+  display: block;
+  margin-bottom: 12px;
+  padding: 12px 16px;
 }
 
 .record-header {
