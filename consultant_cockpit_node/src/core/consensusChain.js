@@ -266,7 +266,8 @@ class ConsensusChain extends EventEmitter {
     if (!this.feishuClient) return;
 
     try {
-      await this.feishuClient.syncConsensusRecord(record);
+      // 使用 createConsensusRecord 方法（飞书客户端实际提供的方法）
+      await this.feishuClient.createConsensusRecord(record);
     } catch (err) {
       throw err;
     }
