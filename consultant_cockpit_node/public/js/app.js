@@ -1092,6 +1092,113 @@ async function checkFeishuStatus() {
 }
 
 /**
+ * 加载会话列表并更新下拉框
+ */
+async function loadSessionList() {
+  try {
+    const data = await apiRequest('/sessions');
+
+    if (data.success && data.sessions && data.sessions.length > 0) {
+      // 清空现有选项
+      elements.sessionSelect.innerHTML = '<option value="">选择历史会话...</option>';
+
+      // 添加会话选项
+      for (const session of data.sessions) {
+        const option = document.createElement('option');
+        option.value = session.session_id;
+
+        // 格式化时间显示
+        const updatedAt = new Date(session.updated_at);
+        const timeStr = updatedAt.toLocaleString('zh-CN', {
+          month: '2-digit',
+          day: '2-digit',
+          hour: '2-digit',
+          minute: '2-digit'
+        });
+
+        option.textContent = `${session.session_id.slice(0, 8)}... (${session.record_count}条) ${timeStr}`;
+
+        // 标记当前会话
+        if (state.sessionId === session.session_id) {
+          option.selected = true;
+        }
+
+        elements.sessionSelect.appendChild(option);
+      }
+
+      // 显示下拉框
+      elements.sessionSelect.style.display = 'inline-block';
+      return data.sessions;
+    }
+  } catch (error) {
+    console.warn('加载会话列表失败:', error);
+  }
+
+  return [];
+}
+
+/**
+ * 处理会话选择变更
+ */
+async function handleSessionSelectChange() {
+  const selectedSessionId = elements.sessionSelect.value;
+
+  if (!selectedSessionId) {
+    return;
+  }
+
+  // 如果选择了当前会话，不做任何操作
+  if (selectedSessionId === state.sessionId) {
+    return;
+  }
+
+  // 切换到选中的会话
+  await switchToSession(selectedSessionId);
+}
+
+/**
+ * 切换到指定会话
+ */
+async function switchToSession(sessionId) {
+  try {
+    setStatus('正在切换会话...', 'info');
+
+    // 关闭现有 WebSocket 连接
+    if (state.ws) {
+      state.ws.close();
+      state.ws = null;
+    }
+
+    // 更新状态
+    state.sessionId = sessionId;
+    state.records = [];
+    state.skus = [];
+    state.candidates = null;
+
+    // 更新 UI
+    elements.sessionId.textContent = `会话: ${sessionId.slice(0, 8)}...`;
+
+    // 连接 WebSocket
+    connectWebSocket();
+
+    // 加载会话状态
+    await getSessionState();
+
+    // 加载备弹
+    await loadInitialSkus();
+
+    // 更新下拉框选中状态
+    for (const option of elements.sessionSelect.options) {
+      option.selected = option.value === sessionId;
+    }
+
+    setStatus(`已切换到会话 ${sessionId.slice(0, 8)}...`, 'success');
+  } catch (error) {
+    setStatus(`切换会话失败: ${error.message}`, 'error');
+  }
+}
+
+/**
  * 自动加载最近的会话
  * 页面刷新后尝试恢复之前的会话
  */
@@ -1100,11 +1207,19 @@ async function autoLoadRecentSession() {
     const data = await apiRequest('/sessions');
 
     if (data.success && data.sessions && data.sessions.length > 0) {
+      // 加载会话列表到下拉框
+      await loadSessionListFromData(data.sessions);
+
       // 获取最近的会话（已按更新时间排序）
       const recentSession = data.sessions[0];
 
       state.sessionId = recentSession.session_id;
       elements.sessionId.textContent = `会话: ${state.sessionId.slice(0, 8)}...`;
+
+      // 更新下拉框选中状态
+      for (const option of elements.sessionSelect.options) {
+        option.selected = option.value === state.sessionId;
+      }
 
       // 连接 WebSocket
       connectWebSocket();
@@ -1123,6 +1238,35 @@ async function autoLoadRecentSession() {
   }
 
   return false;
+}
+
+/**
+ * 从已有数据加载会话列表到下拉框
+ */
+async function loadSessionListFromData(sessions) {
+  // 清空现有选项
+  elements.sessionSelect.innerHTML = '<option value="">选择历史会话...</option>';
+
+  // 添加会话选项
+  for (const session of sessions) {
+    const option = document.createElement('option');
+    option.value = session.session_id;
+
+    // 格式化时间显示
+    const updatedAt = new Date(session.updated_at);
+    const timeStr = updatedAt.toLocaleString('zh-CN', {
+      month: '2-digit',
+      day: '2-digit',
+      hour: '2-digit',
+      minute: '2-digit'
+    });
+
+    option.textContent = `${session.session_id.slice(0, 8)}... (${session.record_count}条) ${timeStr}`;
+    elements.sessionSelect.appendChild(option);
+  }
+
+  // 显示下拉框
+  elements.sessionSelect.style.display = 'inline-block';
 }
 
 async function init() {
