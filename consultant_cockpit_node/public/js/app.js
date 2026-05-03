@@ -957,17 +957,28 @@ async function checkFeishuStatus() {
     const data = await apiRequest('/feishu-status');
 
     if (data.connected) {
+      // 移除所有类，添加新类
       dot.className = 'status-dot status-dot-connected';
-      dot.style.cssText = 'background-color: #52c41a !important; box-shadow: 0 0 4px #52c41a;';
+      // 强制设置内联样式并触发重绘
+      dot.style.removeProperty('background-color');
+      dot.style.removeProperty('box-shadow');
+      dot.style.setProperty('background-color', '#52c41a', 'important');
+      dot.style.setProperty('box-shadow', '0 0 4px #52c41a', 'important');
+      // 强制重绘
+      void dot.offsetWidth;
       text.textContent = '已连接';
+      console.log('Feishu status: connected, dot color:', dot.style.backgroundColor);
     } else {
       dot.className = 'status-dot status-dot-disconnected';
-      dot.style.cssText = 'background-color: #999999;';
+      dot.style.removeProperty('background-color');
+      dot.style.removeProperty('box-shadow');
+      dot.style.setProperty('background-color', '#999999', 'important');
       text.textContent = data.reason === 'mock_mode' ? '未配置' : '断开';
     }
   } catch (error) {
     dot.className = 'status-dot status-dot-error';
-    dot.style.cssText = 'background-color: #ff4d4f;';
+    dot.style.removeProperty('background-color');
+    dot.style.setProperty('background-color', '#ff4d4f', 'important');
     text.textContent = '检测失败';
   }
 }
