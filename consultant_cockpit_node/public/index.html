@@ -8,6 +8,9 @@
   <link rel="stylesheet" href="/css/demo-mode.css">
 </head>
 <body>
+  <!-- 跳转到主内容链接（无障碍） -->
+  <a href="#main-content" class="skip-link">跳转到主内容</a>
+
   <div id="app">
     <!-- 顶部导航 -->
     <header class="header">
@@ -15,64 +18,70 @@
       <div class="header-controls">
         <div class="llm-selector">
           <label for="llm-provider">LLM:</label>
-          <select id="llm-provider">
+          <select id="llm-provider" aria-label="选择 LLM 提供商">
             <option value="deepseek-free">DeepSeek Free</option>
             <option value="volc-ark">火山引擎 Ark</option>
             <option value="deepseek">DeepSeek 官方</option>
           </select>
-          <select id="llm-model" class="model-select"></select>
+          <label for="llm-model" class="visually-hidden">模型</label>
+          <select id="llm-model" class="model-select" aria-label="选择模型"></select>
         </div>
         <div class="session-info">
-          <span id="session-id">未创建会话</span>
+          <span id="session-id" aria-live="polite">未创建会话</span>
           <button id="new-session-btn" class="btn btn-primary">新建会话</button>
         </div>
       </div>
     </header>
 
     <!-- 主内容区 -->
-    <main class="main">
+    <main id="main-content" class="main">
       <!-- 左侧：共识链 -->
-      <section class="panel consensus-panel">
-        <h2>共识链</h2>
+      <section class="panel consensus-panel" aria-labelledby="consensus-heading">
+        <h2 id="consensus-heading">共识链</h2>
         <div class="panel-content">
           <div class="input-group">
-            <select id="record-type">
+            <label for="record-type" class="visually-hidden">记录类型</label>
+            <select id="record-type" aria-label="记录类型">
               <option value="fact">事实</option>
               <option value="consensus">判断</option>
             </select>
-            <select id="record-stage">
+            <label for="record-stage" class="visually-hidden">阶段</label>
+            <select id="record-stage" aria-label="阶段">
               <option value="战略梳理">战略梳理</option>
               <option value="商业模式">商业模式</option>
               <option value="行业演示">行业演示</option>
             </select>
           </div>
-          <textarea id="record-content" placeholder="输入内容..."></textarea>
+          <label for="record-content" class="visually-hidden">内容</label>
+          <textarea id="record-content" placeholder="输入内容..." aria-label="记录内容"></textarea>
           <div class="input-group">
-            <input type="text" id="record-source" placeholder="来源（可选）">
+            <label for="record-source" class="visually-hidden">来源</label>
+            <input type="text" id="record-source" placeholder="来源（可选）" aria-label="来源">
             <button id="add-record-btn" class="btn btn-primary">添加记录</button>
           </div>
-          <div id="records-list" class="records-list"></div>
+          <div id="records-list" class="records-list" role="list" aria-label="记录列表"></div>
         </div>
       </section>
 
       <!-- 中间：候选方案 -->
-      <section class="panel candidates-panel">
-        <h2>候选方案</h2>
+      <section class="panel candidates-panel" aria-labelledby="candidates-heading">
+        <h2 id="candidates-heading">候选方案</h2>
         <div class="panel-content">
           <button id="get-candidates-btn" class="btn btn-secondary">生成候选方案</button>
-          <div id="candidates-list" class="candidates-list"></div>
+          <div id="candidates-list" class="candidates-list" role="list" aria-label="候选方案列表"></div>
         </div>
       </section>
 
       <!-- 右侧：知识召回 -->
-      <section class="panel knowledge-panel">
-        <h2>知识召回</h2>
+      <section class="panel knowledge-panel" aria-labelledby="knowledge-heading">
+        <h2 id="knowledge-heading">知识召回</h2>
         <div class="panel-content">
           <div class="input-group">
-            <input type="text" id="recall-keywords" placeholder="输入关键词（逗号分隔）">
+            <label for="recall-keywords" class="visually-hidden">关键词</label>
+            <input type="text" id="recall-keywords" placeholder="输入关键词（逗号分隔）" aria-label="关键词">
             <button id="recall-btn" class="btn btn-secondary">召回</button>
           </div>
-          <div id="sku-list" class="sku-list"></div>
+          <div id="sku-list" class="sku-list" role="list" aria-label="知识列表"></div>
         </div>
       </section>
     </main>
