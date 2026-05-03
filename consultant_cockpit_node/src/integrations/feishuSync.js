@@ -13,8 +13,11 @@
 
 const EventEmitter = require('events');
 const WebSocket = require('ws');
-const { logger } = require('../utils/logger');
+const { getLogger } = require('../utils/logger');
 const { getConfig } = require('../utils/config');
+
+// 模块级日志器
+const logger = getLogger('feishuSync');
 
 /**
  * 飞书同步状态
