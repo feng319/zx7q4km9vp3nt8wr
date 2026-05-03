@@ -886,7 +886,7 @@ textarea {
   display: flex;
   flex-direction: column;
   min-height: 0;
-  overflow-y: auto; /* 允许内容滚动 */
+  overflow-y: visible; /* 不滚动，让 sticky 生效 */
 }
 
 /* 快捷指令区：固定在对话区底部，始终可见 */
