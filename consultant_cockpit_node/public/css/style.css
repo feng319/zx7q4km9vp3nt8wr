@@ -622,6 +622,7 @@ textarea {
 /* 中栏：主对话区 */
 .dialog-panel {
   min-width: 400px;
+  position: relative; /* 候选覆盖层定位基准 */
 }
 
 .stage-indicator {
