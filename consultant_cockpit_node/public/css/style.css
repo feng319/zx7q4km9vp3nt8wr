@@ -398,40 +398,56 @@ textarea {
 
 /* 内联确认按钮（在 header 行内，不增加行高） */
 .btn-inline-confirm {
-  font-size: 11px;
-  line-height: 1;
-  padding: 1px 6px;
+  font-size: 12px;
+  line-height: 1.4;
+  padding: 4px 10px;
   border: 1px solid #28a745;
-  border-radius: 3px;
-  background: transparent;
+  border-radius: 4px;
+  background: #f6ffed;
   color: #28a745;
   cursor: pointer;
   white-space: nowrap;
-  transition: background 0.15s, color 0.15s;
+  transition: all 0.15s;
+  font-weight: 500;
+  min-height: 28px;
 }
 
 .btn-inline-confirm:hover {
   background: #28a745;
   color: #fff;
+  transform: translateY(-1px);
+  box-shadow: 0 2px 4px rgba(40, 167, 69, 0.3);
+}
+
+.btn-inline-confirm:active {
+  transform: translateY(0);
 }
 
 /* 内联修改按钮（与确认按钮同行，不影响行高） */
 .btn-inline-correct {
-  font-size: 11px;
-  line-height: 1;
-  padding: 1px 6px;
-  border: 1px solid #ffc107;
-  border-radius: 3px;
-  background: transparent;
-  color: #ffc107;
+  font-size: 12px;
+  line-height: 1.4;
+  padding: 4px 10px;
+  border: 1px solid #faad14;
+  border-radius: 4px;
+  background: #fffbe6;
+  color: #d48806;
   cursor: pointer;
   white-space: nowrap;
-  transition: background 0.15s, color 0.15s;
+  transition: all 0.15s;
+  font-weight: 500;
+  min-height: 28px;
 }
 
 .btn-inline-correct:hover {
-  background: #ffc107;
-  color: #333;
+  background: #faad14;
+  color: #fff;
+  transform: translateY(-1px);
+  box-shadow: 0 2px 4px rgba(250, 173, 20, 0.3);
+}
+
+.btn-inline-correct:active {
+  transform: translateY(0);
 }
 
 /* 候选方案 */
