@@ -244,6 +244,7 @@ function handleWebSocketMessage(data) {
  * - /切 <阶段>：切换阶段
  * - /候选：生成候选方案
  * - /案例 <关键词>：召回案例
+ * - /总结：生成当前阶段总结
  */
 function parseAndExecuteCommand(command) {
   command = command.trim();
@@ -258,6 +259,8 @@ function parseAndExecuteCommand(command) {
     executeStageSwitchCommand(stage);
   } else if (command === '/候选') {
     executeCandidateCommand();
+  } else if (command === '/总结') {
+    executeSummaryCommand();
   } else if (command.startsWith('/案例')) {
     const keywords = command.slice(3).trim();
     executeCaseRecallCommand(keywords);
