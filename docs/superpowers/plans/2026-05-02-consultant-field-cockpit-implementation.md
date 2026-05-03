@@ -1,4 +1,8 @@
-# 顾问现场作战系统实施计划
+# 顾问现场作战系统实施计划（Python + Streamlit 版本）
+
+> ⚠️ **本文档为 Python + Streamlit 版本（已完成）的实施记录，对应 git tag: python-v1.0-final。**
+> Node.js 改造计划见 `2026-05-03-consultant-field-cockpit-implementation.md`。
+> **本文档仅作为迁移参考基线，不作为 Node.js 版本的实施指导。**
 
 > **For agentic workers:** REQUIRED SUB-SKILL: Use superpowers:subagent-driven-development (recommended) or superpowers:executing-plans to implement this plan task-by-task. Steps use checkbox (`- [ ]`) syntax for tracking.
 
