@@ -398,7 +398,12 @@ fastify.post('/api/sessions/:sessionId/records/:recordId/confirm', async (reques
 fastify.post('/api/sessions/:sessionId/confirm', async (request, reply) => {
   const { sessionId } = request.params;
   const session = await getOrCreateSession(sessionId);
-  const { record_id } = request.body || {};
+  const { record_id, company } = request.body || {};
+
+  // 如果请求中包含公司名，更新会话的公司名
+  if (company) {
+    session.company = company;
+  }
 
   try {
     let targetId = record_id;
@@ -417,7 +422,7 @@ fastify.post('/api/sessions/:sessionId/confirm', async (request, reply) => {
 
     // 传递公司名给 confirmRecord，用于同步到客户档案表
     session.consensusChain.confirmRecord(targetId, session.company);
-    return { success: true, confirmed_id: targetId };
+    return { success: true, confirmed_id: targetId, company: session.company || null };
   } catch (error) {
     reply.code(400);
     return { success: false, error: error.message };
