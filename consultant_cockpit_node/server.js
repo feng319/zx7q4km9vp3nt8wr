@@ -606,10 +606,14 @@ fastify.register(async function (fastify) {
       },
     }));
 
-    // 监听共识链变更
+    // 监听共识链变更，发送前端期望的事件类型
     const handleChange = (event) => {
+      const eventType = event.type === 'add' ? 'record_added'
+        : event.type === 'confirm' ? 'record_confirmed'
+        : event.type === 'correct' ? 'record_corrected'
+        : 'record_added';
       socket.send(JSON.stringify({
-        type: 'change',
+        type: eventType,
         data: event,
       }));
     };
