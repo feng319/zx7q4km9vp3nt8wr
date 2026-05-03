@@ -80,7 +80,14 @@ async function initialize() {
   const config = getConfig();
 
   // 初始化飞书客户端
-  if (config.feishu.appId && config.feishu.appSecret) {
+  // 检测是否是占位符配置（以 'your_' 开头）
+  const isPlaceholder = (val) => val && val.startsWith('your_');
+  const hasRealConfig = config.feishu.appId &&
+                        config.feishu.appSecret &&
+                        !isPlaceholder(config.feishu.appId) &&
+                        !isPlaceholder(config.feishu.appSecret);
+
+  if (hasRealConfig) {
     feishuClient = new FeishuClient({
       appId: config.feishu.appId,
       appSecret: config.feishu.appSecret,
@@ -90,9 +97,13 @@ async function initialize() {
     });
 
     feishuSync = new FeishuSync({ feishuClient });
-    await feishuSync.start();
+    // 非阻塞启动，失败时优雅降级
+    feishuSync.start().catch(err => {
+      fastify.log.warn('FeishuSync start failed, using mock mode:', err.message);
+    });
   } else {
-    // 使用 Mock
+    // 使用 Mock（开发/测试环境）
+    fastify.log.info('Using Mock Feishu clients (placeholder config detected)');
     feishuClient = new FeishuClientMock();
     feishuSync = new FeishuSyncMock();
   }
