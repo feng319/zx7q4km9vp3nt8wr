@@ -2265,6 +2265,160 @@ ws.onmessage = (event) => {
 
 ---
 
+## 八、PRD 对比与遗漏项补充
+
+> **对比日期**: 2026-05-03
+> **PRD 文档**: `docs/superpowers/specs/2026-05-03-转nodejs架构.md` (6 天计划)
+> **实施计划**: 本文档 (5 天执行)
+
+### 8.1 遗漏项清单
+
+经过 PRD 文档与实际代码的详细对比，发现以下遗漏项：
+
+#### 🔴 P0 - 必须补充（阻塞验收）
+
+##### 1. 演示模式（PRD Section 18.7）
+
+**状态**: 完全未实现
+
+**PRD 要求**:
+- 三级敏感度分区（隐藏/替换/保留）
+- F11 和 Ctrl+Shift+D 快捷键
+- 屏幕右上角状态徽章
+- 添加记录后不退出演示模式（Streamlit 痛点）
+- 响应时间 < 0.1 秒无闪烁
+
+**当前代码**: 无任何实现
+
+**影响**: 阻塞 PRD 18.7 验收项
+
+---
+
+#### 🟡 P1 - 建议补充（影响体验）
+
+##### 2. 演示模式 API 端点（PRD Section 4.1）
+
+**PRD 要求**:
+- `GET /api/demo-mode` - 获取演示模式状态
+- `POST /api/demo-mode` - 设置演示模式
+
+**当前代码**: `server.js` 中无此路由
+
+##### 3. 演示模式 CSS 样式
+
+**PRD 要求**:
+- `public/css/demo-mode.css` 独立样式文件
+- 第一级隐藏样式、第二级替换样式、第三级保留样式
+
+**当前代码**: 无
+
+---
+
+#### 🟢 P2 - 可选补充（文档完善）
+
+##### 4. KNOWN_ISSUES.md 文件
+
+**PRD 要求**: 交付物清单中包含已知问题清单
+
+**当前状态**: 未创建
+
+##### 5. 演练执行文档-Node版.md
+
+**PRD 要求**: Node.js 版本的演练检查清单
+
+**当前状态**: 未创建
+
+---
+
+### 8.2 Day 6 补充计划
+
+**目标**: 补充演示模式功能，完成 PRD 全部验收项
+
+#### 步骤 6.1：实现演示模式核心功能（2 小时）
+
+**任务清单**:
+- [ ] 创建 `public/js/demo-mode.js`
+- [ ] 创建 `public/css/demo-mode.css`
+- [ ] 添加键盘快捷键监听（F11, Ctrl+Shift+D）
+- [ ] 实现 `body.classList` 切换逻辑
+- [ ] 添加状态徽章组件（右上角）
+
+**实现要点**:
+```javascript
+// public/js/demo-mode.js
+class DemoMode {
+  constructor() {
+    this.level = 0; // 0=关闭, 1=隐藏, 2=替换, 3=保留
+    this.badge = null;
+  }
+
+  toggle() {
+    this.level = (this.level + 1) % 4;
+    this.applyLevel();
+    this.updateBadge();
+    this.persist();
+  }
+
+  applyLevel() {
+    document.body.classList.remove('demo-level-1', 'demo-level-2', 'demo-level-3');
+    if (this.level > 0) {
+      document.body.classList.add(`demo-level-${this.level}`);
+    }
+  }
+
+  updateBadge() {
+    // 右上角状态徽章
+  }
+
+  persist() {
+    localStorage.setItem('demoMode', this.level);
+  }
+}
+
+// 快捷键
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'F11' || (e.ctrlKey && e.shiftKey && e.key === 'D')) {
+    e.preventDefault();
+    demoMode.toggle();
+  }
+});
+```
+
+#### 步骤 6.2：添加演示模式 API（1 小时）
+
+**任务清单**:
+- [ ] `GET /api/demo-mode` - 获取状态
+- [ ] `POST /api/demo-mode` - 设置级别
+- [ ] WebSocket 事件: `demo:change`
+
+#### 步骤 6.3：前端集成（0.5 小时）
+
+**任务清单**:
+- [ ] 在 `index.html` 中引入 `demo-mode.js/css`
+- [ ] 与 `app.js` 集成
+
+#### 步骤 6.4：文档补充（0.5 小时）
+
+**任务清单**:
+- [ ] 创建 `KNOWN_ISSUES.md`
+- [ ] 创建 `演练执行文档-Node版.md`
+
+---
+
+### 8.3 Day 6 验收标准
+
+- [ ] F11 快捷键切换演示模式
+- [ ] Ctrl+Shift+D 快捷键切换演示模式
+- [ ] 三级敏感度正确应用（隐藏/替换/保留）
+- [ ] 右上角状态徽章显示当前级别
+- [ ] 添加记录后不退出演示模式
+- [ ] `GET /api/demo-mode` 返回当前状态
+- [ ] `POST /api/demo-mode` 设置成功
+- [ ] KNOWN_ISSUES.md 已创建
+- [ ] 演练执行文档-Node版.md 已创建
+
+---
+
 **文档结束**
 
 此手册覆盖了从项目结构到逐日实施步骤的全部内容，开发者可以"打开就开始写代码"。
