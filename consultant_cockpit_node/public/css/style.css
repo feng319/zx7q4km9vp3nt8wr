@@ -937,18 +937,19 @@ textarea {
   height: 8px;
   border-radius: 50%;
   transition: background-color 0.3s ease;
+  background-color: #999999; /* 默认灰色 */
 }
 
-.status-dot-connected {
+.feishu-status .status-dot-connected {
   background-color: var(--success-color);
   box-shadow: 0 0 4px var(--success-color);
 }
 
-.status-dot-disconnected {
+.feishu-status .status-dot-disconnected {
   background-color: #999999;
 }
 
-.status-dot-error {
+.feishu-status .status-dot-error {
   background-color: var(--error-color);
 }
 
