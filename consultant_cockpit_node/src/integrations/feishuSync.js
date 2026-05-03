@@ -2,17 +2,16 @@
 // src/integrations/feishuSync.js — 飞书实时同步模块
 /**
  * @module feishuSync
- * 使用 WebSocket 实现飞书多维表格变更实时同步
+ * 使用轮询实现飞书多维表格变更检测
  *
  * 架构设计：
- * - WebSocket 连接：监听飞书多维表格变更事件
+ * - 定时轮询：定期查询多维表格变更
  * - 事件驱动：变更通过 EventEmitter 通知订阅者
- * - 断线重连：自动重连机制，指数退避
+ * - 断线重连：自动重试机制，指数退避
  * - 本地缓存：用于变更检测和降级
  */
 
 const EventEmitter = require('events');
-const WebSocket = require('ws');
 const { getLogger } = require('../utils/logger');
 const { getConfig } = require('../utils/config');
 
@@ -34,37 +33,25 @@ const logger = getLogger('feishuSync');
  */
 
 /**
- * 飞书实时同步类
+ * 飞书实时同步类（基于轮询）
  * @extends EventEmitter
  */
 class FeishuSync extends EventEmitter {
   /**
    * @param {Object} options - 配置选项
    * @param {import('./feishuClient').FeishuClient} options.feishuClient - 飞书客户端
-   * @param {number} [options.reconnectDelay] - 重连延迟（毫秒）
-   * @param {number} [options.maxReconnectDelay] - 最大重连延迟
-   * @param {number} [options.heartbeatInterval] - 心跳间隔
+   * @param {number} [options.pollInterval] - 轮询间隔（毫秒），默认 30 秒
    */
   constructor(options) {
     super();
 
     this.feishuClient = options.feishuClient;
-    this.reconnectDelay = options.reconnectDelay || 1000;
-    this.maxReconnectDelay = options.maxReconnectDelay || 30000;
-    this.heartbeatInterval = options.heartbeatInterval || 30000;
-
-    const config = getConfig();
+    this.pollInterval = options.pollInterval || 30000; // 30 秒
 
     /** @type {SyncStatus} */
     this._status = 'disconnected';
-    /** @type {WebSocket|null} */
-    this._ws = null;
     /** @type {NodeJS.Timeout|null} */
-    this._heartbeatTimer = null;
-    /** @type {NodeJS.Timeout|null} */
-    this._reconnectTimer = null;
-    /** @type {number} */
-    this._currentReconnectDelay = this.reconnectDelay;
+    this._pollTimer = null;
 
     // 快照缓存：用于检测变更
     /** @type {Map<string, string>} */
@@ -77,14 +64,11 @@ class FeishuSync extends EventEmitter {
     // 统计信息
     this._stats = {
       connectedTime: null,
-      reconnectCount: 0,
+      pollCount: 0,
       changeCount: 0,
       errorCount: 0,
       lastError: null,
     };
-
-    // WebSocket URL（飞书开放平台 WebSocket 端点）
-    this._wsUrl = `wss://open.feishu.cn/open-apis/bitable/v1/apps/${config.feishu.bitableToken}/watch`;
   }
 
   // ==================== 连接管理 ====================
@@ -100,10 +84,26 @@ class FeishuSync extends EventEmitter {
     }
 
     try {
-      await this._connect();
+      this._status = 'connecting';
+
+      // 初始同步
+      await this._poll();
+
+      this._status = 'connected';
+      this._stats.connectedTime = new Date().toISOString();
+
+      // 开始定时轮询
+      this._startPolling();
+
+      this.emit('connected');
+      logger.info('FeishuSync started', { pollInterval: this.pollInterval });
+
       return true;
     } catch (error) {
+      this._status = 'disconnected';
       logger.error('Failed to start FeishuSync', { error: error.message });
+      this._stats.errorCount++;
+      this._stats.lastError = error.message;
       return false;
     }
   }
@@ -112,11 +112,9 @@ class FeishuSync extends EventEmitter {
    * 停止同步
    */
   stop() {
-    this._clearTimers();
-
-    if (this._ws) {
-      this._ws.close();
-      this._ws = null;
+    if (this._pollTimer) {
+      clearInterval(this._pollTimer);
+      this._pollTimer = null;
     }
 
     this._status = 'disconnected';
@@ -124,197 +122,77 @@ class FeishuSync extends EventEmitter {
   }
 
   /**
-   * 建立 WebSocket 连接
+   * 开始轮询
    * @private
    */
-  async _connect() {
-    this._status = 'connecting';
-
-    return new Promise((resolve, reject) => {
+  _startPolling() {
+    this._pollTimer = setInterval(async () => {
       try {
-        // 获取访问令牌
-        this._getAccessToken().then(token => {
-          this._ws = new WebSocket(this._wsUrl, {
-            headers: {
-              'Authorization': `Bearer ${token}`,
-            },
-          });
-
-          this._setupWebSocketHandlers();
-
-          this._ws.once('open', () => {
-            this._status = 'connected';
-            this._stats.connectedTime = new Date().toISOString();
-            this._currentReconnectDelay = this.reconnectDelay;
-            this._startHeartbeat();
-            this.emit('connected');
-            logger.info('FeishuSync connected');
-            resolve();
-          });
-
-          this._ws.once('error', (error) => {
-            if (this._status === 'connecting') {
-              reject(error);
-            }
-          });
-        });
+        await this._poll();
       } catch (error) {
-        reject(error);
-      }
-    });
-  }
-
-  /**
-   * 设置 WebSocket 事件处理器
-   * @private
-   */
-  _setupWebSocketHandlers() {
-    if (!this._ws) return;
-
-    this._ws.on('message', (data) => {
-      try {
-        const message = JSON.parse(data.toString());
-        this._handleMessage(message);
-      } catch (error) {
-        logger.error('Failed to parse WebSocket message', { error: error.message });
-      }
-    });
-
-    this._ws.on('close', (code, reason) => {
-      logger.warn('WebSocket closed', { code, reason: reason.toString() });
-      this._handleDisconnect();
-    });
-
-    this._ws.on('error', (error) => {
-      logger.error('WebSocket error', { error: error.message });
-      this._stats.errorCount++;
-      this._stats.lastError = error.message;
-      this.emit('error', error);
-    });
-  }
-
-  /**
-   * 处理断线
-   * @private
-   */
-  _handleDisconnect() {
-    this._clearTimers();
-
-    if (this._status === 'connected') {
-      this._status = 'reconnecting';
-      this._scheduleReconnect();
-    } else {
-      this._status = 'disconnected';
-    }
-
-    this.emit('disconnected');
-  }
-
-  /**
-   * 调度重连
-   * @private
-   */
-  _scheduleReconnect() {
-    this._reconnectTimer = setTimeout(async () => {
-      logger.info('Attempting to reconnect', { delay: this._currentReconnectDelay });
-      this._stats.reconnectCount++;
-
-      try {
-        await this._connect();
-      } catch (error) {
-        // 指数退避
-        this._currentReconnectDelay = Math.min(
-          this._currentReconnectDelay * 2,
-          this.maxReconnectDelay
-        );
-        this._scheduleReconnect();
-      }
-    }, this._currentReconnectDelay);
-  }
-
-  /**
-   * 获取访问令牌
-   * @private
-   * @returns {Promise<string>}
-   */
-  async _getAccessToken() {
-    // 使用飞书 SDK 获取 tenant_access_token
-    try {
-      const response = await this.feishuClient.client.auth.tenantAccessToken.internal({
-        data: {
-          app_id: this.feishuClient.appId,
-          app_secret: this.feishuClient.appSecret,
-        },
-      });
-
-      if (response.code !== 0) {
-        throw new Error(`Failed to get token: ${response.msg}`);
-      }
-
-      logger.debug('Got tenant_access_token');
-      return response.tenant_access_token;
-    } catch (error) {
-      logger.error('Failed to get tenant_access_token', { error: error.message });
-      throw error;
-    }
-  }
-
-  // ==================== 心跳机制 ====================
-
-  /**
-   * 启动心跳
-   * @private
-   */
-  _startHeartbeat() {
-    this._heartbeatTimer = setInterval(() => {
-      if (this._ws && this._ws.readyState === WebSocket.OPEN) {
-        this._ws.send(JSON.stringify({ type: 'ping' }));
-      }
-    }, this.heartbeatInterval);
-  }
-
-  /**
-   * 清除定时器
-   * @private
-   */
-  _clearTimers() {
-    if (this._heartbeatTimer) {
-      clearInterval(this._heartbeatTimer);
-      this._heartbeatTimer = null;
-    }
-    if (this._reconnectTimer) {
-      clearTimeout(this._reconnectTimer);
-      this._reconnectTimer = null;
-    }
-  }
-
-  // ==================== 消息处理 ====================
-
-  /**
-   * 处理 WebSocket 消息
-   * @private
-   * @param {Object} message
-   */
-  _handleMessage(message) {
-    switch (message.type) {
-      case 'pong':
-        // 心跳响应
-        break;
-
-      case 'record_change':
-        this._handleRecordChange(message.payload);
-        break;
-
-      case 'error':
-        logger.error('Received error from server', { error: message.error });
+        logger.error('Poll error', { error: error.message });
         this._stats.errorCount++;
-        this._stats.lastError = message.error;
-        this.emit('error', new Error(message.error));
-        break;
+        this._stats.lastError = error.message;
+      }
+    }, this.pollInterval);
+  }
 
-      default:
-        logger.debug('Unknown message type', { type: message.type });
+  /**
+   * 执行轮询
+   * @private
+   */
+  async _poll() {
+    this._stats.pollCount++;
+
+    const records = await this.feishuClient.listConsensusRecords();
+
+    // 检测变更
+    const currentIds = new Set(records.map(r => r.record_id));
+    const previousIds = new Set(this._snapshot.keys());
+
+    // 检测新增
+    for (const record of records) {
+      if (!record.record_id) continue;
+
+      const snapshotKey = JSON.stringify(record);
+      const previousSnapshot = this._snapshot.get(record.record_id);
+
+      if (!previousSnapshot) {
+        // 新记录
+        this._handleRecordChange({
+          record_id: record.record_id,
+          data: record,
+          change_type: 'create',
+        });
+      } else if (previousSnapshot !== snapshotKey) {
+        // 更新的记录
+        this._handleRecordChange({
+          record_id: record.record_id,
+          data: record,
+          change_type: 'update',
+        });
+      }
+
+      // 更新快照
+      this._snapshot.set(record.record_id, snapshotKey);
     }
+
+    // 检测删除
+    for (const id of previousIds) {
+      if (!currentIds.has(id)) {
+        this._handleRecordChange({
+          record_id: id,
+          data: null,
+          change_type: 'delete',
+        });
+        this._snapshot.delete(id);
+      }
+    }
+
+    logger.debug('Poll completed', {
+      total: records.length,
+      snapshotSize: this._snapshot.size
+    });
   }
 
   /**
@@ -328,20 +206,8 @@ class FeishuSync extends EventEmitter {
     // 跳过已知写入的记录（避免自写自触发）
     if (this._knownWriteIds.has(record_id)) {
       this._knownWriteIds.delete(record_id);
-      // 更新快照但不触发事件
-      this._snapshot.set(record_id, JSON.stringify(data));
       return;
     }
-
-    // 检测是否为真实变更
-    const snapshotKey = JSON.stringify(data);
-    if (this._snapshot.get(record_id) === snapshotKey) {
-      // 无变化，忽略
-      return;
-    }
-
-    // 更新快照
-    this._snapshot.set(record_id, snapshotKey);
 
     // 构造变更事件
     /** @type {ChangeEvent} */
@@ -377,7 +243,7 @@ class FeishuSync extends EventEmitter {
   // ==================== 手动同步 ====================
 
   /**
-   * 强制同步一次（轮询方案作为备份）
+   * 强制同步一次
    * @param {string} [company] - 可选，指定公司
    * @returns {Promise<{success: boolean, records: Object[], error?: string}>}
    */
