@@ -485,6 +485,13 @@ ${JSON.stringify(chapterData, null, 2)}
     children.push(this._createParagraph(`理由: ${recommendation.理由}`));
     children.push(this._createParagraph(`下一步: ${recommendation.下一步}`));
 
+    // 意向探测复选框（PRD 7.6 节）
+    children.push(new Paragraph({ text: '' })); // 空行
+    children.push(this._createParagraph('请在下方勾选您的意向，或直接回复本消息：'));
+    children.push(this._createParagraph('□  希望进入下一阶段合作'));
+    children.push(this._createParagraph('□  需要内部讨论后回复'));
+    children.push(this._createParagraph('□  建议先了解类似案例'));
+
     return children;
   }
 
