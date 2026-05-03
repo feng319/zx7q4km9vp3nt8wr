@@ -229,7 +229,8 @@ describe('第三部分：候选生成', () => {
         source: 'manual'
       });
 
-      const skus = retriever.getAvailableSkus();
+      // 使用 mock SKU 数据
+      const skus = [{ id: 'sku_001', confidence: '🟢', title: 'test' }];
       const result = candidateGen.checkConstraints(skus);
 
       assert.ok(!result.valid, '约束检查应失败');
