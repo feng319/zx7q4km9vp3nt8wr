@@ -62,6 +62,7 @@ const elements = {};
 function initElements() {
   // Header
   elements.sessionId = document.getElementById('session-id');
+  elements.sessionSelect = document.getElementById('session-select');
   elements.newSessionBtn = document.getElementById('new-session-btn');
   elements.llmProvider = document.getElementById('llm-provider');
   elements.llmModel = document.getElementById('llm-model');
