@@ -38,5 +38,15 @@
     },
     "timestamp": "2026-05-03T02:29:07.544Z",
     "retry_suggested": true
+  },
+  {
+    "operation": "upsertRecord",
+    "error": "API Error",
+    "data": {
+      "company": "测试公司",
+      "fields": {}
+    },
+    "timestamp": "2026-05-03T02:29:23.328Z",
+    "retry_suggested": true
   }
 ]
