@@ -72,8 +72,8 @@ describe('Golden Cases: Consensus Chain', () => {
 
       // 验证状态
       assert.strictEqual(record.status, 'recorded');
-      // 验证 ID 格式
-      assert.ok(record.id.match(/^record_\d+$/), 'ID should match record_* format');
+      // 验证 ID 格式 (使用 UUID 段，如 record_a1b2c3d4)
+      assert.ok(record.id.match(/^record_[a-f0-9]{8}$/), 'ID should match record_* UUID format');
       // 验证时间戳
       assert.ok(record.timestamp, 'Should have timestamp');
       // 验证类型
