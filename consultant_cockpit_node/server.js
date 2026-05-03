@@ -97,9 +97,13 @@ async function initialize() {
     });
 
     feishuSync = new FeishuSync({ feishuClient });
+    // 监听错误事件，防止进程崩溃
+    feishuSync.on('error', (err) => {
+      fastify.log.warn('FeishuSync error (non-fatal):', err.message);
+    });
     // 非阻塞启动，失败时优雅降级
     feishuSync.start().catch(err => {
-      fastify.log.warn('FeishuSync start failed, using mock mode:', err.message);
+      fastify.log.warn('FeishuSync start failed, sync disabled:', err.message);
     });
   } else {
     // 使用 Mock（开发/测试环境）
