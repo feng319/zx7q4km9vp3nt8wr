@@ -261,17 +261,129 @@ class ConsensusChain extends EventEmitter {
    * 异步同步到飞书
    * @private
    * @param {ConsensusRecord} record
+   * @param {string} [company] - 客户公司名
    * @returns {Promise<void>}
    */
-  async _syncToFeishu(record) {
+  async _syncToFeishu(record, company) {
     if (!this.feishuClient) return;
 
     try {
-      // 使用 createConsensusRecord 方法（飞书客户端实际提供的方法）
+      // 同步到诊断共识表
       await this.feishuClient.createConsensusRecord(record);
+
+      // 如果有公司名，同步到客户档案表
+      if (company) {
+        await this._syncToProfile(record, company);
+      }
     } catch (err) {
       throw err;
     }
+  }
+
+  /**
+   * 同步到客户档案表
+   * @private
+   * @param {ConsensusRecord} record
+   * @param {string} company
+   * @returns {Promise<void>}
+   */
+  async _syncToProfile(record, company) {
+    if (!this.feishuClient || !company) return;
+
+    try {
+      // 从共识链记录中提取客户档案字段
+      const profileData = this._extractProfileData(record);
+      if (Object.keys(profileData).length > 0) {
+        await this.feishuClient.updateClientProfile(company, profileData);
+        console.log(`同步到客户档案表: ${company}`, profileData);
+      }
+    } catch (err) {
+      console.warn(`同步客户档案失败: ${err.message}`);
+    }
+  }
+
+  /**
+   * 从共识链记录中提取客户档案数据
+   * @private
+   * @param {ConsensusRecord} record
+   * @returns {Object} 客户档案字段数据
+   */
+  _extractProfileData(record) {
+    const profileData = {};
+    const content = record.content || '';
+
+    // 9 个静态字段的关键词映射
+    const fieldKeywords = {
+      '产品线': ['产品线', '产品', 'SKU'],
+      '客户群体': ['客户群体', '客户', '用户'],
+      '收入结构': ['收入结构', '收入', '营收'],
+      '毛利结构': ['毛利结构', '毛利', '利润'],
+      '交付情况': ['交付情况', '交付', '履约'],
+      '资源分布': ['资源分布', '资源'],
+      '战略目标': ['战略目标', '战略', '目标'],
+      '显性诉求': ['显性诉求', '诉求', '需求'],
+    };
+
+    // 检查内容是否包含相关关键词
+    for (const [field, keywords] of Object.entries(fieldKeywords)) {
+      if (keywords.some(kw => content.includes(kw))) {
+        // 提取关键词后面的内容作为字段值
+        const value = this._extractFieldValue(content, keywords);
+        if (value) {
+          profileData[field] = value;
+        }
+      }
+    }
+
+    // 如果是事实类型的记录，且内容较短，可能是某个字段的值
+    if (record.type === 'fact' && content.length < 200) {
+      // 尝试根据内容特征推断字段
+      const inferredField = this._inferField(content);
+      if (inferredField && !profileData[inferredField]) {
+        profileData[inferredField] = content;
+      }
+    }
+
+    return profileData;
+  }
+
+  /**
+   * 从内容中提取字段值
+   * @private
+   * @param {string} content
+   * @param {string[]} keywords
+   * @returns {string|null}
+   */
+  _extractFieldValue(content, keywords) {
+    for (const keyword of keywords) {
+      const index = content.indexOf(keyword);
+      if (index !== -1) {
+        // 提取关键词后面的内容，直到句号、换行或下一个字段关键词
+        const afterKeyword = content.substring(index + keyword.length);
+        const match = afterKeyword.match(/^[:：\s]*(.+?)(?:[。\n]|$)/);
+        if (match && match[1]) {
+          return match[1].trim();
+        }
+      }
+    }
+    return null;
+  }
+
+  /**
+   * 根据内容推断字段名
+   * @private
+   * @param {string} content
+   * @returns {string|null}
+   */
+  _inferField(content) {
+    // 简单的启发式规则
+    if (/^(新能源|电池|光伏|风电|储能)/.test(content)) {
+      return '产品线';
+    }
+    if (/^(工厂|企业|公司|厂商)/.test(content)) {
+      return '客户群体';
+    }
+    return null;
   }
 }
 
