@@ -189,6 +189,9 @@ async function createSession() {
 
     // 自动加载初始备弹（使用默认关键词）
     await loadInitialSkus();
+
+    // 刷新会话列表下拉框
+    await loadSessionList();
   } catch (error) {
     setStatus(`创建会话失败: ${error.message}`, 'error');
   }
