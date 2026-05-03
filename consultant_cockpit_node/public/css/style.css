@@ -143,18 +143,30 @@ body {
   opacity: 0.9;
 }
 
-/* 主内容区 */
+/* 主内容区：三栏布局 3:5:2 */
 .main {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 3fr 5fr 2fr;
   gap: 16px;
   padding: 16px;
   flex: 1;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1200px) {
+  .main {
+    grid-template-columns: 1fr 1fr;
+  }
+  .suggestion-panel {
+    grid-column: span 2;
+  }
+}
+
+@media (max-width: 768px) {
   .main {
     grid-template-columns: 1fr;
+  }
+  .suggestion-panel {
+    grid-column: span 1;
   }
 }
 
