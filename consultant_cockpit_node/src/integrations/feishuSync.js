@@ -190,11 +190,12 @@ class FeishuSync extends EventEmitter {
       const config = getConfig();
 
       // 创建 lark 客户端（用于 API 调用，如订阅）
+      // 使用 Domain.Feishu（中国版飞书），而非 Domain.Lark（国际版）
       this._larkClient = new lark.Client({
         appId: config.feishu.appId,
         appSecret: config.feishu.appSecret,
         appType: lark.AppType.SelfBuild,
-        domain: lark.Domain.Lark,
+        domain: lark.Domain.Feishu,
       });
 
       // 订阅多维表格变更事件
