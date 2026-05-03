@@ -216,10 +216,14 @@ fastify.get('/api/feishu-status', async (request, reply) => {
   }
 });
 
-// 创建会话（允许空 body）
+// 创建会话（允许任意 Content-Type 和空 body）
 fastify.post('/api/sessions', {
   config: {
     rawBody: true
+  },
+  onRequest: async (request, reply) => {
+    // 移除 Content-Type 检查
+    request.headers['content-type'] = 'application/json';
   },
   preHandler: async (request, reply) => {
     // 允许空 body
