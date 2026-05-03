@@ -168,6 +168,51 @@ fastify.get('/api/health', async (request, reply) => {
   };
 });
 
+// 飞书连接状态
+fastify.get('/api/feishu-status', async (request, reply) => {
+  // 检查是否使用真实飞书客户端
+  const isRealClient = feishuClient && !(feishuClient instanceof FeishuClientMock);
+
+  if (!isRealClient) {
+    return {
+      connected: false,
+      reason: 'mock_mode',
+      message: '使用模拟客户端（未配置飞书凭证）',
+    };
+  }
+
+  try {
+    // 尝试访问多维表格来验证连接
+    const result = await feishuClient.client.bitable.appTableRecord.list({
+      path: {
+        app_token: feishuClient.bitableToken,
+        table_id: feishuClient.consensusTableId,
+      },
+      params: { page_size: 1 },
+    });
+
+    if (result.code === 0) {
+      return {
+        connected: true,
+        message: '已连接',
+        bitable_accessible: true,
+      };
+    } else {
+      return {
+        connected: false,
+        reason: 'api_error',
+        message: result.msg || 'API 调用失败',
+      };
+    }
+  } catch (error) {
+    return {
+      connected: false,
+      reason: 'connection_error',
+      message: error.message || '连接失败',
+    };
+  }
+});
+
 // 创建会话
 fastify.post('/api/sessions', async (request, reply) => {
   const sessionId = require('crypto').randomUUID();
