@@ -12,9 +12,20 @@
     <!-- 顶部导航 -->
     <header class="header">
       <h1>顾问现场作战系统</h1>
-      <div class="session-info">
-        <span id="session-id">未创建会话</span>
-        <button id="new-session-btn" class="btn btn-primary">新建会话</button>
+      <div class="header-controls">
+        <div class="llm-selector">
+          <label for="llm-provider">LLM:</label>
+          <select id="llm-provider">
+            <option value="deepseek-free">DeepSeek Free</option>
+            <option value="volc-ark">火山引擎 Ark</option>
+            <option value="deepseek">DeepSeek 官方</option>
+          </select>
+          <select id="llm-model" class="model-select"></select>
+        </div>
+        <div class="session-info">
+          <span id="session-id">未创建会话</span>
+          <button id="new-session-btn" class="btn btn-primary">新建会话</button>
+        </div>
       </div>
     </header>
 
