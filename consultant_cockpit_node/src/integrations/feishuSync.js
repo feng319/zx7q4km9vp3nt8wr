@@ -273,36 +273,6 @@ class FeishuSync extends EventEmitter {
   }
 
   /**
-   * 等待 WebSocket 连接
-   * @private
-   * @param {number} timeout - 超时时间（毫秒）
-   */
-  async _waitForWsConnection(timeout) {
-    return new Promise((resolve, reject) => {
-      const timer = setTimeout(() => {
-        reject(new Error('WebSocket connection timeout'));
-      }, timeout);
-
-      // 检查是否已连接
-      const checkConnected = () => {
-        if (this._larkClient?.wsClient?.isConnected?.()) {
-          clearTimeout(timer);
-          resolve(true);
-        }
-      };
-
-      // 立即检查一次
-      checkConnected();
-
-      // 监听连接事件
-      this._larkClient.wsClient.once('connect', () => {
-        clearTimeout(timer);
-        resolve(true);
-      });
-    });
-  }
-
-  /**
    * 处理 WebSocket 断开
    * @private
    */
