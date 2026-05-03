@@ -386,8 +386,19 @@ async function executeConfirmCommand() {
   }
 
   try {
+    // 如果没有公司名，提示用户输入（用于同步到飞书客户档案表）
+    if (!state.company) {
+      const company = prompt('请输入客户公司名称（用于同步到飞书客户档案表）:');
+      if (company) {
+        state.company = company;
+      }
+    }
+
     // 优先确认选中的候选记录，否则由后端确认最新 pending 记录
-    const body = state.candidateId ? { record_id: state.candidateId } : {};
+    const body = {
+      ...(state.candidateId ? { record_id: state.candidateId } : {}),
+      ...(state.company ? { company: state.company } : {})
+    };
     const result = await apiRequest(`/sessions/${state.sessionId}/confirm`, {
       method: 'POST',
       body: JSON.stringify(body)
@@ -398,7 +409,8 @@ async function executeConfirmCommand() {
     // 找到被确认的记录用于提示
     const confirmed = state.records.find(r => r.id === result.confirmed_id);
     const label = confirmed ? confirmed.content.slice(0, 30) : result.confirmed_id;
-    setStatus(`已确认: ${label}...`, 'success');
+    const companyMsg = state.company ? ` (${state.company})` : '';
+    setStatus(`已确认: ${label}...${companyMsg}`, 'success');
     await getSessionState();
   } catch (error) {
     setStatus(`确认失败: ${error.message}`, 'error');
