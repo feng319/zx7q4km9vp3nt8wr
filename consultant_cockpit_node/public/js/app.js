@@ -169,8 +169,33 @@ async function createSession() {
     state.completeness = 0;
     state.fieldsStatus = {};
     renderAll();
+
+    // 自动加载初始备弹（使用默认关键词）
+    await loadInitialSkus();
   } catch (error) {
     setStatus(`创建会话失败: ${error.message}`, 'error');
+  }
+}
+
+/**
+ * 加载初始备弹
+ * 创建会话后自动召回一些 SKU
+ */
+async function loadInitialSkus() {
+  if (!state.sessionId) return;
+
+  try {
+    // 使用默认关键词召回备弹
+    const defaultKeywords = ['储能', '商业模式', '战略'];
+    const data = await apiRequest(`/sessions/${state.sessionId}/recall`, {
+      method: 'POST',
+      body: JSON.stringify({ keywords: defaultKeywords, top_k: 5 })
+    });
+
+    state.skus = data.skus || [];
+    renderSkus();
+  } catch (error) {
+    console.error('加载初始备弹失败:', error);
   }
 }
 
