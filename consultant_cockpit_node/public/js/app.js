@@ -248,7 +248,11 @@ function handleWebSocketMessage(data) {
     case 'record_added':
     case 'record_confirmed':
     case 'record_corrected':
-      getSessionState();
+      // 获取新记录 ID 用于闪动动画
+      const flashId = data.data?.record?.id || null;
+      getSessionState().then(() => {
+        if (flashId) flashRecord(flashId);
+      });
       break;
     case 'candidates_ready':
       state.candidates = data.candidates;
@@ -259,6 +263,19 @@ function handleWebSocketMessage(data) {
       elements.newSkuBadge.style.display = 'inline';
       renderSkus();
       break;
+  }
+}
+
+/**
+ * 对指定记录触发绿色闪动动画
+ * @param {string} recordId
+ */
+function flashRecord(recordId) {
+  const el = elements.consensusChain.querySelector(`[data-id="${recordId}"]`);
+  if (el) {
+    el.classList.add('flash');
+    el.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    setTimeout(() => el.classList.remove('flash'), 1500);
   }
 }
 
