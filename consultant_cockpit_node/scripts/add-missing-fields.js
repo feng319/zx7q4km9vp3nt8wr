@@ -51,10 +51,8 @@ async function main() {
   await addField('当前追问', 1);
 
   // 2. 添加「诊断进度」字段（数字类型，type=2）
-  // 飞书多维表格通过 formatter 设置显示为百分比
-  await addField('诊断进度', 2, {
-    formatter: '0%',
-  });
+  // 尝试不带 property，先创建纯数字字段
+  await addField('诊断进度', 2);
 
   console.log('\n=== 完成 ===');
 }
