@@ -505,8 +505,46 @@ function escapeHtml(text) {
   return div.innerHTML;
 }
 
+// 初始化 LLM 选择器
+function initLLMSelector() {
+  const providerSelect = elements.llmProvider;
+  const modelSelect = elements.llmModel;
+
+  // 填充模型下拉框
+  function populateModels(providerId) {
+    const provider = LLM_PROVIDERS[providerId];
+    if (!provider) return;
+
+    modelSelect.innerHTML = provider.models.map(model =>
+      `<option value="${model.id}">${model.name}</option>`
+    ).join('');
+
+    // 更新状态
+    state.llmProvider = providerId;
+    state.llmModel = provider.models[0]?.id || '';
+  }
+
+  // 初始化当前提供商的模型列表
+  populateModels(providerSelect.value);
+
+  // 提供商切换事件
+  providerSelect.addEventListener('change', (e) => {
+    populateModels(e.target.value);
+    setStatus(`已切换到 ${LLM_PROVIDERS[e.target.value].name}`, 'success');
+  });
+
+  // 模型切换事件
+  modelSelect.addEventListener('change', (e) => {
+    state.llmModel = e.target.value;
+    setStatus(`已选择模型: ${e.target.options[e.target.selectedIndex].text}`, 'success');
+  });
+}
+
 // 事件绑定
 function initEventListeners() {
+  // 初始化 LLM 选择器
+  initLLMSelector();
+
   elements.newSessionBtn.addEventListener('click', createSession);
   elements.addRecordBtn.addEventListener('click', addRecord);
   elements.getCandidatesBtn.addEventListener('click', getCandidates);
