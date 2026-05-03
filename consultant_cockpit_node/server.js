@@ -172,17 +172,13 @@ function getOrCreateSession(sessionId) {
       knowledgeRetriever,
     });
 
-    // 监听共识链变更
-    // PRD 4.4: 只有 status=confirmed 的记录才同步到飞书"诊断共识"表
-    // status=recorded 的记录仅在网页端显示，不同步飞书
+    // 监听共识链变更（仅用于 WebSocket 广播，不重复同步飞书）
+    // 飞书同步由 consensusChain 内部处理：
+    // - addRecord(syncToFeishu=false) → /记 不同步
+    // - confirmRecord() → /确认 自动同步
     consensusChain.on('change', async (event) => {
       if (!event.record) return;
-
-      // 同步到飞书：仅确认操作
-      if (event.type === 'confirm' && event.record.status === 'confirmed') {
-        if (feishuSync) feishuSync.registerKnownWrite(event.record.id);
-        await feishuClient.createConsensusRecord(event.record);
-      }
+      // 飞书同步已在 consensusChain 内部完成，此处不做重复调用
     });
   }
 
