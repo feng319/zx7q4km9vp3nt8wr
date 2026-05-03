@@ -235,8 +235,8 @@ describe('Golden Cases: Candidate Generator', () => {
         source: 'ai_suggested',
       });
 
-      // 检查约束
-      const skus = ctx.knowledgeRetriever.getAvailableSkus();
+      // 使用 recallByKeywords 获取 SKU，而不是 getAvailableSkus
+      const skus = ctx.knowledgeRetriever.recallByKeywords(['战略', '增长'], 10);
       const constraintResult = ctx.candidateGen.checkConstraints(skus);
 
       // 如果约束满足，验证候选生成
