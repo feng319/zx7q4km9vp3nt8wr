@@ -12,7 +12,10 @@
 
 const fs = require('fs');
 const path = require('path');
-const { logger } = require('../utils/logger');
+const { getLogger } = require('../utils/logger');
+
+// 创建模块日志器
+const logger = getLogger('sessionManager');
 
 /**
  * 会话快照
