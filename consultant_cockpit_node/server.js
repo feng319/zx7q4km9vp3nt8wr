@@ -190,6 +190,13 @@ async function getOrCreateSession(sessionId) {
     consensusChain.on('change', async (event) => {
       if (!event.record) return;
       // 飞书同步已在 consensusChain 内部完成，此处不做重复调用
+
+      // 自动保存会话到文件系统
+      try {
+        await sessionManager.saveSession(sessionId, consensusChain.exportRecords());
+      } catch (error) {
+        fastify.log.warn({ sessionId, error: error.message }, 'Auto-save failed');
+      }
     });
   }
 
