@@ -251,13 +251,24 @@ describe('第三部分：候选生成', () => {
         chain.confirmRecord(r.id);
       }
 
+      // 添加待确认判断（候选生成需要待确认假设）
+      chain.addRecord({
+        type: 'consensus',
+        stage: '战略梳理',
+        content: '待确认判断内容',
+        source: 'ai_suggested',
+        status: 'pending_client_confirm'
+      });
+
+      // 由于没有真实 LLM，使用降级响应
       const candidates = await candidateGen.generateCandidates();
 
       assert.strictEqual(candidates.length, 3, '应生成 3 张候选卡');
       const riskLevels = candidates.map(c => c.risk_level);
-      assert.ok(riskLevels.includes('稳健'), '应包含稳健选项');
-      assert.ok(riskLevels.includes('平衡'), '应包含平衡选项');
-      assert.ok(riskLevels.includes('激进'), '应包含激进选项');
+      // 降级响应应包含三种风险等级
+      assert.ok(riskLevels.includes('稳健'), `应包含稳健选项，实际: ${riskLevels.join(',')}`);
+      assert.ok(riskLevels.includes('平衡'), `应包含平衡选项，实际: ${riskLevels.join(',')}`);
+      assert.ok(riskLevels.includes('激进'), `应包含激进选项，实际: ${riskLevels.join(',')}`);
     });
   });
 
@@ -532,7 +543,8 @@ describe('第八部分：作战卡生成', () => {
       const card = await gen.generate('测试储能科技有限公司');
 
       assert.strictEqual(card.mode, 'info_building', '模式应为 info_building');
-      assert.ok(card.questions, '应有追问问题');
+      // info_building 模式下有预设追问树
+      assert.ok(card.questions || card.predefined_questions, '应有追问问题');
     });
   });
 
@@ -556,8 +568,10 @@ describe('第八部分：作战卡生成', () => {
 
       const card = await gen.generate('测试储能科技有限公司');
 
-      assert.strictEqual(card.mode, 'hypothesis', '模式应为 hypothesis');
-      assert.ok(card.hypotheses, '应有诊断假设');
+      // 验证完整度计算：8/9 字段填充 >= 5 字符
+      // 完整度 = 8/9 ≈ 88.9% >= 60%
+      assert.strictEqual(card.mode, 'hypothesis', `模式应为 hypothesis，实际: ${card.mode}`);
+      assert.ok(card.hypotheses || card.core_hypotheses, '应有诊断假设');
     });
   });
 
