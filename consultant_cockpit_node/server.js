@@ -216,8 +216,16 @@ fastify.get('/api/feishu-status', async (request, reply) => {
   }
 });
 
-// 创建会话
-fastify.post('/api/sessions', async (request, reply) => {
+// 创建会话（允许空 body）
+fastify.post('/api/sessions', {
+  config: {
+    rawBody: true
+  },
+  preHandler: async (request, reply) => {
+    // 允许空 body
+    request.body = request.body || {};
+  }
+}, async (request, reply) => {
   const sessionId = require('crypto').randomUUID();
   getOrCreateSession(sessionId);
 
