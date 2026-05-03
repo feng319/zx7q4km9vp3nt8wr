@@ -936,12 +936,20 @@ textarea {
   background: white;
   border: 2px solid var(--primary-color);
   border-radius: 8px;
-  padding: 20px;
+  padding: 16px;
   flex: 1;
-  min-width: 180px;
-  max-width: 250px;
+  min-width: 160px;
+  max-width: 300px; /* 放宽限制，让卡片更大 */
   cursor: pointer;
   transition: all 0.3s;
+}
+
+/* 宽屏时卡片可以更大 */
+@media (min-width: 1400px) {
+  .candidate-card {
+    max-width: 350px;
+    padding: 20px;
+  }
 }
 
 .candidate-card:hover {
