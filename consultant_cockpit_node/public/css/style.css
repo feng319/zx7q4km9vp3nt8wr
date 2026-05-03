@@ -753,6 +753,7 @@ textarea {
 /* 快捷指令区 */
 .command-section {
   margin-top: 16px;
+  flex-shrink: 0;
 }
 
 .command-section h3 {
