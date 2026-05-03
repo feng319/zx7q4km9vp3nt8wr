@@ -840,17 +840,19 @@ textarea {
 
 .cmd-btn {
   position: relative;
+  padding-right: 12px; /* 为徽标留出空间 */
 }
 
 .cmd-badge {
   position: absolute;
-  top: -4px;
-  right: -4px;
+  top: -6px;
+  right: -6px;
   min-width: 8px;
   height: 8px;
   background: var(--error-color);
   border-radius: 50%;
   font-size: 0;
+  border: 2px solid white; /* 添加白色边框增强可见性 */
 }
 
 .cmd-badge:not(:empty) {
