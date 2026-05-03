@@ -127,7 +127,7 @@ describe('Golden Cases: Consensus Chain', () => {
       const corrected = ctx.consensusChain.correctRecord(original.id, '修正后的内容');
 
       // 验证新记录
-      assert.strictEqual(corrected.status, 'recorded');
+      assert.strictEqual(corrected.status, 'confirmed'); // 修正记录默认为已确认
       assert.strictEqual(corrected.replaces, original.id);
       assert.strictEqual(corrected.source, 'manual_correction');
 
