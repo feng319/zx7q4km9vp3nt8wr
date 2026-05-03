@@ -5,19 +5,51 @@
 // API 基础路径
 const API_BASE = '/api';
 
+// LLM 提供商配置
+const LLM_PROVIDERS = {
+  'deepseek-free': {
+    name: 'DeepSeek Free',
+    baseUrl: 'https://zenmux.ai/api/v1',
+    models: [
+      { id: 'deepseek/deepseek-v4-pro-free', name: 'DeepSeek V4 Pro Free' }
+    ]
+  },
+  'volc-ark': {
+    name: '火山引擎 Ark',
+    baseUrl: 'https://ark.cn-beijing.volces.com/api/v3',
+    models: [
+      { id: 'doubao-seed-2-0-pro-260215', name: 'doubao-seed-2-0-pro' },
+      { id: 'doubao-seed-2-0-lite-260215', name: 'doubao-seed-2-0-lite' },
+      { id: 'doubao-seed-2-0-mini-260215', name: 'doubao-seed-2-0-mini' }
+    ]
+  },
+  'deepseek': {
+    name: 'DeepSeek 官方',
+    baseUrl: 'https://api.deepseek.com',
+    models: [
+      { id: 'deepseek-v4-pro', name: 'DeepSeek V4 Pro' },
+      { id: 'deepseek-v4-flash', name: 'DeepSeek V4 Flash' }
+    ]
+  }
+};
+
 // 状态管理
 const state = {
   sessionId: null,
   records: [],
   candidates: null,
   skus: [],
-  ws: null
+  ws: null,
+  llmProvider: 'deepseek-free',
+  llmModel: 'deepseek/deepseek-v4-pro-free'
 };
 
 // DOM 元素
 const elements = {
   sessionId: document.getElementById('session-id'),
   newSessionBtn: document.getElementById('new-session-btn'),
+  llmProvider: document.getElementById('llm-provider'),
+  llmModel: document.getElementById('llm-model'),
   recordType: document.getElementById('record-type'),
   recordStage: document.getElementById('record-stage'),
   recordContent: document.getElementById('record-content'),
