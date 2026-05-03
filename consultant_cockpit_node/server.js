@@ -358,7 +358,8 @@ fastify.post('/api/sessions/:sessionId/confirm', async (request, reply) => {
       targetId = pending.id;
     }
 
-    session.consensusChain.confirmRecord(targetId);
+    // 传递公司名给 confirmRecord，用于同步到客户档案表
+    session.consensusChain.confirmRecord(targetId, session.company);
     return { success: true, confirmed_id: targetId };
   } catch (error) {
     reply.code(400);
