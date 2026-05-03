@@ -150,6 +150,9 @@ body {
   gap: 16px;
   padding: 16px;
   flex: 1;
+  /* 确保三栏填满剩余空间 */
+  height: calc(100vh - 140px); /* header约70px + footer约70px */
+  min-height: 0; /* 允许 flex 子项收缩 */
 }
 
 @media (max-width: 1200px) {
