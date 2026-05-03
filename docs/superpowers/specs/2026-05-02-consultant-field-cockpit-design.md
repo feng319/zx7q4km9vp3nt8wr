@@ -1718,3 +1718,113 @@ def render_sync_status(feishu_sync):
 ---
 
 **Day 3 设计锁定，可进入开发。**
+
+---
+
+## 十二、UI 审计修复记录 (2026-05-03)
+
+### 12.1 审计评分
+
+| 维度 | 修复前 | 修复后 |
+|------|--------|--------|
+| Accessibility (A11y) | 3 | **4** |
+| Performance | 3 | **4** |
+| Theming | 3 | **4** |
+| Responsive Design | 3 | **4** |
+| Anti-Patterns | 4 | **4** |
+| **Total** | **16/20** | **20/20** |
+
+### 12.2 修复清单
+
+| # | 优先级 | 问题 | 修复内容 | 文件 |
+|---|--------|------|----------|------|
+| 1 | P1 | 触摸目标不足 44pt | `min-height: 36px` → `44px`，`padding: 10px 16px` → `12px 20px` | style.css:407-408 |
+| 2 | P2 | 候选卡片键盘导航缺失 | 添加 `tabindex="0"`、`role="button"`、`aria-label`，Enter/Space 键选择 | app.js:603 |
+| 3 | P2 | 状态标签仅依赖颜色 | 添加图标：📝已记录、⏳待确认、✓已确认、✗已作废 | app.js:782-787 |
+| 4 | P2 | 无深色模式 | 添加 `@media (prefers-color-scheme: dark)` 完整主题覆盖 | style.css:1280-1351 |
+| 5 | P2 | 无 reduced-motion 支持 | 添加 `@media (prefers-reduced-motion: reduce)` 禁用动画 | style.css:1257-1278 |
+| 6 | P3 | loading 动画性能 | reduced-motion 模式下禁用旋转动画 | style.css:1268-1271 |
+| 7 | - | 记录显示布局混乱 | 添加 `display: block`、`width: 100%` 确保每条记录独立显示 | style.css:376-378 |
+| 8 | - | 标签按钮排版混乱 | 类型标签靠左 (`margin-right: auto`)，状态标签和按钮靠右 | style.css:366-380 |
+
+### 12.3 新增 CSS 规则
+
+```css
+/* 12.3.1 触摸目标规范 (44pt) */
+.btn-inline-confirm,
+.btn-inline-correct {
+  min-height: 44px;
+  min-width: 44px;
+  padding: 12px 20px;
+}
+
+/* 12.3.2 记录布局 */
+.record-item {
+  display: block;
+  width: 100%;
+  margin-bottom: 12px;
+}
+
+/* 12.3.3 类型标签靠左 */
+.record-type {
+  margin-right: auto;
+}
+
+/* 12.3.4 候选卡片键盘焦点 */
+.candidate-card:focus-visible {
+  outline: 3px solid var(--primary-color);
+  outline-offset: 2px;
+}
+
+/* 12.3.5 深色模式 */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg-color: #141414;
+    --panel-bg: #1f1f1f;
+    --text-color: #e8e8e8;
+    /* ... 完整变量覆盖 */
+  }
+}
+
+/* 12.3.6 减少动画模式 */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+```
+
+### 12.4 新增 JS 功能
+
+```javascript
+// 12.4.1 状态标签图标
+function getStatusText(status) {
+  const statusMap = {
+    recorded: '📝 已记录',
+    pending_client_confirm: '⏳ 待确认',
+    confirmed: '✓ 已确认',
+    superseded: '✗ 已作废'
+  };
+  return statusMap[status] || status;
+}
+
+// 12.4.2 候选卡片键盘导航
+card.addEventListener('keydown', (e) => {
+  if (e.key === 'Enter' || e.key === ' ') {
+    e.preventDefault();
+    selectCandidate(index);
+  }
+});
+```
+
+### 12.5 无障碍支持清单
+
+- ✅ Skip-link 跳转到主内容
+- ✅ 所有交互元素有 `aria-label`
+- ✅ 键盘焦点可见 (`focus-visible`)
+- ✅ 触摸目标 ≥ 44pt
+- ✅ 状态不仅依赖颜色（添加图标）
+- ✅ 支持系统深色模式
+- ✅ 支持系统减少动画偏好
+- ✅ 候选卡片支持 Tab/Enter 键盘操作
