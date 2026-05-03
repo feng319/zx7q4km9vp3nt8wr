@@ -1036,6 +1036,15 @@ Expected: All tests PASS
 
 ## 后续任务(Day 2-3)
 
+> 📌 Day 2-3 的详细实施步骤未文档化。
+> 对应代码已在仓库中，Node.js 迁移时直接阅读源码：
+> - `knowledge_retriever.py` → `knowledgeRetriever.js`
+> - `feishu_client.py` → `feishuClient.js`（注意 record_id Bug，见 v1.3 Day 0 验收）
+> - `feishu_sync.py` → `feishuSync.js`（仅轮询，WebSocket 未集成）
+> - `demo_mode.py` → 前端 `body.classList` 切换（Node.js 版本重新设计）
+> - `fallback_handler.py` → `fallbackHandler.js`（降级模板已实现）
+> - `battle_card_generator.py` → `battleCardGenerator.js`（双模式作战卡）
+
 由于实施计划篇幅限制,Day 2-3的详细任务将在下一部分继续,包括:
 
 **Day 2任务**:
