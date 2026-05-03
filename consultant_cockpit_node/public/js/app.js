@@ -559,11 +559,18 @@ function renderSkus() {
 }
 
 function updateCandidateBadge() {
-  // 检查候选生成条件是否满足（设计文档 3.1 节红点徽标）
+  // 检查候选生成条件是否满足（设计文档 3.1、3.3 节红点徽标）
+  // 第一约束：≥3 条已确认事实
   const confirmedFacts = state.records.filter(r => r.type === 'fact' && r.status === 'confirmed');
-  const pendingConsensus = state.records.filter(r => r.type === 'consensus' && r.status === 'pending_client_confirm');
+  const firstConstraintMet = confirmedFacts.length >= 3;
 
-  if (confirmedFacts.length >= 3 && pendingConsensus.length >= 1) {
+  // 第二约束：至少有一个"待确认假设"或"客户决策问题"作为候选的目标
+  // 即：待确认的共识（consensus + pending_client_confirm）
+  const pendingConsensus = state.records.filter(r => r.type === 'consensus' && r.status === 'pending_client_confirm');
+  const secondConstraintMet = pendingConsensus.length >= 1;
+
+  // 两个约束都满足才显示红点
+  if (firstConstraintMet && secondConstraintMet) {
     elements.candidateBadge.textContent = '🔴';
   } else {
     elements.candidateBadge.textContent = '';
