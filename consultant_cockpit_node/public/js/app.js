@@ -168,6 +168,7 @@ async function createSession() {
     });
 
     state.sessionId = data.session_id;
+    state.company = company || null;  // 保存公司名到状态
     elements.sessionId.textContent = `会话: ${state.sessionId.slice(0, 8)}...`;
 
     if (company) {
