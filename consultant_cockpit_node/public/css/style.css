@@ -919,6 +919,43 @@ textarea {
   font-size: 13px;
 }
 
+/* ==================== 飞书连接状态指示器 ==================== */
+
+.feishu-status {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 8px;
+  border-radius: 4px;
+  background: var(--bg-secondary);
+  font-size: 12px;
+  margin-right: 8px;
+}
+
+.feishu-status .status-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  transition: background-color 0.3s ease;
+}
+
+.status-dot-connected {
+  background-color: var(--success-color);
+  box-shadow: 0 0 4px var(--success-color);
+}
+
+.status-dot-disconnected {
+  background-color: #999999;
+}
+
+.status-dot-error {
+  background-color: var(--error-color);
+}
+
+.feishu-status .status-text {
+  color: var(--text-secondary-color);
+}
+
 /* ==================== 演示模式状态徽标（设计文档 5.2 节） ==================== */
 
 /* 徽标容器 - 屏幕右上角极小圆点 */
