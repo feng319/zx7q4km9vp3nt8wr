@@ -411,9 +411,9 @@ textarea {
 
 .status-bar {
   font-size: 13px;
-  color: #666;
+  color: var(--text-secondary-color);
   padding: 8px 12px;
-  background: #fafafa;
+  background: var(--bg-secondary);
   border-radius: 4px;
 }
 
