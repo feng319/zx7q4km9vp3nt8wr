@@ -222,8 +222,16 @@ fastify.post('/api/sessions', {
     rawBody: true
   },
   onRequest: async (request, reply) => {
-    // 移除 Content-Type 检查
-    request.headers['content-type'] = 'application/json';
+    // 如果 Content-Type 是 application/json 但没有 body，改为 text/plain 避免 Fastify 报错
+    const contentType = request.headers['content-type'];
+    if (contentType && contentType.includes('application/json')) {
+      // 检查是否有实际 body（通过 content-length）
+      const contentLength = parseInt(request.headers['content-length'] || '0', 10);
+      if (contentLength === 0) {
+        // 移除 Content-Type，让 Fastify 不尝试解析
+        delete request.headers['content-type'];
+      }
+    }
   },
   preHandler: async (request, reply) => {
     // 允许空 body
