@@ -957,16 +957,20 @@ async function checkFeishuStatus() {
     const data = await apiRequest('/feishu-status');
 
     if (data.connected) {
-      // 只切换类名，CSS 会处理颜色
+      // 方法1: 设置类名
       dot.className = 'status-dot status-dot-connected';
+      // 方法2: 直接设置内联样式（双重保险）
+      dot.style.cssText = 'background-color: #52c41a !important; box-shadow: 0 0 4px #52c41a !important; width: 8px; height: 8px; border-radius: 50%;';
       text.textContent = '已连接';
-      console.log('Feishu status: connected, class:', dot.className);
+      console.log('Feishu status: connected, computed bg:', window.getComputedStyle(dot).backgroundColor);
     } else {
       dot.className = 'status-dot status-dot-disconnected';
+      dot.style.cssText = 'background-color: #999999 !important; width: 8px; height: 8px; border-radius: 50%;';
       text.textContent = data.reason === 'mock_mode' ? '未配置' : '断开';
     }
   } catch (error) {
     dot.className = 'status-dot status-dot-error';
+    dot.style.cssText = 'background-color: #ff4d4f !important; width: 8px; height: 8px; border-radius: 50%;';
     text.textContent = '检测失败';
   }
 }
