@@ -1,0 +1,379 @@
+{
+  "description": "顾问现场作战系统黄金测试用例集",
+  "version": "1.0.0",
+  "test_cases": [
+    {
+      "id": "TC001",
+      "name": "事实记录完整流程",
+      "category": "consensus_chain",
+      "description": "验证事实记录的创建、确认、修正完整流程",
+      "input": {
+        "action": "add_fact",
+        "data": {
+          "type": "fact",
+          "stage": "战略梳理",
+          "content": "公司2023年营收5亿元",
+          "source": "manual",
+          "evidence_sku": ["sku_001"]
+        }
+      },
+      "expected": {
+        "status": "recorded",
+        "id_format": "record_*",
+        "has_timestamp": true,
+        "emits_change_event": true
+      }
+    },
+    {
+      "id": "TC002",
+      "name": "共识记录带建议方向",
+      "category": "consensus_chain",
+      "description": "验证共识记录包含建议方向字段",
+      "input": {
+        "action": "add_consensus",
+        "data": {
+          "type": "consensus",
+          "stage": "商业模式",
+          "content": "公司应聚焦高端市场",
+          "source": "ai_suggested",
+          "recommendation": "建议进行市场细分调研",
+          "evidence_sku": ["sku_002", "sku_003"]
+        }
+      },
+      "expected": {
+        "status": "pending_client_confirm",
+        "has_recommendation": true
+      }
+    },
+    {
+      "id": "TC003",
+      "name": "记录修正流程",
+      "category": "consensus_chain",
+      "description": "验证修正记录时原记录被标记为 superseded",
+      "input": {
+        "action": "correct_record",
+        "original_record_id": "record_0",
+        "correction": {
+          "content": "修正后的内容",
+          "source": "manual_correction"
+        }
+      },
+      "expected": {
+        "new_record_status": "recorded",
+        "original_record_status": "superseded",
+        "replaces_field": "record_0",
+        "superseded_by_field": "record_0_corr_1"
+      }
+    },
+    {
+      "id": "TC004",
+      "name": "确认记录变更状态",
+      "category": "consensus_chain",
+      "description": "验证确认操作将状态改为 confirmed",
+      "input": {
+        "action": "confirm_record",
+        "record_id": "record_0"
+      },
+      "expected": {
+        "status": "confirmed",
+        "emits_change_event": true
+      }
+    },
+    {
+      "id": "TC005",
+      "name": "获取已确认事实列表",
+      "category": "consensus_chain",
+      "description": "验证只返回已确认且未被替代的事实",
+      "precondition": {
+        "records": [
+          {"id": "r1", "type": "fact", "status": "confirmed", "content": "事实1"},
+          {"id": "r2", "type": "fact", "status": "recorded", "content": "事实2"},
+          {"id": "r3", "type": "fact", "status": "confirmed", "superseded_by": "r4", "content": "被替代的事实"},
+          {"id": "r4", "type": "consensus", "status": "confirmed", "content": "共识1"}
+        ]
+      },
+      "input": {
+        "action": "get_confirmed_facts"
+      },
+      "expected": {
+        "count": 1,
+        "contains": ["事实1"]
+      }
+    },
+    {
+      "id": "TC006",
+      "name": "修正历史追溯",
+      "category": "consensus_chain",
+      "description": "验证能正确追溯记录的修正历史",
+      "precondition": {
+        "records": [
+          {"id": "r1", "content": "原始", "superseded_by": "r2"},
+          {"id": "r2", "content": "第一次修正", "replaces": "r1", "superseded_by": "r3"},
+          {"id": "r3", "content": "第二次修正", "replaces": "r2"}
+        ]
+      },
+      "input": {
+        "action": "get_correction_history",
+        "record_id": "r3"
+      },
+      "expected": {
+        "history_length": 3,
+        "order": ["r1", "r2", "r3"]
+      }
+    },
+    {
+      "id": "TC007",
+      "name": "候选方案生成",
+      "category": "candidate_gen",
+      "description": "验证基于事实生成三个候选方案",
+      "precondition": {
+        "confirmed_facts": [
+          {"content": "公司有强大的研发团队"},
+          {"content": "市场份额在下降"},
+          {"content": "现金流充裕"}
+        ]
+      },
+      "input": {
+        "action": "generate_candidates",
+        "stage": "战略梳理"
+      },
+      "expected": {
+        "candidate_count": 3,
+        "risk_levels": ["稳健", "平衡", "激进"],
+        "each_has_evidence_skus": true
+      }
+    },
+    {
+      "id": "TC008",
+      "name": "候选缓存有效性检查",
+      "category": "candidate_gen",
+      "description": "验证缓存过期后自动重新生成",
+      "precondition": {
+        "cache_age_seconds": 400
+      },
+      "input": {
+        "action": "get_candidates"
+      },
+      "expected": {
+        "cache_valid": false,
+        "triggers_regenerate": true
+      }
+    },
+    {
+      "id": "TC009",
+      "name": "SKU 弹药不足检测",
+      "category": "candidate_gen",
+      "description": "验证 SKU 数量不足时触发补充",
+      "precondition": {
+        "sku_count": 2
+      },
+      "input": {
+        "action": "check_sku_constraint",
+        "min_required": 5
+      },
+      "expected": {
+        "valid": false,
+        "message_contains": "不足",
+        "triggers_recall": true
+      }
+    },
+    {
+      "id": "TC010",
+      "name": "知识召回关键词匹配",
+      "category": "knowledge_retriever",
+      "description": "验证关键词能正确召回相关 SKU",
+      "input": {
+        "action": "recall_knowledge",
+        "keywords": ["战略", "增长"],
+        "top_k": 5
+      },
+      "expected": {
+        "max_results": 5,
+        "each_has_confidence": true,
+        "sorted_by_confidence": true
+      }
+    },
+    {
+      "id": "TC011",
+      "name": "LLM 并发控制",
+      "category": "llm_client",
+      "description": "验证并发请求被限制在配置的数量",
+      "input": {
+        "action": "concurrent_calls",
+        "count": 10,
+        "max_concurrency": 3
+      },
+      "expected": {
+        "max_concurrent": 3,
+        "all_complete": true
+      }
+    },
+    {
+      "id": "TC012",
+      "name": "LLM 超时保护",
+      "category": "llm_client",
+      "description": "验证请求超时后正确抛出错误",
+      "input": {
+        "action": "llm_call",
+        "timeout_ms": 100,
+        "simulate_delay_ms": 500
+      },
+      "expected": {
+        "throws_timeout_error": true
+      }
+    },
+    {
+      "id": "TC013",
+      "name": "飞书 API 降级",
+      "category": "fallback_handler",
+      "description": "验证飞书 API 失败时使用本地缓存",
+      "input": {
+        "action": "feishu_operation",
+        "simulate_failure": true
+      },
+      "expected": {
+        "fallback_type": "feishu_api",
+        "uses_local_cache": true,
+        "success": true
+      }
+    },
+    {
+      "id": "TC014",
+      "name": "LLM 超时降级模板",
+      "category": "fallback_handler",
+      "description": "验证 LLM 超时时使用预定义模板",
+      "input": {
+        "action": "llm_generation",
+        "simulate_timeout": true
+      },
+      "expected": {
+        "fallback_type": "llm_timeout",
+        "uses_template": true,
+        "template_contains": ["抱歉", "稍后"]
+      }
+    },
+    {
+      "id": "TC015",
+      "name": "备忘录三层生成",
+      "category": "memo_generator",
+      "description": "验证备忘录经过提取、结构化、润色三层",
+      "input": {
+        "action": "generate_memo",
+        "records": [
+          {"type": "fact", "content": "事实内容"},
+          {"type": "consensus", "content": "共识内容"}
+        ]
+      },
+      "expected": {
+        "has_chapters": true,
+        "chapters_include": ["问题重构", "关键发现", "初步建议方向"]
+      }
+    },
+    {
+      "id": "TC016",
+      "name": "Word 文档生成",
+      "category": "memo_generator",
+      "description": "验证生成有效的 Word 文档",
+      "input": {
+        "action": "generate_word",
+        "content": {
+          "title": "测试备忘录",
+          "chapters": {}
+        }
+      },
+      "expected": {
+        "file_extension": ".docx",
+        "valid_docx": true,
+        "chinese_text_correct": true
+      }
+    },
+    {
+      "id": "TC017",
+      "name": "作战卡假设模式",
+      "category": "battle_card",
+      "description": "验证完整度>=60%时使用假设模式",
+      "precondition": {
+        "completeness": 75
+      },
+      "input": {
+        "action": "generate_battle_card"
+      },
+      "expected": {
+        "mode": "hypothesis",
+        "has_hypotheses": true
+      }
+    },
+    {
+      "id": "TC018",
+      "name": "作战卡信息收集模式",
+      "category": "battle_card",
+      "description": "验证完整度<60%时使用信息收集模式",
+      "precondition": {
+        "completeness": 40
+      },
+      "input": {
+        "action": "generate_battle_card"
+      },
+      "expected": {
+        "mode": "info_building",
+        "has_questions": true
+      }
+    },
+    {
+      "id": "TC019",
+      "name": "作战卡 SKU 不足异常",
+      "category": "battle_card",
+      "description": "验证 SKU 不足时抛出 InsufficientSkuError",
+      "precondition": {
+        "sku_count": 2,
+        "min_required": 5
+      },
+      "input": {
+        "action": "generate_battle_card"
+      },
+      "expected": {
+        "throws": "InsufficientSkuError",
+        "error_message_contains": "SKU"
+      }
+    },
+    {
+      "id": "TC020",
+      "name": "会话快照导出导入",
+      "category": "session_persistence",
+      "description": "验证会话状态可以完整导出和恢复",
+      "precondition": {
+        "records": [
+          {"id": "r1", "type": "fact", "content": "事实"},
+          {"id": "r2", "type": "consensus", "content": "共识"}
+        ],
+        "metadata": {
+          "company": "测试公司",
+          "current_stage": "战略梳理"
+        }
+      },
+      "input": {
+        "action": "export_import_session"
+      },
+      "expected": {
+        "records_preserved": true,
+        "metadata_preserved": true,
+        "cache_invalidated": true
+      }
+    }
+  ],
+  "metadata": {
+    "created_at": "2026-05-03",
+    "author": "Claude Code",
+    "total_cases": 20,
+    "categories": {
+      "consensus_chain": 6,
+      "candidate_gen": 3,
+      "knowledge_retriever": 1,
+      "llm_client": 2,
+      "fallback_handler": 2,
+      "memo_generator": 2,
+      "battle_card": 3,
+      "session_persistence": 1
+    }
+  }
+}
