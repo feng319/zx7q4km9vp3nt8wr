@@ -220,11 +220,12 @@ class FeishuSync extends EventEmitter {
       });
 
       // 创建独立的 WSClient
+      // 使用 Domain.Feishu（中国版飞书）
       this._wsClient = new lark.WSClient({
         appId: config.feishu.appId,
         appSecret: config.feishu.appSecret,
         appType: lark.AppType.SelfBuild,
-        domain: lark.Domain.Lark,
+        domain: lark.Domain.Feishu,
         eventDispatcher: this._eventDispatcher,
       });
 
