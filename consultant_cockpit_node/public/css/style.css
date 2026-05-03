@@ -901,6 +901,44 @@ textarea {
   border-top: 1px solid var(--border-color);
 }
 
+.stage-indicator {
+  font-size: 14px;
+  color: var(--text-secondary-color);
+  padding: 8px 12px;
+  background: var(--bg-secondary);
+  border-radius: 4px;
+  margin-bottom: 16px;
+  flex-shrink: 0;
+}
+
+.stage-indicator strong {
+  color: var(--primary-color);
+}
+
+/* 共识链显示区 */
+.consensus-chain {
+  margin-bottom: 16px;
+  min-height: 80px;
+  /* 增加显示高度，使用 flex 自动填充 */
+  flex: 1;
+  overflow-y: auto;
+}
+
+.consensus-chain .empty-state {
+  padding: 16px;
+}
+
+/* 共识链记录绿色闪动动画 */
+@keyframes record-flash {
+  0% { background-color: #d4edda; border-left-color: #28a745; }
+  100% { background-color: transparent; border-left-color: transparent; }
+}
+
+.record-item.flash {
+  animation: record-flash 0.3s ease-out;
+  border-left: 3px solid transparent;
+}
+
 .command-section h3 {
   font-size: 14px;
   font-weight: 600;
