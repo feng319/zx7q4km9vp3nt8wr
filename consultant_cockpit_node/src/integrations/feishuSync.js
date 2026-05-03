@@ -68,6 +68,12 @@ class FeishuSync extends EventEmitter {
     /** @type {lark.Client|null} */
     this._larkClient = null;
 
+    /** @type {lark.WSClient|null} */
+    this._wsClient = null;
+
+    /** @type {lark.EventDispatcher|null} */
+    this._eventDispatcher = null;
+
     /** @type {NodeJS.Timeout|null} */
     this._pollTimer = null;
 
