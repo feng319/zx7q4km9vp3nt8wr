@@ -605,12 +605,12 @@ ${skuRefs}
    * @private
    */
   _validateConstraints(content, skus) {
-    // 检查是否有查是否有🟢/🟡SKU
+    // 检查是否有🟢/🟡SKU
     const validSkus = skus.filter(sku => sku.confidence === '🟢' || sku.confidence === '🟡');
 
     if (validSkus.length === 0) {
       throw new InsufficientSkuError(
-        '没有'没有🟢/🟡可信度的SKU，无法生成高质量诊断假设'
+        '没有🟢/🟡可信度的SKU，无法生成高质量诊断假设'
       );
     }
 
