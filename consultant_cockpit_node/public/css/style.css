@@ -682,6 +682,17 @@ textarea {
   padding: 16px;
 }
 
+/* 共识链记录绿色闪动动画 */
+@keyframes record-flash {
+  0% { background-color: #d4edda; border-left-color: #28a745; }
+  100% { background-color: transparent; border-left-color: transparent; }
+}
+
+.record-item.flash {
+  animation: record-flash 1.5s ease-out;
+  border-left: 3px solid transparent;
+}
+
 /* 快捷指令区 */
 .command-section {
   margin-top: 16px;
