@@ -180,7 +180,9 @@ body {
   box-shadow: var(--shadow);
   display: flex;
   flex-direction: column;
-  max-height: calc(100vh - 200px);
+  /* 移除 max-height，使用 flex 填满 */
+  height: 100%;
+  min-height: 0; /* 允许收缩 */
 }
 
 .panel h2 {
