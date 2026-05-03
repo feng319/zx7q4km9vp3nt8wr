@@ -887,7 +887,44 @@ textarea {
   font-size: 13px;
 }
 
-/* 演示模式下的备弹区折叠 */
+/* ==================== 演示模式状态徽标（设计文档 5.2 节） ==================== */
+
+/* 徽标容器 - 屏幕右上角极小圆点 */
+.mode-badge {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 12px;
+  height: 12px;
+  cursor: pointer;
+  margin-right: 8px;
+}
+
+/* 圆点样式 */
+.mode-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  transition: background-color 0.2s ease;
+}
+
+/* 工作模式：灰色小圆点 */
+.mode-dot-work {
+  background-color: #999999;
+}
+
+/* 演示模式：蓝色小圆点 */
+.mode-dot-demo {
+  background-color: #1890ff;
+}
+
+/* 悬停提示 */
+.mode-badge:hover .mode-dot {
+  transform: scale(1.2);
+}
+
+/* ==================== 演示模式下的备弹区折叠 ==================== */
+
 .demo-mode .sku-section {
   position: fixed;
   right: 20px;

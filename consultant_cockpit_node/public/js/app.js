@@ -701,9 +701,32 @@ async function importSession(file) {
 
 // ==================== 演示模式 ====================
 
+/**
+ * 切换演示模式
+ * 设计文档 5.2 节：
+ * - 工作模式：灰色小圆点
+ * - 演示模式：蓝色小圆点
+ */
 function toggleDemoMode() {
   state.demoMode = !state.demoMode;
   document.body.classList.toggle('demo-mode', state.demoMode);
+
+  // 更新状态徽标
+  const modeBadge = document.getElementById('mode-badge');
+  const modeDot = modeBadge?.querySelector('.mode-dot');
+
+  if (modeDot) {
+    if (state.demoMode) {
+      modeDot.classList.remove('mode-dot-work');
+      modeDot.classList.add('mode-dot-demo');
+      modeBadge.title = '演示模式';
+    } else {
+      modeDot.classList.remove('mode-dot-demo');
+      modeDot.classList.add('mode-dot-work');
+      modeBadge.title = '工作模式';
+    }
+  }
+
   setStatus(state.demoMode ? '已进入演示模式' : '已退出演示模式', 'success');
 }
 
