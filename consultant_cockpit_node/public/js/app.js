@@ -367,21 +367,20 @@ async function executeConfirmCommand() {
     return;
   }
 
-  // 找到最近一条待确认共识
-  const pendingConsensus = state.records
-    .filter(r => r.type === 'consensus' && r.status === 'pending_client_confirm')
-    .pop();
-
-  if (!pendingConsensus) {
-    setStatus('没有待确认的共识', 'warning');
-    return;
-  }
-
   try {
-    await apiRequest(`/sessions/${state.sessionId}/records/${pendingConsensus.id}/confirm`, {
-      method: 'POST'
+    // 优先确认选中的候选记录，否则由后端确认最新 pending 记录
+    const body = state.candidateId ? { record_id: state.candidateId } : {};
+    const result = await apiRequest(`/sessions/${state.sessionId}/confirm`, {
+      method: 'POST',
+      body: JSON.stringify(body)
     });
-    setStatus(`已确认: ${pendingConsensus.content.slice(0, 30)}...`, 'success');
+
+    state.candidateId = null;  // 清除选中状态
+
+    // 找到被确认的记录用于提示
+    const confirmed = state.records.find(r => r.id === result.confirmed_id);
+    const label = confirmed ? confirmed.content.slice(0, 30) : result.confirmed_id;
+    setStatus(`已确认: ${label}...`, 'success');
     await getSessionState();
   } catch (error) {
     setStatus(`确认失败: ${error.message}`, 'error');
