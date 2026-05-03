@@ -99,7 +99,7 @@ class LLMClient {
     const timeoutId = setTimeout(() => controller.abort(), timeout * 1000);
 
     try {
-      const response = await this.client.chat.completions.create({
+      const response = await this._getClient().chat.completions.create({
         model: this.model,
         messages: [{ role: 'user', content: prompt }],
         max_tokens: maxTokens,
