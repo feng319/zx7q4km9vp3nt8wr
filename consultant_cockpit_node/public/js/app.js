@@ -608,13 +608,11 @@ function renderConsensusChain() {
         <span class="record-type ${record.type}">${record.type === 'fact' ? '事实' : '判断'}</span>
         <span class="record-stage">${record.stage}</span>
         <span class="status-tag ${record.status}">${getStatusText(record.status)}</span>
+        ${record.status === 'pending_client_confirm' ? `
+          <button class="btn-inline-confirm" onclick="confirmRecord('${record.id}')">确认</button>
+        ` : ''}
       </div>
       <div class="record-content">${escapeHtml(record.content)}</div>
-      ${record.status === 'pending_client_confirm' ? `
-        <div class="record-actions">
-          <button class="btn btn-success btn-sm" onclick="confirmRecord('${record.id}')">确认</button>
-        </div>
-      ` : ''}
     </div>
   `).join('');
 }

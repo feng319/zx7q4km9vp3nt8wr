@@ -338,6 +338,25 @@ textarea {
   padding: 4px 8px;
 }
 
+/* 内联确认按钮（在 header 行内，不增加行高） */
+.btn-inline-confirm {
+  font-size: 11px;
+  line-height: 1;
+  padding: 1px 6px;
+  border: 1px solid #28a745;
+  border-radius: 3px;
+  background: transparent;
+  color: #28a745;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background 0.15s, color 0.15s;
+}
+
+.btn-inline-confirm:hover {
+  background: #28a745;
+  color: #fff;
+}
+
 /* 候选方案 */
 .candidate-item {
   border-left: 3px solid var(--primary-color);
