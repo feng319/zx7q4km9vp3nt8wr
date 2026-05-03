@@ -406,6 +406,81 @@ fastify.post('/api/sessions/:sessionId/import', async (request, reply) => {
   };
 });
 
+// ==================== 演示模式 API ====================
+
+/** @type {{level: number, enabled: boolean}} */
+let demoModeState = {
+  level: 0,
+  enabled: false
+};
+
+// 获取演示模式状态
+fastify.get('/api/demo-mode', async (request, reply) => {
+  return {
+    level: demoModeState.level,
+    enabled: demoModeState.enabled,
+    name: ['关闭', '隐藏', '替换', '保留'][demoModeState.level]
+  };
+});
+
+// 设置演示模式
+fastify.post('/api/demo-mode', async (request, reply) => {
+  const { level } = request.body || {};
+
+  if (typeof level !== 'number' || level < 0 || level > 3) {
+    reply.code(400);
+    return { error: 'level must be 0, 1, 2, or 3' };
+  }
+
+  demoModeState = {
+    level,
+    enabled: level > 0
+  };
+
+  // 广播 WebSocket 事件
+  for (const [sessionId, session] of sessions) {
+    session.consensusChain.emit('demo:change', demoModeState);
+  }
+
+  return {
+    success: true,
+    level: demoModeState.level,
+    enabled: demoModeState.enabled
+  };
+});
+
+// ==================== 降级报告 API ====================
+
+// 获取降级报告
+fastify.get('/api/fallback/report', async (request, reply) => {
+  return fallbackHandler.getFallbackReport();
+});
+
+// 重试本地缓存
+fastify.post('/api/fallback/retry', async (request, reply) => {
+  const cache = fallbackHandler.getLocalCache();
+  let retried = 0;
+  let succeeded = 0;
+
+  for (const item of cache) {
+    retried++;
+    try {
+      if (item.operation === 'consensus_record') {
+        await feishuClient.createConsensusRecord(item.data);
+        succeeded++;
+      }
+    } catch (error) {
+      fastify.log.error({ error: error.message }, 'Retry failed');
+    }
+  }
+
+  if (succeeded === retried) {
+    fallbackHandler.clearLocalCache();
+  }
+
+  return { retried, succeeded };
+});
+
 // ==================== WebSocket 路由 ====================
 
 fastify.register(async function (fastify) {
