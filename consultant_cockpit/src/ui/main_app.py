@@ -243,6 +243,8 @@ def execute_record_command(content: str):
     record_type = infer_type(content)
     current_stage = get_current_stage()
 
+    # 1. 创建共识链记录
+    # 对齐用户需求：初始状态设为 pending_client_confirm (待确认)
     record = ConsensusRecord(
         id=f"cc_{len(st.session_state.consensus_chain.records)}",
         timestamp=datetime.now(),
@@ -250,10 +252,74 @@ def execute_record_command(content: str):
         stage=current_stage,
         content=content,
         source="manual",
-        status="recorded"
+        status="pending_client_confirm"
     )
     st.session_state.consensus_chain.add_record(record)
-    st.success(f"已记录 (类型: {record_type}, 阶段: {current_stage})")
+
+    # 2. 尝试解析字段并更新客户档案
+    # 设计文档 6.2 节：9个关键字段
+    required_fields = [
+        "产品线", "客户群体", "收入结构", "毛利结构",
+        "交付情况", "资源分布", "战略目标", "显性诉求"
+    ]
+
+    field_updated = False
+    for field in required_fields:
+        if field in content and ("：" in content or ":" in content):
+            # 提取字段内容 (例如 "毛利结构：..." -> "...")
+            parts = content.split("：" if "：" in content else ":", 1)
+            if len(parts) > 1 and field in parts[0]:
+                field_val = parts[1].strip()
+                company = st.session_state.get("current_company", "默认客户")
+
+                feishu_client = st.session_state.get("feishu_client")
+                if feishu_client:
+                    try:
+                        feishu_client.upsert_record(company, {field: field_val})
+                        field_updated = True
+                    except Exception as e:
+                        st.error(f"同步到客户档案失败: {e}")
+
+    # 3. 触发完整度更新
+    if field_updated:
+        update_completeness()
+
+    # 4. 视觉反馈：绿色闪动效果 (通过 st.success 模拟)
+    st.success(f"已记录并同步 (类型: {record_type}, 阶段: {current_stage})")
+    # 触发页面刷新以显示新记录
+    st.session_state.last_update_time = datetime.now()
+
+
+def update_completeness():
+    """更新客户档案完整度"""
+    feishu_client = st.session_state.get("feishu_client")
+    company = st.session_state.get("current_company", "默认客户")
+
+    if feishu_client:
+        try:
+            profile = feishu_client.get_client_profile(company)
+            completeness = feishu_client.calc_completeness(profile, st.session_state.consensus_chain)
+            st.session_state.client_profile_completeness = completeness
+
+            # 同时更新字段状态
+            fields = profile.get("fields", {}) if profile else {}
+            required_fields = [
+                "客户公司名", "产品线", "客户群体", "收入结构",
+                "毛利结构", "交付情况", "资源分布", "战略目标", "显性诉求"
+            ]
+            fields_status = {}
+            for f in required_fields:
+                val = fields.get(f, "")
+                if val and len(str(val)) >= 5:
+                    fields_status[f] = "confirmed"
+                elif val:
+                    fields_status[f] = "partial"
+                else:
+                    fields_status[f] = "none"
+            st.session_state.fields_status = fields_status
+
+        except Exception as e:
+            st.warning(f"更新完整度失败: {e}")
 
 
 def execute_confirm_command():
