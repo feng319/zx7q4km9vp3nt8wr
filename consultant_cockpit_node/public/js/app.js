@@ -588,15 +588,36 @@ function renderSkus() {
     return;
   }
 
+  // PRD 3.2 节：显示 SKU 编号 + 可信度标签，默认折叠摘要
   elements.skuList.innerHTML = state.skus.map(sku => `
-    <div class="sku-item">
+    <div class="sku-item" tabindex="0" title="按 Tab 展开摘要">
       <span class="sku-confidence">${sku.confidence}</span>
+      <span class="sku-id">[${sku.id || 'SKU'}]</span>
       <div class="sku-info">
         <div class="sku-title">${escapeHtml(sku.title)}</div>
-        <div class="sku-summary">${escapeHtml(sku.summary)}</div>
+        <div class="sku-summary collapsed">${escapeHtml(sku.summary)}</div>
       </div>
     </div>
   `).join('');
+
+  // 添加 Tab 键展开/折叠交互
+  elements.skuList.querySelectorAll('.sku-item').forEach(item => {
+    item.addEventListener('keydown', (e) => {
+      if (e.key === 'Tab') {
+        const summary = item.querySelector('.sku-summary');
+        if (summary) {
+          e.preventDefault();
+          summary.classList.toggle('collapsed');
+        }
+      }
+    });
+    item.addEventListener('click', () => {
+      const summary = item.querySelector('.sku-summary');
+      if (summary) {
+        summary.classList.toggle('collapsed');
+      }
+    });
+  });
 }
 
 function updateCandidateBadge() {
