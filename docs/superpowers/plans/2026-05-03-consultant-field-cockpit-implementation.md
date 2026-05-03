@@ -1574,12 +1574,12 @@ node tests/golden_test_runner.js --cases 1-10
 ```
 
 **Day 1 验收**：
-- [ ] `consensusChain.js` 通过单元测试
-- [ ] `llmClient.js` 能调用 LLM 并返回结果
-- [ ] `knowledgeRetriever.js` 限流生效
-- [ ] `candidateGen.js` 三约束检查正确
-- [ ] 金标准测试集前 10 个场景通过
-- [ ] Word 中文字体验证结论已出
+- [x] `consensusChain.js` 通过单元测试
+- [x] `llmClient.js` 能调用 LLM 并返回结果
+- [x] `knowledgeRetriever.js` 限流生效
+- [x] `candidateGen.js` 三约束检查正确
+- [x] 金标准测试集前 10 个场景通过
+- [x] Word 中文字体验证结论已出
 
 ---
 
