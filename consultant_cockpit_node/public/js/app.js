@@ -1127,4 +1127,31 @@ window.confirmRecord = async function(recordId) {
   }
 };
 
+window.correctRecord = async function(recordId) {
+  if (!state.sessionId) return;
+
+  // 找到原记录内容作为默认值
+  const record = state.records.find(r => r.id === recordId);
+  if (!record) return;
+
+  const newContent = prompt('请输入修正内容：', record.content);
+  if (!newContent || newContent === record.content) return;
+
+  try {
+    await apiRequest(`/sessions/${state.sessionId}/records/${recordId}/correct`, {
+      method: 'POST',
+      body: JSON.stringify({
+        content: newContent,
+        source: 'manual_correction',
+        type: record.type,
+        stage: record.stage
+      })
+    });
+    setStatus('记录已修正', 'success');
+    await getSessionState();
+  } catch (error) {
+    setStatus(`修正失败: ${error.message}`, 'error');
+  }
+};
+
 window.selectCandidate = selectCandidate;
