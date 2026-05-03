@@ -293,8 +293,8 @@ describe('Golden Cases: Candidate Generator', () => {
         knowledgeRetriever: retriever,
       });
 
-      // 只有少量 SKU
-      const skus = retriever.getAvailableSkus();
+      // 使用 recallByKeywords 获取 SKU
+      const skus = retriever.recallByKeywords(['战略'], 10);
       const result = gen.checkConstraints(skus);
 
       // 验证约束检查返回了有效结果
