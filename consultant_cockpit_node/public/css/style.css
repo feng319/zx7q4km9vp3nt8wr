@@ -886,6 +886,7 @@ textarea {
   display: flex;
   flex-direction: column;
   min-height: 0;
+  padding-bottom: 80px; /* 为快捷指令区留出空间 */
 }
 
 .stage-indicator {
