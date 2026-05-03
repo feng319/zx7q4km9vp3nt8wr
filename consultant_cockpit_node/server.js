@@ -155,7 +155,7 @@ async function initialize() {
  * @param {string} sessionId
  * @returns {{consensusChain: ConsensusChain, candidateGen: CandidateGenerator, knowledgeRetriever: KnowledgeRetriever}}
  */
-function getOrCreateSession(sessionId) {
+async function getOrCreateSession(sessionId) {
   if (!sessions.has(sessionId)) {
     const consensusChain = new ConsensusChain({ feishuClient });
     const knowledgeRetriever = new KnowledgeRetriever();
@@ -165,6 +165,17 @@ function getOrCreateSession(sessionId) {
       knowledgeRetriever,
       fallbackHandler,
     });
+
+    // 尝试从文件系统恢复会话数据
+    try {
+      const savedSession = await sessionManager.loadSession(sessionId);
+      if (savedSession && savedSession.records && savedSession.records.length > 0) {
+        consensusChain.importRecords(savedSession.records);
+        fastify.log.info({ sessionId, recordCount: savedSession.records.length }, 'Session restored from disk');
+      }
+    } catch (error) {
+      fastify.log.warn({ sessionId, error: error.message }, 'Failed to restore session from disk');
+    }
 
     sessions.set(sessionId, {
       consensusChain,
