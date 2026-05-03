@@ -948,30 +948,23 @@ function initEventListeners() {
 
 // 检查飞书连接状态
 async function checkFeishuStatus() {
-  const dot = document.getElementById('feishu-dot');
+  const container = document.getElementById('feishu-status');
   const text = document.getElementById('feishu-text');
 
-  if (!dot || !text) return;
+  if (!container || !text) return;
 
   try {
     const data = await apiRequest('/feishu-status');
 
     if (data.connected) {
-      // 方法1: 设置类名
-      dot.className = 'status-dot status-dot-connected';
-      // 方法2: 直接设置内联样式（双重保险）
-      dot.style.cssText = 'background-color: #52c41a !important; box-shadow: 0 0 4px #52c41a !important; width: 8px; height: 8px; border-radius: 50%;';
-      text.textContent = '已连接';
-      console.log('Feishu status: connected, computed bg:', window.getComputedStyle(dot).backgroundColor);
+      // 使用 SVG 渲染绿色圆点
+      container.innerHTML = '<svg id="feishu-dot" width="12" height="12" viewBox="0 0 12 12" style="vertical-align: middle;"><circle cx="6" cy="6" r="5" fill="#52c41a" stroke="#389e0d" stroke-width="1"/></svg><span class="status-text" id="feishu-text">已连接</span>';
+      console.log('Feishu status: connected (SVG green dot)');
     } else {
-      dot.className = 'status-dot status-dot-disconnected';
-      dot.style.cssText = 'background-color: #999999 !important; width: 8px; height: 8px; border-radius: 50%;';
-      text.textContent = data.reason === 'mock_mode' ? '未配置' : '断开';
+      container.innerHTML = '<svg id="feishu-dot" width="12" height="12" viewBox="0 0 12 12" style="vertical-align: middle;"><circle cx="6" cy="6" r="5" fill="#999999" stroke="#666666" stroke-width="1"/></svg><span class="status-text" id="feishu-text">' + (data.reason === 'mock_mode' ? '未配置' : '断开') + '</span>';
     }
   } catch (error) {
-    dot.className = 'status-dot status-dot-error';
-    dot.style.cssText = 'background-color: #ff4d4f !important; width: 8px; height: 8px; border-radius: 50%;';
-    text.textContent = '检测失败';
+    container.innerHTML = '<svg id="feishu-dot" width="12" height="12" viewBox="0 0 12 12" style="vertical-align: middle;"><circle cx="6" cy="6" r="5" fill="#ff4d4f" stroke="#cf1322" stroke-width="1"/></svg><span class="status-text" id="feishu-text">检测失败</span>';
   }
 }
 
