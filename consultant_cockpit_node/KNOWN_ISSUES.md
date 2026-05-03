@@ -1,7 +1,7 @@
 # 已知问题清单 (KNOWN_ISSUES)
 
 > 顾问现场作战系统 Node.js 版本
-> 最后更新: 2026-05-03
+> 最后更新: 2026-05-04
 
 ## 🔴 高优先级
 
@@ -122,6 +122,26 @@
 ---
 
 ## 📋 已修复问题
+
+### ✅ `/改` 指令与修改按钮 (2026-05-04)
+
+**问题**:
+1. `/改` 指令输入后提示"未知指令"
+2. 修改后原记录状态未变更，仍显示"已确认"
+3. CSS 缺少 `pending_client_confirm` 状态样式
+
+**修复**:
+- `app.js`: 添加 `/改` 指令解析和 `executeCorrectCommand()` 函数
+- `app.js`: 添加 `window.correctRecord()` 全局函数支持修改按钮
+- `app.js`: 在 `renderConsensusChain()` 中添加"修改"按钮（黄色样式）
+- `server.js`: 修复 `correctRecord` 调用，正确传递 `content` 字符串
+- `server.js`: 添加 `typeof` 检查防止 `content.includes` 报错
+- `style.css`: 添加 `.status-tag.pending_client_confirm` 样式（黄色背景）
+- `style.css`: 添加 `.btn-inline-correct` 样式（黄色边框）
+
+**验证**: 后端逻辑正确，原记录状态变为 `superseded`，新记录状态为 `confirmed`
+
+---
 
 ### ✅ 会话持久化与自动恢复 (2026-05-03)
 
