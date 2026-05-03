@@ -1114,6 +1114,97 @@ class WsClient {
 
 ---
 
+## 实施进度追踪
+
+> **最后更新**: 2026-05-03
+
+### Day 1 业务逻辑迁移 ✅ 已完成
+
+**验收结果**:
+- [x] `consensusChain.js` 通过单元测试 (34 tests)
+- [x] `llmClient.js` 能调用 LLM 并返回结果
+- [x] `knowledgeRetriever.js` 限流生效
+- [x] `candidateGen.js` 三约束检查正确
+- [x] `memoGenerator.js` 三层架构实现
+- [x] `battleCardGen.js` 双模式作战卡实现
+- [x] `fallbackHandler.js` 降级处理实现
+- [x] Word 中文字体验证通过 (使用 `docx` npm 包)
+
+**已实现模块**:
+- `src/types.js` - JSDoc 类型定义
+- `src/utils/config.js` - 配置管理
+- `src/utils/logger.js` - pino 日志封装
+- `src/utils/llmClient.js` - OpenAI SDK + p-limit(3)
+- `src/core/consensusChain.js` - 共识链状态机
+- `src/core/knowledgeRetriever.js` - 知识召回器
+- `src/core/candidateGen.js` - 候选生成器 + CandidateCache
+- `src/core/memoGenerator.js` - 备忘录三层架构
+- `src/core/battleCardGen.js` - 作战卡双模式
+- `src/core/fallbackHandler.js` - 降级处理器
+
+### Day 2 飞书集成 + Word 生成 ✅ 已完成
+
+**验收结果**:
+- [x] 能从 Node.js 读写飞书多维表格 (使用 @larksuiteoapi/node-sdk)
+- [x] `getClientProfile()` 正确返回 `record_id`
+- [x] 生成包含中文的备忘录 Word 文件
+- [x] 生成作战卡 Word 文件
+- [x] WebSocket 实时同步模块实现
+
+**已实现模块**:
+- `src/integrations/feishuClient.js` - 飞书多维表格客户端
+- `src/integrations/feishuSync.js` - WebSocket + 轮询降级
+- `tests/golden_cases.json` - 20 个金标准测试场景
+
+### Day 3 HTTP 服务 + WebSocket + 持久化 ✅ 已完成
+
+**验收结果**:
+- [x] 服务启动成功 (Fastify on port 8501)
+- [x] API 路由全部可用 (15 endpoints)
+- [x] WebSocket 连接成功
+- [x] 共识链变更实时推送
+- [x] 会话持久化实现
+- [x] 日志文件输出
+
+**已实现模块**:
+- `server.js` - Fastify 主入口
+- `src/core/sessionManager.js` - 会话持久化
+- `tests/server.test.js` - 服务器集成测试 (15 tests)
+- `tests/sessionManager.test.js` - 会话管理测试 (19 tests)
+- `tests/testServer.js` - 测试用服务器构建器
+
+### Day 4 演练验证与交付 🔄 进行中
+
+**当前状态**: 147 tests passing, 服务器启动验证通过
+
+**待完成**:
+- [ ] 演练验证 (18.1-18.12)
+- [ ] 整理交付物
+- [ ] 编写 README.md
+- [ ] 编写 DEPLOYMENT.md
+
+---
+
+### 测试统计
+
+| 模块 | 测试文件 | 测试数 | 状态 |
+|------|---------|--------|------|
+| ConsensusChain | consensusChain.test.js | 34 | ✅ |
+| CandidateCache | candidateCache.test.js | 3 | ✅ |
+| CandidateGenerator | candidateGen.test.js | 6 | ✅ |
+| KnowledgeRetriever | knowledgeRetriever.test.js | 8 | ✅ |
+| MemoGenerator | memoGenerator.test.js | 6 | ✅ |
+| BattleCardGenerator | battleCardGen.test.js | 5 | ✅ |
+| InsufficientSkuError | battleCardGen.test.js | 2 | ✅ |
+| FallbackHandler | fallbackHandler.test.js | 6 | ✅ |
+| FeishuClient | feishuClient.test.js | 10 | ✅ |
+| FeishuSync | feishuSync.test.js | 8 | ✅ |
+| SessionManager | sessionManager.test.js | 19 | ✅ |
+| Server Integration | server.test.js | 15 | ✅ |
+| **总计** | **12 files** | **147** | **✅** |
+
+---
+
 ## 六、逐日实施步骤
 
 ### Day 0 前置准备（启动改造前必须完成）
