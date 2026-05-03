@@ -1146,12 +1146,15 @@ async function loadSessionList() {
 async function handleSessionSelectChange() {
   const selectedSessionId = elements.sessionSelect.value;
 
+  console.log('会话选择变更:', selectedSessionId, '当前会话:', state.sessionId);
+
   if (!selectedSessionId) {
     return;
   }
 
   // 如果选择了当前会话，不做任何操作
   if (selectedSessionId === state.sessionId) {
+    console.log('选择的是当前会话，跳过');
     return;
   }
 
@@ -1163,6 +1166,7 @@ async function handleSessionSelectChange() {
  * 切换到指定会话
  */
 async function switchToSession(sessionId) {
+  console.log('切换到会话:', sessionId);
   try {
     setStatus('正在切换会话...', 'info');
 
@@ -1185,7 +1189,24 @@ async function switchToSession(sessionId) {
     connectWebSocket();
 
     // 加载会话状态
+    console.log('加载会话状态...');
     await getSessionState();
+    console.log('会话状态已加载, records:', state.records.length);
+
+    // 加载备弹
+    await loadInitialSkus();
+
+    // 更新下拉框选中状态
+    for (const option of elements.sessionSelect.options) {
+      option.selected = option.value === sessionId;
+    }
+
+    setStatus(`已切换到会话 ${sessionId.slice(0, 8)}...`, 'success');
+  } catch (error) {
+    console.error('切换会话失败:', error);
+    setStatus(`切换会话失败: ${error.message}`, 'error');
+  }
+}
 
     // 加载备弹
     await loadInitialSkus();
