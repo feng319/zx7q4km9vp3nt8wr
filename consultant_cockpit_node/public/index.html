@@ -126,13 +126,14 @@
             </div>
           </div>
 
-          <!-- 候选方案弹出区（覆盖式） -->
+          <!-- 候选方案弹出区（设计规范 3.5 节：主对话区内弹出，其他内容半透明化） -->
           <div class="candidates-overlay" id="candidates-overlay" style="display: none;">
             <div class="candidates-header">
               <h3>这是基于已确认的事实生成的方案，请选择最贴合客户局势的方向</h3>
-              <button class="close-overlay-btn" id="close-candidates-btn">×</button>
+              <button class="close-overlay-btn" id="close-candidates-btn" aria-label="关闭候选">×按 Esc 关闭</button>
             </div>
             <div class="candidates-cards" id="candidates-cards"></div>
+            <p class="candidates-hint">按数字键 1/2/3 快速选择，或 Esc 关闭</p>
           </div>
         </div>
       </section>
