@@ -536,21 +536,35 @@ describe('第七部分：备忘录生成', () => {
 describe('第八部分：作战卡生成', () => {
   describe('检查 38：信息建立版（完整度 < 60%）', () => {
     it('完整度 < 60% 应生成信息建立版作战卡', async () => {
+      // 构造正确的 profile 结构
+      const profile = {
+        record_id: null,
+        fields: TEST_CLIENT_PROFILE
+      };
+
       const gen = new BattleCardGenerator({
-        clientProfile: TEST_CLIENT_PROFILE
+        feishuClient: {
+          getClientProfile: async () => profile,
+          calcCompleteness: (p) => {
+            const fields = p.fields || {};
+            const requiredFields = ['产品线', '客户群体', '收入结构', '毛利结构', '交付情况', '资源分布', '战略目标', '显性诉求', '隐性痛点'];
+            const filledCount = requiredFields.filter(f => fields[f] && String(fields[f]).length >= 5).length;
+            return filledCount / requiredFields.length;
+          }
+        }
       });
 
       const card = await gen.generate('测试储能科技有限公司');
 
       assert.strictEqual(card.mode, 'info_building', '模式应为 info_building');
-      // info_building 模式下有预设追问树
-      assert.ok(card.questions || card.predefined_questions, '应有追问问题');
+      // info_building 模式下有缺失字段列表
+      assert.ok(card.content.missing_fields, '应有缺失字段列表');
     });
   });
 
   describe('检查 39：验证假设版（完整度 ≥ 60%）', () => {
     it('完整度 ≥ 60% 应生成验证假设版作战卡', async () => {
-      const fullProfile = {
+      const fullFields = {
         客户公司名: '测试储能科技有限公司',
         产品线: '工商业储能/户用光伏/EPC工程',
         客户群体: '工商业园区、地产开发商',
@@ -562,23 +576,43 @@ describe('第八部分：作战卡生成', () => {
         显性诉求: '希望提升盈利能力'
       };
 
+      const profile = {
+        record_id: null,
+        fields: fullFields
+      };
+
       const gen = new BattleCardGenerator({
-        clientProfile: fullProfile
+        feishuClient: {
+          getClientProfile: async () => profile,
+          calcCompleteness: (p) => {
+            const fields = p.fields || {};
+            const requiredFields = ['产品线', '客户群体', '收入结构', '毛利结构', '交付情况', '资源分布', '战略目标', '显性诉求', '隐性痛点'];
+            const filledCount = requiredFields.filter(f => fields[f] && String(fields[f]).length >= 5).length;
+            return filledCount / requiredFields.length;
+          }
+        }
       });
 
       const card = await gen.generate('测试储能科技有限公司');
 
-      // 验证完整度计算：8/9 字段填充 >= 5 字符
-      // 完整度 = 8/9 ≈ 88.9% >= 60%
+      // 8/9 字段填充 >= 5 字符，完整度 ≈ 88.9% >= 60%
       assert.strictEqual(card.mode, 'hypothesis', `模式应为 hypothesis，实际: ${card.mode}`);
-      assert.ok(card.hypotheses || card.core_hypotheses, '应有诊断假设');
+      assert.ok(card.content.diagnosis_hypothesis, '应有诊断假设');
     });
   });
 
   describe('检查 40：作战卡字体规范', () => {
     it('应生成有效的 Word 文档 buffer', async () => {
+      const profile = {
+        record_id: null,
+        fields: TEST_CLIENT_PROFILE
+      };
+
       const gen = new BattleCardGenerator({
-        clientProfile: TEST_CLIENT_PROFILE
+        feishuClient: {
+          getClientProfile: async () => profile,
+          calcCompleteness: () => 0.5
+        }
       });
 
       const card = await gen.generate('测试储能科技有限公司');
