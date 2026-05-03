@@ -1747,11 +1747,11 @@ node tests/golden_test_runner.js --cases 11-20
 ```
 
 **Day 2 验收**：
-- [ ] 能从 Node.js 读写飞书多维表格
-- [ ] `getClientProfile()` 正确返回 `record_id`
-- [ ] 生成包含中文的备忘录 Word 文件
-- [ ] 生成作战卡 Word 文件
-- [ ] 金标准测试集全部 20 个场景通过
+- [x] 能从 Node.js 读写飞书多维表格
+- [x] `getClientProfile()` 正确返回 `record_id`
+- [x] 生成包含中文的备忘录 Word 文件
+- [x] 生成作战卡 Word 文件
+- [x] 金标准测试集全部 20 个场景通过
 
 ---
 
