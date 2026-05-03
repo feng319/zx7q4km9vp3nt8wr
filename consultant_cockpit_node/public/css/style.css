@@ -524,3 +524,383 @@ textarea {
 .modal-close:hover {
   color: var(--text-color);
 }
+
+/* ==================== 三栏布局组件样式 ==================== */
+
+/* 左栏：诊断进度状态板 */
+.status-panel {
+  min-width: 200px;
+}
+
+.completeness-section {
+  margin-bottom: 16px;
+}
+
+.progress-bar {
+  height: 8px;
+  background: var(--bg-tertiary);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--primary-color), var(--success-color));
+  border-radius: 4px;
+  transition: width 0.3s ease;
+}
+
+.progress-label {
+  font-size: 13px;
+  color: var(--text-secondary-color);
+  margin-top: 8px;
+}
+
+.fields-status {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.field-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  background: var(--bg-secondary);
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.field-item.status-confirmed {
+  background: #f6ffed;
+}
+
+.field-item.status-partial {
+  background: #fffbe6;
+}
+
+.field-item.status-empty {
+  background: var(--bg-tertiary);
+  color: var(--text-muted-color);
+}
+
+.field-icon {
+  font-size: 16px;
+  width: 20px;
+  text-align: center;
+}
+
+.field-item.status-confirmed .field-icon {
+  color: var(--success-color);
+}
+
+.field-item.status-partial .field-icon {
+  color: var(--warning-color);
+}
+
+.current-stage {
+  margin-top: 16px;
+  padding: 12px;
+  background: var(--primary-color);
+  color: white;
+  border-radius: 4px;
+  text-align: center;
+}
+
+.stage-label {
+  font-size: 12px;
+  opacity: 0.8;
+}
+
+.stage-value {
+  font-size: 16px;
+  font-weight: 600;
+  margin-top: 4px;
+}
+
+/* 中栏：主对话区 */
+.dialog-panel {
+  min-width: 400px;
+}
+
+.stage-indicator {
+  font-size: 14px;
+  color: var(--text-secondary-color);
+  padding: 8px 12px;
+  background: var(--bg-secondary);
+  border-radius: 4px;
+  margin-bottom: 16px;
+}
+
+.stage-indicator strong {
+  color: var(--primary-color);
+}
+
+/* 共识链显示区 */
+.consensus-chain {
+  margin-bottom: 16px;
+  min-height: 100px;
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+.consensus-chain .empty-state {
+  padding: 16px;
+}
+
+/* 快捷指令区 */
+.command-section {
+  margin-top: 16px;
+}
+
+.command-section h3 {
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 12px;
+  color: var(--text-secondary-color);
+}
+
+.command-input-group {
+  display: flex;
+  gap: 8px;
+}
+
+.command-input-group input {
+  flex: 1;
+}
+
+.quick-commands {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.cmd-btn {
+  position: relative;
+}
+
+.cmd-badge {
+  position: absolute;
+  top: -4px;
+  right: -4px;
+  min-width: 8px;
+  height: 8px;
+  background: var(--error-color);
+  border-radius: 50%;
+  font-size: 0;
+}
+
+.cmd-badge:not(:empty) {
+  min-width: 16px;
+  height: 16px;
+  font-size: 10px;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* 候选方案弹出区（覆盖式） */
+.candidates-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 24px;
+}
+
+.candidates-header {
+  position: absolute;
+  top: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: white;
+  padding: 16px 24px;
+  border-radius: 8px;
+  box-shadow: var(--shadow);
+  max-width: 600px;
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.candidates-header h3 {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--text-color);
+}
+
+.close-overlay-btn {
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: var(--text-muted-color);
+  padding: 4px 8px;
+}
+
+.close-overlay-btn:hover {
+  color: var(--error-color);
+}
+
+.candidates-cards {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  max-width: 900px;
+  width: 100%;
+}
+
+.candidate-card {
+  background: white;
+  border: 2px solid var(--primary-color);
+  border-radius: 8px;
+  padding: 24px;
+  flex: 1;
+  max-width: 280px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.candidate-card:hover {
+  box-shadow: 0 4px 12px rgba(24, 144, 255, 0.3);
+  transform: translateY(-2px);
+}
+
+.candidate-card.selected {
+  border-color: var(--success-color);
+  background: #f6ffed;
+}
+
+.candidate-card-label {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--primary-color);
+  margin-bottom: 12px;
+}
+
+.candidate-card-title {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.candidate-card-desc {
+  font-size: 14px;
+  color: var(--text-secondary-color);
+  line-height: 1.5;
+}
+
+/* 右栏：追问建议卡 */
+.suggestion-panel {
+  min-width: 180px;
+}
+
+.suggestion-status {
+  padding: 8px 12px;
+  background: var(--bg-secondary);
+  border-radius: 4px;
+  margin-bottom: 16px;
+}
+
+.suggestion-status .status-info {
+  font-size: 13px;
+  color: var(--text-secondary-color);
+}
+
+.current-suggestion {
+  margin-bottom: 16px;
+}
+
+.suggestion-question {
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 12px;
+  padding: 12px;
+  background: var(--bg-secondary);
+  border-radius: 4px;
+}
+
+.suggestion-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.suggestion-actions .btn-sm {
+  font-size: 13px;
+  padding: 8px 12px;
+  min-height: 36px;
+}
+
+/* 备弹区（SKU 卡片） */
+.sku-section {
+  margin-top: 16px;
+}
+
+.sku-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.sku-title {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-secondary-color);
+}
+
+.new-sku-badge {
+  font-size: 12px;
+  color: var(--error-color);
+}
+
+#sku-list {
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+#sku-list .empty-state {
+  padding: 12px;
+  font-size: 13px;
+}
+
+/* 演示模式下的备弹区折叠 */
+.demo-mode .sku-section {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: var(--primary-color);
+  overflow: hidden;
+  transition: all 0.3s;
+}
+
+.demo-mode .sku-section:hover {
+  width: 280px;
+  height: auto;
+  border-radius: 8px;
+  padding: 16px;
+}
+
+.demo-mode .sku-header,
+.demo-mode #sku-list {
+  display: none;
+}
+
+.demo-mode .sku-section:hover .sku-header,
+.demo-mode .sku-section:hover #sku-list {
+  display: block;
+}
