@@ -239,10 +239,24 @@ class FeishuSync extends EventEmitter {
    */
   async _getAccessToken() {
     // 使用飞书 SDK 获取 tenant_access_token
-    const config = getConfig();
-    // 简化实现：实际应通过 lark SDK 获取
-    // 这里返回一个占位符，实际使用时需要实现完整的认证流程
-    return `tenant_access_token_${Date.now()}`;
+    try {
+      const response = await this.feishuClient.client.auth.tenantAccessToken.internal({
+        data: {
+          app_id: this.feishuClient.appId,
+          app_secret: this.feishuClient.appSecret,
+        },
+      });
+
+      if (response.code !== 0) {
+        throw new Error(`Failed to get token: ${response.msg}`);
+      }
+
+      logger.debug('Got tenant_access_token');
+      return response.tenant_access_token;
+    } catch (error) {
+      logger.error('Failed to get tenant_access_token', { error: error.message });
+      throw error;
+    }
   }
 
   // ==================== 心跳机制 ====================
