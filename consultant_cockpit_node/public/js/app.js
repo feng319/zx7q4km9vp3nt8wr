@@ -1,9 +1,13 @@
 /**
  * 顾问现场作战系统 - 前端应用
+ * 设计规范实现：三栏布局 3:5:2
  */
 
 // API 基础路径
 const API_BASE = '/api';
+
+// 阶段定义（设计文档 4.3 节）
+const STAGES = ['战略梳理', '商业模式', '行业演示'];
 
 // LLM 提供商配置
 const LLM_PROVIDERS = {
@@ -39,35 +43,64 @@ const state = {
   records: [],
   candidates: null,
   skus: [],
+  currentStage: '战略梳理',
+  completeness: 0,
+  fieldsStatus: {},
+  currentSuggestion: null,
   ws: null,
   llmProvider: 'deepseek-free',
-  llmModel: 'deepseek/deepseek-v4-pro-free'
+  llmModel: 'deepseek/deepseek-v4-pro-free',
+  demoMode: false
 };
 
-// DOM 元素
-const elements = {
-  sessionId: document.getElementById('session-id'),
-  newSessionBtn: document.getElementById('new-session-btn'),
-  llmProvider: document.getElementById('llm-provider'),
-  llmModel: document.getElementById('llm-model'),
-  recordType: document.getElementById('record-type'),
-  recordStage: document.getElementById('record-stage'),
-  recordContent: document.getElementById('record-content'),
-  recordSource: document.getElementById('record-source'),
-  addRecordBtn: document.getElementById('add-record-btn'),
-  recordsList: document.getElementById('records-list'),
-  getCandidatesBtn: document.getElementById('get-candidates-btn'),
-  candidatesList: document.getElementById('candidates-list'),
-  recallKeywords: document.getElementById('recall-keywords'),
-  recallBtn: document.getElementById('recall-btn'),
-  skuList: document.getElementById('sku-list'),
-  generateMemoBtn: document.getElementById('generate-memo-btn'),
-  generateBattleCardBtn: document.getElementById('generate-battle-card-btn'),
-  exportBtn: document.getElementById('export-btn'),
-  importBtn: document.getElementById('import-btn'),
-  importFile: document.getElementById('import-file'),
-  statusBar: document.getElementById('status-bar')
-};
+// DOM 元素引用（新布局）
+const elements = {};
+
+// 初始化 DOM 元素引用
+function initElements() {
+  // Header
+  elements.sessionId = document.getElementById('session-id');
+  elements.newSessionBtn = document.getElementById('new-session-btn');
+  elements.llmProvider = document.getElementById('llm-provider');
+  elements.llmModel = document.getElementById('llm-model');
+
+  // 左栏：诊断进度
+  elements.completenessProgress = document.getElementById('completeness-progress');
+  elements.completenessValue = document.getElementById('completeness-value');
+  elements.fieldsStatus = document.getElementById('fields-status');
+  elements.currentStage = document.getElementById('current-stage');
+
+  // 中栏：对话区
+  elements.stageDisplay = document.getElementById('stage-display');
+  elements.consensusChain = document.getElementById('consensus-chain');
+  elements.commandInput = document.getElementById('command-input');
+  elements.executeCommandBtn = document.getElementById('execute-command-btn');
+  elements.cmdCandidate = document.getElementById('cmd-candidate');
+  elements.candidateBadge = document.getElementById('candidate-badge');
+  elements.cmdConfirm = document.getElementById('cmd-confirm');
+  elements.cmdSwitch = document.getElementById('cmd-switch');
+  elements.cmdCase = document.getElementById('cmd-case');
+  elements.candidatesOverlay = document.getElementById('candidates-overlay');
+  elements.candidatesCards = document.getElementById('candidates-cards');
+  elements.closeCandidatesBtn = document.getElementById('close-candidates-btn');
+
+  // 右栏：建议
+  elements.suggestionStatus = document.getElementById('suggestion-status');
+  elements.suggestionQuestion = document.getElementById('suggestion-question');
+  elements.useSuggestionBtn = document.getElementById('use-suggestion-btn');
+  elements.skipSuggestionBtn = document.getElementById('skip-suggestion-btn');
+  elements.customQuestionBtn = document.getElementById('custom-question-btn');
+  elements.newSkuBadge = document.getElementById('new-sku-badge');
+  elements.skuList = document.getElementById('sku-list');
+
+  // Footer
+  elements.generateMemoBtn = document.getElementById('generate-memo-btn');
+  elements.generateBattleCardBtn = document.getElementById('generate-battle-card-btn');
+  elements.exportBtn = document.getElementById('export-btn');
+  elements.importBtn = document.getElementById('import-btn');
+  elements.importFile = document.getElementById('import-file');
+  elements.statusBar = document.getElementById('status-bar');
+}
 
 // 工具函数
 function setStatus(message, type = 'info') {
@@ -93,6 +126,12 @@ function hideLoading(button, originalText) {
   button.textContent = originalText;
 }
 
+function escapeHtml(text) {
+  const div = document.createElement('div');
+  div.textContent = text;
+  return div.innerHTML;
+}
+
 async function apiRequest(endpoint, options = {}) {
   const response = await fetch(`${API_BASE}${endpoint}`, {
     headers: {
@@ -110,7 +149,8 @@ async function apiRequest(endpoint, options = {}) {
   return response.json();
 }
 
-// 会话管理
+// ==================== 会话管理 ====================
+
 async function createSession() {
   try {
     const data = await apiRequest('/sessions', { method: 'POST' });
@@ -123,7 +163,9 @@ async function createSession() {
 
     // 清空记录
     state.records = [];
-    renderRecords();
+    state.completeness = 0;
+    state.fieldsStatus = {};
+    renderAll();
   } catch (error) {
     setStatus(`创建会话失败: ${error.message}`, 'error');
   }
@@ -135,13 +177,17 @@ async function getSessionState() {
   try {
     const data = await apiRequest(`/sessions/${state.sessionId}`);
     state.records = data.records || [];
-    renderRecords();
+    state.completeness = data.completeness || 0;
+    state.fieldsStatus = data.fields_status || {};
+    state.currentStage = data.current_stage || '战略梳理';
+    renderAll();
   } catch (error) {
     console.error('获取会话状态失败:', error);
   }
 }
 
-// WebSocket 连接
+// ==================== WebSocket 连接 ====================
+
 function connectWebSocket() {
   if (!state.sessionId) return;
 
@@ -161,7 +207,6 @@ function connectWebSocket() {
 
   state.ws.onclose = () => {
     console.log('WebSocket 已断开');
-    // 尝试重连
     setTimeout(connectWebSocket, 3000);
   };
 
@@ -179,144 +224,197 @@ function handleWebSocketMessage(data) {
       break;
     case 'candidates_ready':
       state.candidates = data.candidates;
-      renderCandidates();
+      showCandidatesOverlay();
+      break;
+    case 'sku_recalled':
+      state.skus = data.skus;
+      elements.newSkuBadge.style.display = 'inline';
+      renderSkus();
       break;
   }
 }
 
-// 记录管理
-async function addRecord() {
+// ==================== 指令解析与执行 ====================
+
+/**
+ * 解析并执行指令
+ * 设计文档 1.4 节快捷指令：
+ * - /记 <内容>：记录事实或共识
+ * - /确认：锁定最近一条待确认共识
+ * - /切 <阶段>：切换阶段
+ * - /候选：生成候选方案
+ * - /案例 <关键词>：召回案例
+ */
+function parseAndExecuteCommand(command) {
+  command = command.trim();
+
+  if (command.startsWith('/记')) {
+    const content = command.slice(2).trim();
+    if (content) executeRecordCommand(content);
+  } else if (command === '/确认') {
+    executeConfirmCommand();
+  } else if (command.startsWith('/切')) {
+    const stage = command.slice(2).trim();
+    executeStageSwitchCommand(stage);
+  } else if (command === '/候选') {
+    executeCandidateCommand();
+  } else if (command.startsWith('/案例')) {
+    const keywords = command.slice(3).trim();
+    executeCaseRecallCommand(keywords);
+  } else if (command.startsWith('/框架')) {
+    const keywords = command.slice(3).trim();
+    executeCaseRecallCommand(keywords, 'framework');
+  } else if (command.startsWith('/对比')) {
+    const keywords = command.slice(3).trim();
+    executeCaseRecallCommand(keywords, 'comparison');
+  } else {
+    setStatus(`未知指令: ${command}`, 'warning');
+  }
+}
+
+/**
+ * 推断记录类型（设计文档 4.2 节）
+ */
+function inferType(content) {
+  const consensusKeywords = ['客户认可', '我们决定', '确认', '选择', '同意', '认可'];
+  return consensusKeywords.some(kw => content.includes(kw)) ? 'consensus' : 'fact';
+}
+
+async function executeRecordCommand(content) {
   if (!state.sessionId) {
     setStatus('请先创建会话', 'warning');
     return;
   }
 
-  const content = elements.recordContent.value.trim();
-  if (!content) {
-    setStatus('请输入内容', 'warning');
-    return;
-  }
-
-  const originalText = showLoading(elements.addRecordBtn);
+  const recordType = inferType(content);
 
   try {
     await apiRequest(`/sessions/${state.sessionId}/records`, {
       method: 'POST',
       body: JSON.stringify({
-        type: elements.recordType.value,
+        type: recordType,
         content: content,
-        stage: elements.recordStage.value,
-        source: elements.recordSource.value || 'manual'
+        stage: state.currentStage,
+        source: 'manual'
       })
     });
 
-    elements.recordContent.value = '';
-    elements.recordSource.value = '';
-    setStatus('记录添加成功', 'success');
-
-    // 刷新记录列表
+    elements.commandInput.value = '';
+    setStatus(`已记录 (类型: ${recordType}, 阶段: ${state.currentStage})`, 'success');
     await getSessionState();
   } catch (error) {
-    setStatus(`添加记录失败: ${error.message}`, 'error');
-  } finally {
-    hideLoading(elements.addRecordBtn, originalText);
+    setStatus(`记录失败: ${error.message}`, 'error');
   }
 }
 
-async function confirmRecord(recordId) {
-  if (!state.sessionId) return;
+async function executeConfirmCommand() {
+  if (!state.sessionId) {
+    setStatus('请先创建会话', 'warning');
+    return;
+  }
+
+  // 找到最近一条待确认共识
+  const pendingConsensus = state.records
+    .filter(r => r.type === 'consensus' && r.status === 'pending_client_confirm')
+    .pop();
+
+  if (!pendingConsensus) {
+    setStatus('没有待确认的共识', 'warning');
+    return;
+  }
 
   try {
-    await apiRequest(`/sessions/${state.sessionId}/records/${recordId}/confirm`, {
+    await apiRequest(`/sessions/${state.sessionId}/records/${pendingConsensus.id}/confirm`, {
       method: 'POST'
     });
-    setStatus('记录已确认', 'success');
+    setStatus(`已确认: ${pendingConsensus.content.slice(0, 30)}...`, 'success');
     await getSessionState();
   } catch (error) {
     setStatus(`确认失败: ${error.message}`, 'error');
   }
 }
 
-async function correctRecord(recordId) {
-  const newContent = prompt('请输入修正内容:');
-  if (!newContent) return;
-
-  try {
-    await apiRequest(`/sessions/${state.sessionId}/records/${recordId}/correct`, {
-      method: 'POST',
-      body: JSON.stringify({ content: newContent })
-    });
-    setStatus('记录已修正', 'success');
-    await getSessionState();
-  } catch (error) {
-    setStatus(`修正失败: ${error.message}`, 'error');
+async function executeStageSwitchCommand(stage) {
+  if (stage) {
+    // 指定阶段
+    if (STAGES.includes(stage)) {
+      state.currentStage = stage;
+      elements.currentStage.textContent = stage;
+      elements.stageDisplay.textContent = stage;
+      setStatus(`已切换到: ${stage}`, 'success');
+    } else {
+      setStatus(`无效阶段: ${stage}，可选: ${STAGES.join(', ')}`, 'warning');
+    }
+  } else {
+    // 切换到下一阶段
+    const currentIdx = STAGES.indexOf(state.currentStage);
+    const nextIdx = (currentIdx + 1) % STAGES.length;
+    const nextStage = STAGES[nextIdx];
+    state.currentStage = nextStage;
+    elements.currentStage.textContent = nextStage;
+    elements.stageDisplay.textContent = nextStage;
+    setStatus(`已切换到: ${nextStage}`, 'success');
   }
 }
 
-// 渲染记录列表
-function renderRecords() {
-  if (state.records.length === 0) {
-    elements.recordsList.innerHTML = '<div class="empty-state">暂无记录</div>';
-    return;
-  }
-
-  elements.recordsList.innerHTML = state.records.map(record => `
-    <div class="record-item" data-id="${record.id}">
-      <div class="record-header">
-        <span class="record-type ${record.type}">${record.type === 'fact' ? '事实' : '判断'}</span>
-        <span class="record-stage">${record.stage}</span>
-        <span class="status-tag ${record.status}">${getStatusText(record.status)}</span>
-      </div>
-      <div class="record-content">${escapeHtml(record.content)}</div>
-      ${record.status !== 'superseded' ? `
-        <div class="record-actions">
-          <button class="btn btn-success btn-sm" onclick="confirmRecord('${record.id}')">确认</button>
-          <button class="btn btn-secondary btn-sm" onclick="correctRecord('${record.id}')">修正</button>
-        </div>
-      ` : ''}
-    </div>
-  `).join('');
-}
-
-function getStatusText(status) {
-  const statusMap = {
-    recorded: '已记录',
-    confirmed: '已确认',
-    superseded: '已作废'
-  };
-  return statusMap[status] || status;
-}
-
-// 候选方案
-async function getCandidates() {
+async function executeCandidateCommand() {
   if (!state.sessionId) {
     setStatus('请先创建会话', 'warning');
     return;
   }
 
-  const originalText = showLoading(elements.getCandidatesBtn);
+  const originalText = showLoading(elements.cmdCandidate);
 
   try {
     const data = await apiRequest(`/sessions/${state.sessionId}/candidates`);
 
     if (data.constraint_message) {
-      elements.candidatesList.innerHTML = `<div class="empty-state">${data.constraint_message}</div>`;
+      setStatus(data.constraint_message, 'warning');
     } else {
       state.candidates = data.candidates;
-      renderCandidates();
+      showCandidatesOverlay();
+      setStatus('候选方案已生成', 'success');
     }
   } catch (error) {
     setStatus(`获取候选方案失败: ${error.message}`, 'error');
   } finally {
-    hideLoading(elements.getCandidatesBtn, originalText);
+    hideLoading(elements.cmdCandidate, originalText);
   }
 }
 
-function renderCandidates() {
-  if (!state.candidates || state.candidates.length === 0) {
-    elements.candidatesList.innerHTML = '<div class="empty-state">暂无候选方案</div>';
+async function executeCaseRecallCommand(keywords, mode = 'case') {
+  if (!state.sessionId) {
+    setStatus('请先创建会话', 'warning');
     return;
   }
+
+  // 如果没有关键词，从共识链提取
+  if (!keywords) {
+    const facts = state.records.filter(r => r.type === 'fact' && r.status === 'confirmed');
+    keywords = facts.slice(0, 3).map(f => f.content.split(/\s+/).slice(0, 2).join(' ')).join(' ') || '储能';
+  }
+
+  try {
+    const data = await apiRequest(`/sessions/${state.sessionId}/recall`, {
+      method: 'POST',
+      body: JSON.stringify({ keywords: keywords.split(/[,，]/).map(k => k.trim()), mode })
+    });
+
+    state.skus = data.skus || [];
+    elements.newSkuBadge.style.display = 'inline';
+    renderSkus();
+    setStatus(`召回 ${state.skus.length} 条案例`, 'success');
+  } catch (error) {
+    setStatus(`召回失败: ${error.message}`, 'error');
+  }
+}
+
+// ==================== 候选方案覆盖层 ====================
+
+function showCandidatesOverlay() {
+  if (!state.candidates || state.candidates.length === 0) return;
+
+  elements.candidatesOverlay.style.display = 'flex';
 
   const riskLabels = {
     low: { text: '稳健', class: 'low' },
@@ -324,54 +422,125 @@ function renderCandidates() {
     high: { text: '激进', class: 'high' }
   };
 
-  elements.candidatesList.innerHTML = state.candidates.map((candidate, index) => {
+  elements.candidatesCards.innerHTML = state.candidates.map((candidate, index) => {
     const risk = riskLabels[candidate.risk_level] || riskLabels.medium;
     return `
-      <div class="candidate-item ${candidate.risk_level}">
-        <div class="candidate-header">
-          <strong>方案 ${index + 1}</strong>
-          <span class="candidate-risk ${risk.class}">${risk.text}</span>
-        </div>
-        <div class="candidate-content">${escapeHtml(candidate.description)}</div>
+      <div class="candidate-card" data-index="${index}" onclick="selectCandidate(${index})">
+        <div class="candidate-card-label">候选 ${String.fromCharCode(65 + index)}</div>
+        <div class="candidate-card-title">${escapeHtml(candidate.title || `方案 ${index + 1}`)}</div>
+        <div class="candidate-card-desc">${escapeHtml(candidate.description)}</div>
+      </div>
+    `;
+  }).join('');
+
+  // 清除红点徽标
+  elements.candidateBadge.textContent = '';
+}
+
+function hideCandidatesOverlay() {
+  elements.candidatesOverlay.style.display = 'none';
+}
+
+async function selectCandidate(index) {
+  if (!state.sessionId || !state.candidates) return;
+
+  const candidate = state.candidates[index];
+
+  try {
+    // 候选选中自动进入共识链（设计文档 4.2 节）
+    await apiRequest(`/sessions/${state.sessionId}/records`, {
+      method: 'POST',
+      body: JSON.stringify({
+        type: 'consensus',
+        content: candidate.description,
+        stage: state.currentStage,
+        source: 'candidate_selected',
+        status: 'pending_client_confirm',
+        recommendation: candidate.title
+      })
+    });
+
+    hideCandidatesOverlay();
+    setStatus(`已选择候选 ${String.fromCharCode(65 + index)}`, 'success');
+    await getSessionState();
+  } catch (error) {
+    setStatus(`选择失败: ${error.message}`, 'error');
+  }
+}
+
+// ==================== 渲染函数 ====================
+
+function renderAll() {
+  renderCompleteness();
+  renderFieldsStatus();
+  renderConsensusChain();
+  renderStageDisplay();
+  renderSuggestionStatus();
+  updateCandidateBadge();
+}
+
+function renderCompleteness() {
+  elements.completenessProgress.style.width = `${state.completeness}%`;
+  elements.completenessValue.textContent = `${Math.round(state.completeness)}%`;
+}
+
+function renderFieldsStatus() {
+  const fieldNames = ['产品线', '客户群体', '收入结构', '毛利结构', '交付情况', '资源分布', '战略目标', '显性诉求', '隐性痛点'];
+
+  elements.fieldsStatus.innerHTML = fieldNames.map(name => {
+    const status = state.fieldsStatus[name] || 'empty';
+    const icon = status === 'confirmed' ? '✓' : status === 'partial' ? '◑' : '○';
+    return `
+      <div class="field-item status-${status}">
+        <span class="field-icon">${icon}</span>
+        <span class="field-name">${name}</span>
       </div>
     `;
   }).join('');
 }
 
-// 知识召回
-async function recallKnowledge() {
-  if (!state.sessionId) {
-    setStatus('请先创建会话', 'warning');
+function renderConsensusChain() {
+  if (state.records.length === 0) {
+    elements.consensusChain.innerHTML = '<div class="empty-state">暂无记录，使用下方指令添加</div>';
     return;
   }
 
-  const keywords = elements.recallKeywords.value.trim();
-  if (!keywords) {
-    setStatus('请输入关键词', 'warning');
-    return;
-  }
+  elements.consensusChain.innerHTML = state.records.map(record => `
+    <div class="record-item" data-id="${record.id}" role="listitem">
+      <div class="record-header">
+        <span class="record-type ${record.type}">${record.type === 'fact' ? '事实' : '判断'}</span>
+        <span class="record-stage">${record.stage}</span>
+        <span class="status-tag ${record.status}">${getStatusText(record.status)}</span>
+      </div>
+      <div class="record-content">${escapeHtml(record.content)}</div>
+      ${record.status === 'pending_client_confirm' ? `
+        <div class="record-actions">
+          <button class="btn btn-success btn-sm" onclick="confirmRecord('${record.id}')">确认</button>
+        </div>
+      ` : ''}
+    </div>
+  `).join('');
+}
 
-  const originalText = showLoading(elements.recallBtn);
+function renderStageDisplay() {
+  elements.currentStage.textContent = state.currentStage;
+  elements.stageDisplay.textContent = state.currentStage;
+}
 
-  try {
-    const data = await apiRequest(`/sessions/${state.sessionId}/recall`, {
-      method: 'POST',
-      body: JSON.stringify({ keywords: keywords.split(/[,，]/).map(k => k.trim()) })
-    });
-
-    state.skus = data.skus || [];
-    renderSkus();
-    setStatus(`召回 ${state.skus.length} 条知识`, 'success');
-  } catch (error) {
-    setStatus(`召回失败: ${error.message}`, 'error');
-  } finally {
-    hideLoading(elements.recallBtn, originalText);
+function renderSuggestionStatus() {
+  const statusInfo = elements.suggestionStatus.querySelector('.status-info');
+  if (state.completeness >= 0.6) {
+    statusInfo.textContent = '候选生成就绪';
+    elements.suggestionStatus.style.background = '#f6ffed';
+  } else {
+    statusInfo.textContent = '追问建议模式';
+    elements.suggestionStatus.style.background = '';
   }
 }
 
 function renderSkus() {
   if (state.skus.length === 0) {
-    elements.skuList.innerHTML = '<div class="empty-state">暂无召回结果</div>';
+    elements.skuList.innerHTML = '<div class="empty-state">暂无备弹</div>';
     return;
   }
 
@@ -386,7 +555,30 @@ function renderSkus() {
   `).join('');
 }
 
-// 文档生成
+function updateCandidateBadge() {
+  // 检查候选生成条件是否满足（设计文档 3.1 节红点徽标）
+  const confirmedFacts = state.records.filter(r => r.type === 'fact' && r.status === 'confirmed');
+  const pendingConsensus = state.records.filter(r => r.type === 'consensus' && r.status === 'pending_client_confirm');
+
+  if (confirmedFacts.length >= 3 && pendingConsensus.length >= 1) {
+    elements.candidateBadge.textContent = '🔴';
+  } else {
+    elements.candidateBadge.textContent = '';
+  }
+}
+
+function getStatusText(status) {
+  const statusMap = {
+    recorded: '已记录',
+    pending_client_confirm: '待确认',
+    confirmed: '已确认',
+    superseded: '已作废'
+  };
+  return statusMap[status] || status;
+}
+
+// ==================== 文档生成 ====================
+
 async function generateMemo() {
   if (!state.sessionId) {
     setStatus('请先创建会话', 'warning');
@@ -400,7 +592,6 @@ async function generateMemo() {
       method: 'POST'
     });
 
-    // 下载 Word 文档
     downloadDocument(data, '备忘录.docx');
     setStatus('备忘录生成成功', 'success');
   } catch (error) {
@@ -437,7 +628,6 @@ async function generateBattleCard() {
 }
 
 function downloadDocument(data, filename) {
-  // 假设返回的是 base64 编码的文档
   if (typeof data === 'string') {
     const blob = base64ToBlob(data, 'application/vnd.openxmlformats-officedocument.wordprocessingml.document');
     const url = URL.createObjectURL(blob);
@@ -459,7 +649,8 @@ function base64ToBlob(base64, mimeType) {
   return new Blob([byteArray], { type: mimeType });
 }
 
-// 导入导出
+// ==================== 导入导出 ====================
+
 async function exportSession() {
   if (!state.sessionId) {
     setStatus('请先创建会话', 'warning');
@@ -498,28 +689,27 @@ async function importSession(file) {
   }
 }
 
-// 工具函数
-function escapeHtml(text) {
-  const div = document.createElement('div');
-  div.textContent = text;
-  return div.innerHTML;
+// ==================== 演示模式 ====================
+
+function toggleDemoMode() {
+  state.demoMode = !state.demoMode;
+  document.body.classList.toggle('demo-mode', state.demoMode);
+  setStatus(state.demoMode ? '已进入演示模式' : '已退出演示模式', 'success');
 }
 
-// 初始化 LLM 选择器
+// ==================== LLM 选择器 ====================
+
 function initLLMSelector() {
   const providerSelect = elements.llmProvider;
   const modelSelect = elements.llmModel;
 
-  // 填充模型下拉框
   function populateModels(providerId) {
     const provider = LLM_PROVIDERS[providerId];
     if (!provider) return;
 
-    // 显示加载状态
     modelSelect.disabled = true;
     modelSelect.innerHTML = '<option value="">加载中...</option>';
 
-    // 使用 setTimeout 模拟异步加载（实际场景中可能是 API 调用）
     setTimeout(() => {
       modelSelect.innerHTML = provider.models.map(model =>
         `<option value="${model.id}">${model.name}</option>`
@@ -531,31 +721,62 @@ function initLLMSelector() {
     }, 50);
   }
 
-  // 初始化当前提供商的模型列表
   populateModels(providerSelect.value);
 
-  // 提供商切换事件
   providerSelect.addEventListener('change', (e) => {
     populateModels(e.target.value);
     setStatus(`已切换到 ${LLM_PROVIDERS[e.target.value].name}`, 'success');
   });
 
-  // 模型切换事件
   modelSelect.addEventListener('change', (e) => {
     state.llmModel = e.target.value;
     setStatus(`已选择模型: ${e.target.options[e.target.selectedIndex].text}`, 'success');
   });
 }
 
-// 事件绑定
+// ==================== 事件绑定 ====================
+
 function initEventListeners() {
-  // 初始化 LLM 选择器
   initLLMSelector();
 
+  // 会话管理
   elements.newSessionBtn.addEventListener('click', createSession);
-  elements.addRecordBtn.addEventListener('click', addRecord);
-  elements.getCandidatesBtn.addEventListener('click', getCandidates);
-  elements.recallBtn.addEventListener('click', recallKnowledge);
+
+  // 指令执行
+  elements.executeCommandBtn.addEventListener('click', () => {
+    const command = elements.commandInput.value.trim();
+    if (command) parseAndExecuteCommand(command);
+  });
+
+  elements.commandInput.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter') {
+      const command = elements.commandInput.value.trim();
+      if (command) parseAndExecuteCommand(command);
+    }
+  });
+
+  // 快捷指令按钮
+  elements.cmdCandidate.addEventListener('click', executeCandidateCommand);
+  elements.cmdConfirm.addEventListener('click', executeConfirmCommand);
+  elements.cmdSwitch.addEventListener('click', () => executeStageSwitchCommand());
+  elements.cmdCase.addEventListener('click', () => executeCaseRecallCommand());
+
+  // 候选覆盖层关闭
+  elements.closeCandidatesBtn.addEventListener('click', hideCandidatesOverlay);
+
+  // 建议操作
+  elements.useSuggestionBtn.addEventListener('click', () => {
+    if (state.currentSuggestion) {
+      elements.commandInput.value = `/记 ${state.currentSuggestion.question}`;
+    }
+  });
+
+  elements.skipSuggestionBtn.addEventListener('click', () => {
+    state.currentSuggestion = null;
+    elements.suggestionQuestion.textContent = '点击"新建会话"开始诊断';
+  });
+
+  // 文档生成
   elements.generateMemoBtn.addEventListener('click', generateMemo);
   elements.generateBattleCardBtn.addEventListener('click', generateBattleCard);
   elements.exportBtn.addEventListener('click', exportSession);
@@ -566,31 +787,46 @@ function initEventListeners() {
 
   elements.importFile.addEventListener('change', (e) => {
     const file = e.target.files[0];
-    if (file) {
-      importSession(file);
-    }
+    if (file) importSession(file);
   });
 
-  // 快捷键
+  // 快捷键（设计文档 5.2 节）
   document.addEventListener('keydown', (e) => {
-    if (e.ctrlKey || e.metaKey) {
-      switch (e.key) {
-        case 'Enter':
-          e.preventDefault();
-          addRecord();
-          break;
-        case 's':
-          e.preventDefault();
-          exportSession();
-          break;
+    // F11 或 Ctrl+Shift+D：演示模式切换
+    if (e.key === 'F11' || (e.ctrlKey && e.shiftKey && e.key === 'D')) {
+      e.preventDefault();
+      toggleDemoMode();
+    }
+
+    // Ctrl+Enter：执行指令
+    if (e.ctrlKey && e.key === 'Enter') {
+      e.preventDefault();
+      const command = elements.commandInput.value.trim();
+      if (command) parseAndExecuteCommand(command);
+    }
+
+    // 数字键 1/2/3：选择候选（候选覆盖层打开时）
+    if (elements.candidatesOverlay.style.display === 'flex' && state.candidates) {
+      if (e.key === '1' || e.key === '2' || e.key === '3') {
+        const index = parseInt(e.key) - 1;
+        if (index < state.candidates.length) {
+          selectCandidate(index);
+        }
+      }
+      // Esc：关闭候选覆盖层
+      if (e.key === 'Escape') {
+        hideCandidatesOverlay();
       }
     }
   });
 }
 
-// 初始化
+// ==================== 初始化 ====================
+
 function init() {
+  initElements();
   initEventListeners();
+  renderAll();
   setStatus('就绪 - 点击"新建会话"开始');
 }
 
@@ -598,5 +834,18 @@ function init() {
 document.addEventListener('DOMContentLoaded', init);
 
 // 全局函数（供 HTML onclick 使用）
-window.confirmRecord = confirmRecord;
-window.correctRecord = correctRecord;
+window.confirmRecord = async function(recordId) {
+  if (!state.sessionId) return;
+
+  try {
+    await apiRequest(`/sessions/${state.sessionId}/records/${recordId}/confirm`, {
+      method: 'POST'
+    });
+    setStatus('记录已确认', 'success');
+    await getSessionState();
+  } catch (error) {
+    setStatus(`确认失败: ${error.message}`, 'error');
+  }
+};
+
+window.selectCandidate = selectCandidate;
