@@ -690,8 +690,10 @@ function updateCandidateBadge() {
 }
 
 function getStatusText(status) {
+  // PRD 4.2: /记 创建的记录 status=recorded，UI 显示"待确认"
+  // /确认 后 status=confirmed，UI 显示"已确认"
   const statusMap = {
-    recorded: '已记录',
+    recorded: '待确认',
     pending_client_confirm: '待确认',
     confirmed: '已确认',
     superseded: '已作废'
