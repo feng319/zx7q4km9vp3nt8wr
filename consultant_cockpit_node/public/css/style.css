@@ -221,10 +221,9 @@ body {
   grid-template-columns: 3fr 5fr 2fr;
   gap: 16px;
   padding: 16px;
-  padding-bottom: 120px; /* 为固定 footer 留出空间 */
   flex: 1;
   /* 确保三栏填满剩余空间 */
-  height: calc(100vh - 140px); /* header约70px + footer约70px */
+  height: calc(100vh - 200px); /* header约70px + footer约80px + 额外边距 */
   min-height: 0; /* 允许 flex 子项收缩 */
 }
 
