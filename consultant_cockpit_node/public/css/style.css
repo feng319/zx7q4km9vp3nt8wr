@@ -1025,6 +1025,11 @@ textarea {
   transform: translateY(-2px);
 }
 
+.candidate-card:focus-visible {
+  outline: 3px solid var(--primary-color);
+  outline-offset: 2px;
+}
+
 .candidate-card.selected {
   border-color: var(--success-color);
   background: #f6ffed;
