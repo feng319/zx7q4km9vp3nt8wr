@@ -918,9 +918,33 @@ function initEventListeners() {
 
 // ==================== 初始化 ====================
 
+// 检查飞书连接状态
+async function checkFeishuStatus() {
+  const dot = document.getElementById('feishu-dot');
+  const text = document.getElementById('feishu-text');
+
+  if (!dot || !text) return;
+
+  try {
+    const data = await apiRequest('/feishu-status');
+
+    if (data.connected) {
+      dot.className = 'status-dot status-dot-connected';
+      text.textContent = '已连接';
+    } else {
+      dot.className = 'status-dot status-dot-disconnected';
+      text.textContent = data.reason === 'mock_mode' ? '未配置' : '断开';
+    }
+  } catch (error) {
+    dot.className = 'status-dot status-dot-error';
+    text.textContent = '检测失败';
+  }
+}
+
 function init() {
   initElements();
   initEventListeners();
+  checkFeishuStatus(); // 检查飞书连接状态
   renderAll();
   setStatus('就绪 - 点击"新建会话"开始');
 }
