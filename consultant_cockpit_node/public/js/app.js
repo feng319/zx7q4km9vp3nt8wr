@@ -275,7 +275,7 @@ function flashRecord(recordId) {
   if (el) {
     el.classList.add('flash');
     el.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-    setTimeout(() => el.classList.remove('flash'), 1500);
+    setTimeout(() => el.classList.remove('flash'), 300);
   }
 }
 
