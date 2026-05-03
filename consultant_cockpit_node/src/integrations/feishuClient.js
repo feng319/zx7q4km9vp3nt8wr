@@ -181,58 +181,28 @@ class FeishuClient {
     try {
       /** @type {Object[]} */
       const allRecords = [];
-      let pageToken = undefined;
 
-      // 构建筛选条件
-      const filterConditions = [];
-      if (options.company) {
-        filterConditions.push({
-          field_name: '客户公司名',
-          operator: 'is',
-          value: [options.company],
-        });
-      }
-      if (options.stage) {
-        filterConditions.push({
-          field_name: '阶段',
-          operator: 'is',
-          value: [options.stage],
-        });
-      }
+      // listWithIterator 返回异步迭代器，自动处理分页
+      const iterator = this.client.bitable.appTableRecord.listWithIterator({
+        path: {
+          app_token: this.bitableToken,
+          table_id: this.consensusTableId,
+        },
+        params: {
+          user_id_type: 'open_id',
+          page_size: options.pageSize || 100,
+        },
+      });
 
-      do {
-        const response = await this.client.bitable.appTableRecord.listWithIterator({
-          path: {
-            app_token: this.bitableToken,
-            table_id: this.consensusTableId,
-          },
-          params: {
-            user_id_type: 'open_id',
-            page_size: options.pageSize || 100,
-            page_token: pageToken,
-          },
-          data: filterConditions.length > 0 ? {
-            filter: {
-              conditions: filterConditions,
-              conjunction: 'and',
-            },
-          } : undefined,
-        });
-
-        if (response.code !== 0) {
-          throw new Error(`Lark API error: ${response.msg}`);
-        }
-
-        const records = response.data?.items || [];
-        for (const record of records) {
+      // 遍历迭代器获取所有记录
+      for await (const record of iterator) {
+        if (record && record.record_id) {
           allRecords.push({
             record_id: record.record_id,
             ...this._fieldsToRecord(record.fields),
           });
         }
-
-        pageToken = response.data?.page_token;
-      } while (pageToken);
+      }
 
       logger.info('Listed consensus records', { count: allRecords.length });
 
@@ -245,7 +215,12 @@ class FeishuClient {
 
       return allRecords;
     } catch (error) {
-      logger.error('Failed to list consensus records', { error: error.message });
+      logger.error('Failed to list consensus records', {
+        error: error.message,
+        stack: error.stack,
+        bitableToken: this.bitableToken,
+        consensusTableId: this.consensusTableId,
+      });
       // 返回缓存数据
       return Array.from(this._recordCache.values());
     }
