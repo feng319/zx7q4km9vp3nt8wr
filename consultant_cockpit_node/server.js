@@ -725,16 +725,24 @@ async function start() {
 }
 
 // 优雅关闭
-process.on('SIGTERM', async () => {
-  fastify.log.info('Received SIGTERM, shutting down...');
+async function gracefulShutdown(signal) {
+  fastify.log.info(`Received ${signal}, shutting down...`);
 
   // 保存所有会话
   for (const [sessionId, session] of sessions) {
-    await sessionManager.saveSession(sessionId, session.consensusChain.exportRecords());
+    try {
+      await sessionManager.saveSession(sessionId, session.consensusChain.exportRecords());
+      fastify.log.info({ sessionId }, 'Session saved');
+    } catch (error) {
+      fastify.log.error({ sessionId, error: error.message }, 'Failed to save session');
+    }
   }
 
   await fastify.close();
   process.exit(0);
-});
+}
+
+process.on('SIGTERM', () => gracefulShutdown('SIGTERM'));
+process.on('SIGINT', () => gracefulShutdown('SIGINT'));
 
 start();
