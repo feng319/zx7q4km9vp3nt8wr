@@ -274,7 +274,7 @@ fastify.post('/api/sessions', async (request, reply) => {
   const sessionId = require('crypto').randomUUID();
   const { company } = request.body || {};
 
-  const session = getOrCreateSession(sessionId);
+  const session = await getOrCreateSession(sessionId);
 
   // 存储公司名到会话中
   if (company) {
@@ -297,7 +297,7 @@ fastify.get('/api/sessions/:sessionId', async (request, reply) => {
     return { error: 'Session not found' };
   }
 
-  const session = getOrCreateSession(sessionId);
+  const session = await getOrCreateSession(sessionId);
   const records = session.consensusChain.exportRecords();
 
   // 计算完整度（基于已确认的事实覆盖的字段数）
@@ -332,7 +332,7 @@ fastify.get('/api/sessions/:sessionId', async (request, reply) => {
 // 添加记录
 fastify.post('/api/sessions/:sessionId/records', async (request, reply) => {
   const { sessionId } = request.params;
-  const session = getOrCreateSession(sessionId);
+  const session = await getOrCreateSession(sessionId);
 
   try {
     const record = session.consensusChain.addRecord(request.body);
@@ -354,7 +354,7 @@ fastify.post('/api/sessions/:sessionId/records', async (request, reply) => {
 // 确认记录（指定 ID）
 fastify.post('/api/sessions/:sessionId/records/:recordId/confirm', async (request, reply) => {
   const { sessionId, recordId } = request.params;
-  const session = getOrCreateSession(sessionId);
+  const session = await getOrCreateSession(sessionId);
 
   try {
     session.consensusChain.confirmRecord(recordId);
@@ -368,7 +368,7 @@ fastify.post('/api/sessions/:sessionId/records/:recordId/confirm', async (reques
 // 确认记录（智能选择：有 record_id 用指定的，否则确认最新 pending 记录）
 fastify.post('/api/sessions/:sessionId/confirm', async (request, reply) => {
   const { sessionId } = request.params;
-  const session = getOrCreateSession(sessionId);
+  const session = await getOrCreateSession(sessionId);
   const { record_id } = request.body || {};
 
   try {
@@ -398,7 +398,7 @@ fastify.post('/api/sessions/:sessionId/confirm', async (request, reply) => {
 // 修正记录
 fastify.post('/api/sessions/:sessionId/records/:recordId/correct', async (request, reply) => {
   const { sessionId, recordId } = request.params;
-  const session = getOrCreateSession(sessionId);
+  const session = await getOrCreateSession(sessionId);
 
   try {
     const newRecord = session.consensusChain.correctRecord(recordId, request.body.content || request.body);
@@ -413,7 +413,7 @@ fastify.post('/api/sessions/:sessionId/records/:recordId/correct', async (reques
 // 获取已确认事实
 fastify.get('/api/sessions/:sessionId/facts', async (request, reply) => {
   const { sessionId } = request.params;
-  const session = getOrCreateSession(sessionId);
+  const session = await getOrCreateSession(sessionId);
 
   return {
     facts: session.consensusChain.getConfirmedFacts(),
@@ -423,7 +423,7 @@ fastify.get('/api/sessions/:sessionId/facts', async (request, reply) => {
 // 获取候选方案
 fastify.get('/api/sessions/:sessionId/candidates', async (request, reply) => {
   const { sessionId } = request.params;
-  const session = getOrCreateSession(sessionId);
+  const session = await getOrCreateSession(sessionId);
 
   try {
     // 获取可用 SKU
@@ -460,7 +460,7 @@ fastify.get('/api/sessions/:sessionId/candidates', async (request, reply) => {
 fastify.post('/api/sessions/:sessionId/recall', async (request, reply) => {
   const { sessionId } = request.params;
   const { keywords, top_k = 5 } = request.body || {};
-  const session = getOrCreateSession(sessionId);
+  const session = await getOrCreateSession(sessionId);
 
   if (!keywords || !Array.isArray(keywords)) {
     reply.code(400);
@@ -479,7 +479,7 @@ fastify.post('/api/sessions/:sessionId/recall', async (request, reply) => {
 // 生成备忘录
 fastify.post('/api/sessions/:sessionId/memo', async (request, reply) => {
   const { sessionId } = request.params;
-  const session = getOrCreateSession(sessionId);
+  const session = await getOrCreateSession(sessionId);
 
   try {
     const memoGen = new MemoGenerator({
@@ -551,7 +551,7 @@ fastify.post('/api/sessions/:sessionId/battle-card', async (request, reply) => {
 // 导出会话
 fastify.get('/api/sessions/:sessionId/export', async (request, reply) => {
   const { sessionId } = request.params;
-  const session = getOrCreateSession(sessionId);
+  const session = await getOrCreateSession(sessionId);
 
   return {
     session_id: sessionId,
@@ -570,7 +570,7 @@ fastify.post('/api/sessions/:sessionId/import', async (request, reply) => {
     return { error: 'records must be an array' };
   }
 
-  const session = getOrCreateSession(sessionId);
+  const session = await getOrCreateSession(sessionId);
   session.consensusChain.importRecords(records);
 
   return {
@@ -659,7 +659,7 @@ fastify.post('/api/fallback/retry', async (request, reply) => {
 fastify.register(async function (fastify) {
   fastify.get('/ws/:sessionId', { websocket: true }, (socket, request) => {
     const { sessionId } = request.params;
-    const session = getOrCreateSession(sessionId);
+    const session = await getOrCreateSession(sessionId);
 
     fastify.log.info({ sessionId }, 'WebSocket connected');
 
