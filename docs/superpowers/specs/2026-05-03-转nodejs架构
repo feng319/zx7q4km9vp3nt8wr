@@ -1,0 +1,504 @@
+# **顾问现场作战系统 · Node.js 改造项目计划 v1.3（完整版）**
+
+> **文档版本**：v1.3
+> **创建日期**：2026-05-03
+> **目标读者**：产品评估、开发执行
+> **当前状态**：Python + Streamlit 已完成 Day 1/2/3 实施，现评估并启动迁移至 Node.js
+> **预计工期**：7 个工作日（Day 0 前置 + Day 1-4 执行 + Day 5-6 buffer/演练验证），单人开发回落至 9 天
+> **版本变更**：基于 v1.2 技术选型讨论，将 Web 框架从 Express 升级为 Fastify，明确 JavaScript 为当前实施语言、TypeScript 作为独立后续迁移任务、JSDoc + `@ts-check` 作为过渡方案（详见文末 CHANGELOG）
+
+---
+
+## **第一部分：项目概述**
+
+### **一、改造背景**
+
+当前系统基于 Python 3.12 + Streamlit 实现，三天 Sprint 已经完成全部核心功能。但在演练准备阶段暴露出三类问题，影响系统的稳定性和可迁移性。
+
+第一类是**环境一致性问题**。Python 版本路径冲突、依赖隔离不彻底、`encodings` 模块加载失败等错误在不同设备上反复出现，每次切换环境都需要排查。第二类是**框架架构限制**。Streamlit 的全量重渲染机制不适合需要实时响应的会议场景，演示模式切换、候选卡弹出、共识链实时刷新都需要特殊处理来规避重渲染副作用。第三类是**部署交付门槛**。当前方案需要顾问端安装 Python、配置环境变量、记忆启动命令，对非技术用户不友好，长期推广困难。
+
+迁移至 Node.js 的核心动机不是性能提升，而是**降低环境复杂度和提升交付体验**——开发者熟悉 Node.js 生态，启动只需一个命令，未来打包为桌面应用或部署上线都更顺畅。
+
+### **二、改造目标**
+
+改造完成后，系统应在三个维度上有明确提升。
+
+**环境部署维度**：从"安装 Python 3.12 + 配置路径 + 安装依赖 + 配置 lark-cli + 启动 Streamlit"五步流程，简化为"`npm install` + `npm start`"两步流程。新设备迁移时间从 30 分钟降至 5 分钟以内。
+
+**用户体验维度**：消除 Streamlit 重渲染导致的演示模式意外退出、候选卡闪烁、共识链记录延迟刷新等问题。WebSocket 实时推送替代轮询，候选卡弹出响应时间从 1.5 秒降至 0.5 秒以内。
+
+**长期演进维度**：技术栈与未来计划保持一致——Electron 桌面应用打包、云端多用户部署、移动端适配，都基于 Node.js 生态有成熟方案，不需要二次重写。
+
+### **三、技术方案对比**
+
+在确定 Node.js 之前，团队评估了四个方向。
+
+**方向一：维持 Python + 优化 Streamlit**。改造成本最低，但治标不治本。Streamlit 的架构限制是框架级别的，无法通过优化绕过。Python 环境问题也无法根除。
+
+**方向二：Python + FastAPI + 原生前端**。保留所有业务逻辑，只替换 UI 层，工作量约 1 天。但 Python 环境问题仍然存在，对开发者来说每次部署仍是负担。
+
+**方向三：Node.js + Fastify + 原生前端（推荐方案）**。彻底替换技术栈，业务逻辑用 JavaScript 重写。工作量约 4 天后端 + 1-1.5 天前端骨架，完成后所有问题一次性解决。开发者熟悉 Node.js，未来维护和迭代效率更高。选择 Fastify 而非 Express 的具体理由见第三部分决策六。
+
+**方向四：彻底重构为微服务**。适合产品化阶段，但对当前"单顾问现场作战工具"的定位过度设计。
+
+最终选择**方向三**，理由是它在改造成本和长期收益之间取得最佳平衡。
+
+---
+
+## **第二部分：改造范围**
+
+### **四、保留不变的部分**
+
+PRD v1.1 的所有产品设计——双层架构（顾问作战层 + 客户共识层）、候选生成的三约束机制、共识链的 D 策略记录路径、备忘录的三层架构、作战卡的双模式、演示模式的三级敏感度分区——全部保留，不做任何产品逻辑调整。
+
+前端在 Python 版本中由 Streamlit 以 Python 函数式声明生成，**不存在可直接复用的独立 HTML/CSS/JS 产物**。Node.js 改造需要从零搭建前端骨架，但 PRD v1.1 中关于交互细节的产品设计——三栏布局、候选卡覆盖式弹出、共识链实时滚动、演示模式 CSS 切换——全部保留作为前端实现的产品规格。前端骨架搭建作为独立子任务列入 Day 1 下午到 Day 2 的并行轨道（详见第十节、第十一节），不与后端业务逻辑迁移争用工时。
+
+飞书多维表格的字段设计（9 个静态字段 + 当前追问 + 诊断进度）、第二张"诊断共识"表的字段映射保持不变，前端用户和客户看到的飞书界面完全一致。
+
+### **五、重写的部分**
+
+业务逻辑层全部用 JavaScript 重写，关键函数和数据结构附加 JSDoc 类型注释（`// @ts-check` 模式），对应关系如下：
+
+| 原 Python 文件 | 新 Node.js 文件 | 重写复杂度 | 关键功能 |
+|---|---|---|---|
+| `consensus_chain.py` | `consensusChain.js` | 简单 | 数据结构、修正路径（superseded） |
+| `candidate_generator.py` | `candidateGen.js` | 中等 | LLM 调用、三约束、差异度判断、**预计算缓存** |
+| `knowledge_retriever.py` | `knowledgeRetriever.js` | 简单 | 关键词匹配、**限流去重** |
+| `memo_generator.py` | `memoGenerator.js` | 中等 | 三层架构、Word 生成、服务包推荐 |
+| `battle_card_generator.py` | `battleCardGen.js` | 中等 | 双模式、Word 渲染 |
+| `feishu_client.py` | `feishuClient.js` | 简单 | 用 lark-oapi SDK，比原版简洁 |
+| `feishu_sync.py` | `feishuSync.js` | 中等 | WebSocket 长连接 + 降级轮询 |
+| `fallback_handler.py` | `fallbackHandler.js` | 简单 | 异常分类 + 本地缓存 |
+| `llm_client.py` | `llmClient.js` | 简单 | OpenAI JS SDK + **并发限流** |
+| —— | `sessionPersistence.js` | 简单 | **新增**：会话持久化与恢复 |
+
+### **六、新增的部分**
+
+`server.js` 作为新主入口，基于 Fastify 框架，承担原 `main_app.py` 的职责。前端通过 HTTP 调用 API、通过 WebSocket 接收实时事件。
+
+`sessionPersistence.js` 是 Python 版本完全没有的新模块，解决服务进程崩溃后会议数据丢失的问题。
+
+**前端骨架（`public/` 目录）**也是 Python 版本不存在的新增产物——Streamlit 版本的 UI 由 Python 函数式声明生成，本次改造需要从零搭建独立的 HTML/CSS/JS 静态资源，包括三栏布局、WebSocket 客户端封装、演示模式 `body.classList` 切换逻辑、候选卡覆盖式弹出组件、共识链实时滚动列表组件。
+
+### **七、不做的事**
+
+为避免范围蔓延，明确以下事项**不在本次改造范围内**：
+
+不做产品功能扩展。改造目标是技术栈替换，不是借机加新功能。所有"如果顺便做了 X 就更好了"的想法一律推迟到下一阶段。
+
+不做架构重构。当前的单用户本地架构、全局状态管理、文件存储方案保持不变。多用户隔离、数据库引入、云端部署都不在本次范围。
+
+不做 UI 重新设计。前端三栏布局、配色方案、交互流程完全保留 PRD v1.1 的产品规格，只是从 Streamlit 实现改写为静态前端实现。
+
+不做 TypeScript 迁移。当前实施语言为 JavaScript + JSDoc 注释，TypeScript 作为独立后续任务在 Node.js 版本稳定运行 2 周后启动（见第七部分选项 D）。在此之前，关键模块使用 `// @ts-check` + JSDoc 类型注释作为过渡，编辑器层面提供类型检查和自动补全，不引入编译步骤。
+
+不做性能优化。除了 WebSocket 替代轮询带来的天然提升外，不专门做性能优化。
+
+---
+
+## **第三部分：关键技术决策**
+
+### **八、决策清单**
+
+**决策一：用 `@larksuiteoapi/node-sdk` 替代 `lark-cli` 子进程调用**
+
+当前 Python 版本通过 `subprocess.run(['lark-cli.cmd', ...])` 调用飞书命令行工具，每次调用启动一个子进程，延迟约 0.3-0.5 秒。Node.js 版本直接使用飞书官方 JS SDK，原生 HTTP 调用，延迟降至 0.1 秒以内。这是**净收益的改动**，飞书集成代码量减少约 30%，性能提升约 3 倍。
+
+**决策二：用 `docx` npm 包替代 `python-docx`**
+
+`docx` 是 Node.js 生态最成熟的 Word 生成库，API 风格比 `python-docx` 更现代化（基于流式构建器模式）。风险点是中文字体处理，**Day 1 下午就要单独验证**（提前于 v1.1 计划的 Day 2 上午），发现异常立即评估是否回退到 Node.js 通过 `child_process` 调用 Python `python-docx` 的混合方案，避免决策延迟挤压后续工期。
+
+**决策三：WebSocket 替代 Streamlit 轮询**
+
+当前飞书侧字段变更通过 30 秒轮询同步到 Streamlit。新方案中 Node.js 直接维护飞书的 WebSocket 长连接（飞书官方支持 `drive.file.bitable_record_changed_v1` 事件订阅），变更事件 1 秒内推送到前端。**Python 版本仅实现了 30 秒轮询，WebSocket 长连接从未集成进生产路径，仓库中仅保留独立测试脚本 `test-websocket-events.mjs` 作为可行性验证产物。Node.js 改造正好补齐这一能力**，这是真实交付价值，不是 Python 版本已有能力的等效替换。
+
+**决策四：单用户本地架构不变**
+
+当前系统设计目标是"单个顾问的现场作战工具"，全局状态用单例即可。Node.js 改造后保持这个架构。如果未来需要多顾问同时使用，再加一层会话隔离。
+
+**决策五：演示模式不再需要"重渲染恢复"机制**
+
+Python + Streamlit 版本的演示模式有一个核心痛点：Streamlit 重渲染会重置 CSS 类。`demo_mode.py` 通过 `st.session_state` 维护状态只能保住 Python 状态变量、保不住前端样式态，必须在每次渲染回调里重新注入 CSS 类，新增任何渲染入口都要记得补一遍——这是脆弱的绕路方案。Node.js + 静态 HTML 架构是单页应用，演示模式状态保存在 `body.classList` 上，永远不会丢失。**这是改造的隐性收益**，Streamlit 版本花大量篇幅设计的"重渲染恢复机制"在 Node.js 版本下完全不需要。
+
+**决策六：Web 框架选用 Fastify 而非 Express**
+
+经过 Express / Fastify / Koa / Hono / NestJS 五个方向的评估，选择 Fastify，理由如下。
+
+第一，**async/await 原生错误冒泡**。业务模块抛出的异常自动送到全局 `setErrorHandler` 钩子，统一记录日志、调用 `fallbackHandler.js` 降级、返回结构化错误响应，不需要在每个路由手写 `try/catch`。对会议现场工具来说，"忘记一个 try/catch 导致进程崩溃"的风险在 Fastify 下从根上消除。
+
+第二，**内置 pino 日志**。`fastify({ logger: { level: 'info', file: 'logs/app.jsonl' } })` 一行配置即完成 Day 3 计划中"结构化日志输出到 logs/app.jsonl"的需求，不需要额外安装和挂载中间件。
+
+第三，**路由级 JSON Schema 验证**。Fastify 路由可声明 `schema: { body, response }`，请求体不符合自动返回 400，响应体结构异常框架报警。这相当于给金标准测试集的 20 个场景加了一层运行时类型保障，Day 1 写完路由就能发现结构偏差，不用等 Day 4 演练才暴露。
+
+第四，**TypeScript 演进友好**。当前使用 JavaScript + JSDoc，后续迁移 TypeScript 时 Fastify 是一等公民（`FastifyRequest<{ Body: T }>` 泛型直接补全），迁移成本低于 Express。
+
+Express 被排除的主要理由：async 错误处理需要 `express-async-errors` 补丁、无内置 schema 验证、无内置 pino、TypeScript 支持依赖 `@types/express` 且 `req.body` 永远是 `any`。Express 的生态广度优势在单用户本地工具场景下不兑现。
+
+NestJS 被排除：对当前"单顾问现场作战工具"定位过度设计，依赖注入容器和 IoC 概念引入的学习成本与样板代码量会拖慢 4 天工期。
+
+**决策七：JavaScript + JSDoc 过渡，TypeScript 作为独立后续任务**
+
+当前实施语言为 JavaScript。在所有关键模块顶部添加 `// @ts-check`，关键函数和数据结构附加 JSDoc 类型注释，编辑器（VS Code）提供类型检查和自动补全，不引入编译步骤、不增加构建复杂度、不消耗本次改造工期。
+
+TypeScript 完整迁移推迟到 Node.js 版本稳定运行 2 周后作为独立任务启动（见第七部分选项 D）。现在合并 TypeScript 的主要风险是：两个变量（框架迁移 + 语言迁移）同时引入时调试根因难以定位、飞书 SDK 类型声明质量未知、`strict` 模式首次迁移会集中爆发类型错误，叠加在 7 天工期上会推升至 9-12 天，置信度显著下降。
+
+---
+
+## **第四部分：里程碑与执行计划**
+
+### **九、Day 0 前置准备（启动改造前必须完成）**
+
+这一天不写代码，但必须完成的事项：
+
+**飞书开发者后台配置**——这是阻塞性前置条件。改造启动前 3 天就要提交审批，包括开启长连接订阅、添加 `drive.file.bitable_record_changed_v1` 和 `drive.file.edit_v1` 事件、申请 `bitable:app` 或 `drive:drive` 权限、获取 `FEISHU_APP_ID` 和 `FEISHU_APP_SECRET`。
+
+**金标准测试集设计**——**主责任人为开发者，Day 0 完成 20 个 mock 场景的输入序列与预期输出设计，保存为 `tests/golden_cases.json`；产品方在 Day 1 上午 12:00 前完成审核与签字确认**。每个场景需包含：顾问输入序列（按时间顺序）、预期共识链状态（records 数组的 type/status/stage 字段）、预期完整度（百分比 + 9 字段填充情况）、预期候选生成结果（三个候选的风险等级与差异度判断）。产品方仅负责审核场景的业务真实性与覆盖度，不再承担初稿设计责任。
+
+**Python 版本 record_id Bug 前置修复**——`feishu_client.py` 中 `get_client_profile()` 对 list 格式返回 `record_id=None` 的 Bug 必须在 Day 0 内定位并修复，写一个能稳定复现的单元测试用例，修复 commit 合入 `python-v1.0-final` tag 之前。不在 Python 版本修复会导致 Node.js 重写原样继承——`upsertRecord` 在 list 格式返回值下走新建分支并产生重复客户档案记录，是会议工具的致命缺陷。
+
+**环境变量清单准备**——准备 `.env.example` 和真实 `.env` 两份文件：
+
+```
+# LLM 配置
+OPENAI_API_KEY=
+LLM_BASE_URL=
+LLM_MODEL=
+
+# 飞书配置（lark-oapi SDK 需要）
+FEISHU_APP_ID=
+FEISHU_APP_SECRET=
+FEISHU_BITABLE_APP_TOKEN=
+FEISHU_BITABLE_TABLE_ID=
+FEISHU_DOC_TEMPLATE_TOKEN=
+
+# 服务配置
+PORT=8501
+LOG_LEVEL=info
+```
+
+注意 `FEISHU_APP_ID` 和 `FEISHU_APP_SECRET` 是 `lark-oapi` SDK 必需的，原 `lark-cli` 不需要这两个。
+
+**Python 版本冻结**——改造启动当天，给 Python 版本打 git tag `python-v1.0-final`，作为永久备份。改造期间不接受任何 Python 版本的修改请求，除非是阻塞演练的 P0 bug。
+
+**Day 0 验收**：飞书后台配置确认通过、`.env` 真实值齐全、git tag 已打、`tests/golden_cases.json` 至少有 20 个场景、Python 版本 `get_client_profile()` 的 `record_id=None` Bug 已修复并通过单元测试。
+
+### **十、Day 1 业务逻辑迁移**
+
+**后端轨道**：完成 `consensusChain.js`、`candidateGen.js`、`knowledgeRetriever.js`、`llmClient.js` 四个核心模块。这四个模块共享一个特点——纯逻辑代码，不涉及外部 IO，最容易迁移和测试。所有模块顶部添加 `// @ts-check`，关键数据结构（ConsensusRecord、CandidateCache、KnowledgeItem）附加 JSDoc 类型定义。
+
+**前端并行轨道（Day 1 下午启动）**：搭建前端骨架，包括三栏布局 HTML/CSS、WebSocket 客户端封装、演示模式 `body.classList` 切换逻辑、候选卡覆盖式弹出组件、共识链实时滚动列表组件。前端骨架不依赖后端业务逻辑可独立开发，通过 mock 数据驱动 UI 验证。如为单人开发，则前端工作顺延至 Day 2 与飞书集成串行进行，工期相应延长。
+
+**Word 中文字体验证（Day 1 下午同步执行）**：独立写一个最小可用样例（含中文标题、正文、表格），验证 `docx` npm 包的中文字体渲染。发现异常立即评估是否回退到 Node.js 通过 `child_process` 调用 Python `python-docx` 的混合方案，把决策窗口从 Day 2 提前到 Day 1，避免决策延迟挤压 Day 3 工期。
+
+**重点实现**：
+
+`candidateGen.js` 必须实现 `CandidateCache` 类，监听 `consensusChain` 的事件，共识链变更时异步预生成，缓存有效期 30 秒，手动修正事实时立即作废。这是 PRD 3.2 节的硬性要求，缺失会破坏 < 1.5 秒响应承诺。
+
+`knowledgeRetriever.js` 必须实现限流：同一关键词 5 秒内不重复触发、备弹区最短刷新 30 秒、单次会议召回上限 50 次。
+
+`llmClient.js` 必须用 `p-limit` 全局限制并发数为 3（PRD 7.8 节要求），每次调用设置 10 秒超时，超时走 `fallbackHandler.handleLLMTimeout()`。
+
+**Day 1 验收**：四个后端模块通过单元测试 + 跑通金标准测试集前 10 个场景，输出与预期一致；前端骨架可在浏览器打开，三栏布局渲染正常，演示模式切换响应正常（通过 mock 数据驱动）；Word 中文字体验证结论已出。
+
+### **十一、Day 2 飞书集成 + Word 生成**
+
+**后端轨道**：完成 `feishuClient.js`、`feishuSync.js`、`memoGenerator.js`、`battleCardGen.js` 四个 IO 密集模块。
+
+**前端并行轨道**：完成前端骨架与后端 API/WebSocket 的联调，覆盖候选生成、共识链推送、演示模式切换三条主路径。
+
+**重点实现**：
+
+`feishuClient.js` 必须实现 429 处理逻辑：读取 `x-ogw-ratelimit-reset` 响应头，等待对应秒数后重试，禁止立即重试。批量写入 500ms 间隔。`@larksuiteoapi/node-sdk` 默认不会自动处理这个，需要手动包装。
+
+`memoGenerator.js` 的第三层 AI 润色必须串行调用各章节（不能 5 个章节并发），或在 `llmClient.js` 已有的 `p-limit(3)` 保护下调用。
+
+**Day 2 验收**：能从 Node.js 端读写飞书多维表格、生成包含中文内容的备忘录和作战卡 Word 文件 + 跑通金标准测试集后 10 个场景 + 前端与后端联调通过。
+
+### **十二、Day 3 HTTP 服务 + WebSocket 推送 + 持久化**
+
+完成 `server.js` 主入口（基于 Fastify）、API 路由、WebSocket 连接管理、`fallbackHandler.js` 降级处理器、`sessionPersistence.js` 会话持久化。
+
+**重点实现**：
+
+`server.js` 基于 Fastify 初始化，配置内置 pino 日志直接输出到 `logs/app.jsonl`，无需额外中间件：
+
+```javascript
+// @ts-check
+const fastify = require('fastify')({
+  logger: { level: process.env.LOG_LEVEL || 'info', file: 'logs/app.jsonl' }
+});
+```
+
+所有业务路由附加 JSON Schema 声明，确保请求/响应结构在运行时可验证。全局错误钩子统一处理业务模块异常，调用 `fallbackHandler.js` 降级后返回结构化错误响应，不依赖各路由手写 `try/catch`。
+
+`sessionPersistence.js` 每次共识链变更时把 `chain.records` 写入 `data/session_<日期>.json`，启动时自动恢复最近一次会话。
+
+`fallbackHandler.js` 实现真正的本地缓存——飞书 API 失败时把待写数据存到 `logs/feishu_local_cache.json`，恢复后能批量重试。LLM 超时时返回降级模板内容（不能空白）。
+
+**Day 3 验收**：完整链路跑通 + WebSocket 推送延迟 < 1 秒 + 降级方案验证 + 服务崩溃后能从持久化文件恢复 + 日志文件可读。
+
+### **十三、Day 4 演练验证与交付**
+
+按现有的演练执行文档（9 个阶段、60+ 检查项）逐项验证 Node.js 版本。重点验证演示模式切换稳定性、飞书实时同步延迟、降级方案有效性这三个 Streamlit 版本表现不佳的环节。
+
+整理交付物清单（见第十七节）。
+
+**Day 4 验收**：演练全部通过 + 交付物清单全部齐全 + README 写完。
+
+### **十四、Day 5-6 Buffer 与正式演练**
+
+v1.1 计划完全没有 buffer，任何环节延误都会挤压交付。v1.3 明确把 Day 5-6 划为 buffer 与正式演练窗口：Day 5 处理 Day 1-4 累积的遗留问题、回归测试、文档完善；Day 6 进行正式演练验证或客户预演。如果 Day 1-4 全部按时完成，Day 5-6 可压缩为 1 天，提前交付。
+
+---
+
+## **第五部分：风险与缓解**
+
+### **十五、风险登记**
+
+| 风险 | 概率 | 影响 | 缓解方案 |
+|---|---|---|---|
+| 飞书后台配置审批延迟 | 中 | 高 | 改造启动前 3 天提交审批，留足时间 |
+| Word 生成中文字体异常 | 中 | 中 | **Day 1 下午**单独验证，发现问题立即评估回退 Python 子进程混合方案 |
+| 飞书 WebSocket 长连接稳定性问题 | 中 | 中 | 保留 30 秒轮询作为降级，长连接断开自动降级 |
+| 候选 Prompt 在 JS SDK 下表现与 Python 不一致 | 低 | 高 | Day 1 单元测试对比输出，发现差异立即调整 Prompt |
+| 业务逻辑迁移遗漏 PRD 细节 | 中 | 中 | 全程对照 PRD v1.1 章节做交叉验证 |
+| LLM 并发限流被触发（OpenAI RPM） | 高 | 中 | `p-limit` 全局限制并发数 3 + 退避重试 |
+| 服务进程崩溃导致会议数据丢失 | 中 | 高 | 会话持久化到本地文件，启动时自动恢复 |
+| 工期估算偏差 | 中 | 低 | Day 5-6 buffer 吸收，必要时把演练验证延后 |
+| Python 版本 record_id Bug 未修被继承 | **已闭环** | 高 | Day 0 内在 Python 仓库修复并打通单元测试，前置阻塞 Node.js 启动 |
+| 前端骨架工作量被低估 | **已闭环** | 中 | v1.3 已纳入 Day 1 下午到 Day 2 并行轨道，单人开发工期顺延至 9 天 |
+| 飞书 SDK 类型声明与实际 API 不一致 | 中 | 低 | JSDoc 过渡方案下影响范围仅限编辑器提示，不阻塞运行时；TypeScript 完整迁移时再处理 |
+
+最大的不确定性来自**业务逻辑迁移的一致性**——两套语言、两种 SDK、两种风格，很难保证 100% 等价。缓解方法是建立金标准测试集——用 Python 版本跑 20 个典型场景，记录中间状态和最终输出，Node.js 版本必须在同样输入下得到相同输出。
+
+### **十六、决策事项（提交产品评估时确认）**
+
+**决策点一：是否同意启动改造**。本次改造投入 7 个工作日（含 Day 0 前置 + Day 5-6 buffer），期间不能交付新功能。需确认演练时间窗口是否允许。
+
+**决策点二：改造期间旧系统是否继续维护**。建议改造期间冻结 Python 版本，发现 bug 只记录不修复（record_id Bug 是唯一例外，必须 Day 0 内修复）。改造完成后，Python 版本作为备份保留 2 周，确认 Node.js 版本稳定后归档。
+
+**决策点三：演练的目标版本**。如果演练在改造完成前进行，使用 Python 版本（含 record_id 修复）；如果在改造完成后进行，使用 Node.js 版本。中间窗口不做演练。
+
+**决策点四：金标准测试集由谁设计、何时设计**。开发者为主责任人，Day 0 内完成 20 个 mock 场景设计；产品方 Day 1 上午 12:00 前完成审核签字。
+
+**决策点五：是否启用前端并行轨道**。多人团队启用并行轨道，工期 7 天；单人开发顺延为串行轨道，工期 9 天。需提前确认开发资源。
+
+---
+
+## **第六部分：交付物与验收**
+
+### **十七、交付物清单**
+
+```
+代码部分：
+□ server.js                    # 主入口（基于 Fastify）
+□ src/                         # 业务逻辑模块（10 个文件，含 JSDoc 类型注释）
+□ public/                      # 前端 HTML/CSS/JS（从零搭建）
+□ tests/                       # 单元测试 + 金标准测试集
+□ package.json + package-lock.json
+
+配置部分：
+□ .env.example                 # 环境变量模板（不含敏感值）
+□ .env                         # 真实环境变量（不入 git）
+□ start.bat                    # Windows 一键启动脚本
+□ start.sh                     # Linux/Mac 启动脚本（备用）
+
+文档部分：
+□ README.md                    # 环境要求、安装步骤、启动命令、常见问题
+□ DEPLOYMENT.md                # 飞书后台配置说明（含截图）
+□ CHANGELOG.md                 # 从 Python 版本到 Node.js 版本的变更记录（含 v1.1→v1.3 修订声明）
+□ docs/演练执行文档-Node版.md   # Node.js 版本的演练检查清单
+
+数据/日志目录：
+□ data/                        # 会话持久化目录
+□ logs/                        # 运行时日志和飞书本地缓存
+
+已知问题清单：
+□ KNOWN_ISSUES.md              # 改造期间发现但未在本次修复的问题
+```
+
+### **十八、重点检查验证项（开发者自检 + 产品验收）**
+
+以下是分模块的关键验证项，每一项必须实际验证通过，不能只是"代码看起来对"。
+
+#### **18.1 共识链模块（consensusChain.js）**
+
+- [ ] 添加事实记录后，`chain.records` 数组长度 +1，状态为 `recorded`
+- [ ] 添加包含"客户认可"等关键词的内容，自动判定为 `consensus` 类型
+- [ ] `confirm(id)` 后状态变为 `confirmed`，时间戳不变
+- [ ] `correctRecord(id, newContent)` 不覆盖原记录，新增 `manual_correction`，原记录状态变 `superseded`
+- [ ] `getConfirmedFacts()` 只返回 `type=fact` 且 `status=confirmed` 的记录
+- [ ] 阶段切换后，新记录的 `stage` 字段是新阶段
+- [ ] 服务重启后，从 `data/session_<日期>.json` 恢复，记录数量和状态完全一致
+
+#### **18.2 候选生成模块（candidateGen.js）**
+
+- [ ] 共识链有 < 3 条 confirmed 事实时，触发反向引导文案，不调用 LLM
+- [ ] 共识链有 ≥ 3 条事实但无 pending 假设时，触发反向引导
+- [ ] 备弹区无 🟢/🟡 SKU 时，先触发补充召回 Top 1，失败才返回约束不满足
+- [ ] 三个候选风险等级各不相同（稳健/平衡/激进）
+- [ ] 三个候选描述长度差异 ≤ 30%
+- [ ] 重生成上限 2 次，第 3 次失败时返回最优 2 条候选 + 提示
+- [ ] **缓存命中时响应时间 < 0.2 秒**
+- [ ] 共识链 `correct_record` 后，缓存立即作废，下次 `/候选` 强制重算
+- [ ] 阶段切换触发缓存重算
+
+#### **18.3 知识召回模块（knowledgeRetriever.js）**
+
+- [ ] 同一关键词 5 秒内重复触发，第二次直接返回缓存
+- [ ] 备弹区刷新最短间隔 30 秒
+- [ ] 单次会议召回累计 50 次后，自动召回停止，仍可手动 `/搜` 触发
+- [ ] 召回结果含时间戳，3 分钟以上的旧 SKU 标记半透明（前端展示用）
+- [ ] 关键词词典加载成功，至少 20 个核心概念
+
+#### **18.4 飞书集成模块（feishuClient.js + feishuSync.js）**
+
+- [ ] `getClientProfile(company)` 返回正确的 `record_id` 和 `fields`（对 list 格式返回值的解析必须正确，不允许再现 Python 版本的 `record_id=None` Bug）
+- [ ] `upsertRecord` 在记录存在时走更新，不存在时走新建
+- [ ] `syncConsensusRecord` 写入第二张表，字段名为"发现内容/确认时间/建议方向"
+- [ ] `pending_client_confirm` 状态的记录**不写入**第二张表（客户不可见）
+- [ ] `confirmed` 状态的记录写入第二张表
+- [ ] `calcCompleteness` 9 字段等权重，每字段 11%，第 100% 由共识链触发
+- [ ] WebSocket 长连接收到飞书侧字段变更，1 秒内推送到前端
+- [ ] WebSocket 断开后自动降级为 30 秒轮询，恢复后自动切回长连接
+- [ ] 触发 429 后读取 `x-ogw-ratelimit-reset`，等待后重试
+- [ ] 飞书侧字段变更不触发"自写自感知"误同步（持有写入指纹集合）
+
+#### **18.5 备忘录生成模块（memoGenerator.js）**
+
+- [ ] 第一层数据提取：`facts`/`consensus`/`pending` 三类数据完整提取
+- [ ] 第二层结构组装：`source=candidate_selected` 优先级最高
+- [ ] 第三层 AI 润色：5 章节调用 LLM，并发数 ≤ 3
+- [ ] 润色失败时降级为要点列表（不空白）
+- [ ] 数字、比例、产品名称在润色后与原始要点完全一致
+- [ ] 第五章服务包推荐档位与共识数量/完整度匹配
+- [ ] 完整度 < 50% 推荐"初步诊断深化(599)"
+- [ ] 共识 ≥ 5 且完整度 ≥ 70% 推荐"商业模式专项咨询(1999)"
+- [ ] **生成总时间 < 30 秒**
+- [ ] 生成的 Word 文件中文字体正常显示，无乱码
+- [ ] 一键发送通过飞书消息成功送达客户
+
+#### **18.6 作战卡模块（battleCardGen.js）**
+
+- [ ] 完整度 ≥ 60% 生成验证假设版
+- [ ] 完整度 < 60% 生成信息建立版
+- [ ] `profile=null` 时不报错，使用空档案兜底
+- [ ] 验证假设版的"诊断假设"区块引用 ≥ 1 个 🟢/🟡 SKU
+- [ ] SKU < 6 条时抛出 `InsufficientSkuError`，不强行生成
+- [ ] 信息建立版的预设追问树固定显示
+- [ ] 风险话术第三条动态引用 🟢 SKU
+- [ ] Word 生成的所有区块均有内容，无空白区块
+- [ ] 字体规范：标题 14pt 加粗、区块 11pt 加粗、正文 10pt
+
+#### **18.7 演示模式（前端 + body.classList）**
+
+- [ ] 切换响应时间 < 0.1 秒，无闪烁
+- [ ] 第一级隐藏：token 计数、SKU ID、调试日志、可信度技术说明全部消失
+- [ ] 第二级替换：阶段名、完整度、SKU 引用文案全部替换
+- [ ] 第三级保留：四栏状态板字体放大 120%、候选卡标题加粗加大、知识库版本号营销格式
+- [ ] **添加新记录后演示模式不退出**（Streamlit 版本的核心痛点已消除）
+- [ ] F11 和 Ctrl+Shift+D 两个快捷键都能触发切换
+- [ ] 状态徽标位置正确（屏幕右上角）
+
+#### **18.8 降级处理（fallbackHandler.js）**
+
+- [ ] 飞书 API 失败时，写入 `logs/feishu_local_cache.json`，主流程不受影响
+- [ ] 网络恢复后，手动触发批量重试，缓存条目同步成功后标记已同步
+- [ ] LLM 超时（10 秒）时返回降级模板，备忘录不出现空白章节
+- [ ] 知识库召回失败时，`/搜 <关键词>` 手动触发可用
+- [ ] WebSocket 断开后自动降级为轮询，前端无感知
+
+#### **18.9 持久化（sessionPersistence.js）**
+
+- [ ] 共识链每次变更立即写入 `data/session_<日期>.json`
+- [ ] 服务启动时自动加载最近一次会话文件
+- [ ] 加载后 `chain.records` 与崩溃前完全一致（数量、顺序、字段）
+- [ ] 跨日切换时新建新会话文件，不污染历史
+
+#### **18.10 性能基准**
+
+- [ ] 候选生成：缓存命中 < 0.2 秒、未命中 < 1.5 秒
+- [ ] 备忘录生成：< 30 秒
+- [ ] 飞书写入：3 次连续写入无 429 错误
+- [ ] WebSocket 推送：飞书侧变更到前端显示 < 1 秒
+- [ ] 服务启动时间：< 3 秒
+
+#### **18.11 与 Python 版本一致性（金标准测试）**
+
+跑完 20 个测试场景后：
+
+- [ ] 确定性逻辑（共识链状态、约束检查结果、完整度计算）byte-level 一致
+- [ ] LLM 涉及的逻辑（候选生成、备忘录润色）使用 mock LLM 输出一致
+- [ ] 集成测试（飞书读写、Word 生成）章节数和字段数一致
+
+#### **18.12 环境与部署**
+
+- [ ] 全新 Windows 设备 `npm install` + `npm start` 一键启动成功
+- [ ] `.env.example` 包含所有必需变量名，启动时校验缺失的变量并提示
+- [ ] `start.bat` 双击可启动
+- [ ] README 中的"常见问题"覆盖至少 5 个新人会遇到的问题
+- [ ] 飞书后台配置文档含截图，新租户能按文档完成配置
+
+---
+
+## **第七部分：改造完成后的演进路径**
+
+### **十九、下一步选项**
+
+Node.js 改造完成后，系统具备以下扩展能力，可根据业务节奏选择启动：
+
+**选项 A：Electron 桌面应用打包**（约 3 天）。用户体验从"开浏览器输地址"升级为"双击图标启动"。适合作为正式产品交付给顾问。
+
+**选项 B：云端多用户部署**（约 5 天）。把全局状态改为按 sessionId 隔离，部署到云服务器，配域名。适合多个顾问同时使用的场景。
+
+**选项 C：移动端适配**（约 4 天）。前端响应式改造 + 触摸交互优化。适合顾问在客户现场使用平板的场景。
+
+**选项 D：TypeScript 渐进迁移**（约 2-3 天，**建议在 Node.js 版本稳定运行 2 周后启动**）。当前 JavaScript + JSDoc 过渡方案已提供编辑器层面的类型检查，TypeScript 完整迁移在代码库逻辑验证正确后进行，风险最低。迁移时 Fastify 是 TypeScript 一等公民，`FastifyRequest<{ Body: T }>` 泛型直接补全，比从 Express 迁移成本低约 50%。迁移建议按模块逐步推进（先 `consensusChain.js`，再 `candidateGen.js`，最后 `server.js`），不做一次性整体迁移。
+
+这四个方向不冲突，可以根据实际需求依次推进。Node.js + Fastify 技术栈对每个方向都有成熟支持，不需要再次重写。
+
+---
+
+## **附录 A：风险等级判断**
+
+按 v1.3 修订版计划，**7 天工期（Day 0 含 record_id Bug 修复 + Day 1-4 后端业务迁移 + 前端骨架并行轨道 + Day 5-6 buffer/演练验证）完成的概率约 80%**。
+
+如为单人开发无法启用并行轨道，工期回落至 **9 天，置信度 75%**。
+
+最大的剩余不确定性是**金标准测试集的设计质量**——v1.3 已把责任人明确为开发者、交付时间明确为 Day 0，但场景覆盖度的好坏仍取决于开发者对 PRD v1.1 的理解深度。建议在 Day 0 设计完成后由产品方审核，确保场景能覆盖共识链状态机的所有分支、候选生成的三约束触发条件、完整度计算的边界值。
+
+提交产品评估时，重点确认三件事：**飞书后台配置的责任人和时间**、**金标准测试集的审核人和审核时限**、**前端开发资源是否能并行启用**。这三件事不落实，工期估算的信心度会显著下降。
+
+---
+
+## **附录 B：CHANGELOG（v1.1 → v1.3）**
+
+**v1.2 修订项（已合入）**
+
+第一，前端工作量纠偏。v1.1 "前端已完成可直接复用"修订为"前端在 Python 版本中由 Streamlit 生成，不存在可复用的独立产物，Node.js 改造需从零搭建"，并在 Day 1 下午到 Day 2 嵌入前端并行轨道。
+
+第二，record_id Bug 前置修复。Day 0 验收新增"Python 版本 `get_client_profile()` 的 `record_id=None` Bug 已修复并通过单元测试"硬性要求。
+
+第三，金标准测试集责任人明确化。"建议产品方提供"修订为"开发者主责设计、Day 0 完成、产品方 Day 1 上午 12:00 前审核签字"。
+
+第四，WebSocket 现状表述精确化。"Python 版本没完整实现"修订为"Python 版本仅实现 30 秒轮询，WebSocket 长连接从未集成进生产路径，仓库中仅保留独立测试脚本 `test-websocket-events.mjs`"。
+
+第五，Day 5-6 buffer 与正式演练窗口显式纳入计划，工期从 5 天调整为 7 天（多人并行）或 9 天（单人串行），置信度从 75% 调整为 80%/75%。
+
+第六，Word 中文字体验证从 Day 2 上午提前到 Day 1 下午。
+
+**v1.3 修订项**
+
+第一，**Web 框架从 Express 升级为 Fastify**。第一部分三节、第三部分新增决策六、第六节、Day 3 章节的 `server.js` 初始化示例、交付物清单全部更新。Fastify 相较 Express 的核心收益：async/await 原生错误冒泡（消除忘写 try/catch 导致进程崩溃的风险）、内置 pino 日志（Day 3 日志配置简化）、路由级 JSON Schema 验证（金标准测试集运行时保障）、TypeScript 演进友好（后续迁移成本低 50%）。
+
+第二，**明确当前实施语言为 JavaScript，新增决策七**。TypeScript 完整迁移作为独立后续任务，推迟到 Node.js 版本稳定运行 2 周后启动。当前过渡方案：关键模块顶部添加 `// @ts-check` + JSDoc 类型注释，提供编辑器层面类型检查，不引入编译步骤、不消耗本次工期。
+
+第三，**第七部分新增选项 D：TypeScript 渐进迁移**（约 2-3 天，Node.js 稳定后启动），沉淀技术债决策，避免未来有人再问"为什么没用 TypeScript"。
+
+**v1.2 撤回项（保持不变，已合入 v1.3）**
+
+v1.1 综合评估稿中"飞书集成迁移对比基准错误"和"WebSocket 补齐不算改造收益"两条结论已于 v1.2 撤回，v1.3 继承此撤回决定。
+
+---
+
+v1.3 完整版到这里，可直接交付产品评审。Day 0 三条并行线（飞书后台审批提交、record_id Bug 修复、金标准测试集设计）随时可以启动，互不阻塞。
