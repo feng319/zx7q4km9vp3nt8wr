@@ -357,6 +357,25 @@ textarea {
   color: #fff;
 }
 
+/* 内联修改按钮（与确认按钮同行，不影响行高） */
+.btn-inline-correct {
+  font-size: 11px;
+  line-height: 1;
+  padding: 1px 6px;
+  border: 1px solid #ffc107;
+  border-radius: 3px;
+  background: transparent;
+  color: #ffc107;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background 0.15s, color 0.15s;
+}
+
+.btn-inline-correct:hover {
+  background: #ffc107;
+  color: #333;
+}
+
 /* 候选方案 */
 .candidate-item {
   border-left: 3px solid var(--primary-color);
