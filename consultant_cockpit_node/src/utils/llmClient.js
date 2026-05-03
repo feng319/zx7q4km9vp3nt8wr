@@ -17,14 +17,34 @@ const limit = pLimit(3);
  */
 class LLMClient {
   constructor() {
-    /** @type {OpenAI} OpenAI 客户端实例 */
-    this.client = new OpenAI({
-      apiKey: process.env.OPENAI_API_KEY,
-      baseURL: process.env.LLM_BASE_URL,
-    });
+    /** @type {OpenAI|null} OpenAI 客户端实例（延迟初始化） */
+    this.client = null;
 
     /** @type {string} 使用的模型名称 */
     this.model = process.env.LLM_MODEL || 'gpt-4';
+  }
+
+  /**
+   * 获取或创建 OpenAI 客户端实例（延迟初始化）
+   *
+   * @returns {OpenAI}
+   * @private
+   */
+  _getClient() {
+    if (!this.client) {
+      const apiKey = process.env.OPENAI_API_KEY;
+      if (!apiKey) {
+        throw new Error(
+          'OPENAI_API_KEY environment variable is missing or empty. ' +
+          'Please set it in your .env file or environment.'
+        );
+      }
+      this.client = new OpenAI({
+        apiKey,
+        baseURL: process.env.LLM_BASE_URL,
+      });
+    }
+    return this.client;
   }
 
   /**
