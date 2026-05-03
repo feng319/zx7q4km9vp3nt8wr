@@ -264,10 +264,30 @@ fastify.get('/api/sessions/:sessionId', async (request, reply) => {
   const session = getOrCreateSession(sessionId);
   const records = session.consensusChain.exportRecords();
 
+  // 计算完整度（基于已确认的事实覆盖的字段数）
+  const confirmedFacts = session.consensusChain.getConfirmedFacts();
+  const fieldNames = ['产品线', '客户群体', '收入结构', '毛利结构', '交付情况', '资源分布', '战略目标', '显性诉求', '隐性痛点'];
+  const fieldsStatus = {};
+  for (const name of fieldNames) {
+    const hasConfirmed = confirmedFacts.some(f =>
+      f.content && f.content.includes(name)
+    );
+    const hasPartial = records.some(r =>
+      r.content && r.content.includes(name)
+    );
+    fieldsStatus[name] = hasConfirmed ? 'confirmed' : hasPartial ? 'partial' : 'empty';
+  }
+  const filledCount = Object.values(fieldsStatus).filter(s => s !== 'empty').length;
+  const completeness = Math.round((filledCount / fieldNames.length) * 100);
+
   return {
     session_id: sessionId,
+    records,
     record_count: records.length,
-    confirmed_facts: session.consensusChain.getConfirmedFacts().length,
+    completeness,
+    fields_status: fieldsStatus,
+    current_stage: '战略梳理',
+    confirmed_facts: confirmedFacts.length,
     confirmed_consensus: session.consensusChain.getConfirmedConsensus().length,
     pending_consensus: session.consensusChain.getPendingConsensus().length,
   };
