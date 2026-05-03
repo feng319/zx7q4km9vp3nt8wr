@@ -543,7 +543,7 @@ async function selectCandidate(index) {
 
   try {
     // 候选选中自动进入共识链（设计文档 4.2 节）
-    await apiRequest(`/sessions/${state.sessionId}/records`, {
+    const result = await apiRequest(`/sessions/${state.sessionId}/records`, {
       method: 'POST',
       body: JSON.stringify({
         type: 'consensus',
@@ -554,6 +554,9 @@ async function selectCandidate(index) {
         recommendation: candidate.title
       })
     });
+
+    // 保存选中候选的记录 ID，供 /确认 使用
+    state.candidateId = result.record?.id || null;
 
     hideCandidatesOverlay();
     setStatus(`已选择候选 ${String.fromCharCode(65 + index)}`, 'success');
