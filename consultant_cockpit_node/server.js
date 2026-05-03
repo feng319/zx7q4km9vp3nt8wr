@@ -278,10 +278,10 @@ fastify.get('/api/sessions/:sessionId', async (request, reply) => {
   const fieldsStatus = {};
   for (const name of fieldNames) {
     const hasConfirmed = confirmedFacts.some(f =>
-      f.content && f.content.includes(name)
+      typeof f.content === 'string' && f.content.includes(name)
     );
     const hasPartial = records.some(r =>
-      r.content && r.content.includes(name)
+      typeof r.content === 'string' && r.content.includes(name)
     );
     fieldsStatus[name] = hasConfirmed ? 'confirmed' : hasPartial ? 'partial' : 'empty';
   }
