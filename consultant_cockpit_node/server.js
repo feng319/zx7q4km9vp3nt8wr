@@ -316,7 +316,7 @@ fastify.post('/api/sessions/:sessionId/records', async (request, reply) => {
   }
 });
 
-// 确认记录
+// 确认记录（指定 ID）
 fastify.post('/api/sessions/:sessionId/records/:recordId/confirm', async (request, reply) => {
   const { sessionId, recordId } = request.params;
   const session = getOrCreateSession(sessionId);
@@ -324,6 +324,35 @@ fastify.post('/api/sessions/:sessionId/records/:recordId/confirm', async (reques
   try {
     session.consensusChain.confirmRecord(recordId);
     return { success: true };
+  } catch (error) {
+    reply.code(400);
+    return { success: false, error: error.message };
+  }
+});
+
+// 确认记录（智能选择：有 record_id 用指定的，否则确认最新 pending 记录）
+fastify.post('/api/sessions/:sessionId/confirm', async (request, reply) => {
+  const { sessionId } = request.params;
+  const session = getOrCreateSession(sessionId);
+  const { record_id } = request.body || {};
+
+  try {
+    let targetId = record_id;
+
+    if (!targetId) {
+      // 找最新一条 pending_client_confirm 的记录
+      const pending = session.consensusChain.records
+        .filter(r => r.status === 'pending_client_confirm')
+        .pop();
+      if (!pending) {
+        reply.code(404);
+        return { success: false, error: '没有待确认的记录' };
+      }
+      targetId = pending.id;
+    }
+
+    session.consensusChain.confirmRecord(targetId);
+    return { success: true, confirmed_id: targetId };
   } catch (error) {
     reply.code(400);
     return { success: false, error: error.message };
