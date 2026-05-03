@@ -354,6 +354,12 @@ describe('Golden Cases: Knowledge Retriever', () => {
 describe('Golden Cases: LLM Client', () => {
   describe('TC011: LLM 并发控制', () => {
     it('should limit concurrent requests', async () => {
+      // 跳过测试如果没有 API Key
+      if (!process.env.OPENAI_API_KEY) {
+        console.log('Skipping TC011: OPENAI_API_KEY not set');
+        return;
+      }
+
       const client = new LLMClient();
       const prompts = Array(10).fill('测试提示');
 
@@ -380,6 +386,12 @@ describe('Golden Cases: LLM Client', () => {
 
   describe('TC012: LLM 超时保护', () => {
     it('should throw timeout error for slow requests', async () => {
+      // 跳过测试如果没有 API Key
+      if (!process.env.OPENAI_API_KEY) {
+        console.log('Skipping TC012: OPENAI_API_KEY not set');
+        return;
+      }
+
       const client = new LLMClient();
 
       // 使用极短的超时时间
