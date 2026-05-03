@@ -54,7 +54,7 @@ class ConsensusChain extends EventEmitter {
       content: record.content,
       source: record.source,
       evidence_sku: record.evidence_sku || [],
-      status: record.status || 'recorded',
+      status: record.status || 'pending_client_confirm',
       confidence: record.confidence || null,
       replaces: record.replaces || null,
       superseded_by: record.superseded_by || null,
