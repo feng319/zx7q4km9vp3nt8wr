@@ -357,8 +357,9 @@ textarea {
 
 .record-header {
   display: flex;
-  justify-content: space-between;
+  flex-wrap: wrap;
   align-items: center;
+  gap: 8px;
   margin-bottom: 8px;
 }
 
@@ -586,7 +587,6 @@ textarea {
   font-size: 12px;
   padding: 2px 8px;
   border-radius: 4px;
-  margin-left: 8px;
 }
 
 .status-tag.recorded {
