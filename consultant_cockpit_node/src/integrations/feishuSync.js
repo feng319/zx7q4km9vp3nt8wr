@@ -2,16 +2,24 @@
 // src/integrations/feishuSync.js — 飞书实时同步模块
 /**
  * @module feishuSync
- * 使用轮询实现飞书多维表格变更检测
+ * 飞书多维表格实时同步，使用 WebSocket 长连接订阅变更事件
  *
- * 架构设计：
- * - 定时轮询：定期查询多维表格变更
- * - 事件驱动：变更通过 EventEmitter 通知订阅者
- * - 断线重连：自动重试机制，指数退避
- * - 本地缓存：用于变更检测和降级
+ * 架构设计（设计文档 11.2.1 节）：
+ * - 主方案：WebSocket 长连接（使用 @larksuiteoapi/node-sdk）
+ * - 监听事件：drive.file.bitable_record_changed_v1
+ * - 降级方案：轮询（当 WebSocket 不可用时自动降级）
+ *
+ * 双层架构：
+ * ┌─────────────────────────────────────────────────────────┐
+ * │  Node.js 进程（事件网关）                                  │
+ * │  WSClient ← 飞书 WebSocket 长连接                          │
+ * │  监听 drive.file.bitable_record_changed_v1               │
+ * │  收到事件 → 发射 'change' 事件给订阅者                      │
+ * └─────────────────────────────────────────────────────────┘
  */
 
 const EventEmitter = require('events');
+const lark = require('@larksuiteoapi/node-sdk');
 const { getLogger } = require('../utils/logger');
 const { getConfig } = require('../utils/config');
 
@@ -20,7 +28,7 @@ const logger = getLogger('feishuSync');
 
 /**
  * 飞书同步状态
- * @typedef {'disconnected' | 'connecting' | 'connected' | 'reconnecting'} SyncStatus
+ * @typedef {'disconnected' | 'connecting' | 'connected' | 'reconnecting' | 'fallback_polling'} SyncStatus
  */
 
 /**
@@ -33,27 +41,40 @@ const logger = getLogger('feishuSync');
  */
 
 /**
- * 飞书实时同步类（基于轮询）
+ * 飞书实时同步类（WebSocket 长连接 + 轮询降级）
  * @extends EventEmitter
  */
 class FeishuSync extends EventEmitter {
   /**
    * @param {Object} options - 配置选项
    * @param {import('./feishuClient').FeishuClient} options.feishuClient - 飞书客户端
-   * @param {number} [options.pollInterval] - 轮询间隔（毫秒），默认 30 秒
+   * @param {string} [options.bitableToken] - 多维表格 Token
+   * @param {number} [options.pollInterval] - 轮询间隔（毫秒），默认 30 秒（降级模式使用）
+   * @param {number} [options.wsReconnectDelay] - WebSocket 重连延迟（毫秒），默认 5 秒
    */
   constructor(options) {
     super();
 
+    const config = getConfig();
+
     this.feishuClient = options.feishuClient;
-    this.pollInterval = options.pollInterval || 30000; // 30 秒
+    this.bitableToken = options.bitableToken || config.feishu.bitableToken;
+    this.pollInterval = options.pollInterval || 30000; // 30 秒（设计文档 2.4 节）
+    this.wsReconnectDelay = options.wsReconnectDelay || 5000;
 
     /** @type {SyncStatus} */
     this._status = 'disconnected';
+
+    /** @type {lark.Client|null} */
+    this._larkClient = null;
+
     /** @type {NodeJS.Timeout|null} */
     this._pollTimer = null;
 
-    // 快照缓存：用于检测变更
+    /** @type {NodeJS.Timeout|null} */
+    this._reconnectTimer = null;
+
+    // 快照缓存：用于变更检测和降级
     /** @type {Map<string, string>} */
     this._snapshot = new Map(); // record_id -> JSON string
 
@@ -64,10 +85,12 @@ class FeishuSync extends EventEmitter {
     // 统计信息
     this._stats = {
       connectedTime: null,
+      wsConnectCount: 0,
       pollCount: 0,
       changeCount: 0,
       errorCount: 0,
       lastError: null,
+      mode: 'none', // 'websocket' | 'polling'
     };
   }
 
@@ -75,6 +98,7 @@ class FeishuSync extends EventEmitter {
 
   /**
    * 启动同步
+   * 设计文档 11.2.1 节：优先使用 WebSocket，失败时降级为轮询
    * @returns {Promise<boolean>}
    */
   async start() {
@@ -86,17 +110,28 @@ class FeishuSync extends EventEmitter {
     try {
       this._status = 'connecting';
 
-      // 初始同步
-      await this._poll();
+      // 尝试 WebSocket 连接
+      const wsSuccess = await this._startWebSocket();
 
-      this._status = 'connected';
+      if (wsSuccess) {
+        this._status = 'connected';
+        this._stats.mode = 'websocket';
+        this._stats.wsConnectCount++;
+        this._stats.connectedTime = new Date().toISOString();
+        this.emit('connected');
+        logger.info('FeishuSync started (WebSocket mode)');
+        return true;
+      }
+
+      // WebSocket 失败，降级为轮询
+      logger.warn('WebSocket connection failed, falling back to polling');
+      await this._startPollingFallback();
+
+      this._status = 'fallback_polling';
+      this._stats.mode = 'polling';
       this._stats.connectedTime = new Date().toISOString();
-
-      // 开始定时轮询
-      this._startPolling();
-
       this.emit('connected');
-      logger.info('FeishuSync started', { pollInterval: this.pollInterval });
+      logger.info('FeishuSync started (polling fallback)', { pollInterval: this.pollInterval });
 
       return true;
     } catch (error) {
@@ -112,20 +147,246 @@ class FeishuSync extends EventEmitter {
    * 停止同步
    */
   stop() {
+    // 停止 WebSocket 重连
+    if (this._reconnectTimer) {
+      clearTimeout(this._reconnectTimer);
+      this._reconnectTimer = null;
+    }
+
+    // 停止轮询
     if (this._pollTimer) {
       clearInterval(this._pollTimer);
       this._pollTimer = null;
     }
 
     this._status = 'disconnected';
+    this._stats.mode = 'none';
     logger.info('FeishuSync stopped');
+    this.emit('disconnected');
+  }
+
+  // ==================== WebSocket 长连接 ====================
+
+  /**
+   * 启动 WebSocket 长连接
+   * 设计文档 11.2.1 节：使用 @larksuiteoapi/node-sdk 的 WebSocket 事件订阅
+   * @private
+   * @returns {Promise<boolean>}
+   */
+  async _startWebSocket() {
+    try {
+      const config = getConfig();
+
+      // 创建 lark 客户端
+      this._larkClient = new lark.Client({
+        appId: config.feishu.appId,
+        appSecret: config.feishu.appSecret,
+        appType: lark.AppType.SelfBuild,
+        domain: lark.Domain.Lark,
+      });
+
+      // 订阅多维表格变更事件
+      // 设计文档 11.2.1 节前置条件：
+      // 1. 开发者后台配置：事件与回调 → 订阅方式 → 使用长连接接收事件
+      // 2. 添加事件：drive.file.bitable_record_changed_v1
+      // 3. 调用订阅 API：POST drive/v1/files/:file_token/subscribe
+
+      // 先订阅多维表格
+      await this._subscribeBitable();
+
+      // 启动事件监听
+      this._larkClient.wsClient.start();
+
+      // 监听连接状态
+      this._larkClient.wsClient.on('connect', () => {
+        logger.info('WebSocket connected');
+        this._stats.wsConnectCount++;
+      });
+
+      this._larkClient.wsClient.on('disconnect', () => {
+        logger.warn('WebSocket disconnected, attempting reconnect');
+        this._handleWsDisconnect();
+      });
+
+      // 监听多维表格变更事件
+      // 事件类型：drive.file.bitable_record_changed_v1
+      this._larkClient.wsClient.on('drive.file.bitable_record_changed_v1', (event) => {
+        this._handleBitableChangeEvent(event);
+      });
+
+      // 等待连接建立（最多 10 秒）
+      await this._waitForWsConnection(10000);
+
+      return true;
+    } catch (error) {
+      logger.error('WebSocket start failed', { error: error.message });
+      this._stats.errorCount++;
+      this._stats.lastError = error.message;
+      return false;
+    }
   }
 
   /**
-   * 开始轮询
+   * 订阅多维表格变更事件
    * @private
    */
-  _startPolling() {
+  async _subscribeBitable() {
+    try {
+      const response = await this._larkClient.drive.file.subscribe({
+        path: {
+          file_token: this.bitableToken,
+        },
+        params: {
+          file_type: 'bitable',
+        },
+      });
+
+      if (response.code !== 0) {
+        throw new Error(`Subscribe API error: ${response.msg}`);
+      }
+
+      logger.info('Subscribed to bitable changes', { bitableToken: this.bitableToken });
+    } catch (error) {
+      logger.error('Failed to subscribe bitable', { error: error.message });
+      throw error;
+    }
+  }
+
+  /**
+   * 等待 WebSocket 连接
+   * @private
+   * @param {number} timeout - 超时时间（毫秒）
+   */
+  async _waitForWsConnection(timeout) {
+    return new Promise((resolve, reject) => {
+      const timer = setTimeout(() => {
+        reject(new Error('WebSocket connection timeout'));
+      }, timeout);
+
+      // 检查是否已连接
+      const checkConnected = () => {
+        if (this._larkClient?.wsClient?.isConnected?.()) {
+          clearTimeout(timer);
+          resolve(true);
+        }
+      };
+
+      // 立即检查一次
+      checkConnected();
+
+      // 监听连接事件
+      this._larkClient.wsClient.once('connect', () => {
+        clearTimeout(timer);
+        resolve(true);
+      });
+    });
+  }
+
+  /**
+   * 处理 WebSocket 断开
+   * @private
+   */
+  _handleWsDisconnect() {
+    if (this._status !== 'connected') return;
+
+    // 尝试重连
+    this._status = 'reconnecting';
+    this._reconnectTimer = setTimeout(async () => {
+      const success = await this._startWebSocket();
+      if (success) {
+        this._status = 'connected';
+        logger.info('WebSocket reconnected');
+      } else {
+        // 重连失败，降级为轮询
+        logger.warn('WebSocket reconnect failed, falling back to polling');
+        await this._startPollingFallback();
+        this._status = 'fallback_polling';
+        this._stats.mode = 'polling';
+      }
+    }, this.wsReconnectDelay);
+  }
+
+  /**
+   * 处理多维表格变更事件
+   * 设计文档 11.2.1 节验证结果：
+   * - action: "record_added" | "record_modified" | "record_deleted"
+   * - record_id: 变更记录ID
+   * - table_id: 数据表ID
+   * @private
+   * @param {Object} event - 飞书事件对象
+   */
+  _handleBitableChangeEvent(event) {
+    try {
+      const body = event.event?.body || {};
+      const action = body.action; // 'record_added' | 'record_modified' | 'record_deleted'
+      const recordId = body.record_id;
+      const tableId = body.table_id;
+
+      if (!recordId) {
+        logger.warn('Bitable change event missing record_id');
+        return;
+      }
+
+      // 跳过已知写入的记录（避免自写自触发）
+      if (this._knownWriteIds.has(recordId)) {
+        this._knownWriteIds.delete(recordId);
+        logger.debug('Skipping known write', { recordId });
+        return;
+      }
+
+      // 映射 action 到 change_type
+      const changeTypeMap = {
+        'record_added': 'create',
+        'record_modified': 'update',
+        'record_deleted': 'delete',
+      };
+      const changeType = changeTypeMap[action] || 'update';
+
+      // 获取完整记录数据（create/update 时）
+      let data = null;
+      if (changeType !== 'delete') {
+        data = await this.feishuClient.getConsensusRecord(recordId);
+      }
+
+      // 构造变更事件
+      /** @type {ChangeEvent} */
+      const changeEvent = {
+        record_id: recordId,
+        data,
+        change_type,
+        timestamp: new Date().toISOString(),
+        table_id: tableId,
+      };
+
+      this._stats.changeCount++;
+      this.emit('change', changeEvent);
+      logger.info('Bitable record changed', { recordId, changeType, action });
+
+      // 更新快照（用于降级模式同步）
+      if (data) {
+        this._snapshot.set(recordId, JSON.stringify(data));
+      } else if (changeType === 'delete') {
+        this._snapshot.delete(recordId);
+      }
+    } catch (error) {
+      logger.error('Failed to handle bitable change event', { error: error.message });
+      this._stats.errorCount++;
+      this._stats.lastError = error.message;
+    }
+  }
+
+  // ==================== 轮询降级方案 ====================
+
+  /**
+   * 启动轮询降级
+   * 设计文档 11.2.1 节：当 Node.js 事件网关不可用时，Python 侧自动降级为轮询
+   * @private
+   */
+  async _startPollingFallback() {
+    // 初始同步
+    await this._poll();
+
+    // 开始定时轮询
     this._pollTimer = setInterval(async () => {
       try {
         await this._poll();
@@ -150,7 +411,7 @@ class FeishuSync extends EventEmitter {
     const currentIds = new Set(records.map(r => r.record_id));
     const previousIds = new Set(this._snapshot.keys());
 
-    // 检测新增
+    // 检测新增和更新
     for (const record of records) {
       if (!record.record_id) continue;
 
@@ -159,14 +420,14 @@ class FeishuSync extends EventEmitter {
 
       if (!previousSnapshot) {
         // 新记录
-        this._handleRecordChange({
+        this._emitChange({
           record_id: record.record_id,
           data: record,
           change_type: 'create',
         });
       } else if (previousSnapshot !== snapshotKey) {
         // 更新的记录
-        this._handleRecordChange({
+        this._emitChange({
           record_id: record.record_id,
           data: record,
           change_type: 'update',
@@ -180,7 +441,7 @@ class FeishuSync extends EventEmitter {
     // 检测删除
     for (const id of previousIds) {
       if (!currentIds.has(id)) {
-        this._handleRecordChange({
+        this._emitChange({
           record_id: id,
           data: null,
           change_type: 'delete',
@@ -196,20 +457,19 @@ class FeishuSync extends EventEmitter {
   }
 
   /**
-   * 处理记录变更
+   * 发射变更事件（避免自写自触发）
    * @private
    * @param {Object} payload
    */
-  _handleRecordChange(payload) {
+  _emitChange(payload) {
     const { record_id, change_type, data } = payload;
 
-    // 跳过已知写入的记录（避免自写自触发）
+    // 跳过已知写入的记录
     if (this._knownWriteIds.has(record_id)) {
       this._knownWriteIds.delete(record_id);
       return;
     }
 
-    // 构造变更事件
     /** @type {ChangeEvent} */
     const event = {
       record_id,
@@ -219,10 +479,8 @@ class FeishuSync extends EventEmitter {
     };
 
     this._stats.changeCount++;
-
-    // 发射事件
     this.emit('change', event);
-    logger.info('Record changed', { record_id, change_type });
+    logger.info('Record changed (polling)', { record_id, change_type });
   }
 
   // ==================== 已知写入注册 ====================
@@ -251,26 +509,19 @@ class FeishuSync extends EventEmitter {
     try {
       const records = await this.feishuClient.listConsensusRecords({ company });
 
-      // 更新快照
+      // 更新快照并检测变更
       for (const record of records) {
         if (record.record_id) {
           const snapshotKey = JSON.stringify(record);
           const oldSnapshot = this._snapshot.get(record.record_id);
 
           if (oldSnapshot !== snapshotKey) {
-            // 检测到变更
             this._snapshot.set(record.record_id, snapshotKey);
-
-            /** @type {ChangeEvent} */
-            const event = {
+            this._emitChange({
               record_id: record.record_id,
               data: record,
               change_type: 'update',
-              timestamp: new Date().toISOString(),
-            };
-
-            this._stats.changeCount++;
-            this.emit('change', event);
+            });
           }
         }
       }
@@ -286,13 +537,14 @@ class FeishuSync extends EventEmitter {
 
   /**
    * 获取同步状态
-   * @returns {{status: SyncStatus, stats: Object, snapshotSize: number}}
+   * @returns {{status: SyncStatus, stats: Object, snapshotSize: number, mode: string}}
    */
   getStatus() {
     return {
       status: this._status,
       stats: { ...this._stats },
       snapshotSize: this._snapshot.size,
+      mode: this._stats.mode,
     };
   }
 
@@ -315,15 +567,18 @@ class FeishuSyncMock extends EventEmitter {
     this._status = 'disconnected';
     this._stats = {
       connectedTime: null,
-      reconnectCount: 0,
+      wsConnectCount: 0,
+      pollCount: 0,
       changeCount: 0,
       errorCount: 0,
       lastError: null,
+      mode: 'none',
     };
   }
 
   async start() {
     this._status = 'connected';
+    this._stats.mode = 'websocket';
     this._stats.connectedTime = new Date().toISOString();
     this.emit('connected');
     return true;
@@ -331,6 +586,7 @@ class FeishuSyncMock extends EventEmitter {
 
   stop() {
     this._status = 'disconnected';
+    this._stats.mode = 'none';
     this.emit('disconnected');
   }
 
@@ -347,6 +603,7 @@ class FeishuSyncMock extends EventEmitter {
       status: this._status,
       stats: { ...this._stats },
       snapshotSize: 0,
+      mode: this._stats.mode,
     };
   }
 
