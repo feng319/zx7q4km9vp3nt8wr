@@ -616,11 +616,17 @@ textarea {
   padding: 0;
 }
 
-/* 底部 */
+/* 底部：固定在屏幕底部，始终可见 */
 .footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
   background: var(--panel-bg);
   padding: 16px 24px;
   border-top: 1px solid var(--border-color);
+  z-index: 100;
+  box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.1);
 }
 
 .actions {
