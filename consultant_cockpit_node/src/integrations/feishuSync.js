@@ -353,7 +353,7 @@ class FeishuSync extends EventEmitter {
       const changeEvent = {
         record_id: recordId,
         data,
-        change_type,
+        change_type: changeType,
         timestamp: new Date().toISOString(),
         table_id: tableId,
       };
