@@ -587,17 +587,26 @@ describe('Golden Cases: Battle Card', () => {
 
   describe('TC019: 作战卡 SKU 不足异常', () => {
     it('should throw InsufficientSkuError when SKU count is low', async () => {
+      // 创建一个模拟的 knowledgeRetriever，recallByKeywords 返回少于 6 条 SKU
+      // 注意：BattleCardGenerator 使用 recallByKeywords 方法
+      // 当 SKU < 6 条时，_generateHypothesisVersion 会抛出 InsufficientSkuError
       const battleCardGen = new BattleCardGenerator({
         feishuClient: {
           getClientProfile: async () => ({
             record_id: 'test',
             fields: { 客户公司名: '测试公司' },
           }),
-          calcCompleteness: () => 0.5,
+          // 完整度 >= 60% 会触发 hypothesis 模式，需要 >= 6 条 SKU
+          calcCompleteness: () => 0.75,
         },
         llmClient: ctx.llmClient,
         knowledgeRetriever: {
-          getAvailableSkus: () => [], // 返回空 SKU 列表
+          // 返回少于 6 条 SKU
+          recallByKeywords: () => [
+            { id: 'sku_001', title: 'SKU 1', summary: '测试', confidence: '🟢', stage: '战略梳理' },
+            { id: 'sku_002', title: 'SKU 2', summary: '测试', confidence: '🟡', stage: '商业模式' },
+            { id: 'sku_003', title: 'SKU 3', summary: '测试', confidence: '🟢', stage: '战略梳理' },
+          ],
         },
       });
 
