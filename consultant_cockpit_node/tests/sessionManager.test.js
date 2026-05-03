@@ -235,19 +235,22 @@ describe('SessionManager', () => {
 
   describe('cleanupExpired', () => {
     it('should cleanup expired sessions', async () => {
-      // 创建一个会话
-      await manager.saveSession('old-session', []);
+      // 创建一个会话并手动设置旧的更新时间
+      const sessionId = 'old-session';
+      await manager.saveSession(sessionId, []);
 
-      // 修改文件时间戳使其过期（8天前）
-      const filePath = path.join(TEST_STORAGE_DIR, 'old-session.json');
-      const oldTime = Date.now() - 8 * 24 * 60 * 60 * 1000;
-      fs.utimesSync(filePath, new Date(oldTime), new Date(oldTime));
+      // 加载并修改 snapshot 的 updated_at 为 8 天前
+      const filePath = path.join(TEST_STORAGE_DIR, `${sessionId}.json`);
+      const content = JSON.parse(fs.readFileSync(filePath, 'utf-8'));
+      const oldTime = new Date(Date.now() - 8 * 24 * 60 * 60 * 1000).toISOString();
+      content.updated_at = oldTime;
+      fs.writeFileSync(filePath, JSON.stringify(content, null, 2), 'utf-8');
 
       // 清理 7 天以上的会话
       const cleaned = await manager.cleanupExpired(7 * 24 * 60 * 60 * 1000);
 
       assert.strictEqual(cleaned, 1);
-      assert.strictEqual(await manager.loadSession('old-session'), null);
+      assert.strictEqual(await manager.loadSession(sessionId), null);
     });
 
     it('should keep non-expired sessions', async () => {
