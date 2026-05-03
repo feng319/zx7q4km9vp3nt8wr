@@ -933,23 +933,25 @@ textarea {
 }
 
 .feishu-status .status-dot {
-  width: 8px !important;
-  height: 8px !important;
+  width: 8px;
+  height: 8px;
   min-width: 8px;
-  border-radius: 50% !important;
-  transition: background-color 0.3s ease;
-  background-color: #999999 !important;
+  border-radius: 50%;
+  transition: none;
 }
 
+/* 连接状态 - 绿色 */
 .feishu-status .status-dot-connected {
   background-color: #52c41a !important;
   box-shadow: 0 0 4px #52c41a !important;
 }
 
+/* 断开状态 - 灰色 */
 .feishu-status .status-dot-disconnected {
   background-color: #999999 !important;
 }
 
+/* 错误状态 - 红色 */
 .feishu-status .status-dot-error {
   background-color: #ff4d4f !important;
 }
