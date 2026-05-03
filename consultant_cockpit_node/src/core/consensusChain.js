@@ -90,10 +90,11 @@ class ConsensusChain extends EventEmitter {
   /**
    * 确认记录
    * @param {string} recordId - 记录 ID
+   * @param {string} [company] - 客户公司名（用于同步到客户档案表）
    * @throws {Error} 记录不存在时抛出
    * @fires ConsensusChain#change
    */
-  confirmRecord(recordId) {
+  confirmRecord(recordId, company) {
     const record = this.getRecord(recordId);
     if (!record) {
       throw new Error(`找不到记录: ${recordId}`);
@@ -106,7 +107,7 @@ class ConsensusChain extends EventEmitter {
 
     // 同步到飞书
     if (this.feishuClient) {
-      this._syncToFeishu(record).catch(err => {
+      this._syncToFeishu(record, company).catch(err => {
         console.warn(`飞书同步失败: ${err.message}`);
       });
     }
