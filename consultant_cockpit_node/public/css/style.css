@@ -612,8 +612,16 @@ textarea {
   min-width: 200px;
 }
 
+/* 左栏内部使用 flex 布局 */
+.status-panel .panel-content {
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+}
+
 .completeness-section {
   margin-bottom: 16px;
+  flex-shrink: 0;
 }
 
 .progress-bar {
@@ -640,6 +648,9 @@ textarea {
   display: flex;
   flex-direction: column;
   gap: 8px;
+  flex: 1;
+  overflow-y: auto;
+  min-height: 0;
 }
 
 .field-item {
