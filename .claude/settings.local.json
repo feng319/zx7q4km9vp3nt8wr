@@ -1,7 +1,8 @@
 {
   "permissions": {
     "allow": [
-      "Bash(lark-cli:*)"
+      "Bash(lark-cli:*)",
+      "Bash(node test_error.js)"
     ],
     "deny": [],
     "ask": []
