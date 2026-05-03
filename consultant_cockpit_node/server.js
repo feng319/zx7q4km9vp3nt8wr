@@ -544,19 +544,11 @@ fastify.post('/api/fallback/retry', async (request, reply) => {
 // ==================== WebSocket 路由 ====================
 
 fastify.register(async function (fastify) {
-  fastify.get('/ws/:sessionId', { websocket: true }, (connection, request) => {
+  fastify.get('/ws/:sessionId', { websocket: true }, (socket, request) => {
     const { sessionId } = request.params;
     const session = getOrCreateSession(sessionId);
 
     fastify.log.info({ sessionId }, 'WebSocket connected');
-
-    // 检查 connection 和 socket 是否存在
-    if (!connection || !connection.socket) {
-      fastify.log.error({ sessionId }, 'WebSocket connection or socket is undefined');
-      return;
-    }
-
-    const socket = connection.socket;
 
     // 发送初始状态
     socket.send(JSON.stringify({
