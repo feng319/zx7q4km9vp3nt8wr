@@ -312,10 +312,11 @@ class ConsensusChain extends EventEmitter {
     const profileData = {};
     const content = record.content || '';
 
-    // 9 个静态字段的精确匹配（格式：字段名：值）
+    // 11 个静态字段的精确匹配（格式：字段名：值）
     const fieldNames = [
       '产品线', '客户群体', '收入结构', '毛利结构',
-      '交付情况', '资源分布', '战略目标', '显性诉求'
+      '交付情况', '资源分布', '战略目标', '显性诉求',
+      '当前追问', '诊断进度'
     ];
 
     for (const field of fieldNames) {

@@ -75,6 +75,7 @@
  * @property {string} 显性诉求
  * @property {string} [当前追问]
  * @property {string} [诊断进度]
+ * @property {number} [完整度] - 档案完整度百分比 (0-100)
  */
 
 /**
