@@ -49,6 +49,11 @@ fastify.register(require('@fastify/static'), {
   prefix: '/static/',
 });
 
+// 根路径指向 index.html
+fastify.get('/', async (request, reply) => {
+  return reply.sendFile('index.html');
+});
+
 // ==================== 全局状态 ====================
 
 /** @type {Map<string, {consensusChain: ConsensusChain, candidateGen: CandidateGenerator, knowledgeRetriever: KnowledgeRetriever}>} */
