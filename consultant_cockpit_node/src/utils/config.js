@@ -113,10 +113,32 @@ const Config = {
   PORT: parseInt(process.env.PORT || '8501', 10),
 
   /**
+   * 服务主机
+   * @type {string}
+   */
+  HOST: process.env.HOST || '0.0.0.0',
+
+  /**
    * 日志级别
    * @type {string}
    */
   LOG_LEVEL: process.env.LOG_LEVEL || 'info',
+
+  // ====================
+  // 会话配置
+  // ====================
+
+  /**
+   * 会话存储目录
+   * @type {string}
+   */
+  SESSION_STORAGE_DIR: process.env.SESSION_STORAGE_DIR || './data/sessions',
+
+  /**
+   * 会话自动保存间隔（毫秒）
+   * @type {number}
+   */
+  SESSION_AUTO_SAVE_INTERVAL: parseInt(process.env.SESSION_AUTO_SAVE_INTERVAL || '60000', 10),
 
   // ====================
   // 知识库配置
