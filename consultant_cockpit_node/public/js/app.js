@@ -1085,6 +1085,9 @@ async function autoLoadRecentSession() {
       // 加载会话状态
       await getSessionState();
 
+      // 加载初始备弹
+      await loadInitialSkus();
+
       setStatus(`已恢复最近会话 (${recentSession.record_count} 条记录)`, 'success');
       return true;
     }
