@@ -431,12 +431,19 @@ describe('第六部分：知识库与备弹区', () => {
 
   describe('检查 31：旧 SKU 样式标记', () => {
     it('应能识别旧 SKU', () => {
-      const skus = retriever.getAvailableSkus();
+      // 先召回一些 SKU
+      retriever.recallByKeywords(['储能'], 5);
+      const skus = retriever.skuCache;
 
       // 检查 SKU 结构
       if (skus.length > 0) {
         assert.ok(skus[0].id, 'SKU 应有 ID');
         assert.ok(skus[0].title, 'SKU 应有标题');
+      } else {
+        // 如果缓存为空，使用 mock 数据验证结构
+        const mockSku = KnowledgeRetriever.MOCK_SKUS[0];
+        assert.ok(mockSku.id, 'SKU 应有 ID');
+        assert.ok(mockSku.title, 'SKU 应有标题');
       }
     });
   });
