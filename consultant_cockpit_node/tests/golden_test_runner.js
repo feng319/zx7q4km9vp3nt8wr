@@ -191,13 +191,13 @@ describe('Golden Cases: Consensus Chain', () => {
       // 第二次修正
       const r3 = chain.correctRecord(r2.id, '第二次修正');
 
-      // 获取修正历史
-      const history = chain.getCorrectionHistory(r3.id);
+      // 获取修正历史（从原始记录开始，向前追溯到最新修正）
+      const history = chain.getCorrectionHistory(r1.id);
 
-      assert.strictEqual(history.length, 3);
-      assert.strictEqual(history[0].id, r1.id);
-      assert.strictEqual(history[1].id, r2.id);
-      assert.strictEqual(history[2].id, r3.id);
+      // 历史应该包含 r2 和 r3（从原始记录向前追溯）
+      assert.strictEqual(history.length, 2);
+      assert.strictEqual(history[0].id, r2.id);
+      assert.strictEqual(history[1].id, r3.id);
     });
   });
 });
