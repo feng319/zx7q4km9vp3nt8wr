@@ -307,7 +307,7 @@ textarea {
 
 .record-stage {
   font-size: 12px;
-  color: #666;
+  color: var(--text-secondary-color);
 }
 
 .record-content {
@@ -393,7 +393,7 @@ textarea {
 
 .sku-summary {
   font-size: 13px;
-  color: #666;
+  color: var(--text-secondary-color);
 }
 
 /* 底部 */
