@@ -337,13 +337,22 @@ ${pendingList}
           description = normalized;
         }
 
-        // 识别风险等级
+        // 识别风险等级（优先匹配开头的 "X型策略" 模式）
         /** @type {RiskLevel} */
         let riskLevel = '平衡'; // 默认
-        for (const [keyword, level] of Object.entries(riskKeywords)) {
-          if (description.includes(keyword) || title.includes(keyword)) {
-            riskLevel = /** @type {RiskLevel} */ (level);
-            break;
+
+        // 优先匹配开头的 "X型策略" 模式
+        const prefixMatch = description.match(/^(稳健|平衡|激进|保守|中性|积极)型/);
+        if (prefixMatch) {
+          const keyword = prefixMatch[1];
+          riskLevel = /** @type {RiskLevel} */ (riskKeywords[keyword] || '平衡');
+        } else {
+          // 降级：遍历关键词匹配
+          for (const [keyword, level] of Object.entries(riskKeywords)) {
+            if (description.includes(keyword) || title.includes(keyword)) {
+              riskLevel = /** @type {RiskLevel} */ (level);
+              break;
+            }
           }
         }
 
