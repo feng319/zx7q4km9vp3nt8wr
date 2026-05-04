@@ -35,11 +35,17 @@ class ConsensusChain extends EventEmitter {
   /**
    * 添加记录
    * @param {Omit<ConsensusRecord, 'id'|'timestamp'>} record - 记录数据（不含 id 和 timestamp）
-   * @param {boolean} [syncToFeishu=true] - 是否同步到飞书
+   * @param {Object} [options] - 可选参数
+   * @param {boolean} [options.syncToFeishu=false] - 是否同步到飞书
+   * @param {string} [options.company] - 客户公司名（用于同步到客户档案表）
    * @returns {ConsensusRecord} 添加后的记录（含 id 和 timestamp）
    * @fires ConsensusChain#change
    */
-  addRecord(record, syncToFeishu = false) {
+  addRecord(record, options = {}) {
+    // 兼容旧的调用方式：addRecord(record, syncToFeishu)
+    const syncToFeishu = typeof options === 'boolean' ? options : (options.syncToFeishu || false);
+    const company = typeof options === 'boolean' ? undefined : options.company;
+
     const now = new Date().toISOString();
 
     // 使用 crypto.randomUUID() 生成唯一 ID（修复 Python 版本的数组长度 Bug）
@@ -64,9 +70,9 @@ class ConsensusChain extends EventEmitter {
 
     this.records.push(newRecord);
 
-    // 可选同步到飞书
+    // 可选同步到飞书（传递 company 用于同步到客户档案表）
     if (syncToFeishu && this.feishuClient) {
-      this._syncToFeishu(newRecord).catch(err => {
+      this._syncToFeishu(newRecord, company).catch(err => {
         // 飞书同步失败不影响本地记录
         console.warn(`飞书同步失败: ${err.message}`);
       });
