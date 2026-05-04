@@ -196,6 +196,48 @@ function isValidType(type) {
   return type === 'fact' || type === 'consensus';
 }
 
+/**
+ * 将内部记录转换为客户视图格式（PRD 4.4 节：3 列）
+ * 用于投屏、客户可见场景
+ * @param {Object} record - 内部记录对象（含所有字段）
+ * @returns {Object} 客户视图记录（只有 3 列）
+ */
+function toCustomerView(record) {
+  return {
+    '发现内容': record.content || record['内容'] || '',
+    '确认时间': record.timestamp || record['时间戳'] || '',
+    '建议方向': record.recommendation || record['建议方向'] || '',
+  };
+}
+
+/**
+ * 批量转换内部记录为客户视图格式
+ * @param {Object[]} records - 内部记录数组
+ * @returns {Object[]} 客户视图记录数组
+ */
+function toCustomerViewBatch(records) {
+  if (!Array.isArray(records)) return [];
+  return records.map(toCustomerView);
+}
+
+/**
+ * 过滤出客户可见的字段（internal: false）
+ * @param {Object} record - 内部记录对象
+ * @returns {Object} 只含客户可见字段的记录
+ */
+function filterCustomerFields(record) {
+  const result = {};
+  for (const field of CONSENSUS_FIELDS) {
+    if (!field.internal) {
+      const value = record[field.name] || record[field.name.toLowerCase()];
+      if (value !== undefined) {
+        result[field.name] = value;
+      }
+    }
+  }
+  return result;
+}
+
 module.exports = {
   // 常量
   COMPLETENESS_FIELDS,
