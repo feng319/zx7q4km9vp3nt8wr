@@ -95,11 +95,15 @@ async function runTests() {
   console.log(`  ✓ 刷新后阶段: ${state.current_stage}`);
 
   // 步骤 8：验证记录阶段正确
-  console.log('\n步骤 8：验证所有记录阶段');
+  console.log('\n步骤 8：验证记录阶段');
   state = await apiRequest(`/sessions/${sessionId}`);
-  const stageCheck = state.records.every(r => r.stage === '商业模式');
-  assert.strictEqual(stageCheck, true, '所有记录阶段应为商业模式');
-  console.log(`  ✓ 所有记录阶段正确`);
+  // 第 1 条记录是在切换前创建的，阶段应为"战略梳理"
+  assert.strictEqual(state.records[0].stage, '战略梳理', '第1条记录阶段应为战略梳理');
+  // 第 2 条及之后的记录是在切换后创建的，阶段应为"商业模式"
+  const laterRecords = state.records.slice(1);
+  const stageCheck = laterRecords.every(r => r.stage === '商业模式');
+  assert.strictEqual(stageCheck, true, '切换后的记录阶段应为商业模式');
+  console.log(`  ✓ 记录阶段正确（第1条: 战略梳理, 其余: 商业模式)`);
 
   // 测试无效阶段
   console.log('\n额外测试：无效阶段');
