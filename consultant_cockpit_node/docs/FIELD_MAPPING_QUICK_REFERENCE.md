@@ -115,7 +115,12 @@ superseded          →  已过时        已过时 → superseded
 | 9 | 显性诉求 | flddrDkmYx | 文本 | 显性诉求 | ✅ 客户可见 |
 | 10 | 当前追问 | fldbU5arYa | 文本 | 当前追问 | ✅ 客户可见 |
 | 11 | 诊断进度 | fldSCl5WAg | 数字 | 诊断进度 | ✅ 客户可见 |
-| 12 | 完整度 | fldh9UIUjB | 进度条 | 完整度 | ⚠️ PRD 未定义 |
+| - | ~~完整度~~ | fldh9UIUjB | 进度条 | - | ❌ 待删除 |
+| - | ~~ID~~ | fldNbOHV2L | 自动编号 | - | ❌ 待删除 |
+
+**待删除字段**:
+- `完整度` (fldh9UIUjB) - PRD 未定义，与诊断进度语义重叠
+- `ID` (fldNbOHV2L) - PRD 未定义，飞书系统已有隐藏的 record_id
 
 ### 完整度计算不一致 ⚠️ P0
 
