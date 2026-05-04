@@ -3,51 +3,23 @@
 /**
  * @module fieldMapping
  * 集中管理飞书多维表格字段与代码之间的映射关系
+ *
+ * 注意：此文件是 src/config/fields.js 的子集，保留用于向后兼容
+ * 新代码应直接使用 src/config/fields.js
  */
 
-// ==================== 诊断共识表映射 ====================
-
-/**
- * 记录类型映射（代码 ↔ 飞书）
- * @type {{toFeishu: Object<string, string>, toCode: Object<string, string>}}
- */
-const CONSENSUS_TYPE_MAP = {
-  // 代码英文值 → 飞书中文选项
-  toFeishu: {
-    'fact': '事实',
-    'consensus': '共识',
-    'case': '案例',
-    'insight': '洞察',
-  },
-  // 飞书中文选项 → 代码英文值
-  toCode: {
-    '事实': 'fact',
-    '共识': 'consensus',
-    '案例': 'case',
-    '洞察': 'insight',
-  },
-};
-
-/**
- * 记录状态映射（代码 ↔ 飞书）
- * @type {{toFeishu: Object<string, string>, toCode: Object<string, string>}}
- */
-const CONSENSUS_STATUS_MAP = {
-  // 代码英文值 → 飞书中文选项
-  toFeishu: {
-    'recorded': '待确认',
-    'pending_client_confirm': '待确认',
-    'confirmed': '已确认',
-    'active': '已确认',
-    'superseded': '已过时',
-  },
-  // 飞书中文选项 → 代码英文值
-  toCode: {
-    '待确认': 'pending_client_confirm',
-    '已确认': 'confirmed',
-    '已过时': 'superseded',
-  },
-};
+// 从统一配置模块导入
+const {
+  CONSENSUS_TYPE_MAP,
+  CONSENSUS_STATUS_MAP,
+  CONSENSUS_FIELDS,
+  PROFILE_FIELDS,
+  typeToFeishu,
+  typeToCode,
+  statusToFeishu,
+  statusToCode,
+  isValidType,
+} = require('../config/fields');
 
 /**
  * 诊断共识表字段定义
