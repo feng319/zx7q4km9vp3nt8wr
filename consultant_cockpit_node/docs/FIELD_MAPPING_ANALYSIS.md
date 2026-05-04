@@ -6,352 +6,262 @@
 
 ---
 
-## 修复状态汇总
+## 问题修复总览
+
+### 已修复问题
 
 | 问题 | 优先级 | 状态 | 修复日期 |
 |------|--------|------|----------|
 | 类型/状态反向映射缺失 | 🔴高 | ✅已修复 | 2026-05-04 |
-| 客户档案表缺少完整度字段映射 | 🔴高 | ✅已修复 | 2026-05-04 |
 | getClientProfile filter 匹配逻辑错误 | 🔴高 | ✅已修复 | 2026-05-04 |
 | _extractProfileData 字段提取不完整 | 🟡中 | ✅已修复 | 2026-05-04 |
 | 创建统一字段映射模块 | 🟡中 | ✅已完成 | 2026-05-04 |
-| feishu_record_id 字段未同步 | 🟡中 | ⏳待处理 | - |
-| 前端 inferType 逻辑与飞书选项不一致 | 🟡中 | ⏳待处理 | - |
-| 时间戳格式不一致 | 🟢低 | ⏳待处理 | - |
-| evidence_sku 数组处理 | 🟢低 | ⏳待处理 | - |
+
+### 待修复问题（按优先级排序）
+
+| # | 问题 | 优先级 | 影响 | 预计工时 |
+|---|------|--------|------|----------|
+| 1 | 诊断共识表 12 列 vs PRD 3 列 | **P0** | 演练投屏暴露内部状态 | 2h |
+| 2 | 状态映射多对一不可逆 | **P0** | 数据读回状态语义改变 | 1.5h |
+| 3 | 完整度计算不一致（8 vs 9 字段） | **P0** | 作战卡/备忘录判定不自洽 | 2h |
+| 4 | 客户档案"完整度"字段冗余 | **P0** | 内部状态泄漏给客户 | 0.5h |
+| 5 | 类型字段多余 case/insight | P1 | 记录静默丢失 | 1h |
+| 6 | recommendation 写入校验缺失 | P1 | fact 类型携带建议方向 | 0.5h |
+| 7 | 429 限流处理缺失 | P1 | 高频写入数据丢失 | 1.5h |
+| 8 | 共识链持久化集成待确认 | P1 | 进程崩溃数据丢失 | 1h |
+| 9 | 富文本多段拼接 | P2 | 丢失多段内容 | 0.5h |
+
+**总工时**: P0(6h) + P1(4h) + P2(0.5h) = **10.5 小时**
 
 ---
 
-## 一、表格结构概览
+## 一、PRD 与实现对比
 
-### 1. 诊断共识表 (tblfZDyYjK)
+### 1.1 诊断共识表设计偏差 ⚠️ P0
+
+| 对比项 | PRD 4.4 定义 | 当前实现 | 偏差程度 |
+|-------|-------------|---------|---------|
+| 表名 | 「诊断共识」表 | 诊断共识表 | ✅ 一致 |
+| 列数 | **3 列** | **12 列** | ❌ 严重偏差 |
+| 列名 | 发现内容、确认时间、建议方向 | 记录ID、时间戳、类型、阶段、内容、来源、关联SKU、状态、置信度、替代记录、被替代、建议方向 | ❌ 完全不同 |
+| 用途 | **客户视图**（干净专业） | **内部调试视图**（暴露所有字段） | ❌ 违反设计 |
+
+**问题详情**：
+- 代码中没有 PRD 定义的"发现内容"、"确认时间"字段名
+- 当前实现把所有内部状态（`type`、`status`、`source`、`evidence_sku`）全部暴露到飞书
+- 违反 PRD 1.3 节"客户永远只看飞书"和 5.1 节"客户不应看到 SKU 编号"
+
+**修复方案**：
+- 方案 A（轻量）：保留当前 12 字段表作为顾问端调试用，新建 3 列客户视图表
+- 方案 B（重）：重构为内部表 + 客户表双表结构
+
+### 1.2 客户档案表字段对比
+
+| PRD 定义 | 当前实现 | 状态 |
+|---------|---------|------|
+| 9 静态字段 | 9 静态字段 | ✅ 一致 |
+| 2 动态字段（当前追问、诊断进度） | 2 动态字段 | ✅ 一致 |
+| - | **完整度**（额外） | ❌ PRD 未定义 |
+
+---
+
+## 二、表格结构概览
+
+### 2.1 诊断共识表 (tblfZDyYjK)
 **环境变量**: `FEISHU_BITABLE_CONSENSUS_TABLE_ID`
 
-| 飞书字段名 | field_id | 类型 | 代码字段 | 前端使用 |
-|-----------|----------|------|---------|---------|
-| 记录ID | fldt1SGX6u | 1(文本) | `id` | ✓ |
-| 时间戳 | fldLbkq9WL | 1(文本) | `timestamp` | - |
-| 类型 | fldFHZB1nv | 3(单选) | `type` | ✓ |
-| 阶段 | fld5nagQ3S | 3(单选) | `stage` | ✓ |
-| 内容 | fldt3G5vcE | 1(文本) | `content` | ✓ |
-| 来源 | fldz0rHGbl | 1(文本) | `source` | - |
-| 关联SKU | fld7weLW44 | 1(文本) | `evidence_sku` | - |
-| 状态 | fldFVZKCPs | 3(单选) | `status` | ✓ |
-| 置信度 | fld0lg3Pej | 3(单选) | `confidence` | - |
-| 替代记录 | fldk0C1onN | 1(文本) | `replaces` | - |
-| 被替代 | fldfbPEPjE | 1(文本) | `superseded_by` | - |
-| 建议方向 | fldXfkJp5p | 1(文本) | `recommendation` | - |
+| # | 飞书字段名 | field_id | 类型 | 代码字段 | PRD 可见性 |
+|---|-----------|----------|------|---------|-----------|
+| 1 | 记录ID | fldt1SGX6u | 1(文本) | `id` | ❌ 内部 |
+| 2 | 时间戳 | fldLbkq9WL | 1(文本) | `timestamp` | → 确认时间 |
+| 3 | 类型 | fldFHZB1nv | 3(单选) | `type` | ❌ 内部 |
+| 4 | 阶段 | fld5nagQ3S | 3(单选) | `stage` | ❌ 内部 |
+| 5 | 内容 | fldt3G5vcE | 1(文本) | `content` | → 发现内容 |
+| 6 | 来源 | fldz0rHGbl | 1(文本) | `source` | ❌ 内部 |
+| 7 | 关联SKU | fld7weLW44 | 1(文本) | `evidence_sku` | ❌ 内部 |
+| 8 | 状态 | fldFVZKCPs | 3(单选) | `status` | ❌ 内部 |
+| 9 | 置信度 | fld0lg3Pej | 3(单选) | `confidence` | ❌ 内部 |
+| 10 | 替代记录 | fldk0C1onN | 1(文本) | `replaces` | ❌ 内部 |
+| 11 | 被替代 | fldfbPEPjE | 1(文本) | `superseded_by` | ❌ 内部 |
+| 12 | 建议方向 | fldXfkJp5p | 1(文本) | `recommendation` | ✅ 客户可见 |
 
-### 2. 客户档案表 (tbli9vrIAMgLfbvP)
+### 2.2 客户档案表 (tbli9vrIAMgLfbvP)
 **环境变量**: `FEISHU_BITABLE_PROFILE_TABLE_ID`
 
-| 飞书字段名 | field_id | 类型 | 代码字段 | 前端使用 |
-|-----------|----------|------|---------|---------|
-| ID | fldNbOHV2L | 1005(自动编号) | - | - |
-| 客户公司名 | fldSMirg0Q | 1(文本) | `客户公司名` | ✓(company) |
-| 显性诉求 | flddrDkmYx | 1(文本) | `显性诉求` | ✓ |
-| 产品线 | fldcpGsA0i | 1(文本) | `产品线` | ✓ |
-| 客户群体 | fldgbcctGn | 1(文本) | `客户群体` | ✓ |
-| 收入结构 | fldRsdz5k7 | 1(文本) | `收入结构` | ✓ |
-| 毛利结构 | fldqdZ29m2 | 1(文本) | `毛利结构` | ✓ |
-| 交付情况 | fldFd96pt1 | 1(文本) | `交付情况` | ✓ |
-| 资源分布 | fld6ZJQ69C | 1(文本) | `资源分布` | ✓ |
-| 战略目标 | fld7HElqu6 | 1(文本) | `战略目标` | ✓ |
-| 完整度 | fldh9UIUjB | 20(进度条) | ❌缺失 | - |
-| 当前追问 | fldbU5arYa | 1(文本) | `当前追问` | - |
-| 诊断进度 | fldSCl5WAg | 2(数字) | `诊断进度` | - |
+| # | 飞书字段名 | field_id | 类型 | 代码字段 | PRD 可见性 |
+|---|-----------|----------|------|---------|-----------|
+| 1 | ID | fldNbOHV2L | 1005(自动编号) | - | ❌ 内部 |
+| 2 | 客户公司名 | fldSMirg0Q | 1(文本) | `客户公司名` | ✅ 客户可见 |
+| 3 | 产品线 | fldcpGsA0i | 1(文本) | `产品线` | ✅ 客户可见 |
+| 4 | 客户群体 | fldgbcctGn | 1(文本) | `客户群体` | ✅ 客户可见 |
+| 5 | 收入结构 | fldRsdz5k7 | 1(文本) | `收入结构` | ✅ 客户可见 |
+| 6 | 毛利结构 | fldqdZ29m2 | 1(文本) | `毛利结构` | ✅ 客户可见 |
+| 7 | 交付情况 | fldFd96pt1 | 1(文本) | `交付情况` | ✅ 客户可见 |
+| 8 | 资源分布 | fld6ZJQ69C | 1(文本) | `资源分布` | ✅ 客户可见 |
+| 9 | 战略目标 | fld7HElqu6 | 1(文本) | `战略目标` | ✅ 客户可见 |
+| 10 | 显性诉求 | flddrDkmYx | 1(文本) | `显性诉求` | ✅ 客户可见 |
+| 11 | 当前追问 | fldbU5arYa | 1(文本) | `当前追问` | ✅ 客户可见 |
+| 12 | 诊断进度 | fldSCl5WAg | 2(数字) | `诊断进度` | ✅ 客户可见 |
+| 13 | 完整度 | fldh9UIUjB | 20(进度条) | `完整度` | ⚠️ PRD 未定义 |
 
 ---
 
-## 二、字段映射详细分析
+## 三、字段映射详细分析
 
-### 诊断共识表映射
+### 3.1 类型字段映射 (type)
 
-#### 代码 → 飞书 (`_recordToFields`)
-
-```javascript
-// feishuClient.js:462-494
-代码字段          → 飞书字段        → 值转换
-─────────────────────────────────────────────
-id               → 记录ID          → 直接映射
-timestamp        → 时间戳          → 直接映射
-type             → 类型            → 'fact'→'事实', 'consensus'→'共识', 'case'→'案例', 'insight'→'洞察'
-stage            → 阶段            → 直接映射
-content          → 内容            → 直接映射
-source           → 来源            → 直接映射
-evidence_sku     → 关联SKU         → 数组join('\n')
-status           → 状态            → 'recorded'→'待确认', 'pending_client_confirm'→'待确认', 'confirmed'→'已确认', 'active'→'已确认', 'superseded'→'已过时'
-confidence       → 置信度          → 直接映射
-replaces         → 替代记录        → 直接映射
-superseded_by    → 被替代          → 直接映射
-recommendation   → 建议方向        → 直接映射
+```
+代码 → 飞书                    飞书 → 代码
+─────────────────────────────────────────────────
+fact      →  事实              事实      →  fact
+consensus →  共识              共识      →  consensus
+case      →  案例 ⚠️ PRD未定义  案例      →  case
+insight   →  洞察 ⚠️ PRD未定义  洞察      →  insight
 ```
 
-#### 飞书 → 代码 (`_fieldsToRecord`)
+**问题**: PRD 4.3 节定义 `type` 只有 `fact` 和 `consensus` 两个值，`case` 和 `insight` 是额外扩展
 
-```javascript
-// feishuClient.js:503-519
-飞书字段          → 代码字段        → 值转换
-─────────────────────────────────────────────
-记录ID           → id              → 直接映射
-时间戳           → timestamp       → 直接映射
-类型             → type            → 直接映射（⚠️ 未反向转换中文→英文）
-阶段             → stage           → 直接映射
-内容             → content         → 直接映射
-来源             → source          → 直接映射
-关联SKU          → evidence_sku    → split('\n')→数组
-状态             → status          → 直接映射（⚠️ 未反向转换中文→英文）
-置信度           → confidence      → 直接映射
-替代记录         → replaces        → 直接映射
-被替代           → superseded_by   → 直接映射
-建议方向         → recommendation  → 直接映射
+### 3.2 状态字段映射 (status) ⚠️ P0
+
+```
+代码 → 飞书                         飞书 → 代码
+──────────────────────────────────────────────────────
+recorded            →  待确认        待确认 → pending_client_confirm
+pending_client_confirm → 待确认 ❌   已确认 → confirmed
+confirmed           →  已确认        已过时 → superseded
+active              →  已确认 ⚠️ PRD未定义
+superseded          →  已过时
 ```
 
-### 客户档案表映射
+**问题**:
+1. `recorded` 和 `pending_client_confirm` 都映射到"待确认"，反向不可逆
+2. `active` 状态 PRD 未定义
+3. 反向映射丢失 `recorded` 状态语义
 
-#### 代码 → 飞书 (`_profileToFields`)
+---
 
+## 四、完整度计算不一致 ⚠️ P0
+
+### 4.1 两处计算逻辑对比
+
+| 位置 | 字段列表 | 分母 |
+|-----|---------|-----|
+| `memoGenerator.js:279-282` | 产品线、客户群体、收入结构、毛利结构、交付情况、资源分布、战略目标、显性诉求 | **8** |
+| `battleCardGen.js:210-214` | 产品线、客户群体、收入结构、毛利结构、交付情况、资源分布、战略目标、显性诉求、**隐性痛点** | **9** |
+
+### 4.2 问题分析
+
+1. **分母不同**: 同一客户档案，两处计算的完整度永远不同
+2. **隐性痛点**: `battleCardGen.js` 包含 PRD 未定义的"隐性痛点"字段
+3. **缺少公司名**: 两处都未包含"客户公司名"字段
+4. **阈值不自洽**:
+   - 作战卡 6.2 节阈值 60%（基于 /9）
+   - 备忘录 7.6 节阈值 50%/70%（基于 /8）
+   - 可能导致作战卡判定"验证假设版"，备忘录推荐"初步诊断"档
+
+---
+
+## 五、其他问题
+
+### 5.1 recommendation 写入校验缺失 (P1)
+
+**问题**: `types.js:30` 注释说"仅 consensus 类型有"，但代码未强制校验
+
+**风险**: `type=fact` 的记录如果携带 `recommendation`，会写入飞书"建议方向"列，客户看到会困惑
+
+**修复建议**: `_recordToFields` 写入前，如果 `type !== 'consensus'`，强制清空 recommendation
+
+### 5.2 429 限流处理缺失 (P1)
+
+**问题**:
+- `@larksuiteoapi/node-sdk` 是否原生支持 429 重试未验证
+- 代码中没有读取 `x-ogw-ratelimit-reset` 响应头的逻辑
+- 高频写入场景可能触发限流导致数据丢失
+
+**修复建议**: 在 `feishuClient.js` 写入方法中添加 429 拦截和重试逻辑
+
+### 5.3 富文本多段拼接 (P2)
+
+**当前代码**:
 ```javascript
-// feishuClient.js:528-543
-代码字段          → 飞书字段
-─────────────────────────────
-客户公司名       → 客户公司名
-产品线           → 产品线
-客户群体         → 客户群体
-收入结构         → 收入结构
-毛利结构         → 毛利结构
-交付情况         → 交付情况
-资源分布         → 资源分布
-战略目标         → 战略目标
-显性诉求         → 显性诉求
-当前追问         → 当前追问
-诊断进度         → 诊断进度
+// feishuClient.js:580-581
+if (Array.isArray(value) && value[0]?.text) {
+  profile[name] = value[0].text;  // 只取第一个
+}
 ```
 
-#### 飞书 → 代码 (`_fieldsToProfile`)
+**问题**: 飞书富文本可能返回多段，只取第一段会丢失后续内容
 
+**修复建议**:
 ```javascript
-// feishuClient.js:552-572
-飞书字段          → 代码字段        → 特殊处理
-─────────────────────────────────────────────
-客户公司名       → 客户公司名      → 处理富文本[{text, type}]
-产品线           → 产品线          → 处理富文本
-客户群体         → 客户群体        → 处理富文本
-收入结构         → 收入结构        → 处理富文本
-毛利结构         → 毛利结构        → 处理富文本
-交付情况         → 交付情况        → 处理富文本
-资源分布         → 资源分布        → 处理富文本
-战略目标         → 战略目标        → 处理富文本
-显性诉求         → 显性诉求        → 处理富文本
-当前追问         → 当前追问        → 处理富文本
-诊断进度         → 诊断进度        → 处理富文本
+profile[name] = value.map(v => v.text || '').join('');
 ```
 
 ---
 
-## 三、发现的问题
+## 六、已正确实现的功能 ✅
 
-### 🔴 高优先级问题
-
-#### 1. 类型/状态字段双向映射不完整
-
-**问题**: `_fieldsToRecord` 未将飞书中文值反向转换为代码英文值
+### 6.1 修正记录 stage 保护
 
 ```javascript
-// 当前代码（feishuClient.js:508）
-if (fields['类型']) record.type = fields['类型'];  // 返回 '事实' 而非 'fact'
-
-// 当前代码（feishuClient.js:513）
-if (fields['状态']) record.status = fields['状态'];  // 返回 '已确认' 而非 'confirmed'
+// consensusChain.js:146
+stage: original.stage,  // ✅ 使用原记录的 stage
 ```
 
-**影响**:
-- 从飞书读取的记录，type/status 是中文值
-- 前端代码使用英文值判断（如 `r.type === 'fact'`）
-- 导致前端过滤/显示逻辑失效
-
-**修复建议**:
-```javascript
-// 类型反向映射
-const typeReverseMap = {
-  '事实': 'fact',
-  '共识': 'consensus',
-  '案例': 'case',
-  '洞察': 'insight',
-};
-
-// 状态反向映射
-const statusReverseMap = {
-  '待确认': 'pending_client_confirm',
-  '已确认': 'confirmed',
-  '已过时': 'superseded',
-};
-```
-
-#### 2. 客户档案表缺少 `完整度` 字段映射
-
-**问题**: 飞书表格有 `完整度` 字段（类型20=进度条），但代码未映射
-
-**影响**:
-- 无法读取/更新客户档案完整度
-- 前端无法显示档案完整度百分比
-
-**修复建议**: 在 `_profileToFields` 和 `_fieldsToProfile` 中添加 `完整度` 字段
-
-#### 3. `getClientProfile` filter 匹配逻辑错误
-
-**问题**: 当前代码使用 `===` 比较富文本数组
+### 6.2 候选缓存失效监听
 
 ```javascript
-// feishuClient.js:285
-const matchedRecord = records.find(r => r.fields?.['客户公司名'] === company);
-// r.fields['客户公司名'] 是 [{text: '...', type: 'text'}] 格式
-// company 是字符串，永远不匹配
-```
+// consensusChain.js:165-166
+this.emit('invalidate-cache', { reason: 'record_corrected', originalId: recordId });
 
-**修复建议**:
-```javascript
-const matchedRecord = records.find(r => {
-  const fieldValue = r.fields?.['客户公司名'];
-  if (Array.isArray(fieldValue) && fieldValue[0]?.text) {
-    return fieldValue[0].text === company;
-  }
-  return fieldValue === company;
+// candidateGen.js:129-132
+this.consensusChain.on('invalidate-cache', () => {
+  this.invalidateCache();
 });
 ```
 
-### 🟡 中优先级问题
+---
 
-#### 4. `_extractProfileData` 字段提取不完整
+## 七、修复计划
 
-**问题**: `consensusChain.js:316-319` 只提取 8 个字段，缺少 `当前追问` 和 `诊断进度`
+### Phase 1: P0 问题（演练前必须完成，6 小时）
 
-```javascript
-const fieldNames = [
-  '产品线', '客户群体', '收入结构', '毛利结构',
-  '交付情况', '资源分布', '战略目标', '显性诉求'
-];
-// 缺少: '当前追问', '诊断进度'
-```
+| # | 问题 | 修复方案 | 工时 |
+|---|------|---------|------|
+| 1 | 诊断共识表设计偏差 | 新建 3 列客户视图表，或重构双表结构 | 2h |
+| 2 | 状态映射多对一 | 飞书侧扩展到 4 个状态选项，建立 1:1 映射 | 1.5h |
+| 3 | 完整度计算不一致 | 创建 `src/config/fields.js` 统一字段列表 | 2h |
+| 4 | 完整度字段冗余 | 删除飞书字段，统一使用"诊断进度" | 0.5h |
 
-#### 5. 前端 `inferType` 逻辑与飞书选项不一致
+### Phase 2: P1 问题（建议完成，4 小时）
 
-**问题**: 前端只能推断 `fact` 或 `consensus`，但飞书表格有 4 个选项
+| # | 问题 | 修复方案 | 工时 |
+|---|------|---------|------|
+| 5 | 类型字段多余值 | 移除 case/insight 映射，添加读取防御 | 1h |
+| 6 | recommendation 校验 | 写入前检查 type，非 consensus 清空 | 0.5h |
+| 7 | 429 限流处理 | 添加拦截器和重试逻辑 | 1.5h |
+| 8 | 持久化集成确认 | 确认 SessionManager 与共识链集成 | 1h |
 
-```javascript
-// app.js:351
-function inferType(content) {
-  const consensusKeywords = ['判断', '共识', '建议', '应该', '需要'];
-  return consensusKeywords.some(kw => content.includes(kw)) ? 'consensus' : 'fact';
-}
-// 缺少: 'case'(案例), 'insight'(洞察) 的推断逻辑
-```
+### Phase 3: P2 问题（可选，0.5 小时）
 
-#### 6. `feishu_record_id` 字段未同步
-
-**问题**: 代码定义了 `feishu_record_id` 字段（types.js:29），但 `_recordToFields` 未映射
-
-**影响**: 无法追踪本地记录与飞书记录的关联关系
-
-### 🟢 低优先级问题
-
-#### 7. 时间戳格式不一致
-
-**问题**: 代码使用 ISO 8601 格式，飞书字段类型是文本，可能存在格式差异
-
-#### 8. `evidence_sku` 数组处理
-
-**问题**: 使用 `\n` 分隔，如果 SKU 本身包含换行符会导致解析错误
+| # | 问题 | 修复方案 | 工时 |
+|---|------|---------|------|
+| 9 | 富文本多段拼接 | 改为拼接所有 text 段 | 0.5h |
 
 ---
 
-## 四、字段遗漏汇总
+## 八、统一字段映射模块
 
-### 诊断共识表
+已创建 `src/utils/fieldMapping.js`，包含：
 
-| 遗漏项 | 说明 |
-|-------|------|
-| `feishu_record_id` | 代码定义但未映射到飞书 |
-| 类型反向映射 | 飞书中文→代码英文 |
-| 状态反向映射 | 飞书中文→代码英文 |
-
-### 客户档案表
-
-| 遗漏项 | 说明 |
-|-------|------|
-| `完整度` | 飞书有但代码未映射 |
-| `当前追问` | `_extractProfileData` 未提取 |
-| `诊断进度` | `_extractProfileData` 未提取 |
+- `CONSENSUS_TYPE_MAP` - 类型双向映射
+- `CONSENSUS_STATUS_MAP` - 状态双向映射
+- `CONSENSUS_FIELDS` - 诊断共识表字段列表
+- `PROFILE_FIELDS` - 客户档案表字段列表
+- `extractRichTextValue()` - 富文本提取工具
+- `typeToFeishu()` / `typeToCode()` - 类型转换
+- `statusToFeishu()` / `statusToCode()` - 状态转换
 
 ---
 
-## 五、修复优先级建议
-
-1. **立即修复**: 类型/状态反向映射（影响核心功能）
-2. **立即修复**: `getClientProfile` filter 匹配逻辑
-3. **短期修复**: 添加 `完整度` 字段映射
-4. **短期修复**: `_extractProfileData` 补充字段
-5. **中期修复**: `feishu_record_id` 同步追踪
-6. **中期修复**: 前端 `inferType` 扩展
-
----
-
-## 六、建议的字段映射统一方案
-
-### 创建统一的映射模块
-
-```javascript
-// src/utils/fieldMapping.js
-
-// 诊断共识表映射
-const CONSENSUS_TYPE_MAP = {
-  // 代码 → 飞书
-  toFeishu: {
-    'fact': '事实',
-    'consensus': '共识',
-    'case': '案例',
-    'insight': '洞察',
-  },
-  // 飞书 → 代码
-  toCode: {
-    '事实': 'fact',
-    '共识': 'consensus',
-    '案例': 'case',
-    '洞察': 'insight',
-  }
-};
-
-const CONSENSUS_STATUS_MAP = {
-  toFeishu: {
-    'recorded': '待确认',
-    'pending_client_confirm': '待确认',
-    'confirmed': '已确认',
-    'active': '已确认',
-    'superseded': '已过时',
-  },
-  toCode: {
-    '待确认': 'pending_client_confirm',
-    '已确认': 'confirmed',
-    '已过时': 'superseded',
-  }
-};
-
-// 客户档案表字段列表（完整）
-const PROFILE_FIELDS = [
-  '客户公司名', '产品线', '客户群体', '收入结构', '毛利结构',
-  '交付情况', '资源分布', '战略目标', '显性诉求', '当前追问',
-  '诊断进度', '完整度'
-];
-
-// 富文本提取工具
-function extractRichTextValue(fieldValue) {
-  if (Array.isArray(fieldValue) && fieldValue[0]?.text) {
-    return fieldValue[0].text;
-  }
-  return fieldValue;
-}
-```
-
----
-
-**报告完成**。建议按优先级逐步修复字段映射问题。
+**报告完成**。建议按 Phase 顺序逐步修复，演练前必须完成 Phase 1。
