@@ -663,6 +663,11 @@ function showCandidatesOverlay() {
   // 清除红点徽标
   elements.candidateBadge.textContent = '';
 
+  // 隐藏右下角悬浮徽标
+  if (elements.pendingDecisionBadge) {
+    elements.pendingDecisionBadge.style.display = 'none';
+  }
+
   // 重置折叠状态
   state.candidatesFolded = false;
   state.selectedCandidateIndex = null;
