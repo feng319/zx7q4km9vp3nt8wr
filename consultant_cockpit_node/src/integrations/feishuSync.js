@@ -309,13 +309,21 @@ class FeishuSync extends EventEmitter {
    */
   async _handleBitableChangeEvent(event) {
     try {
+      // 调试：打印完整事件结构（帮助排查字段缺失问题）
+      logger.debug('Received bitable change event', {
+        eventKeys: Object.keys(event || {}),
+        hasEvent: !!event?.event,
+        eventEventKeys: event?.event ? Object.keys(event.event) : [],
+        body: event?.event?.body
+      });
+
       const body = event.event?.body || {};
       const action = body.action; // 'record_added' | 'record_modified' | 'record_deleted'
       const recordId = body.record_id;
       const tableId = body.table_id;
 
       if (!recordId) {
-        logger.warn('Bitable change event missing record_id');
+        logger.warn('Bitable change event missing record_id', { body });
         return;
       }
 
