@@ -764,6 +764,27 @@ function renderSuggestionStatus() {
   }
 }
 
+/**
+ * 渲染待确认假设区（PRD 4.2 节：四栏状态板之一）
+ * 显示所有 status=pending_client_confirm 的记录
+ */
+function renderPendingAssumptions() {
+  const pendingRecords = state.records.filter(r => r.status === 'pending_client_confirm');
+
+  if (pendingRecords.length === 0) {
+    elements.pendingAssumptions.innerHTML = '<div class="empty-state">暂无待确认假设</div>';
+    return;
+  }
+
+  elements.pendingAssumptions.innerHTML = pendingRecords.map(record => `
+    <div class="assumption-item" data-id="${record.id}" role="listitem">
+      <span class="assumption-type">${record.type === 'fact' ? '事实' : '判断'}</span>
+      <span class="assumption-content">${escapeHtml(record.content)}</span>
+      <button class="btn-inline-confirm" onclick="confirmRecord('${record.id}')" aria-label="确认此假设">确认</button>
+    </div>
+  `).join('');
+}
+
 function renderSkus() {
   if (state.skus.length === 0) {
     elements.skuList.innerHTML = '<div class="empty-state">暂无备弹</div>';
