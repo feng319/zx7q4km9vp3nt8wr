@@ -295,14 +295,21 @@ fastify.get('/api/health', async (request, reply) => {
 fastify.get('/api/feishu-status', async (request, reply) => {
   // 检查是否使用真实飞书客户端
   const isRealClient = feishuClient && !(feishuClient instanceof FeishuClientMock);
+  const isRealSync = feishuSync && !(feishuSync instanceof FeishuSyncMock);
 
   if (!isRealClient) {
     return {
       connected: false,
       reason: 'mock_mode',
       message: '使用模拟客户端（未配置飞书凭证）',
+      sync_mode: 'none',
     };
   }
+
+  // 获取同步状态（WebSocket 或轮询）
+  const syncStatus = isRealSync ? feishuSync.getStatus() : null;
+  const syncMode = syncStatus?.mode || 'none';
+  const syncLatency = syncMode === 'websocket' ? '< 1秒' : syncMode === 'polling' ? '30秒' : '未知';
 
   try {
     // 尝试访问多维表格来验证连接
@@ -319,12 +326,16 @@ fastify.get('/api/feishu-status', async (request, reply) => {
         connected: true,
         message: '已连接',
         bitable_accessible: true,
+        sync_mode: syncMode,
+        sync_latency: syncLatency,
+        sync_stats: syncStatus?.stats || null,
       };
     } else {
       return {
         connected: false,
         reason: 'api_error',
         message: result.msg || 'API 调用失败',
+        sync_mode: syncMode,
       };
     }
   } catch (error) {
@@ -332,6 +343,7 @@ fastify.get('/api/feishu-status', async (request, reply) => {
       connected: false,
       reason: 'connection_error',
       message: error.message || '连接失败',
+      sync_mode: syncMode,
     };
   }
 });
