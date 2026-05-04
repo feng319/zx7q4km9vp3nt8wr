@@ -185,7 +185,7 @@ superseded          →  已过时        已过时 → superseded
 | 功能 | 文件路径 | 关键方法 |
 |-----|---------|---------|
 | 飞书API客户端 | `src/integrations/feishuClient.js` | `_recordToFields`, `_fieldsToRecord`, `_profileToFields`, `_fieldsToProfile` |
-| 共识链管理 | `src/core/consensusChain.js` | `_extractProfileData`, `correctRecord` |
+| 共识链管理 | `src/core/consensusChain.js` | `addRecord`, `confirmRecord`, `correctRecord`, `_syncToFeishu`, `_syncToProfile`, `_extractProfileData` |
 | 作战卡生成 | `src/core/battleCardGen.js` | `_calcDefaultCompleteness` |
 | 备忘录生成 | `src/core/memoGenerator.js` | `_calcProfileCompleteness` |
 | 类型定义 | `src/types.js` | `ConsensusRecord`, `ClientProfileFields` |
@@ -229,3 +229,6 @@ superseded          →  已过时        已过时 → superseded
 | 候选缓存失效监听 | `candidateGen.js:129-132` |
 | 类型反向映射 | `feishuClient.js:507-512` |
 | 富文本格式处理 | `feishuClient.js:576-585` |
+| addRecord 支持 company 参数 | `consensusChain.js:44-79` |
+| confirmRecord 同步到客户档案表 | `consensusChain.js:97-114` |
+| correctRecord 同步到客户档案表 | `consensusChain.js:133-185` |
