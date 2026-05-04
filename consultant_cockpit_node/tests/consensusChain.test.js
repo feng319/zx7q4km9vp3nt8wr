@@ -528,10 +528,10 @@ describe('ConsensusChain', () => {
       });
     });
 
-    it('should call feishuClient.syncConsensusRecord when provided', async () => {
+    it('should call feishuClient.createConsensusRecord when provided', async () => {
       let syncCalled = false;
       const mockFeishuClient = {
-        syncConsensusRecord: async () => {
+        createConsensusRecord: async () => {
           syncCalled = true;
         }
       };
@@ -543,7 +543,7 @@ describe('ConsensusChain', () => {
         stage: '战略梳理',
         content: 'test',
         source: 'manual'
-      });
+      }, true); // syncToFeishu = true
 
       // 等待异步操作
       await new Promise(resolve => setTimeout(resolve, 10));
