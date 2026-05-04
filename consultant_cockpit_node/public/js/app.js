@@ -834,8 +834,12 @@ function updateCandidateBadge() {
   const pendingConsensus = state.records.filter(r => r.type === 'consensus' && r.status === 'pending_client_confirm');
   const secondConstraintMet = pendingConsensus.length >= 1;
 
-  // 两个约束都满足才显示红点
-  if (firstConstraintMet && secondConstraintMet) {
+  // 第三约束：至少有 1 个 🟢/🟡 SKU（可信度高的知识备弹）
+  const validSkus = state.skus.filter(s => s.confidence === '🟢' || s.confidence === '🟡');
+  const thirdConstraintMet = validSkus.length >= 1;
+
+  // 三个约束都满足才显示红点
+  if (firstConstraintMet && secondConstraintMet && thirdConstraintMet) {
     elements.candidateBadge.textContent = '🔴';
   } else {
     elements.candidateBadge.textContent = '';
