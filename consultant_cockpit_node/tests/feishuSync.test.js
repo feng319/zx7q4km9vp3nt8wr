@@ -80,7 +80,7 @@ describe('FeishuSync', () => {
       const status = sync.getStatus();
 
       assert.strictEqual(status.status, 'disconnected');
-      assert.strictEqual(status.stats.reconnectCount, 0);
+      assert.strictEqual(status.stats.wsConnectCount, 0);
       assert.strictEqual(status.stats.changeCount, 0);
       assert.strictEqual(status.snapshotSize, 0);
     });
