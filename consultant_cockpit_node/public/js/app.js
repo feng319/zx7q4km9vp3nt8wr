@@ -1286,6 +1286,9 @@ async function init() {
   initEventListeners();
   checkFeishuStatus(); // 检查飞书连接状态
 
+  // 初始调整面板高度
+  adjustPanelHeight();
+
   // 尝试自动加载最近的会话
   const sessionLoaded = await autoLoadRecentSession();
 
@@ -1293,6 +1296,9 @@ async function init() {
     renderAll();
     setStatus('就绪 - 点击"新建会话"开始');
   }
+
+  // 最终调整高度（确保所有内容加载后）
+  setTimeout(adjustPanelHeight, 100);
 }
 
 // 启动应用
