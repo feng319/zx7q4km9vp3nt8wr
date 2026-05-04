@@ -92,6 +92,10 @@ function initElements() {
   elements.candidatesCards = document.getElementById('candidates-cards');
   elements.closeCandidatesBtn = document.getElementById('close-candidates-btn');
 
+  // 右下角悬浮徽标（设计文档 3.5 节）
+  elements.pendingDecisionBadge = document.getElementById('pending-decision-badge');
+  elements.pendingCandidateCount = document.getElementById('pending-candidate-count');
+
   // 右栏：建议
   elements.suggestionStatus = document.getElementById('suggestion-status');
   elements.suggestionQuestion = document.getElementById('suggestion-question');
