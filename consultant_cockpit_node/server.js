@@ -376,6 +376,7 @@ fastify.get('/api/sessions/:sessionId', async (request, reply) => {
     confirmed_facts: confirmedFacts.length,
     confirmed_consensus: session.consensusChain.getConfirmedConsensus().length,
     pending_consensus: session.consensusChain.getPendingConsensus().length,
+    company: session.company || null,
   };
 });
 
