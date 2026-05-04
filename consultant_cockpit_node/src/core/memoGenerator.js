@@ -18,6 +18,7 @@
 const { Document, Packer, Paragraph, TextRun, HeadingLevel, AlignmentType } = require('docx');
 const fs = require('fs');
 const path = require('path');
+const { calcCompleteness, getCompletenessFieldNames } = require('../config/fields');
 
 /**
  * @typedef {import('../types').ConsensusRecord} ConsensusRecord

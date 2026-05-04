@@ -9,6 +9,7 @@
  */
 
 const { Document, Packer, Paragraph, TextRun, HeadingLevel, AlignmentType } = require('docx');
+const { calcCompleteness, getCompletenessFieldNames } = require('../config/fields');
 
 /**
  * @typedef {'🟢' | '🟡' | '🔴'} SkuConfidence
