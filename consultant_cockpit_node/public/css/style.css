@@ -988,13 +988,14 @@ textarea {
 }
 
 /* 候选方案弹出区（设计规范 3.5 节：主对话区内弹出，其他内容半透明化） */
+/* 覆盖层只覆盖共识链区域，阶段指示器和快捷指令区保持可见 */
 .candidates-overlay {
   position: absolute;
-  top: 0;
+  top: 50px; /* 从阶段指示器下方开始 */
   left: 0;
   right: 0;
-  bottom: 0;
-  background: rgba(255, 255, 255, 0.85);
+  bottom: 140px; /* 为快捷指令区留空间 */
+  background: rgba(255, 255, 255, 0.92);
   z-index: 100;
   display: flex;
   flex-direction: column;
@@ -1002,6 +1003,7 @@ textarea {
   align-items: center;
   padding: 20px;
   border-radius: 8px;
+  box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.05);
 }
 
 /* 候选弹出时，其他内容半透明化（共识链仍然可见） */
