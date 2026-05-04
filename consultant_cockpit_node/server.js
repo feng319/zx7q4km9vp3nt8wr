@@ -330,6 +330,10 @@ fastify.patch('/api/sessions/:sessionId/company', async (request, reply) => {
     session.company = company;
     // 立即保存公司名到 metadata
     await sessionManager.saveSession(sessionId, session.consensusChain.exportRecords(), { company });
+
+    // 同步所有已确认记录到客户档案表（处理 company 后设置的情况）
+    await syncConfirmedRecordsToProfile(session, company);
+
     return { success: true, company };
   } else {
     reply.code(400);
