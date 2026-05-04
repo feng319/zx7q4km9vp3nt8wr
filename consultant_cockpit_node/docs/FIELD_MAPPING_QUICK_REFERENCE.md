@@ -83,16 +83,17 @@ insight   →  洞察 ⚠️ PRD未定义  洞察      →  insight
 ```
 代码 → 飞书                         飞书 → 代码
 ──────────────────────────────────────────────────────
-recorded            →  待确认        待确认 → pending_client_confirm
-pending_client_confirm → 待确认 ❌   已确认 → confirmed
-confirmed           →  已确认        已过时 → superseded
-active              →  已确认 ⚠️ PRD未定义
-superseded          →  已过时
+recorded            →  已记录        已记录 → recorded
+pending_client_confirm → 待确认      待确认 → pending_client_confirm
+confirmed           →  已确认        已确认 → confirmed
+superseded          →  已过时        已过时 → superseded
 ```
 
-**问题**:
+**修复方案**: 飞书侧扩展到 4 个状态选项，建立 1:1 双向映射
+
+**当前问题**（待修复）:
 1. `recorded` 和 `pending_client_confirm` 都映射到"待确认"，**反向不可逆**
-2. `active` 状态 PRD 未定义
+2. `active` 状态 PRD 未定义，需移除
 3. 反向映射丢失 `recorded` 状态语义
 
 ---
