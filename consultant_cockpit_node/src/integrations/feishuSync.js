@@ -212,11 +212,15 @@ class FeishuSync extends EventEmitter {
       this._eventDispatcher = new lark.EventDispatcher('', '');
 
       // 注册事件处理器
+      // 注意：飞书订阅多维表格时会推送多种事件类型，需要注册对应的处理器
       this._eventDispatcher.register({
+        // 主要事件：多维表格记录变更
         'drive.file.bitable_record_changed_v1': (data) => {
           this._handleBitableChangeEvent(data);
           return Promise.resolve();
-        }
+        },
+        // 忽略文档编辑事件（避免 SDK 警告）
+        'drive.file.edit_v1': () => Promise.resolve(),
       });
 
       // 创建独立的 WSClient
