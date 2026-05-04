@@ -1315,7 +1315,7 @@ function adjustPanelHeight() {
 
   const headerHeight = header.offsetHeight;
   const footerHeight = footer.offsetHeight;
-  const mainPadding = 32; // 16px top + 16px bottom
+  const mainPadding = 22; // 16px top + 6px bottom (70px padding - footer overlap)
 
   // 计算可用高度
   const availableHeight = window.innerHeight - headerHeight - footerHeight - mainPadding;
