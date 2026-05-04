@@ -399,8 +399,12 @@ fastify.patch('/api/sessions/:sessionId/stage', async (request, reply) => {
   // 更新阶段
   session.currentStage = stage;
 
-  // 触发候选缓存失效（PRD 1.4 节：阶段切换触发候选预计算重算）
-  session.consensusChain.emit('invalidate-cache', { reason: 'stage_changed', stage });
+  // 触发候选缓存失效并立即重算（设计文档 3.2.4 节：阶段切换立即重算）
+  session.candidateGen.invalidateCache();
+  const currentSkus = session.knowledgeRetriever.getFreshSkus();
+  session.candidateGen.checkAndPrecompute(currentSkus, { immediate: true, source: 'stage_switch' }).catch(e => {
+    fastify.log.warn({ sessionId, error: e.message }, 'Stage switch precompute failed');
+  });
 
   // 立即保存到 metadata
   const metadata = { currentStage: stage };
