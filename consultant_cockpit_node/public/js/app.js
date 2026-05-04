@@ -74,6 +74,7 @@ function initElements() {
   elements.completenessValue = document.getElementById('completeness-value');
   elements.fieldsStatus = document.getElementById('fields-status');
   elements.currentStage = document.getElementById('current-stage');
+  elements.pendingAssumptions = document.getElementById('pending-assumptions');
 
   // 中栏：对话区
   elements.stageDisplay = document.getElementById('stage-display');
