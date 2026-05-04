@@ -616,6 +616,13 @@ fastify.post('/api/sessions/:sessionId/recall', async (request, reply) => {
 
   const skus = session.knowledgeRetriever.recallByKeywords(keywords, top_k);
 
+  // 通知候选生成器 SKU 变化（设计文档 3.2.4 节：SKU 变化触发缓存过期）
+  if (skus && skus.length > 0) {
+    session.candidateGen.notifySkuChange(skus).catch(e => {
+      fastify.log.warn({ sessionId, error: e.message }, 'SKU change notification failed');
+    });
+  }
+
   return {
     success: true,
     skus,
