@@ -1234,9 +1234,15 @@ async function checkFeishuStatus() {
     const data = await apiRequest('/feishu-status');
 
     if (data.connected) {
+      // 根据同步模式显示不同状态
+      const modeText = data.sync_mode === 'websocket' ? '实时同步'
+                     : data.sync_mode === 'polling' ? '轮询(30s)'
+                     : '已连接';
+      const latencyHint = data.sync_latency ? ` (${data.sync_latency})` : '';
+
       // 使用 SVG 渲染绿色圆点
-      container.innerHTML = '<svg id="feishu-dot" width="12" height="12" viewBox="0 0 12 12" style="vertical-align: middle;"><circle cx="6" cy="6" r="5" fill="#52c41a" stroke="#389e0d" stroke-width="1"/></svg><span class="status-text" id="feishu-text">已连接</span>';
-      console.log('Feishu status: connected (SVG green dot)');
+      container.innerHTML = '<svg id="feishu-dot" width="12" height="12" viewBox="0 0 12 12" style="vertical-align: middle;"><circle cx="6" cy="6" r="5" fill="#52c41a" stroke="#389e0d" stroke-width="1"/></svg><span class="status-text" id="feishu-text">' + modeText + latencyHint + '</span>';
+      console.log('Feishu status: connected, sync_mode=' + data.sync_mode + ', latency=' + data.sync_latency);
     } else {
       container.innerHTML = '<svg id="feishu-dot" width="12" height="12" viewBox="0 0 12 12" style="vertical-align: middle;"><circle cx="6" cy="6" r="5" fill="#999999" stroke="#666666" stroke-width="1"/></svg><span class="status-text" id="feishu-text">' + (data.reason === 'mock_mode' ? '未配置' : '断开') + '</span>';
     }
