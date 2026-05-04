@@ -386,7 +386,11 @@ fastify.post('/api/sessions/:sessionId/records', async (request, reply) => {
   const session = await getOrCreateSession(sessionId);
 
   try {
-    const record = session.consensusChain.addRecord(request.body);
+    // 传递 company 用于同步到客户档案表（当记录直接创建为 confirmed 状态时）
+    const record = session.consensusChain.addRecord(request.body, {
+      syncToFeishu: true,
+      company: session.company
+    });
 
     reply.code(201);
     return {
