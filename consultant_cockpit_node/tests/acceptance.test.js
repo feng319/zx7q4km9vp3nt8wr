@@ -72,7 +72,7 @@ describe('第二部分：共识链基础操作', () => {
 
       assert.ok(record.id.startsWith('record_'), 'ID 格式正确');
       assert.ok(record.timestamp, '有时间戳');
-      assert.strictEqual(record.status, 'recorded', '状态为 recorded');
+      assert.strictEqual(record.status, 'pending_client_confirm', '状态为 pending_client_confirm（待确认）');
     });
 
     it('添加记录应触发 change 事件', () => {
