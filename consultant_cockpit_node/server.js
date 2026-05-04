@@ -173,6 +173,11 @@ async function getOrCreateSession(sessionId) {
         consensusChain.importRecords(savedSession.records);
         fastify.log.info({ sessionId, recordCount: savedSession.records.length }, 'Session restored from disk');
       }
+      // 恢复公司名
+      if (savedSession && savedSession.metadata && savedSession.metadata.company) {
+        session.company = savedSession.metadata.company;
+        fastify.log.info({ sessionId, company: session.company }, 'Company restored from disk');
+      }
     } catch (error) {
       fastify.log.warn({ sessionId, error: error.message }, 'Failed to restore session from disk');
     }
