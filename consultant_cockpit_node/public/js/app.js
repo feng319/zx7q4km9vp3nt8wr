@@ -16,6 +16,7 @@ const LLM_PROVIDERS = {
     baseUrl: 'https://zenmux.ai/api/v1',
     models: [
       { id: 'deepseek/deepseek-v4-pro-free', name: 'DeepSeek V4 Pro Free' }
+      { id: 'deepseek/deepseek-v4-flash-free', name: 'DeepSeek V4 flash Free' }
     ]
   },
   'volc-ark': {
