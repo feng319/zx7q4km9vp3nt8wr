@@ -1296,6 +1296,54 @@ async function init() {
 // 启动应用
 document.addEventListener('DOMContentLoaded', init);
 
+// 动态调整面板高度，确保快捷指令区始终可见
+function adjustPanelHeight() {
+  const header = document.querySelector('.header');
+  const footer = document.querySelector('.footer');
+  const main = document.querySelector('.main');
+  const panels = document.querySelectorAll('.panel');
+
+  if (!header || !footer || !main || panels.length === 0) return;
+
+  const headerHeight = header.offsetHeight;
+  const footerHeight = footer.offsetHeight;
+  const mainPadding = 32; // 16px top + 16px bottom
+
+  // 计算可用高度
+  const availableHeight = window.innerHeight - headerHeight - footerHeight - mainPadding;
+
+  // 设置面板最大高度
+  panels.forEach(panel => {
+    panel.style.maxHeight = `${availableHeight}px`;
+    panel.style.minHeight = `${Math.min(400, availableHeight)}px`;
+  });
+
+  // 设置对话区共识链的最大高度（为阶段指示和快捷指令留空间）
+  const dialogPanel = document.querySelector('.dialog-panel');
+  if (dialogPanel) {
+    const panelContent = dialogPanel.querySelector('.panel-content');
+    const stageIndicator = dialogPanel.querySelector('.stage-indicator');
+    const commandSection = dialogPanel.querySelector('.command-section');
+
+    if (panelContent && stageIndicator && commandSection) {
+      const stageHeight = stageIndicator.offsetHeight + 12; // margin
+      const commandHeight = commandSection.offsetHeight + 16; // margin + padding
+      const panelHeaderHeight = 45; // h2 + padding
+      const panelPadding = 32; // panel-content padding
+
+      const chainMaxHeight = availableHeight - panelHeaderHeight - panelPadding - stageHeight - commandHeight - 20;
+      const consensusChain = dialogPanel.querySelector('.consensus-chain');
+      if (consensusChain) {
+        consensusChain.style.maxHeight = `${Math.max(100, chainMaxHeight)}px`;
+      }
+    }
+  }
+}
+
+// 监听窗口调整
+window.addEventListener('resize', adjustPanelHeight);
+window.addEventListener('load', adjustPanelHeight);
+
 // 全局函数（供 HTML onclick 使用）
 window.confirmRecord = async function(recordId) {
   if (!state.sessionId) return;
