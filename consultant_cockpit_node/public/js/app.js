@@ -727,10 +727,8 @@ function unfoldCandidatesFromBadge() {
     elements.pendingDecisionBadge.style.display = 'none';
   }
 
-  // 显示候选面板
-  elements.candidatesOverlay.style.display = 'block';
-  elements.candidatesOverlay.closest('.dialog-panel').classList.add('has-candidates');
-  renderCandidateCards();
+  // 显示候选面板（复用 showCandidatesOverlay 的渲染逻辑）
+  showCandidatesOverlay();
 }
 
 function hideCandidatesOverlay() {
