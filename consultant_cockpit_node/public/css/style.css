@@ -253,8 +253,8 @@ body {
   box-shadow: var(--shadow);
   display: flex;
   flex-direction: column;
-  min-height: 300px; /* 确保面板最小高度 */
-  max-height: calc(100vh - 180px); /* header + footer + padding */
+  min-height: 400px; /* 确保面板有足够最小高度 */
+  max-height: calc(100vh - 220px); /* header约70px + footer约90px + main padding 32px + 额外边距 */
 }
 
 .panel h2 {
