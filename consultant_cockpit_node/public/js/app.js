@@ -713,6 +713,10 @@ async function selectCandidate(index) {
 
   const candidate = state.candidates[index];
 
+  // 设计文档 3.5 节：选中后其他卡片淡出但保留
+  state.selectedCandidateIndex = index;
+  updateCandidateCardsFade(index);
+
   try {
     // 候选选中自动进入共识链（设计文档 4.2 节）
     const result = await apiRequest(`/sessions/${state.sessionId}/records`, {
@@ -730,8 +734,7 @@ async function selectCandidate(index) {
     // 保存选中候选的记录 ID，供 /确认 使用
     state.candidateId = result.record?.id || null;
 
-    hideCandidatesOverlay();
-    setStatus(`已选择候选 ${String.fromCharCode(65 + index)}`, 'success');
+    setStatus(`已选择候选 ${String.fromCharCode(65 + index)}，其他备选已淡出保留`, 'success');
     await getSessionState();
   } catch (error) {
     setStatus(`选择失败: ${error.message}`, 'error');
