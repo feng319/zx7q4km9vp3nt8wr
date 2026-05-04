@@ -122,13 +122,19 @@ class ConsensusChain extends EventEmitter {
    *
    * @param {string} recordId - 要修正的记录 ID
    * @param {string} newContent - 修正后的内容
-   * @param {RecordSource} [source='manual_correction'] - 修正来源
+   * @param {Object} [options] - 可选参数
+   * @param {RecordSource} [options.source='manual_correction'] - 修正来源
+   * @param {string} [options.company] - 客户公司名（用于同步到客户档案表）
    * @returns {ConsensusRecord} 新创建的修正记录
    * @throws {Error} 记录不存在时抛出
    * @fires ConsensusChain#change
    * @fires ConsensusChain#invalidate-cache
    */
-  correctRecord(recordId, newContent, source = 'manual_correction') {
+  correctRecord(recordId, newContent, options = {}) {
+    // 兼容旧的调用方式：correctRecord(recordId, newContent, source)
+    const source = typeof options === 'string' ? options : (options.source || 'manual_correction');
+    const company = typeof options === 'string' ? undefined : options.company;
+
     const original = this.getRecord(recordId);
     if (!original) {
       throw new Error(`找不到记录: ${recordId}`);
@@ -168,9 +174,9 @@ class ConsensusChain extends EventEmitter {
     // 触发 change 事件
     this.emit('change', { type: 'correct', record: newRecord, originalRecord: original });
 
-    // 同步到飞书
+    // 同步到飞书（传递 company 用于同步到客户档案表）
     if (this.feishuClient) {
-      this._syncToFeishu(newRecord).catch(err => {
+      this._syncToFeishu(newRecord, company).catch(err => {
         console.warn(`飞书同步失败: ${err.message}`);
       });
     }
