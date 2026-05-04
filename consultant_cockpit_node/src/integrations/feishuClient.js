@@ -249,6 +249,18 @@ class FeishuClient {
     }
   }
 
+  /**
+   * 列出共识链记录（客户视图格式）
+   * PRD 4.4 节：只返回 3 列（发现内容、确认时间、建议方向）
+   * 用于投屏、客户可见场景
+   * @param {Object} options - 查询选项（同 listConsensusRecords）
+   * @returns {Promise<Object[]>} 客户视图记录数组（只有 3 列）
+   */
+  async listConsensusRecordsForCustomer(options = {}) {
+    const internalRecords = await this.listConsensusRecords(options);
+    return toCustomerViewBatch(internalRecords);
+  }
+
   // ==================== 客户档案操作 ====================
 
   /**
