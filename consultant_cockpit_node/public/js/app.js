@@ -1170,9 +1170,9 @@ function initEventListeners() {
           selectCandidate(index);
         }
       }
-      // Esc：关闭候选覆盖层
+      // Esc：折叠候选到右下角"待决策"徽标（设计文档 3.5 节）
       if (e.key === 'Escape') {
-        hideCandidatesOverlay();
+        foldCandidatesToBadge();
       }
     }
   });
