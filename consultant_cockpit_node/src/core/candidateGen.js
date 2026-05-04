@@ -9,6 +9,13 @@ const crypto = require('crypto');
 /** @typedef {import('../types').RiskLevel} RiskLevel */
 
 /**
+ * @typedef {Object} ConstraintState
+ * @property {boolean} firstConstraint - >=3 条已确认事实
+ * @property {boolean} secondConstraint - 至少 1 个待确认假设
+ * @property {boolean} thirdConstraint - 至少 1 个 🟢/🟡 SKU
+ */
+
+/**
  * 候选缓存类（线程安全，使用变量模拟）
  *
  * 在 Node.js 单线程环境下，使用变量状态模拟线程安全。
@@ -82,8 +89,10 @@ class CandidateCache {
  * - 'precompute-done' - 预计算完成，payload: { candidates }
  *
  * 设计文档 3.2 节：
- * - 后台预计算缓存，/候选 指令 0.2 秒响应
+ * - 后台预计算缓存，/候选 指令 1.5 秒内响应
  * - 三约束检查 + 补充召回
+ * - 防抖机制（10秒窗口）
+ * - SKU 变化监听
  */
 class CandidateGenerator extends EventEmitter {
   /**
@@ -126,10 +135,121 @@ class CandidateGenerator extends EventEmitter {
     /** @type {number} */
     this._lastPendingCount = 0;
 
+    // ====== P0: 防抖机制 ======
+    /** @type {NodeJS.Timeout|null} */
+    this._debounceTimer = null;
+
+    /** @type {number} */
+    this._debounceDelay = 10000; // 10秒防抖窗口
+
+    // ====== P0: 三约束状态追踪 ======
+    /** @type {ConstraintState} */
+    this._lastConstraintState = {
+      firstConstraint: false,
+      secondConstraint: false,
+      thirdConstraint: false
+    };
+
+    // ====== P0: 预计算次数上限 ======
+    /** @type {number} */
+    this._precomputeCount = 0;
+
+    /** @type {number} */
+    this._maxPrecomputeCount = 20;
+
     // 监听共识链的 invalidate-cache 事件
-    this.consensusChain.on('invalidate-cache', () => {
-      this.invalidateCache();
+    this.consensusChain.on('invalidate-cache', (event) => {
+      // 手动修正跳过防抖，立即重算
+      if (event && event.source === 'manual_correction') {
+        this._cancelDebounce();
+        this._triggerImmediatePrecompute(this._availableSkus);
+      } else {
+        this.invalidateCache();
+      }
     });
+  }
+
+  /**
+   * 取消防抖计时器
+   * @private
+   */
+  _cancelDebounce() {
+    if (this._debounceTimer) {
+      clearTimeout(this._debounceTimer);
+      this._debounceTimer = null;
+    }
+  }
+
+  /**
+   * 检查三约束状态是否全部满足
+   * @param {SkuCard[]} availableSkus
+   * @returns {ConstraintState}
+   * @private
+   */
+  _getConstraintState(availableSkus) {
+    const confirmedFacts = this.consensusChain.getConfirmedFacts();
+    const pending = this.consensusChain.getPendingConsensus();
+    const validSkus = availableSkus.filter(
+      sku => sku.confidence === '🟢' || sku.confidence === '🟡'
+    );
+
+    return {
+      firstConstraint: confirmedFacts.length >= 3,
+      secondConstraint: pending && pending.length > 0,
+      thirdConstraint: validSkus && validSkus.length > 0
+    };
+  }
+
+  /**
+   * 检查是否是三约束首次全部满足
+   * @param {ConstraintState} newState
+   * @returns {boolean}
+   * @private
+   */
+  _isFirstTimeAllConstraintsMet(newState) {
+    const wasNotAllMet = !(
+      this._lastConstraintState.firstConstraint &&
+      this._lastConstraintState.secondConstraint &&
+      this._lastConstraintState.thirdConstraint
+    );
+    const isNowAllMet = newState.firstConstraint && newState.secondConstraint && newState.thirdConstraint;
+
+    return wasNotAllMet && isNowAllMet;
+  }
+
+  /**
+   * 更新三约束状态
+   * @param {ConstraintState} state
+   * @private
+   */
+  _updateConstraintState(state) {
+    this._lastConstraintState = { ...state };
+  }
+
+  /**
+   * 触发立即预计算（跳过防抖）
+   * @param {SkuCard[]} availableSkus
+   * @private
+   */
+  async _triggerImmediatePrecompute(availableSkus) {
+    // 检查预计算次数上限
+    if (this._precomputeCount >= this._maxPrecomputeCount) {
+      console.warn(`预计算次数已达上限 ${this._maxPrecomputeCount} 次，跳过`);
+      return;
+    }
+
+    const constraints = this.checkConstraints(availableSkus);
+    if (constraints.valid) {
+      this._precomputeCount++;
+      try {
+        this.emit('precompute-start');
+        const candidates = await this.generateCandidates();
+        this._cache.set(candidates);
+        this.emit('precompute-done', { candidates });
+      } catch (e) {
+        console.error(`立即预计算失败: ${e.message}`);
+      }
+    }
   }
 
   /**
@@ -161,7 +281,7 @@ class CandidateGenerator extends EventEmitter {
       };
     }
 
-    // 第三约束: 至少1个少1个🟢/🟡 SKU（带补充召回）
+    // 第三约束: 至少1个个🟢/🟡 SKU（带补充召回）
     const validSkus = availableSkus.filter(
       sku => sku.confidence === '🟢' || sku.confidence === '🟡'
     );
@@ -236,9 +356,8 @@ class CandidateGenerator extends EventEmitter {
 
     let candidates = this._parseResponse(response);
 
-    // 差异度自检（仅在 LLM 成功时重试）
+    // 差异度自检（仅在 LLM 成功时重试，最多1次）
     if (!llmFailed && !this._checkDiversity(candidates)) {
-      // 重新生成(最多1次，避免前端超时)
       try {
         response = await this.llmClient.generate(prompt, {
           temperature: 0.8,
@@ -436,17 +555,41 @@ ${pendingList}
   }
 
   /**
-   * 检查变更并触发预计算
+   * 检查变更并触发预计算（带防抖）
    *
-   * 触发条件（设计文档 3.2 节）：
-   * - 共识链新增事实
-   * - 待确认判断变化
-   * - 阶段切换
+   * 触发条件（设计文档 3.2.4 节）：
+   * - 共识链新增事实 → 防抖 10 秒后重算
+   * - 手动修正共识链 → 立即重算（跳过防抖）
+   * - 阶段切换 → 立即重算（跳过防抖）
+   * - SKU 变化 → 防抖 10 秒后重算
    *
    * @param {SkuCard[]} availableSkus
+   * @param {Object} [options]
+   * @param {boolean} [options.immediate=false] - 是否立即重算（跳过防抖）
+   * @param {string} [options.source] - 触发源（'consensus_change' | 'manual_correction' | 'stage_switch' | 'sku_change'）
    * @returns {Promise<Candidate[]|null>}
    */
-  async checkAndPrecompute(availableSkus) {
+  async checkAndPrecompute(availableSkus, options = {}) {
+    const { immediate = false, source = 'consensus_change' } = options;
+
+    // 更新可用 SKU
+    this._availableSkus = availableSkus;
+
+    // 检查三约束状态
+    const constraintState = this._getConstraintState(availableSkus);
+
+    // P0: 检查三约束首次满足
+    if (this._isFirstTimeAllConstraintsMet(constraintState)) {
+      // 取消防抖，立即重算
+      this._cancelDebounce();
+      this._updateConstraintState(constraintState);
+      await this._triggerImmediatePrecompute(availableSkus);
+      return this._cache.get();
+    }
+
+    // 更新约束状态
+    this._updateConstraintState(constraintState);
+
     // 检查是否有变更
     const currentFactsCount = this.consensusChain.getConfirmedFacts().length;
     const currentPendingCount = this.consensusChain.getPendingConsensus().length;
@@ -468,23 +611,70 @@ ${pendingList}
       return this._cache.get();
     }
 
-    // 缓存失效且有变更，尝试预计算
-    if (changed) {
-      const constraints = this.checkConstraints(availableSkus);
-      if (constraints.valid) {
-        try {
-          this.emit('precompute-start');
-          const candidates = await this.generateCandidates();
-          this._cache.set(candidates);
-          this.emit('precompute-done', { candidates });
-          return candidates;
-        } catch (e) {
-          console.error(`预计算失败: ${e.message}`);
-        }
+    // 缓存失效且有变更，触发预计算
+    if (changed || immediate) {
+      // 手动修正或阶段切换：立即重算
+      if (immediate || source === 'manual_correction' || source === 'stage_switch') {
+        this._cancelDebounce();
+        await this._triggerImmediatePrecompute(availableSkus);
+      } else {
+        // 共识链变更或 SKU 变化：防抖处理
+        this._scheduleDebouncedPrecompute(availableSkus);
       }
     }
 
     return this._cache.get();
+  }
+
+  /**
+   * 调度防抖预计算
+   * @param {SkuCard[]} availableSkus
+   * @private
+   */
+  _scheduleDebouncedPrecompute(availableSkus) {
+    // 取消之前的防抖计时器
+    this._cancelDebounce();
+
+    // 设置新的防抖计时器
+    this._debounceTimer = setTimeout(async () => {
+      this._debounceTimer = null;
+      await this._triggerImmediatePrecompute(availableSkus);
+    }, this._debounceDelay);
+  }
+
+  /**
+   * 通知 SKU 变化（供外部调用）
+   *
+   * 设计文档 3.2.4 节：备弹区 SKU 可信度变化触发缓存过期
+   *
+   * @param {SkuCard[]} newSkus
+   */
+  async notifySkuChange(newSkus) {
+    this._availableSkus = newSkus;
+
+    // 检查第三约束是否变化
+    const constraintState = this._getConstraintState(newSkus);
+
+    // 如果第三约束从满足变为不满足，缓存必须失效
+    if (this._lastConstraintState.thirdConstraint && !constraintState.thirdConstraint) {
+      this._cache.invalidate();
+    }
+
+    // 如果第三约束从不满足变为满足，可能是首次满足
+    if (!this._lastConstraintState.thirdConstraint && constraintState.thirdConstraint) {
+      if (this._isFirstTimeAllConstraintsMet(constraintState)) {
+        this._cancelDebounce();
+        this._updateConstraintState(constraintState);
+        await this._triggerImmediatePrecompute(newSkus);
+        return;
+      }
+    }
+
+    // 更新约束状态
+    this._updateConstraintState(constraintState);
+
+    // 防抖处理
+    this._scheduleDebouncedPrecompute(newSkus);
   }
 
   /**
@@ -524,6 +714,8 @@ ${pendingList}
       clearInterval(this._backgroundTimer);
       this._backgroundTimer = null;
     }
+    // 清除防抖计时器
+    this._cancelDebounce();
   }
 
   /**
@@ -552,7 +744,21 @@ ${pendingList}
       age_seconds: this._cache.getAgeSeconds(),
       background_running: this.isPrecomputeRunning(),
       last_facts_count: this._lastFactsCount,
-      last_pending_count: this._lastPendingCount
+      last_pending_count: this._lastPendingCount,
+      precompute_count: this._precomputeCount,
+      constraint_state: this._lastConstraintState
+    };
+  }
+
+  /**
+   * 重置预计算计数（新会话时调用）
+   */
+  resetPrecomputeCount() {
+    this._precomputeCount = 0;
+    this._lastConstraintState = {
+      firstConstraint: false,
+      secondConstraint: false,
+      thirdConstraint: false
     };
   }
 }
