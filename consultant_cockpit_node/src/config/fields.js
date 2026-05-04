@@ -27,10 +27,10 @@ const COMPLETENESS_FIELDS = [
 ];
 
 /**
- * 客户档案所有字段（PRD 1.3 节：9 静态 + 2 动态 = 11 字段）
+ * 客户档案所有字段（PRD 1.3 节：10 静态 + 2 动态 = 12 字段）
  */
 const PROFILE_FIELDS = [
-  // 静态字段（9 个）
+  // 静态字段（10 个）
   { name: '客户公司名', type: 'text', required: true, completeness: false },
   { name: '产品线', type: 'text', required: true, completeness: true },
   { name: '客户群体', type: 'text', required: true, completeness: true },
@@ -38,8 +38,9 @@ const PROFILE_FIELDS = [
   { name: '毛利结构', type: 'text', required: true, completeness: true },
   { name: '交付情况', type: 'text', required: true, completeness: true },
   { name: '资源分布', type: 'text', required: true, completeness: true },
-  { name: '战略目标', type: 'text', required: true, completeness: true },
   { name: '显性诉求', type: 'text', required: true, completeness: true },
+  { name: '隐性痛点', type: 'text', required: true, completeness: true },
+  { name: '战略目标', type: 'text', required: true, completeness: true },
   // 动态字段（2 个）
   { name: '当前追问', type: 'text', required: false, completeness: false },
   { name: '诊断进度', type: 'number', required: false, completeness: false },
