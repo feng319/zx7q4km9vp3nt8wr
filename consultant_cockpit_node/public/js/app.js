@@ -670,6 +670,8 @@ function renderAll() {
   renderStageDisplay();
   renderSuggestionStatus();
   updateCandidateBadge();
+  // 渲染后重新计算面板高度
+  setTimeout(adjustPanelHeight, 50);
 }
 
 function renderCompleteness() {
