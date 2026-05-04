@@ -1486,3 +1486,64 @@ textarea {
     color: #e8e8e8;
   }
 }
+
+/* ==================== 右下角悬浮徽标：待决策候选（设计文档 3.5 节） ==================== */
+.pending-decision-badge {
+  position: fixed;
+  bottom: 80px;
+  right: 24px;
+  width: 56px;
+  height: 56px;
+  background: linear-gradient(135deg, #1890ff 0%, #096dd9 100%);
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(24, 144, 255, 0.4);
+  z-index: 1000;
+  transition: all 0.3s ease;
+  animation: badge-pulse 2s infinite;
+}
+
+.pending-decision-badge:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 16px rgba(24, 144, 255, 0.5);
+}
+
+.pending-decision-badge .badge-icon {
+  font-size: 20px;
+  line-height: 1;
+}
+
+.pending-decision-badge .badge-count {
+  position: absolute;
+  top: -4px;
+  right: -4px;
+  min-width: 20px;
+  height: 20px;
+  background: #ff4d4f;
+  color: white;
+  font-size: 12px;
+  font-weight: bold;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 6px;
+}
+
+@keyframes badge-pulse {
+  0%, 100% {
+    box-shadow: 0 4px 12px rgba(24, 144, 255, 0.4);
+  }
+  50% {
+    box-shadow: 0 4px 20px rgba(24, 144, 255, 0.6);
+  }
+}
+
+/* 演示模式下隐藏悬浮徽标 */
+body.demo-mode .pending-decision-badge {
+  display: none !important;
+}
