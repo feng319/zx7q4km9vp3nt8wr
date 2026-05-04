@@ -1150,6 +1150,14 @@ textarea {
   background: #f6ffed;
 }
 
+/* PRD 3.5 节：选中的候选高亮，其他候选淡出但保留 */
+.candidate-card.faded {
+  opacity: 0.5;
+  pointer-events: none; /* 淡出的卡片不可点击 */
+  transform: none; /* 禁用 hover 的 transform 效果 */
+  box-shadow: none; /* 禁用 hover 的阴影效果 */
+}
+
 .candidate-card-label {
   font-size: 14px;
   font-weight: 600;
