@@ -597,10 +597,14 @@ ${pendingList}
     const currentFactsCount = this.consensusChain.getConfirmedFacts().length;
     const currentPendingCount = this.consensusChain.getPendingConsensus().length;
 
+    console.log(`[checkAndPrecompute] facts=${currentFactsCount}, pending=${currentPendingCount}, lastFacts=${this._lastFactsCount}, lastPending=${this._lastPendingCount}`);
+
     const changed = (
       currentFactsCount !== this._lastFactsCount ||
       currentPendingCount !== this._lastPendingCount
     );
+
+    console.log(`[checkAndPrecompute] changed=${changed}, cacheValid=${this._cache.isValid()}`);
 
     this._lastFactsCount = currentFactsCount;
     this._lastPendingCount = currentPendingCount;
@@ -611,17 +615,21 @@ ${pendingList}
 
     // 如果缓存有效，直接返回
     if (this._cache.isValid()) {
+      console.log(`[checkAndPrecompute] 缓存有效，直接返回`);
       return this._cache.get();
     }
 
     // 缓存失效且有变更，触发预计算
     if (changed || immediate) {
+      console.log(`[checkAndPrecompute] 触发预计算: changed=${changed}, immediate=${immediate}, source=${source}`);
       // 手动修正或阶段切换：立即重算
       if (immediate || source === 'manual_correction' || source === 'stage_switch') {
+        console.log(`[checkAndPrecompute] 立即预计算（跳过防抖）`);
         this._cancelDebounce();
         await this._triggerImmediatePrecompute(availableSkus);
       } else {
         // 共识链变更或 SKU 变化：防抖处理
+        console.log(`[checkAndPrecompute] 防抖预计算（10秒延迟）`);
         this._scheduleDebouncedPrecompute(availableSkus);
       }
     }
