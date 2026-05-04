@@ -331,7 +331,8 @@ fastify.get('/api/sessions/:sessionId', async (request, reply) => {
 
   // 计算完整度（基于已确认的事实覆盖的字段数）
   const confirmedFacts = session.consensusChain.getConfirmedFacts();
-  const fieldNames = ['产品线', '客户群体', '收入结构', '毛利结构', '交付情况', '资源分布', '战略目标', '显性诉求', '隐性痛点'];
+  const { getCompletenessFieldNames } = require('./src/config/fields');
+  const fieldNames = getCompletenessFieldNames();
   const fieldsStatus = {};
   for (const name of fieldNames) {
     const hasConfirmed = confirmedFacts.some(f =>
