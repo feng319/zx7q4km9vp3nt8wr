@@ -175,7 +175,8 @@ class ConsensusChain extends EventEmitter {
     this.records.push(newRecord);
 
     // 触发 invalidate-cache 事件（修正会影响候选缓存）
-    this.emit('invalidate-cache', { reason: 'record_corrected', originalId: recordId });
+    // 使用 source: 'manual_correction' 以便 candidateGen 识别并跳过防抖
+    this.emit('invalidate-cache', { source: 'manual_correction', originalId: recordId });
 
     // 触发 change 事件
     this.emit('change', { type: 'correct', record: newRecord, originalRecord: original });
