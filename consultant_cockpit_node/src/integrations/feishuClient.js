@@ -134,6 +134,52 @@ class FeishuClient {
     });
   }
 
+  /**
+   * 带限流重试的 API 调用包装器
+   * @param {Function} apiCall - 要执行的 API 调用函数
+   * @param {string} operationName - 操作名称（用于日志）
+   * @returns {Promise<any>} API 响应
+   * @private
+   */
+  async _withRateLimitRetry(apiCall, operationName) {
+    let lastError = null;
+
+    for (let attempt = 0; attempt < RATE_LIMIT_CONFIG.maxRetries; attempt++) {
+      try {
+        return await apiCall();
+      } catch (error) {
+        lastError = error;
+
+        if (isRateLimitError(error)) {
+          const err = /** @type {any} */ (error);
+          const headers = err.response?.headers || err.headers;
+          const resetTime = parseRateLimitReset(headers);
+          const delay = calculateRetryDelay(attempt, resetTime);
+
+          logger.warn('Rate limited, retrying', {
+            operation: operationName,
+            attempt: attempt + 1,
+            delayMs: delay,
+            resetTime: resetTime ? new Date(resetTime).toISOString() : null,
+          });
+
+          await new Promise(resolve => setTimeout(resolve, delay));
+          continue;
+        }
+
+        // 非 429 错误直接抛出
+        throw error;
+      }
+    }
+
+    // 重试耗尽，抛出最后一个错误
+    logger.error('Rate limit retries exhausted', {
+      operation: operationName,
+      maxRetries: RATE_LIMIT_CONFIG.maxRetries,
+    });
+    throw lastError;
+  }
+
   // ==================== 共识链记录操作 ====================
 
   /**
