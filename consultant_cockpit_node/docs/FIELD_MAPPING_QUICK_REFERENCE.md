@@ -4,47 +4,90 @@
 
 ---
 
+## 问题修复状态
+
+### P0 问题（演练前必须修复）
+
+| # | 问题 | 状态 | 工时 |
+|---|------|------|------|
+| 1 | 诊断共识表 12 列 vs PRD 3 列 | ❌ 待修复 | 2h |
+| 2 | 状态映射多对一不可逆 | ❌ 待修复 | 1.5h |
+| 3 | 完整度计算不一致（8 vs 9 字段） | ❌ 待修复 | 2h |
+| 4 | 客户档案"完整度"字段冗余 | ❌ 待修复 | 0.5h |
+
+### P1 问题（建议修复）
+
+| # | 问题 | 状态 | 工时 |
+|---|------|------|------|
+| 5 | 类型字段多余 case/insight | ❌ 待修复 | 1h |
+| 6 | recommendation 写入校验缺失 | ❌ 待修复 | 0.5h |
+| 7 | 429 限流处理缺失 | ❌ 待修复 | 1.5h |
+| 8 | 共识链持久化集成待确认 | ⚠️ 需确认 | 1h |
+
+### P2 问题（可选）
+
+| # | 问题 | 状态 | 工时 |
+|---|------|------|------|
+| 9 | 富文本多段拼接 | ❌ 待修复 | 0.5h |
+
+---
+
 ## 一、诊断共识表 (tblfZDyYjK)
+
+### PRD 设计 vs 当前实现
+
+| 对比项 | PRD 4.4 定义 | 当前实现 |
+|-------|-------------|---------|
+| 列数 | **3 列** | **12 列** ❌ |
+| 列名 | 发现内容、确认时间、建议方向 | 记录ID、时间戳、类型、阶段、内容、来源、关联SKU、状态、置信度、替代记录、被替代、建议方向 |
+| 用途 | 客户视图（干净专业） | 内部调试视图（暴露所有字段） |
 
 ### 字段完整对应关系
 
-| # | 飞书字段名 | field_id | 飞书类型 | 代码字段名 | 代码类型 | 映射说明 |
-|---|-----------|----------|---------|-----------|---------|---------|
-| 1 | 记录ID | fldt1SGX6u | 自动编号 | id | string | 直接映射 |
-| 2 | 时间戳 | fldLbkq9WL | 文本 | timestamp | string | ISO 8601 格式 |
-| 3 | 类型 | fldFHZB1nv | 单选 | type | string | ⚠️ 需转换（见下表） |
-| 4 | 阶段 | fld5nagQ3S | 单选 | stage | string | 直接映射 |
-| 5 | 内容 | fldt3G5vcE | 多行文本 | content | string | 直接映射 |
-| 6 | 来源 | fldz0rHGbl | 单选 | source | string | 直接映射 |
-| 7 | 关联SKU | fld7weLW44 | 多行文本 | evidence_sku | string[] | ⚠️ 换行分隔↔数组 |
-| 8 | 状态 | fldFVZKCPs | 单选 | status | string | ⚠️ 需转换（见下表） |
-| 9 | 置信度 | fld0lg3Pej | 单选 | confidence | string | 直接映射 |
-| 10 | 替代记录 | fldk0C1onN | 文本 | replaces | string | 直接映射 |
-| 11 | 被替代 | fldfbPEPjE | 文本 | superseded_by | string | 直接映射 |
-| 12 | 建议方向 | fldXfkJp5p | 文本 | recommendation | string | 直接映射 |
+| # | 飞书字段名 | field_id | 飞书类型 | 代码字段名 | PRD 可见性 |
+|---|-----------|----------|---------|-----------|-----------|
+| 1 | 记录ID | fldt1SGX6u | 自动编号 | id | ❌ 内部 |
+| 2 | 时间戳 | fldLbkq9WL | 文本 | timestamp | → 确认时间 |
+| 3 | 类型 | fldFHZB1nv | 单选 | type | ❌ 内部 |
+| 4 | 阶段 | fld5nagQ3S | 单选 | stage | ❌ 内部 |
+| 5 | 内容 | fldt3G5vcE | 多行文本 | content | → 发现内容 |
+| 6 | 来源 | fldz0rHGbl | 单选 | source | ❌ 内部 |
+| 7 | 关联SKU | fld7weLW44 | 多行文本 | evidence_sku | ❌ 内部 |
+| 8 | 状态 | fldFVZKCPs | 单选 | status | ❌ 内部 |
+| 9 | 置信度 | fld0lg3Pej | 单选 | confidence | ❌ 内部 |
+| 10 | 替代记录 | fldk0C1onN | 文本 | replaces | ❌ 内部 |
+| 11 | 被替代 | fldfbPEPjE | 文本 | superseded_by | ❌ 内部 |
+| 12 | 建议方向 | fldXfkJp5p | 文本 | recommendation | ✅ 客户可见 |
 
-### 类型字段映射 (type)
-
-```
-代码 → 飞书          飞书 → 代码
-─────────────────────────────────
-fact      →  事实    事实      →  fact
-consensus →  共识    共识      →  consensus
-case      →  案例    案例      →  case
-insight   →  洞察    洞察      →  insight
-```
-
-### 状态字段映射 (status)
+### 类型字段映射 (type) ⚠️ P1
 
 ```
 代码 → 飞书                    飞书 → 代码
-─────────────────────────────────────────────
-recorded            →  待确认   待确认 → pending_client_confirm
-pending_client_confirm → 待确认   已确认 → confirmed
-confirmed           →  已确认   已过时 → superseded
-active              →  已确认
+─────────────────────────────────────────────────
+fact      →  事实              事实      →  fact
+consensus →  共识              共识      →  consensus
+case      →  案例 ⚠️ PRD未定义  案例      →  case
+insight   →  洞察 ⚠️ PRD未定义  洞察      →  insight
+```
+
+**问题**: PRD 4.3 定义只有 `fact` 和 `consensus`，`case` 和 `insight` 是额外扩展
+
+### 状态字段映射 (status) ⚠️ P0
+
+```
+代码 → 飞书                         飞书 → 代码
+──────────────────────────────────────────────────────
+recorded            →  待确认        待确认 → pending_client_confirm
+pending_client_confirm → 待确认 ❌   已确认 → confirmed
+confirmed           →  已确认        已过时 → superseded
+active              →  已确认 ⚠️ PRD未定义
 superseded          →  已过时
 ```
+
+**问题**:
+1. `recorded` 和 `pending_client_confirm` 都映射到"待确认"，**反向不可逆**
+2. `active` 状态 PRD 未定义
+3. 反向映射丢失 `recorded` 状态语义
 
 ---
 
@@ -52,34 +95,32 @@ superseded          →  已过时
 
 ### 字段完整对应关系
 
-| # | 飞书字段名 | field_id | 飞书类型 | 代码字段名 | 代码类型 | 映射说明 |
-|---|-----------|----------|---------|-----------|---------|---------|
-| 1 | 客户公司名 | fldSMirg0Q | 文本 | 客户公司名 | string | 直接映射 |
-| 2 | 产品线 | fldcpGsA0i | 文本 | 产品线 | string | ⚠️ 富文本需提取 |
-| 3 | 客户群体 | fldgbcctGn | 文本 | 客户群体 | string | ⚠️ 富文本需提取 |
-| 4 | 收入结构 | fldRsdz5k7 | 文本 | 收入结构 | string | ⚠️ 富文本需提取 |
-| 5 | 毛利结构 | fldqdZ29m2 | 文本 | 毛利结构 | string | ⚠️ 富文本需提取 |
-| 6 | 交付情况 | fldFd96pt1 | 文本 | 交付情况 | string | ⚠️ 富文本需提取 |
-| 7 | 资源分布 | fld6ZJQ69C | 文本 | 资源分布 | string | ⚠️ 富文本需提取 |
-| 8 | 战略目标 | fld7HElqu6 | 文本 | 战略目标 | string | ⚠️ 富文本需提取 |
-| 9 | 显性诉求 | flddrDkmYx | 文本 | 显性诉求 | string | ⚠️ 富文本需提取 |
-| 10 | 当前追问 | fldbU5arYa | 文本 | 当前追问 | string | ⚠️ 富文本需提取 |
-| 11 | 诊断进度 | fldSCl5WAg | 数字 | 诊断进度 | number | 直接映射 |
-| 12 | 完整度 | fldh9UIUjB | 进度条 | 完整度 | number | ✅ 已添加映射 |
+| # | 飞书字段名 | field_id | 飞书类型 | 代码字段名 | PRD 可见性 |
+|---|-----------|----------|---------|-----------|-----------|
+| 1 | 客户公司名 | fldSMirg0Q | 文本 | 客户公司名 | ✅ 客户可见 |
+| 2 | 产品线 | fldcpGsA0i | 文本 | 产品线 | ✅ 客户可见 |
+| 3 | 客户群体 | fldgbcctGn | 文本 | 客户群体 | ✅ 客户可见 |
+| 4 | 收入结构 | fldRsdz5k7 | 文本 | 收入结构 | ✅ 客户可见 |
+| 5 | 毛利结构 | fldqdZ29m2 | 文本 | 毛利结构 | ✅ 客户可见 |
+| 6 | 交付情况 | fldFd96pt1 | 文本 | 交付情况 | ✅ 客户可见 |
+| 7 | 资源分布 | fld6ZJQ69C | 文本 | 资源分布 | ✅ 客户可见 |
+| 8 | 战略目标 | fld7HElqu6 | 文本 | 战略目标 | ✅ 客户可见 |
+| 9 | 显性诉求 | flddrDkmYx | 文本 | 显性诉求 | ✅ 客户可见 |
+| 10 | 当前追问 | fldbU5arYa | 文本 | 当前追问 | ✅ 客户可见 |
+| 11 | 诊断进度 | fldSCl5WAg | 数字 | 诊断进度 | ✅ 客户可见 |
+| 12 | 完整度 | fldh9UIUjB | 进度条 | 完整度 | ⚠️ PRD 未定义 |
 
-### 富文本格式说明
+### 完整度计算不一致 ⚠️ P0
 
-飞书返回格式：
-```json
-[{ "text": "实际内容", "type": "text" }]
-```
+| 位置 | 字段列表 | 分母 |
+|-----|---------|-----|
+| `memoGenerator.js:279-282` | 8 字段（缺隐性痛点） | **8** |
+| `battleCardGen.js:210-214` | 9 字段（含隐性痛点） | **9** |
 
-代码提取方式：
-```javascript
-if (Array.isArray(value) && value[0]?.text) {
-  profile[name] = value[0].text;
-}
-```
+**问题**:
+1. 两处分母不同，同一档案计算结果永远不同
+2. `battleCardGen.js` 包含 PRD 未定义的"隐性痛点"
+3. 两处都缺少"客户公司名"
 
 ---
 
@@ -102,6 +143,8 @@ if (Array.isArray(value) && value[0]?.text) {
 │  │ 类型: '事实' │                         │ type: 'fact' │     │
 │  │ 状态: '已确认'│                        │ status: 'confirmed' │
 │  └──────────────┘                         └──────────┘        │
+│                                                                  │
+│  ⚠️ 问题: status 映射多对一，反向不可逆                          │
 └─────────────────────────────────────────────────────────────────┘
 
 ┌─────────────────────────────────────────────────────────────────┐
@@ -117,8 +160,9 @@ if (Array.isArray(value) && value[0]?.text) {
 │  ┌──────────────┐    _fieldsToProfile()    ┌──────────┐       │
 │  │ 飞书字段     │ ────────────────────────→ │ 代码对象  │       │
 │  │ 产品线: [{text:'储能',type:'text'}] │    │ 产品线: '储能' │   │
-│  │ 完整度: 75   │                          │ 完整度: 75 │      │
 │  └──────────────┘                          └──────────┘       │
+│                                                                  │
+│  ⚠️ 问题: 完整度字段 PRD 未定义，应使用诊断进度                   │
 └─────────────────────────────────────────────────────────────────┘
 ```
 
@@ -129,19 +173,47 @@ if (Array.isArray(value) && value[0]?.text) {
 | 功能 | 文件路径 | 关键方法 |
 |-----|---------|---------|
 | 飞书API客户端 | `src/integrations/feishuClient.js` | `_recordToFields`, `_fieldsToRecord`, `_profileToFields`, `_fieldsToProfile` |
-| 共识链管理 | `src/core/consensusChain.js` | `_extractProfileData` |
+| 共识链管理 | `src/core/consensusChain.js` | `_extractProfileData`, `correctRecord` |
+| 作战卡生成 | `src/core/battleCardGen.js` | `_calcDefaultCompleteness` |
+| 备忘录生成 | `src/core/memoGenerator.js` | `_calcProfileCompleteness` |
 | 类型定义 | `src/types.js` | `ConsensusRecord`, `ClientProfileFields` |
 | 统一映射模块 | `src/utils/fieldMapping.js` | `typeToFeishu`, `typeToCode`, `statusToFeishu`, `statusToCode` |
 
 ---
 
-## 五、修复状态
+## 五、修复计划
 
-| 问题 | 状态 | 说明 |
-|-----|------|-----|
-| 类型/状态反向映射 | ✅ 已修复 | `_fieldsToRecord` 添加了 `typeReverseMap`/`statusReverseMap` |
-| 完整度字段映射 | ✅ 已修复 | `_profileToFields`/`_fieldsToProfile` 已支持 |
-| 富文本格式处理 | ✅ 已修复 | `_fieldsToProfile` 自动提取 `value[0].text` |
-| Filter 匹配逻辑 | ✅ 已修复 | `getClientProfile` 改用 `search` API |
-| _extractProfileData | ✅ 已修复 | 补充了 `当前追问`、`诊断进度` 提取 |
-| 统一映射模块 | ✅ 已创建 | `src/utils/fieldMapping.js` |
+### Phase 1: P0 问题（6 小时）
+
+| # | 问题 | 修复方案 |
+|---|------|---------|
+| 1 | 诊断共识表设计偏差 | 新建 3 列客户视图表 |
+| 2 | 状态映射多对一 | 飞书扩展 4 个状态选项 |
+| 3 | 完整度计算不一致 | 创建 `src/config/fields.js` |
+| 4 | 完整度字段冗余 | 删除飞书字段，统一诊断进度 |
+
+### Phase 2: P1 问题（4 小时）
+
+| # | 问题 | 修复方案 |
+|---|------|---------|
+| 5 | 类型字段多余值 | 移除映射，添加读取防御 |
+| 6 | recommendation 校验 | 写入前检查 type |
+| 7 | 429 限流处理 | 添加拦截器和重试 |
+| 8 | 持久化集成 | 确认 SessionManager 集成 |
+
+### Phase 3: P2 问题（0.5 小时）
+
+| # | 问题 | 修复方案 |
+|---|------|---------|
+| 9 | 富文本多段拼接 | 改为拼接所有 text 段 |
+
+---
+
+## 六、已正确实现 ✅
+
+| 功能 | 代码位置 |
+|-----|---------|
+| 修正记录 stage 保护 | `consensusChain.js:146` |
+| 候选缓存失效监听 | `candidateGen.js:129-132` |
+| 类型反向映射 | `feishuClient.js:507-512` |
+| 富文本格式处理 | `feishuClient.js:576-585` |
