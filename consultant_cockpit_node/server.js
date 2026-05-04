@@ -10,6 +10,15 @@
  * - 静态文件服务
  */
 
+// Windows 控制台 UTF-8 编码修复（防止中文日志乱码）
+if (process.platform === 'win32') {
+  try {
+    require('child_process').execSync('chcp 65001', { stdio: 'ignore' });
+  } catch (_) { /* ignore */ }
+}
+process.stdout.setDefaultEncoding('utf8');
+process.stderr.setDefaultEncoding('utf8');
+
 require('dotenv').config();
 const fastify = require('fastify')({
   logger: {
