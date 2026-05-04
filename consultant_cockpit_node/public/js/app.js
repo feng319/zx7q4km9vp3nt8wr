@@ -478,25 +478,48 @@ async function executeCorrectCommand(newContent) {
 }
 
 async function executeStageSwitchCommand(stage) {
-  if (stage) {
-    // 指定阶段
-    if (STAGES.includes(stage)) {
-      state.currentStage = stage;
-      elements.currentStage.textContent = stage;
-      elements.stageDisplay.textContent = stage;
-      setStatus(`已切换到: ${stage}`, 'success');
-    } else {
-      setStatus(`无效阶段: ${stage}，可选: ${STAGES.join(', ')}`, 'warning');
-    }
-  } else {
+  let targetStage = stage;
+
+  if (!targetStage) {
     // 切换到下一阶段
     const currentIdx = STAGES.indexOf(state.currentStage);
     const nextIdx = (currentIdx + 1) % STAGES.length;
-    const nextStage = STAGES[nextIdx];
-    state.currentStage = nextStage;
-    elements.currentStage.textContent = nextStage;
-    elements.stageDisplay.textContent = nextStage;
-    setStatus(`已切换到: ${nextStage}`, 'success');
+    targetStage = STAGES[nextIdx];
+  }
+
+  if (!STAGES.includes(targetStage)) {
+    setStatus(`无效阶段: ${targetStage}，可选: ${STAGES.join(', ')}`, 'warning');
+    return;
+  }
+
+  if (!state.sessionId) {
+    // 无会话时只更新本地状态
+    state.currentStage = targetStage;
+    elements.currentStage.textContent = targetStage;
+    elements.stageDisplay.textContent = targetStage;
+    setStatus(`已切换到: ${targetStage}`, 'success');
+    return;
+  }
+
+  // 乐观更新：立即更新本地 UI
+  state.currentStage = targetStage;
+  state._stageSyncing = true; // 设置同步中标志，防止 GET 覆盖
+  elements.currentStage.textContent = targetStage;
+  elements.stageDisplay.textContent = targetStage;
+  setStatus(`已切换到: ${targetStage}`, 'success');
+
+  try {
+    // 同步到后端
+    await apiRequest(`/sessions/${state.sessionId}/stage`, {
+      method: 'PATCH',
+      body: JSON.stringify({ stage: targetStage })
+    });
+  } catch (error) {
+    console.error('阶段同步失败:', error);
+    setStatus(`阶段同步失败: ${error.message}`, 'error');
+    // 可选：回滚本地状态
+  } finally {
+    state._stageSyncing = false; // 清除同步中标志
   }
 }
 
