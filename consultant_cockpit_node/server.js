@@ -348,6 +348,40 @@ fastify.patch('/api/sessions/:sessionId/company', async (request, reply) => {
   }
 });
 
+// 更新会话的当前阶段
+const VALID_STAGES = ['战略梳理', '商业模式', '行业演示'];
+fastify.patch('/api/sessions/:sessionId/stage', async (request, reply) => {
+  const { sessionId } = request.params;
+  const { stage } = request.body || {};
+
+  if (!sessions.has(sessionId)) {
+    reply.code(404);
+    return { error: 'Session not found' };
+  }
+
+  if (!stage || !VALID_STAGES.includes(stage)) {
+    reply.code(400);
+    return { error: `无效阶段: ${stage}，可选: ${VALID_STAGES.join(', ')}` };
+  }
+
+  const session = await getOrCreateSession(sessionId);
+
+  // 更新阶段
+  session.currentStage = stage;
+
+  // 触发候选缓存失效（PRD 1.4 节：阶段切换触发候选预计算重算）
+  session.consensusChain.emit('invalidate-cache', { reason: 'stage_changed', stage });
+
+  // 立即保存到 metadata
+  const metadata = { currentStage: stage };
+  if (session.company) metadata.company = session.company;
+  await sessionManager.saveSession(sessionId, session.consensusChain.exportRecords(), metadata);
+
+  fastify.log.info({ sessionId, stage }, 'Stage switched');
+
+  return { success: true, current_stage: stage };
+});
+
 // 获取会话状态
 fastify.get('/api/sessions/:sessionId', async (request, reply) => {
   const { sessionId } = request.params;
