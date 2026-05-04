@@ -10,9 +10,8 @@
 
 /**
  * 完整度计算字段定义
- * PRD 6.2 节：8 个必填字段
+ * PRD 6.2 节：9 个必填字段（等权重，每个字段非空即计 11%）
  *
- * 注意：移除了"隐性痛点"（PRD 未定义）
  * 注意：未包含"客户公司名"（用于筛选，不计入完整度）
  */
 const COMPLETENESS_FIELDS = [
@@ -22,8 +21,9 @@ const COMPLETENESS_FIELDS = [
   { name: '毛利结构', weight: 1, minChars: 5 },
   { name: '交付情况', weight: 1, minChars: 5 },
   { name: '资源分布', weight: 1, minChars: 5 },
-  { name: '战略目标', weight: 1, minChars: 5 },
   { name: '显性诉求', weight: 1, minChars: 5 },
+  { name: '隐性痛点', weight: 1, minChars: 5 },
+  { name: '战略目标', weight: 1, minChars: 5 },
 ];
 
 /**
