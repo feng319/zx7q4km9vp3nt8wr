@@ -553,7 +553,7 @@ describe('ConsensusChain', () => {
 
     it('should handle feishu sync failure gracefully', async () => {
       const mockFeishuClient = {
-        syncConsensusRecord: async () => {
+        createConsensusRecord: async () => {
           throw new Error('Feishu API error');
         }
       };
@@ -567,7 +567,7 @@ describe('ConsensusChain', () => {
           stage: '战略梳理',
           content: 'test',
           source: 'manual'
-        });
+        }, true); // syncToFeishu = true
       });
 
       // 等待异步操作
