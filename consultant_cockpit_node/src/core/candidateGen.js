@@ -220,36 +220,33 @@ class CandidateGenerator extends EventEmitter {
     const prompt = this._buildPrompt();
 
     let response;
+    let llmFailed = false;
     try {
       // 使用 LLM 客户端生成，带超时保护
       response = await this.llmClient.generate(prompt, {
         temperature: 0.7,
-        timeout: 30
+        timeout: 15
       });
     } catch (error) {
       // 超时或错误时使用降级模板
       console.warn(`LLM 生成失败: ${error.message}`);
       response = this._getFallbackResponse();
+      llmFailed = true;
     }
 
     let candidates = this._parseResponse(response);
 
-    // 差异度自检
-    if (!this._checkDiversity(candidates)) {
-      // 重新生成(最多2次)
-      for (let i = 0; i < 2; i++) {
-        try {
-          response = await this.llmClient.generate(prompt, {
-            temperature: 0.8,
-            timeout: 30
-          });
-          candidates = this._parseResponse(response);
-          if (this._checkDiversity(candidates)) {
-            break;
-          }
-        } catch (e) {
-          console.warn(`重新生成失败: ${e.message}`);
-        }
+    // 差异度自检（仅在 LLM 成功时重试）
+    if (!llmFailed && !this._checkDiversity(candidates)) {
+      // 重新生成(最多1次，避免前端超时)
+      try {
+        response = await this.llmClient.generate(prompt, {
+          temperature: 0.8,
+          timeout: 15
+        });
+        candidates = this._parseResponse(response);
+      } catch (e) {
+        console.warn(`重新生成失败: ${e.message}`);
       }
     }
 
