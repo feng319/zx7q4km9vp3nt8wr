@@ -451,19 +451,22 @@ class FeishuClient {
 
       if (existing && existing.record_id) {
         // 更新现有记录
-        const response = await this.client.bitable.appTableRecord.update({
-          path: {
-            app_token: this.bitableToken,
-            table_id: this.profileTableId,
-            record_id: existing.record_id,
-          },
-          params: {
-            user_id_type: 'open_id',
-          },
-          data: {
-            fields: this._profileToFields(updates),
-          },
-        });
+        const response = await this._withRateLimitRetry(
+          () => this.client.bitable.appTableRecord.update({
+            path: {
+              app_token: this.bitableToken,
+              table_id: this.profileTableId,
+              record_id: existing.record_id,
+            },
+            params: {
+              user_id_type: 'open_id',
+            },
+            data: {
+              fields: this._profileToFields(updates),
+            },
+          }),
+          'updateClientProfile'
+        );
 
         if (response.code !== 0) {
           throw new Error(`Lark API error: ${response.msg}`);
@@ -472,18 +475,21 @@ class FeishuClient {
         logger.info('Updated client profile', { company });
       } else {
         // 创建新记录
-        const response = await this.client.bitable.appTableRecord.create({
-          path: {
-            app_token: this.bitableToken,
-            table_id: this.profileTableId,
-          },
-          params: {
-            user_id_type: 'open_id',
-          },
-          data: {
-            fields: this._profileToFields({ 客户公司名: company, ...updates }),
-          },
-        });
+        const response = await this._withRateLimitRetry(
+          () => this.client.bitable.appTableRecord.create({
+            path: {
+              app_token: this.bitableToken,
+              table_id: this.profileTableId,
+            },
+            params: {
+              user_id_type: 'open_id',
+            },
+            data: {
+              fields: this._profileToFields({ 客户公司名: company, ...updates }),
+            },
+          }),
+          'createClientProfile'
+        );
 
         if (response.code !== 0) {
           throw new Error(`Lark API error: ${response.msg}`);
