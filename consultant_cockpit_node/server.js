@@ -166,8 +166,9 @@ async function getOrCreateSession(sessionId) {
       fallbackHandler,
     });
 
-    // 用于恢复的公司名（在 session 创建后设置）
+    // 用于恢复的状态（在 session 创建后设置）
     let restoredCompany = null;
+    let restoredStage = '战略梳理'; // 默认阶段
 
     // 尝试从文件系统恢复会话数据
     try {
@@ -176,9 +177,13 @@ async function getOrCreateSession(sessionId) {
         consensusChain.importRecords(savedSession.records);
         fastify.log.info({ sessionId, recordCount: savedSession.records.length }, 'Session restored from disk');
       }
-      // 保存公司名，稍后设置到 session
+      // 恢复公司名
       if (savedSession && savedSession.metadata && savedSession.metadata.company) {
         restoredCompany = savedSession.metadata.company;
+      }
+      // 恢复当前阶段
+      if (savedSession && savedSession.metadata && savedSession.metadata.currentStage) {
+        restoredStage = savedSession.metadata.currentStage;
       }
     } catch (error) {
       fastify.log.warn({ sessionId, error: error.message }, 'Failed to restore session from disk');
@@ -189,12 +194,16 @@ async function getOrCreateSession(sessionId) {
       candidateGen,
       knowledgeRetriever,
       company: restoredCompany, // 恢复公司名
+      currentStage: restoredStage, // 恢复当前阶段
     };
 
     sessions.set(sessionId, session);
 
     if (restoredCompany) {
       fastify.log.info({ sessionId, company: restoredCompany }, 'Company restored from disk');
+    }
+    if (restoredStage !== '战略梳理') {
+      fastify.log.info({ sessionId, currentStage: restoredStage }, 'Stage restored from disk');
     }
 
     // 监听共识链变更（仅用于 WebSocket 广播，不重复同步飞书）
