@@ -228,7 +228,10 @@ async function getSessionState() {
     state.records = data.records || [];
     state.completeness = data.completeness || 0;
     state.fieldsStatus = data.fields_status || {};
-    state.currentStage = data.current_stage || '战略梳理';
+    // 方案 B：如果阶段正在同步中，不覆盖本地状态
+    if (!state._stageSyncing) {
+      state.currentStage = data.current_stage || '战略梳理';
+    }
     renderAll();
   } catch (error) {
     console.error('获取会话状态失败:', error);
