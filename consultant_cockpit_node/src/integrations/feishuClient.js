@@ -13,6 +13,13 @@
 const lark = require('@larksuiteoapi/node-sdk');
 const { getLogger } = require('../utils/logger');
 const { getConfig } = require('../utils/config');
+const {
+  typeToFeishu,
+  typeToCode,
+  statusToFeishu,
+  statusToCode,
+  isValidType,
+} = require('../config/fields');
 
 // 模块级日志器
 const logger = getLogger('feishuClient');
