@@ -26,7 +26,7 @@ describe('ConsensusChain', () => {
       assert.strictEqual(record.stage, '战略梳理');
       assert.strictEqual(record.content, '客户主营业务为储能系统集成');
       assert.strictEqual(record.source, 'manual');
-      assert.strictEqual(record.status, 'recorded');
+      assert.strictEqual(record.status, 'pending_client_confirm');
       assert.deepStrictEqual(record.evidence_sku, []);
       assert.strictEqual(record.confidence, null);
       assert.strictEqual(record.replaces, null);
