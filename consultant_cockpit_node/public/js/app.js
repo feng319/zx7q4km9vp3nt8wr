@@ -536,12 +536,15 @@ async function executeCandidateCommand() {
   try {
     const data = await apiRequest(`/sessions/${state.sessionId}/candidates`);
 
-    if (data.constraint_message) {
-      setStatus(data.constraint_message, 'warning');
-    } else {
+    // 后端返回 message 字段（约束不满足时的引导文案）
+    if (data.message) {
+      setStatus(data.message, 'warning');
+    } else if (data.candidates && data.candidates.length > 0) {
       state.candidates = data.candidates;
       showCandidatesOverlay();
       setStatus('候选方案已生成', 'success');
+    } else {
+      setStatus('未生成候选方案', 'warning');
     }
   } catch (error) {
     setStatus(`获取候选方案失败: ${error.message}`, 'error');
