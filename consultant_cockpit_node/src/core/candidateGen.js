@@ -232,6 +232,7 @@ class CandidateGenerator extends EventEmitter {
    * @private
    */
   async _triggerImmediatePrecompute(availableSkus) {
+    console.log(`[_triggerImmediatePrecompute] 开始，预计算次数: ${this._precomputeCount}/${this._maxPrecomputeCount}`);
     // 检查预计算次数上限
     if (this._precomputeCount >= this._maxPrecomputeCount) {
       console.warn(`预计算次数已达上限 ${this._maxPrecomputeCount} 次，跳过`);
@@ -239,16 +240,21 @@ class CandidateGenerator extends EventEmitter {
     }
 
     const constraints = this.checkConstraints(availableSkus);
+    console.log(`[_triggerImmediatePrecompute] 约束检查结果: ${JSON.stringify(constraints)}`);
     if (constraints.valid) {
       this._precomputeCount++;
       try {
         this.emit('precompute-start');
+        console.log(`[_triggerImmediatePrecompute] 开始生成候选...`);
         const candidates = await this.generateCandidates();
+        console.log(`[_triggerImmediatePrecompute] 生成 ${candidates.length} 个候选，保存到缓存`);
         this._cache.set(candidates);
         this.emit('precompute-done', { candidates });
       } catch (e) {
         console.error(`立即预计算失败: ${e.message}`);
       }
+    } else {
+      console.log(`[_triggerImmediatePrecompute] 约束不满足，跳过预计算: ${constraints.message}`);
     }
   }
 
