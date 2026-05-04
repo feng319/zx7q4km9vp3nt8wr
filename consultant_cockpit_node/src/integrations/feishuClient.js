@@ -498,28 +498,15 @@ class FeishuClient {
   _fieldsToRecord(fields) {
     const record = {};
 
-    // 类型反向映射：飞书选项中文值 → 代码英文值
-    const typeReverseMap = {
-      '事实': 'fact',
-      '共识': 'consensus',
-      '案例': 'case',
-      '洞察': 'insight',
-    };
-    // 状态反向映射：飞书选项中文值 → 代码英文值
-    const statusReverseMap = {
-      '待确认': 'pending_client_confirm',
-      '已确认': 'confirmed',
-      '已过时': 'superseded',
-    };
-
+    // 使用统一字段映射模块
     if (fields['记录ID']) record.id = fields['记录ID'];
     if (fields['时间戳']) record.timestamp = fields['时间戳'];
-    if (fields['类型']) record.type = typeReverseMap[fields['类型']] || fields['类型'];
+    if (fields['类型']) record.type = typeToCode(fields['类型']);
     if (fields['阶段']) record.stage = fields['阶段'];
     if (fields['内容']) record.content = fields['内容'];
     if (fields['来源']) record.source = fields['来源'];
     if (fields['关联SKU']) record.evidence_sku = fields['关联SKU'].split('\n').filter(Boolean);
-    if (fields['状态']) record.status = statusReverseMap[fields['状态']] || fields['状态'];
+    if (fields['状态']) record.status = statusToCode(fields['状态']);
     if (fields['置信度']) record.confidence = fields['置信度'];
     if (fields['替代记录']) record.replaces = fields['替代记录'];
     if (fields['被替代']) record.superseded_by = fields['被替代'];
