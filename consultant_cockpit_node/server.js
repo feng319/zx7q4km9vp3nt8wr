@@ -387,8 +387,9 @@ fastify.post('/api/sessions/:sessionId/records/:recordId/confirm', async (reques
   const session = await getOrCreateSession(sessionId);
 
   try {
-    session.consensusChain.confirmRecord(recordId);
-    return { success: true };
+    // 传递公司名给 confirmRecord，用于同步到客户档案表
+    session.consensusChain.confirmRecord(recordId, session.company);
+    return { success: true, company: session.company || null };
   } catch (error) {
     reply.code(400);
     return { success: false, error: error.message };
