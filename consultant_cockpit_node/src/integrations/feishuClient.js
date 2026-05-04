@@ -19,6 +19,8 @@ const {
   statusToFeishu,
   statusToCode,
   isValidType,
+  toCustomerView,
+  toCustomerViewBatch,
 } = require('../config/fields');
 
 // 模块级日志器
