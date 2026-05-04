@@ -1,7 +1,7 @@
 // tests/stage-switch-test.js — 阶段切换功能验证
 const assert = require('assert');
 
-const BASE_URL = 'http://localhost:3000';
+const BASE_URL = 'http://localhost:8501';
 
 async function apiRequest(endpoint, options = {}) {
   const response = await fetch(`${BASE_URL}/api${endpoint}`, {
