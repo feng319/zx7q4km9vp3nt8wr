@@ -45,6 +45,8 @@ const state = {
   records: [],
   candidates: null,
   candidateId: null,  // 当前选中候选对应的记录 ID
+  selectedCandidateIndex: null,  // 选中的候选索引（用于淡出其他卡片）
+  candidatesFolded: false,  // 候选是否折叠到右下角
   skus: [],
   currentStage: '战略梳理',
   completeness: 0,
