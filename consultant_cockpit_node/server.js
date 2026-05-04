@@ -166,6 +166,9 @@ async function getOrCreateSession(sessionId) {
       fallbackHandler,
     });
 
+    // 用于恢复的公司名（在 session 创建后设置）
+    let restoredCompany = null;
+
     // 尝试从文件系统恢复会话数据
     try {
       const savedSession = await sessionManager.loadSession(sessionId);
@@ -173,20 +176,26 @@ async function getOrCreateSession(sessionId) {
         consensusChain.importRecords(savedSession.records);
         fastify.log.info({ sessionId, recordCount: savedSession.records.length }, 'Session restored from disk');
       }
-      // 恢复公司名
+      // 保存公司名，稍后设置到 session
       if (savedSession && savedSession.metadata && savedSession.metadata.company) {
-        session.company = savedSession.metadata.company;
-        fastify.log.info({ sessionId, company: session.company }, 'Company restored from disk');
+        restoredCompany = savedSession.metadata.company;
       }
     } catch (error) {
       fastify.log.warn({ sessionId, error: error.message }, 'Failed to restore session from disk');
     }
 
-    sessions.set(sessionId, {
+    const session = {
       consensusChain,
       candidateGen,
       knowledgeRetriever,
-    });
+      company: restoredCompany, // 恢复公司名
+    };
+
+    sessions.set(sessionId, session);
+
+    if (restoredCompany) {
+      fastify.log.info({ sessionId, company: restoredCompany }, 'Company restored from disk');
+    }
 
     // 监听共识链变更（仅用于 WebSocket 广播，不重复同步飞书）
     // 飞书同步由 consensusChain 内部处理：
