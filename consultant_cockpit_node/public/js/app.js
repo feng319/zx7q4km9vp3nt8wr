@@ -52,7 +52,7 @@ const state = {
   currentSuggestion: null,
   ws: null,
   llmProvider: 'deepseek-free',
-  llmModel: 'deepseek/deepseek-v4-pro-free',
+  llmModel: 'deepseek/deepseek-v4-flash-free',
   demoMode: false,
   _stageSyncing: false  // 阶段同步中标志，防止 GET 覆盖
 };
