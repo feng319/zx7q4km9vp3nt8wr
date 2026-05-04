@@ -534,8 +534,8 @@ fastify.get('/api/sessions/:sessionId/candidates', async (request, reply) => {
   const session = await getOrCreateSession(sessionId);
 
   try {
-    // 获取可用 SKU
-    const skus = session.knowledgeRetriever.getAvailableSkus();
+    // 获取可用 SKU（使用 getFreshSkus 获取缓存中 3 分钟内的 SKU）
+    const skus = session.knowledgeRetriever.getFreshSkus();
 
     // 检查约束
     const constraintResult = session.candidateGen.checkConstraints(skus);
