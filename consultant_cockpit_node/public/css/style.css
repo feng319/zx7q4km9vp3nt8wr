@@ -881,33 +881,23 @@ textarea {
   position: relative; /* 候选覆盖层定位基准 */
 }
 
-/* 中栏内部使用 flex 布局，让共识链自动填充 */
+/* 中栏内部使用 flex 布局 */
 .dialog-panel .panel-content {
   display: flex;
   flex-direction: column;
   min-height: 0;
-  overflow-y: visible; /* 不滚动，让 sticky 生效 */
+  overflow: visible;
+  padding-bottom: 0;
 }
 
-/* 快捷指令区：固定在对话区底部，始终可见 */
-.command-section {
-  flex-shrink: 0;
-  position: sticky;
-  bottom: 0;
-  background: var(--panel-bg);
-  padding: 16px 0;
-  margin-top: 16px;
-  z-index: 10;
-  border-top: 1px solid var(--border-color);
-}
-
+/* 阶段指示：固定在顶部 */
 .stage-indicator {
   font-size: 14px;
   color: var(--text-secondary-color);
   padding: 8px 12px;
   background: var(--bg-secondary);
   border-radius: 4px;
-  margin-bottom: 16px;
+  margin-bottom: 12px;
   flex-shrink: 0;
 }
 
@@ -915,13 +905,13 @@ textarea {
   color: var(--primary-color);
 }
 
-/* 共识链显示区 */
+/* 共识链显示区：可滚动区域 */
 .consensus-chain {
-  margin-bottom: 16px;
-  min-height: 80px;
-  /* 增加显示高度，使用 flex 自动填充 */
   flex: 1;
+  min-height: 60px;
+  max-height: calc(100% - 180px); /* 为阶段指示和快捷指令留空间 */
   overflow-y: auto;
+  margin-bottom: 12px;
 }
 
 .consensus-chain .empty-state {
@@ -937,6 +927,15 @@ textarea {
 .record-item.flash {
   animation: record-flash 0.3s ease-out;
   border-left: 3px solid transparent;
+}
+
+/* 快捷指令区：固定在面板底部 */
+.command-section {
+  flex-shrink: 0;
+  background: var(--panel-bg);
+  padding: 12px 0 0;
+  margin-top: auto;
+  border-top: 1px solid var(--border-color);
 }
 
 .command-section h3 {
