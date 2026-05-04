@@ -586,16 +586,25 @@ fastify.get('/api/sessions/:sessionId/candidates', async (request, reply) => {
 
     // 优先使用缓存（设计文档 3.2 节：预计算缓存命中时 0.2 秒响应）
     let candidates = session.candidateGen.getCachedCandidates();
+    let cacheHit = true;
 
     if (!candidates) {
       // 缓存未命中，实时生成
+      cacheHit = false;
+      fastify.log.info({ sessionId }, 'Cache miss, generating candidates...');
       candidates = await session.candidateGen.generateCandidates();
+      // 保存到缓存，避免下次重复生成
+      session.candidateGen._cache.set(candidates);
+      fastify.log.info({ sessionId, candidateCount: candidates.length }, 'Candidates generated and cached');
+    } else {
+      fastify.log.info({ sessionId, candidateCount: candidates.length }, 'Cache hit');
     }
 
     return {
       success: true,
       candidates,
       cache_status: session.candidateGen.getCacheStatus(),
+      cache_hit: cacheHit,
     };
   } catch (error) {
     return {
