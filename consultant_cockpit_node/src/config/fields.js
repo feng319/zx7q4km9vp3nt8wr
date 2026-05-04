@@ -256,4 +256,9 @@ module.exports = {
   statusToFeishu,
   statusToCode,
   isValidType,
+
+  // 客户视图转换函数
+  toCustomerView,
+  toCustomerViewBatch,
+  filterCustomerFields,
 };
