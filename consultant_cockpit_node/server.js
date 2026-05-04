@@ -383,7 +383,7 @@ fastify.get('/api/sessions/:sessionId', async (request, reply) => {
     record_count: records.length,
     completeness,
     fields_status: fieldsStatus,
-    current_stage: '战略梳理',
+    current_stage: session.currentStage || '战略梳理',
     confirmed_facts: confirmedFacts.length,
     confirmed_consensus: session.consensusChain.getConfirmedConsensus().length,
     pending_consensus: session.consensusChain.getPendingConsensus().length,
