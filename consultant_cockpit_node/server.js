@@ -208,6 +208,10 @@ async function getOrCreateSession(sessionId) {
 
     sessions.set(sessionId, session);
 
+    // 启动候选预计算（设计文档 3.2 节：后台预计算，/候选 指令 0.2 秒响应）
+    const initialSkus = knowledgeRetriever.getFreshSkus();
+    candidateGen.startBackgroundPrecompute(initialSkus, 30); // 30秒检查间隔
+
     if (restoredCompany) {
       fastify.log.info({ sessionId, company: restoredCompany }, 'Company restored from disk');
     }
@@ -215,13 +219,19 @@ async function getOrCreateSession(sessionId) {
       fastify.log.info({ sessionId, currentStage: restoredStage }, 'Stage restored from disk');
     }
 
-    // 监听共识链变更（仅用于 WebSocket 广播，不重复同步飞书）
+    // 监听共识链变更（用于自动保存 + 触发候选重算）
     // 飞书同步由 consensusChain 内部处理：
     // - addRecord(syncToFeishu=false) → /记 不同步
     // - confirmRecord() → /确认 自动同步
     consensusChain.on('change', async (event) => {
       if (!event.record) return;
       // 飞书同步已在 consensusChain 内部完成，此处不做重复调用
+
+      // 触发候选预计算重算（共识链变化时）
+      const currentSkus = knowledgeRetriever.getFreshSkus();
+      candidateGen.checkAndPrecompute(currentSkus).catch(e => {
+        fastify.log.warn({ sessionId, error: e.message }, 'Candidate precompute failed');
+      });
 
       // 自动保存会话到文件系统（包含 metadata 如公司名、当前阶段）
       try {
@@ -232,6 +242,17 @@ async function getOrCreateSession(sessionId) {
         await sessionManager.saveSession(sessionId, consensusChain.exportRecords(), metadata);
       } catch (error) {
         fastify.log.warn({ sessionId, error: error.message }, 'Auto-save failed');
+      }
+    });
+
+    // 监听候选预计算完成事件，通过 WebSocket 通知前端
+    candidateGen.on('precompute-done', ({ candidates }) => {
+      const wsClient = wsClients.get(sessionId);
+      if (wsClient && wsClient.readyState === 1) {
+        wsClient.send(JSON.stringify({
+          type: 'candidates_ready',
+          candidates,
+        }));
       }
     });
   }
