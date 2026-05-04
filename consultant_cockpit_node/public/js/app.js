@@ -52,7 +52,8 @@ const state = {
   ws: null,
   llmProvider: 'deepseek-free',
   llmModel: 'deepseek/deepseek-v4-pro-free',
-  demoMode: false
+  demoMode: false,
+  _stageSyncing: false  // 阶段同步中标志，防止 GET 覆盖
 };
 
 // DOM 元素引用（新布局）
