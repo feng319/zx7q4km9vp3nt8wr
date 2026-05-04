@@ -71,20 +71,21 @@ function calculateRetryDelay(attempt, resetTime) {
 
 /**
  * 判断是否为 429 限流错误
- * @param {Error & {status?: number, statusCode?: number, code?: number, response?: Object}} error - 错误对象
+ * @param {Error} error - 错误对象
  * @returns {boolean}
  */
 function isRateLimitError(error) {
   // 检查 HTTP 状态码
-  if (error.status === 429 || error.statusCode === 429) {
+  const err = /** @type {any} */ (error);
+  if (err.status === 429 || err.statusCode === 429) {
     return true;
   }
   // 检查飞书 API 返回码
-  if (error.code === 429) {
+  if (err.code === 429) {
     return true;
   }
   // 检查响应体中的错误码
-  const bodyCode = error.response?.data?.code || error.response?.body?.code;
+  const bodyCode = err.response?.data?.code || err.response?.body?.code;
   if (bodyCode === 429) {
     return true;
   }
