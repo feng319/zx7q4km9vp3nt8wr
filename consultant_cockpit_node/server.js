@@ -577,8 +577,13 @@ fastify.get('/api/sessions/:sessionId/candidates', async (request, reply) => {
       };
     }
 
-    // 生成候选
-    const candidates = await session.candidateGen.generateCandidates();
+    // 优先使用缓存（设计文档 3.2 节：预计算缓存命中时 0.2 秒响应）
+    let candidates = session.candidateGen.getCachedCandidates();
+
+    if (!candidates) {
+      // 缓存未命中，实时生成
+      candidates = await session.candidateGen.generateCandidates();
+    }
 
     return {
       success: true,
