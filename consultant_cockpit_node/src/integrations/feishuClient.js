@@ -27,6 +27,70 @@ const {
 const logger = getLogger('feishuClient');
 
 /**
+ * 429 限流重试配置
+ */
+const RATE_LIMIT_CONFIG = {
+  maxRetries: 3,           // 最大重试次数
+  baseDelayMs: 1000,       // 基础延迟（毫秒）
+  maxDelayMs: 10000,       // 最大延迟（毫秒）
+};
+
+/**
+ * 解析 429 响应头中的重置时间
+ * @param {Object} headers - 响应头
+ * @returns {number|null} 重置时间（毫秒时间戳），无法解析时返回 null
+ */
+function parseRateLimitReset(headers) {
+  // x-ogw-ratelimit-reset 返回秒级时间戳
+  const resetHeader = headers['x-ogw-ratelimit-reset'] || headers['X-Ogw-Ratelimit-Reset'];
+  if (resetHeader) {
+    const resetTime = parseInt(resetHeader, 10);
+    if (!isNaN(resetTime)) {
+      return resetTime * 1000; // 转换为毫秒
+    }
+  }
+  return null;
+}
+
+/**
+ * 计算 429 重试延迟
+ * @param {number} attempt - 当前重试次数（从 0 开始）
+ * @param {number|null} resetTime - 服务器返回的重置时间
+ * @returns {number} 延迟毫秒数
+ */
+function calculateRetryDelay(attempt, resetTime) {
+  if (resetTime && resetTime > Date.now()) {
+    // 使用服务器返回的重置时间
+    return Math.min(resetTime - Date.now(), RATE_LIMIT_CONFIG.maxDelayMs);
+  }
+  // 指数退避：1s, 2s, 4s
+  const delay = RATE_LIMIT_CONFIG.baseDelayMs * Math.pow(2, attempt);
+  return Math.min(delay, RATE_LIMIT_CONFIG.maxDelayMs);
+}
+
+/**
+ * 判断是否为 429 限流错误
+ * @param {Error} error - 错误对象
+ * @returns {boolean}
+ */
+function isRateLimitError(error) {
+  // 检查 HTTP 状态码
+  if (error.status === 429 || error.statusCode === 429) {
+    return true;
+  }
+  // 检查飞书 API 返回码
+  if (error.code === 429) {
+    return true;
+  }
+  // 检查响应体中的错误码
+  const bodyCode = error.response?.data?.code || error.response?.body?.code;
+  if (bodyCode === 429) {
+    return true;
+  }
+  return false;
+}
+
+/**
  * 飞书客户端类
  */
 class FeishuClient {
