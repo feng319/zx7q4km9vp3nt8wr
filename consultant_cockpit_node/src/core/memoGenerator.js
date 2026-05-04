@@ -273,24 +273,8 @@ class MemoGenerator {
    * @private
    */
   _calcProfileCompleteness(profile) {
-    if (!profile || Object.keys(profile).length === 0) {
-      return 0.0;
-    }
-
-    const requiredFields = [
-      '产品线', '客户群体', '收入结构', '毛利结构',
-      '交付情况', '资源分布', '战略目标', '显性诉求'
-    ];
-
-    let filled = 0;
-    for (const field of requiredFields) {
-      const value = profile[field];
-      if (value && String(value).length >= 5) {
-        filled++;
-      }
-    }
-
-    return filled / requiredFields.length;
+    // 使用统一字段配置模块计算完整度
+    return calcCompleteness(profile);
   }
 
   /**
