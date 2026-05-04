@@ -285,4 +285,46 @@ this.consensusChain.on('invalidate-cache', () => {
 
 ---
 
+## 九、字段维护指南
+
+### 统一维护入口
+
+**所有字段定义在 `src/config/fields.js` 统一管理**，避免多处定义导致不一致。
+
+| 维护内容 | 变量名 | 行号 | 说明 |
+|---------|--------|------|------|
+| 完整度计算字段 | `COMPLETENESS_FIELDS` | 17-27 | 9 个字段，等权重 |
+| 客户档案字段 | `PROFILE_FIELDS` | 32-47 | 12 个字段（10 静态 + 2 动态） |
+| 类型映射 | `CONSENSUS_TYPE_MAP` | 54-65 | fact ↔ 事实，consensus ↔ 共识 |
+| 状态映射 | `CONSENSUS_STATUS_MAP` | 71+ | 4 个状态双向映射 |
+| 诊断共识表字段 | `CONSENSUS_FIELDS` | - | 含 field_id 映射 |
+| 客户视图字段 | `CUSTOMER_VIEW_FIELDS` | - | 3 列（发现内容、确认时间、建议方向） |
+
+### 新增字段步骤
+
+```javascript
+// 1. 添加到 COMPLETENESS_FIELDS（如需计入完整度）
+{ name: '新字段', weight: 1, minChars: 5 }
+
+// 2. 添加到 PROFILE_FIELDS
+{ name: '新字段', type: 'text', required: true, completeness: true }
+
+// 3. 如需飞书映射，添加到 CONSENSUS_FIELDS
+{ name: '新字段', field_id: 'fldxxx', type: 1, internal: false }
+```
+
+### 引用方式
+
+```javascript
+const {
+  COMPLETENESS_FIELDS,
+  PROFILE_FIELDS,
+  calcCompleteness,
+  typeToFeishu,
+  statusToFeishu,
+} = require('../config/fields');
+```
+
+---
+
 **报告完成**。所有 P0、P1、P2 问题已全部修复，可进行演练。
