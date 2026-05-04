@@ -658,11 +658,54 @@ function showCandidatesOverlay() {
 
   // 清除红点徽标
   elements.candidateBadge.textContent = '';
+
+  // 重置折叠状态
+  state.candidatesFolded = false;
+  state.selectedCandidateIndex = null;
+}
+
+/**
+ * 更新候选卡片的淡出状态（设计文档 3.5 节）
+ * 选中的候选高亮，其他候选淡出但保留
+ */
+function updateCandidateCardsFade(selectedIndex) {
+  const cards = elements.candidatesCards.querySelectorAll('.candidate-card');
+  cards.forEach((card, index) => {
+    if (index === selectedIndex) {
+      card.classList.add('selected');
+      card.classList.remove('faded');
+    } else {
+      card.classList.add('faded');
+      card.classList.remove('selected');
+    }
+  });
+}
+
+/**
+ * 折叠候选到右下角"待决策"徽标（设计文档 3.5 节）
+ * 按 Esc 或 /关闭 时触发
+ */
+function foldCandidatesToBadge() {
+  if (!state.candidates || state.candidates.length === 0) return;
+
+  state.candidatesFolded = true;
+  elements.candidatesOverlay.style.display = 'none';
+  elements.candidatesOverlay.closest('.dialog-panel').classList.remove('has-candidates');
+
+  // 显示"待决策"徽标
+  elements.candidateBadge.textContent = '⏳';
+  setStatus('候选已折叠，点击 /候选 重新展开', 'info');
 }
 
 function hideCandidatesOverlay() {
-  elements.candidatesOverlay.style.display = 'none';
-  elements.candidatesOverlay.closest('.dialog-panel').classList.remove('has-candidates');
+  // 如果已选中候选，折叠到徽标；否则直接关闭
+  if (state.selectedCandidateIndex !== null) {
+    foldCandidatesToBadge();
+  } else {
+    elements.candidatesOverlay.style.display = 'none';
+    elements.candidatesOverlay.closest('.dialog-panel').classList.remove('has-candidates');
+    state.candidatesFolded = false;
+  }
 }
 
 async function selectCandidate(index) {
