@@ -239,19 +239,22 @@ class FeishuClient {
    */
   async updateConsensusRecord(recordId, updates) {
     try {
-      const response = await this.client.bitable.appTableRecord.update({
-        path: {
-          app_token: this.bitableToken,
-          table_id: this.consensusTableId,
-          record_id: recordId,
-        },
-        params: {
-          user_id_type: 'open_id',
-        },
-        data: {
-          fields: this._recordToFields(updates),
-        },
-      });
+      const response = await this._withRateLimitRetry(
+        () => this.client.bitable.appTableRecord.update({
+          path: {
+            app_token: this.bitableToken,
+            table_id: this.consensusTableId,
+            record_id: recordId,
+          },
+          params: {
+            user_id_type: 'open_id',
+          },
+          data: {
+            fields: this._recordToFields(updates),
+          },
+        }),
+        'updateConsensusRecord'
+      );
 
       if (response.code !== 0) {
         throw new Error(`Lark API error: ${response.msg}`);
