@@ -469,34 +469,22 @@ class FeishuClient {
   _recordToFields(record) {
     const fields = {};
 
-    // 类型映射：代码英文值 → 飞书选项中文值
-    const typeMap = {
-      'fact': '事实',
-      'consensus': '共识',
-      'case': '案例',
-      'insight': '洞察',
-    };
-    // 状态映射：代码英文值 → 飞书选项中文值
-    const statusMap = {
-      'recorded': '待确认',
-      'pending_client_confirm': '待确认',
-      'confirmed': '已确认',
-      'active': '已确认',
-      'superseded': '已过时',
-    };
-
+    // 使用统一字段映射模块（仅支持 PRD 定义的 fact/consensus）
     if (record.id) fields['记录ID'] = record.id;
     if (record.timestamp) fields['时间戳'] = record.timestamp;
-    if (record.type) fields['类型'] = typeMap[record.type] || record.type;
+    if (record.type) fields['类型'] = typeToFeishu(record.type);
     if (record.stage) fields['阶段'] = record.stage;
     if (record.content) fields['内容'] = record.content;
     if (record.source) fields['来源'] = record.source;
     if (record.evidence_sku) fields['关联SKU'] = record.evidence_sku.join('\n');
-    if (record.status) fields['状态'] = statusMap[record.status] || record.status;
+    if (record.status) fields['状态'] = statusToFeishu(record.status);
     if (record.confidence) fields['置信度'] = record.confidence;
     if (record.replaces) fields['替代记录'] = record.replaces;
     if (record.superseded_by) fields['被替代'] = record.superseded_by;
-    if (record.recommendation) fields['建议方向'] = record.recommendation;
+    // 仅 consensus 类型才写入建议方向
+    if (record.recommendation && record.type === 'consensus') {
+      fields['建议方向'] = record.recommendation;
+    }
 
     return fields;
   }
