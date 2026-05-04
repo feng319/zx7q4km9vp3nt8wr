@@ -41,6 +41,7 @@ const RATE_LIMIT_CONFIG = {
  * @returns {number|null} 重置时间（毫秒时间戳），无法解析时返回 null
  */
 function parseRateLimitReset(headers) {
+  if (!headers) return null;
   // x-ogw-ratelimit-reset 返回秒级时间戳
   const resetHeader = headers['x-ogw-ratelimit-reset'] || headers['X-Ogw-Ratelimit-Reset'];
   if (resetHeader) {
@@ -70,7 +71,7 @@ function calculateRetryDelay(attempt, resetTime) {
 
 /**
  * 判断是否为 429 限流错误
- * @param {Error} error - 错误对象
+ * @param {Error & {status?: number, statusCode?: number, code?: number, response?: Object}} error - 错误对象
  * @returns {boolean}
  */
 function isRateLimitError(error) {
