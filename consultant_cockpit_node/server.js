@@ -458,9 +458,11 @@ fastify.post('/api/sessions/:sessionId/records/:recordId/correct', async (reques
   const session = await getOrCreateSession(sessionId);
 
   try {
-    const newRecord = session.consensusChain.correctRecord(recordId, request.body.content || request.body);
+    const content = request.body.content || request.body;
+    // 传递 company 用于同步到客户档案表
+    const newRecord = session.consensusChain.correctRecord(recordId, content, { company: session.company });
     reply.code(201);
-    return { success: true, record: newRecord };
+    return { success: true, record: newRecord, company: session.company || null };
   } catch (error) {
     reply.code(400);
     return { success: false, error: error.message };
