@@ -1346,6 +1346,34 @@ function adjustPanelHeight() {
       }
     }
   }
+
+  // 同样调整左栏和右栏的滚动区域
+  const statusPanel = document.querySelector('.status-panel');
+  if (statusPanel) {
+    const fieldsStatus = statusPanel.querySelector('.fields-status');
+    if (fieldsStatus) {
+      const panelHeader = 45;
+      const completenessHeight = statusPanel.querySelector('.completeness-section')?.offsetHeight || 60;
+      const stageHeight = statusPanel.querySelector('.current-stage')?.offsetHeight || 60;
+      const padding = 32;
+      const maxFieldsHeight = availableHeight - panelHeader - padding - completenessHeight - stageHeight - 20;
+      fieldsStatus.style.maxHeight = `${Math.max(80, maxFieldsHeight)}px`;
+    }
+  }
+
+  const suggestionPanel = document.querySelector('.suggestion-panel');
+  if (suggestionPanel) {
+    const skuList = suggestionPanel.querySelector('#sku-list');
+    if (skuList) {
+      const panelHeader = 45;
+      const statusHeight = suggestionPanel.querySelector('.suggestion-status')?.offsetHeight || 40;
+      const currentSuggestionHeight = suggestionPanel.querySelector('.current-suggestion')?.offsetHeight || 80;
+      const skuHeaderHeight = suggestionPanel.querySelector('.sku-header')?.offsetHeight || 30;
+      const padding = 32;
+      const maxSkuHeight = availableHeight - panelHeader - padding - statusHeight - currentSuggestionHeight - skuHeaderHeight - 20;
+      skuList.style.maxHeight = `${Math.max(60, maxSkuHeight)}px`;
+    }
+  }
 }
 
 // 监听窗口调整
