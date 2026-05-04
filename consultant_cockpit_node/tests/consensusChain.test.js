@@ -201,7 +201,8 @@ describe('ConsensusChain', () => {
       });
 
       chain.on('invalidate-cache', (payload) => {
-        assert.strictEqual(payload.reason, 'record_corrected');
+        // 修正：事件使用 source 属性标识来源（与 candidateGen.js 对齐）
+        assert.strictEqual(payload.source, 'manual_correction');
         assert.strictEqual(payload.originalId, record.id);
         done();
       });
