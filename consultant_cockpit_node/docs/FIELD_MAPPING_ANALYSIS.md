@@ -234,14 +234,14 @@ this.consensusChain.on('invalidate-cache', () => {
 | 3 | 完整度计算不一致 | 创建 `src/config/fields.js` 统一字段列表 | ✅已完成 | 2026-05-04 |
 | 4 | 完整度字段冗余 | 从 profileToFields/fieldsToProfile 中移除 | ✅已完成 | 2026-05-04 |
 
-### Phase 2: P1 问题（建议完成，4 小时）
+### Phase 2: P1 问题（建议完成，2.5 小时）
 
-| # | 问题 | 修复方案 | 工时 |
-|---|------|---------|------|
-| 5 | 类型字段多余值 | 移除 case/insight 映射，添加读取防御 | 1h |
-| 6 | recommendation 校验 | 写入前检查 type，非 consensus 清空 | 0.5h |
-| 7 | 429 限流处理 | 添加拦截器和重试逻辑 | 1.5h |
-| 8 | 持久化集成确认 | 确认 SessionManager 与共识链集成 | 1h |
+| # | 问题 | 修复方案 | 工时 | 状态 |
+|---|------|---------|------|------|
+| 5 | 类型字段多余值 | 移除 case/insight 映射，添加读取防御 | 1h | ✅已完成 |
+| 6 | recommendation 校验 | 写入前检查 type，非 consensus 清空 | 0.5h | ✅已完成 |
+| 7 | 429 限流处理 | 添加拦截器和重试逻辑 | 1.5h | ⏳待修复 |
+| 8 | 持久化集成确认 | 确认 SessionManager 与共识链集成 | 1h | ⏳待修复 |
 
 ### Phase 3: P2 问题（可选，0.5 小时）
 
