@@ -302,6 +302,8 @@ fastify.post('/api/sessions', async (request, reply) => {
   // 存储公司名到会话中
   if (company) {
     session.company = company;
+    // 立即保存公司名到 metadata
+    await sessionManager.saveSession(sessionId, session.consensusChain.exportRecords(), { company });
   }
 
   reply.code(201);
