@@ -258,8 +258,8 @@ this.consensusChain.on('invalidate-cache', () => {
 
 已创建 `src/config/fields.js`，包含：
 
-- `COMPLETENESS_FIELDS` - 完整度计算字段（8 个，PRD 6.2 节）
-- `PROFILE_FIELDS` - 客户档案字段（9 静态 + 2 动态 = 11 个）
+- `COMPLETENESS_FIELDS` - 完整度计算字段（9 个，PRD 6.2 节）
+- `PROFILE_FIELDS` - 客户档案字段（10 静态 + 2 动态 = 12 个）
 - `CONSENSUS_TYPE_MAP` - 类型双向映射（fact/consensus）
 - `CONSENSUS_STATUS_MAP` - 状态双向映射（4 个状态，1:1 映射）
 - `CONSENSUS_FIELDS` - 诊断共识表字段列表（12 列，含 internal 标记）
