@@ -1,12 +1,1 @@
-[
-  {
-    "operation": "upsertRecord",
-    "error": "API Error",
-    "data": {
-      "company": "测试公司",
-      "fields": {}
-    },
-    "timestamp": "2026-05-03T09:21:52.654Z",
-    "retry_suggested": true
-  }
-]
+[]
