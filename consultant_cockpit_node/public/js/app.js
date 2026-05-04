@@ -1156,6 +1156,11 @@ function initEventListeners() {
   // 候选覆盖层关闭
   elements.closeCandidatesBtn.addEventListener('click', hideCandidatesOverlay);
 
+  // 右下角悬浮徽标点击展开候选（设计文档 3.5 节）
+  if (elements.pendingDecisionBadge) {
+    elements.pendingDecisionBadge.addEventListener('click', unfoldCandidatesFromBadge);
+  }
+
   // 建议操作
   elements.useSuggestionBtn.addEventListener('click', () => {
     if (state.currentSuggestion) {
