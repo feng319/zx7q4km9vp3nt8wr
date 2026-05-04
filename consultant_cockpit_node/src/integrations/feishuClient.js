@@ -566,10 +566,7 @@ class FeishuClient {
       }
     }
 
-    // 完整度字段（类型20=进度条，值为数字）
-    if (fields['完整度'] !== undefined) {
-      profile['完整度'] = fields['完整度'];
-    }
+    // 注意：完整度字段已移除，PRD 未定义此字段，避免内部状态泄漏给客户
 
     return profile;
   }
