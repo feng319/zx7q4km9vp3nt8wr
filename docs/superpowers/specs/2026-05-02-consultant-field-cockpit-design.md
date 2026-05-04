@@ -1828,3 +1828,175 @@ card.addEventListener('keydown', (e) => {
 - ✅ 支持系统深色模式
 - ✅ 支持系统减少动画偏好
 - ✅ 候选卡片支持 Tab/Enter 键盘操作
+
+---
+
+## 十三、UI 布局优化记录 (2026-05-04)
+
+### 13.1 优化目标
+
+确保关键 UI 元素始终可见，无需滚动：
+- **底部操作栏**（生成备忘录、生成作战卡等）固定在屏幕底部
+- **当前阶段指示器**始终可见于对话区顶部
+- **快捷指令区**（输入框 + /候选、/确认等按钮）始终可见于对话区底部
+
+### 13.2 技术实现
+
+#### 13.2.1 固定底部栏
+
+```css
+/* 底部栏固定在屏幕底部 */
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: var(--panel-bg);
+  padding: 16px 24px;
+  border-top: 1px solid var(--border-color);
+  z-index: 100;
+  box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* 为主内容区预留底部空间 */
+#app {
+  padding-bottom: 60px;
+}
+
+.main {
+  padding-bottom: 70px;
+}
+```
+
+#### 13.2.2 对话区布局重构
+
+```css
+/* 对话区内容使用 flex 垂直布局 */
+.dialog-panel .panel-content {
+  display: flex;
+  flex-direction: column;
+  overflow: visible; /* 允许子元素 sticky */
+}
+
+/* 阶段指示器固定在顶部 */
+.stage-indicator {
+  flex-shrink: 0;
+  margin-bottom: 12px;
+}
+
+/* 共识链为唯一可滚动区域 */
+.consensus-chain {
+  flex: 1;
+  overflow-y: auto;
+  max-height: calc(100% - 180px); /* 为阶段指示器和快捷指令留空间 */
+}
+
+/* 快捷指令区固定在底部 */
+.command-section {
+  flex-shrink: 0;
+  margin-top: auto;
+  border-top: 1px solid var(--border-color);
+}
+```
+
+#### 13.2.3 JavaScript 动态高度计算
+
+```javascript
+// 动态调整面板高度，确保快捷指令区始终可见
+function adjustPanelHeight() {
+  const header = document.querySelector('.header');
+  const footer = document.querySelector('.footer');
+  const main = document.querySelector('.main');
+  const panels = document.querySelectorAll('.panel');
+
+  if (!header || !footer || !main || panels.length === 0) return;
+
+  const headerHeight = header.offsetHeight;
+  const footerHeight = footer.offsetHeight;
+  const mainPadding = 22; // 16px top + 6px bottom
+
+  // 计算可用高度
+  const availableHeight = window.innerHeight - headerHeight - footerHeight - mainPadding;
+
+  // 设置面板最大高度
+  panels.forEach(panel => {
+    panel.style.maxHeight = `${availableHeight}px`;
+    panel.style.minHeight = `${Math.min(400, availableHeight)}px`;
+  });
+
+  // 设置对话区共识链的最大高度
+  const dialogPanel = document.querySelector('.dialog-panel');
+  if (dialogPanel) {
+    const stageIndicator = dialogPanel.querySelector('.stage-indicator');
+    const commandSection = dialogPanel.querySelector('.command-section');
+
+    if (stageIndicator && commandSection) {
+      const stageHeight = stageIndicator.offsetHeight + 12;
+      const commandHeight = commandSection.offsetHeight + 16;
+      const panelHeaderHeight = 45;
+      const panelPadding = 32;
+
+      const chainMaxHeight = availableHeight - panelHeaderHeight - panelPadding - stageHeight - commandHeight - 20;
+      const consensusChain = dialogPanel.querySelector('.consensus-chain');
+      if (consensusChain) {
+        consensusChain.style.maxHeight = `${Math.max(100, chainMaxHeight)}px`;
+      }
+    }
+  }
+}
+
+// 在多个时机调用高度调整
+window.addEventListener('resize', adjustPanelHeight);
+window.addEventListener('load', adjustPanelHeight);
+
+// 初始化时调用
+async function init() {
+  // ...
+  adjustPanelHeight();
+  // ...
+  setTimeout(adjustPanelHeight, 100);
+}
+
+// 渲染后调用
+function renderAll() {
+  // ...
+  setTimeout(adjustPanelHeight, 50);
+}
+```
+
+### 13.3 修改文件清单
+
+| 文件 | 修改内容 |
+|------|----------|
+| `style.css` | 底部栏 `position: fixed`，对话区 flex 布局，间距调整 |
+| `app.js` | 添加 `adjustPanelHeight()` 函数，在 init/renderAll/resize 时调用 |
+| `index.html` | CSS/JS 版本号更新 |
+
+### 13.4 关键 CSS 变量
+
+```css
+/* 间距配置 */
+#app { padding-bottom: 60px; }      /* 为固定 footer 留空间 */
+.main { padding-bottom: 70px; }     /* 为固定 footer 留空间 */
+
+/* 面板高度 */
+.panel {
+  min-height: 400px;
+  max-height: calc(100vh - 220px);
+}
+
+/* 对话区内部布局 */
+.consensus-chain {
+  max-height: calc(100% - 180px);   /* 为阶段指示器和快捷指令留空间 */
+  overflow-y: auto;                  /* 唯一可滚动区域 */
+}
+```
+
+### 13.5 验收标准
+
+- ✅ 底部操作栏始终可见，不随页面滚动
+- ✅ 当前阶段指示器始终可见于对话区顶部
+- ✅ 快捷指令区（输入框 + 按钮）始终可见于对话区底部
+- ✅ 共识链内容可滚动，不影响其他区域
+- ✅ 窗口 resize 时自动调整高度
+- ✅ 会话数据加载后自动调整高度
