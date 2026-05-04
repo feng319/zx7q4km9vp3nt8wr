@@ -95,6 +95,9 @@ fastify.get('/', async (request, reply) => {
 /** @type {Map<string, {consensusChain: ConsensusChain, candidateGen: CandidateGenerator, knowledgeRetriever: KnowledgeRetriever}>} */
 const sessions = new Map();
 
+/** @type {Map<string, WebSocket>} WebSocket 客户端映射（sessionId -> socket） */
+const wsClients = new Map();
+
 /** @type {LLMClient} */
 const llmClient = new LLMClient();
 
