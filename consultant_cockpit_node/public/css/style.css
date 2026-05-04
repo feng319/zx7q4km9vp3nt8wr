@@ -886,6 +886,7 @@ textarea {
   min-height: 0;
   overflow: visible;
   padding-bottom: 0;
+  position: relative; /* 候选覆盖层定位基准 */
 }
 
 /* 阶段指示：固定在顶部 */
