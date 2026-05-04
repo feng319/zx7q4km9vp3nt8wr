@@ -4,7 +4,7 @@
 const http = require('http');
 require('dotenv').config();
 
-const BASE_URL = 'http://localhost:8501';
+const BASE_URL = `http://localhost:${process.env.PORT || 18501}`;
 
 function apiRequest(path, options = {}) {
   return new Promise((resolve, reject) => {

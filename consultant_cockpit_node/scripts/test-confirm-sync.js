@@ -7,7 +7,7 @@ function makeRequest(path, method, body) {
   return new Promise((resolve, reject) => {
     const req = http.request({
       hostname: 'localhost',
-      port: 8501,
+      port: parseInt(process.env.PORT || '18501', 10),
       path: path,
       method: method,
       headers: {
