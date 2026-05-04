@@ -2,7 +2,8 @@
   "permissions": {
     "allow": [
       "Bash(lark-cli:*)",
-      "Bash(node test_error.js)"
+      "Bash(node test_error.js)",
+      "Read(//c/Users/56839/Downloads/**)"
     ],
     "deny": [],
     "ask": []
