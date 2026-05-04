@@ -873,6 +873,65 @@ textarea {
   margin-top: 4px;
 }
 
+/* 待确认假设区（PRD 4.2 节：四栏状态板之一） */
+.pending-assumptions {
+  margin-top: 16px;
+  padding: 12px;
+  background: rgba(250, 173, 20, 0.1);
+  border: 1px solid var(--warning-color);
+  border-radius: 4px;
+  flex-shrink: 0;
+}
+
+.pending-assumptions .section-label {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--warning-color);
+  margin-bottom: 8px;
+}
+
+.assumption-list {
+  max-height: 150px;
+  overflow-y: auto;
+}
+
+.assumption-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  padding: 8px;
+  background: var(--panel-bg);
+  border-radius: 4px;
+  margin-bottom: 6px;
+  font-size: 13px;
+}
+
+.assumption-item:last-child {
+  margin-bottom: 0;
+}
+
+.assumption-type {
+  flex-shrink: 0;
+  padding: 2px 6px;
+  background: var(--primary-color);
+  color: white;
+  border-radius: 3px;
+  font-size: 11px;
+}
+
+.assumption-content {
+  flex: 1;
+  color: var(--text-color);
+  line-height: 1.4;
+  word-break: break-word;
+}
+
+.assumption-item .btn-inline-confirm {
+  flex-shrink: 0;
+  padding: 4px 10px;
+  font-size: 12px;
+}
+
 /* 中栏：主对话区 */
 .dialog-panel {
   min-width: 400px;
