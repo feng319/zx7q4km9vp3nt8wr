@@ -142,16 +142,16 @@ class FeishuClient {
    * @private
    */
   async _withRateLimitRetry(apiCall, operationName) {
-    let lastError = null;
+    let lastError = /** @type {Error|null} */ (null);
 
     for (let attempt = 0; attempt < RATE_LIMIT_CONFIG.maxRetries; attempt++) {
       try {
         return await apiCall();
       } catch (error) {
-        lastError = error;
+        lastError = /** @type {Error} */ (error);
 
-        if (isRateLimitError(error)) {
-          const err = /** @type {any} */ (error);
+        if (isRateLimitError(lastError)) {
+          const err = /** @type {any} */ (lastError);
           const headers = err.response?.headers || err.headers;
           const resetTime = parseRateLimitReset(headers);
           const delay = calculateRetryDelay(attempt, resetTime);
@@ -168,7 +168,7 @@ class FeishuClient {
         }
 
         // 非 429 错误直接抛出
-        throw error;
+        throw lastError;
       }
     }
 
