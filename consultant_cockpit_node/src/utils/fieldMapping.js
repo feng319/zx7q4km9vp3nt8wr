@@ -8,7 +8,7 @@
  * 新代码应直接使用 src/config/fields.js
  */
 
-// 从统一配置模块导入
+// 从统一配置模块导入并重新导出
 const {
   CONSENSUS_TYPE_MAP,
   CONSENSUS_STATUS_MAP,
@@ -22,84 +22,6 @@ const {
 } = require('../config/fields');
 
 /**
- * 诊断共识表字段定义
- * @type {string[]}
- */
-const CONSENSUS_FIELDS = [
-  '记录ID',      // field_id: fldt1SGX6u
-  '时间戳',      // field_id: fldLbkq9WL
-  '类型',        // field_id: fldFHZB1nv (单选)
-  '阶段',        // field_id: fld5nagQ3S (单选)
-  '内容',        // field_id: fldt3G5vcE
-  '来源',        // field_id: fldz0rHGbl
-  '关联SKU',     // field_id: fld7weLW44
-  '状态',        // field_id: fldFVZKCPs (单选)
-  '置信度',      // field_id: fld0lg3Pej (单选)
-  '替代记录',    // field_id: fldk0C1onN
-  '被替代',      // field_id: fldfbPEPjE
-  '建议方向',    // field_id: fldXfkJp5p
-];
-
-// ==================== 客户档案表映射 ====================
-
-/**
- * 客户档案表字段定义（完整列表）
- * @type {string[]}
- */
-const PROFILE_FIELDS = [
-  '客户公司名',  // field_id: fldSMirg0Q
-  '产品线',      // field_id: fldcpGsA0i
-  '客户群体',    // field_id: fldgbcctGn
-  '收入结构',    // field_id: fldRsdz5k7
-  '毛利结构',    // field_id: fldqdZ29m2
-  '交付情况',    // field_id: fldFd96pt1
-  '资源分布',    // field_id: fld6ZJQ69C
-  '战略目标',    // field_id: fld7HElqu6
-  '显性诉求',    // field_id: flddrDkmYx
-  '当前追问',    // field_id: fldbU5arYa
-  '诊断进度',    // field_id: fldSCl5WAg (数字)
-  '完整度',      // field_id: fldh9UIUjB (进度条)
-];
-
-// ==================== 工具函数 ====================
-
-/**
- * 转换记录类型（代码 → 飞书）
- * @param {string} type - 代码中的类型值
- * @returns {string} 飞书中的类型选项
- */
-function typeToFeishu(type) {
-  return CONSENSUS_TYPE_MAP.toFeishu[type] || type;
-}
-
-/**
- * 转换记录类型（飞书 → 代码）
- * @param {string} type - 飞书中的类型选项
- * @returns {string} 代码中的类型值
- */
-function typeToCode(type) {
-  return CONSENSUS_TYPE_MAP.toCode[type] || type;
-}
-
-/**
- * 转换记录状态（代码 → 飞书）
- * @param {string} status - 代码中的状态值
- * @returns {string} 飞书中的状态选项
- */
-function statusToFeishu(status) {
-  return CONSENSUS_STATUS_MAP.toFeishu[status] || status;
-}
-
-/**
- * 转换记录状态（飞书 → 代码）
- * @param {string} status - 飞书中的状态选项
- * @returns {string} 代码中的状态值
- */
-function statusToCode(status) {
-  return CONSENSUS_STATUS_MAP.toCode[status] || status;
-}
-
-/**
  * 提取飞书富文本字段值
  * 飞书返回的文本字段格式为 [{ text: '...', type: 'text' }]
  * @param {unknown} fieldValue - 飞书字段值
@@ -107,7 +29,8 @@ function statusToCode(status) {
  */
 function extractRichTextValue(fieldValue) {
   if (Array.isArray(fieldValue) && fieldValue[0]?.text) {
-    return fieldValue[0].text;
+    // 修复：拼接所有文本段，而非只取第一段
+    return fieldValue.map(v => v.text || '').join('');
   }
   return fieldValue;
 }
@@ -121,11 +44,6 @@ function extractRichTextValue(fieldValue) {
 function processFeishuFieldValue(fieldValue, fieldName) {
   if (fieldValue === undefined || fieldValue === null) {
     return fieldValue;
-  }
-
-  // 完整度字段是数字类型，直接返回
-  if (fieldName === '完整度') {
-    return typeof fieldValue === 'number' ? fieldValue : Number(fieldValue);
   }
 
   // 诊断进度字段是数字类型
@@ -162,19 +80,20 @@ function skuStringToArray(skuString) {
 }
 
 module.exports = {
-  // 映射常量
+  // 映射常量（从 fields.js 重新导出）
   CONSENSUS_TYPE_MAP,
   CONSENSUS_STATUS_MAP,
   CONSENSUS_FIELDS,
   PROFILE_FIELDS,
 
-  // 转换函数
+  // 转换函数（从 fields.js 重新导出）
   typeToFeishu,
   typeToCode,
   statusToFeishu,
   statusToCode,
+  isValidType,
 
-  // 工具函数
+  // 工具函数（本模块特有）
   extractRichTextValue,
   processFeishuFieldValue,
   skuArrayToFeishu,
