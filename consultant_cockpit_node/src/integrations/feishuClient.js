@@ -547,6 +547,7 @@ class FeishuClient {
     if (profile['资源分布']) fields['资源分布'] = profile['资源分布'];
     if (profile['战略目标']) fields['战略目标'] = profile['战略目标'];
     if (profile['显性诉求']) fields['显性诉求'] = profile['显性诉求'];
+    if (profile['隐性痛点']) fields['隐性痛点'] = profile['隐性痛点'];
     if (profile['当前追问']) fields['当前追问'] = profile['当前追问'];
     if (profile['诊断进度']) fields['诊断进度'] = profile['诊断进度'];
     // 注意：完整度字段已移除，PRD 未定义此字段，避免内部状态泄漏给客户
