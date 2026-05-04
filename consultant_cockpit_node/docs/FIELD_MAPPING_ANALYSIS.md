@@ -253,16 +253,24 @@ this.consensusChain.on('invalidate-cache', () => {
 
 ## 八、统一字段映射模块
 
-已创建 `src/utils/fieldMapping.js`，包含：
+已创建 `src/config/fields.js`，包含：
 
-- `CONSENSUS_TYPE_MAP` - 类型双向映射
-- `CONSENSUS_STATUS_MAP` - 状态双向映射
-- `CONSENSUS_FIELDS` - 诊断共识表字段列表
-- `PROFILE_FIELDS` - 客户档案表字段列表
-- `extractRichTextValue()` - 富文本提取工具
+- `COMPLETENESS_FIELDS` - 完整度计算字段（8 个，PRD 6.2 节）
+- `PROFILE_FIELDS` - 客户档案字段（9 静态 + 2 动态 = 11 个）
+- `CONSENSUS_TYPE_MAP` - 类型双向映射（fact/consensus）
+- `CONSENSUS_STATUS_MAP` - 状态双向映射（4 个状态，1:1 映射）
+- `CONSENSUS_FIELDS` - 诊断共识表字段列表（12 列，含 internal 标记）
+- `CUSTOMER_VIEW_FIELDS` - 客户视图字段（3 列，PRD 4.4 节）
+- `calcCompleteness()` - 完整度计算函数
+- `toCustomerView()` - 单条记录转换为客户视图
+- `toCustomerViewBatch()` - 批量转换为客户视图
+- `filterCustomerFields()` - 过滤客户可见字段
 - `typeToFeishu()` / `typeToCode()` - 类型转换
 - `statusToFeishu()` / `statusToCode()` - 状态转换
+- `isValidType()` - 类型校验
+
+向后兼容模块 `src/utils/fieldMapping.js` 保留，从 fields.js 重新导出。
 
 ---
 
-**报告完成**。建议按 Phase 顺序逐步修复，演练前必须完成 Phase 1。
+**报告完成**。所有 P0 和 P2 问题已修复，P1 剩余 2 项待修复（429 限流、持久化集成）。可进行演练。
