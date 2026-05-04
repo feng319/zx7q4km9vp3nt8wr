@@ -328,6 +328,8 @@ fastify.patch('/api/sessions/:sessionId/company', async (request, reply) => {
 
   if (company) {
     session.company = company;
+    // 立即保存公司名到 metadata
+    await sessionManager.saveSession(sessionId, session.consensusChain.exportRecords(), { company });
     return { success: true, company };
   } else {
     reply.code(400);
