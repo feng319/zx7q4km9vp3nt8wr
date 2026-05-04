@@ -214,10 +214,12 @@ async function getOrCreateSession(sessionId) {
       if (!event.record) return;
       // 飞书同步已在 consensusChain 内部完成，此处不做重复调用
 
-      // 自动保存会话到文件系统（包含 metadata 如公司名）
+      // 自动保存会话到文件系统（包含 metadata 如公司名、当前阶段）
       try {
         const currentSession = sessions.get(sessionId);
-        const metadata = currentSession?.company ? { company: currentSession.company } : {};
+        const metadata = {};
+        if (currentSession?.company) metadata.company = currentSession.company;
+        if (currentSession?.currentStage) metadata.currentStage = currentSession.currentStage;
         await sessionManager.saveSession(sessionId, consensusChain.exportRecords(), metadata);
       } catch (error) {
         fastify.log.warn({ sessionId, error: error.message }, 'Auto-save failed');
