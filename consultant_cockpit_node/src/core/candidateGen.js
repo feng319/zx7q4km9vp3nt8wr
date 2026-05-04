@@ -578,9 +578,12 @@ ${pendingList}
     // 检查三约束状态
     const constraintState = this._getConstraintState(availableSkus);
 
+    console.log(`[checkAndPrecompute] source=${source}, immediate=${immediate}, constraints=${JSON.stringify(constraintState)}`);
+
     // P0: 检查三约束首次满足
     if (this._isFirstTimeAllConstraintsMet(constraintState)) {
       // 取消防抖，立即重算
+      console.log(`[checkAndPrecompute] 三约束首次满足，触发立即预计算`);
       this._cancelDebounce();
       this._updateConstraintState(constraintState);
       await this._triggerImmediatePrecompute(availableSkus);
