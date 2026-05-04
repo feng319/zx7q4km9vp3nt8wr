@@ -1249,6 +1249,9 @@ async function switchToSession(sessionId) {
     // 加载备弹
     await loadInitialSkus();
 
+    // 强制刷新 UI（确保切换后界面更新）
+    renderAll();
+
     // 更新下拉框选中状态
     for (const option of elements.sessionSelect.options) {
       option.selected = option.value === sessionId;

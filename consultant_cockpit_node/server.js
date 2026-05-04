@@ -820,6 +820,9 @@ fastify.register(async function (fastify) {
 
     fastify.log.info({ sessionId }, 'WebSocket connected');
 
+    // 维护 wsClients 映射（用于候选预计算完成通知）
+    wsClients.set(sessionId, socket);
+
     // 发送初始状态
     socket.send(JSON.stringify({
       type: 'init',
@@ -857,6 +860,7 @@ fastify.register(async function (fastify) {
     // 清理
     socket.on('close', () => {
       session.consensusChain.off('change', handleChange);
+      wsClients.delete(sessionId); // 清理 WebSocket 客户端映射
       fastify.log.info({ sessionId }, 'WebSocket disconnected');
     });
   });
