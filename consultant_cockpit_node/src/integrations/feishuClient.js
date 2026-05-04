@@ -189,18 +189,21 @@ class FeishuClient {
    */
   async createConsensusRecord(record) {
     try {
-      const response = await this.client.bitable.appTableRecord.create({
-        path: {
-          app_token: this.bitableToken,
-          table_id: this.consensusTableId,
-        },
-        params: {
-          user_id_type: 'open_id',
-        },
-        data: {
-          fields: this._recordToFields(record),
-        },
-      });
+      const response = await this._withRateLimitRetry(
+        () => this.client.bitable.appTableRecord.create({
+          path: {
+            app_token: this.bitableToken,
+            table_id: this.consensusTableId,
+          },
+          params: {
+            user_id_type: 'open_id',
+          },
+          data: {
+            fields: this._recordToFields(record),
+          },
+        }),
+        'createConsensusRecord'
+      );
 
       if (response.code !== 0) {
         throw new Error(`Lark API error: ${response.msg}`);
