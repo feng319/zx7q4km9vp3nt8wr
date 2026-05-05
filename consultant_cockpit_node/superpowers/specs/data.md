@@ -126,15 +126,26 @@ superseded          →  已过时        已过时 → superseded
 ### 3.3 状态流转图
 
 ```
-recorded ──→ pending_client_confirm ──→ confirmed
-                                              │
-                                              ↓
-                                         superseded
+                    ┌─────────────────────────────────────┐
+                    │                                     ▼
+              recorded ──────────────────────→ pending_client_confirm ──→ confirmed
+                  │                                   │                    │
+                  │                                   │                    │
+                  └───────────────────────────────────┘                    ↓
+                     （手动 /确认 直接确认）                          superseded
 ```
 
-- `recorded` → `pending_client_confirm`: 候选选中自动进入
+**两条确认路径**:
+1. **手动记录路径**: `/记` → `recorded` → `/确认` → `confirmed`
+2. **候选选中路径**: 候选选中 → `pending_client_confirm` → `/确认` → `confirmed`
+
+**状态转换触发**:
+- `recorded` → `pending_client_confirm`: `setCandidateRecordPending()` 候选选中时调用
+- `recorded` → `confirmed`: `/确认` 指令直接确认
 - `pending_client_confirm` → `confirmed`: `/确认` 指令
 - `confirmed` → `superseded`: `/改` 指令修正，原记录标记为 superseded
+
+**注意**: 新记录默认状态为 `recorded`（2026-05-05 重构变更）。
 
 ---
 
