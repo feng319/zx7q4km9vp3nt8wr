@@ -95,16 +95,42 @@ class ConsensusChain extends EventEmitter {
   }
 
   /**
-   * 确认记录
+   * 设置记录为待确认状态（候选选中时调用）
+   * @param {string} recordId - 记录 ID
+   * @throws {Error} 记录不存在或状态不正确时抛出
+   * @fires ConsensusChain#change
+   */
+  setCandidateRecordPending(recordId) {
+    const record = this.getRecord(recordId);
+    if (!record) {
+      throw new Error(`找不到记录: ${recordId}`);
+    }
+    if (record.status !== 'recorded') {
+      throw new Error(`记录状态不正确: ${record.status}，应为 recorded`);
+    }
+
+    record.status = 'pending_client_confirm';
+
+    // 触发 change 事件
+    this.emit('change', { type: 'pending', record });
+
+    // 此时不同步飞书，等 confirmed 后再同步
+  }
+
+  /**
+   * 确认记录（顾问点确认按钮时调用，两条路径共用）
    * @param {string} recordId - 记录 ID
    * @param {string} [company] - 客户公司名（用于同步到客户档案表）
-   * @throws {Error} 记录不存在时抛出
+   * @throws {Error} 记录不存在或状态不正确时抛出
    * @fires ConsensusChain#change
    */
   confirmRecord(recordId, company) {
     const record = this.getRecord(recordId);
     if (!record) {
       throw new Error(`找不到记录: ${recordId}`);
+    }
+    if (!['recorded', 'pending_client_confirm'].includes(record.status)) {
+      throw new Error(`记录状态不正确: ${record.status}，应为 recorded 或 pending_client_confirm`);
     }
 
     record.status = 'confirmed';
