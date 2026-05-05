@@ -228,6 +228,39 @@ node --test tests/candidateGen.test.js
 3. **API 设计**: RESTful API + WebSocket 替代 Streamlit 组件
 4. **飞书集成**: 使用官方 Node.js SDK
 
+---
+
+## 文档目录
+
+### 主文档（docs/superpowers/）
+
+| 文档 | 说明 |
+|------|------|
+| [README.md](../docs/superpowers/README.md) | 文档索引 |
+| [design.md](../docs/superpowers/design.md) | 产品设计规范（完整版） |
+| [api.md](../docs/superpowers/api.md) | API 接口规范 |
+| [data.md](../docs/superpowers/data.md) | 数据规范（类型、字段、状态） |
+| [architecture.md](../docs/superpowers/architecture.md) | 技术架构 |
+| [operations.md](../docs/superpowers/operations.md) | 运维文档 |
+| [changelog.md](../docs/superpowers/changelog.md) | 变更记录 |
+
+### 实施计划（superpowers/plans/）
+
+| 文档 | 说明 |
+|------|------|
+| [2026-05-03-consultant-field-cockpit-implementation.md](superpowers/plans/2026-05-03-consultant-field-cockpit-implementation.md) | Node.js 开发执行手册 |
+| [演练执行文档-Node版.md](superpowers/plans/演练执行文档-Node版.md) | 演练执行文档 |
+| [设计冲突修复记录.md](superpowers/plans/设计冲突修复记录.md) | PRD 与实现对齐修复 |
+| [验收测试报告_2026-05-03.md](superpowers/plans/验收测试报告_2026-05-03.md) | 验收测试报告 |
+
+### 设计规范（superpowers/specs/）
+
+| 文档 | 说明 |
+|------|------|
+| [2026-05-02-consultant-field-cockpit-design.md](superpowers/specs/2026-05-02-consultant-field-cockpit-design.md) | 完整设计文档 v1.4 |
+
+---
+
 ## 许可证
 
 MIT
