@@ -60,12 +60,13 @@ class ConsensusChain extends EventEmitter {
       content: record.content,
       source: record.source,
       evidence_sku: record.evidence_sku || [],
-      status: record.status || 'pending_client_confirm',
+      status: record.status || 'recorded',
       confidence: record.confidence || null,
       replaces: record.replaces || null,
       superseded_by: record.superseded_by || null,
       feishu_record_id: record.feishu_record_id || null,
-      recommendation: record.recommendation || null
+      recommendation: record.recommendation || null,
+      target_field: record.target_field || null
     };
 
     this.records.push(newRecord);
