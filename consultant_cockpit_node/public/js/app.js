@@ -509,6 +509,22 @@ async function executeCorrectCommand(newContent) {
 async function executeStageSwitchCommand(stage) {
   let targetStage = stage;
 
+  // 阶段锁定检查：有未确认候选时禁止切换
+  if (state.candidates && state.candidates.length > 0) {
+    setStatus('请先确认或关闭当前候选方案后再切换阶段', 'warning');
+    return;
+  }
+
+  // 阶段锁定检查：有待确认记录时提示
+  const pendingRecords = state.records.filter(r => r.status === 'pending_client_confirm');
+  if (pendingRecords.length > 0) {
+    const confirmed = confirm(`当前有 ${pendingRecords.length} 条待确认记录，切换阶段可能导致数据丢失。是否继续？`);
+    if (!confirmed) {
+      setStatus('已取消阶段切换', 'warning');
+      return;
+    }
+  }
+
   if (!targetStage) {
     // 切换到下一阶段
     const currentIdx = STAGES.indexOf(state.currentStage);
@@ -521,12 +537,20 @@ async function executeStageSwitchCommand(stage) {
     return;
   }
 
+  // 最后一个阶段不允许切换（应该已经被隐藏，但保留检查）
+  const lastStage = STAGES[STAGES.length - 1];
+  if (state.currentStage === lastStage) {
+    setStatus(`已处于最后阶段: ${lastStage}，无法继续切换`, 'warning');
+    return;
+  }
+
   if (!state.sessionId) {
     // 无会话时只更新本地状态
     state.currentStage = targetStage;
     elements.currentStage.textContent = targetStage;
     elements.stageDisplay.textContent = targetStage;
     setStatus(`已切换到: ${targetStage}`, 'success');
+    renderAll(); // 重新渲染以更新按钮状态
     return;
   }
 
@@ -536,6 +560,7 @@ async function executeStageSwitchCommand(stage) {
   elements.currentStage.textContent = targetStage;
   elements.stageDisplay.textContent = targetStage;
   setStatus(`已切换到: ${targetStage}`, 'success');
+  renderAll(); // 重新渲染以更新按钮状态
 
   try {
     // 同步到后端
