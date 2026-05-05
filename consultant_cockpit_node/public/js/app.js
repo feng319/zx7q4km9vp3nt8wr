@@ -1271,6 +1271,12 @@ function initEventListeners() {
   elements.cmdSwitch.addEventListener('click', () => toggleStageDropdown());
   elements.cmdCase.addEventListener('click', () => executeCaseRecallCommand());
 
+  // Stage 2.2: 类型切换按钮
+  const typeToggleBtn = document.getElementById('type-toggle-btn');
+  if (typeToggleBtn) {
+    typeToggleBtn.addEventListener('click', toggleType);
+  }
+
   // 候选覆盖层关闭
   elements.closeCandidatesBtn.addEventListener('click', hideCandidatesOverlay);
 
