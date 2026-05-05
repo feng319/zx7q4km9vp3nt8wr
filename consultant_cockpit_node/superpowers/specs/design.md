@@ -380,7 +380,8 @@
   "confidence": "high" | "medium" | "low",  # 仅ai_suggested有
   "replaces": "cc_xxx",  # 仅manual_correction有
   "superseded_by": "cc_xxx",  # 被替代时填入
-  "feishu_record_id": "rec_xxx"  # 飞书多维表格对应记录ID
+  "feishu_record_id": "rec_xxx",  # 飞书多维表格对应记录ID
+  "target_field": "产品线"  # 目标客户档案字段（2026-05-05 新增）
 }
 ```
 
