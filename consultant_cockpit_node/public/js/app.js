@@ -407,14 +407,16 @@ function extractTargetField(content) {
   return null;
 }
 
-async function executeRecordCommand(content) {
+async function executeRecordCommand(content, explicitType, explicitFieldPrefix) {
   if (!state.sessionId) {
     setStatus('请先创建会话', 'warning');
     return;
   }
 
-  const recordType = inferType(content);
-  const targetField = extractTargetField(content);
+  // Stage 3.1: 支持显式传入类型和字段前缀
+  // 优先级：显式参数 > 字段前缀状态 > 内容推断
+  const recordType = explicitType || state.currentType || inferType(content);
+  const targetField = explicitFieldPrefix || state.currentFieldPrefix || extractTargetField(content);
 
   try {
     const result = await apiRequest(`/sessions/${state.sessionId}/records`, {
@@ -431,6 +433,9 @@ async function executeRecordCommand(content) {
     elements.commandInput.value = '';
     const targetFieldInfo = targetField ? ` → ${targetField}` : '';
     setStatus(`已记录 (类型: ${recordType === 'fact' ? '事实' : '共识'}, 阶段: ${state.currentStage}${targetFieldInfo})`, 'success');
+
+    // Stage 3.1: 发送后重置状态
+    onMessageSent();
 
     // 立即刷新状态并闪动新记录（不等 WebSocket）
     await getSessionState();
