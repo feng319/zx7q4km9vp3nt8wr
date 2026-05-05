@@ -868,18 +868,25 @@ function renderCompleteness() {
 }
 
 function renderFieldsStatus() {
+  // Stage 2.1: 更新为 progress-tag 网格渲染
+  // 匹配 index.html 中的 progress-grid 结构
+  const progressGrid = document.getElementById('progress-grid');
+  if (!progressGrid) return;
+
   const fieldNames = ['产品线', '客户群体', '收入结构', '毛利结构', '交付情况', '资源分布', '战略目标', '显性诉求', '隐性痛点'];
 
-  elements.fieldsStatus.innerHTML = fieldNames.map(name => {
+  progressGrid.innerHTML = fieldNames.map(name => {
     const status = state.fieldsStatus[name] || 'empty';
-    const icon = status === 'confirmed' ? '✓' : status === 'partial' ? '◑' : '○';
     return `
-      <div class="field-item status-${status}">
-        <span class="field-icon">${icon}</span>
-        <span class="field-name">${name}</span>
-      </div>
+      <div class="progress-tag ${status}" data-field="${name}" data-status="${status}" onclick="handleProgressTagClick('${name}', '${status}')">${name}</div>
     `;
   }).join('');
+
+  // 同时更新左栏固定区的完整度显示
+  const completenessValueSmall = document.getElementById('completeness-value-small');
+  if (completenessValueSmall) {
+    completenessValueSmall.textContent = `${Math.round(state.completeness)}%`;
+  }
 }
 
 function renderConsensusChain() {
