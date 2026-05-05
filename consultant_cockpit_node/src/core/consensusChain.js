@@ -431,6 +431,130 @@ class ConsensusChain extends EventEmitter {
     }
     return null;
   }
+
+  // ==================== Stage 4.4: 六类响应写入函数 ====================
+
+  /**
+   * 六类响应写入函数
+   * @param {Object} hypothesis - 假设对象
+   * @param {('confirmed'|'partial'|'rejected_with_reason'|'rejected_no_reason'|'avoided')} responseType - 响应类型
+   * @param {string} eventId - 事件 ID
+   * @param {Stage} stage - 当前阶段
+   * @param {string} [extraContent=''] - 额外内容（如客户修正的因果链）
+   * @param {string} [avoidanceSubtype] - 回避子类型
+   * @returns {ConsensusRecord[]} 创建的记录数组
+   */
+  writeConsensusByResponseType(hypothesis, responseType, eventId, stage, extraContent = '', avoidanceSubtype = null) {
+    const now = new Date().toISOString();
+    const id = `record_${crypto.randomUUID().split('-')[0]}`;
+
+    /** @type {ConsensusRecord} */
+    const base = {
+      id,
+      event_id: eventId,
+      timestamp: now,
+      type: 'fact',
+      stage: stage,
+      origin_stage: hypothesis.origin_stage,
+      verified_stage: stage,
+      hypothesis_id: hypothesis.hypothesis_id || hypothesis.id,
+      target_field: hypothesis.target_field,
+      client_response_type: responseType,
+      avoidance_subtype: avoidanceSubtype,
+      status: 'recorded',
+      feishu_record_id: null,
+      evidence_sku: hypothesis.evidence_skus || [],
+      confidence: null,
+      replaces: null,
+      superseded_by: null,
+      recommendation: null
+    };
+
+    /** @type {ConsensusRecord[]} */
+    const records = [];
+
+    if (responseType === 'confirmed') {
+      records.push({
+        ...base,
+        id: `record_${crypto.randomUUID().split('-')[0]}`,
+        source: 'hypothesis_confirmed',
+        content: hypothesis.content
+      });
+    } else if (responseType === 'partial') {
+      records.push({
+        ...base,
+        id: `record_${crypto.randomUUID().split('-')[0]}`,
+        source: 'hypothesis_partial',
+        content: `${hypothesis.content}（客户部分认可）`
+      });
+      if (extraContent) {
+        records.push({
+          ...base,
+          id: `record_${crypto.randomUUID().split('-')[0]}`,
+          source: 'hypothesis_partial',
+          content: `${extraContent}（客户修正因果链）`
+        });
+      }
+    } else if (responseType === 'rejected_with_reason') {
+      records.push({
+        ...base,
+        id: `record_${crypto.randomUUID().split('-')[0]}`,
+        source: 'hypothesis_rejected',
+        content: `客户否认：${hypothesis.content}`
+      });
+      if (extraContent) {
+        records.push({
+          ...base,
+          id: `record_${crypto.randomUUID().split('-')[0]}`,
+          source: 'manual',
+          target_field: null,
+          content: extraContent
+        });
+      }
+    } else if (responseType === 'rejected_no_reason') {
+      records.push({
+        ...base,
+        id: `record_${crypto.randomUUID().split('-')[0]}`,
+        source: 'hypothesis_rejected',
+        content: `客户否认：${hypothesis.content}，未给出替代原因`
+      });
+    } else if (responseType === 'avoided') {
+      records.push({
+        ...base,
+        id: `record_${crypto.randomUUID().split('-')[0]}`,
+        source: 'hypothesis_avoided',
+        content: `客户回避：${hypothesis.content}`,
+        confidence: 'low',
+        avoidance_subtype: avoidanceSubtype
+      });
+    }
+
+    // 添加所有记录
+    records.forEach(r => this.records.push(r));
+
+    // 触发 change 事件
+    records.forEach(r => this.emit('change', { type: 'add', record: r }));
+
+    return records;
+  }
+
+  /**
+   * 获取假设相关的所有记录
+   * @param {string} hypothesisId - 假设 ID
+   * @returns {ConsensusRecord[]}
+   */
+  getRecordsByHypothesisId(hypothesisId) {
+    return this.records.filter(r => r.hypothesis_id === hypothesisId);
+  }
+
+  /**
+   * 获取指定事件的所有记录
+   * @param {string} eventId - 事件 ID
+   * @returns {ConsensusRecord[]}
+   */
+  getRecordsByEventId(eventId) {
+    return this.records.filter(r => r.event_id === eventId);
+  }
 }
 
 module.exports = { ConsensusChain };
