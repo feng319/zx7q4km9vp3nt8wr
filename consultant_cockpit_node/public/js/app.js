@@ -2247,7 +2247,7 @@ function getResponseTypeLabel(responseType) {
 }
 
 /**
- * 六类响应完成后恢复
+ * Stage 5: 六类响应完成后恢复
  */
 function onHypothesisResponseComplete() {
   const typeBtn = document.getElementById('type-toggle-btn');
@@ -2257,9 +2257,20 @@ function onHypothesisResponseComplete() {
   const banner = document.querySelector('.stage-banner');
   if (banner) banner.classList.remove('stage-locked');
 
-  // 重置类型
+  // 移除响应按钮容器
+  const responseContainer = document.getElementById('hypothesis-response-container');
+  if (responseContainer) responseContainer.remove();
+
+  // 移除回避子类型选择
+  const avoidanceContainer = document.querySelector('.avoidance-subtypes');
+  if (avoidanceContainer) avoidanceContainer.remove();
+
+  // 重置状态
+  state.currentHypothesis = null;
+  state.hypothesisResponseActive = false;
   state.currentType = 'fact';
   updateTypeToggleBtn();
+  updateInputPlaceholder();
 }
 
 // ==================== 全局函数（供 HTML onclick 使用） ====================
