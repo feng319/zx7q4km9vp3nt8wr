@@ -26,11 +26,14 @@ describe('ConsensusChain', () => {
       assert.strictEqual(record.stage, '战略梳理');
       assert.strictEqual(record.content, '客户主营业务为储能系统集成');
       assert.strictEqual(record.source, 'manual');
-      assert.strictEqual(record.status, 'pending_client_confirm');
+      // 重构后默认状态为 'recorded'
+      assert.strictEqual(record.status, 'recorded');
       assert.deepStrictEqual(record.evidence_sku, []);
       assert.strictEqual(record.confidence, null);
       assert.strictEqual(record.replaces, null);
       assert.strictEqual(record.superseded_by, null);
+      // 新增 target_field 字段
+      assert.strictEqual(record.target_field, null);
     });
 
     it('should add a consensus record with recommendation', () => {
@@ -44,6 +47,18 @@ describe('ConsensusChain', () => {
 
       assert.strictEqual(record.type, 'consensus');
       assert.strictEqual(record.recommendation, '建议增加高毛利产品线');
+    });
+
+    it('should add record with target_field', () => {
+      const record = chain.addRecord({
+        type: 'fact',
+        stage: '战略梳理',
+        content: '产品线：储能系统、光伏逆变器',
+        source: 'manual',
+        target_field: '产品线'
+      });
+
+      assert.strictEqual(record.target_field, '产品线');
     });
 
     it('should emit change event on add', (t, done) => {
