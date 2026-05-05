@@ -65,7 +65,12 @@ const state = {
   // Stage 2.4: 追问建议模式
   suggestionMode: 'normal',  // normal | branch
   // Stage 2.6: 阶段下拉状态
-  stageDropdownOpen: false
+  stageDropdownOpen: false,
+  // Stage 5: 假设响应机制
+  hypotheses: [],  // 诊断假设列表
+  currentHypothesis: null,  // 当前正在响应的假设
+  deferredQueue: [],  // 暂缓队列
+  hypothesisResponseActive: false  // 六类响应按钮是否激活
 };
 
 // DOM 元素引用（新布局）
