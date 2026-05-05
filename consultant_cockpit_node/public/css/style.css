@@ -1547,3 +1547,37 @@ textarea {
 body.demo-mode .pending-decision-badge {
   display: none !important;
 }
+
+/* ==================== Toast 通知样式 ==================== */
+.toast-notification {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background: var(--primary-color, #1890ff);
+  color: white;
+  padding: 12px 24px;
+  border-radius: 4px;
+  z-index: 9999;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  font-size: 14px;
+  animation: toast-fade-in 0.3s ease;
+}
+
+@keyframes toast-fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* 深色模式下的 toast */
+@media (prefers-color-scheme: dark) {
+  .toast-notification {
+    background: var(--primary-color, #1890ff);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  }
+}
