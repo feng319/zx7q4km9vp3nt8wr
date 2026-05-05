@@ -286,6 +286,22 @@ function handleWebSocketMessage(data) {
         if (flashId) flashRecord(flashId);
       });
       break;
+    case 'profile_changed':
+      // 客户档案表变更（飞书侧修改）
+      console.log('Profile changed from Feishu:', data.data);
+      showNotification(`客户档案已更新: ${data.data?.company || ''}`, 'info');
+      // 如果当前会话的公司匹配，刷新状态
+      if (state.company && data.data?.company === state.company) {
+        getSessionState();
+      }
+      break;
+    case 'feishu_record_changed':
+      // 共识链表变更（飞书侧修改）
+      console.log('Consensus record changed from Feishu:', data.data);
+      getSessionState().then(() => {
+        if (data.data?.record_id) flashRecord(data.data.record_id);
+      });
+      break;
     case 'candidates_ready':
       state.candidates = data.candidates;
       showCandidatesOverlay();
