@@ -1288,7 +1288,7 @@ function initEventListeners() {
     if (file) importSession(file);
   });
 
-  // 快捷键（设计文档 5.2 节）
+  // 快捷键（设计文档 5.2 节 + Stage 2.3 扩展）
   document.addEventListener('keydown', (e) => {
     // F11 或 Ctrl+Shift+D：演示模式切换
     if (e.key === 'F11' || (e.ctrlKey && e.shiftKey && e.key === 'D')) {
@@ -1303,6 +1303,21 @@ function initEventListeners() {
       if (command) parseAndExecuteCommand(command);
     }
 
+    // Stage 2.3: Tab 接受追问建议
+    if (e.key === 'Tab' && !e.shiftKey && !e.ctrlKey) {
+      // 仅在输入框未聚焦且有建议时触发
+      if (document.activeElement !== elements.commandInput && state.currentSuggestion) {
+        e.preventDefault();
+        acceptSuggestion();
+      }
+    }
+
+    // Stage 2.3: Shift+Tab 跳过追问建议
+    if (e.key === 'Tab' && e.shiftKey && state.currentSuggestion) {
+      e.preventDefault();
+      skipSuggestion();
+    }
+
     // 数字键 1/2/3：选择候选（候选覆盖层打开时）
     if (elements.candidatesOverlay.style.display === 'flex' && state.candidates) {
       if (e.key === '1' || e.key === '2' || e.key === '3') {
@@ -1311,9 +1326,27 @@ function initEventListeners() {
           selectCandidate(index);
         }
       }
-      // Esc：折叠候选到右下角"待决策"徽标（设计文档 3.5 节）
+      // Stage 2.5: Esc 三态切换（active → translucent → folded）
       if (e.key === 'Escape') {
-        foldCandidatesToBadge();
+        e.preventDefault();
+        handleCandidateEscape();
+      }
+    } else if (e.key === 'Escape') {
+      // 非候选激活时，关闭编辑卡等弹出层
+      const editCard = document.querySelector('.focus-edit-card');
+      const miniSearch = document.querySelector('.mini-search');
+      if (editCard) {
+        closeFocusEditCard();
+      } else if (miniSearch) {
+        miniSearch.remove();
+      }
+    }
+
+    // Stage 2.3: 分支模式 A/B/C
+    if (state.suggestionMode === 'branch') {
+      if (['a', 'b', 'c', 'A', 'B', 'C'].includes(e.key)) {
+        e.preventDefault();
+        selectBranch(e.key.toLowerCase());
       }
     }
   });
