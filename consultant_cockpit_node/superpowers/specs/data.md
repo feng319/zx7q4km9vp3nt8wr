@@ -24,6 +24,7 @@
   superseded_by: string|null,    // 被哪条记录替代
   feishu_record_id: string|null, // 飞书记录 ID
   recommendation: string|null,   // 建议方向（仅 consensus 类型）
+  target_field: string|null,     // 目标客户档案字段（产品线/客户群体/收入结构/毛利结构/交付情况/资源分布/战略目标/显性诉求/隐性痛点）
 }
 ```
 
