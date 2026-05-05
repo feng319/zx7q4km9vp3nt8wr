@@ -384,6 +384,25 @@ function inferType(content) {
   return consensusKeywords.some(kw => content.includes(kw)) ? 'consensus' : 'fact';
 }
 
+/**
+ * 从内容中提取 target_field（字段前缀）
+ * 规则：内容以"字段名："或"字段名:"开头时，提取字段名作为 target_field
+ * 客户档案 9 个静态字段：产品线、客户群体、收入结构、毛利结构、交付情况、资源分布、战略目标、显性诉求、隐性痛点
+ */
+function extractTargetField(content) {
+  if (!content) return null;
+  const profileFields = ['产品线', '客户群体', '收入结构', '毛利结构', '交付情况', '资源分布', '战略目标', '显性诉求', '隐性痛点'];
+  const match = content.match(/^([^：:]+)[：:]/);
+  if (match && match[1]) {
+    const fieldName = match[1].trim();
+    // 精确匹配客户档案字段
+    if (profileFields.includes(fieldName)) {
+      return fieldName;
+    }
+  }
+  return null;
+}
+
 async function executeRecordCommand(content) {
   if (!state.sessionId) {
     setStatus('请先创建会话', 'warning');
@@ -391,6 +410,7 @@ async function executeRecordCommand(content) {
   }
 
   const recordType = inferType(content);
+  const targetField = extractTargetField(content);
 
   try {
     const result = await apiRequest(`/sessions/${state.sessionId}/records`, {
@@ -399,12 +419,14 @@ async function executeRecordCommand(content) {
         type: recordType,
         content: content,
         stage: state.currentStage,
-        source: 'manual'
+        source: 'manual',
+        target_field: targetField
       })
     });
 
     elements.commandInput.value = '';
-    setStatus(`已记录 (类型: ${recordType === 'fact' ? '事实' : '共识'}, 阶段: ${state.currentStage})`, 'success');
+    const targetFieldInfo = targetField ? ` → ${targetField}` : '';
+    setStatus(`已记录 (类型: ${recordType === 'fact' ? '事实' : '共识'}, 阶段: ${state.currentStage}${targetFieldInfo})`, 'success');
 
     // 立即刷新状态并闪动新记录（不等 WebSocket）
     await getSessionState();
