@@ -651,6 +651,82 @@ fastify.get('/api/sessions/:sessionId/candidates', async (request, reply) => {
   }
 });
 
+// ==================== Stage 6: 追问建议与缺口识别 ====================
+
+// 获取信息缺口
+fastify.get('/api/sessions/:sessionId/gaps', async (request, reply) => {
+  const { sessionId } = request.params;
+  const session = await getOrCreateSession(sessionId);
+
+  try {
+    const records = session.consensusChain.records;
+    const hypotheses = session.hypotheses || [];
+    const gaps = identifyGaps(records, hypotheses);
+
+    return {
+      success: true,
+      gaps,
+      factCount: confirmedFactCount(records),
+    };
+  } catch (error) {
+    return {
+      success: false,
+      error: error.message,
+      gaps: [],
+    };
+  }
+});
+
+// 获取下一条追问建议
+fastify.get('/api/sessions/:sessionId/next-follow-up', async (request, reply) => {
+  const { sessionId } = request.params;
+  const session = await getOrCreateSession(sessionId);
+
+  try {
+    const records = session.consensusChain.records;
+    const hypotheses = session.hypotheses || [];
+    const suggestion = getNextFollowUp(records, hypotheses);
+
+    return {
+      success: true,
+      suggestion,
+    };
+  } catch (error) {
+    return {
+      success: false,
+      error: error.message,
+      suggestion: null,
+    };
+  }
+});
+
+// 获取结构化上下文（供候选生成、备忘录等使用）
+fastify.get('/api/sessions/:sessionId/context', async (request, reply) => {
+  const { sessionId } = request.params;
+  const { caller = 'suggestion' } = request.query;
+  const session = await getOrCreateSession(sessionId);
+
+  try {
+    const context = buildContext({
+      records: session.consensusChain.records,
+      clientProfile: session.clientProfile || {},
+      hypotheses: session.hypotheses || [],
+      currentStage: session.consensusChain.currentStage,
+    }, caller);
+
+    return {
+      success: true,
+      context,
+    };
+  } catch (error) {
+    return {
+      success: false,
+      error: error.message,
+      context: null,
+    };
+  }
+});
+
 // 召回知识
 fastify.post('/api/sessions/:sessionId/recall', async (request, reply) => {
   const { sessionId } = request.params;
