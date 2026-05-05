@@ -2273,6 +2273,401 @@ function onHypothesisResponseComplete() {
   updateInputPlaceholder();
 }
 
+// ==================== Stage 5.2-5.5: 假设响应辅助函数 ====================
+
+/**
+ * Stage 5.2: 显示回避子类型选择
+ * @param {string} hypothesisId - 假设 ID
+ */
+function showAvoidanceSubtypes(hypothesisId) {
+  const responseContainer = document.getElementById('hypothesis-response-container');
+  if (!responseContainer) return;
+
+  // 移除已有的子类型选择
+  const existing = responseContainer.querySelector('.avoidance-subtypes');
+  if (existing) existing.remove();
+
+  const container = document.createElement('div');
+  container.className = 'avoidance-subtypes';
+  container.innerHTML = `
+    <div class="subtype-header">回避原因：</div>
+    <div class="subtype-options">
+      <button onclick="handleAvoidance('${hypothesisId}', 'sensitive')">[A] 数据敏感</button>
+      <button onclick="handleAvoidance('${hypothesisId}', 'no_data')">[B] 内部没有精确数据</button>
+      <button onclick="handleAvoidance('${hypothesisId}', 'out_of_scope')">[C] 超出权限范围</button>
+      <button onclick="handleAvoidance('${hypothesisId}', 'deflected')">[D] 话题转移</button>
+    </div>
+  `;
+
+  responseContainer.appendChild(container);
+}
+
+/**
+ * Stage 5.2: 处理回避响应
+ * @param {string} hypothesisId - 假设 ID
+ * @param {string} avoidanceSubtype - 回避子类型
+ */
+window.handleAvoidance = async function(hypothesisId, avoidanceSubtype) {
+  const hypothesis = state.hypotheses.find(h => h.hypothesis_id === hypothesisId || h.id === hypothesisId);
+  if (!hypothesis) return;
+
+  try {
+    const eventId = `event_${Date.now()}`;
+    await apiRequest(`/sessions/${state.sessionId}/hypotheses/${hypothesisId}/respond`, {
+      method: 'POST',
+      body: JSON.stringify({
+        response_type: 'avoided',
+        avoidance_subtype: avoidanceSubtype,
+        event_id: eventId,
+        stage: state.currentStage
+      })
+    });
+
+    hypothesis.status = 'avoided';
+    checkAllHypothesesRejected();
+
+    onHypothesisResponseComplete();
+    setStatus(`假设已标记为回避: ${getAvoidanceLabel(avoidanceSubtype)}`, 'success');
+    await getSessionState();
+  } catch (error) {
+    setStatus(`响应失败: ${error.message}`, 'error');
+  }
+};
+
+/**
+ * 获取回避子类型标签
+ */
+function getAvoidanceLabel(subtype) {
+  const labels = {
+    sensitive: '数据敏感',
+    no_data: '内部没有精确数据',
+    out_of_scope: '超出权限范围',
+    deflected: '话题转移'
+  };
+  return labels[subtype] || subtype;
+}
+
+/**
+ * Stage 5.3: 显示部分成立编辑框
+ * @param {Object} hypothesis - 假设对象
+ */
+function showPartialEditBox(hypothesis) {
+  const modal = document.createElement('div');
+  modal.className = 'modal active';
+  modal.id = 'partial-edit-modal';
+  modal.innerHTML = `
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3>客户部分认可</h3>
+      </div>
+      <div class="modal-body">
+        <p>原假设：${escapeHtml(hypothesis.content)}</p>
+        <p>客户修正为：</p>
+        <textarea id="partial-content" rows="3" placeholder="根据客户原话简短记录"></textarea>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-primary btn-sm" onclick="submitPartial('${hypothesis.hypothesis_id || hypothesis.id}')">确认修正内容</button>
+        <button class="btn btn-secondary btn-sm" onclick="closePartialModal()">取消</button>
+      </div>
+    </div>
+  `;
+
+  document.body.appendChild(modal);
+
+  // 聚焦到输入框
+  setTimeout(() => {
+    const textarea = document.getElementById('partial-content');
+    if (textarea) textarea.focus();
+  }, 100);
+}
+
+/**
+ * Stage 5.3: 提交部分成立修正
+ * @param {string} hypothesisId - 假设 ID
+ */
+window.submitPartial = async function(hypothesisId) {
+  const textarea = document.getElementById('partial-content');
+  if (!textarea) return;
+
+  const extraContent = textarea.value.trim();
+  const hypothesis = state.hypotheses.find(h => h.hypothesis_id === hypothesisId || h.id === hypothesisId);
+  if (!hypothesis) return;
+
+  try {
+    const eventId = `event_${Date.now()}`;
+    await apiRequest(`/sessions/${state.sessionId}/hypotheses/${hypothesisId}/respond`, {
+      method: 'POST',
+      body: JSON.stringify({
+        response_type: 'partial',
+        extra_content: extraContent,
+        event_id: eventId,
+        stage: state.currentStage
+      })
+    });
+
+    hypothesis.status = 'partial';
+
+    closePartialModal();
+    onHypothesisResponseComplete();
+    setStatus('假设已标记为部分成立', 'success');
+    await getSessionState();
+  } catch (error) {
+    setStatus(`响应失败: ${error.message}`, 'error');
+  }
+};
+
+/**
+ * Stage 5.3: 关闭部分成立编辑框
+ */
+window.closePartialModal = function() {
+  const modal = document.getElementById('partial-edit-modal');
+  if (modal) modal.remove();
+};
+
+/**
+ * Stage 5.4: 添加到暂缓队列
+ * @param {string} question - 暂缓的问题
+ * @param {string} timestamp - 时间戳
+ */
+function addToDeferredQueue(question, timestamp) {
+  state.deferredQueue.push({
+    id: `deferred_${Date.now()}`,
+    question,
+    timestamp,
+    stage: state.currentStage
+  });
+  renderDeferredQueue();
+  setStatus('问题已暂缓，稍后处理', 'info');
+}
+
+/**
+ * Stage 5.4: 渲染暂缓队列
+ */
+function renderDeferredQueue() {
+  // 查找或创建暂缓队列容器
+  let container = document.getElementById('deferred-queue');
+  if (!container) {
+    container = document.createElement('div');
+    container.id = 'deferred-queue';
+    container.className = 'deferred-queue';
+    const dialogPanel = document.querySelector('.dialog-panel .panel-content');
+    if (dialogPanel) {
+      dialogPanel.appendChild(container);
+    }
+  }
+
+  if (state.deferredQueue.length === 0) {
+    container.style.display = 'none';
+    return;
+  }
+
+  container.style.display = 'block';
+  container.innerHTML = state.deferredQueue.map(item => `
+    <div class="deferred-item" data-id="${item.id}">
+      <span class="deferred-time">${formatTime(item.timestamp)}</span>
+      <span class="deferred-question">${escapeHtml(item.question)}</span>
+      <button class="btn btn-sm btn-primary" onclick="resumeDeferred('${item.id}')">重新切入</button>
+      <button class="btn btn-sm btn-secondary" onclick="abandonDeferred('${item.id}')">放弃</button>
+    </div>
+  `).join('');
+}
+
+/**
+ * 格式化时间
+ */
+function formatTime(timestamp) {
+  const date = new Date(timestamp);
+  return date.toLocaleTimeString('zh-CN', { hour: '2-digit', minute: '2-digit' });
+}
+
+/**
+ * Stage 5.4: 重新切入暂缓问题
+ * @param {string} deferredId - 暂缓项 ID
+ */
+window.resumeDeferred = function(deferredId) {
+  const item = state.deferredQueue.find(d => d.id === deferredId);
+  if (!item) return;
+
+  // 填入输入框
+  elements.commandInput.value = item.question;
+  elements.commandInput.focus();
+
+  // 从队列中移除
+  state.deferredQueue = state.deferredQueue.filter(d => d.id !== deferredId);
+  renderDeferredQueue();
+
+  setStatus('已切入暂缓问题', 'info');
+};
+
+/**
+ * Stage 5.4: 放弃暂缓问题
+ * @param {string} deferredId - 暂缓项 ID
+ */
+window.abandonDeferred = function(deferredId) {
+  state.deferredQueue = state.deferredQueue.filter(d => d.id !== deferredId);
+  renderDeferredQueue();
+  setStatus('已放弃暂缓问题', 'info');
+};
+
+/**
+ * Stage 5.5: 检查所有假设是否都被推翻
+ */
+function checkAllHypothesesRejected() {
+  if (state.hypotheses.length === 0) return;
+
+  const allRejected = state.hypotheses.every(
+    h => h.status === 'rejected' || h.status === 'avoided'
+  );
+
+  if (allRejected) {
+    showDiagnosticResetDialog();
+  }
+}
+
+/**
+ * Stage 5.5: 显示诊断重置对话框
+ */
+function showDiagnosticResetDialog() {
+  const dialog = document.createElement('div');
+  dialog.className = 'reset-dialog';
+  dialog.id = 'reset-dialog';
+  dialog.innerHTML = `
+    <div class="reset-content">
+      <h3>⚠️ 所有预设假设已被推翻或回避</h3>
+      <p>当前共识链有 ${state.records.filter(r => r.status === 'confirmed').length} 条已确认事实，但尚未形成诊断方向。</p>
+      <div class="reset-options">
+        <button onclick="regenerateHypotheses()">基于现有事实重新生成假设</button>
+        <button onclick="switchToOpenMode()">切换到开放追问模式</button>
+      </div>
+    </div>
+  `;
+
+  document.body.appendChild(dialog);
+}
+
+/**
+ * Stage 5.5: 重新生成假设
+ */
+window.regenerateHypotheses = async function() {
+  closeResetDialog();
+
+  if (!state.sessionId) return;
+
+  try {
+    setStatus('正在重新生成假设...', 'info');
+
+    const data = await apiRequest(`/sessions/${state.sessionId}/hypotheses/regenerate`, {
+      method: 'POST'
+    });
+
+    if (data.hypotheses && data.hypotheses.length > 0) {
+      state.hypotheses = data.hypotheses;
+      setStatus(`已生成 ${data.hypotheses.length} 个新假设`, 'success');
+    } else {
+      setStatus('未能生成新假设', 'warning');
+    }
+  } catch (error) {
+    setStatus(`生成假设失败: ${error.message}`, 'error');
+  }
+};
+
+/**
+ * Stage 5.5: 切换到开放追问模式
+ */
+window.switchToOpenMode = function() {
+  closeResetDialog();
+  state.hypotheses = [];
+  setStatus('已切换到开放追问模式，可自由提问', 'info');
+};
+
+/**
+ * Stage 5.5: 关闭重置对话框
+ */
+window.closeResetDialog = function() {
+  const dialog = document.getElementById('reset-dialog');
+  if (dialog) dialog.remove();
+};
+
+/**
+ * Stage 5: 会议结束时处理暂缓队列
+ */
+function onMeetingEnd() {
+  if (state.deferredQueue.length > 0) {
+    showDeferredHandlingDialog();
+  } else {
+    endMeeting();
+  }
+}
+
+/**
+ * Stage 5: 显示暂缓队列处理对话框
+ */
+function showDeferredHandlingDialog() {
+  const dialog = document.createElement('div');
+  dialog.className = 'reset-dialog';
+  dialog.id = 'deferred-handling-dialog';
+  dialog.innerHTML = `
+    <div class="reset-content">
+      <h3>📋 还有 ${state.deferredQueue.length} 个暂缓问题</h3>
+      <p>会议结束前，请处理这些暂缓的问题：</p>
+      <div class="deferred-list">
+        ${state.deferredQueue.map(item => `
+          <div class="deferred-item">
+            <span class="deferred-time">${formatTime(item.timestamp)}</span>
+            <span class="deferred-question">${escapeHtml(item.question)}</span>
+          </div>
+        `).join('')}
+      </div>
+      <div class="reset-options">
+        <button onclick="processAllDeferred()">逐一处理</button>
+        <button onclick="ignoreAllDeferred()">全部忽略</button>
+      </div>
+    </div>
+  `;
+
+  document.body.appendChild(dialog);
+}
+
+/**
+ * 处理所有暂缓问题
+ */
+window.processAllDeferred = function() {
+  const dialog = document.getElementById('deferred-handling-dialog');
+  if (dialog) dialog.remove();
+
+  // 从第一个开始处理
+  if (state.deferredQueue.length > 0) {
+    const first = state.deferredQueue[0];
+    elements.commandInput.value = first.question;
+    elements.commandInput.focus();
+    setStatus('请处理暂缓问题', 'info');
+  }
+};
+
+/**
+ * 忽略所有暂缓问题
+ */
+window.ignoreAllDeferred = function() {
+  state.deferredQueue = [];
+  renderDeferredQueue();
+
+  const dialog = document.getElementById('deferred-handling-dialog');
+  if (dialog) dialog.remove();
+
+  endMeeting();
+};
+
+/**
+ * 结束会议
+ */
+function endMeeting() {
+  setStatus('会议已结束，可生成备忘录', 'success');
+  // 启用备忘录生成按钮
+  if (elements.generateMemoBtn) {
+    elements.generateMemoBtn.disabled = false;
+  }
+}
+
 // ==================== 全局函数（供 HTML onclick 使用） ====================
 window.confirmRecord = async function(recordId) {
   if (!state.sessionId) return;
