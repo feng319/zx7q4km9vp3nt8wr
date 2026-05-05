@@ -442,6 +442,99 @@ class FallbackHandler {
   }
 
   /**
+   * 将失败操作加入重试队列（不阻塞主流程）
+   * @param {Object} task - 重试任务
+   * @param {string} task.operation - 操作名称
+   * @param {Function} task.handler - 重试处理函数
+   * @param {Object} task.data - 操作数据
+   * @param {number} [task.maxRetries=3] - 最大重试次数
+   * @param {number} [task.retryDelay=5000] - 重试间隔（毫秒）
+   * @returns {Object} 队列条目
+   */
+  enqueue(task) {
+    const queueEntry = {
+      id: `${task.operation}_${Date.now()}_${Math.random().toString(36).slice(2, 8)}`,
+      operation: task.operation,
+      handler: task.handler,
+      data: task.data,
+      maxRetries: task.maxRetries ?? 3,
+      retryDelay: task.retryDelay ?? 5000,
+      attempts: 0,
+      status: 'pending',
+      createdAt: new Date().toISOString(),
+      lastError: null
+    };
+
+    this._retryQueue.push(queueEntry);
+
+    // 异步处理队列，不阻塞当前操作
+    this._processQueueAsync();
+
+    return queueEntry;
+  }
+
+  /**
+   * 异步处理重试队列
+   * @private
+   */
+  async _processQueueAsync() {
+    // 防止并发处理
+    if (this._isProcessingQueue) return;
+    this._isProcessingQueue = true;
+
+    try {
+      while (this._retryQueue.length > 0) {
+        const entry = this._retryQueue[0];
+
+        if (entry.attempts >= entry.maxRetries) {
+          // 超过最大重试次数，移出队列并保存到本地缓存
+          this._retryQueue.shift();
+          this.handleFeishuFailure(entry.operation, new Error(entry.lastError || '重试次数耗尽'), entry.data);
+          continue;
+        }
+
+        try {
+          entry.status = 'retrying';
+          entry.attempts++;
+
+          // 执行重试处理函数
+          await entry.handler(entry.data);
+
+          // 成功，移出队列
+          this._retryQueue.shift();
+          console.log(`[FallbackHandler] 重试成功: ${entry.operation} (第${entry.attempts}次)`);
+
+        } catch (err) {
+          entry.status = 'pending';
+          entry.lastError = err.message || String(err);
+          console.warn(`[FallbackHandler] 重试失败: ${entry.operation} (第${entry.attempts}次) - ${entry.lastError}`);
+
+          // 等待后继续
+          await new Promise(resolve => setTimeout(resolve, entry.retryDelay));
+        }
+      }
+    } finally {
+      this._isProcessingQueue = false;
+    }
+  }
+
+  /**
+   * 获取重试队列状态
+   * @returns {Object[]} 队列条目列表（不含 handler 函数）
+   */
+  getRetryQueue() {
+    return this._retryQueue.map(entry => ({
+      id: entry.id,
+      operation: entry.operation,
+      attempts: entry.attempts,
+      maxRetries: entry.maxRetries,
+      status: entry.status,
+      createdAt: entry.createdAt,
+      lastError: entry.lastError
+    }));
+  }
+
+  /**
    * 获取降级统计报告
    * @returns {{totalFallbacks: number, byType: Object<string, number>, recentFallbacks: Object[]}}
    */
