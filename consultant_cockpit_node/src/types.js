@@ -28,6 +28,19 @@
  * @property {string|null} superseded_by - 被哪条记录替代（原记录指向新记录）
  * @property {string|null} feishu_record_id - 飞书记录 ID（同步后填充）
  * @property {string|null} recommendation - 建议方向（仅 consensus 类型有）
+ * @property {string|null} target_field - 对应客户档案的字段名（如"产品线"、"毛利结构"）
+ */
+
+/**
+ * 诊断假设（重构 4.md 12.2 节）
+ * @typedef {Object} DiagnosisHypothesis
+ * @property {string} id - 唯一标识
+ * @property {string} content - 假设内容
+ * @property {string|null} target_field - 对应客户档案的字段名
+ * @property {Stage} origin_stage - 假设提出时的阶段（注意：不是共识链记录的 stage）
+ * @property {string[]} evidence_skus - 关联的 SKU ID 列表
+ * @property {'confirmed'|'partial'|'rejected'|'avoided'|'pending'} status - 假设响应状态
+ * @property {'pre_meeting'|'mid_meeting_generated'} source - 假设来源
  */
 
 /**
