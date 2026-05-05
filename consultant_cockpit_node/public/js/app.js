@@ -2711,3 +2711,4 @@ window.correctRecord = async function(recordId) {
 };
 
 window.selectCandidate = selectCandidate;
+window.showHypothesisResponseButtons = showHypothesisResponseButtons;
