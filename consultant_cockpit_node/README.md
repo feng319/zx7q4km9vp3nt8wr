@@ -232,18 +232,43 @@ node --test tests/candidateGen.test.js
 
 ## 文档目录
 
+> **统一访问入口** - 所有规范和文档的索引
+
+### 快速查阅
+
+| 需求 | 文档 |
+|------|------|
+| 了解产品定位 | [design.md](superpowers/specs/design.md) 第 1 节 |
+| 共识链记录规则 | [design.md](superpowers/specs/design.md) 第 4 节 |
+| 候选生成三约束 | [design.md](superpowers/specs/design.md) 第 3 节 |
+| 知识召回限流 | [design.md](superpowers/specs/design.md) 第 2 节 |
+| 演示模式设计 | [design.md](superpowers/specs/design.md) 第 5 节 |
+| 作战卡双模式 | [design.md](superpowers/specs/design.md) 第 6 节 |
+| 备忘录三层架构 | [design.md](superpowers/specs/design.md) 第 7 节 |
+| REST API 端点 | [api.md](superpowers/specs/api.md) |
+| WebSocket 事件 | [api.md](superpowers/specs/api.md) |
+| 飞书 API 调用 | [api.md](superpowers/specs/api.md) |
+| 数据类型定义 | [data.md](superpowers/specs/data.md) |
+| 字段映射规则 | [data.md](superpowers/specs/data.md) |
+| 状态流转图 | [data.md](superpowers/specs/data.md) |
+| 模块职责划分 | [architecture.md](superpowers/specs/architecture.md) |
+| 部署步骤 | [operations.md](superpowers/specs/operations.md) |
+| 环境变量配置 | [operations.md](superpowers/specs/operations.md) |
+| 问题排查 | [operations.md](superpowers/specs/operations.md) |
+| 变更历史 | [changelog.md](superpowers/specs/changelog.md) |
+
 ### 设计规范（superpowers/specs/）
 
 | 文档 | 说明 |
 |------|------|
-| [README.md](superpowers/specs/README.md) | 文档索引 |
 | [design.md](superpowers/specs/design.md) | 产品设计规范（完整版） |
-| [api.md](superpowers/specs/api.md) | API 接口规范 |
-| [data.md](superpowers/specs/data.md) | 数据规范（类型、字段、状态） |
-| [architecture.md](superpowers/specs/architecture.md) | 技术架构 |
-| [operations.md](superpowers/specs/operations.md) | 运维文档 |
+| [api.md](superpowers/specs/api.md) | API 接口规范（REST + WebSocket + 飞书） |
+| [data.md](superpowers/specs/data.md) | 数据规范（类型、字段、状态流转） |
+| [architecture.md](superpowers/specs/architecture.md) | 技术架构（模块职责、依赖关系） |
+| [operations.md](superpowers/specs/operations.md) | 运维文档（部署、配置、排查） |
 | [changelog.md](superpowers/specs/changelog.md) | 变更记录 |
-| [2026-05-02-consultant-field-cockpit-design.md](superpowers/specs/2026-05-02-consultant-field-cockpit-design.md) | 完整设计文档 v1.4（原始版） |
+| [2026-05-02-consultant-field-cockpit-design.md](superpowers/specs/2026-05-02-consultant-field-cockpit-design.md) | 原始设计文档 v1.4 |
+| [2026-05-03-转nodejs架构.md](superpowers/specs/2026-05-03-转nodejs架构.md) | Node.js 架构迁移文档 |
 
 ### 实施计划（superpowers/plans/）
 
@@ -253,6 +278,16 @@ node --test tests/candidateGen.test.js
 | [演练执行文档-Node版.md](superpowers/plans/演练执行文档-Node版.md) | 演练执行文档 |
 | [设计冲突修复记录.md](superpowers/plans/设计冲突修复记录.md) | PRD 与实现对齐修复 |
 | [验收测试报告_2026-05-03.md](superpowers/plans/验收测试报告_2026-05-03.md) | 验收测试报告 |
+
+### 代码引用
+
+以下文档会被代码注释引用：
+
+| 文档 | 被引用位置 |
+|------|-----------|
+| [data.md](superpowers/specs/data.md) | `src/config/fields.js` |
+| [api.md](superpowers/specs/api.md) | `server.js` |
+| [operations.md](superpowers/specs/operations.md) | `.env.example` |
 
 ---
 
