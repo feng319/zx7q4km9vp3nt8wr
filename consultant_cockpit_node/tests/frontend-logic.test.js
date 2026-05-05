@@ -59,7 +59,7 @@ describe('Stage Switch Logic', () => {
       };
 
       const shouldBlockSwitch = (state) => {
-        return state.candidates && state.candidates.length > 0;
+        return !!(state.candidates && state.candidates.length > 0);
       };
 
       assert.strictEqual(shouldBlockSwitch(mockState), false);
