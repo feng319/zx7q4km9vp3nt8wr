@@ -88,12 +88,15 @@
         </div>
       </section>
 
-      <!-- 中栏(5)：主对话区 -->
-      <section class="panel dialog-panel" aria-labelledby="dialog-heading">
-        <h2 id="dialog-heading">对话区</h2>
+      <!-- 中栏(50%)：主对话区 -->
+      <section class="col-mid panel dialog-panel" aria-labelledby="dialog-heading">
+        <h2 id="dialog-heading" class="visually-hidden">对话区</h2>
         <div class="panel-content">
-          <!-- 阶段指示 -->
-          <p class="stage-indicator">当前阶段: <strong id="stage-display">战略梳理</strong></p>
+          <!-- 阶段指示 Banner -->
+          <div class="stage-banner" id="stage-banner">
+            <span class="stage-dot">●</span>
+            <span class="stage-text">当前阶段: <strong id="stage-display">战略梳理</strong></span>
+          </div>
 
           <!-- 共识链显示区 -->
           <div class="consensus-chain" id="consensus-chain" role="list" aria-label="共识链">
