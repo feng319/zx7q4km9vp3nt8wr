@@ -47,71 +47,43 @@
     </header>
 
     <!-- 主内容区：三栏布局 3:5:2 -->
-    <main id="main-content" class="main">
-      <!-- 左栏(3)：诊断进度状态板 -->
-      <section class="panel status-panel" aria-labelledby="status-heading">
-        <h2 id="status-heading">诊断进度</h2>
-        <div class="panel-content">
+    <main id="main-content" class="main layout-container">
+      <!-- 左栏(30%)：诊断进度状态板 - 弹性上下分屏 -->
+      <section class="col-left panel status-panel" aria-labelledby="status-heading">
+        <!-- 固定区：诊断进度 -->
+        <div class="left-fixed">
+          <h2 id="status-heading">诊断进度 <span id="completeness-value-small">0%</span></h2>
           <!-- 完整度进度条 -->
-          <div class="completeness-section">
-            <div class="progress-bar">
-              <div class="progress-fill" id="completeness-progress" style="width: 0%"></div>
-            </div>
-            <p class="progress-label">完整度: <span id="completeness-value">0%</span></p>
+          <div class="progress-bar">
+            <div class="progress-fill" id="completeness-progress" style="width: 0%"></div>
           </div>
-
-          <!-- 字段状态列表 -->
-          <div class="fields-status" id="fields-status">
-            <div class="field-item status-empty">
-              <span class="field-icon">○</span>
-              <span class="field-name">产品线</span>
-            </div>
-            <div class="field-item status-empty">
-              <span class="field-icon">○</span>
-              <span class="field-name">客户群体</span>
-            </div>
-            <div class="field-item status-empty">
-              <span class="field-icon">○</span>
-              <span class="field-name">收入结构</span>
-            </div>
-            <div class="field-item status-empty">
-              <span class="field-icon">○</span>
-              <span class="field-name">毛利结构</span>
-            </div>
-            <div class="field-item status-empty">
-              <span class="field-icon">○</span>
-              <span class="field-name">交付情况</span>
-            </div>
-            <div class="field-item status-empty">
-              <span class="field-icon">○</span>
-              <span class="field-name">资源分布</span>
-            </div>
-            <div class="field-item status-empty">
-              <span class="field-icon">○</span>
-              <span class="field-name">战略目标</span>
-            </div>
-            <div class="field-item status-empty">
-              <span class="field-icon">○</span>
-              <span class="field-name">显性诉求</span>
-            </div>
-            <div class="field-item status-empty">
-              <span class="field-icon">○</span>
-              <span class="field-name">隐性痛点</span>
-            </div>
+          <!-- 诊断进度标签网格 (3×3) -->
+          <div class="progress-grid" id="progress-grid">
+            <div class="progress-tag empty" data-field="产品线" data-status="empty">产品线</div>
+            <div class="progress-tag empty" data-field="客户群体" data-status="empty">客户群体</div>
+            <div class="progress-tag empty" data-field="收入结构" data-status="empty">收入结构</div>
+            <div class="progress-tag empty" data-field="毛利结构" data-status="empty">毛利结构</div>
+            <div class="progress-tag empty" data-field="交付情况" data-status="empty">交付情况</div>
+            <div class="progress-tag empty" data-field="资源分布" data-status="empty">资源分布</div>
+            <div class="progress-tag empty" data-field="战略目标" data-status="empty">战略目标</div>
+            <div class="progress-tag empty" data-field="显性诉求" data-status="empty">显性诉求</div>
+            <div class="progress-tag empty" data-field="隐性痛点" data-status="empty">隐性痛点</div>
           </div>
+        </div>
 
-          <!-- 当前阶段 -->
-          <div class="current-stage">
-            <p class="stage-label">当前阶段</p>
-            <p class="stage-value" id="current-stage">战略梳理</p>
+        <!-- 弹性区A：已记事实（可滚动） -->
+        <div class="left-flex-a">
+          <h3 class="section-title">已记事实 <span class="count" id="fact-count">(0)</span></h3>
+          <div class="fact-list" id="fact-list" role="list" aria-label="已记事实列表">
+            <div class="empty-state">暂无事实记录</div>
           </div>
+        </div>
 
-          <!-- 待确认假设（PRD 4.2 节：四栏状态板之一） -->
-          <div class="pending-assumptions">
-            <p class="section-label">待确认假设</p>
-            <div class="assumption-list" id="pending-assumptions" role="list" aria-label="待确认假设列表">
-              <div class="empty-state">暂无待确认假设</div>
-            </div>
+        <!-- 弹性区B：核心共识（可滚动） -->
+        <div class="left-flex-b">
+          <h3 class="section-title">核心共识 <span class="count" id="consensus-count">(0)</span></h3>
+          <div class="consensus-list" id="consensus-list" role="list" aria-label="核心共识列表">
+            <div class="empty-state">暂无共识记录</div>
           </div>
         </div>
       </section>
