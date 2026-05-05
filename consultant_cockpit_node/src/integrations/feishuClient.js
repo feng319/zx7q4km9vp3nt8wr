@@ -307,6 +307,42 @@ class FeishuClient {
   }
 
   /**
+   * 获取客户档案记录（根据 record_id）
+   * @param {string} recordId - 记录 ID
+   * @returns {Promise<Object|null>}
+   */
+  async getProfileRecord(recordId) {
+    try {
+      const response = await this.client.bitable.appTableRecord.get({
+        path: {
+          app_token: this.bitableToken,
+          table_id: this.profileTableId,
+          record_id: recordId,
+        },
+        params: {
+          user_id_type: 'open_id',
+        },
+      });
+
+      if (response.code !== 0) {
+        if (response.code === 1250004) { // 记录不存在
+          return null;
+        }
+        throw new Error(`Lark API error: ${response.msg}`);
+      }
+
+      const fields = response.data?.record?.fields || {};
+      return {
+        record_id: recordId,
+        ...this._fieldsToProfile(fields),
+      };
+    } catch (error) {
+      logger.error('Failed to get profile record', { recordId, error: error.message });
+      return null;
+    }
+  }
+
+  /**
    * 列出所有共识链记录
    * @param {Object} options - 查询选项
    * @param {string} [options.company] - 按公司筛选
