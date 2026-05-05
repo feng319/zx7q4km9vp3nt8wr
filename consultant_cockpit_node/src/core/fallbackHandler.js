@@ -145,6 +145,20 @@ class FallbackHandler {
      * @private
      */
     this._localCache = this._loadLocalCache();
+
+    /**
+     * 重试队列（内存中的待重试操作）
+     * @type {Object[]}
+     * @private
+     */
+    this._retryQueue = [];
+
+    /**
+     * 是否正在处理重试队列
+     * @type {boolean}
+     * @private
+     */
+    this._isProcessingQueue = false;
   }
 
   /**
