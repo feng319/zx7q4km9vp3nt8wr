@@ -1230,23 +1230,40 @@ function initEventListeners() {
   elements.newSessionBtn.addEventListener('click', createSession);
   elements.sessionSelect.addEventListener('change', handleSessionSelectChange);
 
-  // 指令执行
+  // Stage 3.1: 执行按钮改为直接记录（不再解析指令）
   elements.executeCommandBtn.addEventListener('click', () => {
-    const command = elements.commandInput.value.trim();
-    if (command) parseAndExecuteCommand(command);
+    const content = elements.commandInput.value.trim();
+    if (content) {
+      // 如果以 / 开头，仍然解析为指令
+      if (content.startsWith('/')) {
+        parseAndExecuteCommand(content);
+      } else {
+        // 否则直接记录
+        executeRecordCommand(content, state.currentType, state.currentFieldPrefix);
+      }
+    }
   });
 
   elements.commandInput.addEventListener('keydown', (e) => {
     if (e.key === 'Enter') {
-      const command = elements.commandInput.value.trim();
-      if (command) parseAndExecuteCommand(command);
+      const content = elements.commandInput.value.trim();
+      if (content) {
+        // 如果以 / 开头，仍然解析为指令
+        if (content.startsWith('/')) {
+          parseAndExecuteCommand(content);
+        } else {
+          // 否则直接记录
+          executeRecordCommand(content, state.currentType, state.currentFieldPrefix);
+        }
+      }
     }
   });
 
   // 快捷指令按钮
   elements.cmdCandidate.addEventListener('click', executeCandidateCommand);
   elements.cmdConfirm.addEventListener('click', executeConfirmCommand);
-  elements.cmdSwitch.addEventListener('click', () => executeStageSwitchCommand());
+  // Stage 3.3: /切 按钮改为触发阶段下拉
+  elements.cmdSwitch.addEventListener('click', () => toggleStageDropdown());
   elements.cmdCase.addEventListener('click', () => executeCaseRecallCommand());
 
   // 候选覆盖层关闭
