@@ -38,6 +38,8 @@ const logger = getLogger('feishuSync');
  * @property {Object} data
  * @property {'create' | 'update' | 'delete'} change_type
  * @property {string} timestamp
+ * @property {'consensus' | 'profile'} table_type - 表类型：共识链或客户档案
+ * @property {string} [company] - 客户公司名（仅客户档案表变更时有）
  */
 
 /**
@@ -59,6 +61,8 @@ class FeishuSync extends EventEmitter {
 
     this.feishuClient = options.feishuClient;
     this.bitableToken = options.bitableToken || config.feishu.bitableToken;
+    this.consensusTableId = options.consensusTableId || config.feishu.consensusTableId;
+    this.profileTableId = options.profileTableId || config.feishu.profileTableId;
     this.pollInterval = options.pollInterval || 30000; // 30 秒（设计文档 2.4 节）
     this.wsReconnectDelay = options.wsReconnectDelay || 5000;
 
