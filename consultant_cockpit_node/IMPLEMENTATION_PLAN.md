@@ -1291,7 +1291,7 @@ ${JSON.stringify(clientProfile, null, 2)}
 | Stage 1 | ✅ 完成 | 2026-05-05 | 纯样式改动 |
 | Stage 2 | ❌ 未开始 | - | |
 | Stage 3 | ❌ 未开始 | - | |
-| Stage 4 | ❌ 未开始 | - | |
+| Stage 4 | ✅ 完成 | 2026-05-05 | 数据结构扩展 |
 | Stage 5 | ❌ 未开始 | - | |
 | Stage 6 | ❌ 未开始 | - | |
 | Stage 7 | ❌ 未开始 | - | |
