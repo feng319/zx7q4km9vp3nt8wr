@@ -51,6 +51,8 @@ const { FeishuClient, FeishuClientMock } = require('./src/integrations/feishuCli
 const { FeishuSync, FeishuSyncMock } = require('./src/integrations/feishuSync');
 const { SessionManager } = require('./src/core/sessionManager');
 const { getConfig } = require('./src/utils/config');
+const { identifyGaps, getNextFollowUp, confirmedFactCount } = require('./src/core/gapIdentifier');
+const { ContextBuilder, buildContext } = require('./src/core/contextBuilder');
 
 // ==================== 自定义 Content-Type Parser ====================
 
