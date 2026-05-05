@@ -2119,15 +2119,131 @@ window.acceptAiSuggestion = function(suggestionId) {
 };
 
 /**
- * 六类响应按钮激活时隐藏类型切换
+ * Stage 5.1: 显示六类响应按钮
+ * @param {string} hypothesisId - 假设 ID
  */
-function showHypothesisResponseButtons() {
+function showHypothesisResponseButtons(hypothesisId) {
+  const hypothesis = state.hypotheses.find(h => h.hypothesis_id === hypothesisId || h.id === hypothesisId);
+  if (!hypothesis) {
+    console.error('未找到假设:', hypothesisId);
+    return;
+  }
+
+  state.currentHypothesis = hypothesis;
+  state.hypothesisResponseActive = true;
+
+  // 隐藏类型切换按钮
   const typeBtn = document.getElementById('type-toggle-btn');
   if (typeBtn) typeBtn.style.display = 'none';
 
   // 锁定阶段 Banner
   const banner = document.querySelector('.stage-banner');
   if (banner) banner.classList.add('stage-locked');
+
+  // 创建响应按钮容器
+  const container = document.createElement('div');
+  container.className = 'hypothesis-response-buttons';
+  container.id = 'hypothesis-response-container';
+  container.innerHTML = `
+    <div class="response-header">客户反应：</div>
+    <div class="response-buttons">
+      <button class="response-btn confirm" onclick="handleHypothesisResponse('${hypothesisId}', 'confirmed')">
+        ✓ 确认
+      </button>
+      <button class="response-btn partial" onclick="handleHypothesisResponse('${hypothesisId}', 'partial')">
+        ◑ 部分成立
+      </button>
+      <button class="response-btn reject-reason" onclick="handleHypothesisResponse('${hypothesisId}', 'rejected_with_reason')">
+        ✗ 推翻·有新方向
+      </button>
+      <button class="response-btn reject-no" onclick="handleHypothesisResponse('${hypothesisId}', 'rejected_no_reason')">
+        ✗ 推翻·无新信息
+      </button>
+      <button class="response-btn avoid" onclick="handleHypothesisResponse('${hypothesisId}', 'avoided')">
+        ↷ 回避
+      </button>
+      <button class="response-btn counter" onclick="handleHypothesisResponse('${hypothesisId}', 'counter_question')">
+        ? 反问
+      </button>
+    </div>
+  `;
+
+  // 添加到建议面板
+  const suggestionPanel = document.querySelector('.suggestion-panel .panel-content');
+  if (suggestionPanel) {
+    suggestionPanel.appendChild(container);
+  }
+}
+
+/**
+ * Stage 5.1: 处理假设响应
+ * @param {string} hypothesisId - 假设 ID
+ * @param {string} responseType - 响应类型
+ */
+window.handleHypothesisResponse = async function(hypothesisId, responseType) {
+  const hypothesis = state.hypotheses.find(h => h.hypothesis_id === hypothesisId || h.id === hypothesisId);
+  if (!hypothesis) return;
+
+  // 特殊处理：回避需要显示子类型选择
+  if (responseType === 'avoided') {
+    showAvoidanceSubtypes(hypothesisId);
+    return;
+  }
+
+  // 特殊处理：部分成立需要编辑框
+  if (responseType === 'partial') {
+    showPartialEditBox(hypothesis);
+    return;
+  }
+
+  // 特殊处理：反问需要暂缓队列
+  if (responseType === 'counter_question') {
+    addToDeferredQueue(hypothesis.verification_question, new Date().toISOString());
+    onHypothesisResponseComplete();
+    return;
+  }
+
+  // 其他响应类型直接写入共识链
+  try {
+    const eventId = `event_${Date.now()}`;
+    await apiRequest(`/sessions/${state.sessionId}/hypotheses/${hypothesisId}/respond`, {
+      method: 'POST',
+      body: JSON.stringify({
+        response_type: responseType,
+        event_id: eventId,
+        stage: state.currentStage
+      })
+    });
+
+    // 更新假设状态
+    hypothesis.status = responseType === 'confirmed' ? 'confirmed' :
+                        responseType === 'partial' ? 'partial' :
+                        responseType.includes('rejected') ? 'rejected' : 'avoided';
+
+    // 检查是否所有假设都被推翻
+    checkAllHypothesesRejected();
+
+    onHypothesisResponseComplete();
+    setStatus(`假设已标记为: ${getResponseTypeLabel(responseType)}`, 'success');
+    await getSessionState();
+  } catch (error) {
+    setStatus(`响应失败: ${error.message}`, 'error');
+  }
+};
+
+/**
+ * 获取响应类型标签
+ */
+function getResponseTypeLabel(responseType) {
+  const labels = {
+    confirmed: '确认',
+    partial: '部分成立',
+    rejected_with_reason: '推翻（有新方向）',
+    rejected_no_reason: '推翻（无新信息）',
+    avoided: '回避',
+    counter_question: '反问暂缓'
+  };
+  return labels[responseType] || responseType;
 }
 
 /**
