@@ -23,6 +23,7 @@ class ConsensusChain extends EventEmitter {
   /**
    * @param {Object} [options]
    * @param {Object} [options.feishuClient] - 飞书客户端（可选）
+   * @param {Object} [options.fallbackHandler] - 降级处理器（可选，用于重试队列）
    */
   constructor(options = {}) {
     super();
@@ -30,6 +31,8 @@ class ConsensusChain extends EventEmitter {
     this.records = [];
     /** @type {Object|null} */
     this.feishuClient = options.feishuClient || null;
+    /** @type {Object|null} */
+    this.fallbackHandler = options.fallbackHandler || null;
   }
 
   /**
