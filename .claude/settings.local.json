@@ -3,7 +3,8 @@
     "allow": [
       "Bash(lark-cli:*)",
       "Bash(node test_error.js)",
-      "Read(//c/Users/56839/Downloads/**)"
+      "Read(//c/Users/56839/Downloads/**)",
+      "Bash(node:*)"
     ],
     "deny": [],
     "ask": []
