@@ -289,10 +289,15 @@ function handleWebSocketMessage(data) {
     case 'profile_changed':
       // 客户档案表变更（飞书侧修改）
       console.log('Profile changed from Feishu:', data.data);
-      showNotification(`客户档案已更新: ${data.data?.company || ''}`, 'info');
       // 如果当前会话的公司匹配，刷新状态
       if (state.company && data.data?.company === state.company) {
         getSessionState();
+        // 显示提示
+        const toast = document.createElement('div');
+        toast.className = 'toast-notification';
+        toast.textContent = `客户档案已更新`;
+        document.body.appendChild(toast);
+        setTimeout(() => toast.remove(), 3000);
       }
       break;
     case 'feishu_record_changed':
