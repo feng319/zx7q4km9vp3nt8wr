@@ -4,7 +4,9 @@
 /**
  * @typedef {'fact' | 'consensus'} ConsensusType
  * @typedef {'战略梳理' | '商业模式' | '行业演示'} Stage
- * @typedef {'manual' | 'candidate_selected' | 'ai_suggested' | 'manual_correction'} RecordSource
+ * @typedef {'manual' | 'candidate_selected' | 'ai_suggested' | 'manual_correction' |
+ *          'hypothesis_confirmed' | 'hypothesis_partial' | 'hypothesis_rejected' |
+ *          'hypothesis_avoided' | 'unplanned_info' | 'mid_meeting_generated'} RecordSource
  * @typedef {'recorded' | 'pending_client_confirm' | 'confirmed' | 'superseded'} RecordStatus
  * @typedef {'high' | 'medium' | 'low'} ConfidenceLevel
  * @typedef {'稳健' | '平衡' | '激进'} RiskLevel
@@ -16,11 +18,18 @@
  * 共识链记录
  * @typedef {Object} ConsensusRecord
  * @property {string} id - 唯一标识，格式：`record_0`、`record_0_corr_1`
+ * @property {string} [event_id] - 事件关联 ID（Stage 4.1 新增）
  * @property {string} timestamp - ISO 8601 时间戳
  * @property {ConsensusType} type - 事实或判断
  * @property {Stage} stage - 所属阶段
+ * @property {Stage} [origin_stage] - 假设提出阶段（Stage 4.1 新增）
+ * @property {Stage} [verified_stage] - 假设验证阶段（Stage 4.1 新增）
  * @property {string} content - 记录内容
  * @property {RecordSource} source - 来源
+ * @property {string|null} [hypothesis_id] - 关联假设 ID（Stage 4.1 新增）
+ * @property {string|null} [client_response_type] - 六类场景类型（Stage 4.1 新增）
+ * @property {string|null} [avoidance_subtype] - 回避子类型（Stage 4.1 新增）
+ * @property {string|null} target_field - 对应客户档案的字段名（如"产品线"、"毛利结构"）
  * @property {string[]} evidence_sku - 关联的 SKU ID 列表
  * @property {RecordStatus} status - 状态
  * @property {ConfidenceLevel|null} confidence - 置信度（可选）
@@ -28,19 +37,39 @@
  * @property {string|null} superseded_by - 被哪条记录替代（原记录指向新记录）
  * @property {string|null} feishu_record_id - 飞书记录 ID（同步后填充）
  * @property {string|null} recommendation - 建议方向（仅 consensus 类型有）
- * @property {string|null} target_field - 对应客户档案的字段名（如"产品线"、"毛利结构"）
+ * @property {string|null} [rationale] - 候选方向说明（Stage 4.1 新增）
  */
 
 /**
- * 诊断假设（重构 4.md 12.2 节）
+ * 假设剧本（Stage 4.2 新增）
+ * @typedef {Object} HypothesisPlaybook
+ * @property {string[]} if_confirmed - 验证成立时的深挖追问列表
+ * @property {string[]} if_partial - 部分成立时的修正追问列表
+ * @property {string[]} if_rejected - 推翻后的重定位追问列表
+ * @property {Object.<string, string[]>} if_avoided - 按回避子类型分支的追问列表
+ * @property {string} solution_direction - 验证成立时写入候选生成的方向提示
+ * @property {('llm'|'consultant')} last_edited_by - 最后编辑者
+ * @property {string} last_edited_at - ISO timestamp
+ */
+
+/**
+ * 诊断假设（重构 4.md 12.2 节 + Stage 4.3 扩展）
  * @typedef {Object} DiagnosisHypothesis
  * @property {string} id - 唯一标识
+ * @property {string} hypothesis_id - 假设 ID（Stage 4.3 新增，与 id 保持一致）
  * @property {string} content - 假设内容
+ * @property {('pre_meeting'|'mid_meeting_generated'|'reset_generated')} origin_source - 假设来源（Stage 4.3 扩展）
+ * @property {Stage} origin_stage - 假设提出时的阶段
+ * @property {Stage} [verified_stage] - 假设验证阶段（Stage 4.3 新增）
+ * @property {string[]} trigger_keywords - 触发关键词（Stage 4.3 新增）
+ * @property {string} verification_question - 验证问题（Stage 4.3 新增）
  * @property {string|null} target_field - 对应客户档案的字段名
- * @property {Stage} origin_stage - 假设提出时的阶段（注意：不是共识链记录的 stage）
+ * @property {string|null} framework_sku - 关联框架 SKU（Stage 4.3 新增）
+ * @property {HypothesisPlaybook|null} playbook - 假设剧本（Stage 4.3 新增）
+ * @property {number} order - 排序序号（Stage 4.3 新增）
+ * @property {number} priority_score - 优先级分数（Stage 4.3 新增）
  * @property {string[]} evidence_skus - 关联的 SKU ID 列表
- * @property {'confirmed'|'partial'|'rejected'|'avoided'|'pending'} status - 假设响应状态
- * @property {'pre_meeting'|'mid_meeting_generated'} source - 假设来源
+ * @property {('unverified'|'confirmed'|'partial'|'rejected'|'avoided'|'pending')} status - 假设响应状态
  */
 
 /**
