@@ -69,7 +69,15 @@ class ConsensusChain extends EventEmitter {
       superseded_by: record.superseded_by || null,
       feishu_record_id: record.feishu_record_id || null,
       recommendation: record.recommendation || null,
-      target_field: record.target_field || null
+      target_field: record.target_field || null,
+      // Stage 4.1: 新增字段
+      event_id: record.event_id || null,
+      origin_stage: record.origin_stage || null,
+      verified_stage: record.verified_stage || null,
+      hypothesis_id: record.hypothesis_id || null,
+      client_response_type: record.client_response_type || null,
+      avoidance_subtype: record.avoidance_subtype || null,
+      rationale: record.rationale || null
     };
 
     this.records.push(newRecord);
