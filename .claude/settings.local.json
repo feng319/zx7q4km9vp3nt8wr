@@ -4,7 +4,8 @@
       "Bash(lark-cli:*)",
       "Bash(node test_error.js)",
       "Read(//c/Users/56839/Downloads/**)",
-      "Bash(node:*)"
+      "Bash(node:*)",
+      "Read(//c/Users/56839/Desktop/**)"
     ],
     "deny": [],
     "ask": []
