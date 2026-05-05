@@ -140,6 +140,28 @@ async function initialize() {
     feishuSync.on('error', (err) => {
       fastify.log.warn('FeishuSync error (non-fatal):', err.message);
     });
+    // 监听飞书变更事件，广播给所有 WebSocket 客户端
+    feishuSync.on('change', (changeEvent) => {
+      const { table_type, company, record_id, change_type, data } = changeEvent;
+
+      fastify.log.info({ table_type, company, record_id, change_type }, 'Feishu change event received');
+
+      // 广播给所有连接的 WebSocket 客户端
+      for (const [sessionId, wsClient] of wsClients) {
+        if (wsClient && wsClient.readyState === 1) { // WebSocket.OPEN
+          wsClient.send(JSON.stringify({
+            type: table_type === 'profile' ? 'profile_changed' : 'feishu_record_changed',
+            data: {
+              table_type,
+              company,
+              record_id,
+              change_type,
+              record: data,
+            },
+          }));
+        }
+      }
+    });
     // 非阻塞启动，失败时优雅降级
     feishuSync.start().catch(err => {
       fastify.log.warn('FeishuSync start failed, sync disabled:', err.message);
