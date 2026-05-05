@@ -122,12 +122,30 @@ describe('ConsensusChain', () => {
   });
 
   describe('confirmRecord', () => {
-    it('should change status to confirmed', () => {
+    it('should change status to confirmed from recorded', () => {
       const record = chain.addRecord({
         type: 'fact',
         stage: '战略梳理',
         content: 'test',
         source: 'manual'
+      });
+
+      // 默认状态为 recorded
+      assert.strictEqual(record.status, 'recorded');
+
+      chain.confirmRecord(record.id);
+
+      const confirmed = chain.getRecord(record.id);
+      assert.strictEqual(confirmed?.status, 'confirmed');
+    });
+
+    it('should change status to confirmed from pending_client_confirm', () => {
+      const record = chain.addRecord({
+        type: 'fact',
+        stage: '战略梳理',
+        content: 'test',
+        source: 'manual',
+        status: 'pending_client_confirm'
       });
 
       chain.confirmRecord(record.id);
@@ -140,6 +158,21 @@ describe('ConsensusChain', () => {
       assert.throws(
         () => chain.confirmRecord('non_existent'),
         /找不到记录: non_existent/
+      );
+    });
+
+    it('should throw error for invalid status', () => {
+      const record = chain.addRecord({
+        type: 'fact',
+        stage: '战略梳理',
+        content: 'test',
+        source: 'manual',
+        status: 'confirmed'
+      });
+
+      assert.throws(
+        () => chain.confirmRecord(record.id),
+        /记录状态不正确/
       );
     });
 
@@ -159,6 +192,66 @@ describe('ConsensusChain', () => {
       });
 
       chain.confirmRecord(record.id);
+    });
+  });
+
+  describe('setCandidateRecordPending', () => {
+    it('should change status from recorded to pending_client_confirm', () => {
+      const record = chain.addRecord({
+        type: 'fact',
+        stage: '战略梳理',
+        content: 'test',
+        source: 'manual'
+      });
+
+      // 默认状态为 recorded
+      assert.strictEqual(record.status, 'recorded');
+
+      chain.setCandidateRecordPending(record.id);
+
+      const pending = chain.getRecord(record.id);
+      assert.strictEqual(pending?.status, 'pending_client_confirm');
+    });
+
+    it('should throw error for non-existent record', () => {
+      assert.throws(
+        () => chain.setCandidateRecordPending('non_existent'),
+        /找不到记录: non_existent/
+      );
+    });
+
+    it('should throw error if status is not recorded', () => {
+      const record = chain.addRecord({
+        type: 'fact',
+        stage: '战略梳理',
+        content: 'test',
+        source: 'manual',
+        status: 'pending_client_confirm'
+      });
+
+      assert.throws(
+        () => chain.setCandidateRecordPending(record.id),
+        /记录状态不正确.*应为 recorded/
+      );
+    });
+
+    it('should emit change event with type pending', (t, done) => {
+      const record = chain.addRecord({
+        type: 'fact',
+        stage: '战略梳理',
+        content: 'test',
+        source: 'manual'
+      });
+
+      chain.on('change', (payload) => {
+        if (payload.type === 'pending') {
+          assert.strictEqual(payload.record.id, record.id);
+          assert.strictEqual(payload.record.status, 'pending_client_confirm');
+          done();
+        }
+      });
+
+      chain.setCandidateRecordPending(record.id);
     });
   });
 
