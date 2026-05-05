@@ -348,6 +348,9 @@ class FeishuSync extends EventEmitter {
         return;
       }
 
+      // 根据 table_id 判断表类型
+      const tableType = this._getTableType(tableId);
+
       // 映射 action 到 change_type
       const changeTypeMap = {
         'record_added': 'create',
@@ -358,8 +361,17 @@ class FeishuSync extends EventEmitter {
 
       // 获取完整记录数据（create/update 时）
       let data = null;
+      let company = null;
+
       if (changeType !== 'delete') {
-        data = await this.feishuClient.getConsensusRecord(recordId);
+        if (tableType === 'profile') {
+          // 客户档案表变更
+          data = await this.feishuClient.getProfileRecord(recordId);
+          company = data?.['客户公司名'] || data?.company || null;
+        } else {
+          // 共识链表变更
+          data = await this.feishuClient.getConsensusRecord(recordId);
+        }
       }
 
       // 构造变更事件
@@ -369,12 +381,18 @@ class FeishuSync extends EventEmitter {
         data,
         change_type: changeType,
         timestamp: new Date().toISOString(),
+        table_type: tableType,
         table_id: tableId,
       };
 
+      // 客户档案表变更时附加公司名
+      if (tableType === 'profile' && company) {
+        changeEvent.company = company;
+      }
+
       this._stats.changeCount++;
       this.emit('change', changeEvent);
-      logger.info('Bitable record changed', { recordId, changeType, action });
+      logger.info('Bitable record changed', { recordId, changeType, action, tableType, company });
 
       // 更新快照（用于降级模式同步）
       if (data) {
