@@ -810,6 +810,7 @@ function renderAll() {
   renderSuggestionStatus();
   renderPendingAssumptions();
   updateCandidateBadge();
+  renderSwitchButton(); // 新增：渲染开关按钮状态
   // 渲染后重新计算面板高度
   setTimeout(adjustPanelHeight, 50);
 }
@@ -861,6 +862,19 @@ function renderConsensusChain() {
 function renderStageDisplay() {
   elements.currentStage.textContent = state.currentStage;
   elements.stageDisplay.textContent = state.currentStage;
+}
+
+/**
+ * 渲染开关按钮状态
+ * 规则：当前阶段为最后一个阶段（行业演示）时隐藏开关按钮
+ */
+function renderSwitchButton() {
+  const lastStage = STAGES[STAGES.length - 1];
+  const isLastStage = state.currentStage === lastStage;
+
+  if (elements.cmdSwitch) {
+    elements.cmdSwitch.style.display = isLastStage ? 'none' : '';
+  }
 }
 
 function renderSuggestionStatus() {
