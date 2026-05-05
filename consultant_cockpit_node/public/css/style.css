@@ -534,6 +534,22 @@ body {
   .suggestion-panel {
     grid-column: span 2;
   }
+  /* Stage 1 响应式：flex 布局适配 */
+  .layout-container {
+    flex-wrap: wrap;
+  }
+  .col-left {
+    width: 100%;
+    min-width: 100%;
+    border-right: none;
+    border-bottom: 1px solid #e5e7eb;
+  }
+  .col-mid {
+    width: 60%;
+  }
+  .col-right {
+    width: 40%;
+  }
 }
 
 @media (max-width: 768px) {
@@ -543,6 +559,19 @@ body {
   }
   .suggestion-panel {
     grid-column: span 1;
+  }
+  /* Stage 1 响应式：单栏布局 */
+  .col-left,
+  .col-mid,
+  .col-right {
+    width: 100%;
+    min-width: 100%;
+    border-left: none;
+    border-right: none;
+  }
+  .left-flex-a,
+  .left-flex-b {
+    max-height: 200px;
   }
 }
 
