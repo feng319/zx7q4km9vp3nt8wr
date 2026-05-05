@@ -9,7 +9,7 @@
 ## 文档结构
 
 ```
-docs/superpowers/
+consultant_cockpit_node/superpowers/specs/
 ├── README.md                 # 本索引文件
 ├── design.md                 # 产品设计规范（完整版）
 ├── api.md                    # API 接口规范（REST + WebSocket + 飞书）
@@ -17,12 +17,7 @@ docs/superpowers/
 ├── architecture.md           # 技术架构（模块职责、依赖关系）
 ├── operations.md             # 运维文档（部署、配置、排查）
 ├── changelog.md              # 变更记录
-└
-├── specs/                    # 设计规范（原始文档）
-│   └── 2026-05-02-consultant-field-cockpit-design.md
-│
-└── plans/                    # 实施计划（已迁移至 consultant_cockpit_node/superpowers/）
-    # 详见 consultant_cockpit_node/superpowers/plans/
+└── 2026-05-02-consultant-field-cockpit-design.md  # 原始设计文档
 ```
 
 ---
@@ -61,12 +56,3 @@ docs/superpowers/
 | [data.md](data.md) | `src/config/fields.js` 注释 |
 | [api.md](api.md) | `server.js` 注释 |
 | [operations.md](operations.md) | `.env.example` 注释 |
-
----
-
-## 历史文档
-
-原始设计文档和实施计划已迁移至：
-
-- **设计规范**: `consultant_cockpit_node/superpowers/specs/`
-- **实施计划**: `consultant_cockpit_node/superpowers/plans/`
