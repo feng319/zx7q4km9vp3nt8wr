@@ -407,6 +407,19 @@ class FeishuSync extends EventEmitter {
     }
   }
 
+  /**
+   * 根据 table_id 判断表类型
+   * @private
+   * @param {string} tableId
+   * @returns {'consensus' | 'profile' | 'unknown'}
+   */
+  _getTableType(tableId) {
+    if (!tableId) return 'unknown';
+    if (tableId === this.consensusTableId) return 'consensus';
+    if (tableId === this.profileTableId) return 'profile';
+    return 'unknown';
+  }
+
   // ==================== 轮询降级方案 ====================
 
   /**
