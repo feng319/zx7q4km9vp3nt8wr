@@ -720,4 +720,194 @@ describe('ConsensusChain', () => {
       assert.strictEqual(correctionIds.size, 10);
     });
   });
+
+  describe('Status flow (recorded → pending_client_confirm → confirmed)', () => {
+    it('should support direct confirm from recorded (manual path)', () => {
+      const record = chain.addRecord({
+        type: 'fact',
+        stage: '战略梳理',
+        content: '手动输入的事实',
+        source: 'manual'
+      });
+
+      assert.strictEqual(record.status, 'recorded');
+
+      chain.confirmRecord(record.id);
+
+      const confirmed = chain.getRecord(record.id);
+      assert.strictEqual(confirmed?.status, 'confirmed');
+    });
+
+    it('should support candidate-selected path: recorded → pending_client_confirm → confirmed', () => {
+      const record = chain.addRecord({
+        type: 'fact',
+        stage: '战略梳理',
+        content: '候选选中后的事实',
+        source: 'ai_suggested'
+      });
+
+      assert.strictEqual(record.status, 'recorded');
+
+      // 候选选中：recorded → pending_client_confirm
+      chain.setCandidateRecordPending(record.id);
+      const pending = chain.getRecord(record.id);
+      assert.strictEqual(pending?.status, 'pending_client_confirm');
+
+      // 顾问确认：pending_client_confirm → confirmed
+      chain.confirmRecord(record.id);
+      const confirmed = chain.getRecord(record.id);
+      assert.strictEqual(confirmed?.status, 'confirmed');
+    });
+  });
+
+  describe('Superseded scenario', () => {
+    it('should mark original as superseded when corrected', () => {
+      const original = chain.addRecord({
+        type: 'fact',
+        stage: '战略梳理',
+        content: '原始内容',
+        source: 'manual'
+      });
+
+      // 确认原始记录
+      chain.confirmRecord(original.id);
+      assert.strictEqual(chain.getRecord(original.id)?.status, 'confirmed');
+
+      // 修正原始记录
+      const corrected = chain.correctRecord(original.id, '修正后的内容');
+
+      // 原始记录被标记为 superseded
+      const originalAfter = chain.getRecord(original.id);
+      assert.strictEqual(originalAfter?.status, 'superseded');
+      assert.strictEqual(originalAfter?.superseded_by, corrected.id);
+
+      // 修正记录为 confirmed
+      assert.strictEqual(corrected.status, 'confirmed');
+      assert.strictEqual(corrected.replaces, original.id);
+    });
+
+    it('should exclude superseded records from getActiveRecords', () => {
+      const record1 = chain.addRecord({
+        type: 'fact',
+        stage: '战略梳理',
+        content: 'fact1',
+        source: 'manual'
+      });
+
+      const record2 = chain.addRecord({
+        type: 'fact',
+        stage: '商业模式',
+        content: 'fact2',
+        source: 'manual'
+      });
+
+      chain.correctRecord(record1.id, 'corrected fact1');
+
+      const active = chain.getActiveRecords();
+      assert.strictEqual(active.length, 2);
+      assert.ok(active.every(r => r.status !== 'superseded'));
+    });
+
+    it('should exclude superseded records from getConfirmedFacts', () => {
+      const original = chain.addRecord({
+        type: 'fact',
+        stage: '战略梳理',
+        content: 'original fact',
+        source: 'manual',
+        status: 'confirmed'
+      });
+
+      chain.correctRecord(original.id, 'corrected fact');
+
+      const facts = chain.getConfirmedFacts();
+      assert.strictEqual(facts.length, 1);
+      assert.strictEqual(facts[0].content, 'corrected fact');
+    });
+
+    it('should handle chain of superseded records', () => {
+      const original = chain.addRecord({
+        type: 'fact',
+        stage: '战略梳理',
+        content: 'original',
+        source: 'manual',
+        status: 'confirmed'
+      });
+
+      const correction1 = chain.correctRecord(original.id, 'correction1');
+      const correction2 = chain.correctRecord(correction1.id, 'correction2');
+
+      // 所有历史记录都是 superseded
+      assert.strictEqual(chain.getRecord(original.id)?.status, 'superseded');
+      assert.strictEqual(chain.getRecord(correction1.id)?.status, 'superseded');
+      assert.strictEqual(chain.getRecord(correction2.id)?.status, 'confirmed');
+
+      // 只有最终修正记录在 getConfirmedFacts 中
+      const facts = chain.getConfirmedFacts();
+      assert.strictEqual(facts.length, 1);
+      assert.strictEqual(facts[0].content, 'correction2');
+    });
+  });
+
+  describe('FallbackHandler integration', () => {
+    it('should accept fallbackHandler in constructor', () => {
+      const mockFallbackHandler = {
+        enqueue: () => {}
+      };
+
+      const chainWithFallback = new ConsensusChain({ fallbackHandler: mockFallbackHandler });
+      assert.strictEqual(chainWithFallback.fallbackHandler, mockFallbackHandler);
+    });
+
+    it('should use enqueue when fallbackHandler is provided', async () => {
+      let enqueueCalled = false;
+      const mockFallbackHandler = {
+        enqueue: (task) => {
+          enqueueCalled = true;
+          assert.ok(task.operation.startsWith('sync_feishu_'));
+          assert.strictEqual(typeof task.handler, 'function');
+          assert.ok(task.data);
+        }
+      };
+      const mockFeishuClient = {
+        createConsensusRecord: async () => {}
+      };
+
+      const chainWithFallback = new ConsensusChain({
+        feishuClient: mockFeishuClient,
+        fallbackHandler: mockFallbackHandler
+      });
+
+      chainWithFallback.addRecord({
+        type: 'fact',
+        stage: '战略梳理',
+        content: 'test',
+        source: 'manual'
+      }, { syncToFeishu: true, company: '测试公司' });
+
+      // enqueue 应该被同步调用
+      assert.strictEqual(enqueueCalled, true);
+    });
+
+    it('should not throw when feishu sync fails without fallbackHandler', async () => {
+      const mockFeishuClient = {
+        createConsensusRecord: async () => {
+          throw new Error('Feishu API error');
+        }
+      };
+
+      const chainWithoutFallback = new ConsensusChain({ feishuClient: mockFeishuClient });
+
+      // 不应该抛出异常（_syncToFeishu 不再 throw err）
+      assert.doesNotThrow(() => {
+        chainWithoutFallback.addRecord({
+          type: 'fact',
+          stage: '战略梳理',
+          content: 'test',
+          source: 'manual'
+        }, true);
+      });
+
+      await new Promise(resolve => setTimeout(resolve, 10));
+    });
+  });
 });
