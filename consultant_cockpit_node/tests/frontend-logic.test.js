@@ -173,26 +173,58 @@ describe('Status Flow Logic', () => {
 // ==================== Target Field 逻辑测试 ====================
 
 describe('Target Field Logic', () => {
-  it('should extract field name from content prefix', () => {
-    const extractTargetField = (content) => {
-      const match = content.match(/^([^：:]+)[：:]/);
-      return match ? match[1] : null;
-    };
+  // 模拟 extractTargetField 函数
+  const extractTargetField = (content) => {
+    if (!content) return null;
+    const profileFields = ['产品线', '客户群体', '收入结构', '毛利结构', '交付情况', '资源分布', '战略目标', '显性诉求', '隐性痛点'];
+    const match = content.match(/^([^：:]+)[：:]/);
+    if (match && match[1]) {
+      const fieldName = match[1].trim();
+      if (profileFields.includes(fieldName)) {
+        return fieldName;
+      }
+    }
+    return null;
+  };
 
+  it('should extract field name from content prefix', () => {
     assert.strictEqual(extractTargetField('产品线：储能系统、光伏逆变器'), '产品线');
     assert.strictEqual(extractTargetField('客户群体: 工厂客户'), '客户群体');
+    assert.strictEqual(extractTargetField('收入结构：设备销售为主'), '收入结构');
+    assert.strictEqual(extractTargetField('毛利结构: 高毛利产品占比30%'), '毛利结构');
+  });
+
+  it('should return null for non-profile-field prefix', () => {
     assert.strictEqual(extractTargetField('没有前缀的内容'), null);
+    assert.strictEqual(extractTargetField('其他字段：测试'), null);
+    assert.strictEqual(extractTargetField('随便说点什么'), null);
   });
 
   it('should handle null content', () => {
-    const extractTargetField = (content) => {
-      if (!content) return null;
-      const match = content.match(/^([^：:]+)[：:]/);
-      return match ? match[1] : null;
-    };
-
     assert.strictEqual(extractTargetField(null), null);
     assert.strictEqual(extractTargetField(''), null);
+    assert.strictEqual(extractTargetField(undefined), null);
+  });
+
+  it('should match all 9 profile fields', () => {
+    const profileFields = ['产品线', '客户群体', '收入结构', '毛利结构', '交付情况', '资源分布', '战略目标', '显性诉求', '隐性痛点'];
+
+    profileFields.forEach(field => {
+      const content = `${field}：测试内容`;
+      assert.strictEqual(extractTargetField(content), field, `Should extract "${field}"`);
+    });
+  });
+
+  it('should handle both Chinese and English colon', () => {
+    assert.strictEqual(extractTargetField('产品线：储能'), '产品线');
+    assert.strictEqual(extractTargetField('产品线:储能'), '产品线');
+    assert.strictEqual(extractTargetField('产品线 : 储能'), '产品线');
+  });
+
+  it('should not extract field from middle of content', () => {
+    // 字段名必须在开头
+    assert.strictEqual(extractTargetField('客户说产品线：储能'), null);
+    assert.strictEqual(extractTargetField('关于收入结构：设备销售'), null);
   });
 });
 
