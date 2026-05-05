@@ -346,29 +346,24 @@ function flashRecord(recordId) {
 /**
  * 解析并执行指令
  * 设计文档 1.4 节快捷指令：
- * - /记 <内容>：记录事实或共识
- * - /确认：锁定最近一条待确认共识
- * - /切 <阶段>：切换阶段
- * - /候选：生成候选方案
- * - /案例 <关键词>：召回案例
+ * - /改 <内容>：修正最近一条记录
  * - /总结：生成当前阶段总结
+ * - /案例 <关键词>：召回案例（保留用于手动搜索）
+ * - /框架 <关键词>：召回框架
+ * - /对比 <关键词>：对比分析
+ *
+ * Stage 3 已移除的指令：
+ * - /记 <内容>：改为直接输入 + 类型切换按钮
+ * - /确认：改为内联确认按钮
+ * - /切 <阶段>：改为下拉切换器
+ * - /候选：改为按钮触发
  */
 function parseAndExecuteCommand(command) {
   command = command.trim();
 
-  if (command.startsWith('/记')) {
-    const content = command.slice(2).trim();
-    if (content) executeRecordCommand(content);
-  } else if (command === '/确认') {
-    executeConfirmCommand();
-  } else if (command.startsWith('/改')) {
+  if (command.startsWith('/改')) {
     const content = command.slice(2).trim();
     if (content) executeCorrectCommand(content);
-  } else if (command.startsWith('/切')) {
-    const stage = command.slice(2).trim();
-    executeStageSwitchCommand(stage);
-  } else if (command === '/候选') {
-    executeCandidateCommand();
   } else if (command === '/总结') {
     executeSummaryCommand();
   } else if (command.startsWith('/案例')) {
