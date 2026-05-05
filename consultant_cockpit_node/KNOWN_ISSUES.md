@@ -123,6 +123,37 @@
 
 ## 📋 已修复问题
 
+### ✅ 4 批次重构：状态流转与前端交互 (2026-05-05)
+
+**重构背景**: 解决设计文档与代码实现的 9 个冲突点
+
+**Batch 1: 后端数据结构**
+- `consensusChain.js`: 新记录默认状态改为 `recorded`（原为 `pending_client_confirm`）
+- `consensusChain.js`: 新增 `setCandidateRecordPending()` 方法，候选选中时调用
+- `consensusChain.js`: `confirmRecord()` 支持两种状态来源（`recorded` 和 `pending_client_confirm`）
+- `consensusChain.js`: `_syncToFeishu()` 使用 `enqueue` 重试队列，失败不阻塞
+- `fallbackHandler.js`: 新增 `enqueue()` 方法和 `_retryQueue` 重试队列
+- `types.js`: 新增 `target_field` 和 `DiagnosisHypothesis` 类型定义
+
+**Batch 2: 前端交互**
+- `app.js`: 新增 `renderSwitchButton()` 函数，最后阶段隐藏切换按钮
+- `app.js`: `executeStageSwitchCommand()` 添加阶段锁定逻辑
+  - 有未确认候选时禁止切换
+  - 有待确认记录时弹出警告确认
+
+**Batch 3: API 接口**
+- `app.js`: 新增 `extractTargetField()` 函数，自动识别客户档案字段前缀
+- `app.js`: `executeRecordCommand()` 传递 `target_field` 到后端
+- 客户档案 9 字段：产品线、客户群体、收入结构、毛利结构、交付情况、资源分布、战略目标、显性诉求、隐性痛点
+
+**Batch 4: 清理旧命令**
+- 分析结果：当前命令与设计文档一致，无需清理
+- 保留命令：`/记`、`/确认`、`/改`、`/切`、`/候选`、`/案例`、`/框架`、`/对比`、`/总结`
+
+**测试验证**: 68 测试全部通过（consensusChain.test.js 50 + frontend-logic.test.js 18）
+
+---
+
 ### ✅ `/改` 指令与修改按钮 (2026-05-04)
 
 **问题**:
