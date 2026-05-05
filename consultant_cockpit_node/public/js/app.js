@@ -1279,16 +1279,15 @@ function initEventListeners() {
     elements.pendingDecisionBadge.addEventListener('click', unfoldCandidatesFromBadge);
   }
 
-  // 建议操作
+  // Stage 3.2: 建议操作 - 直接填入输入框（不再加 /记 前缀）
   elements.useSuggestionBtn.addEventListener('click', () => {
     if (state.currentSuggestion) {
-      elements.commandInput.value = `/记 ${state.currentSuggestion.question}`;
+      acceptSuggestion(state.currentSuggestion);
     }
   });
 
   elements.skipSuggestionBtn.addEventListener('click', () => {
-    state.currentSuggestion = null;
-    elements.suggestionQuestion.textContent = '点击"新建会话"开始诊断';
+    skipSuggestion();
   });
 
   // 文档生成
