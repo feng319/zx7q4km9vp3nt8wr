@@ -298,7 +298,7 @@ class ConsensusChain extends EventEmitter {
   }
 
   /**
-   * 异步同步到飞书
+   * 异步同步到飞书（使用重试队列，不阻塞主流程）
    * @private
    * @param {ConsensusRecord} record
    * @param {string} [company] - 客户公司名
@@ -307,16 +307,35 @@ class ConsensusChain extends EventEmitter {
   async _syncToFeishu(record, company) {
     if (!this.feishuClient) return;
 
-    try {
-      // 同步到诊断共识表
-      await this.feishuClient.createConsensusRecord(record);
+    // 如果有 fallbackHandler，使用 enqueue 加入重试队列
+    if (this.fallbackHandler) {
+      this.fallbackHandler.enqueue({
+        operation: `sync_feishu_${record.id}`,
+        handler: async (data) => {
+          // 同步到诊断共识表
+          await this.feishuClient.createConsensusRecord(data.record);
 
-      // 如果有公司名，同步到客户档案表
+          // 如果有公司名，同步到客户档案表
+          if (data.company) {
+            await this._syncToProfile(data.record, data.company);
+          }
+        },
+        data: { record, company },
+        maxRetries: 3,
+        retryDelay: 5000
+      });
+      return;
+    }
+
+    // 没有 fallbackHandler 时，直接尝试同步（失败时只打印警告，不抛出错误）
+    try {
+      await this.feishuClient.createConsensusRecord(record);
       if (company) {
         await this._syncToProfile(record, company);
       }
     } catch (err) {
-      throw err;
+      console.warn(`飞书同步失败: ${err.message}`);
+      // 不抛出错误，不阻塞主流程
     }
   }
 
