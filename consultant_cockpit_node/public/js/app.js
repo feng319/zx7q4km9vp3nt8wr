@@ -47,6 +47,7 @@ const state = {
   candidateId: null,  // 当前选中候选对应的记录 ID
   selectedCandidateIndex: null,  // 选中的候选索引（用于淡出其他卡片）
   candidatesFolded: false,  // 候选是否折叠到右下角
+  candidateState: 'hidden',  // Stage 2.5: hidden | active | translucent | folded
   skus: [],
   currentStage: '战略梳理',
   completeness: 0,
@@ -56,7 +57,15 @@ const state = {
   llmProvider: 'deepseek-free',
   llmModel: 'deepseek/deepseek-v4-flash-free',
   demoMode: false,
-  _stageSyncing: false  // 阶段同步中标志，防止 GET 覆盖
+  _stageSyncing: false,  // 阶段同步中标志，防止 GET 覆盖
+  // Stage 2.2: 类型切换状态
+  currentType: 'fact',  // fact | consensus
+  // Stage 2.1: 字段前缀管理
+  currentFieldPrefix: null,
+  // Stage 2.4: 追问建议模式
+  suggestionMode: 'normal',  // normal | branch
+  // Stage 2.6: 阶段下拉状态
+  stageDropdownOpen: false
 };
 
 // DOM 元素引用（新布局）
