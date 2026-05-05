@@ -1636,7 +1636,457 @@ function adjustPanelHeight() {
 window.addEventListener('resize', adjustPanelHeight);
 window.addEventListener('load', adjustPanelHeight);
 
-// 全局函数（供 HTML onclick 使用）
+// ==================== Stage 2: 前端交互改动 ====================
+
+/**
+ * Stage 2.1: 字段标签点击处理
+ * 三种状态的点击行为：
+ * - done/partial: 弹出编辑卡
+ * - empty: 设置输入框前缀并聚焦
+ */
+window.handleProgressTagClick = function(fieldName, status) {
+  const tag = document.querySelector(`.progress-tag[data-field="${fieldName}"]`);
+
+  if (status === 'done' || status === 'partial') {
+    // 弹出编辑卡
+    openFocusEditCard(fieldName);
+  } else {
+    // 设置输入框前缀
+    setInputPrefix(fieldName);
+    elements.commandInput.focus();
+
+    // 高亮闪烁效果
+    if (tag) {
+      tag.classList.add('highlight');
+      setTimeout(() => tag.classList.remove('highlight'), 300);
+    }
+  }
+};
+
+/**
+ * 设置字段前缀
+ */
+function setInputPrefix(fieldName) {
+  state.currentFieldPrefix = fieldName;
+  updateInputPlaceholder();
+}
+
+/**
+ * 清除字段前缀
+ */
+function clearInputPrefix() {
+  state.currentFieldPrefix = null;
+  updateInputPlaceholder();
+}
+
+/**
+ * 更新输入框占位符
+ */
+function updateInputPlaceholder() {
+  const typeLabel = state.currentType === 'fact' ? '事实' : '判断';
+  if (state.currentFieldPrefix) {
+    elements.commandInput.placeholder = `记录${typeLabel} → ${state.currentFieldPrefix}: ...`;
+  } else {
+    elements.commandInput.placeholder = `输入指令（如：/记、/确认、/切、/候选、/案例）`;
+  }
+}
+
+/**
+ * Stage 2.2: 类型切换
+ */
+function toggleType() {
+  state.currentType = state.currentType === 'fact' ? 'consensus' : 'fact';
+  updateTypeToggleBtn();
+  updateInputPlaceholder();
+}
+
+/**
+ * 更新类型切换按钮
+ */
+function updateTypeToggleBtn() {
+  const btn = document.getElementById('type-toggle-btn');
+  if (btn) {
+    btn.textContent = state.currentType === 'fact' ? '事实' : '判断';
+    btn.className = state.currentType === 'fact' ? 'btn btn-sm btn-type-fact' : 'btn btn-sm btn-type-consensus';
+  }
+}
+
+/**
+ * 发送后重置状态
+ */
+function onMessageSent() {
+  state.currentType = 'fact';
+  state.currentFieldPrefix = null;
+  updateTypeToggleBtn();
+  updateInputPlaceholder();
+}
+
+/**
+ * Stage 2.8: 打开聚焦编辑卡
+ */
+function openFocusEditCard(fieldName) {
+  // 查找该字段对应的记录
+  const record = state.records.find(r => r.target_field === fieldName && r.status !== 'superseded');
+  if (!record) {
+    setStatus(`未找到 ${fieldName} 的记录`, 'warning');
+    return;
+  }
+
+  // 移除现有编辑卡
+  const existingCard = document.querySelector('.focus-edit-card');
+  if (existingCard) existingCard.remove();
+
+  const card = document.createElement('div');
+  card.className = 'focus-edit-card';
+  card.innerHTML = `
+    <div class="edit-card-header">
+      <span>✏️ 修改${record.type === 'fact' ? '事实' : '判断'}记录</span>
+      <button class="close-btn" onclick="closeFocusEditCard()">×</button>
+    </div>
+    <div class="edit-card-body">
+      <textarea id="edit-content" rows="3">${escapeHtml(record.content)}</textarea>
+      <div class="edit-card-type">
+        <label><input type="radio" name="edit-type" value="fact" ${record.type === 'fact' ? 'checked' : ''}> Fact</label>
+        <label><input type="radio" name="edit-type" value="consensus" ${record.type === 'consensus' ? 'checked' : ''}> Consensus</label>
+      </div>
+    </div>
+    <div class="edit-card-footer">
+      <button class="btn btn-primary btn-sm" onclick="saveEditCard('${record.id}')">保存修改 (Ctrl+Enter)</button>
+      <button class="btn btn-secondary btn-sm" onclick="closeFocusEditCard()">取消 (Esc)</button>
+    </div>
+  `;
+
+  document.querySelector('.dialog-panel').appendChild(card);
+
+  // 绑定快捷键
+  const textarea = card.querySelector('#edit-content');
+  textarea.addEventListener('keydown', (e) => {
+    if (e.ctrlKey && e.key === 'Enter') {
+      e.preventDefault();
+      saveEditCard(record.id);
+    }
+    if (e.key === 'Escape') {
+      e.preventDefault();
+      closeFocusEditCard();
+    }
+  });
+  textarea.focus();
+}
+
+window.closeFocusEditCard = function() {
+  const card = document.querySelector('.focus-edit-card');
+  if (card) card.remove();
+};
+
+window.saveEditCard = async function(recordId) {
+  const textarea = document.getElementById('edit-content');
+  const typeRadio = document.querySelector('input[name="edit-type"]:checked');
+
+  if (!textarea || !typeRadio) return;
+
+  const newContent = textarea.value.trim();
+  const newType = typeRadio.value;
+
+  if (!newContent) {
+    setStatus('内容不能为空', 'warning');
+    return;
+  }
+
+  const record = state.records.find(r => r.id === recordId);
+  if (!record) return;
+
+  try {
+    await apiRequest(`/sessions/${state.sessionId}/records/${recordId}/correct`, {
+      method: 'POST',
+      body: JSON.stringify({
+        content: newContent,
+        source: 'manual_correction',
+        type: newType,
+        stage: record.stage
+      })
+    });
+
+    closeFocusEditCard();
+    setStatus('记录已修改', 'success');
+    await getSessionState();
+  } catch (error) {
+    setStatus(`修改失败: ${error.message}`, 'error');
+  }
+};
+
+/**
+ * Stage 2.4: 追问建议接受
+ */
+async function acceptSuggestion() {
+  if (!state.currentSuggestion) return;
+
+  // 填入输入框
+  elements.commandInput.value = state.currentSuggestion.question || state.currentSuggestion;
+
+  // TODO: 写入飞书「当前追问」字段（防抖 1 秒）
+
+  // 切换为下一条建议
+  loadNextSuggestion();
+}
+
+/**
+ * Stage 2.4: 跳过追问建议
+ */
+function skipSuggestion() {
+  loadNextSuggestion();
+}
+
+/**
+ * 加载下一条追问建议
+ */
+function loadNextSuggestion() {
+  // TODO: 从后端获取下一条建议
+  state.currentSuggestion = null;
+  elements.suggestionQuestion.textContent = '暂无更多建议';
+}
+
+/**
+ * Stage 2.4: 使用自定义问题
+ */
+function useCustomQuestion() {
+  elements.commandInput.focus();
+}
+
+/**
+ * Stage 2.5: 候选卡片状态切换（Esc 键）
+ */
+function handleCandidateEscape() {
+  if (state.candidateState === 'active') {
+    // active → translucent
+    state.candidateState = 'translucent';
+    elements.candidatesOverlay.style.opacity = '0.5';
+    elements.candidatesOverlay.style.background = 'transparent';
+  } else if (state.candidateState === 'translucent') {
+    // translucent → folded
+    state.candidateState = 'folded';
+    foldCandidatesToBadge();
+  }
+}
+
+/**
+ * Stage 2.5: 恢复候选显示
+ */
+function restoreCandidates() {
+  if (state.candidateState === 'translucent') {
+    // translucent → active
+    state.candidateState = 'active';
+    elements.candidatesOverlay.style.opacity = '1';
+    elements.candidatesOverlay.style.background = 'rgba(255, 255, 255, 0.6)';
+  } else if (state.candidateState === 'folded') {
+    // folded → active
+    unfoldCandidatesFromBadge();
+    state.candidateState = 'active';
+  }
+}
+
+/**
+ * Stage 2.6: 切换阶段下拉
+ */
+function toggleStageDropdown() {
+  state.stageDropdownOpen = !state.stageDropdownOpen;
+  const dropdown = document.getElementById('stage-dropdown');
+  const options = dropdown?.querySelector('.stage-options');
+
+  if (options) {
+    options.style.display = state.stageDropdownOpen ? 'block' : 'none';
+  }
+}
+
+/**
+ * Stage 2.6: 阶段变更确认
+ */
+function confirmStageChange(newStage) {
+  // 内联确认（不弹窗）
+  const banner = document.querySelector('.stage-banner');
+  if (banner) {
+    banner.insertAdjacentHTML('beforeend', `
+      <span class="stage-confirm-inline">
+        切换到"${newStage}"？
+        <button class="btn btn-sm btn-primary" onclick="executeStageChange('${newStage}')">确认</button>
+        <button class="btn btn-sm btn-secondary" onclick="cancelStageChange()">取消</button>
+      </span>
+    `);
+  }
+}
+
+window.cancelStageChange = function() {
+  const inline = document.querySelector('.stage-confirm-inline');
+  if (inline) inline.remove();
+  toggleStageDropdown();
+};
+
+/**
+ * Stage 2.6: 执行阶段变更
+ */
+window.executeStageChange = async function(newStage) {
+  // 移除确认 UI
+  const inline = document.querySelector('.stage-confirm-inline');
+  if (inline) inline.remove();
+
+  // 调用现有逻辑
+  await executeStageSwitchCommand(newStage);
+
+  // 关闭下拉
+  state.stageDropdownOpen = false;
+  const options = document.querySelector('.stage-options');
+  if (options) options.style.display = 'none';
+};
+
+/**
+ * Stage 2.7: 意图标签点击
+ */
+async function handleIntentTagClick(intent) {
+  const tag = document.querySelector(`.intent-tag[data-intent="${intent}"]`);
+
+  // 显示进度条
+  if (tag) {
+    tag.classList.add('loading');
+  }
+
+  try {
+    const context = getRecentDialogContext(5);
+    const data = await apiRequest(`/sessions/${state.sessionId}/recall`, {
+      method: 'POST',
+      body: JSON.stringify({
+        keywords: context,
+        top_k: 5,
+        mode: intent  // case | framework | comparison
+      })
+    });
+
+    state.skus = data.skus || [];
+    elements.newSkuBadge.style.display = 'inline';
+    renderSkus();
+  } catch (error) {
+    setStatus(`召回失败: ${error.message}`, 'error');
+  } finally {
+    if (tag) {
+      tag.classList.remove('loading');
+    }
+  }
+}
+
+/**
+ * 获取最近对话上下文
+ */
+function getRecentDialogContext(limit) {
+  const recentRecords = state.records.slice(-limit);
+  return recentRecords.map(r => r.content.split(/\s+/).slice(0, 3).join(' ')).join(' ');
+}
+
+/**
+ * Stage 2.9: 演示模式迷你搜索
+ */
+function openMiniSearch() {
+  const existing = document.querySelector('.mini-search');
+  if (existing) {
+    existing.remove();
+    return;
+  }
+
+  const miniSearch = document.createElement('div');
+  miniSearch.className = 'mini-search';
+  miniSearch.innerHTML = `
+    <input type="text" placeholder="搜索知识库..." onkeydown="handleMiniSearchKeydown(event)">
+    <div class="mini-results"></div>
+  `;
+
+  const leftFlexB = document.querySelector('.left-flex-b');
+  if (leftFlexB) {
+    leftFlexB.appendChild(miniSearch);
+    miniSearch.querySelector('input').focus();
+  }
+}
+
+window.handleMiniSearchKeydown = async function(event) {
+  if (event.key === 'Enter') {
+    const query = event.target.value.trim();
+    if (!query) return;
+
+    const resultsContainer = document.querySelector('.mini-results');
+    if (!resultsContainer) return;
+
+    resultsContainer.innerHTML = '<div class="loading"></div>';
+
+    try {
+      const data = await apiRequest(`/sessions/${state.sessionId}/recall`, {
+        method: 'POST',
+        body: JSON.stringify({ keywords: [query], top_k: 3 })
+      });
+
+      const skus = data.skus || [];
+      resultsContainer.innerHTML = skus.map(sku => `
+        <div class="mini-sku-item" onclick="useMiniSku('${escapeHtml(sku.title)}')">
+          <span class="sku-confidence">${sku.confidence}</span>
+          <span>${escapeHtml(sku.title)}</span>
+        </div>
+      `).join('') || '<div class="empty-state">无结果</div>';
+    } catch (error) {
+      resultsContainer.innerHTML = `<div class="error">搜索失败</div>`;
+    }
+  }
+
+  if (event.key === 'Escape') {
+    const miniSearch = document.querySelector('.mini-search');
+    if (miniSearch) miniSearch.remove();
+  }
+};
+
+window.useMiniSku = function(title) {
+  elements.commandInput.value = title;
+  const miniSearch = document.querySelector('.mini-search');
+  if (miniSearch) miniSearch.remove();
+  elements.commandInput.focus();
+};
+
+/**
+ * Stage 2.10: AI 建议采纳
+ */
+window.acceptAiSuggestion = function(suggestionId) {
+  // TODO: 从 AI 建议列表获取内容
+  const suggestion = { id: suggestionId, content: 'AI 建议内容' };
+
+  // 填入输入框，类型预设为 consensus
+  elements.commandInput.value = suggestion.content;
+  state.currentType = 'consensus';
+  updateTypeToggleBtn();
+  updateInputPlaceholder();
+};
+
+/**
+ * 六类响应按钮激活时隐藏类型切换
+ */
+function showHypothesisResponseButtons() {
+  const typeBtn = document.getElementById('type-toggle-btn');
+  if (typeBtn) typeBtn.style.display = 'none';
+
+  // 锁定阶段 Banner
+  const banner = document.querySelector('.stage-banner');
+  if (banner) banner.classList.add('stage-locked');
+}
+
+/**
+ * 六类响应完成后恢复
+ */
+function onHypothesisResponseComplete() {
+  const typeBtn = document.getElementById('type-toggle-btn');
+  if (typeBtn) typeBtn.style.display = '';
+
+  // 解锁阶段 Banner
+  const banner = document.querySelector('.stage-banner');
+  if (banner) banner.classList.remove('stage-locked');
+
+  // 重置类型
+  state.currentType = 'fact';
+  updateTypeToggleBtn();
+}
+
+// ==================== 全局函数（供 HTML onclick 使用） ====================
 window.confirmRecord = async function(recordId) {
   if (!state.sessionId) return;
 
